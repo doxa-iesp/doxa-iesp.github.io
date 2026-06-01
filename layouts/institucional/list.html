@@ -1,0 +1,57 @@
+{{ define "main" }}
+<div id="main-content">
+  {{ partial "page-hero.html" . }}
+
+  <section class="page-content">
+    <div class="container">
+      {{ .Content }}
+    </div>
+  </section>
+
+  {{/* Equipe */}}
+  <section class="team-section" id="equipe">
+    <div class="container">
+      <h2 class="section-title">Nossa Equipe</h2>
+
+      {{ $team := hugo.Data.team }}
+
+      {{ $categories := slice
+        (dict "key" "coordenacao"    "label" "Coordenação")
+        (dict "key" "pesquisadores"  "label" "Pesquisadores")
+        (dict "key" "pos-doutorando" "label" "Pós-Doutorandos")
+        (dict "key" "aluno"          "label" "Alunos de Pós-Graduação")
+        (dict "key" "assistente"     "label" "Assistentes de Pesquisa")
+        (dict "key" "associado"      "label" "Pesquisadores Associados")
+      }}
+
+      {{ range $categories }}
+      {{ $cat := .key }}
+      {{ $label := .label }}
+      {{ $members := where $team "category" $cat }}
+      {{ if $members }}
+      <div class="team-category">
+        <p class="team-category-tagline">Equipe</p>
+        <h3 class="team-category-title">{{ $label }}</h3>
+        <div class="team-grid">
+          {{ range $members }}
+          {{ partial "team-card.html" . }}
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </section>
+
+  {{/* Contato */}}
+  <section class="contact-section" id="contato">
+    <div class="container">
+      <h2 class="section-title">Contato</h2>
+      <p>Para informações sobre o acervo e pesquisas, entre em contato pelo e-mail:</p>
+      <p><a href="mailto:{{ .Site.Params.email }}" class="contact-email">{{ .Site.Params.email }}</a></p>
+      <p class="contact-address">{{ .Site.Params.address }} — {{ .Site.Params.cep }}</p>
+    </div>
+  </section>
+
+</div>
+{{ end }}

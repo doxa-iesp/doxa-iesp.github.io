@@ -1,0 +1,62 @@
+# Análises de Conjuntura Eleitoral
+# Campos: title, cycle (ano/ciclo eleitoral), period, description, files (lista de {label, url})
+
+- title: "Cobertura Jornalística das Eleições de 2022"
+  cycle: "2022"
+  period: "Eleições Gerais 2022"
+  description: "Análise da cobertura jornalística dos principais veículos de imprensa durante as eleições gerais de 2022."
+  files:
+    - label: "Gráfico"
+      url: "/files/analises/2022-cobertura-grafico.pdf"
+    - label: "Tabela"
+      url: "/files/analises/2022-cobertura-tabela.pdf"
+
+- title: "Cobertura Jornalística das Eleições de 2018"
+  cycle: "2018"
+  period: "Eleições Gerais 2018"
+  description: "Análise da cobertura jornalística nas eleições de 2018."
+  files:
+    - label: "Gráfico"
+      url: "/files/analises/2018-cobertura-grafico.pdf"
+    - label: "Tabela"
+      url: "/files/analises/2018-cobertura-tabela.pdf"
+
+- title: "Cobertura Jornalística das Eleições de 2014"
+  cycle: "2014"
+  period: "Eleições Gerais 2014"
+  description: ""
+  files:
+    - label: "Gráfico"
+      url: "/files/analises/2014-cobertura-grafico.pdf"
+    - label: "Tabela"
+      url: "/files/analises/2014-cobertura-tabela.pdf"
+
+- title: "Cobertura Jornalística das Eleições de 2010"
+  cycle: "2010"
+  period: "Eleições Gerais 2010"
+  description: "Análise de O Globo, Jornal do Brasil, Folha de S.Paulo e Estado de S.Paulo."
+  files:
+    - label: "Gráfico"
+      url: "/files/analises/2010-cobertura-grafico.pdf"
+    - label: "Tabela"
+      url: "/files/analises/2010-cobertura-tabela.pdf"
+
+- title: "Cobertura Jornalística das Eleições de 2006"
+  cycle: "2006"
+  period: "Eleições Gerais 2006"
+  description: ""
+  files:
+    - label: "Gráfico"
+      url: "/files/analises/2006-cobertura-grafico.pdf"
+    - label: "Tabela"
+      url: "/files/analises/2006-cobertura-tabela.pdf"
+
+- title: "Cobertura Jornalística das Eleições de 2002"
+  cycle: "2002"
+  period: "Eleições Gerais 2002"
+  description: ""
+  files:
+    - label: "Gráfico"
+      url: "/files/analises/2002-cobertura-grafico.pdf"
+    - label: "Tabela"
+      url: "/files/analises/2002-cobertura-tabela.pdf"

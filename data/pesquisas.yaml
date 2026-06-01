@@ -1,0 +1,51 @@
+# Pesquisas do DOXA
+# Campos: title, author, year, advisor, institution, status, url (opcional)
+# Status: concluida | andamento | tese
+
+- title: "Título da Pesquisa Concluída 1"
+  author: "Nome do Pesquisador"
+  year: 2022
+  advisor: "Nome do Orientador"
+  institution: "IESP/UERJ"
+  status: "concluida"
+  url: ""
+
+- title: "Título da Pesquisa Concluída 2"
+  author: "Nome do Pesquisador"
+  year: 2021
+  advisor: "Nome do Orientador"
+  institution: "IESP/UERJ"
+  status: "concluida"
+  url: ""
+
+- title: "Título da Pesquisa em Andamento 1"
+  author: "Nome do Pesquisador"
+  year: 2024
+  advisor: "Nome do Orientador"
+  institution: "IESP/UERJ"
+  status: "andamento"
+  url: ""
+
+- title: "Título da Pesquisa em Andamento 2"
+  author: "Nome do Pesquisador"
+  year: 2023
+  advisor: "Nome do Orientador"
+  institution: "IESP/UERJ"
+  status: "andamento"
+  url: ""
+
+- title: "Título da Tese 1"
+  author: "Nome do Autor"
+  year: 2020
+  advisor: "Nome do Orientador"
+  institution: "IESP/UERJ"
+  status: "tese"
+  url: "https://bdtd.ibict.br/"
+
+- title: "Título da Dissertação 1"
+  author: "Nome do Autor"
+  year: 2019
+  advisor: "Nome do Orientador"
+  institution: "IESP/UERJ"
+  status: "tese"
+  url: "https://bdtd.ibict.br/"

@@ -1,0 +1,55 @@
+# Na Mídia — cobertura e aparições do DOXA
+# Campos: title, authors (opcional), outlet, date (YYYY-MM-DD), type, url
+# type: impressa | virtual | audiovisual
+
+# ---- Mídia Impressa ----
+- title: "Título do Artigo na Imprensa"
+  authors: "Autor DOXA"
+  outlet: "Valor Econômico"
+  date: "2022-10-05"
+  type: "impressa"
+  url: "https://valor.globo.com/"
+
+- title: "Título do Artigo de Opinião"
+  authors: "Autor DOXA"
+  outlet: "Folha de S.Paulo"
+  date: "2022-09-12"
+  type: "impressa"
+  url: ""
+
+- title: "Título da Entrevista"
+  authors: "Autor DOXA"
+  outlet: "O Estado de S. Paulo"
+  date: "2021-11-08"
+  type: "impressa"
+  url: ""
+
+# ---- Mídia Virtual ----
+- title: "Título da Análise Online"
+  authors: "Autor DOXA"
+  outlet: "Blog do DOXA"
+  date: "2023-03-15"
+  type: "virtual"
+  url: ""
+
+- title: "Título da Entrevista Online"
+  authors: "Autor DOXA"
+  outlet: "Portal de Notícias"
+  date: "2022-08-30"
+  type: "virtual"
+  url: ""
+
+# ---- Audiovisual ----
+- title: "Entrevista — Eleições 2022"
+  authors: "Pesquisador DOXA"
+  outlet: "GloboNews"
+  date: "2022-10-30"
+  type: "audiovisual"
+  url: ""
+
+- title: "Debate sobre Comunicação Política"
+  authors: "Pesquisador DOXA"
+  outlet: "Canal YouTube"
+  date: "2022-07-20"
+  type: "audiovisual"
+  url: ""

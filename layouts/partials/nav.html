@@ -1,0 +1,19 @@
+<nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+  <ul class="nav-list">
+    {{ range .Site.Menus.main }}
+    <li class="nav-item{{ if .Params.children }} has-dropdown{{ end }}">
+      <a href="{{ .URL }}" class="nav-link{{ if $.IsHome }}{{ if eq .URL "/" }} active{{ end }}{{ else }}{{ if hasPrefix $.RelPermalink .URL }} active{{ end }}{{ end }}">
+        {{ .Name }}
+        {{ if .Params.children }}<span class="dropdown-arrow" aria-hidden="true">▾</span>{{ end }}
+      </a>
+      {{ if .Params.children }}
+      <ul class="dropdown-menu" aria-label="{{ .Name }}">
+        {{ range .Params.children }}
+        <li><a href="{{ .url }}" class="dropdown-link">{{ .name }}</a></li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</nav>

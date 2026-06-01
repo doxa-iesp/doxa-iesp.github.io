@@ -1,0 +1,58 @@
+{{ define "main" }}
+<div id="main-content">
+  {{ partial "page-hero.html" . }}
+
+  <section class="page-content">
+    <div class="container">
+      {{ .Content }}
+
+      {{/* Filtro por ciclo eleitoral */}}
+      {{ $cycles := slice }}
+      {{ range hugo.Data.analyses }}{{ $cycles = $cycles | append .cycle }}{{ end }}
+      {{ $cycles = $cycles | uniq | sort | collections.Reverse }}
+
+      <div class="filter-tabs" role="tablist" aria-label="Filtrar por ciclo eleitoral">
+        <button class="filter-tab active" role="tab" data-filter="all" aria-selected="true">Todos</button>
+        {{ range $cycles }}
+        <button class="filter-tab" role="tab" data-filter="{{ . }}" aria-selected="false">{{ . }}</button>
+        {{ end }}
+      </div>
+
+      <div class="analyses-grid" id="analyses-grid">
+        {{ range hugo.Data.analyses }}
+        <article class="analysis-item" data-cycle="{{ .cycle }}">
+          <h3 class="analysis-title">{{ .title }}</h3>
+          <p class="analysis-meta">{{ .cycle }}{{ with .period }} — {{ . }}{{ end }}</p>
+          {{ with .description }}<p class="analysis-desc">{{ . }}</p>{{ end }}
+          <div class="analysis-downloads">
+            {{ range .files }}
+            <a href="{{ .url }}" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">
+              {{ .label }}
+            </a>
+            {{ end }}
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".filter-tab");
+    const items = document.querySelectorAll(".analysis-item");
+    tabs.forEach(tab => {
+      tab.addEventListener("click", function () {
+        tabs.forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+        this.classList.add("active");
+        this.setAttribute("aria-selected", "true");
+        const filter = this.dataset.filter;
+        items.forEach(item => {
+          item.style.display = (filter === "all" || item.dataset.cycle === filter) ? "" : "none";
+        });
+      });
+    });
+  });
+</script>
+{{ end }}

@@ -1,0 +1,44 @@
+{{ define "main" }}
+<div id="main-content">
+  {{ partial "page-hero.html" . }}
+
+  <section class="page-content">
+    <div class="container">
+      {{ .Content }}
+
+      {{/* Filtros multi-faceta */}}
+      <div class="acervo-filters" id="acervo-filters">
+        <div class="filter-row">
+          <label for="filter-cargo" class="filter-label">Cargo Eletivo</label>
+          <select id="filter-cargo" class="filter-select"><option value="">Todos</option></select>
+        </div>
+        <div class="filter-row">
+          <label for="filter-regiao" class="filter-label">Região / Estado</label>
+          <select id="filter-regiao" class="filter-select"><option value="">Todos</option></select>
+        </div>
+        <div class="filter-row">
+          <label for="filter-ano" class="filter-label">Ano</label>
+          <select id="filter-ano" class="filter-select"><option value="">Todos</option></select>
+        </div>
+        <div class="filter-row">
+          <label for="filter-partido" class="filter-label">Partido</label>
+          <select id="filter-partido" class="filter-select"><option value="">Todos</option></select>
+        </div>
+        <div class="filter-row filter-row--search">
+          <label for="filter-busca" class="filter-label">Candidato</label>
+          <input type="text" id="filter-busca" class="filter-input" placeholder="Nome do candidato...">
+        </div>
+        <button id="acervo-reset" class="btn btn-outline">Limpar filtros</button>
+      </div>
+
+      <p class="acervo-count" id="acervo-count"></p>
+      <div class="acervo-grid" id="acervo-grid"></div>
+    </div>
+  </section>
+</div>
+
+<script>
+window.ACERVO_DATA = {{ hugo.Data.acervo | jsonify }};
+</script>
+<script src="/js/acervo.js"></script>
+{{ end }}

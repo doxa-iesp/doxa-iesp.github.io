@@ -1,0 +1,32 @@
+# Eventos do DOXA
+# Campos: title, date (YYYY-MM-DD), description, image, url
+
+- title: "Lançamento de Livro — Título do Livro"
+  date: "2022-12-16"
+  description: "Lançamento do livro sobre comportamento eleitoral no Brasil."
+  image: ""
+  url: ""
+
+- title: "Seminário Internacional de Comunicação Política"
+  date: "2022-11-11"
+  description: "Evento internacional com pesquisadores de comunicação política."
+  image: ""
+  url: ""
+
+- title: "Colóquio DOXA — 20 Anos"
+  date: "2017-11-11"
+  description: "Comemoração dos 20 anos do laboratório."
+  image: ""
+  url: ""
+
+- title: "Workshop de Métodos em Pesquisa Eleitoral"
+  date: "2014-11-26"
+  description: "Workshop sobre metodologias em pesquisa eleitoral."
+  image: ""
+  url: ""
+
+- title: "Seminário de Pesquisa — DOXA"
+  date: "2014-08-08"
+  description: "Apresentação de pesquisas em andamento pelos membros do laboratório."
+  image: ""
+  url: ""

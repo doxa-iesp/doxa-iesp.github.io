@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div id="main-content">
+  {{ partial "page-hero.html" . }}
+
+  <section class="page-content">
+    <div class="container">
+      {{ .Content }}
+
+      {{ $seminars := hugo.Data.seminars }}
+      {{ $years := slice }}
+      {{ range $seminars }}{{ $years = $years | append .year }}{{ end }}
+      {{ $years = $years | uniq | sort | collections.Reverse }}
+
+      {{ range $years }}
+      {{ $year := . }}
+      {{ $yearItems := where $seminars "year" $year }}
+      <div class="seminars-year">
+        <h2 class="seminars-year-title">{{ $year }}</h2>
+        <ul class="seminars-list">
+          {{ range $yearItems }}
+          <li class="seminar-item">
+            <time class="seminar-date">{{ dateFormat "02/01/2006" (time .date) }}</time>
+            <div class="seminar-info">
+              <strong class="seminar-presenter">{{ .presenter }}</strong>
+              <span class="seminar-title">{{ .title }}</span>
+              {{ with .institution }}<span class="seminar-institution">({{ . }})</span>{{ end }}
+            </div>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}

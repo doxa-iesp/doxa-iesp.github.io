@@ -1,0 +1,51 @@
+# Catálogo Audiovisual do DOXA
+# Campos: candidate, party, cargo, region, year, url, thumb (opcional)
+# Este arquivo deve ser preenchido com os dados reais do catálogo (exportar do Google Sheets)
+
+- candidate: "Candidato Exemplo 1"
+  party: "PT"
+  cargo: "Presidente"
+  region: "Nacional"
+  year: 2022
+  url: "https://www.youtube.com/"
+  thumb: ""
+
+- candidate: "Candidato Exemplo 2"
+  party: "PL"
+  cargo: "Presidente"
+  region: "Nacional"
+  year: 2022
+  url: "https://www.youtube.com/"
+  thumb: ""
+
+- candidate: "Candidato Exemplo 3"
+  party: "PSDB"
+  cargo: "Governador"
+  region: "São Paulo"
+  year: 2018
+  url: "https://www.youtube.com/"
+  thumb: ""
+
+- candidate: "Candidato Exemplo 4"
+  party: "MDB"
+  cargo: "Governador"
+  region: "Rio de Janeiro"
+  year: 2018
+  url: "https://www.youtube.com/"
+  thumb: ""
+
+- candidate: "Candidato Exemplo 5"
+  party: "PT"
+  cargo: "Presidente"
+  region: "Nacional"
+  year: 2014
+  url: "https://www.youtube.com/"
+  thumb: ""
+
+- candidate: "Candidato Exemplo 6"
+  party: "PSDB"
+  cargo: "Presidente"
+  region: "Nacional"
+  year: 2014
+  url: "https://www.youtube.com/"
+  thumb: ""

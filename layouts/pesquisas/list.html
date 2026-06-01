@@ -1,0 +1,62 @@
+{{ define "main" }}
+<div id="main-content">
+  {{ partial "page-hero.html" . }}
+
+  <section class="page-content">
+    <div class="container">
+      {{ .Content }}
+
+      {{/* Abas de filtro */}}
+      <div class="filter-tabs" role="tablist" aria-label="Filtrar pesquisas">
+        <button class="filter-tab active" role="tab" data-filter="all" aria-selected="true">Todas</button>
+        <button class="filter-tab" role="tab" data-filter="concluida" aria-selected="false">Concluídas</button>
+        <button class="filter-tab" role="tab" data-filter="andamento" aria-selected="false">Em Andamento</button>
+        <button class="filter-tab" role="tab" data-filter="tese" aria-selected="false">Teses e Dissertações</button>
+      </div>
+
+      <ul class="pesquisas-list" id="pesquisas-list">
+        {{ range hugo.Data.pesquisas }}
+        <li class="pesquisa-item" data-status="{{ .status }}">
+          <div class="pesquisa-header">
+            {{ if .url }}
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="pesquisa-title">{{ .title }}</a>
+            {{ else }}
+            <span class="pesquisa-title">{{ .title }}</span>
+            {{ end }}
+            <span class="pesquisa-badge pesquisa-badge--{{ .status }}">
+              {{ if eq .status "concluida" }}Concluída
+              {{ else if eq .status "andamento" }}Em Andamento
+              {{ else }}Tese/Dissertação{{ end }}
+            </span>
+          </div>
+          <p class="pesquisa-meta">
+            {{ with .author }}<strong>{{ . }}</strong>{{ end }}
+            {{ with .year }}({{ . }}){{ end }}
+            {{ with .advisor }} — Orientador(a): {{ . }}{{ end }}
+            {{ with .institution }} — {{ . }}{{ end }}
+          </p>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".filter-tab");
+    const items = document.querySelectorAll(".pesquisa-item");
+    tabs.forEach(tab => {
+      tab.addEventListener("click", function () {
+        tabs.forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+        this.classList.add("active");
+        this.setAttribute("aria-selected", "true");
+        const filter = this.dataset.filter;
+        items.forEach(item => {
+          item.style.display = (filter === "all" || item.dataset.status === filter) ? "" : "none";
+        });
+      });
+    });
+  });
+</script>
+{{ end }}

@@ -1,0 +1,68 @@
+# Seminários do DOXA
+# Campos: title, presenter, institution, date (YYYY-MM-DD), year
+
+- title: "Título da Apresentação"
+  presenter: "Nome do Palestrante"
+  institution: "Universidade"
+  date: "2023-09-15"
+  year: 2023
+
+- title: "Título da Apresentação 2"
+  presenter: "Nome do Palestrante"
+  institution: "Universidade"
+  date: "2023-05-10"
+  year: 2023
+
+- title: "Título da Apresentação 3"
+  presenter: "Nome do Palestrante"
+  institution: "Universidade"
+  date: "2021-10-20"
+  year: 2021
+
+- title: "Título da Apresentação 4"
+  presenter: "Nome do Palestrante"
+  institution: "Universidade"
+  date: "2021-08-11"
+  year: 2021
+
+- title: "Título da Apresentação 5"
+  presenter: "Nome do Palestrante"
+  institution: "Universidade"
+  date: "2021-06-02"
+  year: 2021
+
+- title: "Título da Apresentação 6"
+  presenter: "Nome do Palestrante"
+  institution: "Universidade"
+  date: "2020-11-18"
+  year: 2020
+
+- title: "Título da Apresentação 7"
+  presenter: "Nome do Palestrante"
+  institution: "Universidade"
+  date: "2019-09-25"
+  year: 2019
+
+- title: "Título da Apresentação 8"
+  presenter: "Nome do Palestrante"
+  institution: "Universidade"
+  date: "2018-04-14"
+  year: 2018
+
+- title: "Título da Apresentação 9"
+  presenter: "Nome do Palestrante"
+  institution: "Universidade"
+  date: "2017-08-30"
+  year: 2017
+
+- title: "Título da Apresentação 10"
+  presenter: "Nome do Palestrante"
+  institution: "Universidade"
+  date: "2016-11-09"
+  year: 2016
+
+- title: "Título da Apresentação 11"
+  presenter: "Nome do Palestrante"
+  institution: "Universidade"
+  date: "2015-06-17"
+  year: 2015
