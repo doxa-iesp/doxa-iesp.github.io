@@ -2,8 +2,8 @@
 <header class="site-header">
   <div class="header-brand">
     <div class="container header-brand-inner">
-      <a href="/" class="site-logo" aria-label="DOXA — Página inicial">
-        <img src="/img/logo-doxa.svg" alt="DOXA" width="160" height="48">
+      <a href="{{ .Site.BaseURL }}" class="site-logo" aria-label="DOXA — Página inicial">
+        <img src="{{ "img/logo-doxa.svg" | relURL }}" alt="DOXA" width="160" height="48">
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
         <span></span><span></span><span></span>

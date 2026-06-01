@@ -9,7 +9,7 @@
       {{ if .Params.children }}
       <ul class="dropdown-menu" aria-label="{{ .Name }}">
         {{ range .Params.children }}
-        <li><a href="{{ .url }}" class="dropdown-link">{{ .name }}</a></li>
+        <li><a href="{{ $.Site.BaseURL }}{{ strings.TrimPrefix "/" .url }}" class="dropdown-link">{{ .name }}</a></li>
         {{ end }}
       </ul>
       {{ end }}

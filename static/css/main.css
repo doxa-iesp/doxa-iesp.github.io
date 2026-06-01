@@ -136,7 +136,7 @@ strong { font-weight: 700; }
 .bg-grid {
   background-image:
     radial-gradient(at top center, rgba(237,237,237,0.97) 0%, rgba(174,174,174,0.95) 100%),
-    url('/img/menu-icon.svg');
+    url('../img/menu-icon.svg');
   background-repeat: no-repeat, repeat;
   background-size: cover, 5% auto;
 }

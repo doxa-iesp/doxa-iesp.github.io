@@ -40,5 +40,5 @@
 <script>
 window.ACERVO_DATA = {{ hugo.Data.acervo | jsonify }};
 </script>
-<script src="/js/acervo.js"></script>
+<script src="{{ "js/acervo.js" | relURL }}"></script>
 {{ end }}
