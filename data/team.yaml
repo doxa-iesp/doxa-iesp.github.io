@@ -66,6 +66,13 @@
   email: ""
   photo: "/img/team/karime-lima.jpg"
 
+- name: "Felipe Lamarca"
+  role: "Mestrando"
+  category: "aluno"
+  lattes: ""
+  email: ""
+  photo: "/img/team/felipe-lamarca.jpeg"
+
 - name: "Larissa Mendes"
   role: "Bolsista de Treinamento Técnico"
   category: "assistente"
