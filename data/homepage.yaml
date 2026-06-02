@@ -1,8 +1,8 @@
 # Dados da homepage (hero, vídeo em destaque, dashboards, Vota Aí)
 
 votaai:
-  title: "Vota aí"
-  description: "Ferramenta com inteligência artificial para acessar propostas governamentais desde 2012, abrangendo todos os municípios brasileiros. Desenvolvida em parceria com o CESOP/Unicamp."
+  title: "Vota Aí"
+  description: "Ferramenta com inteligência artificial para acessar propostas governamentais registradas pelos candidatos às prefeituras de todos os municípios brasileiros desde 2012. Desenvolvida em parceria com o CESOP/Unicamp. Coordenada por Nara Salles e Argelina Figueiredo (DOXA-IESP-UERJ) e Cesop-Unicamp."
   url: "https://votaai.cesop.unicamp.br"
 
 featured_video:

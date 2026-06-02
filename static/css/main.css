@@ -136,9 +136,9 @@ strong { font-weight: 700; }
 .bg-grid {
   background-image:
     radial-gradient(at top center, rgba(237,237,237,0.97) 0%, rgba(174,174,174,0.95) 100%),
-    url('../img/menu-icon.svg');
+    url('../img/bg-grid-tile.svg');
   background-repeat: no-repeat, repeat;
-  background-size: cover, 5% auto;
+  background-size: cover, 20px 20px;
 }
 
 /* ---------- Header — duas bandas ---------- */
@@ -240,8 +240,13 @@ strong { font-weight: 700; }
   height: 3px;
   background: #fff;
   border-radius: 2px;
-  transition: transform var(--transition), opacity var(--transition);
+  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.2s ease;
 }
+/* Animação X quando aberto */
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
 /* ---------- Homepage ---------- */
 .home-hero {
@@ -578,13 +583,13 @@ strong { font-weight: 700; }
   .header-nav-wrapper {
     display: none;
     position: fixed;
-    top: var(--header-h);
+    top: 62px;
     left: 0; right: 0;
     background: var(--color-primary);
     padding: 1rem 1.5rem;
     z-index: 99;
     box-shadow: var(--shadow);
-    max-height: calc(100vh - var(--header-h));
+    max-height: calc(100vh - 62px);
     overflow-y: auto;
   }
   .header-nav-wrapper.open { display: block; }

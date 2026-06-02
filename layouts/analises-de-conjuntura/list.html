@@ -38,21 +38,5 @@
   </section>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const tabs = document.querySelectorAll(".filter-tab");
-    const items = document.querySelectorAll(".analysis-item");
-    tabs.forEach(tab => {
-      tab.addEventListener("click", function () {
-        tabs.forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
-        this.classList.add("active");
-        this.setAttribute("aria-selected", "true");
-        const filter = this.dataset.filter;
-        items.forEach(item => {
-          item.style.display = (filter === "all" || item.dataset.cycle === filter) ? "" : "none";
-        });
-      });
-    });
-  });
-</script>
+<script src="{{ "js/filter-tabs.js" | relURL }}" defer></script>
 {{ end }}

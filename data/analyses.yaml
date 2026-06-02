@@ -1,62 +1,224 @@
 # Análises de Conjuntura Eleitoral
-# Campos: title, cycle (ano/ciclo eleitoral), period, description, files (lista de {label, url})
+# Campos: title, cycle (ano), period, description, files (lista de {label, url})
 
-- title: "Cobertura Jornalística das Eleições de 2022"
-  cycle: "2022"
-  period: "Eleições Gerais 2022"
-  description: "Análise da cobertura jornalística dos principais veículos de imprensa durante as eleições gerais de 2022."
+# ---- Cobertura Jornalística ----
+
+- title: "Cobertura Jornalística das Eleições 2002 — O Globo"
+  cycle: "2002"
+  period: "Eleições Gerais 2002"
+  description: "Análise quantitativa da cobertura dos candidatos presidenciais em O Globo."
   files:
     - label: "Gráfico"
-      url: "/files/analises/2022-cobertura-grafico.pdf"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/021-2002-graficos-cobertura-jornalisitca-oglobo.pdf"
     - label: "Tabela"
-      url: "/files/analises/2022-cobertura-tabela.pdf"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/022-2002-tabelas-cobertura-jornalisitca-oglobo.pdf"
 
-- title: "Cobertura Jornalística das Eleições de 2018"
-  cycle: "2018"
-  period: "Eleições Gerais 2018"
-  description: "Análise da cobertura jornalística nas eleições de 2018."
+- title: "Cobertura Jornalística das Eleições 2002 — Jornal do Brasil"
+  cycle: "2002"
+  period: "Eleições Gerais 2002"
+  description: "Análise quantitativa da cobertura dos candidatos presidenciais no Jornal do Brasil."
   files:
     - label: "Gráfico"
-      url: "/files/analises/2018-cobertura-grafico.pdf"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/023-2002-graficos-cobertura-jornalisitca-JB.pdf"
     - label: "Tabela"
-      url: "/files/analises/2018-cobertura-tabela.pdf"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/024-2002-tabelas-cobertura-jornalisitca-JB.pdf"
 
-- title: "Cobertura Jornalística das Eleições de 2014"
-  cycle: "2014"
-  period: "Eleições Gerais 2014"
-  description: ""
+- title: "Cobertura Jornalística das Eleições 2002 — Folha de S.Paulo"
+  cycle: "2002"
+  period: "Eleições Gerais 2002"
+  description: "Análise quantitativa da cobertura dos candidatos presidenciais na Folha de S.Paulo."
   files:
     - label: "Gráfico"
-      url: "/files/analises/2014-cobertura-grafico.pdf"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/025-2002-graficos-cobertura-jornalistica-folha.pdf"
     - label: "Tabela"
-      url: "/files/analises/2014-cobertura-tabela.pdf"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/026-2002-tabelas-cobertura-jornalistica-folha.pdf"
 
-- title: "Cobertura Jornalística das Eleições de 2010"
-  cycle: "2010"
-  period: "Eleições Gerais 2010"
-  description: "Análise de O Globo, Jornal do Brasil, Folha de S.Paulo e Estado de S.Paulo."
+- title: "Cobertura Jornalística das Eleições 2002 — O Estado de S.Paulo"
+  cycle: "2002"
+  period: "Eleições Gerais 2002"
+  description: "Análise quantitativa da cobertura dos candidatos presidenciais em O Estado de S.Paulo."
   files:
     - label: "Gráfico"
-      url: "/files/analises/2010-cobertura-grafico.pdf"
-    - label: "Tabela"
-      url: "/files/analises/2010-cobertura-tabela.pdf"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/028-2002-graficos-cobertura-jornalistica-OESP.pdf"
 
-- title: "Cobertura Jornalística das Eleições de 2006"
+- title: "Cobertura Jornalística das Eleições 2006 — O Globo"
+  cycle: "2006"
+  period: "Eleições Gerais 2006"
+  description: "Análise quantitativa da cobertura dos candidatos presidenciais em O Globo."
+  files:
+    - label: "Gráfico"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/031-2006-graficos-cobertura-jornalisitca-oglobo.pdf"
+    - label: "Tabela"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/032-2006-tabelas-cobertura-jornalisitca-oglobo.pdf"
+
+- title: "Cobertura Jornalística das Eleições 2006 — Jornal do Brasil"
   cycle: "2006"
   period: "Eleições Gerais 2006"
   description: ""
   files:
     - label: "Gráfico"
-      url: "/files/analises/2006-cobertura-grafico.pdf"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/033-2006-graficos-cobertura-jornalisitca-JB.pdf"
     - label: "Tabela"
-      url: "/files/analises/2006-cobertura-tabela.pdf"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/034-2006-tabelas-cobertura-jornalisitca-JB.pdf"
 
-- title: "Cobertura Jornalística das Eleições de 2002"
-  cycle: "2002"
-  period: "Eleições Gerais 2002"
+- title: "Cobertura Jornalística das Eleições 2006 — Folha de S.Paulo"
+  cycle: "2006"
+  period: "Eleições Gerais 2006"
   description: ""
   files:
     - label: "Gráfico"
-      url: "/files/analises/2002-cobertura-grafico.pdf"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/035-2006-graficos-cobertura-jornalisitca-folha.pdf"
     - label: "Tabela"
-      url: "/files/analises/2002-cobertura-tabela.pdf"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/036-2006-tabelas-cobertura-jornalisitca-folha.pdf"
+
+- title: "Cobertura Jornalística das Eleições 2006 — O Estado de S.Paulo"
+  cycle: "2006"
+  period: "Eleições Gerais 2006"
+  description: ""
+  files:
+    - label: "Gráfico"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/037-2006-graficos-cobertura-jornalisitca-OESP.pdf"
+    - label: "Tabela"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/038-2006-tabelas-cobertura-jornalisitca-OESP.pdf"
+
+- title: "Cobertura Jornalística das Eleições 2010 — O Globo"
+  cycle: "2010"
+  period: "Eleições Gerais 2010"
+  description: ""
+  files:
+    - label: "Gráfico"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/041-2010-graficos-cobertura-jornalistica-oglobo.pdf"
+
+- title: "Cobertura Jornalística das Eleições 2010 — Valor Econômico"
+  cycle: "2010"
+  period: "Eleições Gerais 2010"
+  description: ""
+  files:
+    - label: "Gráfico"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/042-2010-graficos-cobertura-jornalistica-Valor.pdf"
+
+- title: "Cobertura Jornalística das Eleições 2010 — Folha de S.Paulo"
+  cycle: "2010"
+  period: "Eleições Gerais 2010"
+  description: ""
+  files:
+    - label: "Gráfico"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/043-2010-graficos-cobertura-jornalistica-folha.pdf"
+
+- title: "Cobertura Jornalística das Eleições 2010 — O Estado de S.Paulo"
+  cycle: "2010"
+  period: "Eleições Gerais 2010"
+  description: ""
+  files:
+    - label: "Gráfico"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/044-2010-graficos-cobertura-jornalistica-OESP.pdf"
+
+# ---- HGPE e Debates ----
+
+- title: "HGPE — Eleições 1989"
+  cycle: "1989"
+  period: "Eleições Presidenciais 1989"
+  description: "Resumos transcritos do HGPE presidencial de 1989, baseados na dissertação de doutorado de Afonso de Albuquerque."
+  files:
+    - label: "PDF"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/007-1989-HGPE-Eleicoes-Aqui-voce-ve-a-verdade-na-teve-Afonso-de-Albuquerque.pdf"
+
+- title: "Debates Eleitorais 2002 — 1º Turno, Debate 1"
+  cycle: "2002"
+  period: "Eleições Presidenciais 2002"
+  description: "Análise qualitativa e quantitativa da recepção dos debates presidenciais de 2002, em parceria com o MIT."
+  files:
+    - label: "PDF"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/001-2002-Debates-Eleitorais-primeiroround.pdf"
+
+- title: "Debates Eleitorais 2002 — 1º Turno, Debate 2"
+  cycle: "2002"
+  period: "Eleições Presidenciais 2002"
+  description: ""
+  files:
+    - label: "PDF"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/002-2002-Debates-Eleitorais-segundoround.pdf"
+
+- title: "Debates Eleitorais 2002 — 1º Turno, Debate 3"
+  cycle: "2002"
+  period: "Eleições Presidenciais 2002"
+  description: ""
+  files:
+    - label: "PDF"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/003-2002-Debates-Eleitorais-terceiroround.pdf"
+
+- title: "Debates Eleitorais 2002 — 2º Turno"
+  cycle: "2002"
+  period: "Eleições Presidenciais 2002"
+  description: ""
+  files:
+    - label: "PDF"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/004-2002-Debates-Eleitorais-segundoturno.pdf"
+
+# ---- IESP nas Eleições 2018 ----
+
+- title: "Os partidos nas eleições proporcionais no Estado do Rio — Eleições 2018"
+  cycle: "2018"
+  period: "Eleições Gerais 2018"
+  description: "Parte do projeto IESP nas Eleições 2018."
+  files:
+    - label: "PDF"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/Figueiredo-A._-Maciel-N.-Os-partidos-nas-eleicoes-proporcionais-no-Estado-do-Rio-de-Janeiro.pdf"
+
+- title: "A implosão da centro-direita e o voto em Bolsonaro — Eleições 2018"
+  cycle: "2018"
+  period: "Eleições Gerais 2018"
+  description: "Parte do projeto IESP nas Eleições 2018."
+  files:
+    - label: "PDF"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/Guarnieri-F_-Albuquerque-F.-A-implosao-da-centro-direita-e-o-voto-em-Bolsonaro.pdf"
+
+- title: "Resumo do HGPE — 1ª Semana (31/8–8/9/2018)"
+  cycle: "2018"
+  period: "Eleições Gerais 2018"
+  description: "Resumo semanal do Horário Eleitoral Gratuito presidencial. Autor: Holanda, M."
+  files:
+    - label: "PDF"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/Holanda-M.-Resumo-do-Horario-Eleitoral-Gratuito-de-Propaganda-Eleitoral-HGPE-1°-Semana-3182018-A-892018.pdf"
+
+- title: "Resumo do HGPE — 2ª Semana (10–15/9/2018)"
+  cycle: "2018"
+  period: "Eleições Gerais 2018"
+  description: "Autor: Cunha, C."
+  files:
+    - label: "PDF"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/Cunha-C.-Resumo-do-Horario-Eleitoral-Gratuito-de-Propaganda-Eleitoral-HGPE-–-2°-Semana-1092018-a-1592018.pdf"
+
+- title: "Resumo do HGPE — 3ª Semana (17–22/9/2018)"
+  cycle: "2018"
+  period: "Eleições Gerais 2018"
+  description: "Autor: Cunha, C."
+  files:
+    - label: "PDF"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/Cunha-C.-Resumo-do-Horario-Eleitoral-Gratuito-de-Propaganda-Eleitoral-HGPE-–-3a-Semana-1792018-a-2292018.pdf"
+
+- title: "Resumo do HGPE — 4ª Semana (25–29/9/2018)"
+  cycle: "2018"
+  period: "Eleições Gerais 2018"
+  description: "Autor: Curvelo, D."
+  files:
+    - label: "PDF"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/Curvelo-D.-Resumo-do-Horario-Eleitoral-–-4a-Semana-259-a-2992018.pdf"
+
+- title: "Horário Eleitoral Gratuito — Governador do Estado do Rio de Janeiro (2018)"
+  cycle: "2018"
+  period: "Eleições Gerais 2018"
+  description: "Autor: Curvelo, D."
+  files:
+    - label: "PDF"
+      url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/Curvelo-D.-Resumo-do-Horario-Eleitoral-–-4a-Semana-259-a-2992018.pdf"
+
+# ---- Vota Aí 2020 ----
+
+- title: "Vota Aí — Eleições Municipais 2020"
+  cycle: "2020"
+  period: "Eleições Municipais 2020"
+  description: "Plataforma interativa para análise dos programas de governo registrados no TSE pelos candidatos a prefeito. Coordenação: Nara Salles."
+  files:
+    - label: "Podcasts YouTube"
+      url: "https://www.youtube.com/@votaai6247/videos"

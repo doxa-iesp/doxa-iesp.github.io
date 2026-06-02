@@ -1,32 +1,44 @@
 # Eventos do DOXA
 # Campos: title, date (YYYY-MM-DD), description, image, url
+# Ordenação: mais recentes no topo
 
-- title: "Lançamento de Livro — Título do Livro"
+- title: "Edição digital gratuita do livro \"A Decisão do Voto\" de Marcus Figueiredo"
   date: "2022-12-16"
-  description: "Lançamento do livro sobre comportamento eleitoral no Brasil."
-  image: ""
-  url: ""
+  description: >
+    O DOXA disponibiliza gratuitamente a edição digital do livro "A Decisão do Voto"
+    de Marcus Figueiredo, fundador do laboratório.
+  image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/FIGUEIREDO_A-DECISAO-DO-VOTO_CARTAZ-576x1024.jpg"
+  url: "https://www.lab-doxa.org.br/edicao-digital-gratuita-do-livro-a-decisao-do-voto-de-marcus-figueiredo/"
 
-- title: "Seminário Internacional de Comunicação Política"
-  date: "2022-11-11"
-  description: "Evento internacional com pesquisadores de comunicação política."
-  image: ""
-  url: ""
+- title: "Seminário comemora 25 anos do DOXA"
+  date: "2021-11-25"
+  description: >
+    Seminário online para discutir a origem e o legado do laboratório e traçar
+    panorama sobre temas centrais para a democracia brasileira. Participantes:
+    Fernando Limongi (USP/FGV), Patrícia Campos Mello (Folha de S. Paulo),
+    Luciana Veiga (Unirio/ABCP), Felipe Borba (Unirio). Moderação: Fernando Guarnieri.
+    Transmitido pelo canal do IESP no YouTube.
+  image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/08/Seminario-25-anos-DOXA-1024x576.jpg"
+  url: "https://www.lab-doxa.org.br/seminario-comemora-25-anos-do-doxa/"
 
-- title: "Colóquio DOXA — 20 Anos"
-  date: "2017-11-11"
-  description: "Comemoração dos 20 anos do laboratório."
-  image: ""
-  url: ""
+- title: "DOXA 20 anos: O legado de Marcus Figueiredo"
+  date: "2017-11-13"
+  description: >
+    Evento realizado no IESP/UERJ (Rua da Matriz, 82 – Botafogo, Rio de Janeiro)
+    com abertura às 14h por Fernando Azevedo (UFSCar) e Afonso Albuquerque (UFF),
+    lançamento do livro "Eleições, Opinião Pública e Comunicação Política no Brasil
+    Contemporâneo" (orgs. Felipe Borba e Alessandra Aldé) e homenagem a Marcus Figueiredo.
+  image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/Doxa_20_parae-mail_azul-1024x682.jpg"
+  url: "https://www.lab-doxa.org.br/doxa-20-anos-o-legado-de-marcus-figueiredo/"
 
-- title: "Workshop de Métodos em Pesquisa Eleitoral"
+- title: "Seminário Marcus Figueiredo: Eleições, Opinião Pública e Comunicação Política no Brasil Contemporâneo"
   date: "2014-11-26"
-  description: "Workshop sobre metodologias em pesquisa eleitoral."
-  image: ""
-  url: ""
+  description: "Seminário sobre eleições, opinião pública e comunicação política no Brasil contemporâneo."
+  image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/CARTAZ_Seminario-Marcus-Figueiredo-724x1024.jpg"
+  url: "https://www.lab-doxa.org.br/seminario-marcus-figueiredo-eleicoes-opiniao-publica-e-comunicacao-politica-no-brasil-contemporaneo/"
 
-- title: "Seminário de Pesquisa — DOXA"
+- title: "Nota editorial sobre falecimento de Marcus Figueiredo na Revista Dados"
   date: "2014-08-08"
-  description: "Apresentação de pesquisas em andamento pelos membros do laboratório."
-  image: ""
-  url: ""
+  description: "Nota editorial publicada na Revista Dados sobre o falecimento de Marcus Figueiredo, fundador do DOXA."
+  image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/marcusfigueiredo_destaque-1024x615.jpg"
+  url: "https://www.lab-doxa.org.br/nota-editorial-sobre-falecimento-de-marcus-figueiredo-na-revista-dados-em-agosto-de-2014/"

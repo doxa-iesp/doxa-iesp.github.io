@@ -2,7 +2,7 @@
   <ul class="nav-list">
     {{ range .Site.Menus.main }}
     <li class="nav-item{{ if .Params.children }} has-dropdown{{ end }}">
-      <a href="{{ .URL }}" class="nav-link{{ if $.IsHome }}{{ if eq .URL "/" }} active{{ end }}{{ else }}{{ if hasPrefix $.RelPermalink .URL }} active{{ end }}{{ end }}">
+      <a href="{{ .URL }}" class="nav-link{{ if $.IsHome }}{{ if eq .URL $.Site.BaseURL }} active{{ end }}{{ else }}{{ if and (ne .URL $.Site.BaseURL) (hasPrefix $.RelPermalink (strings.TrimPrefix $.Site.BaseURL .URL)) }} active{{ end }}{{ end }}">
         {{ .Name }}
         {{ if .Params.children }}<span class="dropdown-arrow" aria-hidden="true">▾</span>{{ end }}
       </a>

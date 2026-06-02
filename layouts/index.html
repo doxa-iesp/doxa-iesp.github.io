@@ -31,15 +31,16 @@
   </section>
   {{ end }}{{ end }}
 
-  {{/* Vídeo em destaque */}}
+  {{/* Vídeo em destaque — só exibe se o youtube_id for real */}}
   {{ with hugo.Data.homepage }}{{ with .featured_video }}
+  {{ if and .youtube_id (ne .youtube_id "SUBSTITUA_PELO_ID_DO_VIDEO") }}
   <section class="home-section">
     <div class="container">
       <h2>{{ .title }}</h2>
       <div class="youtube-embed">
         <iframe
           src="https://www.youtube.com/embed/{{ .youtube_id }}"
-          title="{{ .title }}"
+          title="Vídeo institucional do DOXA no YouTube"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -48,10 +49,14 @@
       </div>
     </div>
   </section>
+  {{ end }}
   {{ end }}{{ end }}
 
-  {{/* Dashboards / Power BI */}}
+  {{/* Dashboards / Power BI — só exibe quando URLs reais estiverem configuradas */}}
   {{ with hugo.Data.homepage }}{{ with .dashboards }}
+  {{ $hasRealUrls := false }}
+  {{ range .items }}{{ if and .url (not (eq .url "https://app.powerbi.com/")) }}{{ $hasRealUrls = true }}{{ end }}{{ end }}
+  {{ if $hasRealUrls }}
   <section class="home-section home-section--alt">
     <div class="container">
       <h2>{{ .title }}</h2>
@@ -63,6 +68,7 @@
       </div>
     </div>
   </section>
+  {{ end }}
   {{ end }}{{ end }}
 
   {{/* Acervo audiovisual */}}
