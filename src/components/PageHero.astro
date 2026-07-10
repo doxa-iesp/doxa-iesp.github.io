@@ -1,0 +1,30 @@
+---
+interface Props {
+  titulo: string;
+  subtitulo?: string;
+}
+const { titulo, subtitulo } = Astro.props;
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>{titulo}</h1>
+    {subtitulo && <p class="hero__sub">{subtitulo}</p>}
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: var(--cor-fundo-alt);
+    padding-block: var(--esp-4);
+    border-bottom: 1px solid var(--cor-borda);
+  }
+  .hero h1 {
+    margin: 0;
+  }
+  .hero__sub {
+    margin: var(--esp-1) 0 0;
+    color: var(--cor-texto-suave);
+    max-width: 62ch;
+  }
+</style>

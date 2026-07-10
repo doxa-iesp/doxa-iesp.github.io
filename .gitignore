@@ -1,7 +1,16 @@
-# Hugo
-public/
-resources/
-.hugo_build.lock
+# Astro / Node
+node_modules/
+dist/
+.astro/
+.DS_Store
+
+# ATENÇÃO: `public/` NÃO é ignorado. No Hugo era a saída de build; no Astro é a
+# pasta de ASSETS DE ORIGEM (imagens, fontes, PDFs) e PRECISA ser versionada,
+# senão o deploy publica o site sem imagens.
+
+# Cópias que o iCloud cria ao sincronizar (quebram o build duplicando entradas)
+* 2.*
+* 2 *
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

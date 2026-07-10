@@ -1,0 +1,35 @@
+/* Identidade visual do DOXA — extraída do site WordPress antigo.
+   Único lugar onde cores, fontes e espaçamentos são definidos. */
+:root {
+  /* cores */
+  --cor-primaria: #305371;
+  --cor-primaria-clara: #3d6b8c;
+  --cor-primaria-escura: #1e3a50;
+  --cor-destaque: #ce673e; /* terracota: borda do header, ações */
+  --cor-acento: #086d60;
+  --cor-texto: #26231e;
+  --cor-texto-suave: #55524d;
+  --cor-fundo: #ffffff;
+  --cor-fundo-alt: #ededed;
+  --cor-borda: #d0d5de;
+  --cor-branco: #ffffff;
+
+  /* tipografia */
+  --fonte: 'Montserrat Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --altura-linha: 1.7;
+
+  /* layout */
+  --largura-max: 1140px;
+  --raio: 4px;
+  --raio-g: 8px;
+  --sombra: 0 2px 8px rgb(0 0 0 / 12%);
+  --sombra-sm: 0 1px 3px rgb(0 0 0 / 8%);
+  --transicao: 0.2s ease;
+
+  /* espaçamento */
+  --esp-1: 0.5rem;
+  --esp-2: 1rem;
+  --esp-3: 1.5rem;
+  --esp-4: 2.5rem;
+  --esp-5: 4rem;
+}

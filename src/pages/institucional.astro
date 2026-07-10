@@ -1,0 +1,134 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CardMembro from '../components/CardMembro.astro';
+
+const pagina = (await getEntry('paginas', 'institucional'))!;
+const { Content } = await render(pagina);
+const geral = (await getEntry('configuracao', 'geral'))!.data;
+
+const equipe = await getCollection('equipe');
+
+// Ordem e rótulos fixados pela tarefa. A ordem das categorias aqui É a ordem de exibição.
+const GRUPOS = [
+  { categoria: 'coordenacao', rotulo: 'Coordenação' },
+  { categoria: 'pesquisadores', rotulo: 'Pesquisadores' },
+  { categoria: 'pos-doutorando', rotulo: 'Pós-doutorandos' },
+  { categoria: 'aluno', rotulo: 'Alunos de Pós-graduação' },
+  { categoria: 'assistente', rotulo: 'Assistentes de Pesquisa' },
+  { categoria: 'associado', rotulo: 'Pesquisadores Associados' },
+] as const;
+
+const grupos = GRUPOS.map((g) => ({
+  rotulo: g.rotulo,
+  membros: equipe
+    .filter((m) => m.data.categoria === g.categoria)
+    .sort(
+      (a, b) =>
+        (a.data.ordem ?? 999) - (b.data.ordem ?? 999) ||
+        a.data.nome.localeCompare(b.data.nome, 'pt-BR'),
+    ),
+})).filter((g) => g.membros.length > 0);
+---
+
+<Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.descricao} />
+
+  <section class="secao">
+    <div class="container">
+      <div class="prosa">
+        <Content />
+      </div>
+    </div>
+  </section>
+
+  {
+    grupos.map((grupo, i) => (
+      <section class:list={['secao', 'equipe-secao', { 'secao--alt': i % 2 === 0 }]}>
+        <div class="container">
+          <h2>{grupo.rotulo}</h2>
+          <ul class="equipe-grid">
+            {grupo.membros.map((m) => (
+              <CardMembro
+                nome={m.data.nome}
+                cargo={m.data.cargo}
+                foto={m.data.foto}
+                lattes={m.data.lattes}
+                email={m.data.email}
+              />
+            ))}
+          </ul>
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="secao contato">
+    <div class="container">
+      <h2>Contato</h2>
+      <dl class="contato__lista">
+        <div class="contato__item">
+          <dt>E-mail</dt>
+          <dd><a href={`mailto:${geral.email}`}>{geral.email}</a></dd>
+        </div>
+        <div class="contato__item">
+          <dt>Endereço</dt>
+          <dd>{geral.endereco}<br />CEP {geral.cep}</dd>
+        </div>
+        {
+          geral.youtube && (
+            <div class="contato__item">
+              <dt>YouTube</dt>
+              <dd>
+                <a href={geral.youtube} target="_blank" rel="noopener noreferrer">
+                  Canal do DOXA
+                </a>
+              </dd>
+            </div>
+          )
+        }
+      </dl>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prosa {
+    max-width: 68ch;
+    color: var(--cor-texto-suave);
+  }
+
+  .equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--esp-3);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contato__lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--esp-3);
+    margin: 0;
+  }
+  .contato__item {
+    background: var(--cor-fundo-alt);
+    border-radius: var(--raio-g);
+    padding: var(--esp-3);
+  }
+  .contato__item dt {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+    margin-bottom: var(--esp-1);
+  }
+  .contato__item dd {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+</style>

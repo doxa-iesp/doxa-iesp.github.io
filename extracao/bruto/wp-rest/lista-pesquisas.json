@@ -1,0 +1,4699 @@
+[
+ {
+  "id": 2905,
+  "date": "2024-08-05T14:01:19",
+  "date_gmt": "2024-08-05T17:01:19",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2905"
+  },
+  "modified": "2024-08-05T14:01:22",
+  "modified_gmt": "2024-08-05T17:01:22",
+  "slug": "holanda-mariani-ferri-de-2023",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/holanda-mariani-ferri-de-2023/",
+  "title": {
+   "rendered": "HOLANDA, Mariani Ferri de &#8211; 2023"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2905",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2905",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2905"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2905"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2904,
+  "date": "2024-08-05T14:00:45",
+  "date_gmt": "2024-08-05T17:00:45",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2904"
+  },
+  "modified": "2024-08-05T14:00:47",
+  "modified_gmt": "2024-08-05T17:00:47",
+  "slug": "costa-pedro-bras-martins-da-2022",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/costa-pedro-bras-martins-da-2022/",
+  "title": {
+   "rendered": "COSTA, Pedro Brás Martins da – 2022"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2904",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2904",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2904"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2904"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2903,
+  "date": "2024-08-05T14:00:21",
+  "date_gmt": "2024-08-05T17:00:21",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2903"
+  },
+  "modified": "2024-08-05T14:00:24",
+  "modified_gmt": "2024-08-05T17:00:24",
+  "slug": "torres-ariel-lopes-2020",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/torres-ariel-lopes-2020/",
+  "title": {
+   "rendered": "TORRES, Ariel Lopes – 2020"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2903",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2903",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2903"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2903"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2902,
+  "date": "2024-08-05T13:59:51",
+  "date_gmt": "2024-08-05T16:59:51",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2902"
+  },
+  "modified": "2024-08-05T13:59:54",
+  "modified_gmt": "2024-08-05T16:59:54",
+  "slug": "salles-nara-oliveira-2019",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/salles-nara-oliveira-2019/",
+  "title": {
+   "rendered": "SALLES, Nara Oliveira &#8211; 2019"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2902",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2902",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2902"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2902"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2901,
+  "date": "2024-08-05T13:59:22",
+  "date_gmt": "2024-08-05T16:59:22",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2901"
+  },
+  "modified": "2024-08-05T13:59:25",
+  "modified_gmt": "2024-08-05T16:59:25",
+  "slug": "cruz-marcia-rodriguez-da-2018",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/cruz-marcia-rodriguez-da-2018/",
+  "title": {
+   "rendered": "CRUZ, Márcia Rodriguez da – 2018"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2901",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2901",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2901"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2901"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2900,
+  "date": "2024-08-05T13:58:48",
+  "date_gmt": "2024-08-05T16:58:48",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2900"
+  },
+  "modified": "2024-08-05T13:58:50",
+  "modified_gmt": "2024-08-05T16:58:50",
+  "slug": "carneiro-andre-correa-de-sa-do-2018",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/carneiro-andre-correa-de-sa-do-2018/",
+  "title": {
+   "rendered": "CARNEIRO, André Corrêa de Sá do – 2018"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2900",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2900",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2900"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2900"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2899,
+  "date": "2024-08-05T13:58:13",
+  "date_gmt": "2024-08-05T16:58:13",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2899"
+  },
+  "modified": "2024-08-05T13:58:16",
+  "modified_gmt": "2024-08-05T16:58:16",
+  "slug": "said-saulo-maia-2018",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/said-saulo-maia-2018/",
+  "title": {
+   "rendered": "SAID, Saulo Maia – 2018"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2899",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2899",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2899"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2899"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2898,
+  "date": "2024-08-05T13:57:36",
+  "date_gmt": "2024-08-05T16:57:36",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2898"
+  },
+  "modified": "2024-08-05T13:57:38",
+  "modified_gmt": "2024-08-05T16:57:38",
+  "slug": "martins-flavia-bozza-2018",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/martins-flavia-bozza-2018/",
+  "title": {
+   "rendered": "MARTINS, Flávia Bozza – 2018"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2898",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2898",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2898"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2898"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2897,
+  "date": "2024-08-05T13:56:49",
+  "date_gmt": "2024-08-05T16:56:49",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2897"
+  },
+  "modified": "2024-08-05T13:56:51",
+  "modified_gmt": "2024-08-05T16:56:51",
+  "slug": "pinto-alexandre-alves-2016-2",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/pinto-alexandre-alves-2016-2/",
+  "title": {
+   "rendered": "PINTO, Alexandre Alves – 2016"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2897",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2897",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2897"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2897"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2896,
+  "date": "2024-08-05T13:56:15",
+  "date_gmt": "2024-08-05T16:56:15",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2896"
+  },
+  "modified": "2024-08-05T13:56:18",
+  "modified_gmt": "2024-08-05T16:56:18",
+  "slug": "oliveira-lilian-paula-da-costa",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/oliveira-lilian-paula-da-costa/",
+  "title": {
+   "rendered": "OLIVEIRA, Lilian Paula da Costa"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2896",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2896",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2896"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2896"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2895,
+  "date": "2024-08-05T13:55:24",
+  "date_gmt": "2024-08-05T16:55:24",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2895"
+  },
+  "modified": "2024-08-05T13:55:28",
+  "modified_gmt": "2024-08-05T16:55:28",
+  "slug": "ramos-lara-mesquita-2016",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/ramos-lara-mesquita-2016/",
+  "title": {
+   "rendered": "RAMOS, Lara Mesquita – 2016"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2895",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2895",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2895"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2895"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2894,
+  "date": "2024-08-05T13:54:05",
+  "date_gmt": "2024-08-05T16:54:05",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2894"
+  },
+  "modified": "2024-08-05T13:54:07",
+  "modified_gmt": "2024-08-05T16:54:07",
+  "slug": "pinto-alexandre-alves-2016",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/pinto-alexandre-alves-2016/",
+  "title": {
+   "rendered": "PINTO, Alexandre Alves – 2016"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2894",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2894",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2894"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2894"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2893,
+  "date": "2024-08-05T13:53:16",
+  "date_gmt": "2024-08-05T16:53:16",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2893"
+  },
+  "modified": "2024-08-05T13:53:18",
+  "modified_gmt": "2024-08-05T16:53:18",
+  "slug": "klein-cristian-fernando-2014",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/klein-cristian-fernando-2014/",
+  "title": {
+   "rendered": "KLEIN, Cristian Fernando – 2014"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-2893",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2893",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2893"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2893"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2890,
+  "date": "2024-08-05T12:09:44",
+  "date_gmt": "2024-08-05T15:09:44",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2890"
+  },
+  "modified": "2024-08-05T12:09:47",
+  "modified_gmt": "2024-08-05T15:09:47",
+  "slug": "comportamento-politico-no-estado-do-rio-de-janeiro-adesao-as-liderancas-do-executivo-e-o-papel-da-seguranca-da-publica",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/comportamento-politico-no-estado-do-rio-de-janeiro-adesao-as-liderancas-do-executivo-e-o-papel-da-seguranca-da-publica/",
+  "title": {
+   "rendered": "Comportamento político no estado do Rio de Janeiro: adesão às lideranças do executivo e o papel da segurança da pública."
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-2890",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2890",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2890"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2890"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2889,
+  "date": "2024-08-05T12:09:02",
+  "date_gmt": "2024-08-05T15:09:02",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2889"
+  },
+  "modified": "2024-08-05T12:09:05",
+  "modified_gmt": "2024-08-05T15:09:05",
+  "slug": "fragmentacao-partidaria-margem-de-vitoria-e-cargos-comissionados",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/fragmentacao-partidaria-margem-de-vitoria-e-cargos-comissionados/",
+  "title": {
+   "rendered": "Fragmentação partidária, margem de vitória e cargos comissionados"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-2889",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2889",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2889"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2889"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2888,
+  "date": "2024-08-05T12:08:11",
+  "date_gmt": "2024-08-05T15:08:11",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2888"
+  },
+  "modified": "2024-08-05T12:08:13",
+  "modified_gmt": "2024-08-05T15:08:13",
+  "slug": "quais-sao-os-impactos-eleitorais-de-programas-de-transferencia-de-renda",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/quais-sao-os-impactos-eleitorais-de-programas-de-transferencia-de-renda/",
+  "title": {
+   "rendered": "Quais são os impactos eleitorais de programas de transferência de renda?"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-2888",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2888",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2888"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2888"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2887,
+  "date": "2024-08-05T12:07:30",
+  "date_gmt": "2024-08-05T15:07:30",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2887"
+  },
+  "modified": "2024-08-05T12:07:32",
+  "modified_gmt": "2024-08-05T15:07:32",
+  "slug": "efeitos-do-instituto-da-reeleicao",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/efeitos-do-instituto-da-reeleicao/",
+  "title": {
+   "rendered": "Efeitos do instituto da reeleição"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-2887",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2887",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2887"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2887"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2886,
+  "date": "2024-08-05T12:06:44",
+  "date_gmt": "2024-08-05T15:06:44",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2886"
+  },
+  "modified": "2024-08-05T12:06:47",
+  "modified_gmt": "2024-08-05T15:06:47",
+  "slug": "dinamica-de-sistemas-politicos-complexos-o-caso-do-estado-do-rio-de-janeiro-1994-2014",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/dinamica-de-sistemas-politicos-complexos-o-caso-do-estado-do-rio-de-janeiro-1994-2014/",
+  "title": {
+   "rendered": "Dinâmica de sistemas políticos complexos: o caso do estado do Rio de Janeiro (1994 2014)"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-2886",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2886",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2886"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2886"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2885,
+  "date": "2024-08-05T12:05:37",
+  "date_gmt": "2024-08-05T15:05:37",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=2885"
+  },
+  "modified": "2024-08-05T12:05:39",
+  "modified_gmt": "2024-08-05T15:05:39",
+  "slug": "representacao-politica-e-qualidade-da-democracia-um-estudo-das-elites-parlamentares-da-america-latina",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/representacao-politica-e-qualidade-da-democracia-um-estudo-das-elites-parlamentares-da-america-latina/",
+  "title": {
+   "rendered": "Representação Política e Qualidade da democracia: um estudo das elites parlamentares da América Latina"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-2885",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/2885",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2885"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=2885"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 955,
+  "date": "2022-09-20T14:10:27",
+  "date_gmt": "2022-09-20T17:10:27",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=955"
+  },
+  "modified": "2024-08-05T12:24:27",
+  "modified_gmt": "2024-08-05T15:24:27",
+  "slug": "maciel-natalia-regina-avila-2014",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/maciel-natalia-regina-avila-2014/",
+  "title": {
+   "rendered": "MACIEL, Natalia Regina Avila – 2014"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-955",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/955",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=955"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=955"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 956,
+  "date": "2022-09-19T14:12:07",
+  "date_gmt": "2022-09-19T17:12:07",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=956"
+  },
+  "modified": "2024-08-05T12:25:14",
+  "modified_gmt": "2024-08-05T15:25:14",
+  "slug": "vasconcellos-fabio-souza-2013",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/vasconcellos-fabio-souza-2013/",
+  "title": {
+   "rendered": "VASCONCELLOS, Fábio Souza – 2013"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-956",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/956",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=956"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=956"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 957,
+  "date": "2022-09-18T14:14:49",
+  "date_gmt": "2022-09-18T17:14:49",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=957"
+  },
+  "modified": "2022-10-03T19:39:18",
+  "modified_gmt": "2022-10-03T22:39:18",
+  "slug": "borba-felipe-de-moraes-2012",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/borba-felipe-de-moraes-2012/",
+  "title": {
+   "rendered": "BORBA, Felipe de Moraes – 2012"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-957",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/957",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=957"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=957"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 960,
+  "date": "2022-09-17T14:23:03",
+  "date_gmt": "2022-09-17T17:23:03",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=960"
+  },
+  "modified": "2022-10-03T19:39:51",
+  "modified_gmt": "2022-10-03T22:39:51",
+  "slug": "lourenco-luis-claudio-2007",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/lourenco-luis-claudio-2007/",
+  "title": {
+   "rendered": "LOURENÇO, Luis Claudio – 2007"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-960",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/960",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=960"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=960"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 958,
+  "date": "2022-09-17T14:17:15",
+  "date_gmt": "2022-09-17T17:17:15",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=958"
+  },
+  "modified": "2022-10-03T19:39:45",
+  "modified_gmt": "2022-10-03T22:39:45",
+  "slug": "oliveira-cloves-luiz-pereira-2007",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/oliveira-cloves-luiz-pereira-2007/",
+  "title": {
+   "rendered": "OLIVEIRA, Cloves Luiz Pereira – 2007"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-958",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/958",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=958"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=958"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 962,
+  "date": "2022-09-16T14:23:40",
+  "date_gmt": "2022-09-16T17:23:40",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=962"
+  },
+  "modified": "2022-10-03T19:40:07",
+  "modified_gmt": "2022-10-03T22:40:07",
+  "slug": "wey-beatriz-2006",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/wey-beatriz-2006/",
+  "title": {
+   "rendered": "WEY, Beatriz – 2006"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-962",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/962",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=962"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=962"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 961,
+  "date": "2022-09-16T14:23:20",
+  "date_gmt": "2022-09-16T17:23:20",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=961"
+  },
+  "modified": "2022-10-03T19:40:00",
+  "modified_gmt": "2022-10-03T22:40:00",
+  "slug": "urizzi-emerson-2006",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/urizzi-emerson-2006/",
+  "title": {
+   "rendered": "URIZZI, Emerson – 2006"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-961",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/961",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=961"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=961"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 970,
+  "date": "2022-09-15T14:34:54",
+  "date_gmt": "2022-09-15T17:34:54",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=970"
+  },
+  "modified": "2022-10-03T19:41:15",
+  "modified_gmt": "2022-10-03T22:41:15",
+  "slug": "oliveira-luiz-ademir-de-2005",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/oliveira-luiz-ademir-de-2005/",
+  "title": {
+   "rendered": "OLIVEIRA, Luiz Ademir de – 2005"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-970",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/970",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=970"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=970"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 969,
+  "date": "2022-09-15T14:31:02",
+  "date_gmt": "2022-09-15T17:31:02",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=969"
+  },
+  "modified": "2022-10-03T19:41:08",
+  "modified_gmt": "2022-10-03T22:41:08",
+  "slug": "dias-bezerra-heloisa-2005",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/dias-bezerra-heloisa-2005/",
+  "title": {
+   "rendered": "DIAS BEZERRA, Heloisa – 2005"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-969",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/969",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=969"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=969"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 968,
+  "date": "2022-09-15T14:30:26",
+  "date_gmt": "2022-09-15T17:30:26",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=968"
+  },
+  "modified": "2022-10-03T19:41:02",
+  "modified_gmt": "2022-10-03T22:41:02",
+  "slug": "borba-felipe-2005",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/borba-felipe-2005/",
+  "title": {
+   "rendered": "BORBA, Felipe – 2005"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-968",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/968",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=968"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=968"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 963,
+  "date": "2022-09-15T14:24:00",
+  "date_gmt": "2022-09-15T17:24:00",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=963"
+  },
+  "modified": "2022-10-03T19:40:52",
+  "modified_gmt": "2022-10-03T22:40:52",
+  "slug": "laurenza-ana-maria-de-abreu-2005",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/laurenza-ana-maria-de-abreu-2005/",
+  "title": {
+   "rendered": "LAURENZA, Ana Maria de Abreu – 2005"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-963",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/963",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=963"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=963"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 971,
+  "date": "2022-09-14T14:35:33",
+  "date_gmt": "2022-09-14T17:35:33",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=971"
+  },
+  "modified": "2022-10-03T19:41:24",
+  "modified_gmt": "2022-10-03T22:41:24",
+  "slug": "mendes-gabriel-gutierrez-2004",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/mendes-gabriel-gutierrez-2004/",
+  "title": {
+   "rendered": "MENDES, Gabriel Gutierrez – 2004"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-971",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/971",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=971"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=971"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 976,
+  "date": "2022-09-13T14:39:12",
+  "date_gmt": "2022-09-13T17:39:12",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=976"
+  },
+  "modified": "2022-10-03T19:41:39",
+  "modified_gmt": "2022-10-03T22:41:39",
+  "slug": "jorge-vladimyr-lombardo-2003",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/jorge-vladimyr-lombardo-2003/",
+  "title": {
+   "rendered": "JORGE, Vladimyr Lombardo – 2003"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-976",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/976",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=976"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=976"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 975,
+  "date": "2022-09-13T14:38:55",
+  "date_gmt": "2022-09-13T17:38:55",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=975"
+  },
+  "modified": "2022-10-03T19:41:33",
+  "modified_gmt": "2022-10-03T22:41:33",
+  "slug": "ribeiro-daniela-de-topin-2003",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/ribeiro-daniela-de-topin-2003/",
+  "title": {
+   "rendered": "RIBEIRO, Daniela de Topin – 2003"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-975",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/975",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=975"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=975"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 978,
+  "date": "2022-09-12T14:39:22",
+  "date_gmt": "2022-09-12T17:39:22",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=978"
+  },
+  "modified": "2022-10-03T19:41:53",
+  "modified_gmt": "2022-10-03T22:41:53",
+  "slug": "palmeira-sahada-j-l-mendes-2002",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/palmeira-sahada-j-l-mendes-2002/",
+  "title": {
+   "rendered": "PALMEIRA, Sahada J. L. Mendes – 2002"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-978",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/978",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=978"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=978"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 977,
+  "date": "2022-09-12T14:39:17",
+  "date_gmt": "2022-09-12T17:39:17",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=977"
+  },
+  "modified": "2022-10-03T19:41:47",
+  "modified_gmt": "2022-10-03T22:41:47",
+  "slug": "rodrigues-denise-dos-santos-2002",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/rodrigues-denise-dos-santos-2002/",
+  "title": {
+   "rendered": "RODRIGUES, Denise dos Santos – 2002"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-977",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/977",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=977"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=977"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 982,
+  "date": "2022-09-11T14:46:49",
+  "date_gmt": "2022-09-11T17:46:49",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=982"
+  },
+  "modified": "2022-10-03T19:43:01",
+  "modified_gmt": "2022-10-03T22:43:01",
+  "slug": "alde-alessandra-2001",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/alde-alessandra-2001/",
+  "title": {
+   "rendered": "ALDÉ, Alessandra – 2001"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-982",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/982",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=982"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=982"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 983,
+  "date": "2022-09-11T14:46:13",
+  "date_gmt": "2022-09-11T17:46:13",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=983"
+  },
+  "modified": "2022-10-03T19:42:55",
+  "modified_gmt": "2022-10-03T22:42:55",
+  "slug": "costal-luana-2001",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/costal-luana-2001/",
+  "title": {
+   "rendered": "COSTAL, Luana – 2001"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-983",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/983",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=983"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=983"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 981,
+  "date": "2022-09-11T14:46:01",
+  "date_gmt": "2022-09-11T17:46:01",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=981"
+  },
+  "modified": "2022-10-03T19:42:48",
+  "modified_gmt": "2022-10-03T22:42:48",
+  "slug": "veiga-luciana-fernandes-2001",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/veiga-luciana-fernandes-2001/",
+  "title": {
+   "rendered": "VEIGA, Luciana Fernandes – 2001"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-981",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/981",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=981"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=981"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 984,
+  "date": "2022-09-10T14:46:22",
+  "date_gmt": "2022-09-10T17:46:22",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=984"
+  },
+  "modified": "2022-10-03T19:43:08",
+  "modified_gmt": "2022-10-03T22:43:08",
+  "slug": "magalhaes-raul-francisco-2000",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/magalhaes-raul-francisco-2000/",
+  "title": {
+   "rendered": "MAGALHÃES, Raul Francisco – 2000"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-984",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/984",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=984"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=984"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 987,
+  "date": "2022-09-09T14:54:22",
+  "date_gmt": "2022-09-09T17:54:22",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=987"
+  },
+  "modified": "2022-09-09T14:54:24",
+  "modified_gmt": "2022-09-09T17:54:24",
+  "slug": "oliveira-luiz-ademir-de-1999",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/oliveira-luiz-ademir-de-1999/",
+  "title": {
+   "rendered": "OLIVEIRA, Luiz Ademir de – 1999"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-987",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/987",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=987"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=987"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 986,
+  "date": "2022-09-09T14:53:29",
+  "date_gmt": "2022-09-09T17:53:29",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=986"
+  },
+  "modified": "2022-09-09T14:53:31",
+  "modified_gmt": "2022-09-09T17:53:31",
+  "slug": "camargos-malco-braga-1999",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/camargos-malco-braga-1999/",
+  "title": {
+   "rendered": "CAMARGOS, Malco Braga – 1999"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-986",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/986",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=986"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=986"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 954,
+  "date": "2022-09-09T14:07:23",
+  "date_gmt": "2022-09-09T17:07:23",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=954"
+  },
+  "modified": "2022-09-09T14:07:24",
+  "modified_gmt": "2022-09-09T17:07:24",
+  "slug": "o-impacto-das-instituicoes-sobre-as-politicas-de-combate-a-pobreza-um-estudo-comparado-entre-brasil-mexico-e-africa-do-sul",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/o-impacto-das-instituicoes-sobre-as-politicas-de-combate-a-pobreza-um-estudo-comparado-entre-brasil-mexico-e-africa-do-sul/",
+  "title": {
+   "rendered": "O impacto das instituições sobre as políticas de combate à pobreza: um estudo comparado entre Brasil, México e África do Sul"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-954",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/954",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=954"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=954"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 951,
+  "date": "2022-09-09T14:05:21",
+  "date_gmt": "2022-09-09T17:05:21",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=951"
+  },
+  "modified": "2022-09-09T14:05:23",
+  "modified_gmt": "2022-09-09T17:05:23",
+  "slug": "aprovacao-de-governos-e-preferencia-partidaria-na-america-latina",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/aprovacao-de-governos-e-preferencia-partidaria-na-america-latina/",
+  "title": {
+   "rendered": "Aprovação de governos e preferência partidária na América Latina"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-951",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/951",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=951"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=951"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 950,
+  "date": "2022-09-09T14:04:55",
+  "date_gmt": "2022-09-09T17:04:55",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=950"
+  },
+  "modified": "2022-09-09T14:04:57",
+  "modified_gmt": "2022-09-09T17:04:57",
+  "slug": "institucionalizacao-e-efetividade-a-importancia-do-desenho-institucional-dos-conselhos-para-as-politicas-publicas",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/institucionalizacao-e-efetividade-a-importancia-do-desenho-institucional-dos-conselhos-para-as-politicas-publicas/",
+  "title": {
+   "rendered": "Institucionalização e efetividade: a importância do desenho institucional dos conselhos para as políticas públicas"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-950",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/950",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=950"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=950"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 949,
+  "date": "2022-09-09T14:04:27",
+  "date_gmt": "2022-09-09T17:04:27",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=949"
+  },
+  "modified": "2022-09-09T14:04:29",
+  "modified_gmt": "2022-09-09T17:04:29",
+  "slug": "reformas-na-previdencia-social-brasileira-custos-politicos-de-politicas-inviaveis",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/reformas-na-previdencia-social-brasileira-custos-politicos-de-politicas-inviaveis/",
+  "title": {
+   "rendered": "Reformas na previdência social brasileira: custos políticos de políticas inviáveis"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-949",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/949",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=949"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=949"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 948,
+  "date": "2022-09-09T14:03:56",
+  "date_gmt": "2022-09-09T17:03:56",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=948"
+  },
+  "modified": "2022-09-09T14:03:58",
+  "modified_gmt": "2022-09-09T17:03:58",
+  "slug": "partidos-coalizoes-e-voto-competicao-programatica-no-brasil-1989-2020",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/partidos-coalizoes-e-voto-competicao-programatica-no-brasil-1989-2020/",
+  "title": {
+   "rendered": "Partidos, coalizões e voto: competição programática no Brasil (1989-2020)"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-948",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/948",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=948"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=948"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 947,
+  "date": "2022-09-09T14:03:27",
+  "date_gmt": "2022-09-09T17:03:27",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=947"
+  },
+  "modified": "2024-08-05T12:11:57",
+  "modified_gmt": "2024-08-05T15:11:57",
+  "slug": "burocracia-processos-decisorios-e-politicas-publicas-no-territorio-do-estado-do-rio-de-janeiro",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/burocracia-processos-decisorios-e-politicas-publicas-no-territorio-do-estado-do-rio-de-janeiro/",
+  "title": {
+   "rendered": "Burocracia, processos decisórios e políticas públicas no território do estado do Rio de Janeiro"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   86
+  ],
+  "class_list": [
+   "post-947",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-realizada"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/947",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=947"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=947"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 946,
+  "date": "2022-09-09T14:02:56",
+  "date_gmt": "2022-09-09T17:02:56",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=946"
+  },
+  "modified": "2022-09-09T14:02:58",
+  "modified_gmt": "2022-09-09T17:02:58",
+  "slug": "dinamica-de-sistemas-politicos-complexos-a-politica-nas-grandes-metropoles-brasileiras",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/dinamica-de-sistemas-politicos-complexos-a-politica-nas-grandes-metropoles-brasileiras/",
+  "title": {
+   "rendered": "Dinâmica de sistemas políticos complexos: a política nas grandes metrópoles brasileiras"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-946",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/946",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=946"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=946"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 944,
+  "date": "2022-09-09T14:01:17",
+  "date_gmt": "2022-09-09T17:01:17",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=944"
+  },
+  "modified": "2024-08-05T12:17:26",
+  "modified_gmt": "2024-08-05T15:17:26",
+  "slug": "perfil-politico-e-propaganda-eleitoral-dos-candidatos-a-deputado-federal-do-estado-do-rio-de-janeiro",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/perfil-politico-e-propaganda-eleitoral-dos-candidatos-a-deputado-federal-do-estado-do-rio-de-janeiro/",
+  "title": {
+   "rendered": "Perfil político e propaganda eleitoral dos candidatos a deputado federal do Estado do Rio de Janeiro"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   85
+  ],
+  "class_list": [
+   "post-944",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-andamento"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/944",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=944"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=944"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 988,
+  "date": "2022-09-06T14:56:26",
+  "date_gmt": "2022-09-06T17:56:26",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=988"
+  },
+  "modified": "2022-10-03T19:43:31",
+  "modified_gmt": "2022-10-03T22:43:31",
+  "slug": "veiga-luciana-fernandes-1996",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/veiga-luciana-fernandes-1996/",
+  "title": {
+   "rendered": "VEIGA, Luciana Fernandes – 1996"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-988",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/988",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=988"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=988"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 989,
+  "date": "2022-09-05T14:57:05",
+  "date_gmt": "2022-09-05T17:57:05",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=989"
+  },
+  "modified": "2022-10-03T19:43:37",
+  "modified_gmt": "2022-10-03T22:43:37",
+  "slug": "dias-heloisa-da-silva-1995",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/dias-heloisa-da-silva-1995/",
+  "title": {
+   "rendered": "DIAS, Heloísa da Silva – 1995"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-989",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/989",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=989"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=989"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 990,
+  "date": "2022-09-05T14:52:41",
+  "date_gmt": "2022-09-05T17:52:41",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=990"
+  },
+  "modified": "2022-10-03T19:43:44",
+  "modified_gmt": "2022-10-03T22:43:44",
+  "slug": "jorge-vladimyr-lombardo-1995",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/jorge-vladimyr-lombardo-1995/",
+  "title": {
+   "rendered": "JORGE, Vladimyr Lombardo – 1995"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   87
+  ],
+  "class_list": [
+   "post-990",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-teses-dissertacoes"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/990",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=990"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=990"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 995,
+  "date": "2016-09-09T14:59:59",
+  "date_gmt": "2016-09-09T17:59:59",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=995"
+  },
+  "modified": "2026-03-19T13:21:38",
+  "modified_gmt": "2026-03-19T16:21:38",
+  "slug": "voto-pessoal-e-representacao-politica-o-caso-brasileiro",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/voto-pessoal-e-representacao-politica-o-caso-brasileiro/",
+  "title": {
+   "rendered": "Voto Pessoal e Representação Política: o Caso Brasileiro"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   86
+  ],
+  "class_list": [
+   "post-995",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-realizada"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/995",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=995"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=995"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 996,
+  "date": "2007-09-09T15:00:45",
+  "date_gmt": "2007-09-09T18:00:45",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=996"
+  },
+  "modified": "2026-03-19T13:21:18",
+  "modified_gmt": "2026-03-19T16:21:18",
+  "slug": "cobertura-jornalistica-eleicoes-presidenciais-2006",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/cobertura-jornalistica-eleicoes-presidenciais-2006/",
+  "title": {
+   "rendered": "Cobertura jornalística: Eleições Presidenciais 2006"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   86
+  ],
+  "class_list": [
+   "post-996",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-realizada"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/996",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=996"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=996"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 997,
+  "date": "2004-09-09T15:01:19",
+  "date_gmt": "2004-09-09T18:01:19",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=997"
+  },
+  "modified": "2026-03-19T13:21:08",
+  "modified_gmt": "2026-03-19T16:21:08",
+  "slug": "cobertura-jornalistica-eleicoes-municipais-2004",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/cobertura-jornalistica-eleicoes-municipais-2004/",
+  "title": {
+   "rendered": "Cobertura jornalística: eleições municipais 2004"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   86
+  ],
+  "class_list": [
+   "post-997",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-realizada"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/997",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=997"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=997"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 998,
+  "date": "2003-03-09T15:02:44",
+  "date_gmt": "2003-03-09T18:02:44",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=998"
+  },
+  "modified": "2026-03-19T13:19:51",
+  "modified_gmt": "2026-03-19T16:19:51",
+  "slug": "eleicoes-gerais-2002-participacao-propaganda-politica-e-escolhas-eleitorais",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/eleicoes-gerais-2002-participacao-propaganda-politica-e-escolhas-eleitorais/",
+  "title": {
+   "rendered": "Eleições Gerais 2002: Participação, Propaganda Política e Escolhas Eleitorais"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   86
+  ],
+  "class_list": [
+   "post-998",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-realizada"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/998",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=998"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=998"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 1001,
+  "date": "2001-12-09T15:05:36",
+  "date_gmt": "2001-12-09T17:05:36",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=1001"
+  },
+  "modified": "2026-03-19T13:18:56",
+  "modified_gmt": "2026-03-19T16:18:56",
+  "slug": "telejornal-e-a-formacao-da-opiniao-politica-recepcao-e-processamento-de-informacoes",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/telejornal-e-a-formacao-da-opiniao-politica-recepcao-e-processamento-de-informacoes/",
+  "title": {
+   "rendered": "Telejornal e a Formação da Opinião Política: Recepção e Processamento de Informações"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   86
+  ],
+  "class_list": [
+   "post-1001",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-realizada"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/1001",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=1001"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=1001"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 1000,
+  "date": "2001-07-09T15:04:59",
+  "date_gmt": "2001-07-09T18:04:59",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=1000"
+  },
+  "modified": "2026-03-19T13:20:48",
+  "modified_gmt": "2026-03-19T16:20:48",
+  "slug": "eleicoes-gerais-98-participacao-propaganda-politica-e-escolhas-eleitorais",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/eleicoes-gerais-98-participacao-propaganda-politica-e-escolhas-eleitorais/",
+  "title": {
+   "rendered": "Eleições Gerais 98: Participação, Propaganda Política e Escolhas Eleitorais"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   86
+  ],
+  "class_list": [
+   "post-1000",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-realizada"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/1000",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=1000"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=1000"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 999,
+  "date": "2001-02-09T15:04:08",
+  "date_gmt": "2001-02-09T17:04:08",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=999"
+  },
+  "modified": "2026-03-19T13:19:30",
+  "modified_gmt": "2026-03-19T16:19:30",
+  "slug": "eleicoes-municipais-2000",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/eleicoes-municipais-2000/",
+  "title": {
+   "rendered": "Eleições Municipais 2000"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   86
+  ],
+  "class_list": [
+   "post-999",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-realizada"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/999",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=999"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=999"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 1003,
+  "date": "1998-10-09T15:09:50",
+  "date_gmt": "1998-10-09T18:09:50",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=1003"
+  },
+  "modified": "2026-03-19T13:18:22",
+  "modified_gmt": "2026-03-19T16:18:22",
+  "slug": "ideologia-politica-persuasao-propaganda-eleitoral-e-voto",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/ideologia-politica-persuasao-propaganda-eleitoral-e-voto/",
+  "title": {
+   "rendered": "Ideologia Política, Persuasão, Propaganda Eleitoral e Voto"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   86
+  ],
+  "class_list": [
+   "post-1003",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-realizada"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/1003",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=1003"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=1003"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 1002,
+  "date": "1996-11-09T15:06:11",
+  "date_gmt": "1996-11-09T17:06:11",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=lista-pesquisas&#038;p=1002"
+  },
+  "modified": "2026-03-19T13:18:37",
+  "modified_gmt": "2026-03-19T16:18:37",
+  "slug": "eleicoes-1996-propaganda-eleitoral-na-tv-e-midia-impressa",
+  "status": "publish",
+  "type": "lista-pesquisas",
+  "link": "https://www.lab-doxa.org.br/lista-pesquisas/eleicoes-1996-propaganda-eleitoral-na-tv-e-midia-impressa/",
+  "title": {
+   "rendered": "Eleições 1996 – Propaganda Eleitoral na TV e Mídia Impressa"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "template": "",
+  "format": "standard",
+  "tipo-pesquisa": [
+   86
+  ],
+  "class_list": [
+   "post-1002",
+   "lista-pesquisas",
+   "type-lista-pesquisas",
+   "status-publish",
+   "format-standard",
+   "hentry",
+   "tipo-pesquisa-pesquisa-realizada"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas/1002",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/lista-pesquisas"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=1002"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "tipo-pesquisa",
+     "embeddable": true,
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa?post=1002"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

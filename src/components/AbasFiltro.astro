@@ -1,0 +1,144 @@
+---
+/**
+ * Abas de filtro reutilizáveis, com aprimoramento progressivo.
+ *
+ * Sem JavaScript, o grupo de abas fica oculto (`hidden`) e TODOS os itens da lista-alvo
+ * aparecem — nada quebra. Com JavaScript, as abas surgem e filtram a lista no cliente.
+ *
+ * Uso:
+ *   <AbasFiltro alvo="lista-pesquisas" abas={[{ id: 'todas', rotulo: 'Todas' }, ...]} />
+ *   <ul id="lista-pesquisas"> <li data-filtro-valor="tese">…</li> … </ul>
+ *
+ * A aba com `id: 'todas'` (a primeira) mostra tudo; as demais casam com `data-filtro-valor`.
+ * Botões seguem o padrão ARIA: role="tab" + aria-selected, navegáveis por setas do teclado.
+ */
+interface Aba {
+  id: string;
+  rotulo: string;
+}
+interface Props {
+  alvo: string; // id do container cujos filhos têm data-filtro-valor
+  abas: Aba[];
+  rotuloGrupo?: string; // aria-label do conjunto de abas
+}
+
+const { alvo, abas, rotuloGrupo = 'Filtrar itens' } = Astro.props;
+---
+
+<div class="abas" data-abas data-alvo={alvo} hidden>
+  <div class="abas__lista" role="tablist" aria-label={rotuloGrupo}>
+    {
+      abas.map((aba, i) => (
+        <button
+          type="button"
+          role="tab"
+          id={`aba-${alvo}-${aba.id}`}
+          class="aba"
+          data-filtro={aba.id}
+          aria-selected={i === 0 ? 'true' : 'false'}
+          aria-controls={alvo}
+          tabindex={i === 0 ? 0 : -1}
+        >
+          {aba.rotulo}
+        </button>
+      ))
+    }
+  </div>
+  <p class="abas__status" role="status" aria-live="polite"></p>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-abas]').forEach((raiz) => {
+    const alvoId = raiz.getAttribute('data-alvo');
+    const alvo = alvoId ? document.getElementById(alvoId) : null;
+    if (!alvo) return;
+
+    const abas = Array.from(raiz.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    const itens = Array.from(alvo.querySelectorAll<HTMLElement>('[data-filtro-valor]'));
+    const status = raiz.querySelector<HTMLElement>('.abas__status');
+    if (abas.length === 0 || itens.length === 0) return;
+
+    // Sem JS as abas ficam ocultas; agora que há JS, mostramos.
+    raiz.hidden = false;
+
+    function aplicar(filtro: string | null) {
+      let visiveis = 0;
+      itens.forEach((el) => {
+        const mostra = filtro === 'todas' || el.getAttribute('data-filtro-valor') === filtro;
+        el.hidden = !mostra;
+        if (mostra) visiveis += 1;
+      });
+      if (status) {
+        status.textContent =
+          visiveis === itens.length
+            ? `Mostrando todos os ${itens.length} itens.`
+            : `Mostrando ${visiveis} de ${itens.length} itens.`;
+      }
+    }
+
+    function selecionar(aba: HTMLButtonElement) {
+      abas.forEach((t) => {
+        const ativa = t === aba;
+        t.setAttribute('aria-selected', ativa ? 'true' : 'false');
+        t.tabIndex = ativa ? 0 : -1;
+      });
+      aplicar(aba.getAttribute('data-filtro'));
+    }
+
+    abas.forEach((aba) => {
+      aba.addEventListener('click', () => selecionar(aba));
+    });
+
+    // Navegação por teclado dentro do tablist (setas, Home, End).
+    raiz.querySelector('[role="tablist"]')?.addEventListener('keydown', (evento) => {
+      const e = evento as KeyboardEvent;
+      const i = abas.indexOf(document.activeElement as HTMLButtonElement);
+      if (i < 0) return;
+      let j = i;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') j = (i + 1) % abas.length;
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') j = (i - 1 + abas.length) % abas.length;
+      else if (e.key === 'Home') j = 0;
+      else if (e.key === 'End') j = abas.length - 1;
+      else return;
+      e.preventDefault();
+      abas[j].focus();
+      selecionar(abas[j]);
+    });
+  });
+</script>
+
+<style>
+  .abas {
+    margin-bottom: var(--esp-3);
+  }
+  .abas__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-1);
+  }
+  .aba {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 999px;
+    background: var(--cor-branco);
+    color: var(--cor-primaria);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transicao);
+  }
+  .aba:hover {
+    border-color: var(--cor-primaria);
+  }
+  .aba[aria-selected='true'] {
+    background: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+    color: var(--cor-branco);
+  }
+  .abas__status {
+    margin: var(--esp-1) 0 0;
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
+  }
+</style>

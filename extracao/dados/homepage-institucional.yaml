@@ -1,0 +1,37 @@
+# Homepage + Institucional — dados reais extraídos do WordPress
+# Fonte: DOM renderizado de /inicio/ e /institucional/ (2026-07-09)
+# Substitui os placeholders de data/homepage.yaml:
+#   featured_video.youtube_id: 'SUBSTITUA_PELO_ID_DO_VIDEO'  -> valor real abaixo
+#   dashboards[].url: 'https://app.powerbi.com/' (nu)        -> URL de embed real abaixo
+
+votaai:
+  title: "Vota aí – Conectando você a propostas eleitorais"
+  description: "O projeto idealizado por Nara Salles foi desenvolvido pelo Doxa durante as eleições municipais de 2020. A edição referente às eleições municipais deste ano, lançada em 26/08/2024, é coordenada por Nara Salles e Argelina Figueiredo em uma parceria entre o Doxa (Iesp-Uerj) e o Cesop (Unicamp). Estão disponíveis todos os programas de governo registrados por candidatas e candidatos às prefeituras de todos os municípios do Brasil desde 2012. Utilizando a inteligência artificial, a plataforma oferece diferentes ferramentas para consultar as propostas de governo. Depois das eleições, o projeto não acaba. O Vota Aí! continua disponível para que as eleitoras e os eleitores busquem os documentos sempre que desejar, e acompanhem se o que foi proposto na sua cidade está sendo realizado."
+  url: "https://www.votaai.cesop.unicamp.br/"
+
+featured_video:
+  title: "Melhores momentos do horário eleitoral"
+  youtube_id: "Ns3jYjf7hx4"
+
+videos:
+  - youtube_id: "Ns3jYjf7hx4"
+    title: "Melhores momentos do horário eleitoral"
+    kind: "embed"
+
+  - youtube_id: "EEaaM-mUzlk"
+    title: "Seminário comemora 25 anos do Doxa"
+    kind: "link"
+    url: "https://youtu.be/EEaaM-mUzlk"
+
+  - youtube_id: "2fdROPxcNCY"
+    title: "Doxa, Lemep e Necon convidam"
+    kind: "link"
+    url: "https://www.youtube.com/watch?v=2fdROPxcNCY&t=191s"
+
+dashboards:
+  title: "Eleições Rio e São Paulo 2024"
+  items:
+    - label: "Eleições Rio e São Paulo 2024"
+      url: "https://app.powerbi.com/view?r=eyJrIjoiNDk3MDhjYjktYWNhMC00Y2JhLTgxNDUtZWQzNDM1MGM0N2YwIiwidCI6Ijc0OTMyMDFlLTdhNDUtNDk3OC1iZWZkLTBlZDAwMmIwZjgyMiJ9"
+      # ATENÇÃO: a mesma URL também é usada pelo card ['Textos de discussão do Doxa'] na home
+      # do site original — muito provavelmente um link errado na fonte.

@@ -1,0 +1,416 @@
+[
+ {
+  "id": 32,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/ano/1988/",
+  "name": "1988",
+  "slug": "1988",
+  "taxonomy": "ano",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano/32",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/ano"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?ano=32"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 34,
+  "count": 38,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/ano/1989/",
+  "name": "1989",
+  "slug": "1989",
+  "taxonomy": "ano",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano/34",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/ano"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?ano=34"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 35,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/ano/1990/",
+  "name": "1990",
+  "slug": "1990",
+  "taxonomy": "ano",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano/35",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/ano"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?ano=35"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 89,
+  "count": 36,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/ano/1994/",
+  "name": "1994",
+  "slug": "1994",
+  "taxonomy": "ano",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano/89",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/ano"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?ano=89"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 109,
+  "count": 21,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/ano/1998/",
+  "name": "1998",
+  "slug": "1998",
+  "taxonomy": "ano",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano/109",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/ano"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?ano=109"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 27,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/ano/2006/",
+  "name": "2006",
+  "slug": "2006",
+  "taxonomy": "ano",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano/27",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/ano"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?ano=27"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 26,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/ano/2010/",
+  "name": "2010",
+  "slug": "2010",
+  "taxonomy": "ano",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano/26",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/ano"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?ano=26"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 25,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/ano/2014/",
+  "name": "2014",
+  "slug": "2014",
+  "taxonomy": "ano",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano/25",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/ano"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?ano=25"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 24,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/ano/2018/",
+  "name": "2018",
+  "slug": "2018",
+  "taxonomy": "ano",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano/24",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/ano"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/ano"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?ano=24"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

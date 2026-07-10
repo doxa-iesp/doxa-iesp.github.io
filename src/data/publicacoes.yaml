@@ -1,0 +1,207 @@
+# Gerado por scripts/converter-conteudo.py a partir de extracao/dados/.
+# Pode ser editado à mão: o build valida o schema (src/content.config.ts).
+
+- titulo: Corrupção, Como e por quê seu dinheiro sai pelo ladrão
+  autores: SALOMÃO, L. A.; GUARNIERI, Fernando
+  ano: 2016
+  tipo: livro
+  editora: '1. ed. Niterói: Nitpress. v. 1. 200p'
+- titulo: Política Local no Estado do Rio de Janeiro – As eleições municipais de 2020
+  autores: Borba, Felipe; Figueiredo, Argelina (org)
+  ano: 2022
+  tipo: livro
+  editora: Editora da UERJ
+- titulo: Corrupção, Como e por quê seu dinheiro sai pelo ladrão
+  autores: SALOMÃO, L. A.; GUARNIERI, Fernando
+  ano: 2016
+  tipo: livro
+  editora: 'Niterói: Nitpress. v. 1. 200p'
+- titulo: 25 anos de eleições presidenciais no Brasil
+  autores: Figueiredo, Argelina; Borba, Felipe (org)
+  ano: 2018
+  tipo: livro
+  editora: 'Curitiba: Appris'
+- titulo: 'Eleições, opinião pública e comunicação política no Brasil contemporâneo: homenagem a Marcus
+    Figueiredo'
+  autores: Borba, Felipe; Aldé, Alessandra (org)
+  ano: 2017
+  tipo: livro
+  editora: Eduerj
+  url: https://www.eduerj.com/eng/?product=eleicoes-opiniao-publica-e-comunicacao-politica-no-brasil-contemporaneo-homenagem-a-marcus-figueiredo-ebook&fbclid=IwAR25_qL-myIT26_tPjoS2pjoIchQcik-s2Z_WkO4p1WKqY1HHJ8mjNtYUrU
+- titulo: Magnitude eleitoral e representação de mulheres nos municípios brasileiros
+  autores: MEIRELES, F.; ANDRADE, L.
+  ano: 2021
+  tipo: capitulo
+  editora: 'In: Luis Felipe Miguel. (Org.). Mulheres e representação política: 25 de estudos sobre cotas
+    eleitorais no Brasil. 1ed. Porto Alegre: Zouk'
+  paginas: p. 505-534
+- titulo: O impacto da Covid-19 no comportamento eleitoral do fluminense nas eleições de 2020
+  autores: Guarnieri, Fernando; Figueiredo, Argelina
+  ano: 2022
+  tipo: capitulo
+  editora: In Felipe Borba e Argelina Figueiredo (org), As eleições municipais de 2020 no Estado do Rio
+    de Janeiro, Editora da UERJ
+- titulo: Estudos Legislativos em Perspectiva Comparada
+  autores: Figueiredo, Argelina; Freitas, Andréa; Medeiros, Danilo
+  ano: 2022
+  tipo: capitulo
+  editora: in Renato Perissinoto et al (org). Política Comparada, no prelo, Editora da UERJ
+- titulo: Vulnerabilidades sociais, modelos de provisão de saúde e suas relações com a mortalidade decorrente
+    da pandemia de Covid-19 no Brasil e nos Estados Unidos
+  autores: Figueiredo, Argelina; Guichney, Hellen; Lazzari, Eduardo
+  tipo: capitulo
+  editora: In Fernando Fontainha e Carlos Milani (org), COVID-19 e agendas de pesquisa nas ciências sociais.
+    Editora da UERJ – no prelo
+- titulo: Determinantes Políticos e Institucionales del Éxito Legislativo del Ejecutivo em América Latina
+  autores: Figueiredo, Argelina; Salles, Denise; Martins, Marcelo
+  ano: 2011
+  tipo: capitulo
+  editora: 'in Manuel Alcántara y Mercedes García Montero (Ed). Algo más que presidentes. El papel del
+    Poder Legislativo en América Latina, Zaragora: Fundación Manuel Giménez Abad de Estudios Parlamentarios
+    y del Estado Autonómico. Versão Digital (2020)'
+  url: https://www.fundacionmgimenezabad.es/sites/default/files/Publicar/publicaciones/documentos/a1-actas1_algo_mas_que_presidentes_dig_0.pdf
+- titulo: Os partidos nas eleições proporcionais no Estado do Rio
+  autores: Figueiredo, Argelina; Maciel, Natália
+  ano: 2019
+  tipo: capitulo
+  editora: 'In João Feres Jr e Carolina de Paula (Org) Eleições de 2018 e a Crise da Democracia Brasileira.
+    Curitiba: Appris'
+- titulo: A implosão da centro-direita e o voto em Bolsonaro
+  autores: GUARNIERI, Fernando; ALBUQUERQUE, Felipe
+  ano: 2019
+  tipo: capitulo
+  editora: 'In João Feres Jr e Carolina de Paula (Org) Eleições de 2018 e a Crise da Democracia Brasileira.
+    Curitiba: Appris'
+- titulo: O voto do eleitor pobre nas eleições presidenciais (1989-2014)
+  autores: Figueiredo, Argelina; Maciel, Natália; Simoni Jr., Sérgio; Silva, Thiago M.
+  ano: 2018
+  tipo: capitulo
+  editora: 'In Figueiredo, Argelina; Borba, Felipe (Org). 25 anos de eleições presidenciais no Brasil.
+    Curitiba: Appris'
+  paginas: pp. 75-94
+- titulo: Political Participation in Brazil
+  autores: LIMONGI, Fernando; CHEIBUB, José. A.; FIGUEIREDO, Argelina
+  ano: 2018
+  tipo: capitulo
+  editora: 'In Marta Arretche (org) Paths of Inequality in Brazil: a Half Century of Changes. Switzerland.
+    Springer'
+  paginas: p. 4-24
+- titulo: Estudos legislativos no Brasil
+  autores: Figueiredo Argelina; Santos, Fabiano
+  ano: 2016
+  tipo: capitulo
+  editora: 'In: Leonardo Avritzer; Carlos R. S. Milani; Maria do Socorro Braga. (Org.) A ciência política
+    no Brasil. 1960-2015. Rio de Janeiro: Editora FGV; ABCP'
+- titulo: Political Institutions and Governmental Performance in Brazilian Democracy
+  autores: Figueiredo, Argelina; Limongi, Fernando
+  ano: 2015
+  tipo: capitulo
+  editora: 'In: Dana de la Fontaine e Thomas Stehnken (Eds.), The political System of Brazil, New York,
+    Springer. ISBN 978-3-642-40022-3'
+- titulo: Participação Política no Brasil
+  autores: LIMONGI, Fernando; CHEIBUB, José. A.; FIGUEIREDO, Argelina
+  ano: 2015
+  tipo: capitulo
+  editora: 'In Marta Arretche (org.), São Paulo: Editora UNESP'
+- titulo: 'Eleições municipais de 2016 e 2020 em São Paulo: resultados diferentes, alinhamentos iguais'
+  autores: ZOLNERKEVIC, A.; Guarnieri, F.
+  ano: 2023
+  tipo: artigo
+  revista: OPINIÃO PÚBLICA
+  paginas: v. 29, p. 133-165
+- titulo: O Governo Bolsonaro e a Conjuntura Política Pré-Eleitoral
+  autores: Guarnieri, F.; FIGUEIREDO, A.
+  ano: 2022
+  tipo: artigo
+  revista: CADERNOS ADENAUER (SÃO PAULO)
+  paginas: v. 23, p. 9
+- titulo: A spatial interaction model of vote dispersion
+  autores: Guarnieri, F.; SILVA, G. P.
+  ano: 2022
+  tipo: artigo
+  revista: POLITICAL GEOGRAPHY
+  paginas: v. 98, p. 102709
+- titulo: 'Democratic Principles and Performance: What do the Experts Think?'
+  autores: RUSSO, G. A.; AVELINO, G.; Guarnieri, F.
+  ano: 2022
+  tipo: artigo
+  revista: Journal of Politics in Latin America (Print)
+  paginas: v. 14, p. 224-236
+- titulo: Modelos de competição política e as eleições de 2022
+  autores: Guarnieri, F.; FIGUEIREDO, A.
+  ano: 2022
+  tipo: artigo
+  revista: CADERNOS ADENAUER (SÃO PAULO)
+  paginas: v. 4, p. 9
+- titulo: Política Distributiva em Coalizão
+  autores: MEIRELES, F.
+  ano: 2024
+  tipo: artigo
+  revista: DADOS – REVISTA DE CIÊNCIAS SOCIAIS
+  paginas: v. 67, p. 1
+- titulo: 'Multi-level legislative representation in an inchoate party system: Mass-elite ideological
+    congruence in Brazil'
+  autores: CARROLL, ROYCE; MEIRELES, F.
+  ano: 2024
+  tipo: artigo
+  revista: Party Politics
+  paginas: v. 30, p. 151-165
+- titulo: 'Pesquisas eleitorais no Brasil: tendências e desempenho'
+  autores: MEIRELES, F.; RUSSO, G.
+  ano: 2022
+  tipo: artigo
+  revista: ESTUDOS AVANÇADOS (ONLINE)
+  paginas: v. 36, p. 117-131
+- titulo: Deu Match? Uma introdução às técnicas de pareamento
+  autores: SCHAEFER, B. M.; FIGUEIREDO FILHO, Dalson Britto
+  ano: 2023
+  tipo: artigo
+  revista: REVISTA BRASILEIRA DE CIÊNCIAS SOCIAIS (ONLINE)
+  paginas: v. 38, p. 1-20
+- titulo: 'Plutocratas, personalistas ou inexperientes: uma revisão sistemática sobre autofinanciamento
+    eleitoral'
+  autores: SCHAEFER, B. M.
+  ano: 2023
+  tipo: artigo
+  revista: AGENDA POLÍTICA
+  paginas: v. 10, p. 94
+- titulo: O governo Bolsonaro e a conjuntura eleitoral
+  autores: Guarnieri, Fernando; Figueiredo, Argelina
+  ano: 2022
+  tipo: artigo
+  revista: Cadernos Adenauer
+  paginas: v. XXIII, n. 2
+- titulo: Modelos de competição política e as eleições de 2022
+  autores: Guarnieri, Fernando; Figueiredo, Argelina
+  ano: 2022
+  tipo: artigo
+  revista: Cadernos Adenauer
+  paginas: v. XXIII, n. 4
+- titulo: A Crise Atual e o Debate Institucional
+  autores: Limongi, Fernando; Figueiredo, Argelina
+  ano: 2017
+  tipo: artigo
+  revista: Novos Estudos Cebrap
+  paginas: v. 36, n. 3
+  url: https://www.scielo.br/j/nec/a/KBxnHhZWWCPJ5zgJwKTTzSK/abstract/?lang=pt
+- titulo: Entrevista a Fabio Kersche e João Feres Junior
+  autores: Figueiredo, Argelina
+  ano: 2016
+  tipo: artigo
+  revista: 'ESCRITOS: Revista da Fundação Casa de Rui Barbosa'
+  paginas: v. 8, n. 8, pp. 233-252
+- titulo: Contracapa do livro Democracia e Eleições no Brasil. Para onde vamos?
+  autores: Figueiredo, Argelina
+  ano: 2022
+  tipo: outros
+  editora: Magna Inácio & Vanessa Elias de Oliveira (orgs.), Hucitec/Anpocs. Contracapa
+- titulo: Prefácio do livro Por que eleições são importantes?
+  autores: Figueiredo, A. M. C.
+  ano: 2021
+  tipo: outros
+  editora: 'Przeworki, Adam. Rio de Janeiro: EdUERJ'
+- titulo: Prefácio do livro O presidencialismo da Coalizão
+  autores: Limongi, Fernando; Figueiredo, Argelina
+  ano: 2016
+  tipo: outros
+  editora: Prefácio do livro de Andréa Marcondes de Freitas. Rio de Janeiro, Fundação Konrad Adenauer

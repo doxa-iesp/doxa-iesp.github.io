@@ -1,0 +1,53 @@
+# Mapas de votacao - sumario da extracao
+dominio: mapas_votacao
+fonte_pagina: "https://www.lab-doxa.org.br/mapas-de-votacao/"
+fonte_local: "rendered/page__mapas-de-votacao.html"
+fonte_links: "rendered/page__mapas-de-votacao.links.json"
+csv: "extracted/mapas-votacao.csv"
+csv_abs: "/private/tmp/claude-501/-Users-felipelmc-Desktop-DOXA/7878c6cf-422b-4c52-a764-25acbf2904f3/scratchpad/extracted/mapas-votacao.csv"
+regiao: "Municipio do Rio de Janeiro"
+total_pdfs: 273
+colunas: [ano, eleicao, cargo, turno, titulo, url]
+nota_turno: "A fonte nao informa turno em nenhum ponto; campo 'turno' fica vazio."
+nota_eleicao: "'eleicao' = sistema eleitoral (Majoritaria/Proporcional), conforme abas e texto introdutorio da pagina."
+nota_titulo: "Nos mapas proporcionais 'titulo' = sigla do partido (texto-ancora); nas majoritarias fica vazio pois a ancora e apenas o ano."
+por_ano:
+  '1998': 32
+  '2002': 62
+  '2006': 59
+  '2010': 54
+  '2014': 66
+por_cargo:
+  "Deputado Estadual": 141
+  "Deputado Federal": 117
+  "Governador": 5
+  "Presidente": 5
+  "Senador": 5
+por_eleicao:
+  "Proporcional": 258
+  "Majoritaria": 15
+por_cargo_ano:
+  "Deputado Estadual 1998": 29
+  "Deputado Estadual 2002": 28
+  "Deputado Estadual 2006": 28
+  "Deputado Estadual 2010": 25
+  "Deputado Estadual 2014": 31
+  "Deputado Federal 2002": 31
+  "Deputado Federal 2006": 28
+  "Deputado Federal 2010": 26
+  "Deputado Federal 2014": 32
+  "Governador 1998": 1
+  "Governador 2002": 1
+  "Governador 2006": 1
+  "Governador 2010": 1
+  "Governador 2014": 1
+  "Presidente 1998": 1
+  "Presidente 2002": 1
+  "Presidente 2006": 1
+  "Presidente 2010": 1
+  "Presidente 2014": 1
+  "Senador 1998": 1
+  "Senador 2002": 1
+  "Senador 2006": 1
+  "Senador 2010": 1
+  "Senador 2014": 1

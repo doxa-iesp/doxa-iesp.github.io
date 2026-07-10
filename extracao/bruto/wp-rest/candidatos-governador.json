@@ -1,0 +1,857 @@
+[
+ {
+  "id": 133,
+  "count": 9,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/alexandre-stoduto/",
+  "name": "Alexandre Stoduto",
+  "slug": "alexandre-stoduto",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/133",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=133"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 92,
+  "count": 28,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/anthony-garotinho/",
+  "name": "Anthony Garotinho",
+  "slug": "anthony-garotinho",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/92",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=92"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 132,
+  "count": 11,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/cesar-maia/",
+  "name": "Cesar Maia",
+  "slug": "cesar-maia",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/132",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=132"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 127,
+  "count": 9,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/cyro-garcia/",
+  "name": "Cyro Garcia",
+  "slug": "cyro-garcia",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/127",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=127"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 128,
+  "count": 9,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/dalva-lazaroni/",
+  "name": "Dalva Lazaroni",
+  "slug": "dalva-lazaroni",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/128",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=128"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 129,
+  "count": 9,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/fabio-tenorio-cavalcanti/",
+  "name": "Fábio Tenório Cavalcanti",
+  "slug": "fabio-tenorio-cavalcanti",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/129",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=129"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 90,
+  "count": 18,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/jorge-bittar/",
+  "name": "Jorge Bittar",
+  "slug": "jorge-bittar",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/90",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=90"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 126,
+  "count": 9,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/lucia-solto/",
+  "name": "Lúcia Solto",
+  "slug": "lucia-solto",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/126",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=126"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 125,
+  "count": 9,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/luiz-paulo/",
+  "name": "Luiz Paulo",
+  "slug": "luiz-paulo",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/125",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=125"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 91,
+  "count": 18,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/marcello-alencar/",
+  "name": "Marcello Alencar",
+  "slug": "marcello-alencar",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/91",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=91"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 134,
+  "count": 9,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/maria-luisa-batista/",
+  "name": "Maria Luisa Batista",
+  "slug": "maria-luisa-batista",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/134",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=134"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 95,
+  "count": 15,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/mauro-cesar/",
+  "name": "Mauro Cesar",
+  "slug": "mauro-cesar",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/95",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=95"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 93,
+  "count": 18,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/milton-goncalves/",
+  "name": "Milton Gonçalves",
+  "slug": "milton-goncalves",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/93",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=93"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 107,
+  "count": 17,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/newton-cruz/",
+  "name": "Newton Cruz",
+  "slug": "newton-cruz",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/107",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=107"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 131,
+  "count": 9,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/paulo-freitas/",
+  "name": "Paulo Freitas",
+  "slug": "paulo-freitas",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/131",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=131"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 96,
+  "count": 18,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/paulo-roberto-santoro/",
+  "name": "Paulo Roberto Santoro",
+  "slug": "paulo-roberto-santoro",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/96",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=96"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 135,
+  "count": 9,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/philippe-guedon/",
+  "name": "Philippe Guedon",
+  "slug": "philippe-guedon",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/135",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=135"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 130,
+  "count": 9,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/professor-verissimo/",
+  "name": "Professor Veríssimo",
+  "slug": "professor-verissimo",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/130",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=130"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 94,
+  "count": 18,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/candidatos-governador/ronald-azaro/",
+  "name": "Ronald Azaro",
+  "slug": "ronald-azaro",
+  "taxonomy": "candidatos-governador",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador/94",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/candidatos-governador"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/candidatos-governador"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?candidatos-governador=94"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

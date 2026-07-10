@@ -1,0 +1,127 @@
+---
+interface Props {
+  anos: number[];
+  cargos: string[];
+  regioes: string[];
+  partidos: string[];
+}
+const { anos, cargos, regioes, partidos } = Astro.props;
+
+/** Mesmo normalizador do card e do <script> da página: gera valores de opção comparáveis. */
+function normalizar(texto: string): string {
+  return texto
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .trim();
+}
+---
+
+<form class="filtros" aria-label="Filtros do acervo" autocomplete="off">
+  <div class="filtros__grade">
+    <div class="filtros__campo filtros__campo--busca">
+      <label for="filtro-busca">Candidato</label>
+      <input
+        type="search"
+        id="filtro-busca"
+        name="busca"
+        placeholder="Ex.: Collor, Lula, Brizola…"
+        enterkeyhint="search"
+      />
+    </div>
+
+    <div class="filtros__campo">
+      <label for="filtro-ano">Ano</label>
+      <select id="filtro-ano" name="ano">
+        <option value="">Todos</option>
+        {anos.map((ano) => <option value={String(ano)}>{ano}</option>)}
+      </select>
+    </div>
+
+    <div class="filtros__campo">
+      <label for="filtro-cargo">Cargo</label>
+      <select id="filtro-cargo" name="cargo">
+        <option value="">Todos</option>
+        {cargos.map((cargo) => <option value={normalizar(cargo)}>{cargo}</option>)}
+      </select>
+    </div>
+
+    <div class="filtros__campo">
+      <label for="filtro-regiao">Região</label>
+      <select id="filtro-regiao" name="regiao">
+        <option value="">Todas</option>
+        {regioes.map((regiao) => <option value={normalizar(regiao)}>{regiao}</option>)}
+      </select>
+    </div>
+
+    <div class="filtros__campo">
+      <label for="filtro-partido">Partido</label>
+      <select id="filtro-partido" name="partido">
+        <option value="">Todos</option>
+        {partidos.map((partido) => <option value={normalizar(partido)}>{partido}</option>)}
+      </select>
+    </div>
+  </div>
+
+  <button type="button" id="filtro-limpar" class="btn btn-contorno filtros__limpar">
+    Limpar filtros
+  </button>
+</form>
+
+<style>
+  .filtros {
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-g);
+    padding: var(--esp-3);
+    box-shadow: var(--sombra-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-3);
+  }
+  .filtros__grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: var(--esp-2);
+  }
+  .filtros__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .filtros__campo--busca {
+    grid-column: 1 / -1;
+  }
+  .filtros__campo label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+  }
+  .filtros__campo input,
+  .filtros__campo select {
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    background: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 0.55rem 0.7rem;
+    width: 100%;
+  }
+  .filtros__campo input:focus-visible,
+  .filtros__campo select:focus-visible {
+    border-color: var(--cor-primaria);
+  }
+  .filtros__limpar {
+    align-self: flex-start;
+    cursor: pointer;
+  }
+
+  @media (min-width: 720px) {
+    .filtros__campo--busca {
+      grid-column: auto;
+    }
+  }
+</style>

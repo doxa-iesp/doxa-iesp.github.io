@@ -1,0 +1,133 @@
+---
+/**
+ * Cartão de um membro da equipe.
+ * Recebe os campos da coleção `equipe`. Foto, Lattes e e-mail são opcionais:
+ * quando a foto falta, mostra um placeholder com as iniciais; os links só aparecem
+ * quando existem de verdade (o site antigo não publica Lattes/e-mail da maioria).
+ */
+import { url } from '../lib/url';
+
+interface Props {
+  nome: string;
+  cargo: string;
+  foto?: string;
+  lattes?: string;
+  email?: string;
+}
+
+const { nome, cargo, foto, lattes, email } = Astro.props;
+
+/** Iniciais para o placeholder: primeira letra do primeiro e do último nome. */
+function iniciais(texto: string): string {
+  const partes = texto.trim().split(/\s+/).filter(Boolean);
+  const primeira = partes[0]?.[0] ?? '';
+  const ultima = partes.length > 1 ? (partes[partes.length - 1][0] ?? '') : '';
+  return (primeira + ultima).toUpperCase();
+}
+---
+
+<li class="membro">
+  <div class="membro__avatar">
+    {
+      foto ? (
+        <img src={url(foto)} alt={`Foto de ${nome}`} width="128" height="128" loading="lazy" />
+      ) : (
+        <span class="membro__placeholder" aria-hidden="true">
+          {iniciais(nome)}
+        </span>
+      )
+    }
+  </div>
+  <h3 class="membro__nome">{nome}</h3>
+  <p class="membro__cargo">{cargo}</p>
+  {
+    (lattes || email) && (
+      <ul class="membro__links">
+        {lattes && (
+          <li>
+            <a href={lattes} target="_blank" rel="noopener noreferrer">
+              Lattes
+              <span aria-hidden="true"> ↗</span>
+            </a>
+          </li>
+        )}
+        {email && (
+          <li>
+            <a href={`mailto:${email}`}>E-mail</a>
+          </li>
+        )}
+      </ul>
+    )
+  }
+</li>
+
+<style>
+  .membro {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-g);
+    padding: var(--esp-3) var(--esp-2);
+    box-shadow: var(--sombra-sm);
+    height: 100%;
+  }
+
+  .membro__avatar {
+    width: 128px;
+    height: 128px;
+    margin-bottom: var(--esp-2);
+  }
+  .membro__avatar img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cor-fundo-alt);
+  }
+  .membro__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-clara));
+    color: var(--cor-branco);
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .membro__nome {
+    font-size: 1.02rem;
+    margin: 0 0 0.15rem;
+    color: var(--cor-primaria-escura);
+  }
+  .membro__cargo {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
+  }
+
+  .membro__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--esp-2);
+    list-style: none;
+    margin: var(--esp-2) 0 0;
+    padding: 0;
+  }
+  .membro__links a {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .membro__links a:hover {
+    text-decoration: underline;
+  }
+</style>

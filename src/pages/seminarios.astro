@@ -1,0 +1,128 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+
+const pagina = (await getEntry('paginas', 'seminarios'))!;
+const { Content } = await render(pagina);
+
+const seminarios = await getCollection('seminarios');
+
+// Agrupados por ano, decrescente. Dentro do ano, do mais recente para o mais antigo.
+const anos = [...new Set(seminarios.map((s) => s.data.ano))].sort((a, b) => b - a);
+const grupos = anos.map((ano) => ({
+  ano,
+  itens: seminarios
+    .filter((s) => s.data.ano === ano)
+    .sort((a, b) => (b.data.data ?? '').localeCompare(a.data.data ?? '')),
+}));
+
+const fmtData = new Intl.DateTimeFormat('pt-BR', {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+/** Formata a data ISO do seminário; devolve null se ausente ou inválida. */
+function formatarData(iso?: string): string | null {
+  if (!iso) return null;
+  const d = new Date(iso);
+  return Number.isNaN(d.getTime()) ? null : fmtData.format(d);
+}
+---
+
+<Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.subtitulo} />
+
+  <section class="secao">
+    <div class="container">
+      <div class="prosa">
+        <Content />
+      </div>
+
+      {
+        grupos.map((grupo) => (
+          <section class="ano">
+            <h2 class="ano__titulo">{grupo.ano}</h2>
+            <ul class="seminarios">
+              {grupo.itens.map((s) => {
+                const dataFmt = formatarData(s.data.data);
+                return (
+                  <li class="seminario">
+                    <h3 class="seminario__titulo">{s.data.titulo}</h3>
+                    <p class="seminario__meta">
+                      <span class="seminario__apresentador">{s.data.apresentador}</span>
+                      {s.data.instituicao && (
+                        <span class="seminario__inst"> — {s.data.instituicao}</span>
+                      )}
+                    </p>
+                    {dataFmt && (
+                      <time class="seminario__data" datetime={s.data.data}>
+                        {dataFmt}
+                      </time>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prosa {
+    max-width: 68ch;
+    color: var(--cor-texto-suave);
+    margin-bottom: var(--esp-4);
+  }
+
+  .ano + .ano {
+    margin-top: var(--esp-4);
+  }
+  .ano__titulo {
+    color: var(--cor-primaria);
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: var(--esp-1);
+    margin-bottom: var(--esp-3);
+  }
+
+  .seminarios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--esp-2);
+  }
+  .seminario {
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-left: 4px solid var(--cor-primaria);
+    border-radius: var(--raio);
+    padding: var(--esp-3);
+  }
+  .seminario__titulo {
+    font-size: 1.02rem;
+    margin: 0 0 0.35rem;
+    color: var(--cor-primaria-escura);
+  }
+  .seminario__meta {
+    margin: 0 0 0.25rem;
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+  }
+  .seminario__apresentador {
+    font-weight: 600;
+  }
+  .seminario__inst {
+    color: var(--cor-texto-suave);
+    font-weight: 400;
+  }
+  .seminario__data {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--cor-texto-suave);
+  }
+</style>

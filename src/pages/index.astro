@@ -1,0 +1,227 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/url';
+
+const geral = (await getEntry('configuracao', 'geral'))!.data;
+const home = (await getEntry('paginas', 'home'))!;
+const { Content } = await render(home);
+const parceiros = await getCollection('parceiros');
+
+// A home é a APRESENTAÇÃO INSTITUCIONAL do grupo (decisão registrada em
+// docs/DECISAO_ARQUITETURA.md §6). Destaques de projetos entram como seção secundária.
+const destaques = [
+  {
+    titulo: 'Acervo Audiovisual',
+    texto: 'O maior arquivo de propaganda eleitoral do Brasil, com programas desde 1989.',
+    href: '/acervo/',
+  },
+  {
+    titulo: 'Pesquisas',
+    texto: 'Teses, dissertações e projetos em comportamento eleitoral e opinião pública.',
+    href: '/pesquisas/',
+  },
+  {
+    titulo: 'Bancos de Dados',
+    texto: 'Bases abertas sobre programas de governo, cobertura jornalística e mapas eleitorais.',
+    href: '/bancos-de-dados/',
+  },
+];
+---
+
+<Base titulo="DOXA" descricao={home.data.descricao}>
+  <section class="apresentacao">
+    <div class="container">
+      <p class="apresentacao__olho">IESP-UERJ · desde 1996</p>
+      <h1>{home.data.subtitulo}</h1>
+      <div class="prosa"><Content /></div>
+    </div>
+  </section>
+
+  <section class="secao secao--alt">
+    <div class="container">
+      <h2>O que fazemos</h2>
+      <ul class="destaques">
+        {
+          destaques.map((d) => (
+            <li class="destaque">
+              <h3>{d.titulo}</h3>
+              <p>{d.texto}</p>
+              <a href={url(d.href)} class="destaque__link">
+                Conhecer <span aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="container video">
+      <div>
+        <h2>Melhores momentos do horário eleitoral</h2>
+        <p>
+          Compilação do horário gratuito de propaganda eleitoral do segundo turno das eleições
+          presidenciais, a partir do acervo audiovisual do laboratório.
+        </p>
+      </div>
+      <div class="video__moldura">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${geral.video_destaque}`}
+          title="Melhores momentos do horário eleitoral — canal do DOXA no YouTube"
+          loading="lazy"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao--alt">
+    <div class="container ferramentas">
+      <article>
+        <h2>{geral.votaai_titulo}</h2>
+        <p>{geral.votaai_descricao}</p>
+        <a href={geral.votaai_url} class="btn btn-primario" target="_blank" rel="noopener noreferrer">
+          Acessar o Vota Aí
+        </a>
+      </article>
+      <article>
+        <h2>{geral.dashboard_titulo}</h2>
+        <p>
+          Painel interativo com os resultados das eleições municipais de 2024 no Rio de Janeiro e em
+          São Paulo.
+        </p>
+        <a href={geral.dashboard_url} class="btn btn-contorno" target="_blank" rel="noopener noreferrer">
+          Abrir o dashboard
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="container">
+      <h2 class="parceiros__titulo">Apoio e parcerias</h2>
+      <ul class="parceiros">
+        {
+          parceiros.map((p) => (
+            <li>
+              <img src={url(p.data.arquivo)} alt={`Logotipo ${p.data.nome}`} loading="lazy" height="56" />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .apresentacao {
+    padding-block: var(--esp-5) var(--esp-4);
+    background:
+      radial-gradient(ellipse at top center, rgb(255 255 255 / 0%), rgb(237 237 237 / 55%)),
+      var(--cor-fundo);
+  }
+  .apresentacao__olho {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+    margin-bottom: var(--esp-1);
+  }
+  .apresentacao h1 {
+    max-width: 22ch;
+  }
+  .prosa {
+    max-width: 68ch;
+    color: var(--cor-texto-suave);
+  }
+
+  .destaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--esp-3);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .destaque {
+    background: var(--cor-branco);
+    border-radius: var(--raio-g);
+    padding: var(--esp-3);
+    border-top: 3px solid var(--cor-destaque);
+    box-shadow: var(--sombra-sm);
+  }
+  .destaque h3 {
+    margin-bottom: var(--esp-1);
+  }
+  .destaque p {
+    color: var(--cor-texto-suave);
+    font-size: 0.92rem;
+  }
+  .destaque__link {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .video {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--esp-4);
+    align-items: center;
+  }
+  .video__moldura {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--raio-g);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+  }
+  .video__moldura iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .ferramentas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--esp-4);
+  }
+
+  .parceiros__titulo {
+    text-align: center;
+  }
+  .parceiros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--esp-4);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .parceiros img {
+    height: 56px;
+    width: auto;
+    filter: grayscale(1);
+    opacity: 0.7;
+    transition: var(--transicao);
+  }
+  .parceiros img:hover {
+    filter: none;
+    opacity: 1;
+  }
+
+  @media (max-width: 800px) {
+    .video,
+    .ferramentas {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

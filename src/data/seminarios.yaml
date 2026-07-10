@@ -1,0 +1,182 @@
+# Gerado por scripts/converter-conteudo.py a partir de extracao/dados/.
+# Pode ser editado à mão: o build valida o schema (src/content.config.ts).
+
+- titulo: 'Defensive Logic of resource allocation: Brazil’s party financing in the state level'
+  apresentador: Bruno Schaefer
+  instituicao: IESP-UERJ
+  data: '2023-06-19'
+  ano: 2023
+- titulo: 'Conjoint Experiment: representação e preferências no estado do Rio de Janeiro'
+  apresentador: Fernando Meireles
+  instituicao: IESP-UERJ
+  data: '2023-09-25'
+  ano: 2023
+- titulo: 'Trustful Voters, Trustworthy Politicians: A Survey Experiment on the Infuence of Social Media
+    in Politics'
+  apresentador: Tiago Ventura, Natalia Aruguete, Ernesto Calvo e Carlos Scartascini
+  instituicao: Universidade de Maryland
+  data: '2021-03-25'
+  ano: 2021
+- titulo: O Auxílio Emergencial Salvou Bolsonaro? Um estudo quasi-experimental para melhorar identificar
+    este efeito
+  apresentador: Felipe Nunes
+  instituicao: UFMG- Quaest
+  data: '2021-04-21'
+  ano: 2021
+- titulo: The Public Opinion Consequences of Lava-Jato in Brazil
+  apresentador: Nara Pavão
+  instituicao: UFPE
+  data: '2021-05-27'
+  ano: 2021
+- titulo: 'Government and Opposition in Legislative Speechmaking: Using Text-As-Data to Estimate Brazilian
+    Political Parties’ Policy Positions'
+  apresentador: Mauricio Y. Izumi Danilo B. Medeiros
+  instituicao: UFES
+  data: '2021-06-24'
+  ano: 2021
+- titulo: Highlights A Spatial Interaction Model of Vote Dispersion
+  apresentador: Fernando Guarnieri, Glauco Peres da Silva
+  data: '2021-09-01'
+  ano: 2021
+- titulo: 'C ongresso Remoto: dinâmicas do legislativo federal em tempos de pandemia'
+  apresentador: Júlio Canello
+  data: '2021-09-24'
+  ano: 2021
+- titulo: 'Government and Opposition in Legislative Speechmaking: Using Text-as-Data to Estimate Brazilian
+    Political Parties’ Policy Positions'
+  apresentador: Maurício Izumi e Danilo Medeiros (CEBRAP)
+  instituicao: UFES
+  data: '2021-10-13'
+  ano: 2021
+- titulo: A experiência da energia solar no Brasil – processos decisórios locais e evolução de indicadores
+    das populações ao redor das usinas
+  apresentador: Carolina Botelho
+  data: '2021-10-22'
+  ano: 2021
+- titulo: Seminário de celebração dos 25 anos do Doxa
+  apresentador: Seminário de celebração dos 25 anos do Doxa. [18 de novembro]
+  data: '2021-11-18'
+  ano: 2021
+- titulo: 'The Overlooked Role of the Brazilian Congress in Shaping the Bolsa Família Program: a New Approach
+    to the Policy-making of CCTs'
+  apresentador: Pedro Bras Martins da Costa a
+  data: '2021-11-19'
+  ano: 2021
+- titulo: Nara Salles “Tamanho é documento? Porte de municípios e competição programática no Brasil’
+  apresentador: Nara Salles “Tamanho é documento? Porte de municípios e competição programática no Brasil’
+    . [11 de maio]
+  data: '2020-05-11'
+  ano: 2020
+- titulo: 'O uso que o eleitor faz da intuição ao elaborar seu julgamento político: o processamento do
+    cenário e da propaganda negativa em disputa presidencial'
+  apresentador: Luciana Veiga e Flávia Bozza Martins
+  data: '2020-06-16'
+  ano: 2020
+- titulo: Processo decisório e políticas públicas de energia solar no Brasil
+  apresentador: Carolina Botelho
+  data: '2020-10-22'
+  ano: 2020
+- titulo: 'Voto no PT nas Eleições Presidenciais de 2014: Eleitor Pobre do Nordeste?'
+  apresentador: Thiago Moreira da Silva; Sergio Simoni Jr; Argelina Figueiredo; Natalia Maciel
+  data: '2019-03-21'
+  ano: 2019
+- titulo: 'Instituições políticas em regimes oligárquicos: partidos e competição eleitoral no Brasil da
+    Primeira República'
+  apresentador: Jaqueline Zulini
+  instituicao: CPDOC
+  data: '2019-05-06'
+  ano: 2019
+- titulo: The New Politics of Gubernatorial Elections in Brazil (1994-2018)
+  apresentador: Fabiano Santos , Cristiane Batista (UNIRIO) e Thiago Moreira da Silva (IESP-UERJ)
+  instituicao: IESP-UERJ
+  data: '2019-10-10'
+  ano: 2019
+- titulo: Quem se abstém no Brasil? Uma descrição do perfil socioeconômico dos eleitores ausentes no primeiro
+    turno das eleições de 2018
+  apresentador: Felipe Borba
+  data: '2019-11-19'
+  ano: 2019
+- titulo: Realinhamento eleitoral e Programa-Bolsa Família nas eleições presidenciais brasileiras
+  apresentador: Sergio Simoni Junior
+  instituicao: UNICAMP
+  data: '2018-03-12'
+  ano: 2018
+- titulo: Cap 3. Voto econômico e Contexto político-institucional
+  apresentador: Flávia Bozza
+  data: '2018-04-17'
+  ano: 2018
+- titulo: 'Territórios eleitorais e estratégia política: reflexões a partir de um quase-experimento'
+  apresentador: Fernando Guarnieri e Gabriel Melo (IESP/UERJ)
+  instituicao: IESP/UERJ
+  data: '2018-08-07'
+  ano: 2018
+- titulo: 'Efeitos práticos da sub-representação política: o desalinhamento das preferências entre representantes
+    e representados'
+  apresentador: Thiago Moreira da Silva
+  data: '2018-10-18'
+  ano: 2018
+- titulo: 'Projeto de Pesquisa: Mídias sociais como fonte de informação política: uma análise da opinião
+    pública e da polarização pós-impeachment'
+  apresentador: Natalia Maciel
+  instituicao: Doxa-IESP/UERJ
+  data: '2017-03-27'
+  ano: 2017
+- titulo: 'Os determinantes da perda da popularidade da Presidente Dilma no período pré-impedimento: os
+    efeitos das denúncias de corrupção e da economia'
+  apresentador: Luciana Veiga , Flávia Bozza (IESP/UERJ) e Steven Ross (Unirio)
+  instituicao: Unirio
+  data: '2017-04-27'
+  ano: 2017
+- titulo: 'Quando Governadores vão ao Supremo: razões para o controle direto de constitucionalidade de
+    atos normativos estaduais no Brasi l'
+  apresentador: Júlio Canello
+  instituicao: IESP-UERJ
+  data: '2017-05-27'
+  ano: 2017
+- titulo: Nem tão
+  apresentador: Thiago Moreira da Silva
+  data: '2017-09-21'
+  ano: 2017
+- titulo: Cap 3. Instituições, estatutos e coalizões dominantes no PSD, UDN e PTB (1950-64)
+  apresentador: Saulo Said
+  data: '2017-10-19'
+  ano: 2017
+- titulo: 'Coligação à brasileira: efeitos sobre a fragmentação e a proporcionalidade – (2006, 2010 e
+    2014)'
+  apresentador: Felipe Munhoz Albuquerque e Saulo Maia Said
+  data: '2016-03-22'
+  ano: 2016
+- titulo: The Impact of Violence on Non-Incumbent Party Support in Brazilian Gubernatorial Elections,
+    1994-2010
+  apresentador: Douglas Block
+  data: '2016-06-23'
+  ano: 2016
+- titulo: 'Desenvolvimento e partidarismo: os programas de governo nos grotões do Brasil'
+  apresentador: Fernando Guarnieri e Nara Salles (IESP-UERJ)
+  instituicao: IESP/UERJ
+  data: '2016-11-24'
+  ano: 2016
+- titulo: Cap 5. Estratégias de comunicação nas campanhas eleitorais proporcionais
+  apresentador: Cíntia Pinheiro Ribeiro de Souza
+  data: '2015-05-28'
+  ano: 2015
+- titulo: 'PT e PSDB nas eleições para a Câmara dos Deputados: bases sociais e variáveis políticas em
+    seis eleições'
+  apresentador: Natalia Maciel
+  instituicao: IESP-UERJ
+  data: '2015-06-17'
+  ano: 2015
+- titulo: Do Fome Zero ao Bolsa Família? Um estudo comparado a partir dos manifestos do PT entre 2002
+    e 2010
+  apresentador: Pedro Bras Martins da Costa
+  data: '2015-07-28'
+  ano: 2015
+- titulo: Incumbency Advantage in Brazilian Mayoral Elections
+  apresentador: Ricardo Caneviva
+  data: '2015-09-29'
+  ano: 2015
+- titulo: 'Fragmentação Partidária na Câmara dos Deputados: Dilemas de Coordenação no Brasil (2002-2015)'
+  apresentador: Brenda dos Santos Barboza Cunha
+  instituicao: IESP-UERJ
+  data: '2015-11-18'
+  ano: 2015

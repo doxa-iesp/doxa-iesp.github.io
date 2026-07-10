@@ -1,0 +1,1368 @@
+# Gerado por scripts/converter-conteudo.py a partir de extracao/dados/.
+# Pode ser editado à mão: o build valida o schema (src/content.config.ts).
+
+- titulo: PAN
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PAN-DE1998.pdf
+- titulo: PC do B
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PC-do-B-DE1998.pdf
+- titulo: PCB
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCB-DE1998.pdf
+- titulo: PDT
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PDT-DE1998.pdf
+- titulo: PFL
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PFL-DE1998.pdf
+- titulo: PGT
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PGT-DE1998.pdf
+- titulo: PHS
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PHS-DE1998.pdf
+- titulo: PMDB
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMDB-DE1998.pdf
+- titulo: PMN
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMN-DE1998.pdf
+- titulo: PP
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PP-DE1998.pdf
+- titulo: PPS
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PPS-DE1998.pdf
+- titulo: PR
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PR-DE1998.pdf
+- titulo: PRONA
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRONA-DE1998.pdf
+- titulo: PRP
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRP-DE1998.pdf
+- titulo: PRTB
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRTB-DE1998.pdf
+- titulo: PSB
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSB-DE1998.pdf
+- titulo: PSC
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSC-DE1998.pdf
+- titulo: PSD
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSD-DE1998.pdf
+- titulo: PSDB
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDB-DE1998.pdf
+- titulo: PSDC
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDC-DE1998.pdf
+- titulo: PSL
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSL-DE1998.pdf
+- titulo: PST
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PST-DE1998.pdf
+- titulo: PSTU
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSTU-DE1998.pdf
+- titulo: PT
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-DE1998.pdf
+- titulo: PT do B
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-do-B-DE1998.pdf
+- titulo: PTB
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTB-DE1998.pdf
+- titulo: PTC
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTC-DE1998.pdf
+- titulo: PTN
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTN-DE1998.pdf
+- titulo: PV
+  ano: 1998
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PV-DE1998.pdf
+- titulo: Governador
+  ano: 1998
+  cargo: Governador
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/g_1998.pdf
+- titulo: Presidente
+  ano: 1998
+  cargo: Presidente
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/p_1998.pdf
+- titulo: Senador
+  ano: 1998
+  cargo: Senador
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/s_1998.pdf
+- titulo: PAN
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PAN-DE2002.pdf
+- titulo: PC do B
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PC-do-B-DE2002.pdf
+- titulo: PCO
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCO-DE2002.pdf
+- titulo: PDT
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PDT-DE2002.pdf
+- titulo: PFL
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PFL-DE2002.pdf
+- titulo: PGT
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PGT-DE2002.pdf
+- titulo: PHS
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PHS-DE2002.pdf
+- titulo: PMDB
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMDB-DE2002.pdf
+- titulo: PMN
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMN-DE2002.pdf
+- titulo: PP
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PP-DE2002.pdf
+- titulo: PPS
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PPS-DE2002.pdf
+- titulo: PR
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PR-DE2002.pdf
+- titulo: PRONA
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRONA-DE2002.pdf
+- titulo: PRP
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRP-DE2002.pdf
+- titulo: PRTB
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRTB-DE2002.pdf
+- titulo: PSB
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSB-DE2002.pdf
+- titulo: PSC
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSC-DE2002.pdf
+- titulo: PSD
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSD-DE2002.pdf
+- titulo: PSDB
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDB-DE2002.pdf
+- titulo: PSDC
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDC-DE2002.pdf
+- titulo: PSL
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSL-DE2002.pdf
+- titulo: PST
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PST-DE2002.pdf
+- titulo: PSTU
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSTU-DE2002.pdf
+- titulo: PT
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-DE2002.pdf
+- titulo: PT do B
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-do-B-DE2002.pdf
+- titulo: PTB
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTB-DE2002.pdf
+- titulo: PTC
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTC-DE2002.pdf
+- titulo: PTN
+  ano: 2002
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTN-DE2002.pdf
+- titulo: PAN
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PAN-DF2002.pdf
+- titulo: PC do B
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PC-do-B-DF2002.pdf
+- titulo: PCB
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCB-DF2002.pdf
+- titulo: PCO
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCO-DF2002.pdf
+- titulo: PDT
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PDT-DF2002.pdf
+- titulo: PFL
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PFL-DF2002.pdf
+- titulo: PGT
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PGT-DF2002.pdf
+- titulo: PHS
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PHS-DF2002.pdf
+- titulo: PMDB
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMDB-DF2002.pdf
+- titulo: PMN
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMN-DF2002.pdf
+- titulo: PP
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PP-DF2002.pdf
+- titulo: PPS
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PPS-DF2002.pdf
+- titulo: PR
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PR-DF2002.pdf
+- titulo: PRONA
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRONA-DF2002.pdf
+- titulo: PRP
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRP-DF2002.pdf
+- titulo: PRTB
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRTB-DF2002.pdf
+- titulo: PSB
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSB-DF2002.pdf
+- titulo: PSC
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSC-DF2002.pdf
+- titulo: PSD
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSD-DF2002.pdf
+- titulo: PSDB
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDB-DF2002.pdf
+- titulo: PSDC
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDC-DF2002.pdf
+- titulo: PSL
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSL-DF2002.pdf
+- titulo: PST
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PST-DF2002.pdf
+- titulo: PSTU
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSTU-DF2002.pdf
+- titulo: PT
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-DF2002.pdf
+- titulo: PT do B
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-do-B-DF2002.pdf
+- titulo: PTB
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTB-DF2002.pdf
+- titulo: PTC
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTC-DF2002.pdf
+- titulo: PTN
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTN-DF2002.pdf
+- titulo: PV
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PV-DF2002-1.pdf
+- titulo: PV
+  ano: 2002
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PV-DF2002.pdf
+- titulo: Governador
+  ano: 2002
+  cargo: Governador
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/g_2002.pdf
+- titulo: Presidente
+  ano: 2002
+  cargo: Presidente
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/p_2002.pdf
+- titulo: Senador
+  ano: 2002
+  cargo: Senador
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/s_2002.pdf
+- titulo: PAN
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PAN-DE2006.pdf
+- titulo: PCB
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCB-DE2006.pdf
+- titulo: PCO
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCO-DE2006.pdf
+- titulo: PCdoB
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCdoB-DE2006.pdf
+- titulo: PDT
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PDT-DE2006.pdf
+- titulo: PFL
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PFL-DE2006.pdf
+- titulo: PHS
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PHS-DE2006.pdf
+- titulo: PMDB
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMDB-DE2006.pdf
+- titulo: PMN
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMN-DE2006.pdf
+- titulo: PP
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PP-DE2006.pdf
+- titulo: PPS
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PPS-DE2006.pdf
+- titulo: PR
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PR-DE2006.pdf
+- titulo: PRB
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRB-DE2006.pdf
+- titulo: PRONA
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRONA-DE2006.pdf
+- titulo: PRP
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRP-DE2006.pdf
+- titulo: PRTB
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRTB-DE2006.pdf
+- titulo: PSB
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSB-DE2006.pdf
+- titulo: PSC
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSC-DE2006.pdf
+- titulo: PSDB
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDB-DE2006.pdf
+- titulo: PSDC
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDC-DE2006.pdf
+- titulo: PSL
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSL-DE2006.pdf
+- titulo: PSOL
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSOL-DE2006.pdf
+- titulo: PSTU
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSTU-DE2006.pdf
+- titulo: PT
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-DE2006.pdf
+- titulo: PTB
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTB-DE2006.pdf
+- titulo: PTC
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTC-DE2006.pdf
+- titulo: PTdoB
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTdoB-DE2006.pdf
+- titulo: PV
+  ano: 2006
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PV-DE2006.pdf
+- titulo: PC do B
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PC-do-B-DF2006.pdf
+- titulo: PCB
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCB-DF2006.pdf
+- titulo: PCO
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCO-DF2006.pdf
+- titulo: PDT
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PDT-DF2006.pdf
+- titulo: PFL
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PFL-DF2006.pdf
+- titulo: PHS
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PHS-DF2006.pdf
+- titulo: PMDB
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMDB-DF2006.pdf
+- titulo: PMN
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMN-DF2006.pdf
+- titulo: PP
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PP-DF2006.pdf
+- titulo: PPS
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PPS-DF2006.pdf
+- titulo: PR
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PR-DF2006.pdf
+- titulo: PRB
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRB-DF2006.pdf
+- titulo: PRONA
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRONA-DF2006.pdf
+- titulo: PRP
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRP-DF2006.pdf
+- titulo: PRTB
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRTB-DF2006.pdf
+- titulo: PSB
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSB-DF2006.pdf
+- titulo: PSC
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSC-DF2006.pdf
+- titulo: PSDB
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDB-DF2006.pdf
+- titulo: PSDC
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDC-DF2006.pdf
+- titulo: PSL
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSL-DF2006.pdf
+- titulo: PSOL
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSOL-DF2006.pdf
+- titulo: PSTU
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSTU-DF2006.pdf
+- titulo: PT
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-DF2006.pdf
+- titulo: PT do B
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-do-B-DF2006.pdf
+- titulo: PTB
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTB-DF2006.pdf
+- titulo: PTC
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTC-DF2006.pdf
+- titulo: PTN
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTN-DF2006.pdf
+- titulo: PV
+  ano: 2006
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PV-DF2006.pdf
+- titulo: Governador
+  ano: 2006
+  cargo: Governador
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/g_2006.pdf
+- titulo: Presidente
+  ano: 2006
+  cargo: Presidente
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/p_2006.pdf
+- titulo: Senador
+  ano: 2006
+  cargo: Senador
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/s_2006.pdf
+- titulo: DEM
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/DEM-DE2010.pdf
+- titulo: PC do B
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PC-do-B-DE2010.pdf
+- titulo: PCB
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCB-DE2010.pdf
+- titulo: PDT
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PDT-DE2010.pdf
+- titulo: PHS
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PHS-DE2010.pdf
+- titulo: PMDB
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMDB-DE2010.pdf
+- titulo: PMN
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMN-DE2010.pdf
+- titulo: PP
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PP-DE2010.pdf
+- titulo: PPS
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PPS-DE2010.pdf
+- titulo: PR
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PR-DE2010.pdf
+- titulo: PRP
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRP-DE2010.pdf
+- titulo: PRTB
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRTB-DE2010.pdf
+- titulo: PSB
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSB-DE2010.pdf
+- titulo: PSC
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSC-DE2010.pdf
+- titulo: PSDB
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDB-DE2010.pdf
+- titulo: PSDC
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDC-DE2010.pdf
+- titulo: PSL
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSL-DE2010.pdf
+- titulo: PSOL
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSOL-DE2010.pdf
+- titulo: PSTU
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSTU-DE2010.pdf
+- titulo: PT
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-DE2010.pdf
+- titulo: PT do B
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-do-B-DE2010.pdf
+- titulo: PTB
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTB-DE2010.pdf
+- titulo: PTC
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTC-DE2010.pdf
+- titulo: PTN
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTN-DE2010.pdf
+- titulo: PV
+  ano: 2010
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PV-DE2010.pdf
+- titulo: DEM
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/DEM-DF2010.pdf
+- titulo: PC do B
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PC-do-B-DF2010.pdf
+- titulo: PCB
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCB-DF2010.pdf
+- titulo: PDT
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PDT-DF2010.pdf
+- titulo: PHS
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PHS-DF2010.pdf
+- titulo: PMDB
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMDB-DF2010.pdf
+- titulo: PMN
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMN-DF2010.pdf
+- titulo: PP
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PP-DF2010.pdf
+- titulo: PPS
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PPS-DF2010.pdf
+- titulo: PR
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PR-DF2010.pdf
+- titulo: PRB
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRB-DF2010.pdf
+- titulo: PRP
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRP-DF2010.pdf
+- titulo: PRTB
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRTB-DF2010.pdf
+- titulo: PSB
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSB-DF2010.pdf
+- titulo: PSC
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSC-DF2010.pdf
+- titulo: PSDB
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDB-DF2010.pdf
+- titulo: PSDC
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDC-DF2010.pdf
+- titulo: PSL
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSL-DF2010.pdf
+- titulo: PSOL
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSOL-DF2010.pdf
+- titulo: PSTU
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSTU-DF2010.pdf
+- titulo: PT
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-DF2010.pdf
+- titulo: PT do B
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-do-B-DF2010.pdf
+- titulo: PTB
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTB-DF2010.pdf
+- titulo: PTC
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTC-DF2010.pdf
+- titulo: PTN
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTN-DF2010.pdf
+- titulo: PV
+  ano: 2010
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PV-DF2010.pdf
+- titulo: Governador
+  ano: 2010
+  cargo: Governador
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/g_2010.pdf
+- titulo: Presidente
+  ano: 2010
+  cargo: Presidente
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/p_2010.pdf
+- titulo: Senador
+  ano: 2010
+  cargo: Senador
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/s_2010.pdf
+- titulo: DEM
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/DEM-DE2014-1.pdf
+- titulo: PC do B
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PC-do-B-DE2014-1.pdf
+- titulo: PCB
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCB-DE2014-1.pdf
+- titulo: PDT
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PDT-DE2014-1.pdf
+- titulo: PEN
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PEN-DE2014-1.pdf
+- titulo: PHS
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PHS-DE2014-1.pdf
+- titulo: PMDB
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMDB-DE2014-1.pdf
+- titulo: PMN
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMN-DE2014-1.pdf
+- titulo: PP
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PP-DE2014-1.pdf
+- titulo: PPL
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PPL-DE2014-1.pdf
+- titulo: PPS
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PPS-DE2014-1.pdf
+- titulo: PR
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PR-DE2014-1.pdf
+- titulo: PRB
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRB-DE2014-1.pdf
+- titulo: PROS
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PROS-DE2014-1.pdf
+- titulo: PRP
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRP-DE2014-1.pdf
+- titulo: PRTB
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRTB-DE2014-1.pdf
+- titulo: PSB
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSB-DE2014.pdf
+- titulo: PSC
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSC-DE2014.pdf
+- titulo: PSD
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSD-DE2014.pdf
+- titulo: PSDB
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDB-DE2014.pdf
+- titulo: PSDC
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDC-DE2014.pdf
+- titulo: PSL
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSL-DE2014.pdf
+- titulo: PSOL
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSOL-DE2014.pdf
+- titulo: PSTU
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSTU-DE2014.pdf
+- titulo: PT
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-DE2014.pdf
+- titulo: PT do B
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-do-B-DE2014.pdf
+- titulo: PTB
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTB-DE2014.pdf
+- titulo: PTC
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTC-DE2014.pdf
+- titulo: PTN
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTN-DE2014.pdf
+- titulo: PV
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PV-DE2014.pdf
+- titulo: SDD
+  ano: 2014
+  cargo: Deputado Estadual
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/SDD-DE2014.pdf
+- titulo: DEM
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/DEM-DF2014.pdf
+- titulo: PC do B
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PC-do-B-DF2014.pdf
+- titulo: PCB
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCB-DF2014.pdf
+- titulo: PCO
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PCO-DF2014.pdf
+- titulo: PDT
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PDT-DF2014.pdf
+- titulo: PEN
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PEN-DF2014.pdf
+- titulo: PHS
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PHS-DF2014.pdf
+- titulo: PMDB
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMDB-DF2014.pdf
+- titulo: PMN
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PMN-DF2014.pdf
+- titulo: PP
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PP-DF2014.pdf
+- titulo: PPL
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PPL-DF2014.pdf
+- titulo: PPS
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PPS-DF2014.pdf
+- titulo: PR
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PR-DF2014.pdf
+- titulo: PRB
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRB-DF2014.pdf
+- titulo: PROS
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PROS-DF2014.pdf
+- titulo: PRP
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRP-DF2014.pdf
+- titulo: PRTB
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PRTB-DF2014.pdf
+- titulo: PSB
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSB-DF2014.pdf
+- titulo: PSC
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSC-DF2014.pdf
+- titulo: PSD
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSD-DF2014.pdf
+- titulo: PSDB
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDB-DF2014.pdf
+- titulo: PSDC
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSDC-DF2014.pdf
+- titulo: PSL
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSL-DF2014.pdf
+- titulo: PSOL
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSOL-DF2014.pdf
+- titulo: PSTU
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PSTU-DF2014.pdf
+- titulo: PT
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-DF2014.pdf
+- titulo: PT do B
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PT-do-B-DF2014.pdf
+- titulo: PTB
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTB-DF2014.pdf
+- titulo: PTC
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTC-DF2014.pdf
+- titulo: PTN
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PTN-DF2014.pdf
+- titulo: PV
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/PV-DF2014.pdf
+- titulo: SDD
+  ano: 2014
+  cargo: Deputado Federal
+  eleicao: Proporcional
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/SDD-DF2014.pdf
+- titulo: Governador
+  ano: 2014
+  cargo: Governador
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/g_2014.pdf
+- titulo: Presidente
+  ano: 2014
+  cargo: Presidente
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/p_2014.pdf
+- titulo: Senador
+  ano: 2014
+  cargo: Senador
+  eleicao: Majoritaria
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/s_2014.pdf

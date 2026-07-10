@@ -1,0 +1,2522 @@
+[
+ {
+  "id": 73,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/arena/",
+  "name": "ARENA",
+  "slug": "arena",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/73",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=73"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 68,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/avante/",
+  "name": "AVANTE",
+  "slug": "avante",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/68",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=68"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 66,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/dc/",
+  "name": "DC",
+  "slug": "dc",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/66",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=66"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 65,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/novo/",
+  "name": "NOVO",
+  "slug": "novo",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/65",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=65"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 122,
+  "count": 19,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pan/",
+  "name": "PAN",
+  "slug": "pan",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/122",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=122"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 69,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/patriota/",
+  "name": "PATRIOTA",
+  "slug": "patriota",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/69",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=69"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 41,
+  "count": 43,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pcb/",
+  "name": "PCB",
+  "slug": "pcb",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/41",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=41"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 36,
+  "count": 19,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pcdob/",
+  "name": "PCdoB",
+  "slug": "pcdob",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/36",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=36"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 71,
+  "count": 18,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pcn/",
+  "name": "PCN",
+  "slug": "pcn",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/71",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=71"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 62,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pco/",
+  "name": "PCO",
+  "slug": "pco",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/62",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=62"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 53,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pdc/",
+  "name": "PDC",
+  "slug": "pdc",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/53",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=53"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 158,
+  "count": 7,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pdcdob/",
+  "name": "PDCdoB",
+  "slug": "pdcdob",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/158",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=158"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 81,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pdn/",
+  "name": "PDN",
+  "slug": "pdn",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/81",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=81"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 51,
+  "count": 24,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pds/",
+  "name": "PDS",
+  "slug": "pds",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/51",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=51"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 33,
+  "count": 72,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pdt/",
+  "name": "PDT",
+  "slug": "pdt",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/33",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=33"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 48,
+  "count": 44,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pfl/",
+  "name": "PFL",
+  "slug": "pfl",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/48",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=48"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 82,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pg/",
+  "name": "PG",
+  "slug": "pg",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/82",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=82"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 49,
+  "count": 10,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pgt/",
+  "name": "PGT",
+  "slug": "pgt",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/49",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=49"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 52,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/ph/",
+  "name": "PH",
+  "slug": "ph",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/52",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=52"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 55,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pj/",
+  "name": "PJ",
+  "slug": "pj",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/55",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=55"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 47,
+  "count": 47,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pl/",
+  "name": "PL",
+  "slug": "pl",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/47",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=47"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 72,
+  "count": 23,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/plp/",
+  "name": "PLP",
+  "slug": "plp",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/72",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=72"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 46,
+  "count": 23,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pmb/",
+  "name": "PMB",
+  "slug": "pmb",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/46",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=46"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 56,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pmc/",
+  "name": "PMC",
+  "slug": "pmc",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/56",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=56"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 37,
+  "count": 72,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pmdb/",
+  "name": "PMDB",
+  "slug": "pmdb",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/37",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=37"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 45,
+  "count": 42,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pmn/",
+  "name": "PMN",
+  "slug": "pmn",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/45",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=45"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 74,
+  "count": 11,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pn/",
+  "name": "PN",
+  "slug": "pn",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/74",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=74"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 67,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/podemos/",
+  "name": "PODEMOS",
+  "slug": "podemos",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/67",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=67"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 58,
+  "count": 22,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pp/",
+  "name": "PP",
+  "slug": "pp",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/58",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=58"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 50,
+  "count": 40,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/ppb/",
+  "name": "PPB",
+  "slug": "ppb",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/50",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=50"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 63,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/ppl/",
+  "name": "PPL",
+  "slug": "ppl",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/63",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=63"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 106,
+  "count": 26,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/ppr/",
+  "name": "PPR",
+  "slug": "ppr",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/106",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=106"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 119,
+  "count": 19,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pps/",
+  "name": "PPS",
+  "slug": "pps",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/119",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=119"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 78,
+  "count": 57,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/prn/",
+  "name": "PRN",
+  "slug": "prn",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/78",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=78"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 80,
+  "count": 67,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/prona/",
+  "name": "PRONA",
+  "slug": "prona",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/80",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=80"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 64,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pros/",
+  "name": "PROS",
+  "slug": "pros",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/64",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=64"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 105,
+  "count": 19,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/prp/",
+  "name": "PRP",
+  "slug": "prp",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/105",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=105"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 120,
+  "count": 18,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/prtb/",
+  "name": "PRTB",
+  "slug": "prtb",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/120",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=120"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 38,
+  "count": 19,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/psb/",
+  "name": "PSB",
+  "slug": "psb",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/38",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=38"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 44,
+  "count": 42,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/psc/",
+  "name": "PSC",
+  "slug": "psc",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/44",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=44"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 42,
+  "count": 60,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/psd/",
+  "name": "PSD",
+  "slug": "psd",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/42",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=42"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 29,
+  "count": 74,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/psdb/",
+  "name": "PSDB",
+  "slug": "psdb",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/29",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=29"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 121,
+  "count": 20,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/psdc/",
+  "name": "PSDC",
+  "slug": "psdc",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/121",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=121"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 61,
+  "count": 18,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/psl/",
+  "name": "PSL",
+  "slug": "psl",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/61",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=61"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 124,
+  "count": 19,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/psn/",
+  "name": "PSN",
+  "slug": "psn",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/124",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=124"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 79,
+  "count": 17,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/psp/",
+  "name": "PSP",
+  "slug": "psp",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/79",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=79"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 70,
+  "count": 18,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pst/",
+  "name": "PST",
+  "slug": "pst",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/70",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=70"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 59,
+  "count": 20,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pstu/",
+  "name": "PSTU",
+  "slug": "pstu",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/59",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=59"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 28,
+  "count": 76,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pt/",
+  "name": "PT",
+  "slug": "pt",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/28",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=28"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 40,
+  "count": 44,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/ptb/",
+  "name": "PTB",
+  "slug": "ptb",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/40",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=40"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 60,
+  "count": 1,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/ptc/",
+  "name": "PTC",
+  "slug": "ptc",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/60",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=60"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 123,
+  "count": 18,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/ptdob/",
+  "name": "PTDOB",
+  "slug": "ptdob",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/123",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=123"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 43,
+  "count": 19,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/ptn/",
+  "name": "PTN",
+  "slug": "ptn",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/43",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=43"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 54,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/ptr/",
+  "name": "PTR",
+  "slug": "ptr",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/54",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=54"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 108,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/ptrb/",
+  "name": "PTRB",
+  "slug": "ptrb",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/108",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=108"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 39,
+  "count": 42,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/partidos/pv/",
+  "name": "PV",
+  "slug": "pv",
+  "taxonomy": "partidos",
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos/39",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/partidos"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/partidos"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?partidos=39"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

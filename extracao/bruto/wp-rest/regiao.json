@@ -1,0 +1,140 @@
+[
+ {
+  "id": 13,
+  "count": 30,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/regiao/estados-df/",
+  "name": "Estados e Distrito Federal",
+  "slug": "estados-df",
+  "taxonomy": "regiao",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/regiao/13",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/regiao"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/regiao"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?regiao=13"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 14,
+  "count": 0,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/regiao/municipal/",
+  "name": "Municipal",
+  "slug": "municipal",
+  "taxonomy": "regiao",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/regiao/14",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/regiao"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/regiao"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?regiao=14"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 75,
+  "count": 86,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/regiao/nacional/",
+  "name": "Nacional",
+  "slug": "nacional",
+  "taxonomy": "regiao",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/regiao/75",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/regiao"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/regiao"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/acervo-doxa?regiao=75"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

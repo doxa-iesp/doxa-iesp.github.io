@@ -1,0 +1,44 @@
+# Bancos de Dados do DOXA
+# Fonte: https://www.lab-doxa.org.br/bancos-de-dados/ (rendered/page__bancos-de-dados.html)
+# Campos: nome, descricao, cobertura, url (página original), pagina (rota interna do site novo),
+#         download (CSV publicado em public/dados/), arquivo (CSV aqui em extracao/dados/), registros
+# 'descricao' e 'url' são exatos da página de origem; 'cobertura'/'registros' são derivados da
+# contagem real dos dados extraídos (rastreáveis).
+# Obs.: o menu do site antigo também lista 'Cobertura Jornalística' (#cobjor) e 'Horário Eleitoral
+# Gratuito' (#hpge), mas a página original não tem conteúdo para esses itens.
+
+- nome: Programas eleitorais dos Candidatos a Prefeito do Estado do Rio de Janeiro
+  descricao: Tabela com até 5 propostas de cada candidato a prefeito do Estado do Rio de Janeiro.
+  cobertura: 92 municípios do Estado do Rio de Janeiro; eleições municipais de 2020; 577 candidatos
+    a prefeito (539 com programa disponível, 38 sem programa). 627 arquivos de proposta
+    (572 PDF + 55 imagens) hospedados no TSE (divulgacandcontas.tse.jus.br).
+  url: https://www.lab-doxa.org.br/programas-eleitorais-dos-candidatos-a-prefeito-do-estado-do-rio-de-janeiro/
+  download: /dados/programas-eleitorais-rj.csv
+  arquivo: programas-eleitorais-rj.csv
+  registros: 577
+  fonte: https://www.lab-doxa.org.br/bancos-de-dados/
+
+- nome: Programas eleitorais dos Candidatos a prefeito das Capitais – 2020
+  descricao: Tabela com até 5 propostas de cada candidato a prefeito das capitais do país.
+  cobertura: 20 capitais e grandes cidades; eleições municipais de 2020; 244 candidatos a prefeito;
+    até 5 propostas transcritas por candidato.
+  url: https://www.lab-doxa.org.br/programas-eleitorais-dos-candidatos-a-prefeito-das-capitais/
+  download: /dados/programas-eleitorais-capitais.csv
+  arquivo: programas-eleitorais-capitais.csv
+  registros: 244
+  fonte: https://www.lab-doxa.org.br/bancos-de-dados/
+
+- nome: Mapas Eleitorais
+  descricao: 'Os mapas de votação disponibilizados fazem parte do projeto “Geografia do voto no Estado
+    do Rio de Janeiro: estratégias partidárias e bases sociais do voto”, que visa identificar padrões
+    de distribuição de voto no Estado do Rio de Janeiro, buscando distinguir o efeito de variáveis espaciais,
+    variáveis sociodemográficas, classicamente estudadas pela sociologia eleitoral, e variáveis políticas.
+    Os mapas disponibilizados na etapa atual da pesquisa apresentam a distribuição dos votos dos candidatos
+    por bairro na cidade do Rio de Janeiro.'
+  cobertura: 273 mapas em PDF, das eleições de 1998, 2002, 2006, 2010 e 2014. Cargos majoritários
+    (Presidente, Governador, Senador) e proporcionais (Deputado Federal e Estadual, por partido).
+  pagina: /mapas-de-votacao/
+  download: /dados/mapas-votacao.csv
+  arquivo: mapas-votacao.csv
+  registros: 273
+  fonte: https://www.lab-doxa.org.br/bancos-de-dados/

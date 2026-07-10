@@ -1,0 +1,143 @@
+---
+/**
+ * Cartão de um evento. Recebe os campos da coleção `eventos`.
+ * Imagem, descrição, link "Saiba mais" e anexos são todos opcionais e só aparecem
+ * quando existem nos dados.
+ */
+import { url } from '../lib/url';
+
+interface Props {
+  titulo: string;
+  data: Date;
+  descricao?: string;
+  imagem?: string;
+  url?: string;
+  anexos?: string[];
+}
+
+const { titulo, data, descricao, imagem, url: link, anexos } = Astro.props;
+
+const fmtData = new Intl.DateTimeFormat('pt-BR', {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+const dataFormatada = fmtData.format(data);
+const dataISO = data.toISOString().slice(0, 10);
+
+/** Rótulo honesto para o anexo, deduzido da extensão ou do serviço. */
+function rotuloAnexo(u: string): string {
+  const semQuery = u.split('?')[0].toLowerCase();
+  if (semQuery.endsWith('.pdf')) return 'Baixar PDF';
+  if (/\.(jpe?g|png|gif|webp)$/.test(semQuery)) return 'Baixar imagem';
+  if (u.includes('docs.google.com/document')) return 'Abrir documento';
+  if (u.includes('docs.google.com/spreadsheets')) return 'Abrir planilha';
+  if (u.includes('drive.google.com') || u.includes('docs.google.com')) return 'Abrir no Google Drive';
+  return 'Baixar anexo';
+}
+---
+
+<li class="evento">
+  {
+    imagem && (
+      <div class="evento__foto">
+        <img src={url(imagem)} alt={`Imagem do evento: ${titulo}`} loading="lazy" />
+      </div>
+    )
+  }
+  <div class="evento__corpo">
+    <time class="evento__data" datetime={dataISO}>{dataFormatada}</time>
+    <h3 class="evento__titulo">{titulo}</h3>
+    {descricao && <p class="evento__descricao">{descricao}</p>}
+
+    <div class="evento__acoes">
+      {
+        link && (
+          <a class="btn btn-contorno btn--sm" href={link} target="_blank" rel="noopener noreferrer">
+            Saiba mais
+            <span aria-hidden="true"> ↗</span>
+          </a>
+        )
+      }
+      {
+        anexos?.map((anexo) => (
+          <a class="evento__anexo" href={anexo} target="_blank" rel="noopener noreferrer">
+            {rotuloAnexo(anexo)}
+            <span aria-hidden="true"> ↓</span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</li>
+
+<style>
+  .evento {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-g);
+    overflow: hidden;
+    box-shadow: var(--sombra-sm);
+    height: 100%;
+  }
+
+  .evento__foto {
+    aspect-ratio: 16 / 9;
+    background: var(--cor-fundo-alt);
+  }
+  .evento__foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .evento__corpo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--esp-3);
+  }
+  .evento__data {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+    margin-bottom: var(--esp-1);
+  }
+  .evento__titulo {
+    font-size: 1.1rem;
+    margin: 0 0 var(--esp-2);
+  }
+  .evento__descricao {
+    color: var(--cor-texto-suave);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .evento__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-1) var(--esp-2);
+    align-items: center;
+    margin-top: auto;
+    padding-top: var(--esp-3);
+  }
+  .btn--sm {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+  }
+  .evento__anexo {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .evento__anexo:hover {
+    text-decoration: underline;
+  }
+</style>

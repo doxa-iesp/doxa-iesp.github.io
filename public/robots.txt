@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# O Astro gera `sitemap-index.xml` — o nome `sitemap.xml` era do Hugo e apontava para o nada.
+Sitemap: https://felipelamarca.com/DOXA/sitemap-index.xml

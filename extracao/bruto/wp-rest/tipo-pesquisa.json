@@ -1,0 +1,140 @@
+[
+ {
+  "id": 86,
+  "count": 10,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/tipo-pesquisa/pesquisa-realizada/",
+  "name": "Pesquisa Concluída",
+  "slug": "pesquisa-realizada",
+  "taxonomy": "tipo-pesquisa",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa/86",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/tipo-pesquisa"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas?tipo-pesquisa=86"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 85,
+  "count": 13,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/tipo-pesquisa/pesquisa-andamento/",
+  "name": "Pesquisa em Andamento",
+  "slug": "pesquisa-andamento",
+  "taxonomy": "tipo-pesquisa",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa/85",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/tipo-pesquisa"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas?tipo-pesquisa=85"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 87,
+  "count": 38,
+  "description": "",
+  "link": "https://www.lab-doxa.org.br/tipo-pesquisa/teses-dissertacoes/",
+  "name": "Teses e Dissertações",
+  "slug": "teses-dissertacoes",
+  "taxonomy": "tipo-pesquisa",
+  "parent": 0,
+  "meta": [],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa/87",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/tipo-pesquisa"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/taxonomies/tipo-pesquisa"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/lista-pesquisas?tipo-pesquisa=87"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

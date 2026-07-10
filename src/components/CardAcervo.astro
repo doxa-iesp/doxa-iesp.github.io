@@ -1,0 +1,210 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  item: CollectionEntry<'acervo'>['data'];
+}
+const { item } = Astro.props;
+
+/** Remove acentos e caixa para gerar tokens de filtro comparáveis no cliente. */
+function normalizar(texto: string): string {
+  return texto
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .trim();
+}
+
+const LIMITE_CANDIDATOS = 4;
+const candidatosVisiveis = item.candidatos.slice(0, LIMITE_CANDIDATOS);
+const restantes = item.candidatos.length - candidatosVisiveis.length;
+
+// Tokens para o filtro client-side (ver <script> em acervo.astro).
+const dataCargo = item.cargo.map(normalizar).join('|');
+const dataPartidos = item.partidos.map(normalizar).join('|');
+const dataCandidatos = item.candidatos.map(normalizar).join('|');
+const dataRegiao = item.regiao ? normalizar(item.regiao) : '';
+---
+
+<article
+  class="card-acervo"
+  data-ano={String(item.ano)}
+  data-cargo={dataCargo}
+  data-regiao={dataRegiao}
+  data-partidos={dataPartidos}
+  data-candidatos={dataCandidatos}
+>
+  <header class="card-acervo__topo">
+    <span class="card-acervo__codigo">{item.codigo}</span>
+    {item.tipo_video && <span class="card-acervo__tipo">{item.tipo_video}</span>}
+  </header>
+
+  <dl class="card-acervo__meta">
+    {
+      item.data && (
+        <div>
+          <dt>Data</dt>
+          <dd>{item.data}</dd>
+        </div>
+      )
+    }
+    <div>
+      <dt>Ano</dt>
+      <dd>{item.ano}</dd>
+    </div>
+    {
+      item.regiao && (
+        <div>
+          <dt>Região</dt>
+          <dd>{item.regiao}</dd>
+        </div>
+      )
+    }
+    {
+      item.cargo.length > 0 && (
+        <div>
+          <dt>Cargo</dt>
+          <dd>{item.cargo.join(', ')}</dd>
+        </div>
+      )
+    }
+  </dl>
+
+  {
+    item.candidatos.length > 0 && (
+      <p class="card-acervo__candidatos">
+        <span class="card-acervo__rotulo">Candidatos:</span>{' '}
+        {candidatosVisiveis.join(', ')}
+        {restantes > 0 && <span class="card-acervo__mais"> e mais {restantes}</span>}
+      </p>
+    )
+  }
+
+  {
+    item.partidos.length > 0 && (
+      <ul class="card-acervo__partidos" aria-label="Partidos">
+        {item.partidos.map((p) => (
+          <li>{p}</li>
+        ))}
+      </ul>
+    )
+  }
+
+  <a
+    class="card-acervo__link"
+    href={item.url}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Assistir no Google Drive
+    <span aria-hidden="true">↗</span>
+  </a>
+</article>
+
+<style>
+  .card-acervo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-2);
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-top: 3px solid var(--cor-destaque);
+    border-radius: var(--raio-g);
+    padding: var(--esp-3);
+    box-shadow: var(--sombra-sm);
+    height: 100%;
+  }
+  /* Filtro client-side: esconder um card não pode ser sobreposto pelo display:flex. */
+  .card-acervo[hidden] {
+    display: none;
+  }
+
+  .card-acervo__topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--esp-1);
+  }
+  .card-acervo__codigo {
+    font-weight: 700;
+    color: var(--cor-primaria-escura);
+    font-size: 1.05rem;
+  }
+  .card-acervo__tipo {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cor-acento);
+    background: color-mix(in srgb, var(--cor-acento) 12%, white);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .card-acervo__meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--esp-1) var(--esp-2);
+    margin: 0;
+  }
+  .card-acervo__meta dt {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+  }
+  .card-acervo__meta dd {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .card-acervo__candidatos {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .card-acervo__rotulo {
+    font-weight: 700;
+    color: var(--cor-texto-suave);
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .card-acervo__mais {
+    color: var(--cor-texto-suave);
+    font-style: italic;
+  }
+
+  .card-acervo__partidos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .card-acervo__partidos li {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    background: var(--cor-fundo-alt);
+    border-radius: var(--raio);
+    padding: 0.1rem 0.4rem;
+  }
+
+  .card-acervo__link {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--cor-destaque);
+    text-decoration: none;
+  }
+  .card-acervo__link:hover {
+    text-decoration: underline;
+  }
+</style>

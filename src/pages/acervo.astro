@@ -1,0 +1,250 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import FiltrosAcervo from '../components/FiltrosAcervo.astro';
+import CardAcervo from '../components/CardAcervo.astro';
+import { url } from '../lib/url';
+
+const pagina = (await getEntry('paginas', 'acervo'))!;
+const { Content } = await render(pagina);
+const geral = (await getEntry('configuracao', 'geral'))!.data;
+
+const itens = await getCollection('acervo');
+// Ordem cronológica estável (o ano vai de 1989 a 1998), depois pelo código.
+itens.sort((a, b) => a.data.ano - b.data.ano || a.data.codigo.localeCompare(b.data.codigo));
+const total = itens.length;
+
+// Facetas dos filtros, derivadas dos próprios dados (nada fica desatualizado à mão).
+const anos = [...new Set(itens.map((i) => i.data.ano))].sort((a, b) => b - a);
+const cargos = [...new Set(itens.flatMap((i) => i.data.cargo))].sort((a, b) => a.localeCompare(b));
+const regioes = [...new Set(itens.map((i) => i.data.regiao).filter(Boolean) as string[])].sort((a, b) =>
+  a.localeCompare(b),
+);
+const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b) => a.localeCompare(b));
+---
+
+<Base titulo="Acervo Audiovisual" descricao={pagina.data.descricao}>
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.subtitulo} />
+
+  <section class="secao">
+    <div class="container">
+      <div class="prosa"><Content /></div>
+
+      <div class="acesso" role="note">
+        <h2 class="acesso__titulo">Como consultar o acervo</h2>
+        <ul class="acesso__lista">
+          <li>
+            <span class="acesso__rotulo">Catálogo completo</span>
+            <a href={geral.catalogo_acervo} target="_blank" rel="noopener noreferrer">
+              Abrir a listagem completa do acervo <span aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <span class="acesso__rotulo">Formulário de solicitação</span>
+            <a href={url(geral.formulario_acervo)} download>
+              Baixar o formulário (.docx)
+            </a>
+          </li>
+          <li>
+            <span class="acesso__rotulo">Envie o formulário para</span>
+            <a href={`mailto:${geral.email}`}>{geral.email}</a>
+          </li>
+        </ul>
+        <p class="acesso__aviso">
+          Para assistir aos vídeos é preciso enviar o formulário preenchido por e-mail. Os links
+          abaixo levam aos arquivos hospedados no Google Drive do laboratório.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao--alt">
+    <div class="container">
+      <h2>Buscar no acervo</h2>
+
+      <FiltrosAcervo anos={anos} cargos={cargos} regioes={regioes} partidos={partidos} />
+
+      <noscript>
+        <p class="noscript-aviso" role="note">
+          Os filtros de busca dependem de JavaScript. Sem ele, os {total} itens do acervo são
+          exibidos integralmente logo abaixo.
+        </p>
+      </noscript>
+
+      <p id="contador-acervo" class="contador" aria-live="polite">{total} de {total} itens</p>
+
+      <ul class="grade-acervo">
+        {
+          itens.map((item) => (
+            <li>
+              <CardAcervo item={item.data} />
+            </li>
+          ))
+        }
+      </ul>
+
+      <p id="sem-resultados" class="sem-resultados" role="status" hidden>
+        Nenhum item corresponde aos filtros selecionados. Tente ampliar a busca ou
+        <button type="button" id="sem-resultados-limpar" class="link-inline">limpar os filtros</button>.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prosa {
+    max-width: 68ch;
+  }
+
+  .acesso {
+    margin-top: var(--esp-3);
+    background: color-mix(in srgb, var(--cor-primaria) 6%, white);
+    border: 1px solid var(--cor-borda);
+    border-left: 4px solid var(--cor-primaria);
+    border-radius: var(--raio-g);
+    padding: var(--esp-3);
+  }
+  .acesso__titulo {
+    font-size: 1.15rem;
+    margin-bottom: var(--esp-2);
+  }
+  .acesso__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--esp-2);
+    display: grid;
+    gap: var(--esp-2);
+  }
+  .acesso__lista li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .acesso__rotulo {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+  }
+  .acesso__aviso {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--cor-texto-suave);
+  }
+
+  .noscript-aviso {
+    margin-top: var(--esp-2);
+    background: color-mix(in srgb, var(--cor-destaque) 12%, white);
+    border: 1px solid color-mix(in srgb, var(--cor-destaque) 40%, white);
+    border-radius: var(--raio);
+    padding: var(--esp-2);
+    font-size: 0.9rem;
+  }
+
+  .contador {
+    margin: var(--esp-3) 0 var(--esp-2);
+    font-weight: 600;
+    color: var(--cor-texto-suave);
+  }
+
+  .grade-acervo {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--esp-3);
+  }
+
+  .sem-resultados {
+    margin-top: var(--esp-3);
+    font-size: 0.95rem;
+    color: var(--cor-texto-suave);
+  }
+  .sem-resultados[hidden] {
+    display: none;
+  }
+  .link-inline {
+    font: inherit;
+    color: var(--cor-primaria);
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .link-inline:hover {
+    color: var(--cor-destaque);
+  }
+</style>
+
+<script>
+  // Filtro multi-faceta 100% client-side. Todos os cards já estão no HTML (SSG); aqui apenas
+  // escondemos os que não casam. Assim, sem JS, tudo aparece e nada se perde.
+  function normalizar(texto: string): string {
+    return texto
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
+  const busca = document.getElementById('filtro-busca') as HTMLInputElement | null;
+  const ano = document.getElementById('filtro-ano') as HTMLSelectElement | null;
+  const cargo = document.getElementById('filtro-cargo') as HTMLSelectElement | null;
+  const regiao = document.getElementById('filtro-regiao') as HTMLSelectElement | null;
+  const partido = document.getElementById('filtro-partido') as HTMLSelectElement | null;
+  const limpar = document.getElementById('filtro-limpar');
+  const limparVazio = document.getElementById('sem-resultados-limpar');
+  const contador = document.getElementById('contador-acervo');
+  const semResultados = document.getElementById('sem-resultados');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.card-acervo'));
+  const total = cards.length;
+
+  if (busca && ano && cargo && regiao && partido && contador && semResultados) {
+    const aplicar = () => {
+      const q = normalizar(busca.value);
+      const fAno = ano.value;
+      const fCargo = cargo.value;
+      const fRegiao = regiao.value;
+      const fPartido = partido.value;
+      let visiveis = 0;
+
+      for (const card of cards) {
+        const cargos = (card.dataset.cargo ?? '').split('|');
+        const partidos = (card.dataset.partidos ?? '').split('|');
+        const okAno = !fAno || card.dataset.ano === fAno;
+        const okCargo = !fCargo || cargos.includes(fCargo);
+        const okRegiao = !fRegiao || card.dataset.regiao === fRegiao;
+        const okPartido = !fPartido || partidos.includes(fPartido);
+        const okBusca = !q || (card.dataset.candidatos ?? '').includes(q);
+        const mostrar = okAno && okCargo && okRegiao && okPartido && okBusca;
+        card.hidden = !mostrar;
+        if (mostrar) visiveis++;
+      }
+
+      contador.textContent = `${visiveis} de ${total} itens`;
+      semResultados.hidden = visiveis !== 0;
+    };
+
+    const reiniciar = () => {
+      busca.value = '';
+      ano.value = '';
+      cargo.value = '';
+      regiao.value = '';
+      partido.value = '';
+      aplicar();
+    };
+
+    for (const el of [busca, ano, cargo, regiao, partido]) {
+      el.addEventListener('input', aplicar);
+      el.addEventListener('change', aplicar);
+    }
+    limpar?.addEventListener('click', reiniciar);
+    limparVazio?.addEventListener('click', reiniciar);
+
+    aplicar();
+  }
+</script>

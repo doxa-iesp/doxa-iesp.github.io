@@ -1,0 +1,61 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CardEvento from '../components/CardEvento.astro';
+
+const pagina = (await getEntry('paginas', 'eventos'))!;
+const { Content } = await render(pagina);
+
+// Mais recentes primeiro. `data` é Date (z.coerce.date no schema).
+const eventos = (await getCollection('eventos')).sort(
+  (a, b) => b.data.data.getTime() - a.data.data.getTime(),
+);
+---
+
+<Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.subtitulo} />
+
+  <section class="secao">
+    <div class="container">
+      <div class="prosa">
+        <Content />
+      </div>
+
+      {
+        eventos.length > 0 ? (
+          <ul class="eventos-grid">
+            {eventos.map((e) => (
+              <CardEvento
+                titulo={e.data.titulo}
+                data={e.data.data}
+                descricao={e.data.descricao}
+                imagem={e.data.imagem}
+                url={e.data.url}
+                anexos={e.data.anexos}
+              />
+            ))}
+          </ul>
+        ) : (
+          <p>Nenhum evento cadastrado no momento.</p>
+        )
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prosa {
+    max-width: 68ch;
+    color: var(--cor-texto-suave);
+  }
+
+  .eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--esp-3);
+    list-style: none;
+    padding: 0;
+    margin: var(--esp-3) 0 0;
+  }
+</style>

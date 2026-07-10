@@ -1,0 +1,34 @@
+# Parceiros / financiadores exibidos na home do site antigo
+# Fonte: DOM de https://www.lab-doxa.org.br/ (2026-07-09)
+
+- nome: "CAPES"
+  arquivo: "parceiros/capes.png"
+  url_original: "https://www.lab-doxa.org.br/wp-content/uploads/2022/08/Parceiros-CAPES.png"
+
+- nome: "IBOPE"
+  arquivo: "parceiros/ibope.png"
+  url_original: "https://www.lab-doxa.org.br/wp-content/uploads/2022/08/Parceiros-IBOPE.png"
+
+- nome: "CNPQ"
+  arquivo: "parceiros/cnpq.png"
+  url_original: "https://www.lab-doxa.org.br/wp-content/uploads/2022/08/Parceiros-CNPQ.png"
+
+- nome: "IESP-UERJ"
+  arquivo: "parceiros/iesp-uerj.png"
+  url_original: "https://www.lab-doxa.org.br/wp-content/uploads/2022/08/Parceiros-IESP-UERJ.png"
+
+- nome: "FAPERJ"
+  arquivo: "parceiros/faperj.png"
+  url_original: "https://www.lab-doxa.org.br/wp-content/uploads/2022/08/Parceiros-FAPERJ.png"
+
+- nome: "VOX"
+  arquivo: "parceiros/vox.png"
+  url_original: "https://www.lab-doxa.org.br/wp-content/uploads/2022/08/Parceiros-VOX.png"
+
+- nome: "FINEP"
+  arquivo: "parceiros/finep.png"
+  url_original: "https://www.lab-doxa.org.br/wp-content/uploads/2022/08/Parceiros-FINEP.png"
+
+- nome: "UERJ"
+  arquivo: "parceiros/uerj.png"
+  url_original: "https://www.lab-doxa.org.br/wp-content/uploads/2022/08/Parceiros-UERJ.png"

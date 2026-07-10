@@ -1,0 +1,258 @@
+# Eventos e Seminários do DOXA
+# eventos:    WP REST API, posts na categoria 'Evento' (term 136) + imagem destacada
+# seminarios: DOM renderizado de https://www.lab-doxa.org.br/seminarios/
+# Extraído em 2026-07-09
+
+eventos:
+  - title: "Edição digital gratuita do livro “A Decisão do Voto” de Marcus Figueiredo"
+    date: "2022-12-16"
+    description: "O Doxa está publicando uma edição digital gratuita do livro “A Decisão do Voto” de Marcus Figueiredo. Escaneie o QR CODE na imagem, ou clique no link abaixo e garanta seu livro gratuitamente. Clique aqui para baixar o livro"
+    image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/FIGUEIREDO_A-DECISAO-DO-VOTO_CARTAZ-scaled.jpg"
+    url: "https://www.lab-doxa.org.br/edicao-digital-gratuita-do-livro-a-decisao-do-voto-de-marcus-figueiredo/"
+    attachments:
+      - "https://docs.google.com/document/d/15D7Ccv0A4fiUiOCtammle_8xdUJ977kkTwx5tWTCSI8/edit?usp=drivesdk"
+
+  - title: "Seminário comemora 25 anos do Doxa"
+    date: "2022-11-11"
+    description: "No dia 25 de novembro de 2021, o Doxa celebrou seus 25 anos com um seminário online sobre sua origem e legado, além de traçar um panorama sobre temas centrais para a democracia brasileira nos tempos atuais. Palestrantes: Fernando Limongi (USP/FGV), Patrícia Campos Mello (Folha de S. Paulo), Luciana Veiga (Unirio/ABCP) e Felipe Borba (Unirio)."
+    image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/08/Seminario-25-anos-DOXA.jpg"
+    url: "https://www.lab-doxa.org.br/seminario-comemora-25-anos-do-doxa/"
+
+  - title: "DOXA 20 anos, o legado de Marcus Figueiredo"
+    date: "2017-11-11"
+    description: "13 de novembro 14h – Abertura Palestrantes:Fernando Azevedo – UFSCarAfonso Albuquerque – UFF Lançamento do livro: Eleições, Opinião Pública e Comunicação Política no Brasil Contemporâneo Organizadores: Felipe Borba e Alessandra Aldé 17h – Coquetel Instituto de Estudos Sociais e Políticos da UERJ – IESP/UERJRua da Matriz, 82 – Botafogo"
+    image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/Doxa_20_parae-mail_azul.jpg"
+    url: "https://www.lab-doxa.org.br/doxa-20-anos-o-legado-de-marcus-figueiredo/"
+
+  - title: "Seminário Marcus Figueiredo: Eleições, Opinião Pública e Comunicação Política no Brasil Contemporâneo"
+    date: "2014-11-26"
+    description: ""
+    image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/CARTAZ_Seminario-Marcus-Figueiredo.jpg"
+    url: "https://www.lab-doxa.org.br/seminario-marcus-figueiredo-eleicoes-opiniao-publica-e-comunicacao-politica-no-brasil-contemporaneo/"
+    attachments:
+      - "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/CARTAZ_Seminario-Marcus-Figueiredo.jpg.pdf"
+
+  - title: "Nota editorial sobre falecimento de Marcus Figueiredo na Revista Dados, em agosto de 2014"
+    date: "2014-08-08"
+    description: "No dia 21 de março de 2014 realizou-se no Instituto de Estudos Sociais e Políticos da Universidade do Estado do Rio de Janeiro (IESP-UERJ) o Seminário “A Ciência Política no Brasil: a perspectiva do Rio de Janeiro”. O encontro foi organizado pela Associação Brasileira de Ciência Política (ABCP), tendo sido parte integrante de um projeto"
+    image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/marcusfigueiredo_destaque.jpg"
+    url: "https://www.lab-doxa.org.br/nota-editorial-sobre-falecimento-de-marcus-figueiredo-na-revista-dados-em-agosto-de-2014/"
+    attachments:
+      - "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/HOM_MARCUS_DADOS-2014.pdf"
+
+seminarios:
+  - title: "Defensive Logic of resource allocation: Brazil’s party financing in the state level"
+    presenter: "Bruno Schaefer"
+    institution: "IESP-UERJ"
+    date: "2023-06-19"
+    year: 2023
+
+  - title: "Conjoint Experiment: representação e preferências no estado do Rio de Janeiro"
+    presenter: "Fernando Meireles"
+    institution: "IESP-UERJ"
+    date: "2023-09-25"
+    year: 2023
+
+  - title: "Trustful Voters, Trustworthy Politicians: A Survey Experiment on the Infuence of Social Media in Politics"
+    presenter: "Tiago Ventura, Natalia Aruguete, Ernesto Calvo e Carlos Scartascini"
+    institution: "Universidade de Maryland"
+    date: "2021-03-25"
+    year: 2021
+
+  - title: "O Auxílio Emergencial Salvou Bolsonaro? Um estudo quasi-experimental para melhorar identificar este efeito"
+    presenter: "Felipe Nunes"
+    institution: "UFMG- Quaest"
+    date: "2021-04-21"
+    year: 2021
+
+  - title: "The Public Opinion Consequences of Lava-Jato in Brazil"
+    presenter: "Nara Pavão"
+    institution: "UFPE"
+    date: "2021-05-27"
+    year: 2021
+
+  - title: "Government and Opposition in Legislative Speechmaking: Using Text-As-Data to Estimate Brazilian Political Parties’ Policy Positions"
+    presenter: "Mauricio Y. Izumi Danilo B. Medeiros"
+    institution: "UFES"
+    date: "2021-06-24"
+    year: 2021
+
+  - title: "Highlights A Spatial Interaction Model of Vote Dispersion"
+    presenter: "Fernando Guarnieri, Glauco Peres da Silva"
+    institution: ""
+    date: "2021-09-01"
+    year: 2021
+
+  - title: "C ongresso Remoto: dinâmicas do legislativo federal em tempos de pandemia"
+    presenter: "Júlio Canello"
+    institution: ""
+    date: "2021-09-24"
+    year: 2021
+
+  - title: "Government and Opposition in Legislative Speechmaking: Using Text-as-Data to Estimate Brazilian Political Parties’ Policy Positions"
+    presenter: "Maurício Izumi e Danilo Medeiros (CEBRAP)"
+    institution: "UFES"
+    date: "2021-10-13"
+    year: 2021
+
+  - title: "A experiência da energia solar no Brasil – processos decisórios locais e evolução de indicadores das populações ao redor das usinas"
+    presenter: "Carolina Botelho"
+    institution: ""
+    date: "2021-10-22"
+    year: 2021
+
+  - title: "Seminário de celebração dos 25 anos do Doxa"
+    presenter: "Seminário de celebração dos 25 anos do Doxa. [18 de novembro]"
+    institution: ""
+    date: "2021-11-18"
+    year: 2021
+
+  - title: "The Overlooked Role of the Brazilian Congress in Shaping the Bolsa Família Program: a New Approach to the Policy-making of CCTs"
+    presenter: "Pedro Bras Martins da Costa a"
+    institution: ""
+    date: "2021-11-19"
+    year: 2021
+
+  - title: "Nara Salles “Tamanho é documento? Porte de municípios e competição programática no Brasil’"
+    presenter: "Nara Salles “Tamanho é documento? Porte de municípios e competição programática no Brasil’ . [11 de maio]"
+    institution: ""
+    date: "2020-05-11"
+    year: 2020
+
+  - title: "O uso que o eleitor faz da intuição ao elaborar seu julgamento político: o processamento do cenário e da propaganda negativa em disputa presidencial"
+    presenter: "Luciana Veiga e Flávia Bozza Martins"
+    institution: ""
+    date: "2020-06-16"
+    year: 2020
+
+  - title: "Processo decisório e políticas públicas de energia solar no Brasil"
+    presenter: "Carolina Botelho"
+    institution: ""
+    date: "2020-10-22"
+    year: 2020
+
+  - title: "Voto no PT nas Eleições Presidenciais de 2014: Eleitor Pobre do Nordeste?"
+    presenter: "Thiago Moreira da Silva; Sergio Simoni Jr; Argelina Figueiredo; Natalia Maciel"
+    institution: ""
+    date: "2019-03-21"
+    year: 2019
+
+  - title: "Instituições políticas em regimes oligárquicos: partidos e competição eleitoral no Brasil da Primeira República"
+    presenter: "Jaqueline Zulini"
+    institution: "CPDOC"
+    date: "2019-05-06"
+    year: 2019
+
+  - title: "The New Politics of Gubernatorial Elections in Brazil (1994-2018)"
+    presenter: "Fabiano Santos , Cristiane Batista (UNIRIO) e Thiago Moreira da Silva (IESP-UERJ)"
+    institution: "IESP-UERJ"
+    date: "2019-10-10"
+    year: 2019
+
+  - title: "Quem se abstém no Brasil? Uma descrição do perfil socioeconômico dos eleitores ausentes no primeiro turno das eleições de 2018"
+    presenter: "Felipe Borba"
+    institution: ""
+    date: "2019-11-19"
+    year: 2019
+
+  - title: "Realinhamento eleitoral e Programa-Bolsa Família nas eleições presidenciais brasileiras"
+    presenter: "Sergio Simoni Junior"
+    institution: "UNICAMP"
+    date: "2018-03-12"
+    year: 2018
+
+  - title: "Cap 3. Voto econômico e Contexto político-institucional"
+    presenter: "Flávia Bozza"
+    institution: ""
+    date: "2018-04-17"
+    year: 2018
+
+  - title: "Territórios eleitorais e estratégia política: reflexões a partir de um quase-experimento"
+    presenter: "Fernando Guarnieri e Gabriel Melo (IESP/UERJ)"
+    institution: "IESP/UERJ"
+    date: "2018-08-07"
+    year: 2018
+
+  - title: "Efeitos práticos da sub-representação política: o desalinhamento das preferências entre representantes e representados"
+    presenter: "Thiago Moreira da Silva"
+    institution: ""
+    date: "2018-10-18"
+    year: 2018
+
+  - title: "Projeto de Pesquisa: Mídias sociais como fonte de informação política: uma análise da opinião pública e da polarização pós-impeachment"
+    presenter: "Natalia Maciel"
+    institution: "Doxa-IESP/UERJ"
+    date: "2017-03-27"
+    year: 2017
+
+  - title: "Os determinantes da perda da popularidade da Presidente Dilma no período pré-impedimento: os efeitos das denúncias de corrupção e da economia"
+    presenter: "Luciana Veiga , Flávia Bozza (IESP/UERJ) e Steven Ross (Unirio)"
+    institution: "Unirio"
+    date: "2017-04-27"
+    year: 2017
+
+  - title: "Quando Governadores vão ao Supremo: razões para o controle direto de constitucionalidade de atos normativos estaduais no Brasi l"
+    presenter: "Júlio Canello"
+    institution: "IESP-UERJ"
+    date: "2017-05-27"
+    year: 2017
+
+  - title: "Nem tão"
+    presenter: "Thiago Moreira da Silva"
+    institution: ""
+    date: "2017-09-21"
+    year: 2017
+
+  - title: "Cap 3. Instituições, estatutos e coalizões dominantes no PSD, UDN e PTB (1950-64)"
+    presenter: "Saulo Said"
+    institution: ""
+    date: "2017-10-19"
+    year: 2017
+
+  - title: "Coligação à brasileira: efeitos sobre a fragmentação e a proporcionalidade – (2006, 2010 e 2014)"
+    presenter: "Felipe Munhoz Albuquerque e Saulo Maia Said"
+    institution: ""
+    date: "2016-03-22"
+    year: 2016
+
+  - title: "The Impact of Violence on Non-Incumbent Party Support in Brazilian Gubernatorial Elections, 1994-2010"
+    presenter: "Douglas Block"
+    institution: ""
+    date: "2016-06-23"
+    year: 2016
+
+  - title: "Desenvolvimento e partidarismo: os programas de governo nos grotões do Brasil"
+    presenter: "Fernando Guarnieri e Nara Salles (IESP-UERJ)"
+    institution: "IESP/UERJ"
+    date: "2016-11-24"
+    year: 2016
+
+  - title: "Cap 5. Estratégias de comunicação nas campanhas eleitorais proporcionais"
+    presenter: "Cíntia Pinheiro Ribeiro de Souza"
+    institution: ""
+    date: "2015-05-28"
+    year: 2015
+
+  - title: "PT e PSDB nas eleições para a Câmara dos Deputados: bases sociais e variáveis políticas em seis eleições"
+    presenter: "Natalia Maciel"
+    institution: "IESP-UERJ"
+    date: "2015-06-17"
+    year: 2015
+
+  - title: "Do Fome Zero ao Bolsa Família? Um estudo comparado a partir dos manifestos do PT entre 2002 e 2010"
+    presenter: "Pedro Bras Martins da Costa"
+    institution: ""
+    date: "2015-07-28"
+    year: 2015
+
+  - title: "Incumbency Advantage in Brazilian Mayoral Elections"
+    presenter: "Ricardo Caneviva"
+    institution: ""
+    date: "2015-09-29"
+    year: 2015
+
+  - title: "Fragmentação Partidária na Câmara dos Deputados: Dilemas de Coordenação no Brasil (2002-2015)"
+    presenter: "Brenda dos Santos Barboza Cunha"
+    institution: "IESP-UERJ"
+    date: "2015-11-18"
+    year: 2015

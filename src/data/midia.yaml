@@ -1,0 +1,422 @@
+# Gerado por scripts/converter-conteudo.py a partir de extracao/dados/.
+# Pode ser editado à mão: o build valida o schema (src/content.config.ts).
+
+- titulo: Estimativas de margem de erro no Brasil
+  autores: Meireles, Fernando
+  veiculo: Valor Econômico
+  data: '2022-04-24'
+  tipo: impressa
+  url: https://valor.globo.com/politica/coluna/estimativas-de-margem-de-erro-no-brasil.ghtml
+- titulo: Prisão não previne ameaças à democracia
+  autores: Figueiredo, Argelina
+  veiculo: Valor Econômico . 20
+  data: '2021-02-22'
+  tipo: impressa
+  url: https://valor.globo.com/politica/noticia/2021/02/22/prisao-nao-previne-ameacas-a-democracia.ghtml
+- titulo: Respostas das instituições é problemática
+  autores: Figueiredo, Argelina
+  veiculo: Valor Econômico . 20
+  data: '2021-02-22'
+  tipo: impressa
+  url: https://valor.globo.com/politica/noticia/2021/02/22/resposta-das-instituicoes-e-problematica.ghtml
+- titulo: CPI pode chegar a Bolsonaro, mas ampliar investigação ‘embaralha’ o jogo político
+  autores: Figueiredo, Argelina
+  veiculo: O Estado de S. Paulo
+  data: '2021-04-12'
+  tipo: impressa
+  url: https://politica.estadao.com.br/noticias/geral,cpi-pode-chegar-a-bolsonaro-mas-ampliar-investigacao-embaralha-o-jogo-politico-diz-pesquisadora,70003679247
+- titulo: Entenda como a CPI da Covid pode contribuir para responsabilizar Bolsonaro por falas e postura
+    na pandemia
+  autores: Figueiredo, Argelina
+  veiculo: Folha de São Paulo
+  data: '2021-04-25'
+  tipo: impressa
+  url: https://www1.folha.uol.com.br/poder/2021/04/entenda-como-a-cpi-da-covid-pode-contribuir-para-responsabilizar-bolsonaro-por-falas-e-postura-na-pandemia.shtml
+- titulo: Chegou o tempo da política
+  autores: Botelho, Carolina
+  veiculo: O Globo impresso
+  data: '2021-05-23'
+  tipo: impressa
+  url: https://blogs.oglobo.globo.com/opiniao/post/chegou-o-tempo-da-politica.html
+- titulo: Muito do que vai acontecer no 7 de Setembro já aconteceu
+  autores: Botelho, Carolina
+  veiculo: El País
+  data: '2021-09-05'
+  tipo: impressa
+  url: https://brasil.elpais.com/brasil/2021-09-05/muito-do-que-vai-acontecer-no-7-de-setembro-ja-aconteceu.html
+- titulo: Brasil ‘afunda’ nas mortes pela covid-19, enquanto o comandante fala “e daí”
+  autores: Botelho, Carolina; Boggio, Paulo
+  veiculo: El País
+  data: '2021-02-16'
+  tipo: impressa
+  url: https://brasil.elpais.com/opiniao/2021-02-16/brasil-afunda-nas-mortes-pela-covid-19-enquanto-o-comandante-fala-e-dai.html
+- titulo: Bússola moral para sair da crise
+  autores: Botelho, Carolina; Boggio, Paulo
+  veiculo: O Globo impresso
+  data: '2021-03-15'
+  tipo: impressa
+  url: https://blogs.oglobo.globo.com/opiniao/post/bussola-moral-para-sair-da-crise.html
+- titulo: 'Carolina Botelho: “Bolsonaro uniu todos contra ele. Políticos antes antagônicos hoje conversam”'
+  autores: Botelho, Carolina
+  veiculo: El País
+  data: '2021-05-22'
+  tipo: impressa
+  url: https://brasil.elpais.com/brasil/2021-05-22/carolina-botelho-bolsonaro-uniu-todos-contra-ele-politicos-antes-vistos-como-antagonicos-hoje-conversam.html
+- titulo: Apoio nas ruas definirá futuro do confronto de Bolsonaro com Congresso
+  autores: Figueiredo, Argelina
+  veiculo: Folha de São Paulo
+  data: '2020-03-02'
+  tipo: impressa
+  url: https://weseek.com.br/viewnews/ViewMateria.html?materiaId=47632554&canalId=486707&clienteId=P9ybjMtObrI=
+- titulo: Por seu intervencionismo imoderado, STF não terá como evitar confronto com Bolsonaro
+  autores: Figueiredo, Argelina; Limongi, Fernando
+  veiculo: Folha de São Paulo
+  data: '2020-04-30'
+  tipo: impressa
+  url: http://doxa.iesp.uerj.br/wp-content/uploads/2020/04/Artigo-Folha-Limongi-Figueiredo.pdf
+- titulo: A polarização do vírus
+  autores: Figueiredo, Argelina
+  veiculo: Valor Econômico
+  data: '2020-04-24'
+  tipo: impressa
+- titulo: Roteiro de viagens de Bolsonaro mira obras e auxílio
+  autores: Botelho, Carolina
+  veiculo: O Globo impresso
+  data: '2020-08-30'
+  tipo: impressa
+  url: https://oglobo.globo.com/brasil/roteiro-de-viagens-de-bolsonaro-mira-obras-auxilio-24614240?versao=amp
+- titulo: Um em cada três candidatos a prefeito no país não tem coligação com outro partido
+  autores: Botelho, Carolina
+  veiculo: O Globo impresso
+  data: '2020-10-04'
+  tipo: impressa
+  url: https://oglobo.globo.com/brasil/eleicoes-2020/um-em-cada-tres-candidatos-prefeito-no-pais-nao-tem-coligacao-com-outro-partido-1-24675913
+- titulo: Reforma da Previdência e a articulação política terceirizada
+  autores: Figueiredo, Argelina
+  veiculo: Nexo
+  data: '2019-06-06'
+  tipo: impressa
+  url: https://www.nexojornal.com.br/ensaio/2019/Reforma-da-Previd%C3%AAncia-e-a-articula%C3%A7%C3%A3o-pol%C3%ADtica-terceirizada?utm_campaign=anexo&utm_source=anexo
+- titulo: Desconstruindo Mitos
+  autores: Figueiredo, Argelina
+  veiculo: Pesquisa Fapesp
+  data: '2019'
+  tipo: impressa
+- titulo: Democracia e Democracias
+  autores: Figueiredo, Argelina
+  veiculo: Valor Econômico
+  data: '2017-02-17'
+  tipo: impressa
+  url: http://doxa.iesp.uerj.br/wp-content/uploads/2016/02/Democracia-e-Democracias-_-Valor_17_02_17.pdf
+- titulo: Conflito na elite e escândalos de corrupção
+  autores: Figueiredo, Argelina
+  veiculo: Valor Econômico
+  data: '2016-02-15'
+  tipo: impressa
+  url: http://doxa.iesp.uerj.br/wp-content/uploads/2016/02/Argelina_artigo-Valor_Conflito-na-elite-e-esc%C3%A2ndalos-de-corrup%C3%A7%C3%A3o.pdf
+- titulo: O que deu errado? Não culpemos as instituições
+  autores: Figueiredo, Argelina
+  veiculo: Folha de São Paulo
+  data: '2016-05-13'
+  tipo: impressa
+  url: http://www1.folha.uol.com.br/poder/2016/05/1770900-o-que-deu-errado-nao-culpemos-as-instituicoes.shtml
+- titulo: A anatomia do PMDB
+  autores: Natália Maciel
+  veiculo: Valor Econômico
+  data: '2015-05-29'
+  tipo: impressa
+  url: http://doxa.iesp.uerj.br/wp-content/uploads/2016/02/A-anatomia-do-PMDB_Valor-Econ%C3%B4mico.pdf
+- titulo: The power behind the throne
+  autores: Maciel, Natália
+  veiculo: The Economist
+  data: '2015-07-25'
+  tipo: impressa
+  url: http://www.economist.com/news/americas/21659731-junior-partner-government-running-country-power-behind-throne
+- titulo: Avaliação de Cabral e voto
+  autores: Borba, Felipe
+  veiculo: O Dia
+  data: '2014-03-21'
+  tipo: impressa
+  url: http://odia.ig.com.br/noticia/opiniao/2014-03-21/felipe-borba-avaliacao-de-cabral-e-voto.html
+- titulo: Os limites do voto no Rio
+  autores: Borba, Felipe
+  veiculo: O Dia
+  data: '2014-05-16'
+  tipo: impressa
+  url: http://odia.ig.com.br/noticia/opiniao/2014-05-16/felipe-borba-os-limites-do-voto-no-rio.html
+- titulo: Pela propaganda negativa
+  autores: Borba, Felipe
+  veiculo: O Dia
+  data: '2014-09-27'
+  tipo: impressa
+  url: http://odia.ig.com.br/noticia/opiniao/2014-09-27/felipe-borba-pela-propaganda-negativa.html
+- titulo: Fora da briga para presidência, estratégia do PMDB é focar em prefeituras
+  autores: Maakaroun, Bertha
+  veiculo: Estado de Minas
+  data: '2012-02-26'
+  tipo: impressa
+  url: http://www.em.com.br/app/noticia/politica/2012/02/26/interna_politica,280010/fora-da-briga-para-presidencia-estrategia-do-pmdb-e-focar-em-prefeituras.shtml
+- titulo: O povo e as elites nas eleições brasileiras
+  autores: Figueiredo, Argelina
+  veiculo: Valor Econômico
+  data: '2010-10-08'
+  tipo: impressa
+  url: http://www.valor.com.br/arquivo/851291/o-povo-e-elites-nas-eleicoes-brasileiras#ixzz2mKPU5ibY
+- titulo: Fraud is not usual, but conspiracy theories are
+  autores: Martins, Flávia Bozza
+  veiculo: Latinoamérica21
+  data: '2023-11-30'
+  tipo: virtual
+  url: https://latinoamerica21.com/en/fraud-is-not-usual-but-conspiracy-theories-are/
+- titulo: Lula e o desafio de reconstruir o Brasil
+  autores: Figueiredo, Argelina
+  veiculo: DW Made for minds
+  data: '2022-11-04'
+  tipo: virtual
+  url: https://www.dw.com/pt-br/lula-e-o-desafio-de-reconstruir-o-brasil/a-63636420?maca=pt-br-Twitter-sharing
+- titulo: Distante do povo, Câmara dos Deputados vive dilema entre representação e governabilidade
+  autores: Figueiredo, Argelina
+  veiculo: InfoMoney
+  data: '2022-07-08'
+  tipo: virtual
+  url: https://www.infomoney.com.br/colunistas/um-brasil/distante-do-povo-camara-dos-deputados-vive-dilema-entre-representacao-e-governabilidade/
+- titulo: O Governo Bolsonaro e o Cenário Político Pré-Eleitoral
+  autores: Figueiredo, Argelina; Guarnieri, Fernando
+  veiculo: KAS Brasil
+  data: '2022-05-17'
+  tipo: virtual
+  url: https://www.kas.de/pt/web/brasilien/einzeltitel/-/content/wahlen-2022-erwartungen-und-perspektiven
+- titulo: As eleições importam para quê?
+  autores: Botelho, Carolina
+  veiculo: JOTA
+  data: '2022-03-15'
+  tipo: virtual
+  url: https://www.jota.info/opiniao-e-analise/colunas/carolina-botelho/eleicoes-2022-as-eleicoes-importam-para-que-15032022
+- titulo: Agora é com vocês, eleitores
+  autores: Botelho, Carolina
+  veiculo: JOTA
+  data: '2022-09-30'
+  tipo: virtual
+  url: https://www.jota.info/opiniao-e-analise/colunas/carolina-botelho/agora-e-com-voces-eleitores-30092022
+- titulo: Câmara dos Deputados merece mais atenção do que a corrupção no MEC
+  autores: Botelho, Carolina
+  veiculo: JOTA
+  data: '2022-06-23'
+  tipo: virtual
+  url: https://www.jota.info/opiniao-e-analise/colunas/carolina-botelho/politica-brasileira-camara-merece-mais-atencao-que-corrupcao-no-mec-23062022
+- titulo: 'Eleições 2022: Qual discurso está mais afinado? | WW – 12/06/2022'
+  autores: Botelho, Carolina
+  veiculo: CNN
+  data: '2022-06-12'
+  tipo: virtual
+  url: https://www.youtube.com/watch?v=zkyTYOMeD3g
+- titulo: Já é quase agosto e dá para sentir ventos promissores da democracia
+  autores: Botelho, Carolina
+  veiculo: JOTA
+  data: '2022-07-27'
+  tipo: virtual
+  url: https://www.jota.info/opiniao-e-analise/colunas/carolina-botelho/ja-e-quase-agosto-e-da-para-sentir-ventos-alvissareiros-da-democracia-27072022?amp
+- titulo: O mosaico bolsonarista
+  autores: Botelho, Carolina
+  veiculo: meio político
+  data: '2022-10-05'
+  tipo: virtual
+  url: https://mail.google.com/mail/u/3/?ui=2&view=btop&ver=1vtowiue3ckng#attid%253Datt_183c2ee189826634_0.2_f_l931n5bt1
+- titulo: Petrobras é a nova fake news de um ano eleitoral desvantajoso para Bolsonaro
+  autores: Botelho, Carolina
+  veiculo: JOTA
+  data: '2022-05-17'
+  tipo: virtual
+  url: https://www.jota.info/opiniao-e-analise/colunas/carolina-botelho/petrobras-e-a-nova-fake-news-de-um-ano-eleitoral-desvantajoso-para-bolsonaro-17052022
+- titulo: Por que o Auxílio Brasil não ajuda Bolsonaro nas pesquisas
+  autores: Botelho, Carolina
+  veiculo: Nexo
+  data: '2022-05-31'
+  tipo: virtual
+  url: https://www.nexojornal.com.br/expresso/2022/05/31/Por-que-o-Aux%C3%ADlio-Brasil-n%C3%A3o-ajuda-Bolsonaro-nas-pesquisas?posicao-home-direita=2
+- titulo: Teremos muito trabalho pela frente em qualquer cenário após outubro
+  autores: Botelho, Carolina
+  veiculo: JOTA
+  data: '2022-02-15'
+  tipo: virtual
+  url: https://www.jota.info/opiniao-e-analise/colunas/carolina-botelho/bolsonarismo-teremos-trabalho-em-qualquer-cenario-apos-outubro-15022022
+- titulo: Eleição de 2022 será sobre as consequências da pandemia
+  autores: Botelho, Carolina
+  veiculo: JOTA
+  data: '2022-01-18'
+  tipo: virtual
+  url: https://www.jota.info/opiniao-e-analise/colunas/carolina-botelho/eleicao-de-2022-sera-sobre-as-consequencias-da-pandemia-18012022
+- titulo: Senado Instala CPI da Pandemia e inicia investigação sobre governo Bolsonaro
+  autores: Figueiredo, Argelina
+  veiculo: DW- Brasil
+  data: '2021-04-27'
+  tipo: virtual
+  url: https://www.dw.com/pt-br/senado-instala-cpi-da-pandemia-e-inicia-investiga%C3%A7%C3%A3o-sobre-governo-bolsonaro/a-57351689
+- titulo: Com medo de derrota, Bolsonaro evita apoio explícito em eleições municipais
+  autores: Botelho, Carolina
+  veiculo: BR Político/Estadão
+  data: '2020-09-21'
+  tipo: virtual
+  url: https://brpolitico.com.br/brp-fique-de-olho/relatorio-21-09/
+- titulo: Maia procura candidato que segure governo e fale com a oposição
+  autores: Botelho, Carolina
+  veiculo: BR Político
+  data: '2020-08-03'
+  tipo: virtual
+  url: https://brpolitico.com.br/brp-fique-de-olho/relatorio-semanal-3-de-agosto/
+- titulo: Por que Bolsonaro recuou e não demitiu Mandetta
+  autores: Botelho, Carolina
+  veiculo: Nexo
+  data: '2020-04-07'
+  tipo: virtual
+  url: https://www.nexojornal.com.br/ensaio/debate/2020/Por-que-Bolsonaro-recuou-e-n%C3%A3o-demitiu-Mandetta
+- titulo: Por uma comunidade cívica no Brasil
+  autores: Botelho, Carolina
+  veiculo: Le Monde Diplomatique Brasil
+  data: '2020-05-29'
+  tipo: virtual
+  url: https://diplomatique.org.br/por-uma-comunidade-civica-no-brasil/
+- titulo: Why Bolosonaro backtracked on firing Mandetta
+  autores: Botelho, Carolina
+  veiculo: Clas Berkeley
+  data: '2020-04-21'
+  tipo: virtual
+  url: https://clasberkeley.wordpress.com/2020/04/21/why-bolosonaro-backtracked-on-firing-mandetta/
+- titulo: Aproximação do governo com o Centrão atinge bolsonaristas ‘raiz
+  autores: Botelho, Carolina
+  veiculo: BR Político/Estadão
+  data: '2020-08-05'
+  tipo: virtual
+  url: https://brpolitico.com.br/noticias/aproximacao-do-governo-com-o-centrao-atinge-bolsonaristas-raiz/
+- titulo: A politização da pandemia
+  autores: Botelho, Carolina
+  veiculo: Coronavírus em Xeque
+  data: '2020-08-11'
+  tipo: virtual
+  url: https://sites.ufpe.br/rpf/2020/08/11/a-politizacao-da-pandemia/
+- titulo: Collectivism and populism in the era of antivax
+  autores: Botelho, Carolina; Boggio, Paulo
+  veiculo: Nature Research – Behavioural & Social Sciences
+  data: '2020-09-17'
+  tipo: virtual
+  url: https://go.nature.com/2RtC21t
+- titulo: Siga o líder?
+  autores: Botelho, Carolina
+  veiculo: Le Monde Diplomatique Brasil
+  data: '2020-05-04'
+  tipo: virtual
+  url: https://diplomatique.org.br/siga-o-lider/?fbclid=IwAR37J8zABKGKNGC-k8Ewvo3BGXU7UczzEF-I105K3ZQ2SMuYV_IoSZ1qf0w
+- titulo: Como bolsonaristas radicais são atingidos pela adesão do centrão
+  autores: Botelho, Carolina
+  veiculo: Nexo
+  data: '2020-07-27'
+  tipo: virtual
+  url: https://www.nexojornal.com.br/expresso/2020/07/27/Como-bolsonaristas-radicais-s%C3%A3o-atingidos-pela-ades%C3%A3o-do-centr%C3%A3o
+- titulo: Por que Bolsonaro vem sofrendo derrotas no Senado
+  autores: Botelho, Carolina
+  veiculo: Nexo
+  data: '2020-08-30'
+  tipo: virtual
+  url: https://www.nexojornal.com.br/expresso/2020/08/30/Por-que-Bolsonaro-vem-sofrendo-derrotas-no-Senado
+- titulo: Descrença nos políticos e pandemia devem aumentar abstenção nas eleições brasileiras, afirma
+    especialista
+  autores: Figueiredo, Argelina
+  veiculo: FRI/FRI convida
+  data: '2020-11-10'
+  tipo: virtual
+  url: https://www.rfi.fr/br/podcasts/rfi-convida/20201110-descren%C3%A7a-nos-pol%C3%ADticos-e-pandemia-devem-aumentar-absten%C3%A7%C3%A3o-nas-elei%C3%A7%C3%B5es-brasileiras-afirma-especialista
+- titulo: Democracia e Independência dos Poderes
+  autores: Figueiredo, Argelina
+  veiculo: 'TV Cultura-SP: Opinião Nacional'
+  data: '2020-03-11'
+  tipo: virtual
+  url: https://cultura.uol.com.br/programas/opiniao/videos/4997_opiniao-democracia-e-independencia-dos-poderes-11-03-2020.html
+- titulo: Eles são todos iguais?
+  autores: Coutinho, Cynthia
+  veiculo: VOTAAÍ!
+  data: '2020'
+  tipo: virtual
+  url: http://votaai.com.br/eles-sao-todos-iguais/
+- titulo: PROGRAMAS DE GOVERNO ENTRE A POLÍTICA E A CIÊNCIA POLÍTICA – UM DESABAFO
+  autores: Salles, Nara
+  veiculo: Horizontes ao sul
+  data: '2020-11-13'
+  tipo: virtual
+  url: https://www.horizontesaosul.com/single-post/2020/11/13/PROGRAMAS-DE-GOVERNO-ENTRE-A-POLITICA-E-A-CIENCIA-POLITICA-UM-DESABAFO
+- titulo: As propostas para a saúde e a pandemia como um fator contextual
+  autores: Silva, Carolini
+  veiculo: VOTAAÍ!
+  data: '2020'
+  tipo: virtual
+  url: http://votaai.com.br/as-propostas-para-a-saude-e-a-pandemia-como-um-fator-contextual/
+- titulo: 'Filiações partidárias no Brasil: mais do mesmo?'
+  autores: Botelho, Carolina
+  veiculo: Exame
+  data: '2018-04-19'
+  tipo: virtual
+  url: https://exame.abril.com.br/blog/opiniao/filiacoes-partidarias-no-brasil-mais-do-mesmo/
+- titulo: 'Reforma da Previdência: as lições de FHC e Lula'
+  autores: Botelho, Carolina
+  veiculo: Exame
+  data: '2017-11-23'
+  tipo: virtual
+  url: https://exame.com/economia/reforma-da-previdencia-as-licoes-de-fhc-e-lula/
+- titulo: Como a percepção da corrupção dificulta a adesão à reforma da Previdência
+  autores: Bozza, Flávia; Veiga, Luciana
+  veiculo: Na base dos dados
+  data: '2017-05-26'
+  tipo: virtual
+  url: http://blogs.oglobo.globo.com/na-base-dos-dados/post/como-percepcao-da-corrupcao-dificulta-adesao-reforma-da-previdencia.html
+- titulo: Dilma está vivendo o mesmo que FHC antes
+  autores: Argelina, Antonio
+  veiculo: Avol
+  data: '2015-03-15'
+  tipo: virtual
+  url: http://www.antonioviana.com.br/2009/site/ver_noticia.php?id=110318
+- titulo: Quem avança primeiro, Dilma ou os apoiadores do impeachment?
+  autores: Figueiredo, Argelina
+  veiculo: Central Gazeta de Notícias
+  data: '2015-02-09'
+  tipo: virtual
+  url: http://jornalggn.com.br/tag/blogs/argelina-figueiredo
+- titulo: A Ditadura interna do PMDB ou a Era Temer?
+  autores: Maciel, Natalia
+  veiculo: Escuta
+  data: '2015-05-04'
+  tipo: virtual
+  url: https://revistaescuta.wordpress.com/2016/05/04/escuta-especial-conjuntura-a-ditadura-interna-do-pmdb-ou-a-era-temer/
+- titulo: 'Documentário: Arquitetos do Poder'
+  autores: Coordenação geral Marcus Figueiredo
+  veiculo: Direção e roteiro Vicente Ferraz e Alessandra Aldé | Apoios Universidade Cândido Mendes, Universidade
+    Estadual do Rio de Janeiro (UERJ), Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro (FAPERJ),
+    Financiadora de Estudos e Projetos (FINEP) e Caesar Business | Produção Urca Filmes | Co-produção
+    Propeg soluções criativas, Vox populi, Instituto Universitário de Pesquisas do Rio de Janeiro (IUPERJ),
+    Estúdios Mega
+  data: '2010'
+  tipo: audiovisual
+- titulo: Democracia busca equilíbrio entre representação e governabilidade
+  autores: Argelina Figueiredo
+  veiculo: Canal UM BRASIL, entrevista a Humberto Dantas
+  data: '2022'
+  tipo: audiovisual
+- titulo: O Brasil votou, primeiro turno
+  autores: Argelina Figueiredo
+  veiculo: KAS – Brasil
+  data: '2022'
+  tipo: audiovisual
+- titulo: 'Caminhamos rumo ao impasse? #98'
+  autores: Argelina Figueiredo
+  veiculo: Fora da Política Não há Salvação, Entrevista a Cláudio Couto.
+  data: '2021'
+  tipo: audiovisual
+- titulo: 'A Ciência Política e as Crises Brasileiras: Instituições e Políticas'
+  autores: Argelina Figueiredo
+  veiculo: Conferência no 44º Congresso da Associação Nacional de Pós-graduação e Pesquisa em Ciências
+    Sociais (ANPOCS) .
+  data: '2020'
+  tipo: audiovisual
+- titulo: 'Bate-papo: 50 anos do golpe militar'
+  autores: Argelina Figueiredo
+  veiculo: Entrevista a João Vicente Goulart, Rede EBC.
+  data: '2014'
+  tipo: audiovisual

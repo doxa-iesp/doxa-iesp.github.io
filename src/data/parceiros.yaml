@@ -1,0 +1,19 @@
+# Gerado por scripts/converter-conteudo.py a partir de extracao/dados/.
+# Pode ser editado à mão: o build valida o schema (src/content.config.ts).
+
+- nome: CAPES
+  arquivo: /img/parceiros/capes.png
+- nome: IBOPE
+  arquivo: /img/parceiros/ibope.png
+- nome: CNPQ
+  arquivo: /img/parceiros/cnpq.png
+- nome: IESP-UERJ
+  arquivo: /img/parceiros/iesp-uerj.png
+- nome: FAPERJ
+  arquivo: /img/parceiros/faperj.png
+- nome: VOX
+  arquivo: /img/parceiros/vox.png
+- nome: FINEP
+  arquivo: /img/parceiros/finep.png
+- nome: UERJ
+  arquivo: /img/parceiros/uerj.png

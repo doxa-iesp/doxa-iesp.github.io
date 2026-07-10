@@ -1,0 +1,173 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+
+const pagina = (await getEntry('paginas', 'mapas-de-votacao'))!;
+const { Content } = await render(pagina);
+
+const mapas = await getCollection('mapas');
+
+// Ordem dos cargos: majoritários primeiro, depois proporcionais. Desconhecidos vão ao fim.
+const ORDEM_CARGOS = ['Presidente', 'Governador', 'Senador', 'Deputado Federal', 'Deputado Estadual'];
+function pesoCargo(cargo: string | undefined): number {
+  const i = ORDEM_CARGOS.indexOf(cargo ?? '');
+  return i === -1 ? ORDEM_CARGOS.length : i;
+}
+
+// Agrupa por ano (decrescente) e, dentro, por cargo.
+const porAno = new Map<number, Map<string, typeof mapas>>();
+const SEM_ANO = -1;
+for (const mapa of mapas) {
+  const ano = mapa.data.ano ?? SEM_ANO;
+  const cargo = mapa.data.cargo ?? 'Outros';
+  if (!porAno.has(ano)) porAno.set(ano, new Map());
+  const grupoCargos = porAno.get(ano)!;
+  if (!grupoCargos.has(cargo)) grupoCargos.set(cargo, []);
+  grupoCargos.get(cargo)!.push(mapa);
+}
+
+const anosOrdenados = [...porAno.keys()].sort((a, b) => b - a);
+
+// Para cada ano, cargos ordenados e mapas ordenados por título dentro do cargo.
+const grupos = anosOrdenados.map((ano) => {
+  const cargos = [...porAno.get(ano)!.entries()]
+    .sort((a, b) => pesoCargo(a[0]) - pesoCargo(b[0]) || a[0].localeCompare(b[0]))
+    .map(([cargo, lista]) => ({
+      cargo,
+      lista: [...lista].sort((a, b) => a.data.titulo.localeCompare(b.data.titulo, 'pt-BR')),
+    }));
+  const total = cargos.reduce((n, c) => n + c.lista.length, 0);
+  return { ano, cargos, total };
+});
+---
+
+<Base titulo="Mapas de Votação" descricao={pagina.data.descricao}>
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.subtitulo} />
+
+  <section class="secao">
+    <div class="container">
+      <div class="prosa"><Content /></div>
+
+      <div class="mapas">
+        {
+          grupos.map((grupo, i) => (
+            <details class="mapas-ano" open={i === 0}>
+              <summary class="mapas-ano__cabecalho">
+                <span class="mapas-ano__ano">{grupo.ano === -1 ? 'Sem ano' : grupo.ano}</span>
+                <span class="mapas-ano__contagem">
+                  {grupo.total} {grupo.total === 1 ? 'mapa' : 'mapas'}
+                </span>
+              </summary>
+
+              {grupo.cargos.map(({ cargo, lista }) => (
+                <div class="mapas-cargo">
+                  <h3 class="mapas-cargo__titulo">{cargo}</h3>
+                  <ul class="mapas-cargo__lista">
+                    {lista.map((mapa) => {
+                      const rotulo = mapa.data.titulo === cargo ? 'Ver mapa' : mapa.data.titulo;
+                      return (
+                        <li>
+                          <a href={mapa.data.url} target="_blank" rel="noopener noreferrer">
+                            {rotulo}
+                            <span aria-hidden="true"> (PDF ↗)</span>
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prosa {
+    max-width: 72ch;
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+  }
+
+  .mapas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-2);
+    margin-top: var(--esp-3);
+  }
+
+  .mapas-ano {
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-g);
+    background: var(--cor-branco);
+    overflow: hidden;
+  }
+  .mapas-ano[open] {
+    box-shadow: var(--sombra-sm);
+  }
+
+  .mapas-ano__cabecalho {
+    display: flex;
+    align-items: baseline;
+    gap: var(--esp-2);
+    padding: var(--esp-2) var(--esp-3);
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--cor-primaria-escura);
+    list-style: none;
+  }
+  .mapas-ano__cabecalho::-webkit-details-marker {
+    display: none;
+  }
+  .mapas-ano__cabecalho::before {
+    content: '▸';
+    color: var(--cor-destaque);
+    transition: transform var(--transicao);
+  }
+  .mapas-ano[open] .mapas-ano__cabecalho::before {
+    transform: rotate(90deg);
+  }
+  .mapas-ano__ano {
+    font-size: 1.25rem;
+  }
+  .mapas-ano__contagem {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--cor-texto-suave);
+  }
+
+  .mapas-cargo {
+    padding: 0 var(--esp-3) var(--esp-2);
+    border-top: 1px solid var(--cor-fundo-alt);
+  }
+  .mapas-cargo__titulo {
+    font-size: 0.95rem;
+    color: var(--cor-primaria);
+    margin: var(--esp-2) 0 var(--esp-1);
+  }
+  .mapas-cargo__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.35rem var(--esp-2);
+  }
+  .mapas-cargo__lista a {
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  .mapas-cargo__lista a:hover {
+    text-decoration: underline;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mapas-ano__cabecalho::before {
+      transition: none;
+    }
+  }
+</style>

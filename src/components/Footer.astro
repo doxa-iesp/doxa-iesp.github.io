@@ -1,0 +1,97 @@
+---
+import { getEntry } from 'astro:content';
+import { url } from '../lib/url';
+
+const geral = (await getEntry('configuracao', 'geral'))!.data;
+const ano = new Date().getFullYear();
+---
+
+<footer class="rodape">
+  <div class="container rodape__inner">
+    <div>
+      <img src={url('/img/logo-doxa.svg')} alt="DOXA" width="120" height="37" class="rodape__logo" />
+      <p class="rodape__nome">
+        DOXA — Laboratório de Estudos Eleitorais, de Comunicação Política e Opinião Pública
+      </p>
+    </div>
+
+    <address class="rodape__contato">
+      <p>Instituto de Estudos Sociais e Políticos — UERJ</p>
+      <p>{geral.endereco}</p>
+      <p>CEP: {geral.cep}</p>
+      <p><a href={`mailto:${geral.email}`}>{geral.email}</a></p>
+    </address>
+
+    <div class="rodape__redes">
+      {
+        geral.youtube && (
+          <a href={geral.youtube} target="_blank" rel="noopener noreferrer" aria-label="Canal do DOXA no YouTube">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z" />
+            </svg>
+          </a>
+        )
+      }
+    </div>
+  </div>
+
+  <div class="rodape__base">
+    <div class="container">
+      <p>© {ano} DOXA / IESP-UERJ. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .rodape {
+    background: var(--cor-primaria-escura);
+    color: var(--cor-branco);
+    margin-top: var(--esp-5);
+  }
+  .rodape__inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr auto;
+    gap: var(--esp-4);
+    padding-block: var(--esp-4);
+    align-items: start;
+  }
+  .rodape__logo {
+    filter: brightness(0) invert(1);
+    margin-bottom: var(--esp-2);
+  }
+  .rodape__nome {
+    font-size: 0.85rem;
+    margin: 0;
+    opacity: 0.85;
+  }
+  .rodape__contato {
+    font-style: normal;
+    font-size: 0.85rem;
+  }
+  .rodape__contato p {
+    margin: 0 0 0.25rem;
+    opacity: 0.9;
+  }
+  .rodape a {
+    color: var(--cor-branco);
+  }
+  .rodape a:hover {
+    color: var(--cor-destaque);
+  }
+  .rodape__base {
+    border-top: 1px solid rgb(255 255 255 / 15%);
+    font-size: 0.78rem;
+    opacity: 0.75;
+  }
+  .rodape__base p {
+    margin: 0;
+    padding-block: var(--esp-2);
+  }
+
+  @media (max-width: 800px) {
+    .rodape__inner {
+      grid-template-columns: 1fr;
+      gap: var(--esp-3);
+    }
+  }
+</style>

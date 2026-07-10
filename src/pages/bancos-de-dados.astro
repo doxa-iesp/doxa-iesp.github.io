@@ -1,0 +1,156 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { url } from '../lib/url';
+
+const pagina = (await getEntry('paginas', 'bancos-de-dados'))!;
+const { Content } = await render(pagina);
+
+const bancos = await getCollection('bancos-de-dados');
+
+const formatador = new Intl.NumberFormat('pt-BR');
+---
+
+<Base titulo="Bancos de Dados" descricao={pagina.data.descricao}>
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.subtitulo} />
+
+  <section class="secao">
+    <div class="container">
+      <div class="prosa"><Content /></div>
+
+      <ul class="bancos">
+        {
+          bancos.map((banco) => (
+            <li class="banco">
+              <h2 class="banco__nome">{banco.data.nome}</h2>
+              <p class="banco__descricao">{banco.data.descricao}</p>
+
+              {banco.data.aviso && (
+                <p class="banco__aviso" role="note">
+                  <strong>Atenção:</strong> {banco.data.aviso}
+                </p>
+              )}
+
+              <dl class="banco__meta">
+                {banco.data.cobertura && (
+                  <div>
+                    <dt>Cobertura</dt>
+                    <dd>{banco.data.cobertura}</dd>
+                  </div>
+                )}
+                {banco.data.registros !== undefined && (
+                  <div>
+                    <dt>Registros</dt>
+                    <dd>{formatador.format(banco.data.registros)}</dd>
+                  </div>
+                )}
+              </dl>
+
+              <div class="banco__acoes">
+                {banco.data.pagina && (
+                  <a class="btn btn-primario" href={url(banco.data.pagina)}>
+                    Ver no site
+                  </a>
+                )}
+                {banco.data.download && (
+                  <a class="btn btn-contorno" href={url(banco.data.download)} download>
+                    Baixar os dados (CSV)
+                  </a>
+                )}
+                {/* A página original vive no WordPress antigo e some quando ele for desligado.
+                    Por isso ela é um link secundário, não o botão principal. */}
+                {banco.data.url && (
+                  <a
+                    class="banco__fonte"
+                    href={banco.data.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Página original <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prosa {
+    max-width: 72ch;
+  }
+
+  .bancos {
+    list-style: none;
+    padding: 0;
+    margin: var(--esp-3) 0 0;
+    display: grid;
+    gap: var(--esp-3);
+  }
+
+  .banco {
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-top: 3px solid var(--cor-primaria);
+    border-radius: var(--raio-g);
+    padding: var(--esp-3);
+    box-shadow: var(--sombra-sm);
+  }
+  .banco__nome {
+    font-size: 1.2rem;
+    margin-bottom: var(--esp-1);
+  }
+  .banco__descricao {
+    margin: 0 0 var(--esp-2);
+    color: var(--cor-texto-suave);
+  }
+
+  /* Defeito conhecido da fonte (coluna de município rotacionada): alerta visível. */
+  .banco__aviso {
+    background: color-mix(in srgb, var(--cor-destaque) 14%, white);
+    border: 1px solid color-mix(in srgb, var(--cor-destaque) 45%, white);
+    border-left: 4px solid var(--cor-destaque);
+    border-radius: var(--raio);
+    padding: var(--esp-2);
+    margin: 0 0 var(--esp-2);
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+  }
+  .banco__aviso strong {
+    color: var(--cor-destaque);
+  }
+
+  .banco__meta {
+    margin: 0 0 var(--esp-3);
+    display: grid;
+    gap: var(--esp-2);
+  }
+  .banco__meta dt {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+    margin-bottom: 0.15rem;
+  }
+  .banco__meta dd {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+
+  .banco__acoes {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--esp-2);
+  }
+  .banco__fonte {
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
+  }
+</style>

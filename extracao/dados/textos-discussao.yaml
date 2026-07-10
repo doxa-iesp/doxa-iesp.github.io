@@ -1,0 +1,18 @@
+# Textos para Discussão (Working Papers)
+# Campos: title, authors, year, url, abstract (quando existe)
+# Fonte: rendered/page__textos-para-discussao-2.html (listagem)
+#        rendered/post__novo-texto-para-discussao-...html (abstract do TD 2)
+
+- title: "As políticas de controle de armas de fogo e munições no Brasil"
+  authors: "Matteo de Barros Manes"
+  year: 2024
+  url: "https://www.lab-doxa.org.br/wp-content/uploads/2026/03/DOXA-Politicas-de-controle-de-armas-de-fogo-e-municao-no-Brasil-Matteo-Manes.pdf"
+  abstract: |-
+    O objetivo da desta pesquisa é realizar uma análise exploratória dos dados relacionados a proposições legislativas que abrangem a temática de controle de armas e munições no Brasil, com a intenção de identificar os principais proponentes dessas políticas. Busca-se entender qual o papel do Legislativo neste processo: quantas foram as proposições de sua autoria, quantas foram aprovadas, e sua tendência à flexibilização ou restrição do acesso às armas de fogo. Ao todo, são consideradas 832 proposições entre 2003 e 2023.
+
+    Demonstra-se que o Legislativo perdeu relevância no processo de formulação dessas políticas após a aprovação do Estatuto do Desarmamento, e a contradição desta afirmação com a força percebida da bancada temática de segurança pública neste tema. Por fim, é realizada uma breve revisão das mudanças promovidas nas políticas de controle de armas e munições pelos presidentes Bolsonaro e Lula entre 2019 e 2023, com a predominância dos decretos presidenciais, que se apresentam como novo instrumento de preferência dos presidentes para modificar essas políticas.
+
+- title: "Tempo é dinheiro: recursos partidários em eleições para a Câmara Federal"
+  authors: "Bruno Marques Schaefer"
+  year: 2023
+  url: "https://www.lab-doxa.org.br/wp-content/uploads/2023/06/Schaefer-B.-2023.-TD-Tempo-e-dinheiro.pdf"

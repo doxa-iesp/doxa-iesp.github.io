@@ -1,0 +1,138 @@
+# Pesquisa COVID do DOXA - extraído de rendered/page__pesquisa-covid.html
+# Campos de download: title, date, format, url
+#   date = mês de upload no WordPress (AAAA-MM), derivado do caminho /uploads/AAAA/MM/;
+#   a página NÃO traz data de publicação explícita dos arquivos.
+# Total de arquivos: 12 PDFs + 4 planilhas (xlsx) = 16 downloads.
+
+projeto:
+  titulo: 'COVID no Estado do Rio de Janeiro: Monitoramento e Efeitos'
+  titulo_projeto: Monitoramento e previsão de impacto das medidas de enfrentamento da epidemia no Estado do Rio de Janeiro
+  objetivo: O projeto tem como objetivo geral monitorar e analisar as medidas de combate à Covid no Estado do Rio de Janeiro e avaliar as respostas da população e seus efeitos socioeconômico e políticos. Para tanto, analisa a atuação dos prefeitos no enfrentamento da Covid no Estado, principalmente as medidas de restrição e flexibilização da quarentena tomadas, seus efeitos em grupos mais vulneráveis. O projeto inclui uma ampla pesquisa da bibliografia publicada no exterior e no Brasil segundo temas selecionados.
+  financiamento: FAPERJ, AÇÃO EMERGENCIAL COVID-19/SARS-CoV-2 FAPERJ/SES
+  url: https://www.lab-doxa.org.br/pesquisa-covid/
+equipe:
+- nome: Argelina Maria Cheibub Figueiredo
+  instituicao: IESP-UERJ
+  papel: Coordenadora
+- nome: Fernando Guarnieri
+  instituicao: IESP-UERJ
+  papel: Co-coordenador
+- nome: Adalberto Cardoso
+  instituicao: IESP-UERJ
+- nome: Fabiano Santos
+  instituicao: IESP-UERJ
+- nome: João Feres Junior
+  instituicao: IESP-UERJ
+- nome: Hellen Guicheney
+  instituicao: DOXA-IESP
+- nome: Rodolfo Scotelaro Porto Darrieux
+  instituicao: DOXA-IESP
+parcerias:
+- nome: FAPERJ
+  papel: Financiamento
+  fonte: 'financiamento: ''FAPERJ, AÇÃO EMERGENCIAL COVID-19/SARS-CoV-2 FAPERJ/SES'''
+- nome: SES
+  papel: Co-financiamento
+  fonte: citado como 'FAPERJ/SES' no texto (sigla SES não é expandida na página)
+- nome: Netquest
+  papel: 'Empresa de pesquisas: seleção da amostra e aplicação dos surveys'
+  fonte: 'Subprojeto 02: ''A amostra foi selecionada pela empresa de pesquisas Netquest'''
+- nome: IESP-UERJ
+  papel: Instituição-sede (afiliação de toda a equipe)
+  fonte: campo Equipe (todos os membros são IESP-UERJ ou DOXA-IESP)
+subprojetos:
+- numero: '01'
+  titulo: Ação Legislativa dos Prefeitos do estado do Rio de Janeiro
+  componentes:
+  - Tabela 1. Decretos Municipais por Tema Estado do Rio de Janeiro – março a dezembro 2020
+  - Tabela 2. Distribuição de Decretos-Covid por Tema e Região Estado do Rio de Janeiro – março a dezembro de 2020
+  downloads:
+  - title: Lista de buscadores legislativos
+    date: 2022-10
+    format: xlsx
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/DOWNLOAD-1_LISTA-DE-BUSCADORES_DECRETOS.xlsx
+  - title: Banco de dados - Decretos COVID RJ
+    date: 2022-10
+    format: xlsx
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/DOWNLOAD-2_-BANCO-DE-DADOS_DECRETOS-COVID_RJ_3006.xlsx
+  - title: Distribuição de decretos por tema e município
+    date: 2022-10
+    format: pdf
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/DOWNLOAD-3_DISTRIBUICAO-DOS-DECRETOS-POR-TEMA-E-MUNICIPIOS.pdf
+  - title: Distribuição e média mensal de decretos de restrição flexibilização por município
+    date: 2022-10
+    format: pdf
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/DOWNLOAD-4_DISTRIBUICAO-E-MEDIA-MENSAL-DE-DECRETOS-DE-RESTRICAO-E-FLEXIBIZACAO-POR-MUNICIPIO.pdf
+  - title: Distribuição de decretos por tema e partido no governo
+    date: 2022-10
+    format: pdf
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/DOWNLOAD-5_-DISTRIBUICAO-DOS-DECRETOS-POR-TEMA-E-PARTIDO-NO-GOVERNO.pdf
+- numero: '02'
+  titulo: Opiniões e comportamento da população às medidas de enfrentamento da Covid e seus impactos nos grupos mais vulneráveis
+  componentes:
+  - 'Realização de dois surveys com a população do estado, considerando três regiões: Cidade do Rio de Janeiro, Região Metropolitana sem a capital e o Interior.'
+  - 'Análise do impacto da pandemia no mercado de trabalho do Estado do Rio de Janeiro, comparando-o com o do Brasil. O Estado do Rio de Janeiro está dividido em três regiões: a capital, a região metropolitana sem a capital e o restante do Estado.'
+  - Análise do impacto da epidemia nos resultados das eleições municipais de 2020.
+  downloads:
+  - title: Análise dos surveys
+    date: 2022-10
+    format: pdf
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/SURVEY_OPINIOES-COMPORTAMENTO-1.pdf
+  - title: Banco de Dados - Survey 1
+    date: 2022-10
+    format: xlsx
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/DADOS_SURVEY_IESPBR_227821_20211208.xlsx
+  - title: Banco de Dados - Survey 2
+    date: 2022-10
+    format: xlsx
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/DADOS_SURVEY_IESPBR_208324-Wed-Dec-16-2020_total.xlsx
+  - title: 'Análise do impacto da pandemia no mercado de trabalho do Estado do Rio de Janeiro, comparando-o com o do Brasil. O Estado do Rio de Janeiro está dividido em três regiões: a capital, a região metropolitana sem a capital e o restante do Estado.'
+    date: 2022-10
+    format: pdf
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/Pandemia-e-mercado-de-trabalho-no-Rio-de-Janeiro.pdf
+- numero: '03'
+  titulo: Levantamento bibliográfico de publicações brasileiras e do exterior – 2020 início de 2022
+  componentes:
+  - Introdução
+  - 'Listagem dos textos organizada de acordo com os seguintes temas:'
+  - Listagem dos textos de acordo com a citação ao Brasil
+  - Listagem dos títulos contendo links para os Abstracts das publicações selecionadas
+  downloads:
+  - title: Introdução
+    date: 2022-10
+    format: pdf
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/3.1.-BIBLIO_-Introducao_v2.pdf
+  - title: 'Listagem dos textos organizada de acordo com os seguintes temas:'
+    date: 2022-10
+    format: pdf
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/3.2.BIBLIO_LISTAGEM-POR-TEMA.pdf
+  - title: Listagem dos textos de acordo com a citação ao Brasil
+    date: 2022-10
+    format: pdf
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/3.3.BIBLIO_LISTAGEM-POR-CITACAO-BRASIL.pdf
+  - title: Listagem dos títulos contendo links para os Abstracts das publicações selecionadas
+    date: 2022-10
+    format: pdf
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2022/10/3.4.-BIBLIO_LINKS-ABSTRACTS-POR-TEMA.pdf
+- numero: '04'
+  titulo: 'Trabalho e Pandemia no Estado do Rio de Janeiro: entre a Vulnerabilidade e a Flexibilidade'
+  componentes:
+  - Introdução
+  downloads:
+  - title: Introdução
+    date: 2023-08
+    format: pdf
+    url: https://www.lab-doxa.org.br/wp-content/uploads/2023/08/Pandemia-e-Mercado-de-Trabalho.pdf
+publicacoes:
+- title: O impacto da Covid-19 no comportamento eleitoral do fluminense nas eleições de 2020
+  authors: Guarnieri, F.; Figueiredo, A.
+  year: 2022
+  in: Felipe Borba e Argelina Figueiredo (orgs), As eleições municipais de 2020 no Estado do Rio de Janeiro
+  publisher: Editora da UERJ, 2022
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/11/GUARNIERI-FIGUEIREDO.pdf
+- title: Vulnerabilidades sociais, modelos de provisão de saúde e suas relações com a mortalidade decorrente da pandemia de Covid-19 no Brasil e nos Estados Unidos
+  authors: Figueiredo, A.; Guichney, H.; Lazzari, L.
+  year: 2022
+  in: Fernando Fontainha e Carlos Milani (orgs), COVID-19 e agendas de pesquisa nas ciências sociais
+  publisher: Editora da UERJ – no prelo
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/11/Figueiredo_Guicheney_Lazzari_REVISTO_ed.pdf

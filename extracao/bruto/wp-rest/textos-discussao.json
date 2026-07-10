@@ -1,0 +1,132 @@
+[
+ {
+  "id": 3015,
+  "date": "2024-06-19T11:37:23",
+  "date_gmt": "2024-06-19T14:37:23",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=textos-discussao&#038;p=3015"
+  },
+  "modified": "2026-03-23T11:55:50",
+  "modified_gmt": "2026-03-23T14:55:50",
+  "slug": "as-politicas-de-controle-de-armas-de-fogo-e-municoes-no-brasil",
+  "status": "publish",
+  "type": "textos-discussao",
+  "link": "https://www.lab-doxa.org.br/textos-discussao/as-politicas-de-controle-de-armas-de-fogo-e-municoes-no-brasil/",
+  "title": {
+   "rendered": "As políticas de controle de armas de fogo e munições no Brasil"
+  },
+  "featured_media": 0,
+  "parent": 0,
+  "template": "",
+  "format": "standard",
+  "meta": [],
+  "class_list": [
+   "post-3015",
+   "textos-discussao",
+   "type-textos-discussao",
+   "status-publish",
+   "format-standard",
+   "hentry"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/textos-discussao/3015",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/textos-discussao"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/textos-discussao"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=3015"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2776,
+  "date": "2023-06-27T15:31:06",
+  "date_gmt": "2023-06-27T18:31:06",
+  "guid": {
+   "rendered": "https://www.lab-doxa.org.br/?post_type=textos-discussao&#038;p=2776"
+  },
+  "modified": "2026-03-23T11:26:36",
+  "modified_gmt": "2026-03-23T14:26:36",
+  "slug": "tempo-e-dinheiro-recursos-partidarios-em-eleicoes-para-a-camara-federal",
+  "status": "publish",
+  "type": "textos-discussao",
+  "link": "https://www.lab-doxa.org.br/textos-discussao/tempo-e-dinheiro-recursos-partidarios-em-eleicoes-para-a-camara-federal/",
+  "title": {
+   "rendered": "Tempo é dinheiro: recursos partidários em eleições para a Câmara Federal"
+  },
+  "featured_media": 0,
+  "parent": 0,
+  "template": "",
+  "format": "standard",
+  "meta": [],
+  "class_list": [
+   "post-2776",
+   "textos-discussao",
+   "type-textos-discussao",
+   "status-publish",
+   "format-standard",
+   "hentry"
+  ],
+  "acf": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/textos-discussao/2776",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/textos-discussao"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/types/textos-discussao"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.lab-doxa.org.br/wp-json/wp/v2/media?parent=2776"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

@@ -1,0 +1,67 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ItemPublicacao from '../../components/ItemPublicacao.astro';
+import { url } from '../../lib/url';
+
+const pagina = (await getEntry('paginas', 'textos-para-discussao'))!;
+const { Content } = await render(pagina);
+
+const textos = (await getCollection('textos-discussao')).sort(
+  (a, b) => b.data.ano - a.data.ano,
+);
+---
+
+<Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.descricao} />
+
+  <section class="secao">
+    <div class="container">
+      <p class="voltar"><a href={url('/publicacoes/')}>← Todas as publicações</a></p>
+
+      <div class="prosa prosa--intro"><Content /></div>
+
+      <ul class="lista">
+        {
+          textos.map((t) => (
+            <ItemPublicacao
+              titulo={t.data.titulo}
+              autores={t.data.autores}
+              ano={t.data.ano}
+              resumo={t.data.resumo}
+              downloads={t.data.url ? [{ rotulo: 'Baixar PDF', url: t.data.url }] : []}
+            />
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .voltar {
+    margin: 0 0 var(--esp-3);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .voltar a {
+    text-decoration: none;
+  }
+  .voltar a:hover {
+    text-decoration: underline;
+  }
+  .prosa {
+    max-width: 68ch;
+    color: var(--cor-texto-suave);
+    margin-bottom: var(--esp-4);
+  }
+  .prosa--intro > :global(:is(h1, h2):first-child) {
+    display: none;
+  }
+  .lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>

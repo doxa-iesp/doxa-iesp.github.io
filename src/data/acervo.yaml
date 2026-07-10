@@ -1,0 +1,3313 @@
+# Gerado por scripts/converter-conteudo.py a partir de extracao/dados/.
+# Pode ser editado à mão: o build valida o schema (src/content.config.ts).
+
+- codigo: 001/89A
+  data: 01/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lívia Maria
+  - Lula
+  - Manoel Horta
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDCdoB
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/17kTHtSCw7iWqR3GiuGXdvLo9NvAjGFYt/view?usp=sharing
+- codigo: 002/89A
+  data: 17/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lívia Maria
+  - Lula
+  - Manoel Horta
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDCdoB
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1c4apKnrXhAFOozxsxSXeltQxUcWMJaKB/view?usp=sharing
+- codigo: 002/89B
+  data: 18/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lívia Maria
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/12nelLLn8svK3PwS-TaAytr0ahfkUO0EQ/view?usp=sharing
+- codigo: 003/89A
+  data: 19/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lívia Maria
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PMB
+  - PMDB
+  - PMN
+  - PN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1XaywL9t9t4yk8H5UQcV-C_fx0qkj4hCv/view?usp=sharing
+- codigo: 003/89B
+  data: 20/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lívia Maria
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1LlnQie9WppuMXcIWzTY5GORI9699Ibe9/view?usp=sharing
+- codigo: 003/89C
+  data: 21/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lívia Maria
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1H5GJsf8GLdVUW23QATEqMay6IhSDWGbv/view?usp=sharing
+- codigo: 004/89A
+  data: 22/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1IZcvLcSEpw06arqBDVlpbmyzTq8H8fYW/view?usp=sharing
+- codigo: 004/89B
+  data: 23/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/14i0No2_K37Qnwt3wF9q5d5XrPOZy8mw4/view?usp=sharing
+- codigo: 004/89C
+  data: 24/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1M-LbnrR770intiVYmhTc11qNTesG4XbD/view?usp=sharing
+- codigo: 005/89B
+  data: 25/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - Lívia Maria
+  - Lula
+  - Manoel Horta
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  partidos:
+  - PCB
+  - PDCdoB
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1Zd8Lzzm84iAncfLy10rvKhEBghpXIxky/view?usp=sharing
+- codigo: 005/89C
+  data: 26/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - Lívia Maria
+  - Lula
+  - Manoel Horta
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  partidos:
+  - PCB
+  - PDCdoB
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1PsSby01cRBSrN_rGrk_OpUfCJW2lQjAX/view?usp=sharing
+- codigo: 007/89A
+  data: 27/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/19QCkhck2TL4HrUbyCKOXbyKnK8Ef-jvj/view?usp=sharing
+- codigo: 007/89B
+  data: 28/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ulysses Guimaraes
+  partidos:
+  - PCB
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1zI05e2GvtBTSbVBx-2aTha69nEj1BKYr/view?usp=sharing
+- codigo: 007/89C
+  data: 29/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1LxCkuT0dPO1rdRzZ6EQ7hx2wVyfJZFH_/view?usp=sharing
+- codigo: 008/89B
+  data: 30/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PP
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1QofpN3yQ3tPs7WZKGaYmLy7Mp9xbUcqQ/view?usp=sharing
+- codigo: 008/89C
+  data: 01/11/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Guilherme Afif
+  - José Marronzinho
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  url: https://drive.google.com/file/d/1HFT9u2c-XryWfWgtXf2meVWaQmoluU9z/view?usp=sharing
+- codigo: 009/89A
+  data: 02/11/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1lgc5-fvmrlrhA-6KTr2yC6SG1FcnVodS/view?usp=sharing
+- codigo: 009/89B
+  data: 02/11/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1A93dfx3K3LhndJDbj4PbdnZOI8-v4HXm/view?usp=sharing
+- codigo: 009/89C
+  data: 03/11/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - José Marronzinho
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PSP
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1iyvmdiPx6Ek1k9yTfYBJAaYjLSS-F2Qd/view?usp=sharing
+- codigo: 010/89B
+  data: 04/11/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - Lula
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  - Zamir
+  partidos:
+  - PCB
+  - PCN
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PP
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/13VEwinkDbAN35tfFTBYjRi76uAFIc7Cz/view?usp=sharing
+- codigo: 010/89C
+  data: 05/11/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Antonio Pedreira
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - Lula
+  - Mário Covas
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  partidos:
+  - PCB
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMDB
+  - PMN
+  - PPB
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1kEWsMX4nAIfubIWPzCD2k6vOiVJ7HS_q/view?usp=sharing
+- codigo: 011/89A
+  data: 06/11/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - Lívia Maria
+  - Lula
+  - Manoel Horta
+  - Mário Covas
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Silvio Santos
+  - Ulysses Guimaraes
+  partidos:
+  - PCB
+  - PDCdoB
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PN
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1SU2Z1rtgk342WJFQ03yYiRhbLkorxW9K/view?usp=sharing
+- codigo: 011/89B
+  data: 07/11/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - Lívia Maria
+  - Lula
+  - Manoel Horta
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Silvio Santos
+  - Ulysses Guimaraes
+  partidos:
+  - PCB
+  - PDCdoB
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PN
+  - PP
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/169AXdILJ2Sc9P9CcVicy47A0IYwGgehb/view?usp=sharing
+- codigo: 016/89
+  data: 09/11/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Affonso Camargo
+  - Aureliano Chaves
+  - Brizola
+  - Celso Brant
+  - Collor
+  - Corrêa
+  - Enéas
+  - Eudes Mattar
+  - Gabeira
+  - Guilherme Afif
+  - Lívia Maria
+  - Lula
+  - Manoel Horta
+  - Mário Covas
+  - Paulo Gontijo
+  - Paulo Maluf
+  - Roberto Freire
+  - Ronaldo Caiado
+  - Ulysses Guimaraes
+  partidos:
+  - PCB
+  - PCN
+  - PDCdoB
+  - PDS
+  - PDT
+  - PFL
+  - PL
+  - PLP
+  - PMB
+  - PMDB
+  - PMN
+  - PN
+  - PP
+  - PRN
+  - PRONA
+  - PSD
+  - PSDB
+  - PT
+  - PTB
+  - PV
+  url: https://drive.google.com/file/d/1PDxwq4zw3dSe4HHFo_DjFB3qrzSdi6AW/view?usp=sharing
+- codigo: 017/89A
+  data: 10/11/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Collor
+  - Lula
+  partidos:
+  - PRN
+  - PT
+  url: https://drive.google.com/file/d/1j35BzR2SSJjh5FSgSV1Al9p-U2Iat2TR/view?usp=sharing
+- codigo: 017/89B
+  data: 11/11/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Collor
+  - Lula
+  partidos:
+  - PRN
+  - PT
+  url: https://drive.google.com/file/d/1OSTRIdWyWIJnNeVjgVWiJVQqxvKQW34g/view?usp=sharing
+- codigo: 017/89C
+  data: 12/11/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Collor
+  - Lula
+  partidos:
+  - PRN
+  - PT
+  url: https://drive.google.com/file/d/1lRTaOV23ZHtzfe86-n6HqD78w0OZPfCc/view?usp=sharing
+- codigo: 1-1-89dvdi
+  data: 05/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Collor
+  partidos:
+  - PRN
+  url: https://drive.google.com/file/d/1uU7FU4TjIlQeweLxriCpVtQx0NfYxOnv/view?usp=sharing
+- codigo: 1-1-89dvdii
+  data: 04/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Collor
+  partidos:
+  - PRN
+  url: https://drive.google.com/file/d/1xgSp9ZpBKKVi9BF9DRlfC1R1P7qkzJJl/view?usp=sharing
+- codigo: 1-1-89dvdiii
+  data: 03/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Collor
+  - Lula
+  partidos:
+  - PRN
+  - PT
+  url: https://drive.google.com/file/d/1GVvT7xMX9lFpVXAWwNk2Pn7eDWT40Pn-/view?usp=sharing
+- codigo: 1-1-89dvdiv
+  data: 02/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Collor
+  - Lula
+  partidos:
+  - PRN
+  - PT
+  url: https://drive.google.com/file/d/1ud2LsOlZ-4HqPIfjtQP-fAlB5Q93gS9m/view?usp=sharing
+- codigo: 1-2-89dvdiii
+  data: 11/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Lula
+  partidos:
+  - PT
+  url: https://drive.google.com/file/d/1z4rb9ANByscx4-w5aT8h_cpkpyHmQiq_/view?usp=sharing
+- codigo: 1-2-89dvdiv
+  data: 10/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Lula
+  partidos:
+  - PT
+  url: https://drive.google.com/file/d/1c5aQI28tAlWjyMDuE1fe6FO4cZwp16G2/view?usp=sharing
+- codigo: 1-4-89dvdii
+  data: 12/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brizola
+  partidos:
+  - PDT
+  url: https://drive.google.com/file/d/1K4Vhf9g-Uk9ROkbXv-aY4mwHiLMqOn87/view?usp=sharing
+- codigo: 1-9-89dvdi
+  data: 13/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Ulysses Guimaraes
+  partidos:
+  - PMDB
+  url: https://drive.google.com/file/d/1Cwu1NR1kqktXlafsICKRSbb8xhlnWZbV/view?usp=sharing
+- codigo: 1-9-89dvdii
+  data: 14/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Ulysses Guimaraes
+  partidos:
+  - PMDB
+  url: https://drive.google.com/file/d/1E2lsumBwwHIGU31WNQMZBzIOTE24Zuu5/view?usp=sharing
+- codigo: 1-9-89dvdiii
+  data: 15/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Ulysses Guimaraes
+  partidos:
+  - PMDB
+  url: https://drive.google.com/file/d/1dhdxQTc5ZAAg7pCQIbYcCpI5P-lcpu-q/view?usp=sharing
+- codigo: 1-9-89dvdiv
+  data: 16/10/1989
+  ano: 1989
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Ulysses Guimaraes
+  partidos:
+  - PMDB
+  url: https://drive.google.com/file/d/1k1nrq7oA2ZDLRapL8tlpxb2DFx0oWU3L/view?usp=sharing
+- codigo: 001-94b
+  data: 12/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PL
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PRP
+  - PSC
+  - PSDB
+  - PT
+  - PTC
+  url: https://drive.google.com/file/d/1oDIphIeDEvHJvb8W4AhbnoPGlFrh_Cfd/view?usp=sharing
+- codigo: 001-94c
+  data: 12/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Walter Queiroz
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1l6GtrIHOjbQBUkt7qVmmF1Zfin5AXtSs/view?usp=sharing
+- codigo: 002-94a
+  data: 17/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Amin
+  - Brizola
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Walter Queiroz
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1_xb1bEcumQJjdJGksUhmhm9OUv9xHHps/view?usp=sharing
+- codigo: 002-94b
+  data: 17/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Amin
+  - Brizola
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1KEbYcAzaXk-fOnGW_S-UzwPctJkx6b9p/view?usp=sharing
+- codigo: 002-94c
+  data: 18/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1SfylfYeB-ISQrG602SJFwIIZau1BiHzC/view?usp=sharing
+- codigo: 003-94a
+  data: 18/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1gqWtNUXJL5S-kypwIEaLz8ARmQNX15Ep/view?usp=sharing
+- codigo: 003-94b
+  data: 18/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/11TrmtczfqRMUn-oVrVDzDUWj3QDFEpeI/view?usp=sharing
+- codigo: 003-94c
+  data: 18/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Enéas
+  - Fernando Henrique
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1-XomODMP9f-vXF3aWmK4SIcs8E2F0DsL/view?usp=sharing
+- codigo: 004-94a
+  data: 31/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1a5ofcy0XSEgHJJazQjarXZ1IPrGh00jp/view?usp=sharing
+- codigo: 004-94b
+  data: 20/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1fRCo9pb7eCnMiK3Ot_ri7h4dB_vN-qkG/view?usp=sharing
+- codigo: 004-94c
+  data: 20/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1FCLPa7UkBokwciDgTOBLDj9ckkDbbZvk/view?usp=sharing
+- codigo: 005-94a
+  data: 20/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1gfGl6xJL64XKEaBzFE7dqSnJK2HFzC03/view?usp=sharing
+- codigo: 005-94b
+  data: 20/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1qvzaRBdzZPgVjAIcp5n-afGE9KL5Ucjn/view?usp=sharing
+- codigo: 005-94c
+  data: 23/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1hULVOweIEK7dJc6uTuB1xLpzdCEeg-EC/view?usp=sharing
+- codigo: 006-94a
+  data: 23/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1y7z75OoHtUUgrnpLX2_RQCkDpSBy2eV8/view?usp=sharing
+- codigo: 006-94b
+  data: 23/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1tLnsstKPJvMAwQd559bM48n1Hdn_uuJx/view?usp=sharing
+- codigo: 006-94c
+  data: 23/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1kGDEyhihiWQhTlToBB2qJq_Tdeo9GHoP/view?usp=sharing
+- codigo: 007-94a
+  data: 23/06/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Anthony Garotinho
+  - Jorge Bittar
+  - Marcello Alencar
+  - Mauro Cesar
+  - Milton Gonçalves
+  - Newton Cruz
+  - Paulo Roberto Santoro
+  - Ronald Azaro
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1hZYYr-j6MyBfa2oqPD1MGiww42__dm6s/view?usp=sharing
+- codigo: 1.10-94dvdi
+  data: 03/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Amin
+  partidos:
+  - PPR
+  url: https://drive.google.com/file/d/1eMRrVj74ulJq6XK8Pc24FI4O1SN9jWY9/view?usp=sharing
+- codigo: 1.11-94dvdii
+  data: 26/09/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Amin
+  partidos:
+  - PPR
+  url: https://drive.google.com/file/d/14VvmEi0PCHxKOp1mhWlIbJ4ZRMr8vyGQ/view?usp=sharing
+- codigo: 1.2-94
+  data: 05/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Lula
+  partidos:
+  - PT
+  url: https://drive.google.com/file/d/13rtcQLDjpCYSwQqtRpykqgrG2TkZYUEC/view?usp=sharing
+- codigo: 1.3.1-94
+  data: 07/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Fernando Henrique
+  partidos:
+  - PSDB
+  url: https://drive.google.com/file/d/1SRfl2vieqhn-jl1d-EFCqmxCUC2k7Q5p/view?usp=sharing
+- codigo: 1.3.2-94
+  data: 08/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Fernando Henrique
+  partidos:
+  - PSDB
+  url: https://drive.google.com/file/d/1o3jY6kqCGjiNX9FcfHRdWT5mDedM9HR9/view?usp=sharing
+- codigo: 1.3.3-94
+  data: 10/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Fernando Henrique
+  partidos:
+  - PSDB
+  url: https://drive.google.com/file/d/1s62Hm_Tu7okGU6UVFExvsE9INeATld0n/view?usp=sharing
+- codigo: 1.4-94
+  data: 03/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brizola
+  partidos:
+  - PDT
+  url: https://drive.google.com/file/d/1Zmq75EakvPK3RcywZDq1Elv0y2PhzVSK/view?usp=sharing
+- codigo: 1994DVD2
+  data: 13/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Amin
+  - Brizola
+  - Enéas
+  - Fernando Henrique
+  - Flávio Rocha
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  - Walter Queiroz
+  partidos:
+  - PDT
+  - PL
+  - PMDB
+  - PPR
+  - PRONA
+  - PSC
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1_nABvUMoUUUvmYPhHx3VAz54SxuhL6WT/view?usp=sharing
+- codigo: 1994DVD3
+  data: 12/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brizola
+  partidos:
+  - PDT
+  url: https://drive.google.com/file/d/1behvAqreA3Kljmx7IMFy6wBJ16rjuGmx/view?usp=sharing
+- codigo: 1994DVD4
+  data: 11/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Amin
+  - Brizola
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRONA
+  - PSC
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1gSVov9FvxSBhQPkKqRoidUQiKIr1vbWF/view?usp=sharing
+- codigo: 1994DVD5
+  data: 10/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Amin
+  - Brizola
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRONA
+  - PSC
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1m9t1T1heXtnXekRJjgTtGVTpnUQ5GCaK/view?usp=sharing
+- codigo: 1994DVD6
+  data: 09/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1htjfQ-Pn87I_M8JgsC00lI6xpZ6KOrPx/view?usp=sharing
+- codigo: 1994DVD7
+  data: 08/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Amin
+  - Enéas
+  - Quércia
+  partidos:
+  - PMDB
+  - PPR
+  - PRONA
+  url: https://drive.google.com/file/d/13xiksp7jWUkHduWF3shR52lydz3bGcuW/view?usp=sharing
+- codigo: 1994DVD8
+  data: 07/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Amin
+  - Brizola
+  - Carlos Antônio Gomes
+  - Enéas
+  - Fernando Henrique
+  - Hermani Fortuna
+  - Lula
+  - Quércia
+  partidos:
+  - PDT
+  - PMDB
+  - PPR
+  - PRN
+  - PRONA
+  - PSC
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/18LKiCUUbAkX_kiavtpGAraLEhc6HeHVT/view?usp=sharing
+- codigo: 1994DVDI
+  data: 06/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brizola
+  - Fernando Henrique
+  - Flávio Rocha
+  - Lula
+  - Quércia
+  partidos:
+  - PDT
+  - PL
+  - PMDB
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1n2sOP5IuwpX96vAgIjgQVPMP2Z3oUkhZ/view?usp=sharing
+- codigo: Garotinho 1994 2.1.4-94
+  data: 03/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Anthony Garotinho
+  partidos:
+  - PDT
+  url: https://drive.google.com/file/d/1DjUsRnbkIrZ071KRtcSY2v6DEjVMIs1x/view?usp=sharing
+- codigo: fhc1994dvdii
+  data: 05/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Fernando Henrique
+  partidos:
+  - PSDB
+  url: https://drive.google.com/file/d/13oBxVim_9hfCtvXVY2NMSlFXYW_Zz8q1/view?usp=sharing
+- codigo: fhcdvd1-94
+  data: 04/08/1994
+  ano: 1994
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brizola
+  - Fernando Henrique
+  - Flávio Rocha
+  - Lula
+  - Quércia
+  partidos:
+  - PDT
+  - PL
+  - PMDB
+  - PSDB
+  - PT
+  url: https://drive.google.com/file/d/1MdrfF9pCDWicajru3aKDEoYrBkCqsiv7/view?usp=sharing
+- codigo: 001/98
+  data: 01/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brigadeiro Ivan Frota
+  - Ciro Gomes
+  - Enéas
+  - Eymael
+  - Fernando Henrique
+  - João de Deus Barbosa
+  - Lula
+  - Sérgio Bueno
+  - Sirkis
+  - Thereza Ruiz
+  - Vasco Neto
+  - Zé Maria
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PGT
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRN
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1H7rdPqi-e4mXBoiO395Hk8SGH_cj8DMg/view?usp=sharing
+- codigo: 002/98
+  data: 06/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Alexandre Stoduto
+  - Anthony Garotinho
+  - Cesar Maia
+  - Cyro Garcia
+  - Dalva Lazaroni
+  - Fábio Tenório Cavalcanti
+  - Lúcia Solto
+  - Luiz Paulo
+  - Maria Luisa Batista
+  - Paulo Freitas
+  - Philippe Guedon
+  - Professor Veríssimo
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PGT
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1QZetzn4Vjt4mzy-GKiTkong1v93sf-KT/view?usp=sharing
+- codigo: 003/98
+  data: 07/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brigadeiro Ivan Frota
+  - Ciro Gomes
+  - Enéas
+  - Eymael
+  - Fernando Henrique
+  - João de Deus Barbosa
+  - Lula
+  - Sérgio Bueno
+  - Sirkis
+  - Thereza Ruiz
+  - Vasco Neto
+  - Zé Maria
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRN
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/18aDdOQ3pB5uF2T85xhZDcQfJ3hrVYB2X/view?usp=sharing
+- codigo: 004/98
+  data: 08/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brigadeiro Ivan Frota
+  - Ciro Gomes
+  - Enéas
+  - Eymael
+  - Fernando Henrique
+  - João de Deus Barbosa
+  - Lula
+  - Sérgio Bueno
+  - Sirkis
+  - Thereza Ruiz
+  - Vasco Neto
+  - Zé Maria
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRN
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1s-g1d8eV2Q2M0g87FYm0R8kT39Nftvjg/view?usp=sharing
+- codigo: 006/98a
+  data: 13/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  candidatos:
+  - Brigadeiro Ivan Frota
+  - Ciro Gomes
+  - Enéas
+  - Eymael
+  - Fernando Henrique
+  - João de Deus Barbosa
+  - Lula
+  - Sérgio Bueno
+  - Sirkis
+  - Thereza Ruiz
+  - Vasco Neto
+  - Zé Maria
+  - Alexandre Stoduto
+  - Anthony Garotinho
+  - Cesar Maia
+  - Cyro Garcia
+  - Dalva Lazaroni
+  - Fábio Tenório Cavalcanti
+  - Lúcia Solto
+  - Luiz Paulo
+  - Maria Luisa Batista
+  - Paulo Freitas
+  - Philippe Guedon
+  - Professor Veríssimo
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PGT
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1x2NGhpYXUcJQzleQLGfMrkbHTDyi27ot/view?usp=sharing
+- codigo: 006/98b
+  data: 14/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brigadeiro Ivan Frota
+  - Ciro Gomes
+  - Enéas
+  - Eymael
+  - Fernando Henrique
+  - João de Deus Barbosa
+  - Lula
+  - Sérgio Bueno
+  - Sirkis
+  - Thereza Ruiz
+  - Vasco Neto
+  - Zé Maria
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRN
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/133Uk55wKNg43CWSZ7JhIkoThxUha00OL/view?usp=sharing
+- codigo: 009/98
+  data: 16/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brigadeiro Ivan Frota
+  - Ciro Gomes
+  - Enéas
+  - Eymael
+  - Fernando Henrique
+  - Sérgio Bueno
+  - Sirkis
+  - Thereza Ruiz
+  - Vasco Neto
+  - Zé Maria
+  partidos:
+  - PAN
+  - PFL
+  - PL
+  - PMN
+  - PPB
+  - PPS
+  - PRONA
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSN
+  - PSTU
+  - PTB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1afsfkyEJ8Xo0hzYaHYOzkPKbt0Con0Bq/view?usp=sharing
+- codigo: 010/98
+  data: 17/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Alexandre Stoduto
+  - Anthony Garotinho
+  - Cesar Maia
+  - Cyro Garcia
+  - Dalva Lazaroni
+  - Fábio Tenório Cavalcanti
+  - Lúcia Solto
+  - Luiz Paulo
+  - Maria Luisa Batista
+  - Paulo Freitas
+  - Philippe Guedon
+  - Professor Veríssimo
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PGT
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1If_hIvT0mdQJ5jElW6YKHV1-rDKncrGD/view?usp=sharing
+- codigo: 011/98
+  data: 18/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brigadeiro Ivan Frota
+  - Ciro Gomes
+  - Enéas
+  - Eymael
+  - Fernando Henrique
+  - João de Deus Barbosa
+  - Lula
+  - Sérgio Bueno
+  - Thereza Ruiz
+  - Vasco Neto
+  - Zé Maria
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRN
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1KTXMAtk_OfrUspOualo6yaa0eqeeNB8L/view?usp=sharing
+- codigo: 012/98
+  data: 19/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Alexandre Stoduto
+  - Anthony Garotinho
+  - Cesar Maia
+  - Cyro Garcia
+  - Dalva Lazaroni
+  - Fábio Tenório Cavalcanti
+  - Lúcia Solto
+  - Luiz Paulo
+  - Maria Luisa Batista
+  - Paulo Freitas
+  - Philippe Guedon
+  - Professor Veríssimo
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PGT
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1HOZEFESgDj18KkXm4PbdMK4hny_5wdLX/view?usp=sharing
+- codigo: 013/98
+  data: 20/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Brigadeiro Ivan Frota
+  - Ciro Gomes
+  - Enéas
+  - Eymael
+  - Fernando Henrique
+  - João de Deus Barbosa
+  - Lula
+  - Sérgio Bueno
+  - Sirkis
+  - Thereza Ruiz
+  - Vasco Neto
+  - Zé Maria
+  - Cesar Maia
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRN
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/13z8FHx8u8VsTARnS-6YH7DPElcAE1xWW/view?usp=sharing
+- codigo: 014/98
+  data: 21/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Alexandre Stoduto
+  - Anthony Garotinho
+  - Cesar Maia
+  - Cyro Garcia
+  - Dalva Lazaroni
+  - Fábio Tenório Cavalcanti
+  - Lúcia Solto
+  - Luiz Paulo
+  - Maria Luisa Batista
+  - Paulo Freitas
+  - Philippe Guedon
+  - Professor Veríssimo
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PGT
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1jKI4bkZRmEh2GNKMpdisfY63Q9v5jM3Y/view?usp=sharing
+- codigo: 015/98
+  data: 22/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  - Presidente
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Brigadeiro Ivan Frota
+  - Ciro Gomes
+  - Enéas
+  - Eymael
+  - Fernando Henrique
+  - João de Deus Barbosa
+  - Lula
+  - Sérgio Bueno
+  - Sirkis
+  - Thereza Ruiz
+  - Vasco Neto
+  - Zé Maria
+  - Cesar Maia
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRN
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1XwA3ug8G4SLOJ2CVUmukr6Ot8m7XtA9F/view?usp=sharing
+- codigo: 016/98
+  data: 23/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Alexandre Stoduto
+  - Anthony Garotinho
+  - Cesar Maia
+  - Cyro Garcia
+  - Dalva Lazaroni
+  - Fábio Tenório Cavalcanti
+  - Lúcia Solto
+  - Luiz Paulo
+  - Maria Luisa Batista
+  - Paulo Freitas
+  - Philippe Guedon
+  - Professor Veríssimo
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PGT
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/19y-x6wvtyaFldhTo7fMcMJ_AapHjvcRC/view?usp=sharing
+- codigo: 017/98
+  data: 24/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brigadeiro Ivan Frota
+  - Ciro Gomes
+  - Enéas
+  - Eymael
+  - Fernando Henrique
+  - João de Deus Barbosa
+  - Lula
+  - Sérgio Bueno
+  - Sirkis
+  - Thereza Ruiz
+  - Vasco Neto
+  - Zé Maria
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRN
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1A9SkY7GfyXtwEK-yYK7lwBamCqLrk_fl/view?usp=sharing
+- codigo: 018/98
+  data: 25/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Brigadeiro Ivan Frota
+  - Ciro Gomes
+  - Enéas
+  - Eymael
+  - Fernando Henrique
+  - João de Deus Barbosa
+  - Lula
+  - Sérgio Bueno
+  - Sirkis
+  - Thereza Ruiz
+  - Vasco Neto
+  - Zé Maria
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRN
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1bcKVnBZTStxAtebWnZJPbkJ0o-PB9qv0/view?usp=sharing
+- codigo: 019/98
+  data: 26/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Alexandre Stoduto
+  - Anthony Garotinho
+  - Cesar Maia
+  - Cyro Garcia
+  - Dalva Lazaroni
+  - Fábio Tenório Cavalcanti
+  - Lúcia Solto
+  - Luiz Paulo
+  - Maria Luisa Batista
+  - Paulo Freitas
+  - Philippe Guedon
+  - Professor Veríssimo
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PGT
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/10xpxaZ9wXGvPaCgWoqFRI-3dtfFt7Isc/view?usp=sharing
+- codigo: 020/98a
+  data: 27/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Alexandre Stoduto
+  - Anthony Garotinho
+  - Cesar Maia
+  - Cyro Garcia
+  - Dalva Lazaroni
+  - Fábio Tenório Cavalcanti
+  - Lúcia Solto
+  - Luiz Paulo
+  - Maria Luisa Batista
+  - Paulo Freitas
+  - Philippe Guedon
+  - Professor Veríssimo
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PGT
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1-BWTGv_Jk4NQBfIhUwgYyzcCz_RQS4O8/view?usp=sharing
+- codigo: 020/98b
+  data: 28/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Governador
+  regiao: Estados e Distrito Federal
+  estado: RJ
+  candidatos:
+  - Alexandre Stoduto
+  - Anthony Garotinho
+  - Cesar Maia
+  - Cyro Garcia
+  - Dalva Lazaroni
+  - Fábio Tenório Cavalcanti
+  - Lúcia Solto
+  - Luiz Paulo
+  - Maria Luisa Batista
+  - Paulo Freitas
+  - Philippe Guedon
+  - Professor Veríssimo
+  partidos:
+  - PAN
+  - PCB
+  - PCdoB
+  - PDT
+  - PFL
+  - PGT
+  - PL
+  - PMDB
+  - PMN
+  - PPB
+  - PPS
+  - PRONA
+  - PRP
+  - PRTB
+  - PSB
+  - PSC
+  - PSD
+  - PSDB
+  - PSDC
+  - PSL
+  - PSN
+  - PST
+  - PSTU
+  - PT
+  - PTB
+  - PTDOB
+  - PTN
+  - PV
+  url: https://drive.google.com/file/d/1v5fF4Njt-Lh65Dq11ZqULsQwhZGc9BB0/view?usp=sharing
+- codigo: 1-2/98
+  data: 02/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Ciro Gomes
+  - Eymael
+  - Fernando Henrique
+  - Lula
+  - Zé Maria
+  partidos:
+  - PCB
+  - PCdoB
+  - PDT
+  - PSB
+  - PSDB
+  - PSDC
+  - PSTU
+  - PT
+  url: https://drive.google.com/file/d/1BEeXGSH-dy340aD_gh7-W-h7Wa5db8Os/view?usp=sharing
+- codigo: 1-3/98
+  data: 04/10/1998
+  ano: 1998
+  tipo_video: HGPE
+  cargo:
+  - Presidente
+  regiao: Nacional
+  candidatos:
+  - Fernando Henrique
+  - Lula
+  partidos:
+  - PFL
+  - PPB
+  - PSD
+  - PSDB
+  - PTB
+  url: https://drive.google.com/file/d/1aeHRc2a8600DMY-vVsqpCvJiyNaKwluS/view?usp=sharing

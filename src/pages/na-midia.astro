@@ -1,0 +1,143 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+
+const pagina = (await getEntry('paginas', 'na-midia'))!;
+const { Content } = await render(pagina);
+
+const midia = await getCollection('midia');
+
+/** "2022-04-24" -> "24/04/2022"; "2010" -> "2010"; ausente -> "". */
+function formatarData(data?: string): string {
+  if (!data) return '';
+  const completa = data.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (completa) return `${completa[3]}/${completa[2]}/${completa[1]}`;
+  return data;
+}
+
+// Ordena por data (string) decrescente; itens sem data vão ao fim.
+function ordenar(itens: typeof midia) {
+  return [...itens].sort((a, b) => (b.data.data ?? '').localeCompare(a.data.data ?? ''));
+}
+
+const secoes = [
+  { tipo: 'impressa', titulo: 'Mídia Impressa' },
+  { tipo: 'virtual', titulo: 'Mídia Virtual' },
+  { tipo: 'audiovisual', titulo: 'Mídia Audiovisual' },
+] as const;
+
+const grupos = secoes.map((s) => ({
+  ...s,
+  itens: ordenar(midia.filter((m) => m.data.tipo === s.tipo)),
+}));
+---
+
+<Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.descricao} />
+
+  <section class="secao">
+    <div class="container">
+      <div class="prosa prosa--intro"><Content /></div>
+
+      {
+        grupos.map((grupo) => (
+          <section class="grupo">
+            <h2 class="grupo__titulo">{grupo.titulo}</h2>
+            <ul class="midia">
+              {grupo.itens.map((m) => {
+                const meta = [m.data.autores, m.data.veiculo].filter(Boolean);
+                const data = formatarData(m.data.data);
+                return (
+                  <li class="item">
+                    {data && <span class="item__data">{data}</span>}
+                    {m.data.url ? (
+                      <a
+                        class="item__titulo"
+                        href={m.data.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {m.data.titulo}
+                      </a>
+                    ) : (
+                      <span class="item__titulo item__titulo--simples">{m.data.titulo}</span>
+                    )}
+                    {meta.length > 0 && <span class="item__meta">{meta.join(' · ')}</span>}
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prosa {
+    max-width: 68ch;
+    color: var(--cor-texto-suave);
+    margin-bottom: var(--esp-4);
+  }
+  .prosa--intro > :global(:is(h1, h2):first-child) {
+    display: none;
+  }
+
+  .grupo {
+    margin-top: var(--esp-4);
+  }
+  .grupo__titulo {
+    padding-bottom: var(--esp-1);
+    border-bottom: 2px solid var(--cor-destaque);
+  }
+  .midia {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .item {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: 0 var(--esp-2);
+    padding-block: var(--esp-2);
+    border-bottom: 1px solid var(--cor-borda);
+  }
+  .item__data {
+    color: var(--cor-texto-suave);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+    padding-top: 0.1rem;
+  }
+  .item__titulo {
+    font-weight: 600;
+    grid-column: 2;
+  }
+  .item__titulo--simples {
+    color: var(--cor-primaria-escura);
+  }
+  .item__meta {
+    grid-column: 2;
+    color: var(--cor-texto-suave);
+    font-size: 0.9rem;
+  }
+  /* Quando não há data, o título ocupa a linha inteira. */
+  .item:not(:has(.item__data)) .item__titulo,
+  .item:not(:has(.item__data)) .item__meta {
+    grid-column: 1 / -1;
+  }
+
+  @media (max-width: 520px) {
+    .item {
+      grid-template-columns: 1fr;
+    }
+    .item__titulo,
+    .item__meta {
+      grid-column: 1;
+    }
+    .item__data {
+      grid-column: 1;
+    }
+  }
+</style>

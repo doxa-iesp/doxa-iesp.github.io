@@ -1,0 +1,42 @@
+name: Verificação de Pull Request
+
+# Roda em todo pull request. Objetivo: se alguém digitar um valor inválido num
+# YAML de conteúdo, o build falha e o PR fica vermelho ANTES do merge — nada
+# quebrado silenciosamente chega à produção.
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    name: Build e checagem
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependências (determinístico)
+        run: npm ci
+
+      - name: Build do Astro (valida os schemas — YAML inválido reprova o PR aqui)
+        run: npm run build
+
+      - name: Publicar dist/ como artefato para o revisor baixar
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: ./dist
+          if-no-files-found: error
+
+      - name: Checagem de tipos (astro check)
+        # @astrojs/check e typescript estão em devDependencies, então `npm ci` já os
+        # instalou. Sem eles, `astro check` sai com código 0 sem checar coisa alguma.
+        run: npm run check

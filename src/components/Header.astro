@@ -1,0 +1,199 @@
+---
+import { MENU } from '../lib/navegacao';
+import { url, ativo } from '../lib/url';
+
+const atual = Astro.url.pathname;
+---
+
+<header class="cabecalho">
+  <div class="cabecalho__marca">
+    <div class="container cabecalho__marca-inner">
+      <a href={url('/')} class="cabecalho__logo" aria-label="DOXA — página inicial">
+        <img src={url('/img/logo-doxa.svg')} alt="DOXA" width="130" height="40" />
+      </a>
+      <p class="cabecalho__tagline">
+        Laboratório de Estudos Eleitorais, de Comunicação Política e Opinião Pública
+      </p>
+      <button
+        class="cabecalho__toggle"
+        aria-expanded="false"
+        aria-controls="menu-principal"
+        aria-label="Abrir menu de navegação"
+      >
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="nav" id="menu-principal" aria-label="Navegação principal">
+    <div class="container">
+      <ul class="nav__lista">
+        {
+          MENU.map((item) => (
+            <li class={`nav__item${item.filhos ? ' nav__item--dropdown' : ''}`}>
+              <a
+                href={url(item.href)}
+                class="nav__link"
+                aria-current={ativo(atual, url(item.href)) ? 'page' : undefined}
+              >
+                {item.nome}
+                {item.filhos && <span class="nav__seta" aria-hidden="true">▾</span>}
+              </a>
+              {item.filhos && (
+                <ul class="nav__submenu">
+                  {item.filhos.map((f) => (
+                    <li>
+                      <a href={url(f.href)} class="nav__sublink">
+                        {f.nome}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .cabecalho {
+    border-bottom: 4px solid var(--cor-destaque);
+  }
+  .cabecalho__marca {
+    background: var(--cor-branco);
+  }
+  .cabecalho__marca-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--esp-3);
+    padding-block: var(--esp-2);
+  }
+  .cabecalho__tagline {
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--cor-texto-suave);
+    letter-spacing: 0.02em;
+    flex: 1;
+  }
+  .cabecalho__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: 0;
+    padding: 8px;
+    cursor: pointer;
+  }
+  .cabecalho__toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--cor-primaria);
+  }
+
+  .nav {
+    background: linear-gradient(90deg, var(--cor-primaria), var(--cor-primaria-clara));
+  }
+  .nav__lista {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav__item {
+    position: relative;
+  }
+  .nav__link {
+    display: block;
+    padding: 0.85rem 1rem;
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    transition: var(--transicao);
+  }
+  .nav__link:hover,
+  .nav__link[aria-current='page'] {
+    background: rgb(0 0 0 / 18%);
+    color: var(--cor-branco);
+  }
+  .nav__seta {
+    font-size: 0.7em;
+    margin-left: 4px;
+  }
+
+  .nav__submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px;
+    background: var(--cor-primaria-escura);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: var(--sombra);
+    z-index: 20;
+    display: none;
+  }
+  .nav__item--dropdown:hover > .nav__submenu,
+  .nav__item--dropdown:focus-within > .nav__submenu,
+  .nav__item--dropdown.aberto > .nav__submenu {
+    display: block;
+  }
+  .nav__sublink {
+    display: block;
+    padding: 0.7rem 1rem;
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-size: 0.83rem;
+  }
+  .nav__sublink:hover {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+  }
+
+  @media (max-width: 900px) {
+    .cabecalho__tagline {
+      display: none;
+    }
+    .cabecalho__toggle {
+      display: flex;
+      margin-left: auto;
+    }
+    .nav {
+      display: none;
+    }
+    .nav.aberto {
+      display: block;
+    }
+    .nav__lista {
+      flex-direction: column;
+    }
+    .nav__submenu {
+      position: static;
+      display: block;
+      box-shadow: none;
+      background: rgb(0 0 0 / 15%);
+    }
+    .nav__sublink {
+      padding-left: 2rem;
+    }
+  }
+</style>
+
+<script>
+  // Menu mobile. Em telas pequenas os dropdowns já ficam abertos (CSS), então o único
+  // comportamento necessário é abrir/fechar a navegação inteira.
+  const toggle = document.querySelector<HTMLButtonElement>('.cabecalho__toggle');
+  const nav = document.querySelector<HTMLElement>('#menu-principal');
+
+  toggle?.addEventListener('click', () => {
+    const aberto = nav?.classList.toggle('aberto') ?? false;
+    toggle.setAttribute('aria-expanded', String(aberto));
+    toggle.setAttribute('aria-label', aberto ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+  });
+</script>

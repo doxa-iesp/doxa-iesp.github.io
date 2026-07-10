@@ -1,46 +1,76 @@
-name: Deploy Hugo Site
+name: Deploy do site (Astro) para o GitHub Pages
 
+# Constrói o site com Astro e publica no GitHub Pages a cada push na main.
+# Substitui o antigo workflow do Hugo.
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
+# Permissões mínimas para o deploy no Pages via OIDC.
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Um deploy por vez; não cancela um deploy já em andamento.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+      - name: Configurar Node
+        uses: actions/setup-node@v4
         with:
-          hugo-version: "0.162.1"
-          extended: true
+          node-version: 22
+          cache: npm
 
-      - name: Build
-        run: hugo --minify
+      - name: Instalar dependências (determinístico)
+        run: npm ci
 
-      - name: Upload artifact
+      # `npm run build` = `node scripts/validar-dados.mjs && astro build`.
+      # O validador existe porque o loader `file()` do Astro engole erros de YAML e sai com
+      # código 0, publicando a coleção vazia. Ver scripts/validar-dados.mjs.
+      - name: Build do Astro (valida o conteúdo antes)
+        shell: bash
+        # `pipefail` é obrigatório: sem ele o `tee` devolveria 0 e um build quebrado passaria.
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee build.log
+
+      # Cinto e suspensório: qualquer erro de leitura de dados reprova o deploy, mesmo que o
+      # Astro insista em sair com código 0.
+      - name: Nenhuma coleção pode ter falhado em silêncio
+        shell: bash
+        run: |
+          if grep -q "\[file-loader\] Error" build.log; then
+            echo "::error::Uma coleção de dados falhou ao carregar. O site sairia sem esse conteúdo."
+            exit 1
+          fi
+
+      - name: Configurar o GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Enviar artefato do Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./dist
 
   deploy:
+    name: Deploy
     needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Publicar no GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

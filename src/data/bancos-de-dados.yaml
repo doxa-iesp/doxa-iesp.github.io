@@ -1,0 +1,35 @@
+# Gerado por scripts/converter-conteudo.py a partir de extracao/dados/.
+# Pode ser editado à mão: o build valida o schema (src/content.config.ts).
+
+- nome: Programas eleitorais dos Candidatos a Prefeito do Estado do Rio de Janeiro
+  descricao: Tabela com até 5 propostas de cada candidato a prefeito do Estado do Rio de Janeiro.
+  cobertura: 92 municípios do Estado do Rio de Janeiro; eleições municipais de 2020; 577 candidatos a
+    prefeito (539 com programa disponível, 38 sem programa). 627 arquivos de proposta (572 PDF + 55 imagens)
+    hospedados no TSE (divulgacandcontas.tse.jus.br).
+  registros: 577
+  download: /dados/programas-eleitorais-rj.csv
+  url: https://www.lab-doxa.org.br/programas-eleitorais-dos-candidatos-a-prefeito-do-estado-do-rio-de-janeiro/
+  arquivo: programas-eleitorais-rj.csv
+- nome: Programas eleitorais dos Candidatos a prefeito das Capitais – 2020
+  descricao: Tabela com até 5 propostas de cada candidato a prefeito das capitais do país.
+  cobertura: 20 capitais e grandes cidades; eleições municipais de 2020; 244 candidatos a prefeito; até
+    5 propostas transcritas por candidato.
+  registros: 244
+  download: /dados/programas-eleitorais-capitais.csv
+  url: https://www.lab-doxa.org.br/programas-eleitorais-dos-candidatos-a-prefeito-das-capitais/
+  arquivo: programas-eleitorais-capitais.csv
+  aviso: A coluna de município desta base está incorreta na fonte original (municípios rotacionados em
+    relação aos candidatos). Em revisão.
+- nome: Mapas Eleitorais
+  descricao: 'Os mapas de votação disponibilizados fazem parte do projeto “Geografia do voto no Estado
+    do Rio de Janeiro: estratégias partidárias e bases sociais do voto”, que visa identificar padrões
+    de distribuição de voto no Estado do Rio de Janeiro, buscando distinguir o efeito de variáveis espaciais,
+    variáveis sociodemográficas, classicamente estudadas pela sociologia eleitoral, e variáveis políticas.
+    Os mapas disponibilizados na etapa atual da pesquisa apresentam a distribuição dos votos dos candidatos
+    por bairro na cidade do Rio de Janeiro.'
+  cobertura: 273 mapas em PDF, das eleições de 1998, 2002, 2006, 2010 e 2014. Cargos majoritários (Presidente,
+    Governador, Senador) e proporcionais (Deputado Federal e Estadual, por partido).
+  registros: 273
+  pagina: /mapas-de-votacao/
+  download: /dados/mapas-votacao.csv
+  arquivo: mapas-votacao.csv

@@ -1,0 +1,24 @@
+# Dados globais do site. Editável.
+
+geral:
+  titulo: DOXA — Laboratório de Estudos Eleitorais
+  descricao: Laboratório de Estudos Eleitorais, de Comunicação Política e Opinião Pública do IESP-UERJ
+  email: acervo-doxa@iesp.uerj.br
+  endereco: Rua da Matriz, 82, Botafogo — Rio de Janeiro, RJ
+  cep: 22260-100
+  youtube: https://www.youtube.com/channel/UCkcuDdIEuQ9YqOjHsp4-EHQ
+  video_destaque: Ns3jYjf7hx4
+  dashboard_titulo: Eleições Rio e São Paulo 2024
+  dashboard_url: https://app.powerbi.com/view?r=eyJrIjoiNDk3MDhjYjktYWNhMC00Y2JhLTgxNDUtZWQzNDM1MGM0N2YwIiwidCI6Ijc0OTMyMDFlLTdhNDUtNDk3OC1iZWZkLTBlZDAwMmIwZjgyMiJ9
+  votaai_titulo: Vota aí – Conectando você a propostas eleitorais
+  votaai_descricao: O projeto idealizado por Nara Salles foi desenvolvido pelo Doxa durante as eleições
+    municipais de 2020. A edição referente às eleições municipais deste ano, lançada em 26/08/2024, é
+    coordenada por Nara Salles e Argelina Figueiredo em uma parceria entre o Doxa (Iesp-Uerj) e o Cesop
+    (Unicamp). Estão disponíveis todos os programas de governo registrados por candidatas e candidatos
+    às prefeituras de todos os municípios do Brasil desde 2012. Utilizando a inteligência artificial,
+    a plataforma oferece diferentes ferramentas para consultar as propostas de governo. Depois das eleições,
+    o projeto não acaba. O Vota Aí! continua disponível para que as eleitoras e os eleitores busquem os
+    documentos sempre que desejar, e acompanhem se o que foi proposto na sua cidade está sendo realizado.
+  votaai_url: https://www.votaai.cesop.unicamp.br/
+  catalogo_acervo: https://docs.google.com/spreadsheets/d/1b_OFFW0fJS3B0DFvfeoa6y8l9YG6JmFP/edit?usp=sharing&ouid=110351746423153842923&rtpof=true&sd=true
+  formulario_acervo: /docs/solicitacao-de-material-do-acervo.docx

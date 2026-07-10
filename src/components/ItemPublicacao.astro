@@ -1,0 +1,126 @@
+---
+/**
+ * Item bibliográfico reutilizável (publicações acadêmicas, análises de conjuntura,
+ * textos para discussão). Renderiza uma referência: autores, título, fonte, páginas, ano.
+ *
+ * - `url`  -> o título vira link.
+ * - `resumo` -> parágrafo de resumo/descrição abaixo da referência.
+ * - `downloads` -> lista de arquivos para baixar (ex.: PDF, gráficos, tabelas).
+ *
+ * Campos ausentes são omitidos: só se exibe o que existe nos dados (regra do projeto).
+ */
+interface Download {
+  rotulo: string;
+  url: string;
+}
+interface Props {
+  titulo: string;
+  autores?: string;
+  ano?: string | number;
+  fonte?: string; // editora ou revista
+  paginas?: string;
+  url?: string;
+  resumo?: string;
+  downloads?: Download[];
+}
+
+const { titulo, autores, ano, fonte, paginas, url: link, resumo, downloads = [] } = Astro.props;
+
+// Detalhes bibliográficos que vêm depois do título, na ordem fonte -> páginas -> ano.
+const detalhes = [fonte, paginas, ano != null ? String(ano) : undefined].filter(
+  (x): x is string => Boolean(x),
+);
+---
+
+<li class="ref">
+  <p class="ref__cita">
+    {autores && <span class="ref__autores">{autores}. </span>}
+    {
+      link ? (
+        <a class="ref__titulo" href={link} target="_blank" rel="noopener noreferrer">
+          {titulo}
+        </a>
+      ) : (
+        <span class="ref__titulo">{titulo}</span>
+      )
+    }
+    {detalhes.length > 0 && <span class="ref__detalhes">. {detalhes.join(', ')}.</span>}
+  </p>
+
+  {resumo && <p class="ref__resumo">{resumo}</p>}
+
+  {
+    downloads.length > 0 && (
+      <p class="ref__downloads">
+        {downloads.map((d) => (
+          <a class="ref__download" href={d.url} target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">⭳</span> {d.rotulo}
+          </a>
+        ))}
+      </p>
+    )
+  }
+</li>
+
+<style>
+  .ref {
+    padding-block: var(--esp-2);
+    border-bottom: 1px solid var(--cor-borda);
+  }
+  .ref:last-child {
+    border-bottom: 0;
+  }
+  .ref__cita {
+    margin: 0;
+  }
+  .ref__autores {
+    color: var(--cor-texto-suave);
+  }
+  .ref__titulo {
+    font-weight: 600;
+    color: var(--cor-primaria-escura);
+  }
+  a.ref__titulo {
+    color: var(--cor-primaria);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  a.ref__titulo:hover {
+    color: var(--cor-destaque);
+  }
+  .ref__detalhes {
+    color: var(--cor-texto-suave);
+  }
+  .ref__resumo {
+    margin: var(--esp-1) 0 0;
+    font-size: 0.92rem;
+    color: var(--cor-texto-suave);
+    max-width: 68ch;
+  }
+  .ref__downloads {
+    margin: var(--esp-2) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-1);
+  }
+  .ref__download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    background: var(--cor-branco);
+    transition: var(--transicao);
+  }
+  .ref__download:hover {
+    border-color: var(--cor-primaria);
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+  }
+</style>

@@ -1,0 +1,80 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ItemPublicacao from '../../components/ItemPublicacao.astro';
+import { url } from '../../lib/url';
+
+const analises = await getCollection('analises');
+
+// Agrupa por ciclo (ano eleitoral), do mais recente para o mais antigo.
+const ciclos = [...new Set(analises.map((a) => a.data.ciclo))].sort((a, b) => b.localeCompare(a));
+
+const grupos = ciclos.map((ciclo) => ({
+  ciclo,
+  itens: analises.filter((a) => a.data.ciclo === ciclo),
+}));
+---
+
+<Base
+  titulo="Análises de Conjuntura Eleitoral"
+  descricao="Textos produzidos pelo DOXA em períodos eleitorais, ciclo a ciclo."
+>
+  <PageHero
+    titulo="Análises de Conjuntura Eleitoral"
+    subtitulo="Textos produzidos em períodos eleitorais sobre as diferentes etapas e dimensões da campanha."
+  />
+
+  <section class="secao">
+    <div class="container">
+      <p class="voltar"><a href={url('/publicacoes/')}>← Todas as publicações</a></p>
+
+      {
+        grupos.map((grupo) => (
+          <section class="grupo">
+            <h2 class="grupo__titulo">Eleições {grupo.ciclo}</h2>
+            <ul class="lista">
+              {grupo.itens.map((a) => (
+                <ItemPublicacao
+                  titulo={a.data.titulo}
+                  fonte={a.data.periodo}
+                  resumo={a.data.descricao}
+                  downloads={a.data.arquivos}
+                />
+              ))}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .voltar {
+    margin: 0 0 var(--esp-3);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .voltar a {
+    text-decoration: none;
+  }
+  .voltar a:hover {
+    text-decoration: underline;
+  }
+  .grupo {
+    margin-top: var(--esp-4);
+  }
+  .grupo:first-of-type {
+    margin-top: 0;
+  }
+  .grupo__titulo {
+    padding-bottom: var(--esp-1);
+    border-bottom: 2px solid var(--cor-destaque);
+  }
+  .lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>
