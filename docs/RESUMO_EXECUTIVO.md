@@ -106,12 +106,12 @@ com a versão anterior.
 
 ## ✅ Checklist do time do DOXA (o que só vocês podem fazer)
 
-**Antes do primeiro deploy — obrigatório**
+**Deploy — feito ✅**
 
-- [ ] `git add -A && git commit` e push. **Atenção:** `public/` precisa entrar no commit, senão o
-      site vai ao ar sem imagens, fontes e PDFs. (Nada foi commitado por mim.)
-- [ ] Ativar o Pages: **Settings → Pages → Source: GitHub Actions**.
-- [ ] Conferir o site publicado em `https://felipelamarca.com/DOXA/`.
+- [x] Commit e push em `main` (`c081a50`). O `public/` entrou no commit.
+- [x] GitHub Pages já estava habilitado com `build_type: workflow`.
+- [x] Site publicado e verificado em `https://felipelamarca.com/DOXA/`: as 14 rotas respondem 200,
+      95 links do acervo, 16 fotos da equipe, vídeo da home, 0 erros de JavaScript, 0 respostas 4xx.
 
 **Revisão de conteúdo**
 

@@ -79,6 +79,16 @@ Para reproduzir o bug original: `rm -rf dist .astro node_modules/.astro && npx a
 **2. `public/` não é saída de build.** No Hugo era; no Astro é a pasta de assets de origem e
 **precisa estar versionada**. O `.gitignore` tem um comentário avisando.
 
+**2b. O `.gitignore` já foi um template de Python.** A regra `lib/` (sem âncora) casava com
+`src/lib/`, então `url.ts` e `navegacao.ts` nunca chegaram ao repositório: o build passava no
+disco e quebrava no CI com `[UNRESOLVED_IMPORT] Could not resolve '../lib/url'`. As regras agora
+são ancoradas na raiz (`/node_modules/`, `/dist/`). Antes de confiar num build, teste **o que está
+no commit**, não o que está no disco:
+
+```bash
+git archive --format=tar HEAD | tar -x -C /tmp/t && cd /tmp/t && npm ci && npm run build
+```
+
 **3. Defeito na fonte: `programas-eleitorais-capitais.csv`.** A coluna `municipio` está
 rotacionada em relação aos candidatos (Eduardo Paes aparece como Florianópolis). Documentado em
 [extracao/README.md](extracao/README.md); a página `/bancos-de-dados/` renderiza um aviso.
