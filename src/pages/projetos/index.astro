@@ -4,9 +4,29 @@ import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import CardProjeto from '../../components/CardProjeto.astro';
 
-const projetos = (await getCollection('projetos')).sort(
+const todos = (await getCollection('projetos')).sort(
   (a, b) => (a.data.ordem ?? 99) - (b.data.ordem ?? 99),
 );
+
+// Em andamento primeiro, concluídos depois. Um projeto sem `status` (campo
+// opcional, para não obrigar ninguém a inventar) cai no grupo "Outros".
+const grupos = [
+  {
+    titulo: 'Em andamento',
+    descricao: 'Projetos ativos, com material sendo atualizado.',
+    itens: todos.filter((p) => p.data.status === 'ativo'),
+  },
+  {
+    titulo: 'Concluídos',
+    descricao: 'Projetos encerrados, cujo material segue disponível para consulta.',
+    itens: todos.filter((p) => p.data.status === 'concluido'),
+  },
+  {
+    titulo: 'Outros projetos',
+    descricao: '',
+    itens: todos.filter((p) => !p.data.status),
+  },
+].filter((g) => g.itens.length > 0);
 ---
 
 <Base
@@ -15,27 +35,38 @@ const projetos = (await getCollection('projetos')).sort(
 >
   <PageHero
     titulo="Projetos"
-    subtitulo="As iniciativas do laboratório com entrega pública — plataformas, painéis interativos e pesquisas aplicadas, abertas a quem quiser consultar."
+    subtitulo="As iniciativas do laboratório com entrega pública: plataformas, painéis interativos e pesquisas aplicadas, abertas a quem quiser consultar."
     variante="gradiente"
   />
 
-  <section class="secao">
-    <div class="container">
-      <ul class="grade-cards grade-cards--larga">
-        {
-          projetos.map((p) => (
-            <CardProjeto
-              slug={p.id}
-              titulo={p.data.titulo}
-              resumo={p.data.resumo}
-              periodo={p.data.periodo}
-              status={p.data.status}
-              imagem={p.data.imagem}
-              destaque={p.data.destaque}
-            />
-          ))
-        }
-      </ul>
-    </div>
-  </section>
+  {
+    grupos.map((grupo, i) => (
+      <section class:list={['secao', i % 2 === 1 && 'secao--alt']}>
+        <div class="container">
+          <h2 class="titulo-secao">{grupo.titulo}</h2>
+          {grupo.descricao && <p class="grupo__descricao">{grupo.descricao}</p>}
+
+          <ul class="grade-cards grade-cards--larga">
+            {grupo.itens.map((p) => (
+              <CardProjeto
+                slug={p.id}
+                titulo={p.data.titulo}
+                resumo={p.data.resumo}
+                periodo={p.data.periodo}
+                imagem={p.data.imagem}
+                destaque={p.data.destaque}
+              />
+            ))}
+          </ul>
+        </div>
+      </section>
+    ))
+  }
 </Base>
+
+<style>
+  .grupo__descricao {
+    margin: calc(-1 * var(--esp-2)) 0 var(--esp-3);
+    color: var(--cor-texto-suave);
+  }
+</style>

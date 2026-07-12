@@ -53,7 +53,7 @@ function formatarData(iso?: string): string | null {
                     <p class="seminario__meta">
                       <span class="seminario__apresentador">{s.data.apresentador}</span>
                       {s.data.instituicao && (
-                        <span class="seminario__inst"> — {s.data.instituicao}</span>
+                        <span class="seminario__inst">, {s.data.instituicao}</span>
                       )}
                     </p>
                     {dataFmt && (

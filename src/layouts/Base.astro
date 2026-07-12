@@ -14,7 +14,8 @@ const { titulo, descricao } = Astro.props;
 const DESC_PADRAO =
   'Laboratório de Estudos Eleitorais, de Comunicação Política e Opinião Pública do IESP-UERJ.';
 const desc = descricao ?? DESC_PADRAO;
-const tituloCompleto = titulo === 'DOXA' ? 'DOXA — Laboratório de Estudos Eleitorais' : `${titulo} — DOXA`;
+const tituloCompleto =
+  titulo === 'DOXA' ? 'DOXA | Laboratório de Estudos Eleitorais' : `${titulo} | DOXA`;
 const canonica = new URL(Astro.url.pathname, Astro.site);
 ---
 

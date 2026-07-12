@@ -147,3 +147,29 @@ gradiente e continua elegante — resolve o placeholder dos 12 membros sem foto.
 **`/producao/textos-para-discussao/`** → o texto da página foi reescrito → ele era **cópia literal**
 do texto de Publicações e falava dos "dois tipos de publicação", não de working papers. O erro vem do
 WordPress (está fiel em `extracao/`); a correção é editorial e vive no conversor.
+
+### Ajustes após revisão (julho de 2026)
+
+**`/` (home)** → a ilustração "boca de jacaré" foi removida, e o texto de apresentação passou a
+ocupar a página **de ponta a ponta, em duas colunas** → a ilustração não acrescentava informação, e
+o texto em duas colunas preenche a largura sem produzir linhas de 150 caracteres.
+
+**Todas as páginas** → a prosa deixou de ser uma coluna estreita centralizada e passou a ocupar a
+largura do container, alinhada com os cards e as listas → uma coluna estreita no meio da página lê
+como texto "flutuando"; o objetivo era distribuir melhor o conteúdo, não trocar um desalinhamento
+por outro.
+
+**Páginas de projeto** → o texto ganhou uma **ficha lateral** com situação, período e botões de
+ação → o texto ocupa a página e a barra lateral preenche o espaço que sobrava à direita.
+
+**Cards de publicação** → o botão de **baixar o PDF vem antes** do resumo, e o resumo passou a abrir
+num **pop-up** (`<dialog>`) em vez de ficar dentro do card → baixar o texto é o que o visitante mais
+quer, e resumos longos faziam um card ficar três vezes mais alto que o vizinho. Sem JavaScript o
+resumo continua legível, num `<details>` de reserva.
+
+**`/projetos/`** → os projetos passaram a ser **agrupados por situação**: "Em andamento" e
+"Concluídos" → a etiqueta de status saiu dos cards, porque o título do grupo já a carrega.
+
+**Textos do site** → travessões (—) foram substituídos por vírgulas, dois-pontos ou parênteses. Os
+travessões que restam estão nos **títulos das análises de conjuntura**, que são registros
+bibliográficos copiados literalmente do site antigo: alterá-los falsificaria a fonte.

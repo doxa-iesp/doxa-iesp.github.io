@@ -74,28 +74,41 @@ p {
 
 /* ---------------------------------------------------------------- prosa
 
-   Coluna de leitura CENTRALIZADA. Antes esta regra estava copiada em 12
-   páginas, sempre sem `margin-inline: auto` — o texto ficava preso à esquerda
-   de um container de 1140px, com ~450px de vazio morto à direita.
-   Como este arquivo não é escopado, os seletores de descendente abaixo
-   alcançam o markdown renderizado sem precisar de `:global()`.            */
+   O texto ocupa a largura do container, alinhado com o resto da página (cards,
+   listas, filtros). Nem preso à esquerda com um vazio à direita, nem numa coluna
+   estreita flutuando no meio.
+
+   Para blocos LONGOS, use `.prosa--colunas`: o texto se divide em duas colunas,
+   o que preenche a página inteira sem criar linhas de 150 caracteres.
+
+   Como este arquivo não é escopado, os seletores de descendente abaixo alcançam
+   o markdown renderizado sem precisar de `:global()`.                       */
 
 .prosa {
-  max-width: var(--largura-prosa);
-  margin-inline: auto;
   color: var(--cor-texto-suave);
-}
-.prosa--largo {
-  --largura-prosa: 76ch;
-}
-/* Quando a prosa divide espaço com uma ilustração, ela não deve se recentrar
-   dentro da própria coluna — fica à esquerda da grade. */
-.prosa--coluna {
-  margin-inline: 0;
 }
 .prosa > :last-child {
   margin-bottom: 0;
 }
+
+/* Duas colunas: distribui o texto longo por toda a largura, mantendo a linha
+   num comprimento legível. As colunas viram uma só em telas estreitas. */
+.prosa--colunas {
+  columns: 2;
+  column-gap: var(--esp-5);
+}
+.prosa--colunas p {
+  /* evita que um parágrafo comece no pé de uma coluna e termine na outra */
+  break-inside: avoid;
+}
+@media (max-width: 800px) {
+  .prosa--colunas {
+    columns: 1;
+  }
+}
+
+/* Onde a prosa divide a linha com outra coisa (uma barra lateral, por exemplo),
+   ela já é estreita por causa da grade: não precisa de limite extra. */
 .prosa h2 {
   margin-top: var(--esp-4);
   color: var(--cor-primaria-escura);

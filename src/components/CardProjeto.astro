@@ -13,21 +13,16 @@ interface Props {
   titulo: string;
   resumo: string;
   periodo?: string;
-  status?: 'ativo' | 'concluido';
   imagem?: string;
   destaque?: boolean;
 }
 
-const { slug, titulo, resumo, periodo, status, imagem, destaque = false } = Astro.props;
+const { slug, titulo, resumo, periodo, imagem, destaque = false } = Astro.props;
 
 // O layout em destaque põe a capa ao lado do texto. Sem capa, ele viraria um card
 // largo e oco — então só vale quando há imagem.
 const largo = destaque && Boolean(imagem);
 
-const ROTULO_STATUS: Record<string, string> = {
-  ativo: 'Em andamento',
-  concluido: 'Concluído',
-};
 const href = url(`/projetos/${slug}/`);
 ---
 
@@ -41,12 +36,9 @@ const href = url(`/projetos/${slug}/`);
   }
 
   <div class="projeto__corpo">
-    <p class="projeto__meta">
-      {status && <span class:list={['etiqueta', status === 'ativo' && 'etiqueta--ativo']}>
-        {ROTULO_STATUS[status]}
-      </span>}
-      {periodo && <span class="projeto__periodo">{periodo}</span>}
-    </p>
+    {/* Sem etiqueta de status: a página de projetos já agrupa por "Em andamento"
+        e "Concluídos", então repeti-la no card seria redundante. */}
+    {periodo && <p class="projeto__periodo">{periodo}</p>}
 
     <h2 class="projeto__titulo">
       <a href={href}>{titulo}</a>
@@ -93,16 +85,11 @@ const href = url(`/projetos/${slug}/`);
     padding: var(--esp-3);
   }
 
-  .projeto__meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--esp-1);
-    margin: 0 0 var(--esp-2);
-    min-height: 1.5rem;
-  }
   .projeto__periodo {
+    margin: 0 0 var(--esp-1);
     font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
     color: var(--cor-texto-suave);
   }
 

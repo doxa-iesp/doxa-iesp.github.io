@@ -2,7 +2,7 @@
 titulo: "Vota Aí"
 resumo: "Plataforma que reúne, com apoio de inteligência artificial, os programas de governo registrados por candidatas e candidatos às prefeituras de todos os municípios do Brasil desde 2012."
 imagem: "/img/projetos/vota-ai.jpg"
-periodo: "2020 — presente"
+periodo: "2020 até hoje"
 status: "ativo"
 url: "https://www.votaai.cesop.unicamp.br/"
 rotulo_url: "Acessar o Vota Aí"

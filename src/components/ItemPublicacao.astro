@@ -3,21 +3,19 @@
  * Card de publicação (publicações acadêmicas, análises de conjuntura, textos
  * para discussão).
  *
- * Recupera o desenho do site antigo: card branco com uma ABA DE PASTA terracota
- * no topo, título navy e AUTOR EM TERRACOTA. A reconstrução em Astro havia
- * transformado isso numa lista de referências ABNT com hairlines cinza — foi a
- * regressão visual mais sentida.
+ * Card branco com uma ABA DE PASTA terracota no topo, título navy e AUTOR EM
+ * TERRACOTA, como no site antigo.
  *
- * Atenção ao contraste: o autor usa `--cor-destaque-texto` (5,08:1), não o
- * `--cor-destaque` puro (3,73:1, reprova em AA).
+ * Ordem dos elementos: título, autor, fonte, AÇÕES (baixar o PDF vem primeiro,
+ * é o que o visitante mais quer) e só então o botão que abre o resumo.
  *
- * - `url`       -> o título vira link.
- * - `resumo`    -> parágrafo abaixo da referência.
- * - `downloads` -> botões de arquivo (PDF, gráficos, tabelas).
- * - `etiqueta`  -> texto da aba (padrão: o ano; sem ano e sem etiqueta, a aba some).
+ * O resumo abre num pop-up (`<dialog>` nativo) em vez de ocupar o card inteiro:
+ * resumos longos faziam um card ficar três vezes mais alto que o vizinho.
+ * Sem JavaScript o `<dialog>` não abre, então o resumo continua acessível como
+ * texto normal dentro de um `<details>` de reserva.
  *
- * Campos ausentes são omitidos — análises de conjuntura, por exemplo, não têm
- * autores, e a linha simplesmente não aparece.
+ * Contraste: o autor usa `--cor-destaque-texto` (5,08:1). O `--cor-destaque`
+ * puro dá 3,73:1 sobre branco e reprovaria em AA.
  */
 interface Download {
   rotulo: string;
@@ -49,6 +47,15 @@ const {
 
 const abaTexto = etiqueta ?? (ano != null ? String(ano) : undefined);
 const detalhes = [fonte, paginas].filter((x): x is string => Boolean(x));
+
+// id estável para ligar o botão ao pop-up correspondente
+const idResumo = `resumo-${titulo
+  .normalize('NFD')
+  .replace(/[̀-ͯ]/g, '')
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/^-|-$/g, '')
+  .slice(0, 48)}`;
 ---
 
 <li class="pub">
@@ -76,23 +83,69 @@ const detalhes = [fonte, paginas].filter((x): x is string => Boolean(x));
 
     {autores && <p class="pub__autores">{autores}</p>}
     {detalhes.length > 0 && <p class="pub__detalhes">{detalhes.join(', ')}</p>}
-    {resumo && <p class="pub__resumo">{resumo}</p>}
 
     {
-      downloads.length > 0 && (
-        <p class="pub__downloads">
+      (downloads.length > 0 || resumo) && (
+        <p class="pub__acoes">
           {downloads.map((d) => (
-            <a class="pub__download" href={d.url} target="_blank" rel="noopener noreferrer">
+            <a class="pub__botao pub__botao--baixar" href={d.url} target="_blank" rel="noopener noreferrer">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12 16 6 10l1.4-1.4 3.6 3.6V3h2v9.2l3.6-3.6L18 10l-6 6Zm-7 4v-2h14v2H5Z" />
               </svg>
               {d.rotulo}
             </a>
           ))}
+
+          {resumo && (
+            <button type="button" class="pub__botao pub__resumo-abrir" data-resumo={idResumo} hidden>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M4 5h16v2H4V5Zm0 4h16v2H4V9Zm0 4h16v2H4v-2Zm0 4h10v2H4v-2Z" />
+              </svg>
+              Ler o resumo
+            </button>
+          )}
         </p>
       )
     }
+
+    {
+      /* Reserva sem JavaScript: o pop-up não abre, mas o resumo continua legível. */
+      resumo && (
+        <details class="pub__resumo-reserva">
+          <summary>Ler o resumo</summary>
+          <p>{resumo}</p>
+        </details>
+      )
+    }
   </div>
+
+  {
+    resumo && (
+      <dialog id={idResumo} class="pub__dialogo" aria-labelledby={`${idResumo}-titulo`}>
+        <div class="pub__dialogo-cabecalho">
+          <h2 id={`${idResumo}-titulo`}>{titulo}</h2>
+          <button type="button" class="pub__dialogo-fechar" aria-label="Fechar o resumo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="m12 10.6 5.3-5.3 1.4 1.4-5.3 5.3 5.3 5.3-1.4 1.4-5.3-5.3-5.3 5.3-1.4-1.4 5.3-5.3-5.3-5.3 1.4-1.4 5.3 5.3Z" />
+            </svg>
+          </button>
+        </div>
+        {autores && <p class="pub__dialogo-autores">{autores}</p>}
+        <p class="pub__dialogo-texto">{resumo}</p>
+        {
+          downloads.length > 0 && (
+            <p class="pub__dialogo-acoes">
+              {downloads.map((d) => (
+                <a class="btn btn-primario" href={d.url} target="_blank" rel="noopener noreferrer">
+                  {d.rotulo}
+                </a>
+              ))}
+            </p>
+          )
+        }
+      </dialog>
+    )
+  }
 </li>
 
 <style>
@@ -104,7 +157,6 @@ const detalhes = [fonte, paginas].filter((x): x is string => Boolean(x));
     border-radius: var(--raio-g);
     box-shadow: var(--sombra-sm);
     transition: box-shadow var(--transicao), transform var(--transicao);
-    /* deixa a aba "sair" do canto superior sem ser recortada */
     overflow: visible;
   }
   .pub:hover {
@@ -152,7 +204,7 @@ const detalhes = [fonte, paginas].filter((x): x is string => Boolean(x));
     text-underline-offset: 3px;
   }
 
-  /* Autor em terracota — o detalhe que dava personalidade à página antiga. */
+  /* Autor em terracota: o detalhe que dava personalidade à página antiga. */
   .pub__autores {
     margin: var(--esp-1) 0 0;
     font-size: 0.9rem;
@@ -164,38 +216,145 @@ const detalhes = [fonte, paginas].filter((x): x is string => Boolean(x));
     font-size: 0.85rem;
     color: var(--cor-texto-suave);
   }
-  .pub__resumo {
-    margin: var(--esp-2) 0 0;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: var(--cor-texto-suave);
-  }
 
-  .pub__downloads {
+  .pub__acoes {
     margin: var(--esp-3) 0 0;
     padding-top: var(--esp-2);
     border-top: 1px solid var(--cor-borda);
     display: flex;
     flex-wrap: wrap;
     gap: var(--esp-1);
+    margin-top: auto;
   }
-  .pub__download {
+  .pub__botao {
     display: inline-flex;
     align-items: center;
     gap: 0.35em;
-    padding: 0.3rem 0.75rem;
+    padding: 0.35rem 0.8rem;
     border: 1px solid var(--cor-borda);
     border-radius: var(--raio);
+    font: inherit;
     font-size: 0.82rem;
     font-weight: 600;
     text-decoration: none;
     color: var(--cor-primaria);
     background: var(--cor-branco);
+    cursor: pointer;
     transition: var(--transicao);
   }
-  .pub__download:hover {
+  .pub__botao:hover {
     border-color: var(--cor-primaria);
     background: var(--cor-primaria);
     color: var(--cor-branco);
   }
+  /* baixar o PDF é a ação principal */
+  .pub__botao--baixar {
+    border-color: var(--cor-primaria);
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+  }
+  .pub__botao--baixar:hover {
+    background: var(--cor-primaria-escura);
+    border-color: var(--cor-primaria-escura);
+  }
+
+  /* O <details> só aparece quando o JavaScript não roda; com JS, o script o
+     esconde e revela o botão do pop-up. */
+  .pub__resumo-reserva {
+    margin-top: var(--esp-2);
+    font-size: 0.9rem;
+    color: var(--cor-texto-suave);
+  }
+  .pub__resumo-reserva summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--cor-primaria);
+  }
+
+  /* ------------------------------------------------------------- pop-up */
+
+  .pub__dialogo {
+    width: min(64ch, calc(100vw - 2rem));
+    max-height: 85vh;
+    padding: var(--esp-4);
+    border: 0;
+    border-top: 4px solid var(--cor-destaque);
+    border-radius: var(--raio-g);
+    box-shadow: var(--sombra-alta);
+    color: var(--cor-texto);
+  }
+  .pub__dialogo::backdrop {
+    background: rgb(30 58 80 / 55%);
+    backdrop-filter: blur(2px);
+  }
+  .pub__dialogo-cabecalho {
+    display: flex;
+    align-items: start;
+    gap: var(--esp-2);
+  }
+  .pub__dialogo-cabecalho h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    flex: 1;
+  }
+  .pub__dialogo-fechar {
+    flex: none;
+    display: inline-flex;
+    padding: 0.35rem;
+    border: 0;
+    border-radius: var(--raio);
+    background: var(--cor-fundo-alt);
+    color: var(--cor-texto-suave);
+    cursor: pointer;
+    transition: var(--transicao);
+  }
+  .pub__dialogo-fechar:hover {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+  }
+  .pub__dialogo-autores {
+    margin: var(--esp-1) 0 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cor-destaque-texto);
+  }
+  .pub__dialogo-texto {
+    margin: var(--esp-3) 0 0;
+    line-height: 1.7;
+    color: var(--cor-texto-suave);
+    text-align: justify;
+    hyphens: auto;
+  }
+  .pub__dialogo-acoes {
+    margin: var(--esp-4) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-2);
+  }
 </style>
+
+<script>
+  // Progressive enhancement: sem JavaScript o resumo fica num <details>; com JS,
+  // trocamos por um botão que abre o pop-up.
+  document.querySelectorAll<HTMLElement>('.pub').forEach((card) => {
+    const abrir = card.querySelector<HTMLButtonElement>('.pub__resumo-abrir');
+    const reserva = card.querySelector<HTMLDetailsElement>('.pub__resumo-reserva');
+    if (!abrir) return;
+
+    const dialogo = document.getElementById(abrir.dataset.resumo ?? '') as HTMLDialogElement | null;
+    if (!dialogo || typeof dialogo.showModal !== 'function') return;
+
+    reserva?.remove();
+    abrir.hidden = false;
+
+    abrir.addEventListener('click', () => dialogo.showModal());
+    dialogo
+      .querySelector('.pub__dialogo-fechar')
+      ?.addEventListener('click', () => dialogo.close());
+
+    // clicar fora da caixa fecha
+    dialogo.addEventListener('click', (evento) => {
+      if (evento.target === dialogo) dialogo.close();
+    });
+  });
+</script>

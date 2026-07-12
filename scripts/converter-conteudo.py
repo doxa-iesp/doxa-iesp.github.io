@@ -320,11 +320,11 @@ def site():
     fontes = ler("fontes-externas.yaml")
     catalogo = next(f["url"] for f in fontes["fontes"] if f["tipo"] == "google_sheets")
     geral = {
-        "titulo": "DOXA — Laboratório de Estudos Eleitorais",
+        "titulo": "DOXA. Laboratório de Estudos Eleitorais",
         "descricao": ("Laboratório de Estudos Eleitorais, de Comunicação Política e Opinião Pública "
                       "do IESP-UERJ"),
         "email": "acervo-doxa@iesp.uerj.br",
-        "endereco": "Rua da Matriz, 82, Botafogo — Rio de Janeiro, RJ",
+        "endereco": "Rua da Matriz, 82, Botafogo, Rio de Janeiro, RJ",
         "cep": "22260-100",
         "youtube": "https://www.youtube.com/channel/UCkcuDdIEuQ9YqOjHsp4-EHQ",
         # O vídeo dos "melhores momentos" é conteúdo do acervo — é lá que ele aparece.

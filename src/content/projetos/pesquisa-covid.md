@@ -2,7 +2,7 @@
 titulo: "Pesquisa COVID"
 resumo: "Monitoramento e análise das medidas de combate à Covid-19 no Estado do Rio de Janeiro, e avaliação das respostas da população e de seus efeitos socioeconômicos e políticos."
 imagem: "/img/projetos/pesquisa-covid.jpg"
-periodo: "2020 — 2022"
+periodo: "2020 a 2022"
 status: "concluido"
 ordem: 4
 ---

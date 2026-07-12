@@ -1,7 +1,6 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import BocaDeJacare from '../components/BocaDeJacare.astro';
 import { url } from '../lib/url';
 
 const home = (await getEntry('paginas', 'home'))!;
@@ -26,7 +25,7 @@ const destaques = [
   },
   {
     titulo: 'Projetos',
-    texto: 'Plataformas, painéis e pesquisas aplicadas — como o Vota Aí e a Geografia do Voto.',
+    texto: 'Plataformas, painéis e pesquisas aplicadas, como o Vota Aí e a Geografia do Voto.',
     href: '/projetos/',
   },
   {
@@ -53,20 +52,12 @@ const numeros = [
 
 <Base titulo="DOXA" descricao={home.data.descricao}>
   <section class="apresentacao">
-    <div class="container apresentacao__grade">
-      <div>
-        <p class="olho">IESP-UERJ · desde 1996</p>
-        <h1>{home.data.subtitulo}</h1>
-        <div class="prosa prosa--coluna"><Content /></div>
-      </div>
-
-      <div class="apresentacao__arte">
-        <BocaDeJacare />
-        <p class="apresentacao__legenda">
-          <strong>Boca de jacaré:</strong> o cruzamento das curvas de intenção de voto — o momento
-          que o laboratório estuda desde 1996.
-        </p>
-      </div>
+    <div class="container">
+      <p class="olho">IESP-UERJ · desde 1996</p>
+      <h1>{home.data.subtitulo}</h1>
+      {/* Texto de ponta a ponta, em duas colunas: preenche a página sem produzir
+          linhas longas demais para ler. */}
+      <div class="prosa prosa--colunas apresentacao__texto"><Content /></div>
     </div>
   </section>
 
@@ -130,25 +121,12 @@ const numeros = [
   .apresentacao {
     padding-block: var(--esp-5) var(--esp-4);
   }
-  /* Texto à esquerda, ilustração à direita: o vazio que sobrava à direita da
-     prosa agora tem conteúdo — e é conteúdo que fala do que o DOXA estuda. */
-  .apresentacao__grade {
-    display: grid;
-    grid-template-columns: 1fr 0.8fr;
-    gap: var(--esp-5);
-    align-items: center;
-  }
   .apresentacao h1 {
-    max-width: 18ch;
+    max-width: 30ch;
+    margin-bottom: var(--esp-3);
   }
-  .apresentacao__legenda {
-    margin: var(--esp-2) 0 0;
-    font-size: 0.8rem;
-    line-height: 1.5;
-    color: var(--cor-texto-suave);
-  }
-  .apresentacao__legenda strong {
-    color: var(--cor-destaque-texto);
+  .apresentacao__texto {
+    font-size: 1.02rem;
   }
 
   .cartao__titulo {
@@ -227,10 +205,6 @@ const numeros = [
   }
 
   @media (max-width: 900px) {
-    .apresentacao__grade {
-      grid-template-columns: 1fr;
-      gap: var(--esp-3);
-    }
     .apresentacao h1 {
       max-width: none;
     }
