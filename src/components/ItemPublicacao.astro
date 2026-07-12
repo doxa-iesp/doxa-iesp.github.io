@@ -1,13 +1,23 @@
 ---
 /**
- * Item bibliográfico reutilizável (publicações acadêmicas, análises de conjuntura,
- * textos para discussão). Renderiza uma referência: autores, título, fonte, páginas, ano.
+ * Card de publicação (publicações acadêmicas, análises de conjuntura, textos
+ * para discussão).
  *
- * - `url`  -> o título vira link.
- * - `resumo` -> parágrafo de resumo/descrição abaixo da referência.
- * - `downloads` -> lista de arquivos para baixar (ex.: PDF, gráficos, tabelas).
+ * Recupera o desenho do site antigo: card branco com uma ABA DE PASTA terracota
+ * no topo, título navy e AUTOR EM TERRACOTA. A reconstrução em Astro havia
+ * transformado isso numa lista de referências ABNT com hairlines cinza — foi a
+ * regressão visual mais sentida.
  *
- * Campos ausentes são omitidos: só se exibe o que existe nos dados (regra do projeto).
+ * Atenção ao contraste: o autor usa `--cor-destaque-texto` (5,08:1), não o
+ * `--cor-destaque` puro (3,73:1, reprova em AA).
+ *
+ * - `url`       -> o título vira link.
+ * - `resumo`    -> parágrafo abaixo da referência.
+ * - `downloads` -> botões de arquivo (PDF, gráficos, tabelas).
+ * - `etiqueta`  -> texto da aba (padrão: o ano; sem ano e sem etiqueta, a aba some).
+ *
+ * Campos ausentes são omitidos — análises de conjuntura, por exemplo, não têm
+ * autores, e a linha simplesmente não aparece.
  */
 interface Download {
   rotulo: string;
@@ -21,104 +31,169 @@ interface Props {
   paginas?: string;
   url?: string;
   resumo?: string;
+  etiqueta?: string;
   downloads?: Download[];
 }
 
-const { titulo, autores, ano, fonte, paginas, url: link, resumo, downloads = [] } = Astro.props;
+const {
+  titulo,
+  autores,
+  ano,
+  fonte,
+  paginas,
+  url: link,
+  resumo,
+  etiqueta,
+  downloads = [],
+} = Astro.props;
 
-// Detalhes bibliográficos que vêm depois do título, na ordem fonte -> páginas -> ano.
-const detalhes = [fonte, paginas, ano != null ? String(ano) : undefined].filter(
-  (x): x is string => Boolean(x),
-);
+const abaTexto = etiqueta ?? (ano != null ? String(ano) : undefined);
+const detalhes = [fonte, paginas].filter((x): x is string => Boolean(x));
 ---
 
-<li class="ref">
-  <p class="ref__cita">
-    {autores && <span class="ref__autores">{autores}. </span>}
-    {
-      link ? (
-        <a class="ref__titulo" href={link} target="_blank" rel="noopener noreferrer">
-          {titulo}
-        </a>
-      ) : (
-        <span class="ref__titulo">{titulo}</span>
-      )
-    }
-    {detalhes.length > 0 && <span class="ref__detalhes">. {detalhes.join(', ')}.</span>}
-  </p>
-
-  {resumo && <p class="ref__resumo">{resumo}</p>}
-
+<li class="pub">
   {
-    downloads.length > 0 && (
-      <p class="ref__downloads">
-        {downloads.map((d) => (
-          <a class="ref__download" href={d.url} target="_blank" rel="noopener noreferrer">
-            <span aria-hidden="true">⭳</span> {d.rotulo}
-          </a>
-        ))}
+    abaTexto && (
+      <p class="pub__aba">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm0 2.5L17.5 8H14V4.5ZM8 13h8v1.5H8V13Zm0 3.5h8V18H8v-1.5ZM8 9.5h4V11H8V9.5Z" />
+        </svg>
+        {abaTexto}
       </p>
     )
   }
+
+  <div class="pub__corpo">
+    {
+      link ? (
+        <a class="pub__titulo" href={link} target="_blank" rel="noopener noreferrer">
+          {titulo}
+        </a>
+      ) : (
+        <span class="pub__titulo">{titulo}</span>
+      )
+    }
+
+    {autores && <p class="pub__autores">{autores}</p>}
+    {detalhes.length > 0 && <p class="pub__detalhes">{detalhes.join(', ')}</p>}
+    {resumo && <p class="pub__resumo">{resumo}</p>}
+
+    {
+      downloads.length > 0 && (
+        <p class="pub__downloads">
+          {downloads.map((d) => (
+            <a class="pub__download" href={d.url} target="_blank" rel="noopener noreferrer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 16 6 10l1.4-1.4 3.6 3.6V3h2v9.2l3.6-3.6L18 10l-6 6Zm-7 4v-2h14v2H5Z" />
+              </svg>
+              {d.rotulo}
+            </a>
+          ))}
+        </p>
+      )
+    }
+  </div>
 </li>
 
 <style>
-  .ref {
-    padding-block: var(--esp-2);
-    border-bottom: 1px solid var(--cor-borda);
+  .pub {
+    display: flex;
+    flex-direction: column;
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-g);
+    box-shadow: var(--sombra-sm);
+    transition: box-shadow var(--transicao), transform var(--transicao);
+    /* deixa a aba "sair" do canto superior sem ser recortada */
+    overflow: visible;
   }
-  .ref:last-child {
-    border-bottom: 0;
+  .pub:hover {
+    box-shadow: var(--sombra-alta);
+    transform: translateY(-2px);
   }
-  .ref__cita {
+
+  /* A aba de pasta: canto superior-direito arredondado, como no site antigo. */
+  .pub__aba {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    align-self: flex-start;
     margin: 0;
+    padding: 0.3rem 0.9rem 0.3rem 0.75rem;
+    background: var(--cor-destaque);
+    color: var(--cor-branco);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-radius: var(--raio-g) 16px 0 0;
   }
-  .ref__autores {
-    color: var(--cor-texto-suave);
+
+  .pub__corpo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--esp-2) var(--esp-3) var(--esp-3);
   }
-  .ref__titulo {
-    font-weight: 600;
+
+  .pub__titulo {
+    font-weight: 700;
+    font-size: 1.02rem;
+    line-height: 1.35;
     color: var(--cor-primaria-escura);
+    text-wrap: pretty;
   }
-  a.ref__titulo {
+  a.pub__titulo {
     color: var(--cor-primaria);
+    text-decoration: none;
+  }
+  a.pub__titulo:hover {
+    color: var(--cor-destaque-texto);
     text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
   }
-  a.ref__titulo:hover {
-    color: var(--cor-destaque);
-  }
-  .ref__detalhes {
-    color: var(--cor-texto-suave);
-  }
-  .ref__resumo {
+
+  /* Autor em terracota — o detalhe que dava personalidade à página antiga. */
+  .pub__autores {
     margin: var(--esp-1) 0 0;
-    font-size: 0.92rem;
-    color: var(--cor-texto-suave);
-    max-width: 68ch;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cor-destaque-texto);
   }
-  .ref__downloads {
+  .pub__detalhes {
+    margin: 0.15rem 0 0;
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
+  }
+  .pub__resumo {
     margin: var(--esp-2) 0 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--cor-texto-suave);
+  }
+
+  .pub__downloads {
+    margin: var(--esp-3) 0 0;
+    padding-top: var(--esp-2);
+    border-top: 1px solid var(--cor-borda);
     display: flex;
     flex-wrap: wrap;
     gap: var(--esp-1);
   }
-  .ref__download {
+  .pub__download {
     display: inline-flex;
     align-items: center;
     gap: 0.35em;
     padding: 0.3rem 0.75rem;
     border: 1px solid var(--cor-borda);
     border-radius: var(--raio);
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 600;
     text-decoration: none;
     color: var(--cor-primaria);
     background: var(--cor-branco);
     transition: var(--transicao);
   }
-  .ref__download:hover {
+  .pub__download:hover {
     border-color: var(--cor-primaria);
     background: var(--cor-primaria);
     color: var(--cor-branco);

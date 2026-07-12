@@ -32,7 +32,7 @@ function formatarData(iso?: string): string | null {
 ---
 
 <Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>
-  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.subtitulo} />
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.descricao} />
 
   <section class="secao">
     <div class="container">
@@ -73,11 +73,6 @@ function formatarData(iso?: string): string | null {
 </Base>
 
 <style>
-  .prosa {
-    max-width: 68ch;
-    color: var(--cor-texto-suave);
-    margin-bottom: var(--esp-4);
-  }
 
   .ano + .ano {
     margin-top: var(--esp-4);

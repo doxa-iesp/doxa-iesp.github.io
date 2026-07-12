@@ -1,11 +1,19 @@
 ---
 /**
  * Cartão de um membro da equipe.
- * Recebe os campos da coleção `equipe`. Foto, Lattes e e-mail são opcionais:
- * quando a foto falta, mostra um placeholder com as iniciais; os links só aparecem
- * quando existem de verdade (o site antigo não publica Lattes/e-mail da maioria).
+ *
+ * Recupera o desenho do site antigo: foto retangular ocupando o topo, régua
+ * terracota, e uma PLAQUETA em gradiente navy→verde com o nome — o sobrenome em
+ * terracota claro. Quando não há foto (12 dos 16 membros), o card vira só o
+ * gradiente e continua elegante: era a solução do site antigo para o placeholder.
+ *
+ * Contraste: o sobrenome usa `--cor-destaque-claro` sobre o gradiente escuro; o
+ * `--cor-destaque` puro daria 2,6:1 sobre a ponta verde e reprovaria em AA.
+ *
+ * Lattes e e-mail são opcionais e só aparecem quando existem de verdade.
  */
 import { url } from '../lib/url';
+import { partirNome } from '../lib/texto';
 
 interface Props {
   nome: string;
@@ -16,49 +24,58 @@ interface Props {
 }
 
 const { nome, cargo, foto, lattes, email } = Astro.props;
+const [primeiroNome, sobrenome] = partirNome(nome);
 
-/** Iniciais para o placeholder: primeira letra do primeiro e do último nome. */
+/** Iniciais para quando não há foto. */
 function iniciais(texto: string): string {
   const partes = texto.trim().split(/\s+/).filter(Boolean);
   const primeira = partes[0]?.[0] ?? '';
-  const ultima = partes.length > 1 ? (partes[partes.length - 1][0] ?? '') : '';
+  const ultima = partes.length > 1 ? (partes[partes.length - 1]![0] ?? '') : '';
   return (primeira + ultima).toUpperCase();
 }
 ---
 
 <li class="membro">
-  <div class="membro__avatar">
+  <div class="membro__retrato">
     {
       foto ? (
-        <img src={url(foto)} alt={`Foto de ${nome}`} width="128" height="128" loading="lazy" />
+        <img src={url(foto)} alt={`Foto de ${nome}`} width="320" height="320" loading="lazy" />
       ) : (
-        <span class="membro__placeholder" aria-hidden="true">
+        <span class="membro__iniciais" aria-hidden="true">
           {iniciais(nome)}
         </span>
       )
     }
+
+    <p class="membro__plaqueta">
+      {primeiroNome && <span class="membro__primeiro">{primeiroNome} </span>}<span
+        class="membro__sobrenome">{sobrenome}</span
+      >
+    </p>
   </div>
-  <h3 class="membro__nome">{nome}</h3>
-  <p class="membro__cargo">{cargo}</p>
-  {
-    (lattes || email) && (
-      <ul class="membro__links">
-        {lattes && (
-          <li>
-            <a href={lattes} target="_blank" rel="noopener noreferrer">
-              Lattes
-              <span aria-hidden="true"> ↗</span>
-            </a>
-          </li>
-        )}
-        {email && (
-          <li>
-            <a href={`mailto:${email}`}>E-mail</a>
-          </li>
-        )}
-      </ul>
-    )
-  }
+
+  <div class="membro__corpo">
+    <p class="membro__cargo">{cargo}</p>
+
+    {
+      (lattes || email) && (
+        <ul class="membro__links">
+          {lattes && (
+            <li>
+              <a href={lattes} target="_blank" rel="noopener noreferrer">
+                Lattes<span aria-hidden="true"> ↗</span>
+              </a>
+            </li>
+          )}
+          {email && (
+            <li>
+              <a href={`mailto:${email}`}>E-mail</a>
+            </li>
+          )}
+        </ul>
+      )
+    }
+  </div>
 </li>
 
 <style>
@@ -66,46 +83,69 @@ function iniciais(texto: string): string {
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     background: var(--cor-branco);
     border: 1px solid var(--cor-borda);
     border-radius: var(--raio-g);
-    padding: var(--esp-3) var(--esp-2);
+    overflow: hidden;
     box-shadow: var(--sombra-sm);
-    height: 100%;
+    transition: box-shadow var(--transicao), transform var(--transicao);
+  }
+  .membro:hover {
+    box-shadow: var(--sombra-alta);
+    transform: translateY(-2px);
   }
 
-  .membro__avatar {
-    width: 128px;
-    height: 128px;
-    margin-bottom: var(--esp-2);
+  .membro__retrato {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    /* sem foto, o próprio gradiente é o fundo do retrato */
+    background: var(--gradiente-marca-diag);
+    /* a régua terracota entre a foto e a plaqueta */
+    border-bottom: 3px solid var(--cor-destaque);
   }
-  .membro__avatar img {
-    width: 128px;
-    height: 128px;
-    border-radius: 50%;
+  .membro__retrato img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border: 3px solid var(--cor-fundo-alt);
+    object-position: center top;
   }
-  .membro__placeholder {
+  .membro__iniciais {
+    position: absolute;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 128px;
-    height: 128px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-clara));
-    color: var(--cor-branco);
-    font-size: 2.2rem;
+    color: rgb(255 255 255 / 35%);
+    font-size: 3rem;
     font-weight: 700;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
   }
 
-  .membro__nome {
-    font-size: 1.02rem;
-    margin: 0 0 0.15rem;
-    color: var(--cor-primaria-escura);
+  /* A plaqueta sobrepõe o pé da foto. */
+  .membro__plaqueta {
+    position: absolute;
+    inset: auto 0 0 0;
+    margin: 0;
+    padding: 0.55rem var(--esp-2);
+    background: var(--gradiente-marca-diag);
+    color: var(--cor-branco);
+    font-size: 0.98rem;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+  .membro__primeiro {
+    font-weight: 500;
+  }
+  .membro__sobrenome {
+    font-weight: 700;
+    color: var(--cor-destaque-claro);
+  }
+
+  .membro__corpo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--esp-2);
   }
   .membro__cargo {
     margin: 0;
@@ -116,7 +156,6 @@ function iniciais(texto: string): string {
   .membro__links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: var(--esp-2);
     list-style: none;
     margin: var(--esp-2) 0 0;

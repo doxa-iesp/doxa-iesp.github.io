@@ -25,7 +25,7 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
 ---
 
 <Base titulo="Acervo Audiovisual" descricao={pagina.data.descricao}>
-  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.subtitulo} />
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.descricao} variante="gradiente" />
 
   <section class="secao">
     <div class="container">
@@ -55,6 +55,27 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
           Para assistir aos vídeos é preciso enviar o formulário preenchido por e-mail. Os links
           abaixo levam aos arquivos hospedados no Google Drive do laboratório.
         </p>
+      </div>
+    </div>
+  </section>
+
+  {/* O vídeo dos melhores momentos é conteúdo DO ACERVO — antes ficava na home. */}
+  <section class="secao secao--alt">
+    <div class="container video">
+      <div>
+        <h2>Melhores momentos do horário eleitoral</h2>
+        <p>
+          Compilação do horário gratuito de propaganda eleitoral do segundo turno das eleições
+          presidenciais, montada a partir do acervo audiovisual do laboratório.
+        </p>
+      </div>
+      <div class="video__moldura">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${geral.video_destaque}`}
+          title="Melhores momentos do horário eleitoral — canal do DOXA no YouTube"
+          loading="lazy"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -93,9 +114,6 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
 </Base>
 
 <style>
-  .prosa {
-    max-width: 68ch;
-  }
 
   .acesso {
     margin-top: var(--esp-3);
@@ -177,6 +195,32 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
   }
   .link-inline:hover {
     color: var(--cor-destaque);
+  }
+  /* Vídeo dos melhores momentos — migrado da home. */
+  .video {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--esp-4);
+    align-items: center;
+  }
+  .video__moldura {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--raio-g);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+  }
+  .video__moldura iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  @media (max-width: 800px) {
+    .video {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 

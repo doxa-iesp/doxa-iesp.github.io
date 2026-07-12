@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ItemPublicacao from '../../components/ItemPublicacao.astro';
+import { url } from '../../lib/url';
+
+const publicacoes = await getCollection('publicacoes');
+
+const GRUPOS = [
+  { tipo: 'livro', titulo: 'Livros' },
+  { tipo: 'capitulo', titulo: 'Capítulos de Livro' },
+  { tipo: 'artigo', titulo: 'Artigos em Revista Científica' },
+  { tipo: 'outros', titulo: 'Outras Produções' },
+] as const;
+
+const grupos = GRUPOS.map((g) => ({
+  ...g,
+  itens: publicacoes
+    .filter((p) => p.data.tipo === g.tipo)
+    .sort((a, b) => (b.data.ano ?? 0) - (a.data.ano ?? 0)),
+})).filter((g) => g.itens.length > 0);
+---
+
+<Base
+  titulo="Publicações Acadêmicas"
+  descricao="Livros, capítulos e artigos em revistas científicas produzidos pelo DOXA."
+>
+  <PageHero
+    titulo="Publicações Acadêmicas"
+    subtitulo="Textos de natureza acadêmica publicados como livros e artigos em livros ou revistas científicas."
+  />
+
+  <section class="secao">
+    <div class="container">
+      <p class="voltar"><a href={url('/producao/')}>← Toda a produção</a></p>
+
+      {
+        grupos.map((grupo) => (
+          <section class="grupo">
+            <h2 class="titulo-secao">{grupo.titulo}</h2>
+            <ul class="grade-cards grade-cards--larga">
+              {grupo.itens.map((p) => {
+                const fonte = p.data.editora ?? p.data.revista;
+                // Um item não tem ano ("no prelo"); a fonte já costuma trazer essa nota.
+                const anoExibicao = p.data.ano
+                  ? p.data.ano
+                  : fonte && /\bno prelo\b/i.test(fonte)
+                    ? undefined
+                    : 'no prelo';
+                return (
+                  <ItemPublicacao
+                    titulo={p.data.titulo}
+                    autores={p.data.autores}
+                    ano={anoExibicao}
+                    fonte={fonte}
+                    paginas={p.data.paginas}
+                    url={p.data.url || undefined}
+                  />
+                );
+              })}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+
+  .grupo {
+    margin-top: var(--esp-4);
+  }
+  .grupo:first-of-type {
+    margin-top: 0;
+  }
+</style>

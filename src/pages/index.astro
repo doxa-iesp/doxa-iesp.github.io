@@ -1,25 +1,38 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import BocaDeJacare from '../components/BocaDeJacare.astro';
 import { url } from '../lib/url';
 
-const geral = (await getEntry('configuracao', 'geral'))!.data;
 const home = (await getEntry('paginas', 'home'))!;
 const { Content } = await render(home);
-const parceiros = await getCollection('parceiros');
 
-// A home é a APRESENTAÇÃO INSTITUCIONAL do grupo (decisão registrada em
-// docs/DECISAO_ARQUITETURA.md §6). Destaques de projetos entram como seção secundária.
+const [parceiros, pesquisas, publicacoes, acervo, mapas] = await Promise.all([
+  getCollection('parceiros'),
+  getCollection('pesquisas'),
+  getCollection('publicacoes'),
+  getCollection('acervo'),
+  getCollection('mapas'),
+]);
+
+// A home é a APRESENTAÇÃO INSTITUCIONAL do grupo (docs/DECISAO_ARQUITETURA.md §6).
+// O Vota Aí, o vídeo e o dashboard saíram daqui: viraram projetos (/projetos/) e
+// conteúdo do acervo (/acervo/).
 const destaques = [
+  {
+    titulo: 'Produção',
+    texto: 'Teses, dissertações, publicações acadêmicas, análises de conjuntura e working papers.',
+    href: '/producao/',
+  },
+  {
+    titulo: 'Projetos',
+    texto: 'Plataformas, painéis e pesquisas aplicadas — como o Vota Aí e a Geografia do Voto.',
+    href: '/projetos/',
+  },
   {
     titulo: 'Acervo Audiovisual',
     texto: 'O maior arquivo de propaganda eleitoral do Brasil, com programas desde 1989.',
     href: '/acervo/',
-  },
-  {
-    titulo: 'Pesquisas',
-    texto: 'Teses, dissertações e projetos em comportamento eleitoral e opinião pública.',
-    href: '/pesquisas/',
   },
   {
     titulo: 'Bancos de Dados',
@@ -27,27 +40,46 @@ const destaques = [
     href: '/bancos-de-dados/',
   },
 ];
+
+// Contagens vindas das coleções — nenhum número escrito à mão para envelhecer.
+const numeros = [
+  { valor: new Date().getFullYear() - 1996, rotulo: 'anos de pesquisa' },
+  { valor: acervo.length, rotulo: 'itens no acervo' },
+  { valor: pesquisas.length, rotulo: 'pesquisas' },
+  { valor: publicacoes.length, rotulo: 'publicações' },
+  { valor: mapas.length, rotulo: 'mapas eleitorais' },
+];
 ---
 
 <Base titulo="DOXA" descricao={home.data.descricao}>
   <section class="apresentacao">
-    <div class="container">
-      <p class="apresentacao__olho">IESP-UERJ · desde 1996</p>
-      <h1>{home.data.subtitulo}</h1>
-      <div class="prosa"><Content /></div>
+    <div class="container apresentacao__grade">
+      <div>
+        <p class="olho">IESP-UERJ · desde 1996</p>
+        <h1>{home.data.subtitulo}</h1>
+        <div class="prosa prosa--coluna"><Content /></div>
+      </div>
+
+      <div class="apresentacao__arte">
+        <BocaDeJacare />
+        <p class="apresentacao__legenda">
+          <strong>Boca de jacaré:</strong> o cruzamento das curvas de intenção de voto — o momento
+          que o laboratório estuda desde 1996.
+        </p>
+      </div>
     </div>
   </section>
 
   <section class="secao secao--alt">
     <div class="container">
       <h2>O que fazemos</h2>
-      <ul class="destaques">
+      <ul class="grade-cards">
         {
           destaques.map((d) => (
-            <li class="destaque">
-              <h3>{d.titulo}</h3>
-              <p>{d.texto}</p>
-              <a href={url(d.href)} class="destaque__link">
+            <li class="cartao">
+              <h3 class="cartao__titulo">{d.titulo}</h3>
+              <p class="cartao__texto">{d.texto}</p>
+              <a href={url(d.href)} class="cartao__link">
                 Conhecer <span aria-hidden="true">→</span>
               </a>
             </li>
@@ -57,45 +89,19 @@ const destaques = [
     </div>
   </section>
 
-  <section class="secao">
-    <div class="container video">
-      <div>
-        <h2>Melhores momentos do horário eleitoral</h2>
-        <p>
-          Compilação do horário gratuito de propaganda eleitoral do segundo turno das eleições
-          presidenciais, a partir do acervo audiovisual do laboratório.
-        </p>
-      </div>
-      <div class="video__moldura">
-        <iframe
-          src={`https://www.youtube-nocookie.com/embed/${geral.video_destaque}`}
-          title="Melhores momentos do horário eleitoral — canal do DOXA no YouTube"
-          loading="lazy"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-
-  <section class="secao secao--alt">
-    <div class="container ferramentas">
-      <article>
-        <h2>{geral.votaai_titulo}</h2>
-        <p>{geral.votaai_descricao}</p>
-        <a href={geral.votaai_url} class="btn btn-primario" target="_blank" rel="noopener noreferrer">
-          Acessar o Vota Aí
-        </a>
-      </article>
-      <article>
-        <h2>{geral.dashboard_titulo}</h2>
-        <p>
-          Painel interativo com os resultados das eleições municipais de 2024 no Rio de Janeiro e em
-          São Paulo.
-        </p>
-        <a href={geral.dashboard_url} class="btn btn-contorno" target="_blank" rel="noopener noreferrer">
-          Abrir o dashboard
-        </a>
-      </article>
+  <section class="numeros faixa-marca textura-x">
+    <div class="container">
+      <h2 class="numeros__titulo">O DOXA em números</h2>
+      <ul class="numeros__lista">
+        {
+          numeros.map((n) => (
+            <li>
+              <span class="numeros__valor">{n.valor}</span>
+              <span class="numeros__rotulo">{n.rotulo}</span>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </section>
 
@@ -106,7 +112,12 @@ const destaques = [
         {
           parceiros.map((p) => (
             <li>
-              <img src={url(p.data.arquivo)} alt={`Logotipo ${p.data.nome}`} loading="lazy" height="56" />
+              <img
+                src={url(p.data.arquivo)}
+                alt={`Logotipo ${p.data.nome}`}
+                loading="lazy"
+                height="56"
+              />
             </li>
           ))
         }
@@ -118,79 +129,76 @@ const destaques = [
 <style>
   .apresentacao {
     padding-block: var(--esp-5) var(--esp-4);
-    background:
-      radial-gradient(ellipse at top center, rgb(255 255 255 / 0%), rgb(237 237 237 / 55%)),
-      var(--cor-fundo);
   }
-  .apresentacao__olho {
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--cor-destaque);
-    margin-bottom: var(--esp-1);
+  /* Texto à esquerda, ilustração à direita: o vazio que sobrava à direita da
+     prosa agora tem conteúdo — e é conteúdo que fala do que o DOXA estuda. */
+  .apresentacao__grade {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: var(--esp-5);
+    align-items: center;
   }
   .apresentacao h1 {
-    max-width: 22ch;
+    max-width: 18ch;
   }
-  .prosa {
-    max-width: 68ch;
+  .apresentacao__legenda {
+    margin: var(--esp-2) 0 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
     color: var(--cor-texto-suave);
+  }
+  .apresentacao__legenda strong {
+    color: var(--cor-destaque-texto);
   }
 
-  .destaques {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--esp-3);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .destaque {
-    background: var(--cor-branco);
-    border-radius: var(--raio-g);
-    padding: var(--esp-3);
-    border-top: 3px solid var(--cor-destaque);
-    box-shadow: var(--sombra-sm);
-  }
-  .destaque h3 {
+  .cartao__titulo {
     margin-bottom: var(--esp-1);
   }
-  .destaque p {
+  .cartao__texto {
     color: var(--cor-texto-suave);
     font-size: 0.92rem;
+    flex: 1;
   }
-  .destaque__link {
+  .cartao__link {
     font-weight: 600;
     font-size: 0.9rem;
     text-decoration: none;
+    margin-top: auto;
   }
 
-  .video {
+  .numeros {
+    padding-block: var(--esp-4);
+  }
+  .numeros__titulo {
+    text-align: center;
+    margin-bottom: var(--esp-3);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
+  }
+  .numeros__lista {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: var(--esp-4);
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--esp-3);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
-  .video__moldura {
-    position: relative;
-    aspect-ratio: 16 / 9;
-    border-radius: var(--raio-g);
-    overflow: hidden;
-    box-shadow: var(--sombra);
+  .numeros__valor {
+    display: block;
+    font-size: clamp(1.8rem, 1.2rem + 1.8vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--cor-destaque-claro);
   }
-  .video__moldura iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-  .ferramentas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--esp-4);
+  .numeros__rotulo {
+    display: block;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    opacity: 0.9;
   }
 
   .parceiros__titulo {
@@ -218,10 +226,13 @@ const destaques = [
     opacity: 1;
   }
 
-  @media (max-width: 800px) {
-    .video,
-    .ferramentas {
+  @media (max-width: 900px) {
+    .apresentacao__grade {
       grid-template-columns: 1fr;
+      gap: var(--esp-3);
+    }
+    .apresentacao h1 {
+      max-width: none;
     }
   }
 </style>

@@ -9,6 +9,20 @@ export function url(caminho: string): string {
   return `${BASE}${limpo}`;
 }
 
+/** Um link é externo quando aponta para outro domínio (ou é um mailto). */
+export function externo(destino: string): boolean {
+  return /^(https?:)?\/\//.test(destino) || destino.startsWith('mailto:');
+}
+
+/**
+ * Resolve um link que pode ser interno ou externo. Os projetos, por exemplo,
+ * têm `links[]` que tanto podem apontar para `/mapas-de-votacao/` quanto para
+ * um site de fora — só os externos levam `target="_blank"`.
+ */
+export function linkPara(destino: string): string {
+  return externo(destino) ? destino : url(destino);
+}
+
 /** Marca o item de menu ativo comparando caminhos normalizados. */
 export function ativo(atual: string, alvo: string): boolean {
   const norm = (s: string) => s.replace(BASE, '').replace(/\/+$/, '') || '/';

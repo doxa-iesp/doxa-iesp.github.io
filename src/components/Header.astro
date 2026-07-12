@@ -59,8 +59,14 @@ const atual = Astro.url.pathname;
 </header>
 
 <style>
+  /* A borda terracota é metade de um par: esta fecha o cabeçalho, a do rodapé
+     abre embaixo. A simetria é o efeito. */
   .cabecalho {
-    border-bottom: 4px solid var(--cor-destaque);
+    border-bottom: var(--borda-marca) solid var(--cor-destaque);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: var(--sombra-sm);
   }
   .cabecalho__marca {
     background: var(--cor-branco);
@@ -93,8 +99,10 @@ const atual = Astro.url.pathname;
     background: var(--cor-primaria);
   }
 
+  /* O gradiente navy→verde é a assinatura da marca. Antes esta barra fazia
+     navy→navy-claro e o verde nunca aparecia no site. */
   .nav {
-    background: linear-gradient(90deg, var(--cor-primaria), var(--cor-primaria-clara));
+    background: var(--gradiente-marca);
   }
   .nav__lista {
     display: flex;
@@ -116,14 +124,28 @@ const atual = Astro.url.pathname;
     letter-spacing: 0.03em;
     transition: var(--transicao);
   }
-  .nav__link:hover,
-  .nav__link[aria-current='page'] {
+  .nav__link:hover {
     background: rgb(0 0 0 / 18%);
     color: var(--cor-branco);
   }
+  /* A aba assimétrica com a faixa terracota à direita é a assinatura do menu do
+     site antigo. Antes o item ativo era um cinza translúcido, indistinguível do
+     hover. */
+  .nav__link[aria-current='page'] {
+    background: var(--cor-primaria-escura);
+    color: var(--cor-branco);
+    border-radius: var(--raio) 18px 0 0;
+    border-right: 3px solid var(--cor-destaque);
+  }
   .nav__seta {
+    display: inline-block;
     font-size: 0.7em;
     margin-left: 4px;
+    transition: transform var(--transicao);
+  }
+  .nav__item--dropdown:hover .nav__seta,
+  .nav__item--dropdown:focus-within .nav__seta {
+    transform: rotate(180deg);
   }
 
   .nav__submenu {

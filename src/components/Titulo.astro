@@ -1,0 +1,46 @@
+---
+/**
+ * Título bi-peso — a assinatura tipográfica do DOXA.
+ *
+ * O site antigo escrevia "Textos para **Discussão**", "Publicações **Acadêmicas**",
+ * "Nossa **Equipe**": primeira parte em peso normal, última em destaque. Por
+ * padrão destacamos a última palavra, o que já acerta quase todos os títulos do
+ * site. Passe `forte` quando a quebra natural for outra.
+ *
+ * A cor da parte forte vem de `--titulo-cor-forte`, para que uma faixa em
+ * gradiente possa sobrescrevê-la (o terracota escuro some sobre o verde).
+ */
+import { partirUltimaPalavra } from '../lib/texto';
+
+interface Props {
+  titulo: string;
+  forte?: string;
+  nivel?: 'h1' | 'h2' | 'h3';
+  classe?: string;
+}
+
+const { titulo, forte, nivel = 'h2', classe } = Astro.props;
+
+const [inicio, fim] = forte
+  ? [titulo.replace(new RegExp(`\\s*${forte}\\s*$`), '').trim(), forte]
+  : partirUltimaPalavra(titulo);
+
+const Tag = nivel;
+---
+
+<Tag class:list={['titulo', classe]}>
+  {inicio && <span class="titulo__leve">{inicio} </span>}<span class="titulo__forte">{fim}</span>
+</Tag>
+
+<style>
+  .titulo {
+    font-weight: 700;
+  }
+  .titulo__leve {
+    font-weight: 400;
+  }
+  .titulo__forte {
+    font-weight: 700;
+    color: var(--titulo-cor-forte, inherit);
+  }
+</style>

@@ -37,6 +37,7 @@ src/
   data/*.yaml         ← EDITÁVEL: listas (publicações, mídia, seminários, acervo, mapas…)
   content/
     equipe/*.yaml     ← EDITÁVEL: um arquivo por pessoa
+    projetos/*.md     ← EDITÁVEL: um arquivo por projeto (o nome do arquivo vira a URL)
     eventos/*.md      ← EDITÁVEL: um arquivo por evento
     paginas/*.md      ← EDITÁVEL: a prosa de cada página
   components/ layouts/ pages/ styles/ lib/   ← código
@@ -64,6 +65,33 @@ Para migrar a `www.lab-doxa.org.br`: trocar `site`, remover `base` em
 [astro.config.mjs](astro.config.mjs) e criar `public/CNAME`. O `CNAME` da raiz do repo **não** é
 publicado — só `public/` entra no build.
 
+## Estrutura do site
+
+- **`/producao/`** reúne o que o laboratório produz: pesquisas, publicações acadêmicas, análises de
+  conjuntura e textos para discussão. Antes eram dois itens de menu separados.
+- **`/projetos/`** reúne as iniciativas com entrega pública (Vota Aí, dashboards, Pesquisa COVID,
+  Geografia do Voto). Antes viviam espalhadas pela home e dentro de `site.yaml`.
+- As rotas antigas (`/pesquisas/`, `/publicacoes/*`, `/pesquisa-covid/`) continuam vivas como
+  **páginas de redirecionamento** ([src/components/Redirecionamento.astro](src/components/Redirecionamento.astro)).
+
+## Sistema visual
+
+Tudo em [src/styles/tokens.css](src/styles/tokens.css) e [src/styles/global.css](src/styles/global.css).
+Não redefina `.prosa`, `.cartao`, `.grade-cards` numa página: elas são globais **de propósito** —
+a `.prosa` já esteve copiada em 12 arquivos, sempre sem `margin-inline: auto`, e por isso o texto
+ficava preso à esquerda.
+
+**O terracota tem três tokens, e a distinção importa:**
+
+| Token | Uso | Por quê |
+|---|---|---|
+| `--cor-destaque` `#ce673e` | **só superfície** (aba, borda, plaqueta) | como texto dá **3,73:1** sobre branco — reprova em AA |
+| `--cor-destaque-texto` `#b3512c` | texto sobre fundo claro | 5,08:1 ✓ |
+| `--cor-destaque-claro` `#ffd3be` | texto sobre o gradiente escuro | 4,55:1 no pior ponto ✓ |
+
+O `--gradiente-marca` (navy→verde) é a assinatura da marca. Use com parcimônia: nav, rodapé, capas
+de seção e **uma** faixa de destaque por página — se toda seção ganhar gradiente, vira um bloco só.
+
 ## Armadilhas conhecidas
 
 **1. O loader `file()` do Astro engole erros de YAML.** Se um `src/data/*.yaml` estiver
@@ -88,6 +116,12 @@ no commit**, não o que está no disco:
 ```bash
 git archive --format=tar HEAD | tar -x -C /tmp/t && cd /tmp/t && npm ci && npm run build
 ```
+
+**2c. `redirects` do `astro.config.mjs` ignora o `base`.** O Astro monta o destino só a partir dos
+segmentos da rota (`dist/core/routing/generator.js`), sem o `base`. Como o site vive em `/DOXA/`, um
+`redirects: {'/pesquisas': '/producao/pesquisas'}` mandaria o visitante para
+`felipelamarca.com/producao/pesquisas/` — 404, **e só em produção**. Por isso os redirecionamentos
+são páginas-stub que montam o destino com `url()`.
 
 **3. Defeito na fonte: `programas-eleitorais-capitais.csv`.** A coluna `municipio` está
 rotacionada em relação aos candidatos (Eduardo Paes aparece como Florianópolis). Documentado em

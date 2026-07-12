@@ -1,0 +1,105 @@
+---
+/**
+ * "Boca de jacaré" — o cruzamento das curvas de intenção de voto de dois
+ * candidatos. É o melhor ativo conceitual do site antigo: é literalmente o que o
+ * DOXA estuda.
+ *
+ * O original era um PNG datado (sombras, cores aleatórias, pílulas cinza). Aqui
+ * ele é redesenhado em SVG com as cores da marca, e as linhas se desenham na
+ * entrada. Decorativo: `aria-hidden`, sem texto alternativo.
+ */
+---
+
+<svg
+  class="jacare"
+  viewBox="0 0 420 260"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  focusable="false"
+>
+  <!-- grade -->
+  <g class="jacare__grade" stroke="currentColor" stroke-width="1">
+    {[30, 95, 160, 225, 290, 355, 400].map((x) => <line x1={x} y1="18" x2={x} y2="222" />)}
+    <line x1="30" y1="222" x2="400" y2="222" />
+  </g>
+
+  <!-- candidato que cai: começa em alta e é ultrapassado -->
+  <path
+    class="jacare__linha jacare__linha--a"
+    d="M30 78 L95 62 L160 74 L225 96 L290 128 L355 158 L400 172"
+    stroke="var(--cor-primaria)"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- candidato que sobe: cruza o primeiro por volta de 290 -->
+  <path
+    class="jacare__linha jacare__linha--b"
+    d="M30 186 L95 178 L160 166 L225 140 L290 128 L355 92 L400 66"
+    stroke="var(--cor-destaque)"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- terceira via, estável embaixo -->
+  <path
+    class="jacare__linha jacare__linha--c"
+    d="M30 204 L95 200 L160 205 L225 198 L290 202 L355 196 L400 199"
+    stroke="var(--cor-acento)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.75"
+  />
+
+  <!-- o ponto do cruzamento: a "boca" -->
+  <circle class="jacare__cruz" cx="290" cy="128" r="7" fill="var(--cor-branco)" stroke="var(--cor-destaque)" stroke-width="3" />
+</svg>
+
+<style>
+  .jacare {
+    width: 100%;
+    height: auto;
+    color: var(--cor-borda); /* a grade herda daqui */
+  }
+
+  .jacare__linha {
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+    animation: tracar 1.6s ease-out forwards;
+  }
+  .jacare__linha--b {
+    animation-delay: 0.15s;
+  }
+  .jacare__linha--c {
+    animation-delay: 0.3s;
+  }
+  .jacare__cruz {
+    opacity: 0;
+    animation: surgir 0.5s ease-out 1.35s forwards;
+  }
+
+  @keyframes tracar {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes surgir {
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Sem animação: as linhas já nascem desenhadas. */
+  @media (prefers-reduced-motion: reduce) {
+    .jacare__linha {
+      stroke-dashoffset: 0;
+    }
+    .jacare__cruz {
+      opacity: 1;
+    }
+  }
+</style>

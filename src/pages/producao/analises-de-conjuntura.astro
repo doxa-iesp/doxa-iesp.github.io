@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ItemPublicacao from '../../components/ItemPublicacao.astro';
+import { url } from '../../lib/url';
+
+const analises = await getCollection('analises');
+
+// Agrupa por ciclo (ano eleitoral), do mais recente para o mais antigo.
+const ciclos = [...new Set(analises.map((a) => a.data.ciclo))].sort((a, b) => b.localeCompare(a));
+
+const grupos = ciclos.map((ciclo) => ({
+  ciclo,
+  itens: analises.filter((a) => a.data.ciclo === ciclo),
+}));
+---
+
+<Base
+  titulo="Análises de Conjuntura Eleitoral"
+  descricao="Textos produzidos pelo DOXA em períodos eleitorais, ciclo a ciclo."
+>
+  <PageHero
+    titulo="Análises de Conjuntura Eleitoral"
+    subtitulo="Textos produzidos em períodos eleitorais sobre as diferentes etapas e dimensões da campanha."
+  />
+
+  <section class="secao">
+    <div class="container">
+      <p class="voltar"><a href={url('/producao/')}>← Toda a produção</a></p>
+
+      {
+        grupos.map((grupo) => (
+          <section class="grupo">
+            <h2 class="titulo-secao">Eleições {grupo.ciclo}</h2>
+            <ul class="grade-cards grade-cards--larga">
+              {grupo.itens.map((a) => (
+                <ItemPublicacao
+                  titulo={a.data.titulo}
+                  fonte={a.data.periodo}
+                  resumo={a.data.descricao}
+                  downloads={a.data.arquivos}
+                  etiqueta={a.data.ciclo}
+                />
+              ))}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+
+  .grupo {
+    margin-top: var(--esp-4);
+  }
+  .grupo:first-of-type {
+    margin-top: 0;
+  }
+</style>

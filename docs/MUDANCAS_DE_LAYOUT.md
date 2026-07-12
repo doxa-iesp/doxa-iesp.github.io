@@ -84,3 +84,66 @@ apontava justamente para ele. Os CSVs agora são servidos por nós, em `public/d
 
 **`/eventos/`** → a página não tem mais o texto introdutório → no site antigo ele era apenas o
 título "Eventos DOXA", sem nenhum parágrafo. Um cabeçalho vazio abaixo do `<h1>`.
+
+---
+
+## Reestruturação de julho de 2026 — identidade visual, Produção e Projetos
+
+A reconstrução em Astro havia deixado o site **correto e limpo, mas anônimo**: as cores certas, a
+personalidade zero. As linhas abaixo resgatam a identidade do site antigo — modernizada, não copiada.
+
+**Todas as páginas** → o gradiente da barra de navegação passou de navy→navy-claro para o
+**gradiente da marca, navy→verde** (`#305371 → #086D60`) → esse gradiente era a assinatura do site
+antigo (barra do slogan, rodapé, plaquetas), e o verde `--cor-acento` simplesmente não aparecia no
+site novo.
+
+**Todas as páginas** → o rodapé ganhou o gradiente da marca e uma **borda terracota no topo**,
+formando um **par simétrico** com a do cabeçalho → no site antigo as duas bordas emolduravam a
+página; a reconstrução tinha ficado só com a de cima.
+
+**Todas as páginas** → o **"X" do logotipo** voltou como marca-d'água sutil (4,5% de opacidade), em
+faixas específicas: rodapé, capas de seção e a faixa de números → no site antigo era o fundo da
+página inteira, com uma vinheta cinza que a envelhecia. Aqui é pontual.
+
+**Todas as páginas** → títulos **bi-peso**: "Textos para **Discussão**", "Bancos de **Dados**" —
+parte em peso normal, última palavra em negrito e terracota → assinatura tipográfica do site antigo
+(widget `jet-headline`), perdida na migração.
+
+**Todas as páginas** → o texto corrido deixou de ficar **preso à esquerda**. A regra
+`.prosa { max-width: 68ch }` estava copiada em 12 páginas, nenhuma com `margin-inline: auto`: o
+bloco ficava ancorado à esquerda de um container de 1140px, com ~450px de vazio morto à direita
+enquanto os cards abaixo ocupavam a largura toda. Agora a coluna de leitura é centralizada, e a
+regra vive num lugar só (`global.css`).
+
+**`/producao/`** (nova) → **Pesquisas e Publicações deixaram de ser duas ilhas** e passaram a ser
+subseções de "Produção" — que é o que o laboratório produz. Rotas antigas (`/pesquisas/`,
+`/publicacoes/*`) continuam funcionando, via páginas de redirecionamento.
+
+**`/projetos/`** (nova) → reúne as iniciativas com entrega pública: Vota Aí, Eleições Rio e SP 2024,
+Pesquisa COVID e Geografia do Voto → antes ficavam **espalhadas pela home** e escondidas dentro de
+`site.yaml`. O site antigo já tratava isso como projetos (tinha um ribbon "Projeto Especial" sobre o
+card do COVID).
+
+**`/` (home)** → saíram o Vota Aí, o vídeo e o dashboard do Power BI. Entraram: a ilustração
+**"boca de jacaré"** ao lado do texto de apresentação, um card "Projetos" e uma faixa **"O DOXA em
+números"** com contagens calculadas das coleções → a home é a apresentação do grupo, não um
+mostruário de ferramentas. A boca de jacaré — o cruzamento das curvas de intenção de voto — é o
+melhor ativo conceitual do site antigo: é literalmente o que o DOXA estuda. Foi redesenhada em SVG
+com as cores da marca (o original era um PNG datado, com sombras e cores aleatórias).
+
+**`/acervo/`** → recebeu o vídeo "Melhores momentos do horário eleitoral", que estava na home → é
+uma compilação do próprio acervo; é ali que ele faz sentido.
+
+**`/producao/textos-para-discussao/` e demais listas** → os itens deixaram de ser linhas de
+referência ABNT separadas por hairlines cinza e voltaram a ser **cards brancos com aba de pasta
+terracota**, título navy e **autor em terracota** → era o desenho do site antigo, e a regressão mais
+sentida. O autor usa `--cor-destaque-texto` (#b3512c, 5,08:1), não o terracota puro: o `#ce673e` dá
+**3,73:1** sobre branco e reprovaria em AA.
+
+**`/institucional/`** → os cards de equipe trocaram o avatar circular genérico por **foto + plaqueta
+em gradiente com o sobrenome em terracota** → desenho do site antigo. Sem foto, o card vira só o
+gradiente e continua elegante — resolve o placeholder dos 12 membros sem foto.
+
+**`/producao/textos-para-discussao/`** → o texto da página foi reescrito → ele era **cópia literal**
+do texto de Publicações e falava dos "dois tipos de publicação", não de working papers. O erro vem do
+WordPress (está fiel em `extracao/`); a correção é editorial e vive no conversor.

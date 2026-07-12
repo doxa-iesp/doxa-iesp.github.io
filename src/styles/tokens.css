@@ -5,25 +5,44 @@
   --cor-primaria: #305371;
   --cor-primaria-clara: #3d6b8c;
   --cor-primaria-escura: #1e3a50;
-  --cor-destaque: #ce673e; /* terracota: borda do header, ações */
-  --cor-acento: #086d60;
+  --cor-acento: #086d60; /* verde: a outra ponta do gradiente da marca */
+
+  /* O terracota tem TRÊS papéis, porque o #ce673e puro reprova em contraste
+     como texto: 3,73:1 sobre branco (AA exige 4,5:1) e ~2,6:1 sobre o verde.
+     Use --destaque só em SUPERFÍCIE (aba, borda, plaqueta); para TEXTO use as
+     variantes calculadas abaixo. */
+  --cor-destaque: #ce673e; /* superfície */
+  --cor-destaque-texto: #b3512c; /* texto sobre claro — 5,08:1 ✓ */
+  --cor-destaque-claro: #ffd3be; /* texto sobre o gradiente escuro ✓ */
+
   --cor-texto: #26231e;
   --cor-texto-suave: #55524d;
   --cor-fundo: #ffffff;
-  --cor-fundo-alt: #ededed;
+  --cor-fundo-alt: #f4f4f2;
   --cor-borda: #d0d5de;
   --cor-branco: #ffffff;
+
+  /* O gradiente é a assinatura da marca: navy → verde.
+     No site antigo era a barra do slogan, o rodapé e as plaquetas da equipe. */
+  --gradiente-marca: linear-gradient(90deg, var(--cor-primaria), var(--cor-acento));
+  --gradiente-marca-diag: linear-gradient(135deg, var(--cor-primaria), var(--cor-acento));
+
+  /* A borda terracota é um PAR: fecha o cabeçalho embaixo e abre o rodapé em cima.
+     A simetria é o efeito — não a espessura. */
+  --borda-marca: 4px;
 
   /* tipografia */
   --fonte: 'Montserrat Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --altura-linha: 1.7;
+  --largura-prosa: 68ch; /* medida de leitura confortável */
 
   /* layout */
   --largura-max: 1140px;
-  --raio: 4px;
-  --raio-g: 8px;
+  --raio: 6px;
+  --raio-g: 12px;
   --sombra: 0 2px 8px rgb(0 0 0 / 12%);
   --sombra-sm: 0 1px 3px rgb(0 0 0 / 8%);
+  --sombra-alta: 0 8px 24px rgb(30 58 80 / 14%);
   --transicao: 0.2s ease;
 
   /* espaçamento */

@@ -334,6 +334,42 @@ Por exemplo, para trocar o e-mail, mude apenas `acervo-doxa@iesp.uerj.br`. Cuida
 digitar errado o nome do campo (`email`, `endereco`, `cep`): se escrever `emial`, o PR fica vermelho
 (veja o Erro 3). O e-mail de contato aparece no rodapé de todas as páginas e na página do Acervo.
 
+### 4.11. Adicionar um projeto
+
+Um **projeto** é uma iniciativa do laboratório com entrega pública: uma plataforma, um painel, uma
+pesquisa aplicada. Exemplos que já estão no site: Vota Aí, Eleições Rio e São Paulo 2024, Pesquisa
+COVID, Geografia do Voto.
+
+Crie um arquivo **novo** em **`src/content/projetos/`**. O nome do arquivo vira o endereço da
+página: `mapa-da-desinformacao.md` → `.../projetos/mapa-da-desinformacao/`. Use só letras
+minúsculas, números e hífens — **sem espaços e sem acentos**.
+
+```markdown
+---
+titulo: "Nome do Projeto"
+resumo: "Uma ou duas frases. É o que aparece no cartão da lista de projetos."
+periodo: "2025 — presente"          # opcional
+status: "ativo"                      # opcional: ativo | concluido
+imagem: "/img/projetos/nome.jpg"     # opcional (envie a imagem para public/img/projetos/)
+url: "https://site-do-projeto.br"    # opcional: o site externo do projeto
+rotulo_url: "Acessar a plataforma"   # opcional: o texto do botão
+links:                               # opcional: outros links (internos ou externos)
+  - rotulo: "Baixar os dados (CSV)"
+    url: "/dados/arquivo.csv"
+destaque: false                      # true = o projeto ganha um cartão grande na lista
+---
+
+Aqui vai a descrição longa, em parágrafos normais. Pode usar **negrito** e *itálico*.
+```
+
+Só o `titulo` e o `resumo` são obrigatórios. **Não invente `status`**: se você não souber se o
+projeto está em andamento ou concluído, apague a linha — a etiqueta simplesmente não aparece.
+
+> ⚠️ **Importante:** crie o arquivo **também** em `extracao/dados/projetos/`, com o mesmo conteúdo.
+> Existe um script (`scripts/converter-conteudo.py`) que regenera a pasta `src/content/projetos/` a
+> partir de `extracao/` — se alguém rodar esse script, um projeto que só exista em `src/` é apagado.
+> Na dúvida, peça ajuda a quem cuida do site.
+
 ---
 
 ## 5. Tabela de valores permitidos

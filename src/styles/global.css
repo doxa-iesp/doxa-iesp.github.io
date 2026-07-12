@@ -6,10 +6,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: var(--fonte);
   line-height: var(--altura-linha);
+  letter-spacing: 0.01em;
   color: var(--cor-texto);
   background: var(--cor-fundo);
   -webkit-font-smoothing: antialiased;
@@ -27,7 +32,7 @@ a {
   text-underline-offset: 2px;
 }
 a:hover {
-  color: var(--cor-destaque);
+  color: var(--cor-destaque-texto);
 }
 
 h1,
@@ -67,25 +72,196 @@ p {
   background: var(--cor-fundo-alt);
 }
 
-/* foco visível para navegação por teclado */
+/* ---------------------------------------------------------------- prosa
+
+   Coluna de leitura CENTRALIZADA. Antes esta regra estava copiada em 12
+   páginas, sempre sem `margin-inline: auto` — o texto ficava preso à esquerda
+   de um container de 1140px, com ~450px de vazio morto à direita.
+   Como este arquivo não é escopado, os seletores de descendente abaixo
+   alcançam o markdown renderizado sem precisar de `:global()`.            */
+
+.prosa {
+  max-width: var(--largura-prosa);
+  margin-inline: auto;
+  color: var(--cor-texto-suave);
+}
+.prosa--largo {
+  --largura-prosa: 76ch;
+}
+/* Quando a prosa divide espaço com uma ilustração, ela não deve se recentrar
+   dentro da própria coluna — fica à esquerda da grade. */
+.prosa--coluna {
+  margin-inline: 0;
+}
+.prosa > :last-child {
+  margin-bottom: 0;
+}
+.prosa h2 {
+  margin-top: var(--esp-4);
+  color: var(--cor-primaria-escura);
+}
+.prosa h2:first-child {
+  margin-top: 0;
+}
+.prosa h3 {
+  margin-top: var(--esp-3);
+}
+.prosa a {
+  color: var(--cor-primaria);
+  font-weight: 600;
+}
+.prosa ul,
+.prosa ol {
+  padding-left: 1.25rem;
+}
+
+/* ---------------------------------------------------------------- grades */
+
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-min, 280px), 1fr));
+  gap: var(--esp-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.grade-cards--estreita {
+  --card-min: 220px;
+}
+.grade-cards--larga {
+  --card-min: 340px;
+}
+
+/* ---------------------------------------------------------------- cartão */
+
+.cartao {
+  display: flex;
+  flex-direction: column;
+  background: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
+  border-top: 3px solid var(--cor-destaque);
+  border-radius: var(--raio-g);
+  padding: var(--esp-3);
+  box-shadow: var(--sombra-sm);
+  transition: box-shadow var(--transicao), transform var(--transicao);
+}
+.cartao:hover {
+  box-shadow: var(--sombra-alta);
+  transform: translateY(-2px);
+}
+
+/* ------------------------------------------------------- títulos e voltar */
+
+.titulo-secao {
+  border-bottom: 2px solid var(--cor-destaque);
+  padding-bottom: var(--esp-1);
+  margin-bottom: var(--esp-3);
+}
+
+.voltar {
+  margin: 0 0 var(--esp-3);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.voltar a {
+  text-decoration: none;
+}
+.voltar a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------- faixa da marca + textura
+
+   A faixa em gradiente é o elemento mais definidor da identidade do DOXA.
+   Use com parcimônia: nav, rodapé, capas de seção e UMA faixa de destaque
+   por página. Se todas as seções ganharem gradiente, vira um bloco só.     */
+
+.faixa-marca {
+  background: var(--gradiente-marca);
+  color: var(--cor-branco);
+}
+.faixa-marca :is(h1, h2, h3, h4, p) {
+  color: var(--cor-branco);
+}
+.faixa-marca a {
+  color: var(--cor-branco);
+}
+.faixa-marca a:hover {
+  color: var(--cor-destaque-claro);
+}
+
+/* O "X" da marca virando marca-d'água. Usa `mask` + `currentColor` para
+   servir tanto claro-sobre-escuro quanto o contrário. O asset mora em
+   src/assets/ (e não em public/) porque o CSS não passa pelo helper url() —
+   um caminho absoluto daria 404 sob o base path /DOXA. */
+.textura-x {
+  position: relative;
+  isolation: isolate;
+}
+.textura-x::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: currentColor;
+  opacity: 0.045;
+  mask: url('../assets/marca-x.svg') repeat 0 0 / 116px auto;
+  -webkit-mask: url('../assets/marca-x.svg') repeat 0 0 / 116px auto;
+}
+
+/* ---------------------------------------------------------------- etiquetas */
+
+.etiqueta {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--cor-fundo-alt);
+  color: var(--cor-texto-suave);
+}
+.etiqueta--ativo {
+  background: color-mix(in srgb, var(--cor-acento) 14%, white);
+  color: var(--cor-acento);
+}
+.etiqueta--destaque {
+  background: color-mix(in srgb, var(--cor-destaque) 16%, white);
+  color: var(--cor-destaque-texto);
+}
+
+/* olho / kicker acima de um título */
+.olho {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--cor-destaque-texto);
+  margin-bottom: var(--esp-1);
+}
+
+/* --------------------------------------------------------------- utilidades */
+
 :focus-visible {
   outline: 3px solid var(--cor-destaque);
   outline-offset: 2px;
 }
 
-/* link "pular para o conteúdo" */
 .pular-nav {
   position: absolute;
   left: -9999px;
   top: 0;
   z-index: 100;
-  background: var(--cor-branco);
-  color: var(--cor-primaria);
+  background: var(--cor-primaria);
+  color: var(--cor-branco);
   padding: var(--esp-1) var(--esp-2);
+  border-radius: 0 0 var(--raio) 0;
 }
 .pular-nav:focus {
-  left: var(--esp-2);
-  top: var(--esp-1);
+  left: 0;
+  top: 0;
 }
 
 .btn {
@@ -120,6 +296,9 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   * {
     transition: none !important;
     animation: none !important;

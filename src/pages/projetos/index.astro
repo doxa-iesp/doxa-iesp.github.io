@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import CardProjeto from '../../components/CardProjeto.astro';
+
+const projetos = (await getCollection('projetos')).sort(
+  (a, b) => (a.data.ordem ?? 99) - (b.data.ordem ?? 99),
+);
+---
+
+<Base
+  titulo="Projetos"
+  descricao="As iniciativas do DOXA com entrega pública: plataformas, painéis e pesquisas aplicadas."
+>
+  <PageHero
+    titulo="Projetos"
+    subtitulo="As iniciativas do laboratório com entrega pública — plataformas, painéis interativos e pesquisas aplicadas, abertas a quem quiser consultar."
+    variante="gradiente"
+  />
+
+  <section class="secao">
+    <div class="container">
+      <ul class="grade-cards grade-cards--larga">
+        {
+          projetos.map((p) => (
+            <CardProjeto
+              slug={p.id}
+              titulo={p.data.titulo}
+              resumo={p.data.resumo}
+              periodo={p.data.periodo}
+              status={p.data.status}
+              imagem={p.data.imagem}
+              destaque={p.data.destaque}
+            />
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Base>

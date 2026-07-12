@@ -1,14 +1,25 @@
 ---
+import Titulo from './Titulo.astro';
+
 interface Props {
   titulo: string;
   subtitulo?: string;
+  tituloForte?: string;
+  /**
+   * `gradiente` reserva-se às CAPAS DE SEÇÃO (/producao/, /projetos/, /acervo/,
+   * /institucional/). Se todas as páginas ganhassem a faixa, ela empilharia com
+   * o gradiente da nav e viraria um bloco azul-verde gigante.
+   */
+  variante?: 'claro' | 'gradiente';
 }
-const { titulo, subtitulo } = Astro.props;
+
+const { titulo, subtitulo, tituloForte, variante = 'claro' } = Astro.props;
+const gradiente = variante === 'gradiente';
 ---
 
-<section class="hero">
+<section class:list={['hero', gradiente && 'hero--gradiente faixa-marca textura-x']}>
   <div class="container">
-    <h1>{titulo}</h1>
+    <Titulo nivel="h1" titulo={titulo} forte={tituloForte} classe="hero__titulo" />
     {subtitulo && <p class="hero__sub">{subtitulo}</p>}
   </div>
 </section>
@@ -18,13 +29,34 @@ const { titulo, subtitulo } = Astro.props;
     background: var(--cor-fundo-alt);
     padding-block: var(--esp-4);
     border-bottom: 1px solid var(--cor-borda);
+    /* a parte forte do título em terracota escuro sobre o cinza claro */
+    --titulo-cor-forte: var(--cor-destaque-texto);
   }
-  .hero h1 {
+  .hero__titulo {
     margin: 0;
   }
   .hero__sub {
     margin: var(--esp-1) 0 0;
     color: var(--cor-texto-suave);
     max-width: 62ch;
+  }
+
+  /* Capa de seção: faixa em gradiente, título branco, parte forte em terracota
+     claro — o #ce673e sobre a ponta verde daria 2,6:1 e reprovaria.
+
+     O `background` é repetido aqui de propósito: o Astro escopa `.hero` como
+     `.hero[data-astro-cid-…]`, que tem especificidade maior que a `.faixa-marca`
+     global — sem esta linha, o fundo cinza vence e o título some. */
+  .hero--gradiente {
+    background: var(--gradiente-marca);
+    border-bottom: 0;
+    padding-block: var(--esp-5);
+    --titulo-cor-forte: var(--cor-destaque-claro);
+  }
+  .hero--gradiente .hero__titulo {
+    color: var(--cor-branco);
+  }
+  .hero--gradiente .hero__sub {
+    color: rgb(255 255 255 / 88%);
   }
 </style>

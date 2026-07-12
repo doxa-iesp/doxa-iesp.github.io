@@ -13,7 +13,7 @@ const formatador = new Intl.NumberFormat('pt-BR');
 ---
 
 <Base titulo="Bancos de Dados" descricao={pagina.data.descricao}>
-  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.subtitulo} />
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.descricao} />
 
   <section class="secao">
     <div class="container">
@@ -80,9 +80,6 @@ const formatador = new Intl.NumberFormat('pt-BR');
 </Base>
 
 <style>
-  .prosa {
-    max-width: 72ch;
-  }
 
   .bancos {
     list-style: none;

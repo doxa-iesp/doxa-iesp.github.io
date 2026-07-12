@@ -33,7 +33,7 @@ const grupos = GRUPOS.map((g) => ({
 ---
 
 <Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>
-  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.descricao} />
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.descricao} variante="gradiente" />
 
   <section class="secao">
     <div class="container">
@@ -94,10 +94,6 @@ const grupos = GRUPOS.map((g) => ({
 </Base>
 
 <style>
-  .prosa {
-    max-width: 68ch;
-    color: var(--cor-texto-suave);
-  }
 
   .equipe-grid {
     display: grid;

@@ -86,6 +86,32 @@ const equipe = defineCollection({
   }),
 });
 
+/**
+ * Projetos do laboratório — as iniciativas com entrega pública (Vota Aí, os
+ * dashboards, a Pesquisa COVID, a Geografia do Voto). Antes viviam espalhadas
+ * pela home e dentro de `site.yaml`.
+ *
+ * Um arquivo por projeto: o nome do arquivo vira a URL (`vota-ai.md` →
+ * `/projetos/vota-ai/`) e o corpo do markdown é a descrição longa.
+ */
+const projetos = defineCollection({
+  loader: glob({ base: 'src/content/projetos', pattern: '**/*.md' }),
+  schema: z.object({
+    titulo: z.string(),
+    resumo: z.string(), // 1–2 frases: é o que aparece no card
+    periodo: z.string().optional(),
+    // opcional de propósito: só preencher com evidência, nunca por suposição
+    status: z.enum(['ativo', 'concluido']).optional(),
+    imagem: z.string().optional(),
+    url: urlOuVazio, // site externo do projeto
+    rotulo_url: z.string().optional(),
+    embed: urlOuVazio, // iframe (Power BI, YouTube)
+    links: z.array(z.object({ rotulo: z.string(), url: z.string() })).default([]),
+    destaque: z.boolean().default(false),
+    ordem: z.number().optional(),
+  }),
+});
+
 const eventos = defineCollection({
   loader: glob({ base: 'src/content/eventos', pattern: '**/*.md' }),
   schema: z.object({
@@ -247,14 +273,11 @@ const configuracao = defineCollection({
       youtube: urlOuVazio,
       instagram: urlOuVazio,
       twitter: urlOuVazio,
+      // O vídeo dos "melhores momentos" é conteúdo do acervo, e é lá que ele aparece.
       video_destaque: z.string(),
-      dashboard_titulo: z.string(),
-      dashboard_url: z.string().url(),
-      votaai_titulo: z.string(),
-      votaai_descricao: z.string(),
-      votaai_url: z.string().url(),
       catalogo_acervo: z.string().url(),
       formulario_acervo: z.string(),
+      // Vota Aí e o dashboard das eleições viraram projetos (src/content/projetos/).
     })
     .strict(),
 });
@@ -262,6 +285,7 @@ const configuracao = defineCollection({
 export const collections = {
   paginas,
   equipe,
+  projetos,
   eventos,
   publicacoes,
   analises,

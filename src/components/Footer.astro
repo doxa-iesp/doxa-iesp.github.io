@@ -6,7 +6,7 @@ const geral = (await getEntry('configuracao', 'geral'))!.data;
 const ano = new Date().getFullYear();
 ---
 
-<footer class="rodape">
+<footer class="rodape faixa-marca textura-x">
   <div class="container rodape__inner">
     <div>
       <img src={url('/img/logo-doxa.svg')} alt="DOXA" width="120" height="37" class="rodape__logo" />
@@ -43,10 +43,11 @@ const ano = new Date().getFullYear();
 </footer>
 
 <style>
+  /* O fundo vem de .faixa-marca (gradiente navy→verde). A borda terracota é o
+     par simétrico da que fecha o cabeçalho — juntas, emolduram a página. */
   .rodape {
-    background: var(--cor-primaria-escura);
-    color: var(--cor-branco);
     margin-top: var(--esp-5);
+    border-top: var(--borda-marca) solid var(--cor-destaque);
   }
   .rodape__inner {
     display: grid;
@@ -71,12 +72,6 @@ const ano = new Date().getFullYear();
   .rodape__contato p {
     margin: 0 0 0.25rem;
     opacity: 0.9;
-  }
-  .rodape a {
-    color: var(--cor-branco);
-  }
-  .rodape a:hover {
-    color: var(--cor-destaque);
   }
   .rodape__base {
     border-top: 1px solid rgb(255 255 255 / 15%);

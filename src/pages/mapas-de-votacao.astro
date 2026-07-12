@@ -43,7 +43,7 @@ const grupos = anosOrdenados.map((ano) => {
 ---
 
 <Base titulo="Mapas de Votação" descricao={pagina.data.descricao}>
-  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.subtitulo} />
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.descricao} />
 
   <section class="secao">
     <div class="container">
@@ -87,11 +87,6 @@ const grupos = anosOrdenados.map((ano) => {
 </Base>
 
 <style>
-  .prosa {
-    max-width: 72ch;
-    color: var(--cor-texto-suave);
-    font-size: 0.95rem;
-  }
 
   .mapas {
     display: flex;

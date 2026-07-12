@@ -1,0 +1,118 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import { url } from '../../lib/url';
+
+const pagina = (await getEntry('paginas', 'producao'))!;
+const { Content } = await render(pagina);
+
+// As contagens vêm das coleções — nada de número escrito à mão que envelhece.
+const [pesquisas, publicacoes, analises, textos] = await Promise.all([
+  getCollection('pesquisas'),
+  getCollection('publicacoes'),
+  getCollection('analises'),
+  getCollection('textos-discussao'),
+]);
+
+const secoes = [
+  {
+    titulo: 'Pesquisas',
+    texto:
+      'Teses e dissertações orientadas no laboratório, projetos em andamento e pesquisas concluídas.',
+    href: '/producao/pesquisas/',
+    total: pesquisas.length,
+    unidade: 'pesquisas',
+  },
+  {
+    titulo: 'Publicações Acadêmicas',
+    texto: 'Livros, capítulos e artigos em revistas científicas produzidos pelos membros do DOXA.',
+    href: '/producao/publicacoes/',
+    total: publicacoes.length,
+    unidade: 'publicações',
+  },
+  {
+    titulo: 'Análises de Conjuntura',
+    texto:
+      'Textos produzidos durante os períodos eleitorais sobre cobertura jornalística, propaganda e pesquisas de opinião.',
+    href: '/producao/analises-de-conjuntura/',
+    total: analises.length,
+    unidade: 'análises',
+  },
+  {
+    titulo: 'Textos para Discussão',
+    texto:
+      'Working papers com pesquisas em desenvolvimento, abertos à avaliação da comunidade acadêmica.',
+    href: '/producao/textos-para-discussao/',
+    total: textos.length,
+    unidade: textos.length === 1 ? 'texto' : 'textos',
+  },
+];
+---
+
+<Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>
+  <PageHero
+    titulo={pagina.data.titulo}
+    subtitulo={pagina.data.descricao}
+    variante="gradiente"
+  />
+
+  <section class="secao">
+    <div class="container">
+      <div class="prosa"><Content /></div>
+    </div>
+  </section>
+
+  <section class="secao secao--alt">
+    <div class="container">
+      <ul class="grade-cards grade-cards--larga">
+        {
+          secoes.map((s) => (
+            <li class="cartao">
+              <p class="cartao__contagem">
+                {s.total} <span>{s.unidade}</span>
+              </p>
+              <h2 class="cartao__titulo">{s.titulo}</h2>
+              <p class="cartao__texto">{s.texto}</p>
+              <a class="cartao__link" href={url(s.href)}>
+                Ver {s.unidade} <span aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .cartao__contagem {
+    margin: 0 0 var(--esp-1);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--cor-primaria);
+  }
+  .cartao__contagem span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cor-texto-suave);
+  }
+  .cartao__titulo {
+    font-size: 1.15rem;
+    margin-bottom: var(--esp-1);
+  }
+  .cartao__texto {
+    color: var(--cor-texto-suave);
+    font-size: 0.92rem;
+    flex: 1;
+  }
+  .cartao__link {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-top: auto;
+  }
+</style>

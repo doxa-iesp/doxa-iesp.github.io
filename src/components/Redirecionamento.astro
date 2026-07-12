@@ -1,0 +1,48 @@
+---
+/**
+ * Página-stub que redireciona uma URL antiga para a nova.
+ *
+ * POR QUE NÃO USAR `redirects` do astro.config.mjs
+ * ------------------------------------------------
+ * O Astro monta o destino do redirect só a partir dos segmentos da rota, SEM o
+ * `base` (ver `dist/core/routing/generator.js`). Como o site é publicado em
+ * `/DOXA/`, um `redirects: { '/pesquisas': '/producao/pesquisas' }` mandaria o
+ * visitante para `felipelamarca.com/producao/pesquisas/` — sem o `/DOXA` — o que
+ * dá 404 em produção (e só em produção).
+ *
+ * Este componente monta o destino com `url()`, que respeita o base path. De
+ * quebra, continua correto quando o site migrar para lab-doxa.org.br e o `base`
+ * for removido.
+ */
+import { url } from '../lib/url';
+
+interface Props {
+  /** Caminho interno de destino, ex.: '/producao/pesquisas/' */
+  para: string;
+}
+
+const destino = url(Astro.props.para);
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content={`0; url=${destino}`} />
+    <link rel="canonical" href={destino} />
+    <meta name="robots" content="noindex" />
+    <title>Esta página mudou de endereço</title>
+  </head>
+  <body>
+    <p>
+      Esta página mudou de endereço. Se você não for redirecionado,
+      <a href={destino}>clique aqui</a>.
+    </p>
+    <script is:inline define:vars={{ destino }}>
+      // O meta refresh já basta; isto só troca a entrada no histórico para que o
+      // botão "voltar" não caia de novo no redirecionamento.
+      window.location.replace(destino);
+    </script>
+  </body>
+</html>

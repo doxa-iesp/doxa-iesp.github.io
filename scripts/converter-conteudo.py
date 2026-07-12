@@ -133,36 +133,73 @@ def paginas():
             texto = re.split(r"^##\s+", texto, maxsplit=1, flags=re.M)[0]
         return texto.strip()
 
+    # Textos que o site antigo não tinha (ou tinha errado). São editoriais, não
+    # extraídos — por isso vivem aqui, e não em extracao/, que é registro histórico.
+    OVERRIDES = {
+        # O texto institucional integral vive na home; aqui fica só um contexto curto.
+        "institucional.md": (
+            "O DOXA reúne pesquisadores, pós-doutorandos, alunos de pós-graduação e "
+            "assistentes de pesquisa dedicados ao estudo dos processos eleitorais, da "
+            "comunicação política e da opinião pública no Brasil."
+        ),
+        # No WordPress esta página trazia, por engano, o texto genérico de "Publicações" —
+        # falava dos dois tipos de publicação, e não de working papers. O erro está fiel em
+        # extracao/dados/paginas/textos-para-discussao-2.md; aqui entra o texto correto.
+        "textos-para-discussao-2.md": (
+            "Os Textos para Discussão do DOXA são *working papers*: pesquisas em desenvolvimento, "
+            "publicadas antes da versão definitiva para que sejam avaliadas e debatidas pela "
+            "comunidade acadêmica. Todos podem ser baixados livremente."
+        ),
+    }
+
     mapa = {
         "institucional.md": ("Institucional", "A equipe do DOXA."),
         "acervo.md": ("Acervo Audiovisual", "O maior arquivo de propaganda eleitoral do Brasil."),
         "mapas-de-votacao.md": ("Mapas de Votação", "Distribuição da votação por bairro e município."),
         "bancos-de-dados.md": ("Bancos de Dados", "Bases abertas produzidas pelo DOXA."),
         "pagina-pesquisas.md": ("Pesquisas do DOXA", "Teses, dissertações e projetos do laboratório."),
-        "publicacoes.md": ("Publicações", "Produção científica e análises do DOXA."),
+        "publicacoes.md": ("Produção", "Pesquisas, publicações e análises do DOXA."),
         "na-midia.md": ("Na Mídia", "Aparições do DOXA na imprensa."),
         "seminarios.md": ("Seminários", "Seminários promovidos pelo laboratório."),
         "eventos.md": ("Eventos", "Eventos do DOXA."),
-        "pesquisa-covid.md": ("Pesquisa COVID", "Monitoramento das medidas de contenção da pandemia."),
         "textos-para-discussao-2.md": ("Textos para Discussão", "Working papers do DOXA."),
     }
-    saida = {"institucional.md": "institucional.md", "textos-para-discussao-2.md": "textos-para-discussao.md",
-             "pagina-pesquisas.md": "pesquisas.md"}
+    # nome de origem -> nome do arquivo gerado
+    saida = {
+        "textos-para-discussao-2.md": "textos-para-discussao.md",
+        "pagina-pesquisas.md": "pesquisas.md",
+        # "Publicações" virou a capa da seção "Produção", que reúne pesquisas + publicações.
+        "publicacoes.md": "producao.md",
+    }
     n = 1
     for arq, (titulo, desc) in mapa.items():
         if not (FONTE / "paginas" / arq).exists():
             continue
-        texto = ajustar(corpo(arq), arq)
-        if arq == "institucional.md":
-            # o texto institucional integral vive na home; aqui fica só um contexto curto
-            texto = ("O DOXA reúne pesquisadores, pós-doutorandos, alunos de pós-graduação e "
-                     "assistentes de pesquisa dedicados ao estudo dos processos eleitorais, da "
-                     "comunicação política e da opinião pública no Brasil.")
+        texto = OVERRIDES.get(arq) or ajustar(corpo(arq), arq)
         nome = saida.get(arq, arq)
         (destino / nome).write_text(
             f'---\ntitulo: "{titulo}"\ndescricao: "{desc}"\n---\n\n{texto}\n', encoding="utf-8")
         n += 1
+
+    # A prosa de /pesquisa-covid/ migrou para o projeto homônimo (src/content/projetos/),
+    # por isso não é mais gerada como página.
     print(f"  paginas/           {n} arquivos (home.md = apresentação institucional)")
+
+
+# ---------------------------------------------------------------- projetos
+
+def projetos():
+    """Projetos do laboratório. São editoriais (não vieram de uma listagem do
+    WordPress), então moram em extracao/dados/projetos/ e são copiados verbatim."""
+    origem = FONTE / "projetos"
+    destino = CONTENT / "projetos"
+    shutil.rmtree(destino, ignore_errors=True)
+    destino.mkdir(parents=True)
+    n = 0
+    for f in sorted(origem.glob("*.md")):
+        shutil.copy(f, destino / f.name)
+        n += 1
+    print(f"  projetos/          {n} arquivos")
 
 
 # ---------------------------------------------------------------- eventos
@@ -290,12 +327,11 @@ def site():
         "endereco": "Rua da Matriz, 82, Botafogo — Rio de Janeiro, RJ",
         "cep": "22260-100",
         "youtube": "https://www.youtube.com/channel/UCkcuDdIEuQ9YqOjHsp4-EHQ",
+        # O vídeo dos "melhores momentos" é conteúdo do acervo — é lá que ele aparece.
         "video_destaque": h["featured_video"]["youtube_id"],
-        "dashboard_titulo": h["dashboards"]["items"][0]["label"],
-        "dashboard_url": h["dashboards"]["items"][0]["url"],
-        "votaai_titulo": h["votaai"]["title"],
-        "votaai_descricao": h["votaai"]["description"],
-        "votaai_url": h["votaai"]["url"],
+        # Vota Aí e o dashboard das eleições viraram PROJETOS (extracao/dados/projetos/).
+        # O schema de `configuracao` é .strict(): reintroduzir votaai_* / dashboard_* aqui
+        # sem atualizar src/content.config.ts derruba o build.
         "catalogo_acervo": catalogo,
         "formulario_acervo": "/docs/solicitacao-de-material-do-acervo.docx",
     }
@@ -306,7 +342,7 @@ def site():
 
 def main():
     print("Convertendo extracao/dados -> src/ ...")
-    equipe(); paginas(); eventos(); listas(); site()
+    equipe(); paginas(); projetos(); eventos(); listas(); site()
     # formulário do acervo
     docs = PUBLIC / "docs"
     docs.mkdir(exist_ok=True)

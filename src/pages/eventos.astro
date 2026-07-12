@@ -14,7 +14,7 @@ const eventos = (await getCollection('eventos')).sort(
 ---
 
 <Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>
-  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.subtitulo} />
+  <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.descricao} />
 
   <section class="secao">
     <div class="container">
@@ -45,10 +45,6 @@ const eventos = (await getCollection('eventos')).sort(
 </Base>
 
 <style>
-  .prosa {
-    max-width: 68ch;
-    color: var(--cor-texto-suave);
-  }
 
   .eventos-grid {
     display: grid;

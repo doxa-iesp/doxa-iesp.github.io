@@ -1,0 +1,152 @@
+---
+/**
+ * Cartão de um projeto do laboratório.
+ *
+ * O CTA leva SEMPRE à página interna do projeto, nunca direto para o site
+ * externo: o visitante deve poder ler o que é o projeto antes de sair do site.
+ * O link externo fica na página do projeto.
+ */
+import { url } from '../lib/url';
+
+interface Props {
+  slug: string;
+  titulo: string;
+  resumo: string;
+  periodo?: string;
+  status?: 'ativo' | 'concluido';
+  imagem?: string;
+  destaque?: boolean;
+}
+
+const { slug, titulo, resumo, periodo, status, imagem, destaque = false } = Astro.props;
+
+// O layout em destaque põe a capa ao lado do texto. Sem capa, ele viraria um card
+// largo e oco — então só vale quando há imagem.
+const largo = destaque && Boolean(imagem);
+
+const ROTULO_STATUS: Record<string, string> = {
+  ativo: 'Em andamento',
+  concluido: 'Concluído',
+};
+const href = url(`/projetos/${slug}/`);
+---
+
+<li class:list={['projeto', largo && 'projeto--destaque']}>
+  {
+    imagem && (
+      <div class="projeto__capa">
+        <img src={url(imagem)} alt="" width="640" height="360" loading="lazy" />
+      </div>
+    )
+  }
+
+  <div class="projeto__corpo">
+    <p class="projeto__meta">
+      {status && <span class:list={['etiqueta', status === 'ativo' && 'etiqueta--ativo']}>
+        {ROTULO_STATUS[status]}
+      </span>}
+      {periodo && <span class="projeto__periodo">{periodo}</span>}
+    </p>
+
+    <h2 class="projeto__titulo">
+      <a href={href}>{titulo}</a>
+    </h2>
+    <p class="projeto__resumo">{resumo}</p>
+
+    <p class="projeto__acao">
+      <a href={href}>Conhecer o projeto <span aria-hidden="true">→</span></a>
+    </p>
+  </div>
+</li>
+
+<style>
+  .projeto {
+    display: flex;
+    flex-direction: column;
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-top: 3px solid var(--cor-destaque);
+    border-radius: var(--raio-g);
+    overflow: hidden;
+    box-shadow: var(--sombra-sm);
+    transition: box-shadow var(--transicao), transform var(--transicao);
+  }
+  .projeto:hover {
+    box-shadow: var(--sombra-alta);
+    transform: translateY(-2px);
+  }
+
+  .projeto__capa {
+    aspect-ratio: 16 / 9;
+    background: var(--cor-fundo-alt);
+  }
+  .projeto__capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .projeto__corpo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--esp-3);
+  }
+
+  .projeto__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--esp-1);
+    margin: 0 0 var(--esp-2);
+    min-height: 1.5rem;
+  }
+  .projeto__periodo {
+    font-size: 0.8rem;
+    color: var(--cor-texto-suave);
+  }
+
+  .projeto__titulo {
+    font-size: 1.2rem;
+    margin: 0 0 var(--esp-1);
+  }
+  .projeto__titulo a {
+    text-decoration: none;
+    color: var(--cor-primaria-escura);
+  }
+  .projeto__titulo a:hover {
+    color: var(--cor-destaque-texto);
+  }
+
+  .projeto__resumo {
+    color: var(--cor-texto-suave);
+    font-size: 0.92rem;
+    flex: 1;
+  }
+  .projeto__acao {
+    margin: var(--esp-2) 0 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .projeto__acao a {
+    text-decoration: none;
+  }
+
+  /* O projeto em destaque ocupa a linha inteira, com a capa ao lado do texto. */
+  @media (min-width: 800px) {
+    .projeto--destaque {
+      grid-column: 1 / -1;
+      flex-direction: row;
+    }
+    .projeto--destaque .projeto__capa {
+      flex: 0 0 42%;
+      aspect-ratio: auto;
+    }
+    .projeto--destaque .projeto__corpo {
+      padding: var(--esp-4);
+    }
+    .projeto--destaque .projeto__titulo {
+      font-size: 1.5rem;
+    }
+  }
+</style>
