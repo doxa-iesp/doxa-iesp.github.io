@@ -17,8 +17,8 @@ mais fácil tirar uma dúvida do que consertar depois.
    a mudança já está no ar.
 3. Você **não instala nenhum programa**: tudo é feito pelo navegador, no site do GitHub.
 
-O endereço do site hoje é **https://felipelamarca.com/DOXA/** (no futuro será www.lab-doxa.org.br).
-O repositório fica em **https://github.com/felipelmc/DOXA**.
+O endereço do site hoje é **https://doxa-iesp.github.io/** (no futuro será www.lab-doxa.org.br).
+O repositório fica em **https://github.com/doxa-iesp/doxa-iesp.github.io**.
 
 ---
 
@@ -26,7 +26,7 @@ O repositório fica em **https://github.com/felipelmc/DOXA**.
 
 Este é o caminho mais seguro e simples. O passo a passo é sempre o mesmo:
 
-1. **Entre no repositório**: https://github.com/felipelmc/DOXA
+1. **Entre no repositório**: https://github.com/doxa-iesp/doxa-iesp.github.io
 2. **Navegue até o arquivo** que você quer mudar (as pastas estão explicadas nas "Receitas", na
    Seção 4). Clicar no nome de uma pasta abre ela; clicar no nome de um arquivo abre o conteúdo.
 3. **Clique no lápis** (✏️, canto superior direito do arquivo) — é o botão "Edit this file".
@@ -449,10 +449,10 @@ quiser ver as mudanças na sua máquina antes de propor, é assim:
 2. No terminal:
 
 ```bash
-git clone https://github.com/felipelmc/DOXA.git
+git clone https://github.com/doxa-iesp/doxa-iesp.github.io.git
 cd DOXA
 npm ci        # baixa as dependências (só na primeira vez)
-npm run dev   # abre o site em http://localhost:4321/DOXA/ com recarga automática
+npm run dev   # abre o site em http://localhost:4321/ com recarga automática
 ```
 
 Enquanto o `npm run dev` estiver rodando, cada arquivo que você salvar aparece na hora no navegador.

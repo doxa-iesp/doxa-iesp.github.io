@@ -3,7 +3,7 @@
 Site estático do **DOXA — Laboratório de Estudos Eleitorais, de Comunicação Política e Opinião
 Pública** (IESP-UERJ), construído com [Astro](https://astro.build/) e publicado via GitHub Pages.
 
-**URL:** https://felipelamarca.com/DOXA/ (temporária — a definitiva será www.lab-doxa.org.br)
+**URL:** https://doxa-iesp.github.io/ (temporária — a definitiva será www.lab-doxa.org.br)
 
 O site foi migrado de Hugo para Astro. O motivo está em
 [`docs/DECISAO_ARQUITETURA.md`](docs/DECISAO_ARQUITETURA.md): em resumo, o conteúdo é validado por
@@ -23,13 +23,13 @@ vez de publicar silenciosamente uma página quebrada.
 ## Rodar localmente
 
 ```bash
-git clone https://github.com/felipelmc/DOXA.git
+git clone https://github.com/doxa-iesp/doxa-iesp.github.io.git
 cd DOXA
 npm ci        # instala as dependências a partir do package-lock.json
 npm run dev   # servidor local com recarga automática
 ```
 
-O site fica em `http://localhost:4321/DOXA/`. Edite um arquivo de conteúdo e a página recarrega
+O site fica em `http://localhost:4321/`. Edite um arquivo de conteúdo e a página recarrega
 sozinha.
 
 Outros comandos úteis:
@@ -128,7 +128,7 @@ Os workflows ficam em `.github/workflows/` (`deploy.yml` e `pr.yml`).
 
 ## Domínio próprio (futuro)
 
-Para migrar de `felipelamarca.com/DOXA/` para `www.lab-doxa.org.br`, siga o comentário no topo de
+Para migrar de `doxa-iesp.github.io` para `www.lab-doxa.org.br`, siga o comentário no topo de
 `astro.config.mjs`: trocar `site`, remover `base`, criar `public/CNAME` com o domínio e apontar o
 DNS. O `CNAME` na raiz do repositório **não** é publicado — só o conteúdo de `public/` entra no
 build.

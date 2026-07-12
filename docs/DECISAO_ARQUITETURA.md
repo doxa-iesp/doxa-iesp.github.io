@@ -182,7 +182,7 @@ artefato de download. O revisor vê se o build passou antes de aprovar. (Preview
 exigiria um serviço externo — Netlify/Cloudflare —, deliberadamente evitado para não introduzir
 outra conta a manter.)
 
-**URL de deploy.** Hoje o site é publicado em `https://felipelamarca.com/DOXA/`, portanto
+**URL de deploy.** Hoje o site é publicado em `https://doxa-iesp.github.io/`, portanto
 `base: '/DOXA'`. Para migrar a `www.lab-doxa.org.br`: remover o `base`, criar `public/CNAME` com o
 domínio e apontar o DNS. Atenção: o `CNAME` na raiz do repositório **não** é publicado — só o
 conteúdo de `public/` entra no build.

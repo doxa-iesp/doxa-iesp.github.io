@@ -110,7 +110,7 @@ com a versão anterior.
 
 - [x] Commit e push em `main` (`c081a50`). O `public/` entrou no commit.
 - [x] GitHub Pages já estava habilitado com `build_type: workflow`.
-- [x] Site publicado e verificado em `https://felipelamarca.com/DOXA/`: as 14 rotas respondem 200,
+- [x] Site publicado e verificado em `https://doxa-iesp.github.io/`: as 14 rotas respondem 200,
       95 links do acervo, 16 fotos da equipe, vídeo da home, 0 erros de JavaScript, 0 respostas 4xx.
 
 **Revisão de conteúdo**
@@ -127,7 +127,7 @@ com a versão anterior.
 - [ ] Decidir se o **catálogo mestre de 2.034 fitas** vira uma página navegável (hoje só existe como
       CSV em `extracao/dados/`).
 
-**Domínio próprio (quando quiserem sair de `felipelamarca.com/DOXA/`)**
+**Domínio próprio (quando quiserem sair de `doxa-iesp.github.io`)**
 
 - [ ] Confirmar quem controla o registro de `lab-doxa.org.br`.
 - [ ] Em `astro.config.mjs`: trocar `site` e **remover** a linha `base`.

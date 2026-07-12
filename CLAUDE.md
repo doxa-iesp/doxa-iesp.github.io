@@ -14,7 +14,7 @@ desenvolvedores — essa é a restrição que governa as decisões de arquitetur
 
 ```bash
 npm ci            # instalação determinística (use isto, não `npm install`)
-npm run dev       # http://localhost:4321/DOXA/
+npm run dev       # http://localhost:4321/
 npm run validar   # valida os YAML de conteúdo (roda sozinho antes do build)
 npm run build     # validar + astro build -> dist/
 npm run check     # validar + astro check (tipos)
@@ -58,12 +58,15 @@ Duas formas de carregar, escolhidas por ergonomia de edição:
 
 ### Base path
 
-O site é publicado em `https://felipelamarca.com/DOXA/`. **Todo link interno passa por `url()`**
-de [src/lib/url.ts](src/lib/url.ts). `href="/acervo/"` cru dá 404 em produção.
+O site é publicado em `https://doxa-iesp.github.io/` (site de organização do GitHub Pages, servido
+na **raiz**). Por isso `base: ''` em [astro.config.mjs](astro.config.mjs).
 
-Para migrar a `www.lab-doxa.org.br`: trocar `site`, remover `base` em
-[astro.config.mjs](astro.config.mjs) e criar `public/CNAME`. O `CNAME` da raiz do repo **não** é
-publicado — só `public/` entra no build.
+Mesmo assim, **todo link interno passa por `url()`** de [src/lib/url.ts](src/lib/url.ts). Não é
+zelo inútil: o site já viveu em `felipelamarca.com/DOXA/`, e foi só trocar o `base` para migrar.
+Um `href="/acervo/"` cru voltaria a dar 404 no dia em que o site for para um subdiretório.
+
+Para migrar a `www.lab-doxa.org.br`: trocar `site` e criar `public/CNAME`. O `CNAME` da raiz do
+repo **não** é publicado — só `public/` entra no build.
 
 ## Estrutura do site
 

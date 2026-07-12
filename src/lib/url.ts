@@ -1,6 +1,9 @@
 /**
- * O site é publicado num subdiretório (`/DOXA/`), então TODO link interno precisa passar
- * por aqui. Escrever `href="/acervo/"` direto gera um 404 em produção.
+ * TODO link interno passa por aqui. Hoje o site é servido na raiz
+ * (https://doxa-iesp.github.io/), então `url()` devolve o caminho como está — mas
+ * se um dia ele voltar a viver num subdiretório (como já viveu, em
+ * felipelamarca.com/DOXA/), basta mudar o `base` em astro.config.mjs e todos os
+ * links continuam certos. Escrever `href="/acervo/"` cru quebraria nesse caso.
  */
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
 

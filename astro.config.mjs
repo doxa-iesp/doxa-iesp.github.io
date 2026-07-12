@@ -2,7 +2,15 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-const BASE = '/DOXA';
+/**
+ * O site é publicado em https://doxa-iesp.github.io/ — um site de ORGANIZAÇÃO do
+ * GitHub Pages, servido na RAIZ do domínio. Por isso `base` é vazio.
+ *
+ * (Na hospedagem anterior, em felipelamarca.com/DOXA/, o `base` era '/DOXA'. Se
+ * um dia o site voltar a viver num subdiretório, é aqui que se muda — e o helper
+ * `url()` de src/lib/url.ts propaga a mudança para todos os links.)
+ */
+const BASE = '';
 
 /**
  * Rotas antigas que hoje só existem como página-stub de redirecionamento
@@ -18,13 +26,12 @@ const ROTAS_ANTIGAS = [
   '/pesquisa-covid/',
 ].map((r) => `${BASE}${r}`);
 
-// Deploy atual: https://felipelamarca.com/DOXA/
 // Para migrar ao domínio próprio (www.lab-doxa.org.br):
 //   1. trocar `site` por 'https://www.lab-doxa.org.br'
-//   2. REMOVER a linha `base` (e o BASE acima vira '')
-//   3. criar public/CNAME com o domínio (o CNAME da raiz do repo NÃO é publicado)
+//   2. criar public/CNAME com o domínio (o CNAME da raiz do repo NÃO é publicado)
+//   3. apontar o DNS e habilitar HTTPS em Settings > Pages
 export default defineConfig({
-  site: 'https://felipelamarca.com',
+  site: 'https://doxa-iesp.github.io',
   base: BASE,
   trailingSlash: 'always',
   integrations: [
