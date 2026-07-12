@@ -10,6 +10,47 @@ Ordenado por impacto. Marque `[x]` conforme resolver.
 
 ## 🔴 Alto impacto — o visitante percebe
 
+### 0. O site novo depende do site antigo para servir 328 PDFs
+
+**Descoberto em 2026-07-12.** Os arquivos que o site novo oferece para download não estão no site
+novo: eles continuam sendo servidos pelo WordPress antigo (`lab-doxa.org.br`). **Se o WordPress for
+desligado, todos esses downloads quebram de uma vez.**
+
+| Coleção | Arquivos | Peso |
+|---|---:|---:|
+| Mapas de votação | 273 | **835 MB** |
+| Teses e pesquisas | 20 | 43 MB |
+| Análises de conjuntura | 33 | 30 MB |
+| Textos para discussão | 2 | 2 MB |
+| **Total** | **328** | **911 MB** |
+
+O GitHub Pages tem limite de **1 GB por site**, então não dá simplesmente para copiar tudo para cá.
+Mas repare que **92% do peso são os mapas**: as outras três coleções somam só **55 arquivos e 76 MB**,
+que caberiam tranquilamente no repositório.
+
+**Decisão que o time precisa tomar:**
+
+- [ ] **Opção A (recomendada):** trazer para o repositório os 55 PDFs de teses, análises e textos
+      para discussão (76 MB), e dar aos 273 mapas (835 MB) um endereço próprio: Google Drive (que o
+      laboratório já usa para o acervo), Zenodo, ou o repositório institucional do IESP.
+- [ ] **Opção B:** manter o WordPress antigo no ar apenas como servidor de arquivos. Funciona, mas o
+      site novo fica refém de um sistema que ninguém quer mais manter.
+- [ ] **Opção C:** trazer tudo e aceitar o risco de estourar o limite do GitHub Pages. Não recomendo.
+
+### 0b. As teses da BDTD não abrem (e não é culpa da migração)
+
+Dez teses apontam para `www.bdtd.uerj.br:8443`. Nenhuma abre, **e no site antigo também não abrem**:
+são exatamente as mesmas URLs. O problema é do repositório da UERJ, que está fora do ar. Verificado
+em 2026-07-12: a porta 443 responde e redireciona para a porta 8080, que não responde; a porta 8443,
+onde estão os PDFs, está fechada.
+
+- [ ] Cobrar da biblioteca da UERJ o restabelecimento do BDTD, ou descobrir o novo endereço das teses
+- [ ] Enquanto isso, considerar hospedar essas 10 teses junto com as outras (ver item 0)
+
+*(Três outras teses apontavam para uma página do IESP que dá 404. Esses links foram removidos: o
+projeto não cria botões mortos.)*
+
+
 ### 1. Lattes de 12 dos 16 membros da equipe
 **Onde:** `src/content/equipe/<nome>.yaml`, campo `lattes`
 **Por que falta:** a página `/institucional/` do site antigo não publicava Lattes. Os 4 que temos
