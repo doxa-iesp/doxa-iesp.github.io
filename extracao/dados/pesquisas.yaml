@@ -3,412 +3,514 @@
 # Campos: title, author, year, advisor, institution, status, url, description
 # Status: tese | andamento | concluida
 # Total: 61 (tese=38, andamento=13, concluida=10)
-
-- title: "Reformas na previdência social brasileira: processo político de reformas politicamente custosas"
-  author: "Mariani Ferri de Holanda"
+- title: 'Reformas na previdência social brasileira: processo político de reformas politicamente custosas'
+  author: Mariani Ferri de Holanda
   year: 2023
-  advisor: "Argelina Figueiredo"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://www.bdtd.uerj.br:8443/bitstream/1/19482/2/Tese%20-%20Mariani%20Ferri%20de%20Holanda%20-%202023%20-%20Completa.pdf"
-
-- title: "O papel esquecido do Congresso na trajetória do Bolsa Família: uma nova abordagem sobre a produção de políticas de transferência condicionada de renda"
-  author: "Pedro Brás Martins da Costa"
+  advisor: Argelina Figueiredo
+  institution: IESP/UERJ
+  status: tese
+  url: https://www.bdtd.uerj.br:8443/bitstream/1/19482/2/Tese%20-%20Mariani%20Ferri%20de%20Holanda%20-%202023%20-%20Completa.pdf
+- title: 'O papel esquecido do Congresso na trajetória do Bolsa Família: uma nova abordagem sobre a produção
+    de políticas de transferência condicionada de renda'
+  author: Pedro Brás Martins da Costa
   year: 2022
-  advisor: "Argelina Figueiredo"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://www.bdtd.uerj.br:8443/bitstream/1/17917/2/Tese%20-%20Pedro%20Bras%20Martins%20da%20Costa%20-%202022%20-%20Completa.pdf"
-
-- title: "Relações Executivo-Legislativo na formulação da política orçamentária do Estado de Mato Grosso"
-  author: "Ariel Lopes Torres"
+  advisor: Argelina Figueiredo
+  institution: IESP/UERJ
+  status: tese
+  url: https://www.bdtd.uerj.br:8443/bitstream/1/17917/2/Tese%20-%20Pedro%20Bras%20Martins%20da%20Costa%20-%202022%20-%20Completa.pdf
+- title: Relações Executivo-Legislativo na formulação da política orçamentária do Estado de Mato Grosso
+  author: Ariel Lopes Torres
   year: 2020
-  advisor: "Argelina Figueiredo"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://www.bdtd.uerj.br:8443/bitstream/1/17266/2/Tese_%20Ariel%20Lopes%20Torres_2020_Completa.pdf"
-
-- title: "Competição eleitoral no Brasil: uma perspectiva programática."
-  author: "Nara Oliveira Salles"
+  advisor: Argelina Figueiredo
+  institution: IESP/UERJ
+  status: tese
+  url: https://www.bdtd.uerj.br:8443/bitstream/1/17266/2/Tese_%20Ariel%20Lopes%20Torres_2020_Completa.pdf
+- title: 'Competição eleitoral no Brasil: uma perspectiva programática.'
+  author: Nara Oliveira Salles
   year: 2019
-  advisor: "Fernando Guarnieri"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://www.bdtd.uerj.br:8443/bitstream/1/12386/1/SALLES,%20Nara_Competicao%20eleitoral%20no%20Brasil%20uma%20perspectiva%20programatica%5bFINAL%5d.pdf"
-
-- title: "As modificações do Legislativo nas proposições do Executivo"
-  author: "Márcia Rodriguez da Cruz"
+  advisor: Fernando Guarnieri
+  institution: IESP/UERJ
+  status: tese
+  url: https://www.bdtd.uerj.br:8443/bitstream/1/12386/1/SALLES,%20Nara_Competicao%20eleitoral%20no%20Brasil%20uma%20perspectiva%20programatica%5bFINAL%5d.pdf
+- title: As modificações do Legislativo nas proposições do Executivo
+  author: Márcia Rodriguez da Cruz
   year: 2018
-  advisor: "Argelina Figueiredo"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://www.bdtd.uerj.br:8443/bitstream/1/12486/1/tese%20Marcia%20Cruz.pdf"
-
-- title: "O sistema de comissões permanentes da câmara dos deputados: análise de sua composição e atuação na 54ª legislatura"
-  author: "André Corrêa de Sá do Carneiro"
+  advisor: Argelina Figueiredo
+  institution: IESP/UERJ
+  status: tese
+  url: https://www.bdtd.uerj.br:8443/bitstream/1/12486/1/tese%20Marcia%20Cruz.pdf
+- title: 'O sistema de comissões permanentes da câmara dos deputados: análise de sua composição e atuação
+    na 54ª legislatura'
+  author: André Corrêa de Sá do Carneiro
   year: 2018
-  advisor: "Argelina Figueiredo"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://www.bdtd.uerj.br:8443/bitstream/1/12478/1/tese%20Andre%20Carneiro.pdf"
-
-- title: "Crise política e consolidação partidária: Brasil (1951-1964)"
-  author: "Saulo Maia Said"
+  advisor: Argelina Figueiredo
+  institution: IESP/UERJ
+  status: tese
+  url: https://www.bdtd.uerj.br:8443/bitstream/1/12478/1/tese%20Andre%20Carneiro.pdf
+- title: 'Crise política e consolidação partidária: Brasil (1951-1964)'
+  author: Saulo Maia Said
   year: 2018
-  advisor: "Argelina Figueiredo"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://iesp.uerj.br/publicacoes/teses-e-dissertacoes/teses-ciencia-politica/"
-
-- title: "Voto Econômico na América Latina: avaliação de políticas públicas e clareza de responsabilidade"
-  author: "Flávia Bozza Martins"
+  advisor: Argelina Figueiredo
+  institution: IESP/UERJ
+  status: tese
+- title: 'Voto Econômico na América Latina: avaliação de políticas públicas e clareza de responsabilidade'
+  author: Flávia Bozza Martins
   year: 2018
-  advisor: "Argelina Figueiredo"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://www.bdtd.uerj.br:8443/bitstream/1/12382/1/Tese_FlaviaBozzaMartins_biblioteca%20final.pdf"
-
-- title: "Política orçamentária no Estado do Rio de Janeiro: governos Rosinha e Cabral (2003-2010)"
-  author: "Alexandre Alves Pinto"
+  advisor: Argelina Figueiredo
+  institution: IESP/UERJ
+  status: tese
+  url: https://www.bdtd.uerj.br:8443/bitstream/1/12382/1/Tese_FlaviaBozzaMartins_biblioteca%20final.pdf
+- title: 'Política orçamentária no Estado do Rio de Janeiro: governos Rosinha e Cabral (2003-2010)'
+  author: Alexandre Alves Pinto
   year: 2016
-  advisor: "Argelina Figueiredo"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://www.bdtd.uerj.br:8443/bitstream/1/12381/1/tese%20Alexandre%20Alves%20Pinto.pdf"
-
-- title: "Coordenação Eleitoral: o papel dos Partidos Políticos"
-  author: "Lara Mesquita Ramos"
+  advisor: Argelina Figueiredo
+  institution: IESP/UERJ
+  status: tese
+  url: https://www.bdtd.uerj.br:8443/bitstream/1/12381/1/tese%20Alexandre%20Alves%20Pinto.pdf
+- title: 'Coordenação Eleitoral: o papel dos Partidos Políticos'
+  author: Lara Mesquita Ramos
   year: 2016
-  advisor: "Argelina Figueiredo"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://iesp.uerj.br/publicacoes/teses-e-dissertacoes/teses-ciencia-politica/"
-
-- title: "Política orçamentária no Estado do Rio de Janeiro: governos Rosinha e Cabral (2003-2010)"
-  author: "Alexandre Alves Pinto"
+  advisor: Argelina Figueiredo
+  institution: IESP/UERJ
+  status: tese
+- title: 'Política orçamentária no Estado do Rio de Janeiro: governos Rosinha e Cabral (2003-2010)'
+  author: Alexandre Alves Pinto
   year: 2016
-  advisor: "Argelina Figueiredo"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://www.bdtd.uerj.br:8443/bitstream/1/12381/1/tese%20Alexandre%20Alves%20Pinto.pdf"
-
-- title: "O outro lado da mesma moeda: a força dos partidos brasileiros na arena eleitoral"
-  author: "Cristian Fernando Klein"
+  advisor: Argelina Figueiredo
+  institution: IESP/UERJ
+  status: tese
+  url: https://www.bdtd.uerj.br:8443/bitstream/1/12381/1/tese%20Alexandre%20Alves%20Pinto.pdf
+- title: 'O outro lado da mesma moeda: a força dos partidos brasileiros na arena eleitoral'
+  author: Cristian Fernando Klein
   year: 2014
-  advisor: "Argelina Figueiredo"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://www.bdtd.uerj.br:8443/bitstream/1/12462/1/tese%20Cristian%20Klein.pdf"
-
-- title: "Velhas Raposas, Novos Governistas: O PMDB e a Democracia Brasileira"
-  author: "Natalia Regina Avila Maciel"
+  advisor: Argelina Figueiredo
+  institution: IESP/UERJ
+  status: tese
+  url: https://www.bdtd.uerj.br:8443/bitstream/1/12462/1/tese%20Cristian%20Klein.pdf
+- title: 'Velhas Raposas, Novos Governistas: O PMDB e a Democracia Brasileira'
+  author: Natalia Regina Avila Maciel
   year: 2014
-  advisor: "Gláucio Soares"
-  institution: "IESP/Uerj"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/Natalia-Maciel_tese-depositada.pdf"
-
-- title: "Do confronto à conciliação: debates presidenciais na TV como eventos persuasivos de campanha"
-  author: "Fábio Souza Vasconcellos"
+  advisor: Gláucio Soares
+  institution: IESP/Uerj
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/Natalia-Maciel_tese-depositada.pdf
+- title: 'Do confronto à conciliação: debates presidenciais na TV como eventos persuasivos de campanha'
+  author: Fábio Souza Vasconcellos
   year: 2013
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IESP/Uerj"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/VASCONCELLOS_2013.pdf"
-
-- title: "“A propaganda negativa: estratégia e voto nas eleições brasileiras”"
-  author: "Felipe de Moraes Borba"
+  advisor: Marcus Faria Figueiredo
+  institution: IESP/Uerj
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/VASCONCELLOS_2013.pdf
+- title: '“A propaganda negativa: estratégia e voto nas eleições brasileiras”'
+  author: Felipe de Moraes Borba
   year: 2012
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IESP/Uerj"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/BORBA_2012.pdf"
-
-- title: "“Abrindo a Caixa-Preta: da indecisão à escolha. A eleição presidencial de 2002”"
-  author: "Luis Claudio Lourenço"
+  advisor: Marcus Faria Figueiredo
+  institution: IESP/Uerj
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/BORBA_2012.pdf
+- title: '“Abrindo a Caixa-Preta: da indecisão à escolha. A eleição presidencial de 2002”'
+  author: Luis Claudio Lourenço
   year: 2007
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/tese-lourenco.pdf"
-
-- title: "“A Inevitável Visibilidade da Cor: Estudo comparativo das campanhas de Benedita da Silva e Celso Pitta às prefeituras do Rio de Janeiro e de São Paulo, nas eleições de 1992 e 1996”"
-  author: "Cloves Luiz Pereira Oliveira"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/tese-lourenco.pdf
+- title: '“A Inevitável Visibilidade da Cor: Estudo comparativo das campanhas de Benedita da Silva e Celso
+    Pitta às prefeituras do Rio de Janeiro e de São Paulo, nas eleições de 1992 e 1996”'
+  author: Cloves Luiz Pereira Oliveira
   year: 2007
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/OLIVEIRA_2005.pdf"
-
-- title: "“A (des) construção do estado de direito e seus reflexos na pedagogia cívica do cidadão comum: aspectos da democracia midiatizada”"
-  author: "Beatriz Wey"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/OLIVEIRA_2005.pdf
+- title: '“A (des) construção do estado de direito e seus reflexos na pedagogia cívica do cidadão comum:
+    aspectos da democracia midiatizada”'
+  author: Beatriz Wey
   year: 2006
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/WEY_2006.pdf"
-
-- title: "“Opinião Pública e Política no Brasil. O que o brasileiro pensa sobre política e porque isso interessa à democracia”"
-  author: "Emerson Urizzi"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/WEY_2006.pdf
+- title: “Opinião Pública e Política no Brasil. O que o brasileiro pensa sobre política e porque isso
+    interessa à democracia”
+  author: Emerson Urizzi
   year: 2006
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/URIZZI_2006.pdf"
-
-- title: "As estratégias retóricas na construção dos mundos de natureza ficcional da política: um estudo comparativo das campanhas de Belo Horizonte e Salvador na eleição municipal de 2000."
-  author: "Luiz Ademir de Oliveira"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/URIZZI_2006.pdf
+- title: 'As estratégias retóricas na construção dos mundos de natureza ficcional da política: um estudo
+    comparativo das campanhas de Belo Horizonte e Salvador na eleição municipal de 2000.'
+  author: Luiz Ademir de Oliveira
   year: 2005
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/OLIVEIRA_2005.pdf"
-
-- title: "Cobertura jornalística e eleições majoritárias, proposta de um modelo analítico."
-  author: "Heloisa Dias Bezerra"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/OLIVEIRA_2005.pdf
+- title: Cobertura jornalística e eleições majoritárias, proposta de um modelo analítico.
+  author: Heloisa Dias Bezerra
   year: 2005
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/DIAS_2005.pdf"
-
-- title: "Razões para a escolha eleitoral: a influência da campanha política na decisão do voto em lula durante as eleições presidenciais de 2002."
-  author: "Felipe Borba"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/DIAS_2005.pdf
+- title: 'Razões para a escolha eleitoral: a influência da campanha política na decisão do voto em lula
+    durante as eleições presidenciais de 2002.'
+  author: Felipe Borba
   year: 2005
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/BORBA_2005.pdf"
-
-- title: "“Jornalismo e políticas públicas. A imprensa de São Paulo esclarece a dinâmica da participação política quando cobre o discurso e a ação pública?” (1994-2004)"
-  author: "Ana Maria de Abreu Laurenza"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/BORBA_2005.pdf
+- title: “Jornalismo e políticas públicas. A imprensa de São Paulo esclarece a dinâmica da participação
+    política quando cobre o discurso e a ação pública?” (1994-2004)
+  author: Ana Maria de Abreu Laurenza
   year: 2005
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/LAURENZA_2005.pdf"
-
-- title: "Da Frente Brasil Popular à Aliança Capital/Trabalho: as campanhas de Lula a Presidente de 89 a 2002."
-  author: "Gabriel Gutierrez Mendes"
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/LAURENZA_2005.pdf
+- title: 'Da Frente Brasil Popular à Aliança Capital/Trabalho: as campanhas de Lula a Presidente de 89
+    a 2002.'
+  author: Gabriel Gutierrez Mendes
   year: 2004
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/MENDES_2004.pdf"
-
-- title: "Meios de Comunicação de Massa e Poder Legislativo. Uma Análise da Cobertura do Congresso Nacional pelos Jornais Brasileiros, 1985-1990."
-  author: "Vladimyr Lombardo Jorge"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/MENDES_2004.pdf
+- title: Meios de Comunicação de Massa e Poder Legislativo. Uma Análise da Cobertura do Congresso Nacional
+    pelos Jornais Brasileiros, 1985-1990.
+  author: Vladimyr Lombardo Jorge
   year: 2003
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/JORGE_2003.pdf"
-
-- title: "La mondialisation à usage interne : le cas de la campagne présidentielle 2002 au Brésil."
-  author: "Daniela de Topin Ribeiro"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/JORGE_2003.pdf
+- title: 'La mondialisation à usage interne : le cas de la campagne présidentielle 2002 au Brésil.'
+  author: Daniela de Topin Ribeiro
   year: 2003
-  advisor: "Jacques Gerstlé"
-  institution: "Sorbonne, França"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/RIBEIRO_2003.pdf"
-
-- title: "A gramática comercial do meio. Os spots da campanha de Cássio Taniguchi à Prefeitura de Curitiba, 1996."
-  author: "Sahada J. L. Mendes Palmeira"
+  advisor: Jacques Gerstlé
+  institution: Sorbonne, França
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/RIBEIRO_2003.pdf
+- title: A gramática comercial do meio. Os spots da campanha de Cássio Taniguchi à Prefeitura de Curitiba,
+    1996.
+  author: Sahada J. L. Mendes Palmeira
   year: 2002
-  advisor: "Afonso de Albuquerque"
-  institution: "UFF"
-  status: "tese"
-
-- title: "Uma análise da cobertura política do Jornal do Brasil e de O Globo nas eleições cariocas de 2000."
-  author: "Denise dos Santos Rodrigues"
+  advisor: Afonso de Albuquerque
+  institution: UFF
+  status: tese
+- title: Uma análise da cobertura política do Jornal do Brasil e de O Globo nas eleições cariocas de 2000.
+  author: Denise dos Santos Rodrigues
   year: 2002
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-
-- title: "A construção da política: cidadão comum, mídia e atitude política."
-  author: "Alessandra Aldé"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+- title: 'A construção da política: cidadão comum, mídia e atitude política.'
+  author: Alessandra Aldé
   year: 2001
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/ALDE_2001.pdf"
-
-- title: "A eleição paulistana de 2000 na Folha e no Estadão."
-  author: "Luana Costal"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/ALDE_2001.pdf
+- title: A eleição paulistana de 2000 na Folha e no Estadão.
+  author: Luana Costal
   year: 2001
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-
-- title: "Em busca de razões para o voto: o uso que o homem comum faz do horário eleitoral."
-  author: "Luciana Fernandes Veiga"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+- title: 'Em busca de razões para o voto: o uso que o homem comum faz do horário eleitoral.'
+  author: Luciana Fernandes Veiga
   year: 2001
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-
-- title: "Racionalidade e Retórica – teoria discursiva da ação coletiva."
-  author: "Raul Francisco Magalhães"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+- title: Racionalidade e Retórica – teoria discursiva da ação coletiva.
+  author: Raul Francisco Magalhães
   year: 2000
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-
-- title: "A Disputa Política na Televisão: Uma Análise das Estratégias Discursivas dos Candidatos Fernando Henrique Cardoso e Luiz Inácio Lula da Silva no Horário Gratuito de Propaganda Eleitoral."
-  author: "Luiz Ademir de Oliveira"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+- title: 'A Disputa Política na Televisão: Uma Análise das Estratégias Discursivas dos Candidatos Fernando
+    Henrique Cardoso e Luiz Inácio Lula da Silva no Horário Gratuito de Propaganda Eleitoral.'
+  author: Luiz Ademir de Oliveira
   year: 1999
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/OLIVEIRA_1999.pdf"
-
-- title: "Do bolso as urnas – A influência da economia na escolha entre Fernando Henrique e Lula nas eleições de 1998."
-  author: "Malco Braga Camargos"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/OLIVEIRA_1999.pdf
+- title: Do bolso as urnas – A influência da economia na escolha entre Fernando Henrique e Lula nas eleições
+    de 1998.
+  author: Malco Braga Camargos
   year: 1999
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/CAMARGOS_1999.pdf"
-
-- title: "Propaganda Política e Voto: O Estudo do Efeito da Persuasão do Horário Eleitoral – Estado do Rio de Janeiro, em 1994, 2º Turno."
-  author: "Luciana Fernandes Veiga"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/CAMARGOS_1999.pdf
+- title: 'Propaganda Política e Voto: O Estudo do Efeito da Persuasão do Horário Eleitoral – Estado do
+    Rio de Janeiro, em 1994, 2º Turno.'
+  author: Luciana Fernandes Veiga
   year: 1996
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/VEIGA_1996.pdf"
-
-- title: "Mídia e Política: A cobertura de O Globo e a eleição municipal do Rio de Janeiro em 1992."
-  author: "Heloísa da Silva Dias"
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/VEIGA_1996.pdf
+- title: 'Mídia e Política: A cobertura de O Globo e a eleição municipal do Rio de Janeiro em 1992.'
+  author: Heloísa da Silva Dias
   year: 1995
-  advisor: "Maria Regina Soares de Lima"
-  institution: "IUPERJ"
-  status: "tese"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/DIAS_1995.pdf"
-
-- title: "A Eleição Presidencial de 1994 e os Meios de Comunicação de Massa: Uma Análise de Propaganda Eleitoral Gratuita de Fernando Henrique Cardoso e Luiz Inácio Lula da Silva na Televisão."
-  author: "Vladimyr Lombardo Jorge"
+  advisor: Maria Regina Soares de Lima
+  institution: IUPERJ
+  status: tese
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/DIAS_1995.pdf
+- title: 'A Eleição Presidencial de 1994 e os Meios de Comunicação de Massa: Uma Análise de Propaganda
+    Eleitoral Gratuita de Fernando Henrique Cardoso e Luiz Inácio Lula da Silva na Televisão.'
+  author: Vladimyr Lombardo Jorge
   year: 1995
-  advisor: "Marcus Faria Figueiredo"
-  institution: "IUPERJ"
-  status: "tese"
-  description: "Orientador: Marcus Faria Figueiredo. Dissertação (mestrado) – IUPERJ. Orientador: Adam Przeworski. Tese (doutorado) – Universidade de Chicago"
-
-- title: "A Trajetória da Ciência Política Brasileira: Uma Análise da Produção e da Formação Acadêmica (1966-2014)"
-  author: "Lilian Paula da Costa Oliveira"
-  advisor: "Argelina Figueiredo"
-  institution: "IESP/UERJ"
-  status: "tese"
-  url: "https://iesp.uerj.br/publicacoes/teses-e-dissertacoes/teses-ciencia-politica/"
-
-- title: "Comportamento político no estado do Rio de Janeiro: adesão às lideranças do executivo e o papel da segurança da pública."
-  author: "Flávia Bozza Martins"
-  status: "andamento"
-  description: "O projeto de pesquisa se insere na linha de estudos de conexão eleitoral e tem por objetivo analisar o comportamento político das elites e eleitores no estado do Rio de Janeiro. Visa investigar o comportamento de candidatos e eleitos para a Câmara dos Deputados, com atenção específica ao: i) seu vínculo com lideranças do executivo estadual e nacional; e ii) o uso de issues de campanha e sua relação com o território fluminense e avaliação dos eleitores."
-
-- title: "Fragmentação partidária, margem de vitória e cargos comissionados"
-  author: "Bruno Schaefer"
-  status: "andamento"
-  description: "O neoweberianismo, ou Estado Neo-Weberiano (NWS), é um conceito que subjaz a análise de processos de transformações na administração pública em sentido amplo; mas que também possui sentido prático, na defesa de um Estado “híbrido”, entre noções hierárquicas de administração pública (estatismo) e o maior envolvimento do mercado nos assuntos administrativos (gerencialismo). Ou seja, tem poder analítico, mas também persuasivo sobre mudanças que devem ou não ocorrer na estrutura estatal e no modo de sua administração. No caso brasileiro, a ideia de NWS tem sido utilizada para analisar as profundas transformações que passa a administração pública desde, ao menos, os anos 90. Essas transformações envolvem a privatização e perda de monopólios estatais, de um lado, mas também maior participação social e inclusão cidadã, de outro. A literatura tem se debruçado com maior interesse sobre reformas no nível federal, em especial no aspecto da profissionalização de sua burocracia e a formação de capacidades a partir de arranjos institucionais. Esse movimento é extremamente importante, mas acaba deixando lacunas na análise das mudanças nos outros entes federativos. Nesta seara, há espaço para discussão sobre ao menos três pontos no que concerne, em específico, a questão dos recursos humanos: identificação das variações de estruturas administrativas entre entes federativos (comparação sincrônica) e entre tempos distintos (comparação diacrônica) (1); compreensão de suas causas (2); e suas consequências (3)."
-
-- title: "Quais são os impactos eleitorais de programas de transferência de renda?"
-  author: "Bruno Schaefer"
-  status: "andamento"
-  description: "Programas de transferência de renda à população, como o Auxílio Brasil e o Bolsa Família, são reconhecidamente importantes para a redução da pobreza e da desigualdade no Brasil. O objetivo deste projeto é analisar se esses programas têm impactos também nas eleições, ou seja, se a população tende a votar nas candidaturas que implementam esses programas."
-
-- title: "Efeitos do instituto da reeleição"
-  author: "Bruno Schaefer"
-  status: "andamento"
-  description: "A possibilidade de reeleger um governo é tema envolto em polêmicas e alvo frequente de Projetos de Lei no Congresso. O objetivo deste projeto é analisar se a reeleição de um governo realmente faz diferença na qualidade da gestão pública, principalmente em relação às políticas públicas de saúde e educação recebidos pela população dos municípios brasileiros."
-
-- title: "Dinâmica de sistemas políticos complexos: o caso do estado do Rio de Janeiro (1994 2014)"
-  author: "Fernando Guarnieri"
-  status: "andamento"
-  description: "O projeto tem como objetivo principal explicar a dinâmica de sistemas políticos complexos (com mais de dois partidos que competem em espaços políticos multidimensionais) utilizando técnicas estatísticas e modelos analíticos desenvolvidos recentemente. Nosso objeto será um sistema político complexo: o estado do Rio de Janeiro que apresenta níveis de fragmentação partidária e volatilidade eleitoral muito acima da média. Combinando bases de dados eleitorais, pesquisas de opinião e dados censitários e utilizando técnicas de inferência ecológica e modelos baseados em agentes esperamos identificar e explicar as variações nas estratégias adotadas pelos diferentes partidos fluminenses para a atração e manutenção de suas bases eleitorais."
-
-- title: "Representação Política e Qualidade da democracia: um estudo das elites parlamentares da América Latina"
-  author: "Fernando Meireles"
-  status: "andamento"
-  description: "O projeto Representação Política e Qualidade da Democracia: um estudo das elites parlamentares da América Latina (Módulo Brasil) dá continuidade a um processo de investigação iniciado em 2005 pelo Centro de Estudos Legislativos do Departamento de Ciência Política da UFMG (CEL-DCP) e inserido no Projeto Elites Parlamentares na América Latina (PELA), coordenado pelo Instituto Interuniversitario de Estúdios de Iberoamérica, da Universidade de Salamanca. O PELA investiga, desde 1994, as opiniões, atitudes e valores dos parlamentares em 18 países latino-americanos."
-
-- title: "O impacto das instituições sobre as políticas de combate à pobreza: um estudo comparado entre Brasil, México e África do Sul"
-  author: "Pedro Bras Martins da Costa"
-  status: "andamento"
-  description: "O objetivo deste projeto de tese é entender como a política e as instituições explicam a produção, o desenho e os resultados da política de combate à pobreza nas novas democracias nascidas em cenários de grande desigualdade social. Para isso, vou analisar de maneira comparada a produção legislativa e a implementação dos programas de transferência de renda em três países em que a transição democrática foi acompanhada de incentivos e desafios semelhantes para a adoção de uma agenda redistributiva focada especialmente na redução da pobreza: Brasil, México e África do Sul. Os três casos foram escolhidos utilizando a técnica de máxima semelhança (Gerring 2007), em que controla-se o efeito das variáveis independentes sobre a dependente (os programas de transferência de renda) por meio de variáveis comuns entre eles."
-
-- title: "Aprovação de governos e preferência partidária na América Latina"
-  author: "Carolini Gabriel da Silva"
-  status: "andamento"
-  description: "Este estudo pretende explorar, justamente, a teoria da identificação partidária na análise dos determinantes da aprovação governamental na América Latina e adota como estudo de caso o Brasil. Evidências que incentivam a adoção dessa linha de argumentação proliferaram recentemente. Cabezas (2015), Veiga e Ross (2016), Cabezas e Navia (2019) e Opertti (2020) concluem que o partidarismo, enquanto vínculo afetivo, continua moldando as reações dos cidadãos em relação ao mundo político. No Uruguai, as ligações partidárias têm efeito nas percepções econômicas e estas variam de acordo com a proximidade entre os cidadãos e as legendas (Opertti, 2020). No âmbito regional, as chances dos presidentes latino-americanos de serem bem avaliados aumentam quando os eleitores se identificam com o partido do mandatário (Cabezas, 2015)."
-
-- title: "Institucionalização e efetividade: a importância do desenho institucional dos conselhos para as políticas públicas"
-  author: "Karime Pereira Ribeiro Lima"
-  status: "andamento"
-  description: "A pesquisa tem como objeto de análise a diferença entre os desenhos institucionais dos conselhos de políticas públicas e os diferentes resultados a que eles chegam, com foco na participação desses conselhos nas políticas. A pergunta que norteia a pesquisa é: conselhos mais institucionalizados têm maior influência nas políticas? A principal hipótese que será averiguada é a de que a estrutura organizacional desempenha papel fundamental para a efetividade dos conselhos e para sua atuação na gestão compartilhada de políticas. Dessa maneira, espera-se encontrar evidências para essa hipótese por meio da análise comparativa de quatro conselhos regidos por diferentes normas formais de funcionamento e legados institucionais dos órgãos responsáveis pelas políticas públicas a que são vinculados e, portanto, do seu grau de institucionalização."
-
-- title: "Reformas na previdência social brasileira: custos políticos de políticas inviáveis"
-  author: "Mariani Ferri de Holanda"
-  status: "andamento"
-  description: "A Previdência Social é um direito no Brasil, previsto no art. 6o da Constituição Federal (CF) de 1988, que garante renda não inferior a um salário mínimo ao trabalhador e a sua família nas seguintes situações: cobertura dos eventos de doença, invalidez, morte e idade avançada; proteção à maternidade, especialmente à gestante; proteção ao trabalhador em situação de desemprego involuntário; salário-família e auxílio-reclusão para os dependentes dos segurados de baixa renda; e pensão por morte do segurado, homem ou mulher, ao cônjuge ou companheiro e dependentes (art. 201, CF, 1988). Ela faz parte do estatuto da Seguridade Social, junto com o direito à saúde e à assistência social (art. 194, CF, 1998). Ainda que os temas sejam interligados, o trabalho analisará, somente, a dimensão previdenciária, nos termos das mudanças formais ensejadas pelas reformas realizadas."
-
-- title: "Partidos, coalizões e voto: competição programática no Brasil (1989-2020)"
-  author: "Nara Salles"
-  status: "andamento"
-  description: "Partidos competem oferecendo políticas e, para que os eleitores sejam capazes de escolher, devem apresentar algum grau de divergência. Qual o conteúdo da política no Brasil? Quais issues estão em disputa e como eles são apropriados pelos atores em diferentes arenas de atuação, localidades e períodos? Quais estratégias programáticas são empregadas pelos partidos brasileiros? De que maneira elas variam em função de arranjos políticos diversos, como número de competidores, participação em coalizões, padrões de concentração de votos e grau de competitividade das disputas? São essas as perguntas que esta pesquisa tem o objetivo de responder a partir da análise de uma ampla coleção de textos políticos, que inclui mais de 45 mil programas de governos, mais de 1.000 horas transcritas de peças de Horário Gratuito de Propaganda Eleitoral (HGPE) e mais de 550 mil discursos parlamentares."
-
-- title: "Dinâmica de sistemas políticos complexos: a política nas grandes metrópoles brasileiras"
-  author: "Fernando Guarnieri"
-  status: "andamento"
-  description: "O projeto tem como objetivo principal explicar a dinâmica de sistemas políticos complexos (com mais de dois partidos que competem em espaços políticos multidimensionais) utilizando técnicas estatísticas e modelos analíticos desenvolvidos recentemente. Nosso objeto serão grandes metrópoles brasileiras onde o sistema político apresenta grande complexidade, com níveis de fragmentação partidária e volatilidade eleitoral muito altas. Combinando bases de dados eleitorais, pesquisas de opinião e dados censitários e utilizando técnicas de inferência ecológica e modelos baseados em agentes esperamos identificar e explicar as variações nas estratégias adotadas pelos diferentes partidos para a atração e manutenção de suas bases eleitorais."
-
-- title: "Perfil político e propaganda eleitoral dos candidatos a deputado federal do Estado do Rio de Janeiro"
-  author: "Argelina Figueiredo"
-  status: "andamento"
-  description: "O projeto consiste na análise do perfil político e do apelo eleitoral dos candidatos ao cargo de deputado federal do Estado do Rio de Janeiro nas eleições de 1994 a 2018. Para tanto, considera o conteúdo, o número e o tempo de aparição de cada candidato ao cargo durante a propaganda veiculada no Horário Gratuito de Propaganda Eleitoral (HGPE), o desempenho nas eleições e a composição do financiamento aos candidatos. A abordagem qualitativa e quantitativa utilizada permite identificar as temáticas mobilizadas pelos candidatos e a natureza do apelo eleitoral, a participação de atores políticos ou sociais e os rec ursos conferidos pelos partidos. A pesquisa visa relacionar o tempo e a estratégia de propaganda e o financiamento proveniente do partido com o grau de competitividade dos candidatos (fortes, viáveis ou fracos) e seu sucesso eleitoral."
-
-- title: "Burocracia, processos decisórios e políticas públicas no território do estado do Rio de Janeiro"
-  author: "Carolina Botelho"
-  status: "concluida"
-  description: "Grandes obras de infraestrutura foram frequentes nos últimos dez anos, especialmente integrando o Programa de Aceleração do Crescimento (PAC) do governo federal. Embora haja uma literatura crescente sobre como capacidades estatais e redes políticas determinam obras de infraestrutura, algumas questões são pouco analisadas. Como burocratas e políticos interagem para implementar grandes projetos? Por que – e sob quais condições – burocratas entram em esquemas de corrupção? Como o governo federal interage com governos estaduais para realizar obras? As perguntas serão respondidas a partir do estudo de caso do Arco Metropolitano do Rio de Janeiro."
-
-- title: "Voto Pessoal e Representação Política: o Caso Brasileiro"
-  author: "Natalia Maciel"
-  status: "concluida"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/Maciel_Personal-Vote-and-Proportional-Representation.pdf"
-  description: "O objetivo da pesquisa é analisar os efeitos do sistema eleitoral proporcional de lista aberta sobre a representação política no Brasil. A hipótese é que enquanto a lista aberta incentiva o voto no candidato, a representação proporcional permite que diferentes grupos da sociedade escolham candidatos próprios para defender seus interesses. Tendo em vista a diversidade do mercado eleitoral brasileiro, espera-se que a representação proporcional criará dinâmicas de voto pessoal diferentes que resultarão em estratégias de atuação parlamentar diversas, dependendo do grupo da sociedade ao qual o deputado representa. Espera-se encontrar na Câmara dos Deputados parlamentares com comportamento parlamentar desde o mais particularista ao mais programático. Busca-se demonstrar que distintos perfis sociais e demográficos das bases eleitorais resultarão em incentivos diversos de atuação parlamentar."
-
-- title: "Cobertura jornalística: Eleições Presidenciais 2006"
-  author: "Equipe Doxa"
-  status: "concluida"
-  description: "Análise quantitativa da cobertura jornalística sobre os principais candidatos à Presidência da República nos principais jornais do país, a partir da mesma metodologia já utilizada nos últimos pleitos. Monitoramento da visibilidade (aparições), valência das matérias (positiva, negativa ou neutra), enquadramento, temas (agenda-setting) e características formais relativas à paginação, posicionamento, imagens e títulos."
-
-- title: "Cobertura jornalística: eleições municipais 2004"
-  author: "Equipe Doxa"
-  status: "concluida"
-  description: "Análise quantitativa da cobertura jornalística sobre os principais candidatos no Rio de Janeiro, São Paulo, Belo Horizonte e Curitiba, a partir da mesma metodologia já utilizada nos últimos pleitos. Monitoramento da visibilidade (aparições), valência das matérias (positiva, negativa ou neutra), enquadramento, temas (agenda-setting) e características formais relativas à paginação, posicionamento, imagens e títulos."
-
-- title: "Eleições Gerais 2002: Participação, Propaganda Política e Escolhas Eleitorais"
-  status: "concluida"
-  description: "Este projeto, a exemplo do projeto eleições municipais 2000, é um esforço coletivo do grupo de estudo sobre Mídia e Eleições, criado no âmbito da Anpocs. Os objetivos são os de estudar, de forma integrada, os efeitos das campanhas eleitorais e da cobertura jornalística na produção as vontades políticas e intenções de voto dos eleitores. Neste ano de 2001 foi dedicado à montagem do desenho das pesquisas a serem aplicadas no acompanhamento das eleições de 2002. Este projeto está ainda integrado ao projeto do colega Jairo Nicolau (IUPERJ), especialmente na realização do survey nacional sobre comportamento eleitoral e intenção do voto. O grupo Mídia e Eleições tem a coordenação de Marcus Figueiredo (IUPERJ) e Vera Chaia (PUC-SP), com a participação de colegas de várias instituições (ver abaixo equipe do projeto eleição 2000). Participam ainda deste projeto estudantes do IUPERJ e os estagiários do Doxa. As linhas de pesquisa em andamento cobrem as seguintes áreas."
-
-- title: "Telejornal e a Formação da Opinião Política: Recepção e Processamento de Informações"
-  author: "Alessandra Aldé"
-  status: "concluida"
-  description: "A pesquisa empírica realizou um levantamento das atitudes políticas formuladas por cidadãos comuns, buscando mapear os esquemas cognitivos por eles utilizados para lidar com as informações a que têm acesso, e controlando o papel dos meios de comunicação na descrição e avaliação do mundo político. A partir do estudo intensivo de operações mentais realizadas por um número limitado de pessoas, identificar atitudes políticas e situações de comunicação comuns na sociedade, analisando suas influências recíprocas."
-
-- title: "Eleições Gerais 98: Participação, Propaganda Política e Escolhas Eleitorais"
-  author: "Marcus Figueiredo (IUPERJ)"
-  status: "concluida"
-  description: "Este projeto foi concebido como um estudo integrado da comunicação política, do processo eleitoral e do comportamento eleitoral da sociedade, tendo como foco as eleições de 1998. Constituído de três subprojetos (ver relatório 2000), foi encerrado em 2001."
-
-- title: "Eleições Municipais 2000"
-  status: "concluida"
-  description: "Análise das eleições municipais em algumas capitais (Porto Alegre, Curitiba, São Paulo, Rio de Janeiro, Belo Horizonte e Salvador), tendo três fontes empíricas para o estudo da formação da preferência eleitoral: cobertura jornalística, propaganda eleitoral e pesquisas pré-eleitorais. Concebido como um estudo comparativo, o projeto conta, ainda, com a participação de alunos do IUPERJ. Este projeto foi c e já apresentou os seguintes produtos:"
-
-- title: "Ideologia Política, Persuasão, Propaganda Eleitoral e Voto"
-  status: "concluida"
-  url: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/Relatorio-Analitico_eleicoes-1998.pdf"
-  description: "Analisa a recepção e o efeito persuasivo da propaganda eleitoral na TV na formação da intenção de voto, no âmbito da campanha presidencial de 1998. O foco é dado pelo exame de como os eleitores comuns, selecionados por critérios de baixa escolaridade, baixa renda, baixo associativismo e baixo interesse pela política, usam seus recursos cognitivos a fim de selecionarem e processarem as informações difundidas através da propaganda eleitoral e como as utilizam na elaboração de suas preferências eleitorais. A hipótese central é que tais eleitores têm capacidade de suprir a ausência ou a escassez de conhecimentos sobre os assuntos da política com o estoque de conhecimentos extraído do seu cotidiano, somando-o a noções fragmentadas recebidas pela mídia e pela conversação, formando a ideologia latente do eleitorado. O trabalho baseia-se em pesquisas qualitativas, entrevistas em profundidade e grupos de discussão, realizadas durante todo o período da disputa eleitoral."
-
-- title: "Eleições 1996 – Propaganda Eleitoral na TV e Mídia Impressa"
-  status: "concluida"
-  description: "Análise dos comerciais eleitorais veiculados pelos candidatos às prefeituras dos municípios de São Paulo e Rio de Janeiro, nos dois turnos, destacando de forma comparativa as estratégias de persuasão e de confronto discursivo entre os candidatos na busca de votos."
+  advisor: Marcus Faria Figueiredo
+  institution: IUPERJ
+  status: tese
+  description: 'Orientador: Marcus Faria Figueiredo. Dissertação (mestrado) – IUPERJ. Orientador: Adam
+    Przeworski. Tese (doutorado) – Universidade de Chicago'
+- title: 'A Trajetória da Ciência Política Brasileira: Uma Análise da Produção e da Formação Acadêmica
+    (1966-2014)'
+  author: Lilian Paula da Costa Oliveira
+  advisor: Argelina Figueiredo
+  institution: IESP/UERJ
+  status: tese
+- title: 'Comportamento político no estado do Rio de Janeiro: adesão às lideranças do executivo e o papel
+    da segurança da pública.'
+  author: Flávia Bozza Martins
+  status: andamento
+  description: 'O projeto de pesquisa se insere na linha de estudos de conexão eleitoral e tem por objetivo
+    analisar o comportamento político das elites e eleitores no estado do Rio de Janeiro. Visa investigar
+    o comportamento de candidatos e eleitos para a Câmara dos Deputados, com atenção específica ao: i)
+    seu vínculo com lideranças do executivo estadual e nacional; e ii) o uso de issues de campanha e sua
+    relação com o território fluminense e avaliação dos eleitores.'
+- title: Fragmentação partidária, margem de vitória e cargos comissionados
+  author: Bruno Schaefer
+  status: andamento
+  description: 'O neoweberianismo, ou Estado Neo-Weberiano (NWS), é um conceito que subjaz a análise de
+    processos de transformações na administração pública em sentido amplo; mas que também possui sentido
+    prático, na defesa de um Estado “híbrido”, entre noções hierárquicas de administração pública (estatismo)
+    e o maior envolvimento do mercado nos assuntos administrativos (gerencialismo). Ou seja, tem poder
+    analítico, mas também persuasivo sobre mudanças que devem ou não ocorrer na estrutura estatal e no
+    modo de sua administração. No caso brasileiro, a ideia de NWS tem sido utilizada para analisar as
+    profundas transformações que passa a administração pública desde, ao menos, os anos 90. Essas transformações
+    envolvem a privatização e perda de monopólios estatais, de um lado, mas também maior participação
+    social e inclusão cidadã, de outro. A literatura tem se debruçado com maior interesse sobre reformas
+    no nível federal, em especial no aspecto da profissionalização de sua burocracia e a formação de capacidades
+    a partir de arranjos institucionais. Esse movimento é extremamente importante, mas acaba deixando
+    lacunas na análise das mudanças nos outros entes federativos. Nesta seara, há espaço para discussão
+    sobre ao menos três pontos no que concerne, em específico, a questão dos recursos humanos: identificação
+    das variações de estruturas administrativas entre entes federativos (comparação sincrônica) e entre
+    tempos distintos (comparação diacrônica) (1); compreensão de suas causas (2); e suas consequências
+    (3).'
+- title: Quais são os impactos eleitorais de programas de transferência de renda?
+  author: Bruno Schaefer
+  status: andamento
+  description: Programas de transferência de renda à população, como o Auxílio Brasil e o Bolsa Família,
+    são reconhecidamente importantes para a redução da pobreza e da desigualdade no Brasil. O objetivo
+    deste projeto é analisar se esses programas têm impactos também nas eleições, ou seja, se a população
+    tende a votar nas candidaturas que implementam esses programas.
+- title: Efeitos do instituto da reeleição
+  author: Bruno Schaefer
+  status: andamento
+  description: A possibilidade de reeleger um governo é tema envolto em polêmicas e alvo frequente de
+    Projetos de Lei no Congresso. O objetivo deste projeto é analisar se a reeleição de um governo realmente
+    faz diferença na qualidade da gestão pública, principalmente em relação às políticas públicas de saúde
+    e educação recebidos pela população dos municípios brasileiros.
+- title: 'Dinâmica de sistemas políticos complexos: o caso do estado do Rio de Janeiro (1994 2014)'
+  author: Fernando Guarnieri
+  status: andamento
+  description: 'O projeto tem como objetivo principal explicar a dinâmica de sistemas políticos complexos
+    (com mais de dois partidos que competem em espaços políticos multidimensionais) utilizando técnicas
+    estatísticas e modelos analíticos desenvolvidos recentemente. Nosso objeto será um sistema político
+    complexo: o estado do Rio de Janeiro que apresenta níveis de fragmentação partidária e volatilidade
+    eleitoral muito acima da média. Combinando bases de dados eleitorais, pesquisas de opinião e dados
+    censitários e utilizando técnicas de inferência ecológica e modelos baseados em agentes esperamos
+    identificar e explicar as variações nas estratégias adotadas pelos diferentes partidos fluminenses
+    para a atração e manutenção de suas bases eleitorais.'
+- title: 'Representação Política e Qualidade da democracia: um estudo das elites parlamentares da América
+    Latina'
+  author: Fernando Meireles
+  status: andamento
+  description: 'O projeto Representação Política e Qualidade da Democracia: um estudo das elites parlamentares
+    da América Latina (Módulo Brasil) dá continuidade a um processo de investigação iniciado em 2005 pelo
+    Centro de Estudos Legislativos do Departamento de Ciência Política da UFMG (CEL-DCP) e inserido no
+    Projeto Elites Parlamentares na América Latina (PELA), coordenado pelo Instituto Interuniversitario
+    de Estúdios de Iberoamérica, da Universidade de Salamanca. O PELA investiga, desde 1994, as opiniões,
+    atitudes e valores dos parlamentares em 18 países latino-americanos.'
+- title: 'O impacto das instituições sobre as políticas de combate à pobreza: um estudo comparado entre
+    Brasil, México e África do Sul'
+  author: Pedro Bras Martins da Costa
+  status: andamento
+  description: 'O objetivo deste projeto de tese é entender como a política e as instituições explicam
+    a produção, o desenho e os resultados da política de combate à pobreza nas novas democracias nascidas
+    em cenários de grande desigualdade social. Para isso, vou analisar de maneira comparada a produção
+    legislativa e a implementação dos programas de transferência de renda em três países em que a transição
+    democrática foi acompanhada de incentivos e desafios semelhantes para a adoção de uma agenda redistributiva
+    focada especialmente na redução da pobreza: Brasil, México e África do Sul. Os três casos foram escolhidos
+    utilizando a técnica de máxima semelhança (Gerring 2007), em que controla-se o efeito das variáveis
+    independentes sobre a dependente (os programas de transferência de renda) por meio de variáveis comuns
+    entre eles.'
+- title: Aprovação de governos e preferência partidária na América Latina
+  author: Carolini Gabriel da Silva
+  status: andamento
+  description: Este estudo pretende explorar, justamente, a teoria da identificação partidária na análise
+    dos determinantes da aprovação governamental na América Latina e adota como estudo de caso o Brasil.
+    Evidências que incentivam a adoção dessa linha de argumentação proliferaram recentemente. Cabezas
+    (2015), Veiga e Ross (2016), Cabezas e Navia (2019) e Opertti (2020) concluem que o partidarismo,
+    enquanto vínculo afetivo, continua moldando as reações dos cidadãos em relação ao mundo político.
+    No Uruguai, as ligações partidárias têm efeito nas percepções econômicas e estas variam de acordo
+    com a proximidade entre os cidadãos e as legendas (Opertti, 2020). No âmbito regional, as chances
+    dos presidentes latino-americanos de serem bem avaliados aumentam quando os eleitores se identificam
+    com o partido do mandatário (Cabezas, 2015).
+- title: 'Institucionalização e efetividade: a importância do desenho institucional dos conselhos para
+    as políticas públicas'
+  author: Karime Pereira Ribeiro Lima
+  status: andamento
+  description: 'A pesquisa tem como objeto de análise a diferença entre os desenhos institucionais dos
+    conselhos de políticas públicas e os diferentes resultados a que eles chegam, com foco na participação
+    desses conselhos nas políticas. A pergunta que norteia a pesquisa é: conselhos mais institucionalizados
+    têm maior influência nas políticas? A principal hipótese que será averiguada é a de que a estrutura
+    organizacional desempenha papel fundamental para a efetividade dos conselhos e para sua atuação na
+    gestão compartilhada de políticas. Dessa maneira, espera-se encontrar evidências para essa hipótese
+    por meio da análise comparativa de quatro conselhos regidos por diferentes normas formais de funcionamento
+    e legados institucionais dos órgãos responsáveis pelas políticas públicas a que são vinculados e,
+    portanto, do seu grau de institucionalização.'
+- title: 'Reformas na previdência social brasileira: custos políticos de políticas inviáveis'
+  author: Mariani Ferri de Holanda
+  status: andamento
+  description: 'A Previdência Social é um direito no Brasil, previsto no art. 6o da Constituição Federal
+    (CF) de 1988, que garante renda não inferior a um salário mínimo ao trabalhador e a sua família nas
+    seguintes situações: cobertura dos eventos de doença, invalidez, morte e idade avançada; proteção
+    à maternidade, especialmente à gestante; proteção ao trabalhador em situação de desemprego involuntário;
+    salário-família e auxílio-reclusão para os dependentes dos segurados de baixa renda; e pensão por
+    morte do segurado, homem ou mulher, ao cônjuge ou companheiro e dependentes (art. 201, CF, 1988).
+    Ela faz parte do estatuto da Seguridade Social, junto com o direito à saúde e à assistência social
+    (art. 194, CF, 1998). Ainda que os temas sejam interligados, o trabalho analisará, somente, a dimensão
+    previdenciária, nos termos das mudanças formais ensejadas pelas reformas realizadas.'
+- title: 'Partidos, coalizões e voto: competição programática no Brasil (1989-2020)'
+  author: Nara Salles
+  status: andamento
+  description: Partidos competem oferecendo políticas e, para que os eleitores sejam capazes de escolher,
+    devem apresentar algum grau de divergência. Qual o conteúdo da política no Brasil? Quais issues estão
+    em disputa e como eles são apropriados pelos atores em diferentes arenas de atuação, localidades e
+    períodos? Quais estratégias programáticas são empregadas pelos partidos brasileiros? De que maneira
+    elas variam em função de arranjos políticos diversos, como número de competidores, participação em
+    coalizões, padrões de concentração de votos e grau de competitividade das disputas? São essas as perguntas
+    que esta pesquisa tem o objetivo de responder a partir da análise de uma ampla coleção de textos políticos,
+    que inclui mais de 45 mil programas de governos, mais de 1.000 horas transcritas de peças de Horário
+    Gratuito de Propaganda Eleitoral (HGPE) e mais de 550 mil discursos parlamentares.
+- title: 'Dinâmica de sistemas políticos complexos: a política nas grandes metrópoles brasileiras'
+  author: Fernando Guarnieri
+  status: andamento
+  description: O projeto tem como objetivo principal explicar a dinâmica de sistemas políticos complexos
+    (com mais de dois partidos que competem em espaços políticos multidimensionais) utilizando técnicas
+    estatísticas e modelos analíticos desenvolvidos recentemente. Nosso objeto serão grandes metrópoles
+    brasileiras onde o sistema político apresenta grande complexidade, com níveis de fragmentação partidária
+    e volatilidade eleitoral muito altas. Combinando bases de dados eleitorais, pesquisas de opinião e
+    dados censitários e utilizando técnicas de inferência ecológica e modelos baseados em agentes esperamos
+    identificar e explicar as variações nas estratégias adotadas pelos diferentes partidos para a atração
+    e manutenção de suas bases eleitorais.
+- title: Perfil político e propaganda eleitoral dos candidatos a deputado federal do Estado do Rio de
+    Janeiro
+  author: Argelina Figueiredo
+  status: andamento
+  description: O projeto consiste na análise do perfil político e do apelo eleitoral dos candidatos ao
+    cargo de deputado federal do Estado do Rio de Janeiro nas eleições de 1994 a 2018. Para tanto, considera
+    o conteúdo, o número e o tempo de aparição de cada candidato ao cargo durante a propaganda veiculada
+    no Horário Gratuito de Propaganda Eleitoral (HGPE), o desempenho nas eleições e a composição do financiamento
+    aos candidatos. A abordagem qualitativa e quantitativa utilizada permite identificar as temáticas
+    mobilizadas pelos candidatos e a natureza do apelo eleitoral, a participação de atores políticos ou
+    sociais e os rec ursos conferidos pelos partidos. A pesquisa visa relacionar o tempo e a estratégia
+    de propaganda e o financiamento proveniente do partido com o grau de competitividade dos candidatos
+    (fortes, viáveis ou fracos) e seu sucesso eleitoral.
+- title: Burocracia, processos decisórios e políticas públicas no território do estado do Rio de Janeiro
+  author: Carolina Botelho
+  status: concluida
+  description: Grandes obras de infraestrutura foram frequentes nos últimos dez anos, especialmente integrando
+    o Programa de Aceleração do Crescimento (PAC) do governo federal. Embora haja uma literatura crescente
+    sobre como capacidades estatais e redes políticas determinam obras de infraestrutura, algumas questões
+    são pouco analisadas. Como burocratas e políticos interagem para implementar grandes projetos? Por
+    que – e sob quais condições – burocratas entram em esquemas de corrupção? Como o governo federal interage
+    com governos estaduais para realizar obras? As perguntas serão respondidas a partir do estudo de caso
+    do Arco Metropolitano do Rio de Janeiro.
+- title: 'Voto Pessoal e Representação Política: o Caso Brasileiro'
+  author: Natalia Maciel
+  status: concluida
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/Maciel_Personal-Vote-and-Proportional-Representation.pdf
+  description: O objetivo da pesquisa é analisar os efeitos do sistema eleitoral proporcional de lista
+    aberta sobre a representação política no Brasil. A hipótese é que enquanto a lista aberta incentiva
+    o voto no candidato, a representação proporcional permite que diferentes grupos da sociedade escolham
+    candidatos próprios para defender seus interesses. Tendo em vista a diversidade do mercado eleitoral
+    brasileiro, espera-se que a representação proporcional criará dinâmicas de voto pessoal diferentes
+    que resultarão em estratégias de atuação parlamentar diversas, dependendo do grupo da sociedade ao
+    qual o deputado representa. Espera-se encontrar na Câmara dos Deputados parlamentares com comportamento
+    parlamentar desde o mais particularista ao mais programático. Busca-se demonstrar que distintos perfis
+    sociais e demográficos das bases eleitorais resultarão em incentivos diversos de atuação parlamentar.
+- title: 'Cobertura jornalística: Eleições Presidenciais 2006'
+  author: Equipe Doxa
+  status: concluida
+  description: Análise quantitativa da cobertura jornalística sobre os principais candidatos à Presidência
+    da República nos principais jornais do país, a partir da mesma metodologia já utilizada nos últimos
+    pleitos. Monitoramento da visibilidade (aparições), valência das matérias (positiva, negativa ou neutra),
+    enquadramento, temas (agenda-setting) e características formais relativas à paginação, posicionamento,
+    imagens e títulos.
+- title: 'Cobertura jornalística: eleições municipais 2004'
+  author: Equipe Doxa
+  status: concluida
+  description: Análise quantitativa da cobertura jornalística sobre os principais candidatos no Rio de
+    Janeiro, São Paulo, Belo Horizonte e Curitiba, a partir da mesma metodologia já utilizada nos últimos
+    pleitos. Monitoramento da visibilidade (aparições), valência das matérias (positiva, negativa ou neutra),
+    enquadramento, temas (agenda-setting) e características formais relativas à paginação, posicionamento,
+    imagens e títulos.
+- title: 'Eleições Gerais 2002: Participação, Propaganda Política e Escolhas Eleitorais'
+  status: concluida
+  description: Este projeto, a exemplo do projeto eleições municipais 2000, é um esforço coletivo do grupo
+    de estudo sobre Mídia e Eleições, criado no âmbito da Anpocs. Os objetivos são os de estudar, de forma
+    integrada, os efeitos das campanhas eleitorais e da cobertura jornalística na produção as vontades
+    políticas e intenções de voto dos eleitores. Neste ano de 2001 foi dedicado à montagem do desenho
+    das pesquisas a serem aplicadas no acompanhamento das eleições de 2002. Este projeto está ainda integrado
+    ao projeto do colega Jairo Nicolau (IUPERJ), especialmente na realização do survey nacional sobre
+    comportamento eleitoral e intenção do voto. O grupo Mídia e Eleições tem a coordenação de Marcus Figueiredo
+    (IUPERJ) e Vera Chaia (PUC-SP), com a participação de colegas de várias instituições (ver abaixo equipe
+    do projeto eleição 2000). Participam ainda deste projeto estudantes do IUPERJ e os estagiários do
+    Doxa. As linhas de pesquisa em andamento cobrem as seguintes áreas.
+- title: 'Telejornal e a Formação da Opinião Política: Recepção e Processamento de Informações'
+  author: Alessandra Aldé
+  status: concluida
+  description: A pesquisa empírica realizou um levantamento das atitudes políticas formuladas por cidadãos
+    comuns, buscando mapear os esquemas cognitivos por eles utilizados para lidar com as informações a
+    que têm acesso, e controlando o papel dos meios de comunicação na descrição e avaliação do mundo político.
+    A partir do estudo intensivo de operações mentais realizadas por um número limitado de pessoas, identificar
+    atitudes políticas e situações de comunicação comuns na sociedade, analisando suas influências recíprocas.
+- title: 'Eleições Gerais 98: Participação, Propaganda Política e Escolhas Eleitorais'
+  author: Marcus Figueiredo (IUPERJ)
+  status: concluida
+  description: Este projeto foi concebido como um estudo integrado da comunicação política, do processo
+    eleitoral e do comportamento eleitoral da sociedade, tendo como foco as eleições de 1998. Constituído
+    de três subprojetos (ver relatório 2000), foi encerrado em 2001.
+- title: Eleições Municipais 2000
+  status: concluida
+  description: 'Análise das eleições municipais em algumas capitais (Porto Alegre, Curitiba, São Paulo,
+    Rio de Janeiro, Belo Horizonte e Salvador), tendo três fontes empíricas para o estudo da formação
+    da preferência eleitoral: cobertura jornalística, propaganda eleitoral e pesquisas pré-eleitorais.
+    Concebido como um estudo comparativo, o projeto conta, ainda, com a participação de alunos do IUPERJ.
+    Este projeto foi c e já apresentou os seguintes produtos:'
+- title: Ideologia Política, Persuasão, Propaganda Eleitoral e Voto
+  status: concluida
+  url: https://www.lab-doxa.org.br/wp-content/uploads/2022/09/Relatorio-Analitico_eleicoes-1998.pdf
+  description: Analisa a recepção e o efeito persuasivo da propaganda eleitoral na TV na formação da intenção
+    de voto, no âmbito da campanha presidencial de 1998. O foco é dado pelo exame de como os eleitores
+    comuns, selecionados por critérios de baixa escolaridade, baixa renda, baixo associativismo e baixo
+    interesse pela política, usam seus recursos cognitivos a fim de selecionarem e processarem as informações
+    difundidas através da propaganda eleitoral e como as utilizam na elaboração de suas preferências eleitorais.
+    A hipótese central é que tais eleitores têm capacidade de suprir a ausência ou a escassez de conhecimentos
+    sobre os assuntos da política com o estoque de conhecimentos extraído do seu cotidiano, somando-o
+    a noções fragmentadas recebidas pela mídia e pela conversação, formando a ideologia latente do eleitorado.
+    O trabalho baseia-se em pesquisas qualitativas, entrevistas em profundidade e grupos de discussão,
+    realizadas durante todo o período da disputa eleitoral.
+- title: Eleições 1996 – Propaganda Eleitoral na TV e Mídia Impressa
+  status: concluida
+  description: Análise dos comerciais eleitorais veiculados pelos candidatos às prefeituras dos municípios
+    de São Paulo e Rio de Janeiro, nos dois turnos, destacando de forma comparativa as estratégias de
+    persuasão e de confronto discursivo entre os candidatos na busca de votos.

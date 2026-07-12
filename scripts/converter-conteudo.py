@@ -121,7 +121,10 @@ def paginas():
         "na-midia.md": dict(sem_primeiro_titulo=True),
         "pagina-pesquisas.md": dict(sem_primeiro_titulo=True),
         "seminarios.md": dict(sem_primeiro_titulo=True),
-        "mapas-de-votacao.md": dict(sem_primeiro_titulo=True),
+        # A página antiga trazia uma TABELA de partidos com links para cada PDF. Ao extrair a
+        # prosa, os links somem e sobram só as siglas separadas por barras — lixo. Os 273
+        # mapas já vêm estruturados de mapas-votacao.yaml, então basta a introdução.
+        "mapas-de-votacao.md": dict(sem_primeiro_titulo=True, so_introducao=True),
         "textos-para-discussao-2.md": dict(sem_primeiro_titulo=True),
     }
 

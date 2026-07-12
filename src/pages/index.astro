@@ -121,9 +121,10 @@ const numeros = [
   .apresentacao {
     padding-block: var(--esp-5) var(--esp-4);
   }
+  /* Título corrido: ocupa a largura da página, como o texto abaixo. */
   .apresentacao h1 {
-    max-width: 30ch;
     margin-bottom: var(--esp-3);
+    text-wrap: balance;
   }
   .apresentacao__texto {
     font-size: 1.02rem;
@@ -204,9 +205,4 @@ const numeros = [
     opacity: 1;
   }
 
-  @media (max-width: 900px) {
-    .apresentacao h1 {
-      max-width: none;
-    }
-  }
 </style>
