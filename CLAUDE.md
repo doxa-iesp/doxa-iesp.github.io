@@ -24,6 +24,11 @@ npm run preview   # serve dist/
 `npm run build` = `node scripts/validar-dados.mjs && astro build`. **Não remova o validador**
 (veja "Armadilhas" abaixo).
 
+**Não há suíte de testes** — e não é esquecimento: o site não tem lógica de runtime para testar.
+O que substitui o teste é o par `validar` + `check`, e é isso que o CI roda. Antes de dizer que uma
+mudança funciona, rode `npm run build` (que já inclui o validador) e, se mexeu em tipos ou props de
+componente, `npm run check`.
+
 Deploy: push em `main` → `.github/workflows/deploy.yml` → GitHub Pages.
 PRs rodam `.github/workflows/pr.yml` (build + `astro check` + artefato `site-dist`).
 
@@ -95,6 +100,13 @@ ficava preso à esquerda.
 O `--gradiente-marca` (navy→verde) é a assinatura da marca. Use com parcimônia: nav, rodapé, capas
 de seção e **uma** faixa de destaque por página — se toda seção ganhar gradiente, vira um bloco só.
 
+**Títulos são bi-peso, e isso é código, não CSS.** O site antigo escrevia "Textos para
+**Discussão**", "Nossa **Equipe**", "Argelina **Cheibub Figueiredo**" — última palavra em destaque.
+Quem faz isso é [src/components/Titulo.astro](src/components/Titulo.astro), sobre
+`partirUltimaPalavra()` de [src/lib/texto.ts](src/lib/texto.ts) (usado também por `PageHero` e
+`CardMembro`). Não escreva `<h2>` cru numa página nova: use `<Titulo>`, e passe `forte` quando a
+quebra natural não for a última palavra.
+
 ## Armadilhas conhecidas
 
 **1. O loader `file()` do Astro engole erros de YAML.** Se um `src/data/*.yaml` estiver
@@ -121,10 +133,32 @@ git archive --format=tar HEAD | tar -x -C /tmp/t && cd /tmp/t && npm ci && npm r
 ```
 
 **2c. `redirects` do `astro.config.mjs` ignora o `base`.** O Astro monta o destino só a partir dos
-segmentos da rota (`dist/core/routing/generator.js`), sem o `base`. Como o site vive em `/DOXA/`, um
-`redirects: {'/pesquisas': '/producao/pesquisas'}` mandaria o visitante para
-`felipelamarca.com/producao/pesquisas/` — 404, **e só em produção**. Por isso os redirecionamentos
-são páginas-stub que montam o destino com `url()`.
+segmentos da rota (`dist/core/routing/generator.js`), sem o `base`. Hoje isso é inofensivo, porque
+`base` é vazio — mas quando o site vivia em `/DOXA/`, um `redirects: {'/pesquisas':
+'/producao/pesquisas'}` mandava o visitante para `felipelamarca.com/producao/pesquisas/` — 404, **e
+só em produção**. É uma armadilha adormecida, não morta: ela volta no dia em que o site for para um
+subdiretório. Por isso os redirecionamentos continuam sendo páginas-stub que montam o destino com
+`url()` ([src/components/Redirecionamento.astro](src/components/Redirecionamento.astro)) — e as
+rotas antigas ficam fora do sitemap, via `ROTAS_ANTIGAS` no [astro.config.mjs](astro.config.mjs).
+
+**2d. Os mapas de votação não estão no site.** 273 arquivos (797 MB) ainda são servidos pelo
+WordPress antigo (`lab-doxa.org.br`) — o `url:` desses itens em `src/data/mapas-votacao.yaml`
+aponta para fora. Se o WordPress cair, os 273 downloads quebram juntos, e nenhum build vai acusar
+isso. (As teses, análises e textos para discussão que dependiam do mesmo jeito do WordPress já
+foram migrados para `public/pdfs/` — ver item 0 de [DADOS_PENDENTES.md](DADOS_PENDENTES.md). Os
+mapas são o que sobrou: sozinhos, não cabem no teto de 1 GB do GitHub Pages, então a decisão de
+onde hospedá-los está pendente do time.) Não presuma que um PDF referenciado existe em `public/`
+sem conferir — `DADOS_PENDENTES.md` é também a lista de tudo o que falta preencher (e que está
+faltando **de propósito**, não por bug).
+
+**2e. `arquivos-preservados/` não tem backup em lugar nenhum.** É uma cópia local dos 273 mapas
+(797 MB) do item acima, mais 6 PDFs órfãos preservados por precaução (nenhuma página os linka
+hoje), ignorada pelo git de propósito (ver `.gitignore`) — o seguro contra o dia em que o
+WordPress antigo sair do ar, enquanto a decisão de hospedagem dos mapas (ver
+[arquivos-preservados/LEIA-ME.md](arquivos-preservados/LEIA-ME.md), que também traz o runbook para
+quando o destino for escolhido) não sai do papel. `git clean -fdx` apaga a pasta inteira sem forma
+de recuperação (a não ser rebaixar tudo do WordPress, se ainda estiver no ar). Rode sempre
+`git clean -fdx -e arquivos-preservados`, nunca o comando cru.
 
 **3. Defeito na fonte: `programas-eleitorais-capitais.csv`.** A coluna `municipio` está
 rotacionada em relação aos candidatos (Eduardo Paes aparece como Florianópolis). Documentado em
@@ -148,4 +182,7 @@ se alguém corrigir um dado à mão, corrija também em `extracao/`, que é a fo
   ressalva do `file()` e como foi fechada.
 - [docs/GUIA_DE_MANUTENCAO.md](docs/GUIA_DE_MANUTENCAO.md) — guia para estagiários, sem jargão.
 - [docs/MUDANCAS_DE_LAYOUT.md](docs/MUDANCAS_DE_LAYOUT.md) — todo desvio do site antigo, com motivo.
+- [docs/RESUMO_EXECUTIVO.md](docs/RESUMO_EXECUTIVO.md) — retrato da reconstrução em 2026-07-10
+  (contagens de conteúdo migrado, estado técnico); desatualizado quanto às rotas (é anterior a
+  `/producao/` e `/projetos/`), mas útil como referência de escopo.
 - [checkpoints/](checkpoints/) — o histórico de decisões de cada etapa da reconstrução.

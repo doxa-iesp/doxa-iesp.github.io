@@ -3,6 +3,7 @@ import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import AbasFiltro from '../../components/AbasFiltro.astro';
+import { linkPara } from '../../lib/url';
 
 const pagina = (await getEntry('paginas', 'pesquisas'))!;
 const { Content } = await render(pagina);
@@ -59,7 +60,7 @@ const abas = [
                 {p.data.url && (
                   <a
                     class="pesquisa__link"
-                    href={p.data.url}
+                    href={linkPara(p.data.url)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

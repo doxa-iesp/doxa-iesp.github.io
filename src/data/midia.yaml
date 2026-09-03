@@ -73,7 +73,7 @@
   veiculo: Folha de São Paulo
   data: '2020-04-30'
   tipo: impressa
-  url: http://doxa.iesp.uerj.br/wp-content/uploads/2020/04/Artigo-Folha-Limongi-Figueiredo.pdf
+  url: /pdfs/midia/Artigo-Folha-Limongi-Figueiredo.pdf
 - titulo: A polarização do vírus
   autores: Figueiredo, Argelina
   veiculo: Valor Econômico
@@ -107,13 +107,13 @@
   veiculo: Valor Econômico
   data: '2017-02-17'
   tipo: impressa
-  url: http://doxa.iesp.uerj.br/wp-content/uploads/2016/02/Democracia-e-Democracias-_-Valor_17_02_17.pdf
+  url: /pdfs/midia/Democracia-e-Democracias-_-Valor_17_02_17.pdf
 - titulo: Conflito na elite e escândalos de corrupção
   autores: Figueiredo, Argelina
   veiculo: Valor Econômico
   data: '2016-02-15'
   tipo: impressa
-  url: http://doxa.iesp.uerj.br/wp-content/uploads/2016/02/Argelina_artigo-Valor_Conflito-na-elite-e-esc%C3%A2ndalos-de-corrup%C3%A7%C3%A3o.pdf
+  url: /pdfs/midia/Argelina_artigo-Valor_Conflito-na-elite-e-escândalos-de-corrupção.pdf
 - titulo: O que deu errado? Não culpemos as instituições
   autores: Figueiredo, Argelina
   veiculo: Folha de São Paulo
@@ -125,7 +125,7 @@
   veiculo: Valor Econômico
   data: '2015-05-29'
   tipo: impressa
-  url: http://doxa.iesp.uerj.br/wp-content/uploads/2016/02/A-anatomia-do-PMDB_Valor-Econ%C3%B4mico.pdf
+  url: /pdfs/midia/A-anatomia-do-PMDB_Valor-Econômico.pdf
 - titulo: The power behind the throne
   autores: Maciel, Natália
   veiculo: The Economist
@@ -394,6 +394,7 @@
     Estúdios Mega
   data: '2010'
   tipo: audiovisual
+  url: https://www.youtube.com/watch?v=hHdV_BeIW0M
 - titulo: Democracia busca equilíbrio entre representação e governabilidade
   autores: Argelina Figueiredo
   veiculo: Canal UM BRASIL, entrevista a Humberto Dantas

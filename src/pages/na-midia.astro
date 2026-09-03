@@ -2,6 +2,7 @@
 import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
+import { linkPara } from '../lib/url';
 
 const pagina = (await getEntry('paginas', 'na-midia'))!;
 const { Content } = await render(pagina);
@@ -54,7 +55,7 @@ const grupos = secoes.map((s) => ({
                     {m.data.url ? (
                       <a
                         class="item__titulo"
-                        href={m.data.url}
+                        href={linkPara(m.data.url)}
                         target="_blank"
                         rel="noopener noreferrer"
                       >

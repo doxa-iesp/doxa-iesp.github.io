@@ -16,63 +16,86 @@ Ordenado por impacto. Marque `[x]` conforme resolver.
 novo: eles continuam sendo servidos pelo WordPress antigo (`lab-doxa.org.br`). **Se o WordPress for
 desligado, todos esses downloads quebram de uma vez.**
 
-| Coleção | Arquivos | Peso |
-|---|---:|---:|
-| Mapas de votação | 273 | **835 MB** |
-| Teses e pesquisas | 20 | 43 MB |
-| Análises de conjuntura | 33 | 30 MB |
-| Textos para discussão | 2 | 2 MB |
-| **Total** | **328** | **911 MB** |
+| Coleção | Arquivos | Peso | Situação |
+|---|---:|---:|---|
+| Mapas de votação | 273 | 797 MB | **pendente** — falta a decisão de endereço |
+| Teses e pesquisas | 20 | 43 MB | ✅ resolvido em 2026-09-03 |
+| Análises de conjuntura | 33 | 30 MB | ✅ resolvido em 2026-09-03 |
+| Textos para discussão | 2 | 2 MB | ✅ resolvido em 2026-09-03 |
 
-O GitHub Pages tem limite de **1 GB por site**, então não dá simplesmente para copiar tudo para cá.
-Mas repare que **92% do peso são os mapas**: as outras três coleções somam só **55 arquivos e 76 MB**,
-que caberiam tranquilamente no repositório.
+**✅ 2026-09-03 — Opção A parcialmente feita.** Os 55 PDFs de teses, análises e textos para
+discussão (76 MB) já foram trazidos para o repositório (`public/pdfs/`) e os links em
+`src/data/` já apontam para lá — deixaram de depender do WordPress. De brinde, os 4 PDFs de
+`midia-recuperada-do-archive/` também migraram, consertando 4 links que davam 404 em produção em
+`midia.yaml`. Ver `arquivos-preservados/LEIA-ME.md`.
 
-**Decisão que o time precisa tomar:**
+**Decisão que ainda falta: os 273 mapas de votação (797 MB).**
 
-- [ ] **Opção A (recomendada):** trazer para o repositório os 55 PDFs de teses, análises e textos
-      para discussão (76 MB), e dar aos 273 mapas (835 MB) um endereço próprio: Google Drive (que o
-      laboratório já usa para o acervo), Zenodo, ou o repositório institucional do IESP.
+- [ ] **Opção A (recomendada):** dar aos mapas um endereço próprio — Zenodo (dá DOI, feito para
+      dados de pesquisa), o Google Drive que o laboratório já usa para o acervo, ou o repositório
+      institucional do IESP. `arquivos-preservados/LEIA-ME.md` já tem o runbook (e o script) prontos
+      para quando a escolha for feita — é questão de minutos, não de um novo projeto.
 - [ ] **Opção B:** manter o WordPress antigo no ar apenas como servidor de arquivos. Funciona, mas o
       site novo fica refém de um sistema que ninguém quer mais manter.
 - [ ] **Opção C:** trazer tudo e aceitar o risco de estourar o limite do GitHub Pages. Não recomendo.
 
 ### 0b. As teses da BDTD não abrem (e não é culpa da migração)
 
-Dez teses apontam para `www.bdtd.uerj.br:8443`. Nenhuma abre, **e no site antigo também não abrem**:
-são exatamente as mesmas URLs. O problema é do repositório da UERJ, que está fora do ar. Verificado
-em 2026-07-12: a porta 443 responde e redireciona para a porta 8080, que não responde; a porta 8443,
-onde estão os PDFs, está fechada.
+Dez teses apontam para `www.bdtd.uerj.br:8443`. Nenhuma abria, **e no site antigo também não
+abriam**: são exatamente as mesmas URLs. O problema era do repositório da UERJ, que estava fora do
+ar. Verificado em 2026-07-12: a porta 443 respondia e redirecionava para a porta 8080, que não
+respondia; a porta 8443, onde estão os PDFs, estava fechada.
 
-- [ ] Cobrar da biblioteca da UERJ o restabelecimento do BDTD, ou descobrir o novo endereço das teses
-- [ ] Enquanto isso, considerar hospedar essas 10 teses junto com as outras (ver item 0)
+- [x] **Resolvido sozinho em 2026-09-03 — a UERJ restabeleceu o serviço.** As 9 URLs distintas
+      (10 ocorrências) foram testadas uma a uma: todas devolvem HTTP 200 hoje. Nenhuma mudança de
+      código foi necessária — os links em `src/data/pesquisas.yaml` já estavam certos, só estavam
+      apontando para um serviço fora do ar. Vale reconferir de tempos em tempos, já que o histórico
+      mostra que a BDTD já caiu antes.
 
 *(Três outras teses apontavam para uma página do IESP que dá 404. Esses links foram removidos: o
 projeto não cria botões mortos.)*
 
 
 ### 1. Lattes de 12 dos 16 membros da equipe
-**Onde:** `src/content/equipe/<nome>.yaml`, campo `lattes`
+**Onde:** a lista `lattes:` no topo de `extracao/dados/publicacoes-academicas.yaml` (⚠️ não é o
+campo `lattes:` de cada `src/content/equipe/<nome>.yaml` — `scripts/converter-conteudo.py` ignora
+esse campo e casa o Lattes de cada pessoa por **sobrenome**, usando só essa lista; editar o YAML da
+pessoa diretamente não tem efeito depois da próxima regeneração).
 **Por que falta:** a página `/institucional/` do site antigo não publicava Lattes. Os 4 que temos
 (Argelina Cheibub Figueiredo, Fernando Meireles, Fernando Guarnieri, Bruno Schaefer) vieram da
 página de publicações acadêmicas.
 
-- [ ] Carolina Botelho
-- [ ] Carolini Silva
-- [ ] Felipe Lamarca
-- [ ] Flávia Bozza Martins
-- [ ] Hellen Guicheney
-- [ ] Karime Lima
-- [ ] Larissa Mendes
-- [ ] Maria Dominguez
-- [ ] Matteo Manes
-- [ ] Nara Salles
-- [ ] Natalia Maciel
-- [ ] Thiago Moreira
+- [x] **Flávia Bozza Martins** — resolvido em 2026-09-03, via `iesp.uerj.br/pesquisador/`
+      (confiança alta): `http://lattes.cnpq.br/1494895098804362`
+- [x] **Thiago Moreira** — resolvido em 2026-09-03, via `iesp.uerj.br/pesquisador/`
+      (confiança alta): `http://lattes.cnpq.br/2163358625457191`
+- [ ] Carolina Botelho — buscado, não achado com confiança suficiente
+- [ ] Carolini Silva — buscado, não achado com confiança suficiente
+- [ ] Felipe Lamarca — não buscado (é você — mais fácil confirmar direto do que adivinhar por busca)
+- [ ] Hellen Guicheney — buscado, não achado com confiança suficiente
+- [ ] Karime Lima — buscado, não achado com confiança suficiente
+- [ ] Larissa Mendes — não buscado
+- [ ] Maria Dominguez — buscado, não achado (nome comum, resultados ambíguos)
+- [ ] Matteo Manes — buscado, não achado
+- [ ] Nara Salles — buscado, não achado com confiança suficiente
+- [ ] Natalia Maciel — buscado, não achado com confiança suficiente
+
+Para os 9 restantes, a pessoa provavelmente tem Lattes (a maioria aparece em plataformas
+acadêmicas como Escavador/ResearchGate/Google Acadêmico), mas essas páginas bloqueiam acesso
+automatizado e a busca geral não trouxe o número do Lattes com confiança suficiente para publicar
+sem risco de atribuir o currículo errado a alguém. Mais rápido: cada pessoa cola o próprio link.
+
+Para adicionar, entre em `extracao/dados/publicacoes-academicas.yaml` e acrescente à lista
+`lattes:` do topo (o nome só precisa bater o **sobrenome** com o `nome:` da pessoa em
+`extracao/dados/equipe.yaml`):
 
 ```yaml
-lattes: "http://lattes.cnpq.br/0000000000000000"
+lattes:
+  - name: "Sobrenome, X."
+    url: "http://lattes.cnpq.br/0000000000000000"
 ```
+
+Depois rode `python3 scripts/converter-conteudo.py` para propagar para `src/`.
 
 ### 2. E-mail dos 16 membros
 **Onde:** mesmo arquivo, campo `email`
@@ -87,14 +110,21 @@ Decidam se querem publicar — expor e-mail atrai spam. Se não quiserem, deixem
 O texto veio palavra por palavra do site antigo e diz que a busca está *"ainda em construção"*.
 **Ela agora existe e funciona** (filtros por ano, cargo, região, partido e candidato).
 
-- [ ] Reescrever esse parágrafo
+- [x] **Resolvido em 2026-09-03.** Parágrafo reescrito em `src/content/paginas/acervo.md`, via
+      `OVERRIDES` em `scripts/converter-conteudo.py` (o texto fiel ao site antigo continua intacto
+      em `extracao/dados/paginas/acervo.md`, que é registro histórico).
 
 ### 4. Redes sociais
 **Onde:** `src/data/site.yaml`, campos `instagram` e `twitter`
 O site antigo só tinha YouTube. Se o DOXA tiver perfis, o rodapé já está pronto para mostrá-los.
 
-- [ ] Instagram (ou confirmar que não existe)
-- [ ] Twitter/X (ou confirmar que não existe)
+- [x] **Pesquisado em 2026-09-03: nenhum Instagram ou Twitter/X próprio do DOXA foi encontrado.**
+      (O `@iesp.uerj` no Instagram é do instituto todo, não do laboratório — não é o mesmo perfil.)
+      Campos deixados vazios, como estavam.
+- [ ] **Achado não previsto: existe uma página do DOXA no Facebook**,
+      `facebook.com/doxa.iesp.uerj/`. O schema de `site.yaml` não tem campo para Facebook hoje —
+      decidam se vale adicionar (mudança de schema, não incluída neste ciclo) ou se o Facebook não
+      é prioridade para o site novo.
 
 ---
 
@@ -109,14 +139,24 @@ Aracaju. Os outros campos (candidato, partido, propostas) estão corretos.
 A página `/bancos-de-dados/` já mostra um aviso visível. **Não corrigimos por adivinhação:** o
 deslocamento parece ser de 7 blocos, mas os blocos têm tamanhos diferentes.
 
-- [ ] Recuperar o município correto de cada candidato (fonte: TSE) e regravar o CSV
+- [ ] Recuperar o município correto de cada candidato (fonte: TSE) e regravar o CSV — deixado de
+      fora do ciclo de 2026-09-03 a pedido explícito (fora de escopo por ora)
 - [ ] Depois, apagar o campo `aviso` em `extracao/dados/bancos-de-dados.yaml`
 
-### 6. Pesquisas sem link para o texto completo — 27 de 61
+### 6. Pesquisas sem link para o texto completo — 30 de 61
 **Onde:** `src/data/pesquisas.yaml`, campo `url`
 Teses e dissertações costumam estar na BDTD da UERJ. Projetos em andamento não têm texto público.
 
-- [ ] Conferir quais das 27 já têm PDF publicado e acrescentar o link
+**Pesquisado em 2026-09-03**, com resultado modesto: das teses/dissertações sem nenhum link (9,
+todas de 1995–2018, a maioria da época do IUPERJ, antes da UERJ ter repositório digital), nenhuma
+foi encontrada num repositório aberto com confiança suficiente para publicar o link — o padrão
+sugere que essas teses simplesmente nunca foram digitalizadas. As demais sem link são pesquisas
+"em andamento" ou "concluídas" de projeto (sem tese/dissertação individual associada), para as
+quais não existe um "texto completo" único a linkar.
+
+- [ ] Conferir quais das 30 já têm PDF publicado e acrescentar o link (baixo retorno esperado nas
+      teses pré-2018; se algum membro tiver a cópia da própria tese, vale subir para
+      `public/pdfs/pesquisas/` como foi feito com as outras 20)
 
 ### 7. Pesquisas sem ano — 24 de 61
 São as **pesquisas de projeto** (em andamento e concluídas), que no site antigo nunca tiveram data.
@@ -139,12 +179,22 @@ A fonte não nomeia um responsável, só lista `Equipe:`. São:
 **"no prelo"**. Atualizar quando sair.
 `src/data/publicacoes.yaml`
 
-- [ ] Preencher o ano quando publicar
+- [x] **Resolvido em 2026-09-03.** O livro (*COVID-19 e agendas de pesquisa nas ciências sociais*,
+      org. Fontainha e Milani) saiu pela EdUERJ em 2023 e está de acesso livre no SciELO Books.
+      `ano: 2023` preenchido, e `url` acrescentada apontando para o livro
+      (`https://books.scielo.org/id/vpjzm` — o link direto do capítulo ficou atrás de proteção
+      anti-bot do SciELO, então foi usado o link da coletânea, de onde o capítulo é acessível).
 
 ### 10. Oito itens de "Na Mídia" sem link
 Duas matérias impressas nunca tiveram URL na fonte (*"A polarização do vírus"*, Valor;
 *"Desconstruindo Mitos"*, Pesquisa Fapesp) e os seis itens audiovisuais são vídeos/documentários
 sem link publicado.
+
+**Pesquisado em 2026-09-03:** achado 1 de 8 com confiança alta — o documentário *"Arquitetos do
+Poder"* está no YouTube com um upload cujo título bate exatamente com a autoria da ficha
+(`youtube.com/watch?v=hHdV_BeIW0M`), já preenchido. Os outros 7 não tiveram uma fonte confiável o
+bastante para publicar sem risco de linkar a matéria errada (nomes/temas comuns, várias
+reportagens parecidas na web) — ficam como estavam.
 `src/data/midia.yaml`
 
 - [ ] Achar os links, se existirem
@@ -164,13 +214,18 @@ genérica, então não foram migradas. `src/data/acervo.yaml`
 ### 13. Um texto para discussão sem resumo
 *"Tempo é dinheiro"* (Schaefer, 2023). `src/data/textos-discussao.yaml`
 
-- [ ] Copiar o resumo do PDF
+- [x] **Verificado em 2026-09-03, não dá para resolver como previsto.** O PDF (agora local em
+      `public/pdfs/textos-discussao/`) foi lido de ponta a ponta: não tem seção de resumo/abstract,
+      o texto vai direto do título para a "Introdução". Não é um dado perdido na extração — o
+      documento-fonte simplesmente não tem resumo. Preencher esse campo exigiria escrever um resumo
+      do zero, o que o projeto não faz (regra "não invente"). Fica opcional, como está.
 
 ### 14. Seis PDFs publicados que nenhuma página linka
 Estão na biblioteca de mídia do WordPress mas perderam a página que os referenciava. A lista está
 em `extracao/dados/fontes-externas.yaml` → `pdfs_publicados_sem_pagina`.
 
-- [ ] Decidir se algum deles deve voltar ao site
+- [x] **Preservados em 2026-09-03**, em `arquivos-preservados/orfaos-sem-pagina/` (verificados,
+      todos abrem). Continuam **fora do site** — decidir se algum volta é call editorial do DOXA.
 
 ---
 
