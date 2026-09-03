@@ -53,6 +53,15 @@ function listaYaml(caminho: string, campoTitulo = 'titulo') {
 
 const urlOuVazio = z.union([z.string().url(), z.literal('')]).optional();
 
+/**
+ * Como `urlOuVazio`, mas também aceita um caminho interno do site (começa com "/") — para campos
+ * de `url` que podem apontar tanto para fora quanto para um PDF local em `public/pdfs/` (ver
+ * DADOS_PENDENTES.md, item 0). `z.string().url()` sozinho rejeita caminhos relativos.
+ */
+const linkOuVazio = z
+  .union([z.string().url(), z.string().startsWith('/'), z.literal('')])
+  .optional();
+
 // ---------------------------------------------------------------- páginas e equipe
 
 const paginas = defineCollection({
@@ -157,7 +166,7 @@ const textosDiscussao = defineCollection({
     titulo: z.string(),
     autores: z.string(),
     ano: z.number().int(),
-    url: urlOuVazio,
+    url: linkOuVazio, // pode ser externo ou um PDF local em public/pdfs/
     resumo: z.string().optional(),
   }),
 });
@@ -170,7 +179,7 @@ const midia = defineCollection({
     veiculo: z.string().optional(),
     data: z.string().optional(), // "2022-04-24" ou só "2010"
     tipo: z.enum(['impressa', 'virtual', 'audiovisual']),
-    url: urlOuVazio,
+    url: linkOuVazio, // pode ser externo ou um PDF local em public/pdfs/ (ver DADOS_PENDENTES.md)
   }),
 });
 
@@ -197,7 +206,7 @@ const pesquisas = defineCollection({
     orientador: z.string().optional(),
     instituicao: z.string().optional(),
     status: z.enum(['tese', 'andamento', 'concluida']),
-    url: urlOuVazio, // 17 de 61 não têm link
+    url: linkOuVazio, // pode ser externo ou um PDF local em public/pdfs/; 17 de 61 não têm link
     descricao: z.string().optional(),
   }),
 });

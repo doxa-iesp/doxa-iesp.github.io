@@ -84,7 +84,7 @@
   outlet: "Folha de São Paulo"
   date: "2020-04-30"
   type: "impressa"
-  url: "http://doxa.iesp.uerj.br/wp-content/uploads/2020/04/Artigo-Folha-Limongi-Figueiredo.pdf"
+  url: "/pdfs/midia/Artigo-Folha-Limongi-Figueiredo.pdf"
 
 - title: "A polarização do vírus"
   authors: "Figueiredo, Argelina"
@@ -126,14 +126,14 @@
   outlet: "Valor Econômico"
   date: "2017-02-17"
   type: "impressa"
-  url: "http://doxa.iesp.uerj.br/wp-content/uploads/2016/02/Democracia-e-Democracias-_-Valor_17_02_17.pdf"
+  url: "/pdfs/midia/Democracia-e-Democracias-_-Valor_17_02_17.pdf"
 
 - title: "Conflito na elite e escândalos de corrupção"
   authors: "Figueiredo, Argelina"
   outlet: "Valor Econômico"
   date: "2016-02-15"
   type: "impressa"
-  url: "http://doxa.iesp.uerj.br/wp-content/uploads/2016/02/Argelina_artigo-Valor_Conflito-na-elite-e-esc%C3%A2ndalos-de-corrup%C3%A7%C3%A3o.pdf"
+  url: "/pdfs/midia/Argelina_artigo-Valor_Conflito-na-elite-e-escândalos-de-corrupção.pdf"
 
 - title: "O que deu errado? Não culpemos as instituições"
   authors: "Figueiredo, Argelina"
@@ -147,7 +147,7 @@
   outlet: "Valor Econômico"
   date: "2015-05-29"
   type: "impressa"
-  url: "http://doxa.iesp.uerj.br/wp-content/uploads/2016/02/A-anatomia-do-PMDB_Valor-Econ%C3%B4mico.pdf"
+  url: "/pdfs/midia/A-anatomia-do-PMDB_Valor-Econômico.pdf"
 
 - title: "The power behind the throne"
   authors: "Maciel, Natália"
@@ -455,7 +455,10 @@
   outlet: "Direção e roteiro Vicente Ferraz e Alessandra Aldé | Apoios Universidade Cândido Mendes, Universidade Estadual do Rio de Janeiro (UERJ), Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro (FAPERJ), Financiadora de Estudos e Projetos (FINEP) e Caesar Business | Produção Urca Filmes | Co-produção Propeg soluções criativas, Vox populi, Instituto Universitário de Pesquisas do Rio de Janeiro (IUPERJ), Estúdios Mega"
   date: "2010"
   type: "audiovisual"
-  url: ""
+  # Achado em 2026-09-03: upload no YouTube com o mesmo título exato, incluindo os dois diretores
+  # ("Documentário: Arquitetos do Poder (Dir: Alessandra Aldé e Vicente Ferraz)"). Não estava no
+  # site antigo — ver DADOS_PENDENTES.md, item 10.
+  url: "https://www.youtube.com/watch?v=hHdV_BeIW0M"
 
 - title: "Democracia busca equilíbrio entre representação e governabilidade"
   authors: "Argelina Figueiredo"

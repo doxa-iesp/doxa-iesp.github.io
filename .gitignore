@@ -30,3 +30,19 @@ Thumbs.db
 # ATENÇÃO: `public/` NÃO é ignorado. No Hugo era a saída de build; no Astro é a
 # pasta de ASSETS DE ORIGEM (imagens, fontes, PDFs, CSVs) e PRECISA ser versionada,
 # senão o deploy publica o site sem imagens.
+
+# Os 273 mapas de votação (797 MB) que o site ainda busca no WordPress antigo, baixados como
+# seguro contra o desligamento dele, mais 6 PDFs órfãos preservados por precaução. NÃO são
+# versionados de propósito: os mapas sozinhos estourariam o repositório e deixariam o site
+# publicado em 78% do teto rígido de 1 GB do GitHub Pages — e o histórico do git guardaria esse
+# peso para sempre. (Os 59 PDFs menores — teses, análises, textos para discussão — já migraram
+# para public/pdfs/ e saíram daqui; ver arquivos-preservados/LEIA-ME.md.)
+#
+# Ficam FORA de `public/` porque tudo em `public/` é copiado para `dist/` a cada build: 797 MB
+# ali dentro fariam cada `npm run build` local gerar um dist/ de quase 1 GB.
+#
+# ⚠️ Esta pasta NÃO tem cópia em lugar nenhum. Um `git clean -fdx` apaga os mapas e os órfãos,
+#    e a única forma de recuperá-los é rebaixar tudo do WordPress — enquanto ele ainda estiver
+#    no ar. Use `git clean -fdx -e arquivos-preservados`.
+#    Ver arquivos-preservados/LEIA-ME.md e DADOS_PENDENTES.md.
+/arquivos-preservados/

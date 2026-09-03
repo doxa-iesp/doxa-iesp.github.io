@@ -37,6 +37,9 @@
 - name: "Flávia Bozza Martins"
   role: "Pós-doutoranda"
   category: "pos-doutorando"
+  # Este campo não é usado por scripts/converter-conteudo.py (ele deriva o Lattes de cada membro
+  # da lista `lattes:` em extracao/dados/publicacoes-academicas.yaml, casando por sobrenome) —
+  # deixado vazio aqui de propósito, para não sugerir uma fonte que o build ignora.
   lattes: ""
   email: ""
   photo: "https://www.lab-doxa.org.br/wp-content/uploads/2022/06/Flavia.jpg"
@@ -103,6 +106,9 @@
 - name: "Thiago Moreira"
   role: "Pesquisador Associado"
   category: "associado"
+  # Este campo não é usado por scripts/converter-conteudo.py (ele deriva o Lattes de cada membro
+  # da lista `lattes:` em extracao/dados/publicacoes-academicas.yaml, casando por sobrenome) —
+  # deixado vazio aqui de propósito, para não sugerir uma fonte que o build ignora.
   lattes: ""
   email: ""
   photo: "https://www.lab-doxa.org.br/wp-content/uploads/2022/06/Thiago.jpg"

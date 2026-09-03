@@ -14,6 +14,13 @@ lattes:
     url: "http://lattes.cnpq.br/9571650216784483"
   - name: "Figueiredo, A. M. C."
     url: "http://lattes.cnpq.br/2261555898412006"
+  # Os 2 abaixo não vieram desta página — achados em 2026-09-03 via busca (iesp.uerj.br/pesquisador/,
+  # confiança alta: nome, instituição e área batem). Ver DADOS_PENDENTES.md, item 1. O casamento com
+  # a equipe em scripts/converter-conteudo.py é pelo sobrenome, por isso o formato "Sobrenome, X."
+  - name: "Martins, F. B."
+    url: "http://lattes.cnpq.br/1494895098804362"
+  - name: "Moreira, T."
+    url: "http://lattes.cnpq.br/2163358625457191"
 
 publications:
 
@@ -72,10 +79,12 @@ publications:
     url: ""
   - title: "Vulnerabilidades sociais, modelos de provisão de saúde e suas relações com a mortalidade decorrente da pandemia de Covid-19 no Brasil e nos Estados Unidos"
     authors: "Figueiredo, Argelina; Guichney, Hellen; Lazzari, Eduardo"
-    year: ""
+    # Publicado em 2023 (confirmado em 2026-09-03: EdUERJ e SciELO Books, ISBN 978-85-7511-606-7).
+    # Estava "no prelo" no site antigo; o texto de `publisher` foi mantido como na fonte.
+    year: 2023
     type: "capitulo"
     publisher: "In Fernando Fontainha e Carlos Milani (org), COVID-19 e agendas de pesquisa nas ciências sociais. Editora da UERJ – no prelo"
-    url: ""
+    url: "https://books.scielo.org/id/vpjzm"
   - title: "Determinantes Políticos e Institucionales del Éxito Legislativo del Ejecutivo em América Latina"
     authors: "Figueiredo, Argelina; Salles, Denise; Martins, Marcelo"
     year: 2011

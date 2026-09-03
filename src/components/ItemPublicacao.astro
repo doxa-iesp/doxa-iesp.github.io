@@ -17,6 +17,8 @@
  * Contraste: o autor usa `--cor-destaque-texto` (5,08:1). O `--cor-destaque`
  * puro dá 3,73:1 sobre branco e reprovaria em AA.
  */
+import { linkPara } from '../lib/url';
+
 interface Download {
   rotulo: string;
   url: string;
@@ -73,7 +75,7 @@ const idResumo = `resumo-${titulo
   <div class="pub__corpo">
     {
       link ? (
-        <a class="pub__titulo" href={link} target="_blank" rel="noopener noreferrer">
+        <a class="pub__titulo" href={linkPara(link)} target="_blank" rel="noopener noreferrer">
           {titulo}
         </a>
       ) : (
@@ -88,7 +90,7 @@ const idResumo = `resumo-${titulo
       (downloads.length > 0 || resumo) && (
         <p class="pub__acoes">
           {downloads.map((d) => (
-            <a class="pub__botao pub__botao--baixar" href={d.url} target="_blank" rel="noopener noreferrer">
+            <a class="pub__botao pub__botao--baixar" href={linkPara(d.url)} target="_blank" rel="noopener noreferrer">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12 16 6 10l1.4-1.4 3.6 3.6V3h2v9.2l3.6-3.6L18 10l-6 6Zm-7 4v-2h14v2H5Z" />
               </svg>
@@ -136,7 +138,7 @@ const idResumo = `resumo-${titulo
           downloads.length > 0 && (
             <p class="pub__dialogo-acoes">
               {downloads.map((d) => (
-                <a class="btn btn-primario" href={d.url} target="_blank" rel="noopener noreferrer">
+                <a class="btn btn-primario" href={linkPara(d.url)} target="_blank" rel="noopener noreferrer">
                   {d.rotulo}
                 </a>
               ))}

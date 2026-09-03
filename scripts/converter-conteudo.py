@@ -153,6 +153,27 @@ def paginas():
             "publicadas antes da versão definitiva para que sejam avaliadas e debatidas pela "
             "comunidade acadêmica. Todos podem ser baixados livremente."
         ),
+        # No WordPress a busca do acervo estava "ainda em construção" e nunca foi atualizada — a
+        # busca funciona no site novo (filtros por candidato, ano, cargo, região e partido), então
+        # manter a frase da origem publicaria uma informação falsa. O texto fiel ao site antigo
+        # está em extracao/dados/paginas/acervo.md; aqui entra a versão corrigida.
+        "acervo.md": (
+            "## Catálogo Audiovisual\n\n"
+            "O acervo audiovisual do Doxa pode ser consultado de duas formas. A primeira, por meio "
+            "da busca abaixo, com filtros por candidato, ano, cargo, região e partido. Nela podem "
+            "ser encontrados de imediato os vídeos veiculados nos horários gratuitos de propaganda "
+            "eleitoral (HGPE) nas campanhas dos candidatos a presidente, de 1989 a 2022, e para "
+            "governador, de 1994 a 2014. Os resultados das buscas aparecem de acordo com as siglas "
+            "partidárias ou dos partidos das coligações que se formaram em apoio aos candidatos.\n\n"
+            "A segunda forma é por meio de consulta ao catálogo do Doxa que contém a listagem "
+            "completa do acervo, incluindo material que vai além dos vídeos de HGPE, contido na "
+            "pesquisa. Nele há vídeos de debates, entrevistas com candidatos, spots eleitorais e "
+            "partidários, telejornais e de propagandas partidárias não vinculadas especificamente "
+            "nos períodos eleitorais.\n\n"
+            "O acesso ao catálogo é no link abaixo e para ver esses vídeos é necessário que nos "
+            "envie um email ( acervo-doxa@iesp.uerj.br ) com o formulário abaixo especificando a "
+            "solicitação de material desejado."
+        ),
     }
 
     mapa = {
