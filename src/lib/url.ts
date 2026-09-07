@@ -26,6 +26,17 @@ export function linkPara(destino: string): string {
   return externo(destino) ? destino : url(destino);
 }
 
+/**
+ * Igualdade exata de caminhos (ignorando BASE e barra final). Serve para
+ * distinguir "esta É a página" de "esta página está dentro desta seção" —
+ * `ativo()` casa por prefixo e marcaria "Produção" como página atual em
+ * /producao/pesquisas/.
+ */
+export function mesmaPagina(atual: string, alvo: string): boolean {
+  const norm = (s: string) => s.replace(BASE, '').replace(/\/+$/, '') || '/';
+  return norm(atual) === norm(alvo);
+}
+
 /** Marca o item de menu ativo comparando caminhos normalizados. */
 export function ativo(atual: string, alvo: string): boolean {
   const norm = (s: string) => s.replace(BASE, '').replace(/\/+$/, '') || '/';

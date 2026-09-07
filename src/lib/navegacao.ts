@@ -2,7 +2,20 @@
 export interface ItemMenu {
   nome: string;
   href: string;
-  filhos?: { nome: string; href: string }[];
+  filhos?: ItemSubmenu[];
+}
+
+export interface ItemSubmenu {
+  nome: string;
+  href: string;
+  /**
+   * Marca o item que é a própria capa da seção — o primeiro de cada submenu, que
+   * repete o destino do item pai. Ele existe porque, no desktop, clicar no pai é
+   * justamente o gesto que abre o menu; sem esse item a capa fica difícil de
+   * alcançar (e no toque em tablet, impossível). O Header o separa por uma régua
+   * para que os demais se leiam como subtópicos.
+   */
+  capa?: boolean;
 }
 
 /**
@@ -19,7 +32,7 @@ export const MENU: ItemMenu[] = [
     nome: 'Produção',
     href: '/producao/',
     filhos: [
-      { nome: 'Toda a produção', href: '/producao/' },
+      { nome: 'Visão geral', href: '/producao/', capa: true },
       { nome: 'Pesquisas', href: '/producao/pesquisas/' },
       { nome: 'Publicações Acadêmicas', href: '/producao/publicacoes/' },
       { nome: 'Análises de Conjuntura', href: '/producao/analises-de-conjuntura/' },
@@ -32,7 +45,7 @@ export const MENU: ItemMenu[] = [
     nome: 'Bancos de Dados',
     href: '/bancos-de-dados/',
     filhos: [
-      { nome: 'Bancos de Dados', href: '/bancos-de-dados/' },
+      { nome: 'Visão geral', href: '/bancos-de-dados/', capa: true },
       { nome: 'Mapas de Votação', href: '/mapas-de-votacao/' },
     ],
   },
@@ -40,7 +53,9 @@ export const MENU: ItemMenu[] = [
     nome: 'Eventos',
     href: '/eventos/',
     filhos: [
-      { nome: 'Todos os Eventos', href: '/eventos/' },
+      // "Todos os Eventos" era rótulo falso: /eventos/ tem 5 itens e NÃO inclui
+      // os 36 seminários — as duas listas são disjuntas.
+      { nome: 'Visão geral', href: '/eventos/', capa: true },
       { nome: 'Seminários', href: '/seminarios/' },
     ],
   },
