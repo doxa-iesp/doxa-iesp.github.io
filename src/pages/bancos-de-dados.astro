@@ -86,6 +86,10 @@ const formatador = new Intl.NumberFormat('pt-BR');
     padding: 0;
     margin: var(--esp-3) 0 0;
     display: grid;
+    /* minmax(0, 1fr), não só `gap`: o tamanho mínimo automático do item de grade
+       (min-width: auto) impede o card de encolher abaixo do próprio min-content,
+       e ele estoura a tela em celular estreito. */
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--esp-3);
   }
 
@@ -150,6 +154,8 @@ const formatador = new Intl.NumberFormat('pt-BR');
     gap: var(--esp-2);
   }
   .banco__fonte {
+    display: inline-block;
+    padding-block: 0.15rem;
     font-size: 0.85rem;
     color: var(--cor-texto-suave);
   }

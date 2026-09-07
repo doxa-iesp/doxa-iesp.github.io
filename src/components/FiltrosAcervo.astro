@@ -81,7 +81,7 @@ function normalizar(texto: string): string {
   }
   .filtros__grade {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr));
     gap: var(--esp-2);
   }
   .filtros__campo {

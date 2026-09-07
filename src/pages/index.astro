@@ -168,6 +168,10 @@ const numeros = [
     margin: 0;
     padding: 0;
     display: grid;
+    /* minmax(0, 1fr), não só `gap`: o tamanho mínimo automático do item de grade
+       (min-width: auto) impede o card de encolher abaixo do próprio min-content,
+       e ele estoura a tela em celular estreito. */
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--esp-3);
   }
   @media (min-width: 900px) {

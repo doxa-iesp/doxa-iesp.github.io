@@ -135,7 +135,11 @@ p {
 
 .grade-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--card-min, 280px), 1fr));
+  /* O `min(..., 100%)` é o que impede a grade de estourar a tela: sem ele, um
+     --card-min de 340px força uma coluna de 340px dentro de um contêiner de
+     288px (celular de 320px menos o padding), e a página inteira ganha rolagem
+     horizontal. Com `min()`, a coluna nunca fica mais larga que o contêiner. */
+  grid-template-columns: repeat(auto-fill, minmax(min(var(--card-min, 280px), 100%), 1fr));
   gap: var(--esp-3);
   list-style: none;
   margin: 0;

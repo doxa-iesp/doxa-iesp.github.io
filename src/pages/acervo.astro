@@ -197,7 +197,7 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
     gap: var(--esp-3);
   }
 

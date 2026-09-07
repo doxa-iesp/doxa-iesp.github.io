@@ -215,7 +215,7 @@ function iniciais(texto: string): string {
   /* Etiqueta da função. O fundo é 8% do terracota: a 16% o texto em
      --cor-destaque-texto cai para 4,23:1 e reprova em AA; a 8% dá 4,64:1. */
   .membro__funcao {
-    font-size: 0.64rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.07em;
@@ -243,6 +243,9 @@ function iniciais(texto: string): string {
     font-size: 0.8rem;
   }
   .membro__links a {
+    /* padding vertical: o alvo tinha 16px de altura, abaixo do mínimo de 24px */
+    display: inline-block;
+    padding-block: 0.25rem;
     font-size: 0.82rem;
     font-weight: 600;
     text-decoration: none;

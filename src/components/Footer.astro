@@ -73,6 +73,20 @@ const ano = new Date().getFullYear();
     margin: 0 0 0.25rem;
     opacity: 0.9;
   }
+  /* Alvos de toque: o e-mail tinha 16px de altura e o ícone do YouTube 26×19 —
+     ambos abaixo do mínimo de 24px, e o ícone é o único link da coluna. */
+  .rodape__contato a {
+    display: inline-block;
+    padding-block: 0.2rem;
+  }
+  .rodape__redes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: var(--raio);
+  }
   .rodape__base {
     border-top: 1px solid rgb(255 255 255 / 15%);
     font-size: 0.78rem;

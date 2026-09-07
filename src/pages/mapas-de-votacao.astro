@@ -151,10 +151,14 @@ const grupos = anosOrdenados.map((ano) => {
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr));
     gap: 0.35rem var(--esp-2);
   }
   .mapas-cargo__lista a {
+    /* São 273 links numa lista densa: com 18px de altura o alvo ficava abaixo do
+       mínimo de 24px e era fácil errar o toque. */
+    display: inline-block;
+    padding-block: 0.2rem;
     font-size: 0.9rem;
     text-decoration: none;
   }
