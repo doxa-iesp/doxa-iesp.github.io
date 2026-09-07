@@ -55,8 +55,10 @@ scripts/              ← conversor de conteúdo e validador de dados
 
 Duas formas de carregar, escolhidas por ergonomia de edição:
 
-- `glob()` — **um arquivo por entrada** (`equipe`, `eventos`, `paginas`). Adicionar = criar
-  arquivo. Sem indentação de lista para errar, sem conflito de merge.
+- `glob()` — **um arquivo por entrada** (`equipe`, `eventos`, `paginas`, `projetos`, `destaques`).
+  Adicionar = criar arquivo. Sem indentação de lista para errar, sem conflito de merge.
+  `destaques` é a vitrine curada da home e é a **única** coleção que o
+  `converter-conteudo.py` não regenera — o que se escreve nela à mão fica (receita 4.12 do guia).
 - `file()` + `listaYaml()` — **um YAML com uma lista** (publicações, mídia, …). O helper
   `listaYaml` em `content.config.ts` gera o `id` de cada item a partir do título, para que ninguém
   precise escrever `id:` à mão. O `id` só aparece em mensagens de erro; não vira URL.
@@ -141,10 +143,13 @@ subdiretório. Por isso os redirecionamentos continuam sendo páginas-stub que m
 `url()` ([src/components/Redirecionamento.astro](src/components/Redirecionamento.astro)) — e as
 rotas antigas ficam fora do sitemap, via `ROTAS_ANTIGAS` no [astro.config.mjs](astro.config.mjs).
 
-**2d. Os mapas de votação não estão no site.** 273 arquivos (797 MB) ainda são servidos pelo
-WordPress antigo (`lab-doxa.org.br`) — o `url:` desses itens em `src/data/mapas-votacao.yaml`
-aponta para fora. Se o WordPress cair, os 273 downloads quebram juntos, e nenhum build vai acusar
-isso. (As teses, análises e textos para discussão que dependiam do mesmo jeito do WordPress já
+**2d. Os mapas de votação não estão no site — e o servidor deles está caindo.** 273 arquivos
+(797 MB) ainda são servidos pelo WordPress antigo (`lab-doxa.org.br`) — o `url:` desses itens em
+`src/data/mapas-votacao.yaml` aponta para fora. **Em 2026-09-06 o host começou a oscilar**: pela
+manhã respondia 200, à noite dava timeout em todas as tentativas. Enquanto isso, os 273 downloads
+estão quebrados no site publicado, e nenhum build acusa — para o Astro são links externos. Migrar
+para o Drive do DOXA é a tarefa mais urgente em aberto (ver `DADOS_PENDENTES.md`, item 0); a cópia
+local em `arquivos-preservados/mapas-de-votacao/` é hoje a única garantia. (As teses, análises e textos para discussão que dependiam do mesmo jeito do WordPress já
 foram migrados para `public/pdfs/` — ver item 0 de [DADOS_PENDENTES.md](DADOS_PENDENTES.md). Os
 mapas são o que sobrou: sozinhos, não cabem no teto de 1 GB do GitHub Pages, então a decisão de
 onde hospedá-los está pendente do time.) Não presuma que um PDF referenciado existe em `public/`
@@ -165,10 +170,10 @@ rotacionada em relação aos candidatos (Eduardo Paes aparece como Florianópoli
 [extracao/README.md](extracao/README.md); a página `/bancos-de-dados/` renderiza um aviso.
 Não "conserte" por adivinhação.
 
-**4. Campos opcionais são opcionais de verdade.** 17 das 61 pesquisas não têm link; 8 dos 70 itens
-de mídia não têm URL; 1 publicação não tem ano ("no prelo"); 12 dos 16 membros não têm Lattes nem
-e-mail; seminários não têm descrição nem link. Nada disso existe no site antigo. Não invente, e não
-crie botões mortos.
+**4. Campos opcionais são opcionais de verdade.** 30 das 61 pesquisas não têm link; 7 dos 70 itens
+de mídia não têm URL; 9 dos 16 membros não têm Lattes e **nenhum** tem e-mail; seminários não têm
+descrição nem link. Nada disso existe no site antigo. Não invente, e não crie botões mortos — o
+`CardMembro` reserva a linha vazia justamente para o card não desalinhar quando falta o link.
 
 ## Regenerar o conteúdo
 

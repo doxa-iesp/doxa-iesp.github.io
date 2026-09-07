@@ -29,6 +29,13 @@ discussão (76 MB) já foram trazidos para o repositório (`public/pdfs/`) e os 
 `midia-recuperada-do-archive/` também migraram, consertando 4 links que davam 404 em produção em
 `midia.yaml`. Ver `arquivos-preservados/LEIA-ME.md`.
 
+> 🔴 **2026-09-06 — o WordPress antigo começou a cair.** Pela manhã ele respondia normalmente;
+> à noite, timeout em todas as tentativas (`https://www.lab-doxa.org.br/` e os PDFs). Enquanto
+> ele estiver assim, **os 273 links de mapas estão quebrados no site publicado**, mais 5 links de
+> eventos e 2 de bancos de dados. Isso deixou de ser risco futuro e virou problema presente: a
+> migração para o Drive é a tarefa mais urgente da lista. O caminho está pronto e testado
+> (`arquivos-preservados/LEIA-ME.md`), e só depende de alguém rodar `rclone config` uma vez.
+
 **Decisão que ainda falta: os 273 mapas de votação (797 MB).**
 
 - [ ] **Opção A (recomendada):** dar aos mapas um endereço próprio — Zenodo (dá DOI, feito para
@@ -56,7 +63,7 @@ respondia; a porta 8443, onde estão os PDFs, estava fechada.
 projeto não cria botões mortos.)*
 
 
-### 1. Lattes de 12 dos 16 membros da equipe
+### 1. Lattes de 9 dos 16 membros da equipe
 **Onde:** a lista `lattes:` no topo de `extracao/dados/publicacoes-academicas.yaml` (⚠️ não é o
 campo `lattes:` de cada `src/content/equipe/<nome>.yaml` — `scripts/converter-conteudo.py` ignora
 esse campo e casa o Lattes de cada pessoa por **sobrenome**, usando só essa lista; editar o YAML da
@@ -71,7 +78,8 @@ página de publicações acadêmicas.
       (confiança alta): `http://lattes.cnpq.br/2163358625457191`
 - [ ] Carolina Botelho — buscado, não achado com confiança suficiente
 - [ ] Carolini Silva — buscado, não achado com confiança suficiente
-- [ ] Felipe Lamarca — não buscado (é você — mais fácil confirmar direto do que adivinhar por busca)
+- [x] **Felipe Lamarca** — resolvido em 2026-09-06: `http://lattes.cnpq.br/2606938112682925`
+      (informado por ele; também consta em felipelamarca.com, agora no card como "Site")
 - [ ] Hellen Guicheney — buscado, não achado com confiança suficiente
 - [ ] Karime Lima — buscado, não achado com confiança suficiente
 - [ ] Larissa Mendes — não buscado
@@ -97,13 +105,16 @@ lattes:
 
 Depois rode `python3 scripts/converter-conteudo.py` para propagar para `src/`.
 
-### 2. E-mail dos 16 membros
+### 2. E-mail dos membros (nenhum publicado)
 **Onde:** mesmo arquivo, campo `email`
 **Por que falta:** o site antigo não publicava nenhum e-mail individual, só o do acervo.
 Decidam se querem publicar — expor e-mail atrai spam. Se não quiserem, deixem como está.
 
 - [ ] Decidir se publica e-mail individual
 - [ ] Se sim, preencher os 16
+
+*(Desde 2026-09-06 existe também o campo `site`, para página pessoal — o card mostra "Site" ao
+lado do "Lattes". Preencher é opcional, como todo o resto.)*
 
 ### 3. Texto do acervo está desatualizado
 **Onde:** `src/content/paginas/acervo.md`

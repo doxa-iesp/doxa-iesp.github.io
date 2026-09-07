@@ -370,6 +370,39 @@ projeto está em andamento ou concluído, apague a linha — a etiqueta simplesm
 > partir de `extracao/` — se alguém rodar esse script, um projeto que só exista em `src/` é apagado.
 > Na dúvida, peça ajuda a quem cuida do site.
 
+### 4.12. Trocar os destaques da página inicial
+
+A faixa **"Em destaque"**, logo abaixo da apresentação na página inicial, é a vitrine do
+laboratório: é ali que entram um livro novo, um evento que acabou de acontecer, uma plataforma
+lançada. Ela é curada — ou seja, alguém escolhe o que aparece.
+
+Cada destaque é um arquivo em **`src/content/destaques/`**. Para publicar um novo, crie um arquivo
+com nome em letras minúsculas e hífens (`livro-a-decisao-do-voto.md`):
+
+```markdown
+---
+titulo: "Nome do que está em destaque"
+etiqueta: "Livro"                     # opcional: Livro, Evento, Projeto, Documentário…
+resumo: "Uma ou duas frases explicando o que é e por que interessa."
+imagem: "/img/destaques/nome.jpg"     # opcional (envie a imagem para public/img/destaques/)
+url: "https://..."                    # link externo OU um arquivo do site: /pdfs/livros/x.pdf
+rotulo_url: "Baixar o livro (PDF)"    # o texto do botão
+ordem: 1                              # 1 aparece antes de 2
+ativo: true                           # false = some do site sem apagar o arquivo
+---
+```
+
+Três coisas que ajudam:
+
+- **Para tirar um destaque do ar, troque `ativo: true` por `ativo: false`.** Não precisa apagar o
+  arquivo: no ano que vem, se o assunto voltar, é só religar.
+- **Capas e cartazes funcionam melhor.** A imagem aparece inteira, sem corte, então pode ser
+  vertical (capa de livro, cartaz de evento).
+- Sem `url`, o card aparece sem botão — o que é útil para um aviso curto.
+
+> Esta pasta **não** é regenerada pelo `scripts/converter-conteudo.py`. Diferente de projetos e
+> eventos, aqui você **não** precisa criar nada em `extracao/`.
+
 ---
 
 ## 5. Tabela de valores permitidos
