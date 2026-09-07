@@ -112,6 +112,11 @@ function rotuloAnexo(u: string): string {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* 3 das 5 capas de evento são CARTAZES em retrato (1080×1350, 885×1252,
+       1440×2560) dentro de um card 16:9. Com o recorte centralizado, o título do
+       cartaz ficava cortado ao meio. A 20% do topo, o título aparece inteiro e as
+       duas capas em paisagem continuam bem enquadradas. */
+    object-position: center 20%;
   }
 
   .evento__corpo {

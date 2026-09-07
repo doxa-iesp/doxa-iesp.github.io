@@ -94,6 +94,14 @@ p {
   margin-bottom: 0;
 }
 
+/* Medida de leitura: limita a linha ao token --largura-prosa (68ch). Para um
+   texto de introdução curto, é melhor que duas colunas — que só compensam em
+   texto longo, como o da home. Sem isto, a prosa herda os 1108px do container e
+   chega a 127 caracteres por linha no desktop, quase o dobro do confortável. */
+.prosa--medida {
+  max-width: var(--largura-prosa);
+}
+
 /* Duas colunas: distribui o texto longo por toda a largura, mantendo a linha
    num comprimento legível. As colunas viram uma só em telas estreitas. */
 .prosa--colunas {
