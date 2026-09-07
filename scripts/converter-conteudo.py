@@ -169,6 +169,21 @@ def paginas():
         # busca funciona no site novo (filtros por candidato, ano, cargo, região e partido), então
         # manter a frase da origem publicaria uma informação falsa. O texto fiel ao site antigo
         # está em extracao/dados/paginas/acervo.md; aqui entra a versão corrigida.
+        # A prosa herdada era da antiga página "Publicações" e abre dizendo que a
+        # produção "está dividida em dois tipos" — mas a página mostra QUATRO
+        # cartões (pesquisas, publicações, análises e textos para discussão).
+        # O texto fiel ao site antigo segue em extracao/dados/paginas/publicacoes.md.
+        "publicacoes.md": (
+            "A produção do DOXA se divide em quatro tipos. As **pesquisas** reúnem as teses e "
+            "dissertações orientadas no laboratório e os projetos coletivos. As **publicações "
+            "acadêmicas** são livros, capítulos e artigos em revistas científicas. As **análises "
+            "de conjuntura eleitoral** são textos produzidos durante as campanhas, a partir do "
+            "acompanhamento de pesquisas de opinião, programas eleitorais, debates e cobertura "
+            "jornalística. E os **textos para discussão** são working papers, publicados antes da "
+            "versão definitiva para serem debatidos. Em alguns casos, como no projeto “Iesp nas "
+            "eleições” (2018) e na plataforma Vota Aí (2020), o objetivo é chegar ao eleitor comum "
+            "e ampliar o debate eleitoral."
+        ),
         "acervo.md": (
             "## Catálogo Audiovisual\n\n"
             "O acervo audiovisual do Doxa pode ser consultado de duas formas. A primeira, por meio "

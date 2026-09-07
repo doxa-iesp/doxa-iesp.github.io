@@ -27,7 +27,10 @@ export interface ItemSubmenu {
  */
 export const MENU: ItemMenu[] = [
   { nome: 'Início', href: '/' },
-  { nome: 'Institucional', href: '/institucional/' },
+  // A rota continua /institucional/ (nada de link quebrado), mas o rótulo passou a
+  // ser "Equipe": a palavra não aparecia em lugar nenhum da navegação, embora seja
+  // isso que a página mostra — e o site antigo a chamava "Nossa Equipe".
+  { nome: 'Equipe', href: '/institucional/' },
   {
     nome: 'Produção',
     href: '/producao/',

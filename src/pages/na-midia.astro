@@ -106,9 +106,16 @@ const grupos = secoes.map((s) => ({
   .item__titulo {
     font-weight: 600;
     grid-column: 2;
+    /* 70 títulos sublinhados formavam uma parede; o resto do site sublinha no hover. */
+    text-decoration: none;
   }
+  a.item__titulo:hover {
+    text-decoration: underline;
+  }
+  /* Sem link: era navy escuro, quase igual ao azul de link — parecia link quebrado. */
   .item__titulo--simples {
-    color: var(--cor-primaria-escura);
+    color: var(--cor-texto);
+    font-weight: 500;
   }
   .item__meta {
     grid-column: 2;

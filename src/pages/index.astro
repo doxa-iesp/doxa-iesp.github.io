@@ -22,29 +22,34 @@ const emDestaque = todosDestaques
   .filter((d) => d.data.ativo)
   .sort((a, b) => (a.data.ordem ?? 99) - (b.data.ordem ?? 99));
 
-// A home é a APRESENTAÇÃO INSTITUCIONAL do grupo (docs/DECISAO_ARQUITETURA.md §6).
-// O Vota Aí, o vídeo e o dashboard saíram daqui: viraram projetos (/projetos/) e
-// conteúdo do acervo (/acervo/).
-const destaques = [
+// Atalhos fixos para as quatro seções — não confundir com `emDestaque`, que é a
+// vitrine curada logo acima. A home é a APRESENTAÇÃO INSTITUCIONAL do grupo
+// (docs/DECISAO_ARQUITETURA.md §6): o Vota Aí, o vídeo e o dashboard saíram daqui
+// e viraram projetos (/projetos/) e conteúdo do acervo (/acervo/).
+const atalhos = [
   {
     titulo: 'Produção',
     texto: 'Teses, dissertações, publicações acadêmicas, análises de conjuntura e working papers.',
     href: '/producao/',
+    cta: 'Ver a produção',
   },
   {
     titulo: 'Projetos',
     texto: 'Plataformas, painéis e pesquisas aplicadas, como o Vota Aí e a Geografia do Voto.',
     href: '/projetos/',
+    cta: 'Ver os projetos',
   },
   {
     titulo: 'Acervo Audiovisual',
     texto: 'O maior arquivo de propaganda eleitoral do Brasil, com programas desde 1989.',
     href: '/acervo/',
+    cta: 'Explorar o acervo',
   },
   {
     titulo: 'Bancos de Dados',
     texto: 'Bases abertas sobre programas de governo, cobertura jornalística e mapas eleitorais.',
     href: '/bancos-de-dados/',
+    cta: 'Ver as bases',
   },
 ];
 
@@ -96,12 +101,12 @@ const numeros = [
       <h2>O que fazemos</h2>
       <ul class="grade-cards">
         {
-          destaques.map((d) => (
+          atalhos.map((d) => (
             <li class="cartao">
               <h3 class="cartao__titulo">{d.titulo}</h3>
               <p class="cartao__texto">{d.texto}</p>
               <a href={url(d.href)} class="cartao__link">
-                Conhecer <span aria-hidden="true">→</span>
+                {d.cta} <span aria-hidden="true">→</span>
               </a>
             </li>
           ))
@@ -148,6 +153,11 @@ const numeros = [
 </Base>
 
 <style>
+  /* 4 cards em 3 colunas deixavam um sozinho com 2/3 da fileira vazia.
+     250px dá 4 colunas a 1440px — o hook --card-min existe para isto. */
+  .grade-cards {
+    --card-min: 250px;
+  }
   .apresentacao {
     padding-block: var(--esp-5) var(--esp-4);
   }

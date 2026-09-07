@@ -86,6 +86,11 @@ const secoes = [
 </Base>
 
 <style>
+  /* 4 cards em 3 colunas deixavam um sozinho com 2/3 da fileira vazia.
+     250px dá 4 colunas a 1440px — o hook --card-min existe para isto. */
+  .grade-cards {
+    --card-min: 250px;
+  }
   .cartao__contagem {
     margin: 0 0 var(--esp-1);
     font-size: 2rem;
