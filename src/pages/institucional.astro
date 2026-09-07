@@ -27,7 +27,7 @@ const FUNCOES: Record<string, string> = {
   'pos-doutorando': 'Pós-doutorado',
   aluno: 'Pós-graduação',
   assistente: 'Assistente',
-  associado: 'Pesquisador associado',
+  associado: 'Associado',
 };
 
 const membros = [...equipe]
@@ -104,8 +104,11 @@ const membros = [...equipe]
 
   .equipe-grid {
     display: grid;
-    /* 240px dá 4 colunas a 1440px — 16 pessoas em 4 fileiras cheias. */
-    grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+    /* 220px foi calculado para dar exatamente 4 colunas a 1440px (16 pessoas =
+       4 fileiras cheias) e 3 no tablet. Com 240px + breakpoint em 700px, a faixa
+       de tablet caía em duas colunas gigantes e a página ficava MAIOR no iPad
+       (5.068px) que no celular. */
+    grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
     gap: var(--esp-3);
     list-style: none;
     padding: 0;
@@ -113,7 +116,9 @@ const membros = [...equipe]
   }
   /* Duas colunas no celular: com uma só, apresentar 16 pessoas custava 11 telas
      de rolagem. É esta linha que corta a maior parte disso. */
-  @media (max-width: 700px) {
+  /* Abaixo de 620px o auto-fill cairia para uma coluna só (16 cards empilhados,
+     7.700px de rolagem). Duas colunas mantêm a página em ~3.900px. */
+  @media (max-width: 620px) {
     .equipe-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: var(--esp-2);
@@ -127,7 +132,9 @@ const membros = [...equipe]
     margin: 0;
   }
   .contato__item {
-    background: var(--cor-fundo-alt);
+    /* a seção já é --cor-fundo-alt: com o mesmo fundo, os três cards sumiam */
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
     border-radius: var(--raio-g);
     padding: var(--esp-3);
   }

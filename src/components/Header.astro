@@ -185,9 +185,11 @@ const atual = Astro.url.pathname;
     margin-left: 4px;
     transition: transform var(--transicao);
   }
-  .nav__item--dropdown:hover .nav__seta,
-  .nav__item--dropdown:focus-within .nav__seta {
-    transform: rotate(180deg);
+  @media (min-width: 901px) {
+    .nav__item--dropdown:hover .nav__seta,
+    .nav__item--dropdown:focus-within .nav__seta {
+      transform: rotate(180deg);
+    }
   }
 
   .nav__submenu {
@@ -203,10 +205,16 @@ const atual = Astro.url.pathname;
     z-index: 20;
     display: none;
   }
-  .nav__item--dropdown:hover > .nav__submenu,
-  .nav__item--dropdown:focus-within > .nav__submenu,
-  .nav__item--dropdown.aberto > .nav__submenu {
-    display: block;
+  /* Restrito ao desktop com ponteiro: estas regras têm especificidade (0,3,0) e
+     venciam tanto o `display: none` do bloco mobile quanto a própria sanfona
+     (0,2,0) — no celular o submenu não fechava, e num toque real o `:hover`
+     ficava grudado com a seta já girada. */
+  @media (min-width: 901px) {
+    .nav__item--dropdown:hover > .nav__submenu,
+    .nav__item--dropdown:focus-within > .nav__submenu,
+    .nav__item--dropdown.aberto > .nav__submenu {
+      display: block;
+    }
   }
   .nav__sublink {
     display: block;
@@ -268,6 +276,13 @@ const atual = Astro.url.pathname;
     }
     .nav__item + .nav__item {
       border-top: 1px solid rgb(255 255 255 / 12%);
+    }
+    /* A aba assimétrica é desenho de desktop: numa linha de largura total ela
+       virava uma lasca terracota solta na borda direita. */
+    .nav__link[aria-current='page'] {
+      border-radius: 0;
+      border-right: 0;
+      box-shadow: inset 3px 0 0 var(--cor-destaque);
     }
     .nav__link {
       padding: 0.85rem 0;

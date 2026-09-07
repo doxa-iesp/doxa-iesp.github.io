@@ -81,7 +81,10 @@ function normalizar(texto: string): string {
   }
   .filtros__grade {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr));
+    /* 170px nunca dava 2 colunas em celular nenhum (precisaria de 356px e o
+       espaço útil é 308px num iPhone padrão): o bloco de filtros ficava com
+       509px, 60% da tela. Com 140px, 390 e 414 ganham duas colunas. */
+    grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
     gap: var(--esp-2);
   }
   .filtros__campo {
@@ -102,6 +105,15 @@ function normalizar(texto: string): string {
   .filtros__campo input,
   .filtros__campo select {
     font: inherit;
+    /* O <input> herdava o line-height 1.7 do body e o <select> não: a caixa de
+       busca ficava 4,8px mais alta que as outras, visivelmente mais gorda.
+       O min-height iguala tudo e resolve o alvo de toque (eram 40,6px).
+       `appearance: none` evita o pill arredondado que o Safari do iOS impõe
+       ao input[type=search], que quebraria o raio de 6px das demais. */
+    line-height: 1.2;
+    min-height: 44px;
+    appearance: none;
+    -webkit-appearance: none;
     font-size: 0.95rem;
     color: var(--cor-texto);
     background: var(--cor-fundo);
@@ -116,6 +128,7 @@ function normalizar(texto: string): string {
   }
   .filtros__limpar {
     align-self: flex-start;
+    min-height: 44px;
     cursor: pointer;
   }
 

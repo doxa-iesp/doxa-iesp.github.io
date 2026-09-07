@@ -186,7 +186,9 @@ function iniciais(texto: string): string {
     padding: 0.55rem var(--esp-2);
     background: var(--gradiente-marca-diag);
     color: var(--cor-branco);
-    font-size: 0.98rem;
+    /* fixo em 0.98rem, um nome de três linhas cobria 59% do retrato num card de
+       136px — tapava o rosto. Agora acompanha a largura da tela. */
+    font-size: clamp(0.78rem, 0.62rem + 0.8vw, 0.98rem);
     line-height: 1.3;
     text-wrap: balance;
   }
@@ -199,6 +201,7 @@ function iniciais(texto: string): string {
   }
 
   .membro__corpo {
+    flex: 1;
     display: grid;
     grid-template-rows: auto auto;
     gap: 0.3rem;
@@ -219,7 +222,9 @@ function iniciais(texto: string): string {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.07em;
-    white-space: nowrap;
+    /* Sem `nowrap`: o card tem overflow hidden, e a pílula "Pesquisador
+       associado" (193px) era decapitada dentro de um card de 136px a 320px —
+       lia-se "PESQUISADOR ASS". Agora quebra em duas linhas. */
     padding: 0.12rem 0.45rem;
     border-radius: 999px;
     color: var(--cor-destaque-texto);
@@ -227,6 +232,8 @@ function iniciais(texto: string): string {
   }
   .membro__cargo {
     margin: 0;
+    /* "Professor/Pesquisador" não cabia em 136px e era cortado na barra */
+    overflow-wrap: anywhere;
     font-size: 0.8rem;
     line-height: 1.25;
     min-height: 1rem;

@@ -156,7 +156,9 @@ const numeros = [
   /* 4 cards em 3 colunas deixavam um sozinho com 2/3 da fileira vazia.
      250px dá 4 colunas a 1440px — o hook --card-min existe para isto. */
   .grade-cards {
-    --card-min: 250px;
+    /* 210px dá as 4 colunas já por volta de 920px; com 250px, entre 900 e 1103
+       a fileira voltava a ter três cards e um órfão. */
+    --card-min: 210px;
   }
   .apresentacao {
     padding-block: var(--esp-5) var(--esp-4);
@@ -174,7 +176,9 @@ const numeros = [
     grid-template-columns: minmax(0, 1fr);
     gap: var(--esp-3);
   }
-  @media (min-width: 900px) {
+  /* 1100px, não 900: a 900 o card ficava com 422px, dos quais 180 eram a arte —
+     sobrava uma coluna de texto de 22 caracteres por linha e o botão quebrava. */
+  @media (min-width: 1100px) {
     .destaques {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -217,7 +221,7 @@ const numeros = [
   }
   .numeros__lista {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(120px, 100%), 1fr));
     gap: var(--esp-3);
     list-style: none;
     margin: 0;

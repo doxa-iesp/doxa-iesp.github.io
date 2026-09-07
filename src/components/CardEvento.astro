@@ -150,10 +150,16 @@ function rotuloAnexo(u: string): string {
     flex-wrap: wrap;
     gap: var(--esp-1) var(--esp-2);
     align-items: center;
-    margin-top: auto;
+    /* Sem `margin-top: auto`: empurrar os botões para o pé do card abria até
+       223px de vazio ENTRE o texto e eles nos cards mais curtos da fileira. O
+       vazio agora sobra no pé, onde não separa o conteúdo da ação. */
     padding-top: var(--esp-3);
   }
   .btn--sm {
+    /* alvo de toque: tinha 39,9px de altura */
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
     padding: 0.4rem 0.9rem;
     font-size: 0.85rem;
   }

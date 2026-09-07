@@ -30,7 +30,7 @@ const { id, titulo, miniatura } = Astro.props;
     target="_blank"
     rel="noopener noreferrer"
   >
-    <img src={url(miniatura)} alt="" loading="lazy" width="480" height="270" />
+    <img src={url(miniatura)} alt="" loading="lazy" />
     <span class="video-yt__play" aria-hidden="true">
       <svg viewBox="0 0 68 48" width="68" height="48" focusable="false">
         <path
@@ -51,6 +51,9 @@ const { id, titulo, miniatura } = Astro.props;
     overflow: hidden;
     background: var(--cor-primaria-escura);
   }
+  .video-yt :global(img) {
+    background: var(--cor-primaria-escura);
+  }
   .video-yt__fachada {
     position: absolute;
     inset: 0;
@@ -63,7 +66,11 @@ const { id, titulo, miniatura } = Astro.props;
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* As miniaturas do YouTube vêm com tarja preta embutida (o documentário é um
+       cartaz em retrato dentro de um quadro 4:3: metade da imagem era preta). As
+       tarjas foram recortadas do arquivo; aqui `contain` mostra a arte inteira
+       sobre o navy da marca, em vez de recortar o cartaz. */
+    object-fit: contain;
   }
   .video-yt__play {
     position: relative;

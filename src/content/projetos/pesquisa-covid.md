@@ -17,11 +17,11 @@ O quarto conjunto compreende os decretos de cunho “Orçamentário” sendo o p
 
 Os decretos especificamente na área de “Saúde” referem-se, majoritariamente, a medidas preventivas de contenção da Covid 19. A categoria residual “Outros” compreende declaração de luto oficial pelo falecimento em razão da Covid, redução de impacto da pandemia em setores específicos, como turismo etc.
 
-## Tabela 1. Decretos Municipais por Tema Estado do Rio de Janeiro – março a dezembro 2020
+**Tabela 1. Decretos Municipais por Tema — Estado do Rio de Janeiro, março a dezembro de 2020.**
 
 Na Tabela 2 encontramos a distribuição dos decretos de enfrentamento à Covid-19 nas regiões geopolíticas do Estado. Em todas as regiões os decretos de Restrição e de Flexibilização apresentam os maiores percentuais de decretos perfazendo mais de 50% do total. Na cidade do Rio de Janeiro, porém, os decretos Administrativos e de natureza Social têm, considerados isoladamente, percentuais maiores do que os decretos de Flexibilização.
 
-## Tabela 2. Distribuição de Decretos-Covid por Tema e Região Estado do Rio de Janeiro – março a dezembro de 2020
+**Tabela 2. Distribuição de Decretos-Covid por Tema e Região — Estado do Rio de Janeiro, março a dezembro de 2020.**
 
 A variação por município nos temas tratados é maior. No entanto, acompanhando a tendência geral a maioria deles apresentam percentuais mais altos nas categorias restritivas e de flexibilização das normas de quarentena e mobilidade. A listagem dos temas por município está disponível para download.
 
@@ -35,23 +35,18 @@ A maioria das prefeituras ficam na faixa de 40 a 50% desse tipo de decreto. OPP 
 
 ## Opiniões e comportamento da população às medidas de enfrentamento da Covid e seus impactos nos grupos mais vulneráveis
 
-## Realização de dois surveys com a população do estado, considerando três regiões: Cidade do Rio de Janeiro, Região Metropolitana sem a capital e o Interior.
-
-## Análise do impacto da pandemia no mercado de trabalho do Estado do Rio de Janeiro, comparando-o com o do Brasil. O Estado do Rio de Janeiro está dividido em três regiões: a capital, a região metropolitana sem a capital e o restante do Estado.
-
-## Análise do impacto da epidemia nos resultados das eleições municipais de 2020.
+- Realização de dois surveys com a população do estado, considerando três regiões: Cidade do Rio de Janeiro, Região Metropolitana sem a capital e o Interior.
+- Análise do impacto da pandemia no mercado de trabalho do Estado do Rio de Janeiro, comparando-o com o do Brasil. O Estado do Rio de Janeiro está dividido em três regiões: a capital, a região metropolitana sem a capital e o restante do Estado.
+- Análise do impacto da epidemia nos resultados das eleições municipais de 2020.
 
 ## Levantamento bibliográfico de publicações brasileiras e do exterior – 2020 início de 2022
 
-## Introdução
+- Introdução
+- Listagem dos textos organizada de acordo com os seguintes temas:
+- Listagem dos textos de acordo com a citação ao Brasil
+- Listagem dos títulos contendo links para os Abstracts das publicações selecionadas
 
-## Listagem dos textos organizada de acordo com os seguintes temas:
-
-## Listagem dos textos de acordo com a citação ao Brasil
-
-## Listagem dos títulos contendo links para os Abstracts das publicações selecionadas
-
-## Trabalho e Pandemia no Estado do Rio de Janeiro: entre a Vulnerabilidade e a Flexibilidade
+Trabalho e Pandemia no Estado do Rio de Janeiro: entre a Vulnerabilidade e a Flexibilidade.
 
 O impacto da Covid-19 no comportamento eleitoral do fluminense nas eleições de 2020 Guarnieri, F.; Figueiredo, A. 2022. In Felipe Borba e Argelina Figueiredo (orgs), As eleições municipais de 2020 no Estado do Rio de Janeiro, Editora da UERJ, 2022.
 

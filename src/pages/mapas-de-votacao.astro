@@ -151,7 +151,9 @@ const grupos = anosOrdenados.map((ano) => {
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr));
+    /* 160px exigia 336px para duas colunas — nunca cabia no celular, e cada linha
+       ficava 57 a 74% vazia. Com 140px, 390 e 414 ganham duas colunas. */
+    grid-template-columns: repeat(auto-fill, minmax(min(140px, 100%), 1fr));
     gap: 0.35rem var(--esp-2);
   }
   .mapas-cargo__lista a {

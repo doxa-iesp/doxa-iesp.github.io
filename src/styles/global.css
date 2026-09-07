@@ -94,6 +94,14 @@ p {
   margin-bottom: 0;
 }
 
+/* `.prosa--intro` é usada em três páginas e NÃO tinha regra nenhuma — era classe
+   morta. Como `.prosa > :last-child` zera a margem do último parágrafo e o bloco
+   seguinte não traz `margin-top`, o texto encostava nas abas de filtro e nos
+   cards: 0px de folga, medido. */
+.prosa--intro {
+  margin-bottom: var(--esp-3);
+}
+
 /* Medida de leitura: limita a linha ao token --largura-prosa (68ch). Para um
    texto de introdução curto, é melhor que duas colunas — que só compensam em
    texto longo, como o da home. Sem isto, a prosa herda os 1108px do container e
@@ -192,6 +200,9 @@ p {
   font-weight: 600;
 }
 .voltar a {
+  /* o alvo tinha 18px de altura, abaixo do mínimo de 24px */
+  display: inline-block;
+  padding-block: 0.25rem;
   text-decoration: none;
 }
 .voltar a:hover {

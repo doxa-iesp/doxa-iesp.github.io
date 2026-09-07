@@ -211,6 +211,7 @@ const idResumo = `resumo-${titulo
   /* Autor em terracota: o detalhe que dava personalidade à página antiga. */
   .pub__autores {
     margin: var(--esp-1) 0 0;
+    line-height: 1.35;
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--cor-destaque-texto);
@@ -233,8 +234,13 @@ const idResumo = `resumo-${titulo
   .pub__botao {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.35em;
-    padding: 0.35rem 0.8rem;
+    /* "Baixar PDF" é a ação principal em 35 cartões; com 0.35rem o alvo ficava
+       com 35px de altura. */
+    flex: 1 1 auto;
+    min-height: 44px;
+    padding: 0.5rem 0.8rem;
     border: 1px solid var(--cor-borda);
     border-radius: var(--raio);
     font: inherit;
@@ -278,9 +284,11 @@ const idResumo = `resumo-${titulo
   /* ------------------------------------------------------------- pop-up */
 
   .pub__dialogo {
-    width: min(64ch, calc(100vw - 2rem));
+    width: min(64ch, calc(100vw - 1.5rem));
     max-height: 85vh;
-    padding: var(--esp-4);
+    /* No celular o padding fixo de 40px comia 80px dos 320px da tela e deixava
+       uma coluna de 202px — 25 caracteres por linha. */
+    padding: clamp(1rem, 5vw, 2.5rem);
     border: 0;
     border-top: 4px solid var(--cor-destaque);
     border-radius: var(--raio-g);
@@ -304,6 +312,10 @@ const idResumo = `resumo-${titulo
   .pub__dialogo-fechar {
     flex: none;
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
     padding: 0.35rem;
     border: 0;
     border-radius: var(--raio);
@@ -328,6 +340,13 @@ const idResumo = `resumo-${titulo
     color: var(--cor-texto-suave);
     text-align: justify;
     hyphens: auto;
+  }
+  /* Justificar abaixo de ~45 caracteres por linha abre rios de espaço entre as
+     palavras. No celular a coluna do pop-up tem ~25 caracteres. */
+  @media (max-width: 700px) {
+    .pub__dialogo-texto {
+      text-align: left;
+    }
   }
   .pub__dialogo-acoes {
     margin: var(--esp-4) 0 0;

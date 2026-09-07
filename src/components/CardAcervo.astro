@@ -144,7 +144,8 @@ const dataRegiao = item.regiao ? normalizar(item.regiao) : '';
 
   .card-acervo__meta {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(120px, 100%), 1fr));
+    /* 120px empilhava os quatro pares numa coluna a 320px; 105px cabe em duas. */
+    grid-template-columns: repeat(auto-fit, minmax(min(105px, 100%), 1fr));
     gap: var(--esp-1) var(--esp-2);
     margin: 0;
   }
@@ -195,7 +196,6 @@ const dataRegiao = item.regiao ? normalizar(item.regiao) : '';
   }
 
   .card-acervo__link {
-    margin-top: auto;
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;

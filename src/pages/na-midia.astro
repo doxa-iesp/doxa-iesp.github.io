@@ -106,11 +106,20 @@ const grupos = secoes.map((s) => ({
   .item__titulo {
     font-weight: 600;
     grid-column: 2;
-    /* 70 títulos sublinhados formavam uma parede; o resto do site sublinha no hover. */
-    text-decoration: none;
+    /* sem isto, o título herda o 1.7 do body: 27px de entrelinha num título de
+       duas linhas, que deixa de se ler como um bloco */
+    line-height: 1.35;
+  }
+  /* 70 sublinhados cheios formavam uma parede, mas sem NENHUM sinal o link e o
+     não-link se distinguiam só pela cor (1,97:1 entre eles). Sublinhado suave:
+     presente, discreto, e cheio no hover. */
+  a.item__titulo {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 30%, transparent);
+    text-underline-offset: 3px;
   }
   a.item__titulo:hover {
-    text-decoration: underline;
+    text-decoration-color: currentColor;
   }
   /* Sem link: era navy escuro, quase igual ao azul de link — parecia link quebrado. */
   .item__titulo--simples {

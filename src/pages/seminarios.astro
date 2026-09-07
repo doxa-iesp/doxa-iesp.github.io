@@ -98,8 +98,11 @@ function formatarData(iso?: string): string | null {
   .seminario {
     background: var(--cor-branco);
     border: 1px solid var(--cor-borda);
-    border-left: 4px solid var(--cor-primaria);
-    border-radius: var(--raio);
+    /* Alinhado aos outros cards-lista do site (.pub, .pesquisa): acento
+       terracota de 3px, raio grande e sombra. Este ficou para trás. */
+    border-left: 3px solid var(--cor-destaque);
+    border-radius: var(--raio-g);
+    box-shadow: var(--sombra-sm);
     padding: var(--esp-3);
   }
   .seminario__titulo {
