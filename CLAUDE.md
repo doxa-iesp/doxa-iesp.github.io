@@ -165,6 +165,19 @@ quando o destino for escolhido) não sai do papel. `git clean -fdx` apaga a past
 de recuperação (a não ser rebaixar tudo do WordPress, se ainda estiver no ar). Rode sempre
 `git clean -fdx -e arquivos-preservados`, nunca o comando cru.
 
+**2f. O repositório vive no Desktop, e o iCloud fabrica cópias.** Em 2026-09-07 havia **142**
+arquivos como `felipe-lamarca 3.yaml` e `pesquisa-covid 4.md` em `src/content/` — cópias de
+conflito de sincronização do macOS. Nenhuma tinha conteúdo único (133 idênticas ao original, 9
+versões antigas), mas as coleções usam `glob('**/*')`, que **não distingue cópia de original**:
+a página da equipe renderizava **80 cards em vez de 16** e o build produzia 41 páginas em vez de
+25, com rotas fantasmas como `/projetos/pesquisa-covid-3/`. Build verde, site errado.
+
+O `.gitignore` tinha uma regra para isso, mas só para o sufixo ` 2` — por isso metade das cópias
+era invisível no `git status`. A regra agora cobre qualquer número, e `scripts/validar-dados.mjs`
+falha com código 1 quando encontra uma (o `.gitignore` protege o commit; só o validador protege o
+build local). Antes de apagar, `diff` contra o original — nunca houve conteúdo único, mas é barato
+conferir. **O conserto de raiz é tirar o repositório de `~/Desktop`.**
+
 **3. Defeito na fonte: `programas-eleitorais-capitais.csv`.** A coluna `municipio` está
 rotacionada em relação aos candidatos (Eduardo Paes aparece como Florianópolis). Documentado em
 [extracao/README.md](extracao/README.md); a página `/bancos-de-dados/` renderiza um aviso.

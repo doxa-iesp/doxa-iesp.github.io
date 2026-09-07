@@ -17,9 +17,16 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Cópias que o iCloud cria ao sincronizar (duplicariam entradas no build)
-* 2.*
-* 2 *
+# Cópias que o iCloud cria ao sincronizar ("nome 2.yaml", "nome 3.md"...).
+# A regra antiga cobria só o sufixo 2, então 106 cópias com sufixo 3/4/5 passaram
+# batido e o build local renderizava 80 cards de equipe em vez de 16 — as coleções
+# usam glob('**/*.yaml'), que não distingue cópia de original.
+# Ignorar só esconde: quando aparecerem, apague (nunca têm conteúdo único, mas
+# confira com `diff` antes). O conserto de raiz é tirar o repositório do Desktop.
+* [0-9].*
+* [0-9][0-9].*
+* [0-9] *
+* [0-9][0-9] *
 
 # Segredos e logs locais
 .env

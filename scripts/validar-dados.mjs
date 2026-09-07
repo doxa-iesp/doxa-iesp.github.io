@@ -112,6 +112,22 @@ for (const { dir, ext, minimo } of PASTAS) {
     continue;
   }
   const arquivos = readdirSync(caminho).filter((f) => f.endsWith(ext));
+
+  // Cópias que o iCloud cria ao sincronizar ("nome 2.yaml", "nome 3.md"). As coleções
+  // usam glob('**/*'), que não distingue cópia de original: cada uma vira uma ENTRADA A
+  // MAIS. Em 2026-09-07 havia 142 delas e /institucional/ renderizava 80 cards de equipe
+  // em vez de 16 — build verde, página errada. O .gitignore impede que sejam commitadas,
+  // mas não impede o build LOCAL de lê-las; só uma checagem aqui pega isso.
+  const copias = arquivos.filter((f) => / \d+\.[A-Za-z0-9]+$/.test(f));
+  if (copias.length) {
+    const amostra = copias.slice(0, 5).join('\n      ');
+    const resto = copias.length > 5 ? `\n      ...e mais ${copias.length - 5}.` : '';
+    erros.push(
+      `${dir}\n    ${copias.length} cópia(s) de sincronização, que virariam itens repetidos ` +
+        `no site:\n      ${amostra}${resto}\n    ` +
+        amarelo('Apague esses arquivos. São cópias que o iCloud criou; o original, sem o número no fim, fica.')
+    );
+  }
   if (arquivos.length < minimo) {
     erros.push(`${dir}\n    Só ${arquivos.length} arquivos, esperados pelo menos ${minimo}.`);
   }
