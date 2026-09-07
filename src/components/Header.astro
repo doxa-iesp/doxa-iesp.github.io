@@ -1,6 +1,6 @@
 ---
 import { MENU } from '../lib/navegacao';
-import { url, ativo } from '../lib/url';
+import { url, ativo, mesmaPagina } from '../lib/url';
 
 const atual = Astro.url.pathname;
 ---
@@ -29,29 +29,60 @@ const atual = Astro.url.pathname;
     <div class="container">
       <ul class="nav__lista">
         {
-          MENU.map((item) => (
-            <li class={`nav__item${item.filhos ? ' nav__item--dropdown' : ''}`}>
-              <a
-                href={url(item.href)}
-                class="nav__link"
-                aria-current={ativo(atual, url(item.href)) ? 'page' : undefined}
+          MENU.map((item) => {
+            const filhoAtivo = item.filhos?.find((f) => ativo(atual, url(f.href)));
+            // /seminarios/ e /mapas-de-votacao/ são rotas IRMÃS das capas, não filhas,
+            // então a comparação por prefixo não as marcava — nessas duas páginas
+            // nenhum item do menu acendia. Aqui o pai acende se ele OU um filho casar.
+            const paiAtivo = ativo(atual, url(item.href)) || Boolean(filhoAtivo);
+            return (
+              <li
+                class:list={[
+                  'nav__item',
+                  item.filhos && 'nav__item--dropdown',
+                  filhoAtivo && 'nav__item--expandido',
+                ]}
               >
-                {item.nome}
-                {item.filhos && <span class="nav__seta" aria-hidden="true">▾</span>}
-              </a>
-              {item.filhos && (
-                <ul class="nav__submenu">
-                  {item.filhos.map((f) => (
-                    <li>
-                      <a href={url(f.href)} class="nav__sublink">
-                        {f.nome}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))
+                <a
+                  href={url(item.href)}
+                  class="nav__link"
+                  aria-haspopup={item.filhos ? 'true' : undefined}
+                  aria-current={
+                    mesmaPagina(atual, url(item.href)) ? 'page' : paiAtivo ? 'true' : undefined
+                  }
+                >
+                  {item.nome}
+                  {item.filhos && <span class="nav__seta" aria-hidden="true">▾</span>}
+                </a>
+                {item.filhos && (
+                  <button
+                    type="button"
+                    class="nav__expandir"
+                    aria-expanded={filhoAtivo ? 'true' : 'false'}
+                    aria-controls={`submenu-${item.href.replace(/\//g, '') || 'inicio'}`}
+                    aria-label={`Mostrar subitens de ${item.nome}`}
+                  >
+                    <span aria-hidden="true">▾</span>
+                  </button>
+                )}
+                {item.filhos && (
+                  <ul class="nav__submenu" id={`submenu-${item.href.replace(/\//g, '') || 'inicio'}`}>
+                    {item.filhos.map((f) => (
+                      <li class={f.capa ? 'nav__subitem nav__subitem--capa' : 'nav__subitem'}>
+                        <a
+                          href={url(f.href)}
+                          class="nav__sublink"
+                          aria-current={mesmaPagina(atual, url(f.href)) ? 'page' : undefined}
+                        >
+                          {f.nome}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            );
+          })
         }
       </ul>
     </div>
@@ -103,6 +134,11 @@ const atual = Astro.url.pathname;
      navy→navy-claro e o verde nunca aparecia no site. */
   .nav {
     background: var(--gradiente-marca);
+  }
+  /* A nav usa o gradiente direto (não a classe .faixa-marca), então precisa da
+     mesma correção do anel de foco: terracota sobre navy dá 2,17:1 e some. */
+  .nav :focus-visible {
+    outline-color: var(--cor-branco);
   }
   .nav__lista {
     display: flex;
@@ -177,6 +213,28 @@ const atual = Astro.url.pathname;
     background: var(--cor-primaria);
     color: var(--cor-branco);
   }
+  /* Hierarquia do submenu: o primeiro item é a capa da seção (mesmo destino do
+     item pai) e os demais são subtópicos. Sem esta distinção o dropdown do
+     desktop era uma lista plana de 5 itens irmãos. */
+  .nav__subitem--capa .nav__sublink {
+    font-weight: 700;
+  }
+  .nav__subitem--capa {
+    border-bottom: 1px solid rgb(255 255 255 / 18%);
+  }
+  .nav__subitem:not(.nav__subitem--capa) .nav__sublink {
+    padding-left: 1.75rem;
+  }
+  /* O submenu não indicava em que página você está. */
+  .nav__sublink[aria-current='page'] {
+    background: rgb(255 255 255 / 10%);
+    box-shadow: inset 3px 0 0 var(--cor-destaque);
+  }
+  /* O botão de expandir só existe no mobile; no desktop o submenu abre no hover
+     e no foco, e o item pai continua sendo um link comum. */
+  .nav__expandir {
+    display: none;
+  }
 
   @media (max-width: 900px) {
     .cabecalho__tagline {
@@ -191,18 +249,70 @@ const atual = Astro.url.pathname;
     }
     .nav.aberto {
       display: block;
+      /* O cabeçalho é sticky. Com o menu aberto ele chegava a 807px numa tela de
+         844px — e elemento sticky mais alto que a viewport trava a rolagem da
+         página (era o "scroll bugado"). Aqui o menu ganha altura máxima e rola
+         sozinho; `contain` impede que a rolagem vaze para a página atrás. */
+      max-height: calc(100dvh - 4.5rem);
+      overflow-y: auto;
+      overscroll-behavior: contain;
     }
     .nav__lista {
       flex-direction: column;
     }
-    .nav__submenu {
-      position: static;
-      display: block;
-      box-shadow: none;
-      background: rgb(0 0 0 / 15%);
+    .nav__item + .nav__item {
+      border-top: 1px solid rgb(255 255 255 / 12%);
     }
-    .nav__sublink {
-      padding-left: 2rem;
+    .nav__link {
+      padding: 0.85rem 0;
+    }
+    /* A seta decorativa dá lugar ao botão de verdade, que expande a seção. */
+    .nav__seta {
+      display: none;
+    }
+    .nav__item--dropdown {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+    }
+    .nav__expandir {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      min-height: 44px;
+      padding: 0;
+      border: 0;
+      background: none;
+      color: var(--cor-branco);
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: transform var(--transicao);
+    }
+    .nav__item--expandido > .nav__expandir {
+      transform: rotate(180deg);
+    }
+    .nav__submenu {
+      grid-column: 1 / -1;
+      position: static;
+      /* Sanfona: sem isto o menu tinha 19 linhas e ocupava a tela inteira. */
+      display: none;
+      box-shadow: none;
+      background: rgb(0 0 0 / 18%);
+      /* régua terracota ligando os subitens ao pai */
+      border-left: 3px solid var(--cor-destaque);
+      margin: 0 0 0.35rem 0.25rem;
+      border-radius: 0 var(--raio) var(--raio) 0;
+    }
+    .nav__item--expandido > .nav__submenu {
+      display: block;
+    }
+    .nav__subitem--capa {
+      border-bottom-color: rgb(255 255 255 / 14%);
+    }
+    .nav__sublink,
+    .nav__subitem:not(.nav__subitem--capa) .nav__sublink {
+      padding: 0.6rem 1rem 0.6rem 1.1rem;
     }
   }
 </style>
@@ -213,9 +323,40 @@ const atual = Astro.url.pathname;
   const toggle = document.querySelector<HTMLButtonElement>('.cabecalho__toggle');
   const nav = document.querySelector<HTMLElement>('#menu-principal');
 
+  function fecharMenu() {
+    nav?.classList.remove('aberto');
+    toggle?.setAttribute('aria-expanded', 'false');
+    toggle?.setAttribute('aria-label', 'Abrir menu de navegação');
+  }
+
   toggle?.addEventListener('click', () => {
     const aberto = nav?.classList.toggle('aberto') ?? false;
     toggle.setAttribute('aria-expanded', String(aberto));
     toggle.setAttribute('aria-label', aberto ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+  });
+
+  // Sanfona do mobile: cada seção com subitens abre e fecha no botão. A seção da
+  // página atual já vem aberta (marcada no servidor), para o visitante se localizar.
+  document.querySelectorAll<HTMLButtonElement>('.nav__expandir').forEach((botao) => {
+    botao.addEventListener('click', () => {
+      const item = botao.closest('.nav__item');
+      const aberto = item?.classList.toggle('nav__item--expandido') ?? false;
+      botao.setAttribute('aria-expanded', String(aberto));
+    });
+  });
+
+  // Escape fecha o que estiver aberto. No desktop o submenu abre por :focus-within,
+  // e sem isto ele ficava preso aberto ao navegar por teclado — o critério 1.4.13
+  // do WCAG exige poder dispensar sem mover o foco.
+  document.addEventListener('keydown', (evento) => {
+    if (evento.key !== 'Escape') return;
+    if (nav?.classList.contains('aberto')) {
+      fecharMenu();
+      toggle?.focus();
+      return;
+    }
+    const foco = document.activeElement as HTMLElement | null;
+    const dentro = foco?.closest('.nav__item--dropdown');
+    if (dentro) (dentro.querySelector('.nav__link') as HTMLElement | null)?.blur();
   });
 </script>

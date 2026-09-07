@@ -1,42 +1,55 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import CardDestaque from '../components/CardDestaque.astro';
 import { url } from '../lib/url';
 
 const home = (await getEntry('paginas', 'home'))!;
 const { Content } = await render(home);
 
-const [parceiros, pesquisas, publicacoes, acervo, mapas] = await Promise.all([
+const [parceiros, pesquisas, publicacoes, acervo, mapas, todosDestaques] = await Promise.all([
   getCollection('parceiros'),
   getCollection('pesquisas'),
   getCollection('publicacoes'),
   getCollection('acervo'),
   getCollection('mapas'),
+  getCollection('destaques'),
 ]);
 
-// A home é a APRESENTAÇÃO INSTITUCIONAL do grupo (docs/DECISAO_ARQUITETURA.md §6).
-// O Vota Aí, o vídeo e o dashboard saíram daqui: viraram projetos (/projetos/) e
-// conteúdo do acervo (/acervo/).
-const destaques = [
+// Vitrine curada pela coordenação (src/content/destaques/). `ativo: false`
+// arquiva um destaque sem apagar o arquivo.
+const emDestaque = todosDestaques
+  .filter((d) => d.data.ativo)
+  .sort((a, b) => (a.data.ordem ?? 99) - (b.data.ordem ?? 99));
+
+// Atalhos fixos para as quatro seções — não confundir com `emDestaque`, que é a
+// vitrine curada logo acima. A home é a APRESENTAÇÃO INSTITUCIONAL do grupo
+// (docs/DECISAO_ARQUITETURA.md §6): o Vota Aí, o vídeo e o dashboard saíram daqui
+// e viraram projetos (/projetos/) e conteúdo do acervo (/acervo/).
+const atalhos = [
   {
     titulo: 'Produção',
     texto: 'Teses, dissertações, publicações acadêmicas, análises de conjuntura e working papers.',
     href: '/producao/',
+    cta: 'Ver a produção',
   },
   {
     titulo: 'Projetos',
     texto: 'Plataformas, painéis e pesquisas aplicadas, como o Vota Aí e a Geografia do Voto.',
     href: '/projetos/',
+    cta: 'Ver os projetos',
   },
   {
     titulo: 'Acervo Audiovisual',
     texto: 'O maior arquivo de propaganda eleitoral do Brasil, com programas desde 1989.',
     href: '/acervo/',
+    cta: 'Explorar o acervo',
   },
   {
     titulo: 'Bancos de Dados',
     texto: 'Bases abertas sobre programas de governo, cobertura jornalística e mapas eleitorais.',
     href: '/bancos-de-dados/',
+    cta: 'Ver as bases',
   },
 ];
 
@@ -61,17 +74,39 @@ const numeros = [
     </div>
   </section>
 
+  {
+    emDestaque.length > 0 && (
+      <section class="secao secao--destaques">
+        <div class="container">
+          <h2 class="titulo-secao">Em destaque</h2>
+          <ul class="destaques">
+            {emDestaque.map((d) => (
+              <CardDestaque
+                titulo={d.data.titulo}
+                resumo={d.data.resumo}
+                etiqueta={d.data.etiqueta}
+                imagem={d.data.imagem}
+                url={d.data.url}
+                rotulo_url={d.data.rotulo_url}
+              />
+            ))}
+          </ul>
+        </div>
+      </section>
+    )
+  }
+
   <section class="secao secao--alt">
     <div class="container">
       <h2>O que fazemos</h2>
       <ul class="grade-cards">
         {
-          destaques.map((d) => (
+          atalhos.map((d) => (
             <li class="cartao">
               <h3 class="cartao__titulo">{d.titulo}</h3>
               <p class="cartao__texto">{d.texto}</p>
               <a href={url(d.href)} class="cartao__link">
-                Conhecer <span aria-hidden="true">→</span>
+                {d.cta} <span aria-hidden="true">→</span>
               </a>
             </li>
           ))
@@ -118,8 +153,27 @@ const numeros = [
 </Base>
 
 <style>
+  /* 4 cards em 3 colunas deixavam um sozinho com 2/3 da fileira vazia.
+     250px dá 4 colunas a 1440px — o hook --card-min existe para isto. */
+  .grade-cards {
+    --card-min: 250px;
+  }
   .apresentacao {
     padding-block: var(--esp-5) var(--esp-4);
+  }
+  /* Vitrine de destaques: cards deitados, duas colunas a partir de 900px. Não uso
+     .grade-cards porque estes cards são horizontais e precisam de mais largura. */
+  .destaques {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--esp-3);
+  }
+  @media (min-width: 900px) {
+    .destaques {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   /* Título corrido: ocupa a largura da página, como o texto abaixo. */
   .apresentacao h1 {

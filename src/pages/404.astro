@@ -1,0 +1,74 @@
+---
+/**
+ * Página de erro 404.
+ *
+ * Sem este arquivo, quem erra a URL cai na página genérica do GitHub Pages —
+ * sem cabeçalho, sem menu e sem caminho de volta. O Pages usa `404.html` da raiz
+ * do site automaticamente, então basta a rota existir.
+ */
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { url } from '../lib/url';
+
+const caminhos = [
+  { nome: 'Página inicial', href: '/' },
+  { nome: 'Produção', href: '/producao/' },
+  { nome: 'Projetos', href: '/projetos/' },
+  { nome: 'Acervo audiovisual', href: '/acervo/' },
+  { nome: 'Bancos de dados', href: '/bancos-de-dados/' },
+  { nome: 'Equipe', href: '/institucional/' },
+];
+---
+
+<Base titulo="Página não encontrada" descricao="A página que você procura não existe neste site.">
+  <PageHero
+    titulo="Página não encontrada"
+    tituloForte="encontrada"
+    subtitulo="O endereço que você digitou não existe, ou a página mudou de lugar."
+  />
+
+  <section class="secao">
+    <div class="container">
+      <div class="prosa">
+        <p>
+          Se você chegou por um link antigo do site anterior, o conteúdo provavelmente continua
+          aqui, em outro endereço. Estes são os caminhos principais:
+        </p>
+      </div>
+      <ul class="caminhos">
+        {
+          caminhos.map((c) => (
+            <li>
+              <a href={url(c.href)}>{c.nome}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .caminhos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-2);
+    list-style: none;
+    padding: 0;
+    margin: var(--esp-3) 0 0;
+  }
+  .caminhos a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .caminhos a:hover {
+    border-color: var(--cor-primaria);
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+  }
+</style>

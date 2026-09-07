@@ -55,12 +55,23 @@ def foto_de(nome: str):
     return None
 
 
+# Padronização editorial de cargos. O site antigo escrevia "Coordenadora" para a
+# Argelina e "Coordenação" para o Fernando Meireles — um nomeia a pessoa, o outro a
+# função, lado a lado no mesmo grupo. A coordenação pediu um rótulo só. Como o texto
+# de origem não está errado (era isso mesmo que o WordPress dizia), a correção mora
+# aqui e não em extracao/, que continua sendo registro fiel — mesma ideia do
+# dicionário OVERRIDES usado em paginas().
+CARGOS = {
+    "Coordenadora": "Coordenação",
+}
+
+
 def equipe():
     membros = ler("equipe.yaml")
     # Felipe Lamarca não está no site antigo; veio do data/team.yaml do Hugo (adicionado
     # deliberadamente num commit anterior). Preservado para não regredir o repositório.
     membros.append({"name": "Felipe Lamarca", "role": "Mestrando", "category": "aluno",
-                    "lattes": "", "email": "", "photo": ""})
+                    "lattes": "", "email": "", "site": "https://felipelamarca.com", "photo": ""})
 
     lattes = {slug(x["name"].split(",")[0]): x["url"]
               for x in ler("publicacoes-academicas.yaml", "lattes")}
@@ -75,11 +86,12 @@ def equipe():
         sobrenome = slug(m["name"]).split("-")[-1]
         reg = limpo({
             "nome": m["name"],
-            "cargo": m["role"],
+            "cargo": CARGOS.get(m["role"], m["role"]),
             "categoria": m["category"],
             "foto": foto_de(m["name"]),
             "lattes": lattes.get(sobrenome, ""),
             "email": m.get("email", ""),
+            "site": m.get("site", ""),
             "ordem": ordem_cat.index(m["category"]) * 100,
         })
         (destino / f"{slug(m['name'])}.yaml").write_text(
@@ -157,6 +169,21 @@ def paginas():
         # busca funciona no site novo (filtros por candidato, ano, cargo, região e partido), então
         # manter a frase da origem publicaria uma informação falsa. O texto fiel ao site antigo
         # está em extracao/dados/paginas/acervo.md; aqui entra a versão corrigida.
+        # A prosa herdada era da antiga página "Publicações" e abre dizendo que a
+        # produção "está dividida em dois tipos" — mas a página mostra QUATRO
+        # cartões (pesquisas, publicações, análises e textos para discussão).
+        # O texto fiel ao site antigo segue em extracao/dados/paginas/publicacoes.md.
+        "publicacoes.md": (
+            "A produção do DOXA se divide em quatro tipos. As **pesquisas** reúnem as teses e "
+            "dissertações orientadas no laboratório e os projetos coletivos. As **publicações "
+            "acadêmicas** são livros, capítulos e artigos em revistas científicas. As **análises "
+            "de conjuntura eleitoral** são textos produzidos durante as campanhas, a partir do "
+            "acompanhamento de pesquisas de opinião, programas eleitorais, debates e cobertura "
+            "jornalística. E os **textos para discussão** são working papers, publicados antes da "
+            "versão definitiva para serem debatidos. Em alguns casos, como no projeto “Iesp nas "
+            "eleições” (2018) e na plataforma Vota Aí (2020), o objetivo é chegar ao eleitor comum "
+            "e ampliar o debate eleitoral."
+        ),
         "acervo.md": (
             "## Catálogo Audiovisual\n\n"
             "O acervo audiovisual do Doxa pode ser consultado de duas formas. A primeira, por meio "
@@ -353,6 +380,9 @@ def site():
         "youtube": "https://www.youtube.com/channel/UCkcuDdIEuQ9YqOjHsp4-EHQ",
         # O vídeo dos "melhores momentos" é conteúdo do acervo — é lá que ele aparece.
         "video_destaque": h["featured_video"]["youtube_id"],
+        # Documentário "Arquitetos do Poder": estava só como uma linha em na-midia.yaml,
+        # invisível. Ganhou bloco próprio em /acervo/, que é o território dele.
+        "video_documentario": "hHdV_BeIW0M",
         # Vota Aí e o dashboard das eleições viraram PROJETOS (extracao/dados/projetos/).
         # O schema de `configuracao` é .strict(): reintroduzir votaai_* / dashboard_* aqui
         # sem atualizar src/content.config.ts derruba o build.

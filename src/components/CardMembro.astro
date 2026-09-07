@@ -4,8 +4,8 @@
  *
  * Recupera o desenho do site antigo: foto retangular ocupando o topo, régua
  * terracota, e uma PLAQUETA em gradiente navy→verde com o nome — o sobrenome em
- * terracota claro. Quando não há foto (12 dos 16 membros), o card vira só o
- * gradiente e continua elegante: era a solução do site antigo para o placeholder.
+ * terracota claro. Hoje todos os 16 membros têm foto; se algum dia faltar, o card
+ * vira só o gradiente com as iniciais e continua elegante.
  *
  * Contraste: o sobrenome usa `--cor-destaque-claro` sobre o gradiente escuro; o
  * `--cor-destaque` puro daria 2,6:1 sobre a ponta verde e reprovaria em AA.
@@ -18,12 +18,41 @@ import { partirNome } from '../lib/texto';
 interface Props {
   nome: string;
   cargo: string;
+  /** Rótulo curto da categoria ("Coordenação", "Associado"…), exibido como etiqueta. */
+  funcao?: string;
   foto?: string;
   lattes?: string;
+  site?: string;
   email?: string;
 }
 
-const { nome, cargo, foto, lattes, email } = Astro.props;
+const { nome, cargo, funcao, foto, lattes, site, email } = Astro.props;
+
+/**
+ * O cargo só aparece quando acrescenta alguma coisa. Antes a página tinha um
+ * título de seção "Pesquisadores Associados" e, dentro do card, o cargo
+ * "Pesquisadora Associada" — a mesma informação duas vezes, em 10 dos 16 cards.
+ * Agora a etiqueta carrega a função e o cargo entra só se disser outra coisa
+ * ("Doutoranda", "Mestrando", "Bolsista de Treinamento Técnico").
+ */
+function radicais(texto: string): string[] {
+  return texto
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .split(/[^a-z]+/)
+    .filter((p) => p.length > 3) // fora "de", "do", "e"
+    .map((p) => p.replace(/(ando|anda|ado|ada|os|as|o|a)$/, '')); // gênero e forma verbal
+}
+/** Duas palavras dizem a mesma coisa se compartilham 7 letras iniciais. */
+const parecidas = (x: string, y: string) =>
+  x === y || (x.length >= 7 && y.length >= 7 && x.slice(0, 7) === y.slice(0, 7));
+
+const radicaisFuncao = funcao ? radicais(funcao) : [];
+const cargoRedundante =
+  radicaisFuncao.length > 0 &&
+  radicais(cargo).every((c) => radicaisFuncao.some((f) => parecidas(c, f)));
+const cargoUtil = cargoRedundante ? '' : cargo;
 const [primeiroNome, sobrenome] = partirNome(nome);
 
 /** Iniciais para quando não há foto. */
@@ -55,11 +84,11 @@ function iniciais(texto: string): string {
   </div>
 
   <div class="membro__corpo">
-    <p class="membro__cargo">{cargo}</p>
-
-    {
-      (lattes || email) && (
-        <ul class="membro__links">
+    <div class="membro__linha">
+      {funcao && <span class="membro__funcao">{funcao}</span>}
+      {
+        (lattes || site || email) && (
+          <ul class="membro__links">
           {lattes && (
             <li>
               <a href={lattes} target="_blank" rel="noopener noreferrer">
@@ -67,14 +96,25 @@ function iniciais(texto: string): string {
               </a>
             </li>
           )}
-          {email && (
+          {site && (
             <li>
-              <a href={`mailto:${email}`}>E-mail</a>
+              <a href={site} target="_blank" rel="noopener noreferrer">
+                Site<span aria-hidden="true"> ↗</span>
+              </a>
             </li>
           )}
-        </ul>
-      )
-    }
+            {email && (
+              <li>
+                <a href={`mailto:${email}`}>E-mail</a>
+              </li>
+            )}
+          </ul>
+        )
+      }
+    </div>
+    {/* Linha reservada mesmo vazia: sem ela, os cards de quem não tem cargo
+        distinto (ou nenhum link) terminariam numa altura diferente na fileira. */}
+    <p class="membro__cargo">{cargoUtil}</p>
   </div>
 </li>
 
@@ -104,10 +144,27 @@ function iniciais(texto: string): string {
     border-bottom: 3px solid var(--cor-destaque);
   }
   .membro__retrato img {
+    /* `position: absolute` é o que faz o aspect-ratio 1/1 do pai valer. Em fluxo
+       normal, `height: 100%` resolve contra altura indefinida e a proporção
+       natural da foto vence — era isso que deixava os retratos com 220, 260 e
+       274px e desalinhava as plaquetas de nome na mesma fileira. */
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    /* 22% em vez de `top`: alinha melhor os rostos, que vêm em enquadramentos
+       muito diferentes (de 176×144 a 1600×903). */
+    object-position: center 22%;
+    /* Preto e branco unifica 16 fotos com dominantes conflitantes — selfie ao ar
+       livre, retrato em estúdio, foto contra slide projetado. A cor volta no
+       hover. Mesmo recurso que a home já usa nos logos dos parceiros. */
+    filter: grayscale(1) contrast(1.04);
+    transition: filter var(--transicao);
+  }
+  .membro:hover .membro__retrato img,
+  .membro:focus-within .membro__retrato img {
+    filter: none;
   }
   .membro__iniciais {
     position: absolute;
@@ -142,24 +199,48 @@ function iniciais(texto: string): string {
   }
 
   .membro__corpo {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 0.3rem;
+    padding: 0.6rem 0.9rem 0.75rem;
+  }
+  .membro__linha {
     display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: var(--esp-2);
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    min-height: 1.4rem;
+  }
+  /* Etiqueta da função. O fundo é 8% do terracota: a 16% o texto em
+     --cor-destaque-texto cai para 4,23:1 e reprova em AA; a 8% dá 4,64:1. */
+  .membro__funcao {
+    font-size: 0.64rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    white-space: nowrap;
+    padding: 0.12rem 0.45rem;
+    border-radius: 999px;
+    color: var(--cor-destaque-texto);
+    background: color-mix(in srgb, var(--cor-destaque) 8%, white);
   }
   .membro__cargo {
     margin: 0;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    line-height: 1.25;
+    min-height: 1rem;
     color: var(--cor-texto-suave);
   }
 
   .membro__links {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--esp-2);
+    gap: 0.6rem;
     list-style: none;
-    margin: var(--esp-2) 0 0;
+    margin: 0;
     padding: 0;
+    font-size: 0.8rem;
   }
   .membro__links a {
     font-size: 0.82rem;

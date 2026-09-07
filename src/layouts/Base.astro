@@ -32,6 +32,13 @@ const canonica = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={desc} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
+    {/* Sem og:image, todo link compartilhado no WhatsApp ou no LinkedIn saía como
+        um retângulo cinza. A URL precisa ser absoluta para os validadores. */}
+    <meta property="og:url" content={canonica} />
+    <meta property="og:image" content={new URL(url('/img/og-doxa.png'), Astro.site)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="sitemap" href={url('/sitemap-index.xml')} />
   </head>
   <body>

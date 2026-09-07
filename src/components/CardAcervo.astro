@@ -201,7 +201,8 @@ const dataRegiao = item.regiao ? normalizar(item.regiao) : '';
     gap: 0.35rem;
     font-weight: 600;
     font-size: 0.9rem;
-    color: var(--cor-destaque);
+    /* 95 links nesta página: --cor-destaque dá 3,72:1 sobre branco e reprova em AA */
+    color: var(--cor-destaque-texto);
     text-decoration: none;
   }
   .card-acervo__link:hover {

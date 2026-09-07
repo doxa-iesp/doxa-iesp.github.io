@@ -21,6 +21,9 @@ lattes:
     url: "http://lattes.cnpq.br/1494895098804362"
   - name: "Moreira, T."
     url: "http://lattes.cnpq.br/2163358625457191"
+  # Informado pelo próprio, em 2026-09-06 (também está em felipelamarca.com).
+  - name: "Lamarca, F."
+    url: "http://lattes.cnpq.br/2606938112682925"
 
 publications:
 
@@ -37,13 +40,9 @@ publications:
     type: "livro"
     publisher: "Editora da UERJ"
     url: ""
-  # nota: repetição do 1º item desta aba na página de origem
-  - title: "Corrupção, Como e por quê seu dinheiro sai pelo ladrão"
-    authors: "SALOMÃO, L. A.; GUARNIERI, Fernando"
-    year: 2016
-    type: "livro"
-    publisher: "Niterói: Nitpress. v. 1. 200p"
-    url: ""
+  # A página de origem repetia aqui o 1º item da aba ("Corrupção, Como e por quê…",
+  # Nitpress 2016), com a citação menos completa. A duplicata saiu em 2026-09-06:
+  # eram dois cards idênticos lado a lado em /producao/publicacoes/.
   - title: "25 anos de eleições presidenciais no Brasil"
     authors: "Figueiredo, Argelina; Borba, Felipe (org)"
     year: 2018
@@ -165,12 +164,6 @@ publications:
     journal: "Journal of Politics in Latin America (Print)"
     pages: "v. 14, p. 224-236"
     url: ""
-  - title: "Modelos de competição política e as eleições de 2022"
-    authors: "Guarnieri, F.; FIGUEIREDO, A."
-    year: 2022
-    type: "artigo"
-    journal: "CADERNOS ADENAUER (SÃO PAULO)"
-    pages: "v. 4, p. 9"
     url: ""
   - title: "Política Distributiva em Coalizão"
     authors: "MEIRELES, F."
