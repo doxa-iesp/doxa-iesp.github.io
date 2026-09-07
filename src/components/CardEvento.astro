@@ -4,7 +4,7 @@
  * Imagem, descrição, link "Saiba mais" e anexos são todos opcionais e só aparecem
  * quando existem nos dados.
  */
-import { url } from '../lib/url';
+import { url, linkPara, externo } from '../lib/url';
 
 interface Props {
   titulo: string;
@@ -42,19 +42,26 @@ function rotuloAnexo(u: string): string {
   {
     imagem && (
       <div class="evento__foto">
-        <img src={url(imagem)} alt={`Imagem do evento: ${titulo}`} loading="lazy" />
+        {/* alt vazio de propósito: a capa é decorativa e o título vem logo abaixo,
+            no <h2>. Com alt descritivo o leitor de tela anunciaria o título duas vezes. */}
+        <img src={url(imagem)} alt="" loading="lazy" width="640" height="360" />
       </div>
     )
   }
   <div class="evento__corpo">
     <time class="evento__data" datetime={dataISO}>{dataFormatada}</time>
-    <h3 class="evento__titulo">{titulo}</h3>
+    <h2 class="evento__titulo">{titulo}</h2>
     {descricao && <p class="evento__descricao">{descricao}</p>}
 
     <div class="evento__acoes">
       {
         link && (
-          <a class="btn btn-contorno btn--sm" href={link} target="_blank" rel="noopener noreferrer">
+          <a
+            class="btn btn-contorno btn--sm"
+            href={linkPara(link)}
+            target={externo(link) ? '_blank' : undefined}
+            rel={externo(link) ? 'noopener noreferrer' : undefined}
+          >
             Saiba mais
             <span aria-hidden="true"> ↗</span>
           </a>
@@ -62,7 +69,12 @@ function rotuloAnexo(u: string): string {
       }
       {
         anexos?.map((anexo) => (
-          <a class="evento__anexo" href={anexo} target="_blank" rel="noopener noreferrer">
+          <a
+            class="evento__anexo"
+            href={linkPara(anexo)}
+            target={externo(anexo) ? '_blank' : undefined}
+            rel={externo(anexo) ? 'noopener noreferrer' : undefined}
+          >
             {rotuloAnexo(anexo)}
             <span aria-hidden="true"> ↓</span>
           </a>
@@ -86,10 +98,17 @@ function rotuloAnexo(u: string): string {
   }
 
   .evento__foto {
+    position: relative;
     aspect-ratio: 16 / 9;
     background: var(--cor-fundo-alt);
+    overflow: hidden;
   }
   .evento__foto img {
+    /* Sem `position: absolute` a proporção natural da foto vence o aspect-ratio:
+       as capas iam de 198 a 625px de altura e esticavam o card para 995px,
+       deixando ~350px de branco entre o texto e os botões. */
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -107,7 +126,8 @@ function rotuloAnexo(u: string): string {
     letter-spacing: 0.08em;
     font-size: 0.72rem;
     font-weight: 700;
-    color: var(--cor-destaque);
+    /* texto sobre branco: --cor-destaque dá 3,72:1 e reprova em AA */
+    color: var(--cor-destaque-texto);
     margin-bottom: var(--esp-1);
   }
   .evento__titulo {

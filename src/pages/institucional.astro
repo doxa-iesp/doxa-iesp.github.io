@@ -120,7 +120,8 @@ const grupos = GRUPOS.map((g) => ({
     letter-spacing: 0.08em;
     font-size: 0.72rem;
     font-weight: 700;
-    color: var(--cor-destaque);
+    /* sobre --cor-fundo-alt, --cor-destaque dá 3,38:1 e reprova em AA */
+    color: var(--cor-destaque-texto);
     margin-bottom: var(--esp-1);
   }
   .contato__item dd {

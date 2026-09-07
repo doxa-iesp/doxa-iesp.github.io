@@ -62,7 +62,9 @@ const grupos = anosOrdenados.map((ano) => {
 
               {grupo.cargos.map(({ cargo, lista }) => (
                 <div class="mapas-cargo">
-                  <h3 class="mapas-cargo__titulo">{cargo}</h3>
+                  {/* h2, não h3: o ano fica num <summary>, que não é cabeçalho —
+                      com h3 a página saltava de h1 direto para h3. */}
+                  <h2 class="mapas-cargo__titulo">{cargo}</h2>
                   <ul class="mapas-cargo__lista">
                     {lista.map((mapa) => {
                       const rotulo = mapa.data.titulo === cargo ? 'Ver mapa' : mapa.data.titulo;

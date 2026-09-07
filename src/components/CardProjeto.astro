@@ -69,10 +69,17 @@ const href = url(`/projetos/${slug}/`);
   }
 
   .projeto__capa {
+    position: relative;
     aspect-ratio: 16 / 9;
     background: var(--cor-fundo-alt);
+    overflow: hidden;
   }
   .projeto__capa img {
+    /* mesma armadilha do CardMembro/CardEvento: sem `absolute`, a proporção da
+       imagem vence o aspect-ratio. Aqui ainda não aparecia porque as capas de
+       projeto são todas paisagem — mas quebraria na primeira capa vertical. */
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -128,6 +135,12 @@ const href = url(`/projetos/${slug}/`);
     .projeto--destaque .projeto__capa {
       flex: 0 0 42%;
       aspect-ratio: auto;
+    }
+    /* No card em destaque não há aspect-ratio para segurar: aqui a imagem é que
+       define a altura, e posicioná-la em `absolute` faria o `cover` cortar a arte
+       (a legenda do cartaz do Vota Aí sumia). */
+    .projeto--destaque .projeto__capa img {
+      position: static;
     }
     .projeto--destaque .projeto__corpo {
       padding: var(--esp-4);

@@ -89,6 +89,10 @@ const { alvo, abas, rotuloGrupo = 'Filtrar itens' } = Astro.props;
       aba.addEventListener('click', () => selecionar(aba));
     });
 
+    // Estado inicial: sem isto o contador só aparecia depois do primeiro clique,
+    // então quem chegava na página não via quantos itens a lista tem.
+    aplicar(abas[0]?.getAttribute('data-filtro') ?? 'todas');
+
     // Navegação por teclado dentro do tablist (setas, Home, End).
     raiz.querySelector('[role="tablist"]')?.addEventListener('keydown', (evento) => {
       const e = evento as KeyboardEvent;

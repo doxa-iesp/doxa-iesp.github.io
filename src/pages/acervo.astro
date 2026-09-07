@@ -194,7 +194,7 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
     text-decoration: underline;
   }
   .link-inline:hover {
-    color: var(--cor-destaque);
+    color: var(--cor-destaque-texto);
   }
   /* Vídeo dos melhores momentos — migrado da home. */
   .video {
@@ -265,7 +265,10 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
         const okPartido = !fPartido || partidos.includes(fPartido);
         const okBusca = !q || (card.dataset.candidatos ?? '').includes(q);
         const mostrar = okAno && okCargo && okRegiao && okPartido && okBusca;
-        card.hidden = !mostrar;
+        // Esconder o <li>, não só o card: escondendo o card a célula da grade
+        // continuava ocupando espaço, e com 0 resultados sobravam 744px (desktop)
+        // ou 2.256px (celular) de branco antes da mensagem "nenhum item".
+        (card.parentElement ?? card).hidden = !mostrar;
         if (mostrar) visiveis++;
       }
 

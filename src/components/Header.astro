@@ -104,6 +104,11 @@ const atual = Astro.url.pathname;
   .nav {
     background: var(--gradiente-marca);
   }
+  /* A nav usa o gradiente direto (não a classe .faixa-marca), então precisa da
+     mesma correção do anel de foco: terracota sobre navy dá 2,17:1 e some. */
+  .nav :focus-visible {
+    outline-color: var(--cor-branco);
+  }
   .nav__lista {
     display: flex;
     flex-wrap: wrap;

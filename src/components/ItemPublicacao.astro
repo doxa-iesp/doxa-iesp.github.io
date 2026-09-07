@@ -174,7 +174,9 @@ const idResumo = `resumo-${titulo
     align-self: flex-start;
     margin: 0;
     padding: 0.3rem 0.9rem 0.3rem 0.75rem;
-    background: var(--cor-destaque);
+    /* branco sobre --cor-destaque dá 3,72:1 e reprova; sobre --cor-destaque-texto
+       dá 5,08:1. A aba aparece em 64 cards das páginas de produção. */
+    background: var(--cor-destaque-texto);
     color: var(--cor-branco);
     font-size: 0.78rem;
     font-weight: 700;

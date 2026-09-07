@@ -104,6 +104,12 @@ function iniciais(texto: string): string {
     border-bottom: 3px solid var(--cor-destaque);
   }
   .membro__retrato img {
+    /* `position: absolute` é o que faz o aspect-ratio 1/1 do pai valer. Em fluxo
+       normal, `height: 100%` resolve contra altura indefinida e a proporção
+       natural da foto vence — era isso que deixava os retratos com 220, 260 e
+       274px e desalinhava as plaquetas de nome na mesma fileira. */
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;

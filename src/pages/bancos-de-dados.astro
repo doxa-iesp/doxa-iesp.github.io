@@ -108,7 +108,7 @@ const formatador = new Intl.NumberFormat('pt-BR');
 
   /* Defeito conhecido da fonte (coluna de município rotacionada): alerta visível. */
   .banco__aviso {
-    background: color-mix(in srgb, var(--cor-destaque) 14%, white);
+    background: color-mix(in srgb, var(--cor-destaque) 8%, white);
     border: 1px solid color-mix(in srgb, var(--cor-destaque) 45%, white);
     border-left: 4px solid var(--cor-destaque);
     border-radius: var(--raio);
@@ -118,7 +118,10 @@ const formatador = new Intl.NumberFormat('pt-BR');
     color: var(--cor-texto);
   }
   .banco__aviso strong {
-    color: var(--cor-destaque);
+    /* Aqui trocar só o token não bastava: sobre o pêssego a 14% o
+       --cor-destaque-texto dá 4,33:1 e ainda reprova. Com o fundo a 8%, sobe
+       para 4,64:1. O terracota puro fica onde deve: na borda (superfície). */
+    color: var(--cor-destaque-texto);
   }
 
   .banco__meta {
