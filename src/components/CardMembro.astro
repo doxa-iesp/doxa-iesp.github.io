@@ -232,8 +232,10 @@ function iniciais(texto: string): string {
   }
   .membro__cargo {
     margin: 0;
-    /* "Professor/Pesquisador" não cabia em 136px e era cortado na barra */
-    overflow-wrap: anywhere;
+    /* "Professor/Pesquisador" não cabia em 136px e era cortado na barra. Com
+       hifenização (a página é lang=pt-BR) a quebra sai com hífen, não no seco. */
+    overflow-wrap: break-word;
+    hyphens: auto;
     font-size: 0.8rem;
     line-height: 1.25;
     min-height: 1rem;
