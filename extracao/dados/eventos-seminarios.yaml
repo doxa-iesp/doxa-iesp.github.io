@@ -32,13 +32,10 @@ eventos:
     attachments:
       - "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/CARTAZ_Seminario-Marcus-Figueiredo.jpg.pdf"
 
-  - title: "Nota editorial sobre falecimento de Marcus Figueiredo na Revista Dados, em agosto de 2014"
-    date: "2014-08-08"
-    description: "No dia 21 de março de 2014 realizou-se no Instituto de Estudos Sociais e Políticos da Universidade do Estado do Rio de Janeiro (IESP-UERJ) o Seminário “A Ciência Política no Brasil: a perspectiva do Rio de Janeiro”. O encontro foi organizado pela Associação Brasileira de Ciência Política (ABCP), tendo sido parte integrante de um projeto"
-    image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/09/marcusfigueiredo_destaque.jpg"
-    url: "https://www.lab-doxa.org.br/nota-editorial-sobre-falecimento-de-marcus-figueiredo-na-revista-dados-em-agosto-de-2014/"
-    attachments:
-      - "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/HOM_MARCUS_DADOS-2014.pdf"
+  # A nota editorial sobre o falecimento de Marcus Figueiredo (2014-08-08) foi removida
+  # em 2026-09-06 a pedido da coordenação do DOXA, que decidiu não manter no site novo
+  # nenhuma referência à morte dele. As demais referências ao Marcus continuam (autoria,
+  # orientação, o seminário com o nome dele e o evento "DOXA 20 anos").
 
 seminarios:
   - title: "Defensive Logic of resource allocation: Brazil’s party financing in the state level"

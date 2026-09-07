@@ -20,10 +20,11 @@ interface Props {
   cargo: string;
   foto?: string;
   lattes?: string;
+  site?: string;
   email?: string;
 }
 
-const { nome, cargo, foto, lattes, email } = Astro.props;
+const { nome, cargo, foto, lattes, site, email } = Astro.props;
 const [primeiroNome, sobrenome] = partirNome(nome);
 
 /** Iniciais para quando não há foto. */
@@ -58,12 +59,19 @@ function iniciais(texto: string): string {
     <p class="membro__cargo">{cargo}</p>
 
     {
-      (lattes || email) && (
+      (lattes || site || email) && (
         <ul class="membro__links">
           {lattes && (
             <li>
               <a href={lattes} target="_blank" rel="noopener noreferrer">
                 Lattes<span aria-hidden="true"> ↗</span>
+              </a>
+            </li>
+          )}
+          {site && (
+            <li>
+              <a href={site} target="_blank" rel="noopener noreferrer">
+                Site<span aria-hidden="true"> ↗</span>
               </a>
             </li>
           )}

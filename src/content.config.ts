@@ -90,6 +90,7 @@ const equipe = defineCollection({
     categoria: z.enum(CATEGORIAS),
     foto: z.string().optional(),
     lattes: urlOuVazio, // o site antigo não publica Lattes; coleta manual pendente
+    site: urlOuVazio, // página pessoal, quando a pessoa tiver
     email: z.string().email().optional().or(z.literal('')),
     ordem: z.number().optional(),
   }),

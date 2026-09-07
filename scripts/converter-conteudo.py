@@ -55,12 +55,23 @@ def foto_de(nome: str):
     return None
 
 
+# Padronização editorial de cargos. O site antigo escrevia "Coordenadora" para a
+# Argelina e "Coordenação" para o Fernando Meireles — um nomeia a pessoa, o outro a
+# função, lado a lado no mesmo grupo. A coordenação pediu um rótulo só. Como o texto
+# de origem não está errado (era isso mesmo que o WordPress dizia), a correção mora
+# aqui e não em extracao/, que continua sendo registro fiel — mesma ideia do
+# dicionário OVERRIDES usado em paginas().
+CARGOS = {
+    "Coordenadora": "Coordenação",
+}
+
+
 def equipe():
     membros = ler("equipe.yaml")
     # Felipe Lamarca não está no site antigo; veio do data/team.yaml do Hugo (adicionado
     # deliberadamente num commit anterior). Preservado para não regredir o repositório.
     membros.append({"name": "Felipe Lamarca", "role": "Mestrando", "category": "aluno",
-                    "lattes": "", "email": "", "photo": ""})
+                    "lattes": "", "email": "", "site": "https://felipelamarca.com", "photo": ""})
 
     lattes = {slug(x["name"].split(",")[0]): x["url"]
               for x in ler("publicacoes-academicas.yaml", "lattes")}
@@ -75,11 +86,12 @@ def equipe():
         sobrenome = slug(m["name"]).split("-")[-1]
         reg = limpo({
             "nome": m["name"],
-            "cargo": m["role"],
+            "cargo": CARGOS.get(m["role"], m["role"]),
             "categoria": m["category"],
             "foto": foto_de(m["name"]),
             "lattes": lattes.get(sobrenome, ""),
             "email": m.get("email", ""),
+            "site": m.get("site", ""),
             "ordem": ordem_cat.index(m["category"]) * 100,
         })
         (destino / f"{slug(m['name'])}.yaml").write_text(

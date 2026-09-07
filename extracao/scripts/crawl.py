@@ -31,7 +31,9 @@ POSTS = [
     "covid-no-estado-do-rio-monitoramento-e-efeitos",
     "doxa-20-anos-o-legado-de-marcus-figueiredo",
     "seminario-marcus-figueiredo-eleicoes-opiniao-publica-e-comunicacao-politica",
-    "nota-editorial-sobre-falecimento-de-marcus-figueiredo-na-revista-dados",
+    # A nota editorial sobre o falecimento de Marcus Figueiredo saiu desta lista em
+    # 2026-09-06: a coordenação pediu que ela não exista no site novo, e re-rastreá-la
+    # a traria de volta na próxima extração.
 ]
 
 ITEM = ".jet-listing-grid__item"
