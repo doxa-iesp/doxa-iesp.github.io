@@ -161,6 +161,16 @@ p {
   margin: 0;
   padding: 0;
 }
+/* `auto-fill` mantém as colunas vazias quando o grupo tem menos itens que colunas:
+   em /projetos/ dois cards de 353px ficavam soltos num container de 1108px, com
+   402px de vazio à direita. `auto-fit` recolhe as colunas vazias e os itens dividem
+   a linha entre si. Use só onde os grupos são pequenos e previsíveis — com UM item
+   a linha inteira vira um card só, que raramente é o que se quer (por isso a página
+   de projetos só aplica esta classe em grupos de 2 ou mais). */
+.grade-cards--preenche {
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--card-min, 280px), 100%), 1fr));
+}
+
 .grade-cards--estreita {
   --card-min: 220px;
 }

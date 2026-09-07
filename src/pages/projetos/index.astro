@@ -46,7 +46,14 @@ const grupos = [
           <h2 class="titulo-secao">{grupo.titulo}</h2>
           {grupo.descricao && <p class="grupo__descricao">{grupo.descricao}</p>}
 
-          <ul class="grade-cards grade-cards--larga">
+          <ul
+            class:list={[
+              'grade-cards',
+              'grade-cards--larga',
+              /* Com UM item, preencher a linha viraria um card de 1108px. */
+              grupo.itens.length > 1 && 'grade-cards--preenche',
+            ]}
+          >
             {grupo.itens.map((p) => (
               <CardProjeto
                 slug={p.id}
@@ -54,7 +61,6 @@ const grupos = [
                 resumo={p.data.resumo}
                 periodo={p.data.periodo}
                 imagem={p.data.imagem}
-                destaque={p.data.destaque}
               />
             ))}
           </ul>

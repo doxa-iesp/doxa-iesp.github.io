@@ -117,7 +117,6 @@ const projetos = defineCollection({
     rotulo_url: z.string().optional(),
     embed: urlOuVazio, // iframe (Power BI, YouTube)
     links: z.array(z.object({ rotulo: z.string(), url: z.string() })).default([]),
-    destaque: z.boolean().default(false),
     ordem: z.number().optional(),
   }),
 });

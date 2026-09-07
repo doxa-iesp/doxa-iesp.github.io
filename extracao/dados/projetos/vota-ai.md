@@ -6,7 +6,6 @@ periodo: "2020 até hoje"
 status: "ativo"
 url: "https://www.votaai.cesop.unicamp.br/"
 rotulo_url: "Acessar o Vota Aí"
-destaque: true
 ordem: 1
 ---
 

@@ -14,24 +14,25 @@ interface Props {
   resumo: string;
   periodo?: string;
   imagem?: string;
-  destaque?: boolean;
 }
 
-const { slug, titulo, resumo, periodo, imagem, destaque = false } = Astro.props;
-
-// O layout em destaque põe a capa ao lado do texto. Sem capa, ele viraria um card
-// largo e oco — então só vale quando há imagem.
-const largo = destaque && Boolean(imagem);
+const { slug, titulo, resumo, periodo, imagem } = Astro.props;
 
 const href = url(`/projetos/${slug}/`);
 ---
 
-<li class:list={['projeto', largo && 'projeto--destaque']}>
+<li class="projeto">
+  {/* Sem capa, a faixa da marca ocupa o lugar dela. O card precisa da banda: numa
+      fileira de dois, o card sem capa esticava até a altura do vizinho e ficava com
+      ~300px de branco no miolo, com cara de imagem que não carregou. Mesmo recurso
+      do CardMembro para quem não tem foto. */}
   {
-    imagem && (
+    imagem ? (
       <div class="projeto__capa">
         <img src={url(imagem)} alt="" width="640" height="360" loading="lazy" />
       </div>
+    ) : (
+      <div class="projeto__capa projeto__capa--vazia faixa-marca textura-x" aria-hidden="true" />
     )
   }
 
@@ -85,6 +86,11 @@ const href = url(`/projetos/${slug}/`);
     object-fit: cover;
   }
 
+  .projeto__capa--vazia {
+    /* o gradiente é o próprio conteúdo da banda */
+    background: var(--gradiente-marca);
+  }
+
   .projeto__corpo {
     display: flex;
     flex-direction: column;
@@ -124,29 +130,5 @@ const href = url(`/projetos/${slug}/`);
   }
   .projeto__acao a {
     text-decoration: none;
-  }
-
-  /* O projeto em destaque ocupa a linha inteira, com a capa ao lado do texto. */
-  @media (min-width: 800px) {
-    .projeto--destaque {
-      grid-column: 1 / -1;
-      flex-direction: row;
-    }
-    .projeto--destaque .projeto__capa {
-      flex: 0 0 42%;
-      aspect-ratio: auto;
-    }
-    /* No card em destaque não há aspect-ratio para segurar: aqui a imagem é que
-       define a altura, e posicioná-la em `absolute` faria o `cover` cortar a arte
-       (a legenda do cartaz do Vota Aí sumia). */
-    .projeto--destaque .projeto__capa img {
-      position: static;
-    }
-    .projeto--destaque .projeto__corpo {
-      padding: var(--esp-4);
-    }
-    .projeto--destaque .projeto__titulo {
-      font-size: 1.5rem;
-    }
   }
 </style>

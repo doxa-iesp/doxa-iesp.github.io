@@ -7,7 +7,6 @@ status: "concluido"
 url: "https://app.powerbi.com/view?r=eyJrIjoiNDk3MDhjYjktYWNhMC00Y2JhLTgxNDUtZWQzNDM1MGM0N2YwIiwidCI6Ijc0OTMyMDFlLTdhNDUtNDk3OC1iZWZkLTBlZDAwMmIwZjgyMiJ9"
 rotulo_url: "Abrir o painel"
 embed: "https://app.powerbi.com/view?r=eyJrIjoiNDk3MDhjYjktYWNhMC00Y2JhLTgxNDUtZWQzNDM1MGM0N2YwIiwidCI6Ijc0OTMyMDFlLTdhNDUtNDk3OC1iZWZkLTBlZDAwMmIwZjgyMiJ9"
-destaque: true
 ordem: 2
 ---
 
