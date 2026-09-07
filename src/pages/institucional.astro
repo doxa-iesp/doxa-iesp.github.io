@@ -3,6 +3,7 @@ import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import CardMembro from '../components/CardMembro.astro';
+import Titulo from '../components/Titulo.astro';
 
 const pagina = (await getEntry('paginas', 'institucional'))!;
 const { Content } = await render(pagina);
@@ -10,26 +11,32 @@ const geral = (await getEntry('configuracao', 'geral'))!.data;
 
 const equipe = await getCollection('equipe');
 
-// Ordem e rótulos fixados pela tarefa. A ordem das categorias aqui É a ordem de exibição.
-const GRUPOS = [
-  { categoria: 'coordenacao', rotulo: 'Coordenação' },
-  { categoria: 'pesquisadores', rotulo: 'Pesquisadores' },
-  { categoria: 'pos-doutorando', rotulo: 'Pós-doutorandos' },
-  { categoria: 'aluno', rotulo: 'Alunos de Pós-graduação' },
-  { categoria: 'assistente', rotulo: 'Assistentes de Pesquisa' },
-  { categoria: 'associado', rotulo: 'Pesquisadores Associados' },
-] as const;
+/**
+ * As categorias deixaram de ser LAYOUT e viraram INFORMAÇÃO.
+ *
+ * Antes, cada uma das seis ganhava uma seção de página inteira, com título e
+ * faixa de fundo alternada — e quatro delas têm uma ou duas pessoas, então
+ * sobravam três ou quatro colunas vazias por fileira. Agora é uma grade só, na
+ * ordem que o campo `ordem` já codifica (coordenação primeiro), e a função vai
+ * numa etiqueta dentro do card: 16 pessoas em 4 fileiras cheias, e o layout não
+ * quebra quando a equipe muda de tamanho.
+ */
+const FUNCOES: Record<string, string> = {
+  coordenacao: 'Coordenação',
+  pesquisadores: 'Pesquisador',
+  'pos-doutorando': 'Pós-doutorado',
+  aluno: 'Pós-graduação',
+  assistente: 'Assistente',
+  associado: 'Pesquisador associado',
+};
 
-const grupos = GRUPOS.map((g) => ({
-  rotulo: g.rotulo,
-  membros: equipe
-    .filter((m) => m.data.categoria === g.categoria)
-    .sort(
-      (a, b) =>
-        (a.data.ordem ?? 999) - (b.data.ordem ?? 999) ||
-        a.data.nome.localeCompare(b.data.nome, 'pt-BR'),
-    ),
-})).filter((g) => g.membros.length > 0);
+const membros = [...equipe]
+  .sort(
+    (a, b) =>
+      (a.data.ordem ?? 999) - (b.data.ordem ?? 999) ||
+      a.data.nome.localeCompare(b.data.nome, 'pt-BR'),
+  )
+  .map((m) => ({ ...m.data, funcao: FUNCOES[m.data.categoria] ?? '' }));
 ---
 
 <Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>
@@ -43,29 +50,28 @@ const grupos = GRUPOS.map((g) => ({
     </div>
   </section>
 
-  {
-    grupos.map((grupo, i) => (
-      <section class:list={['secao', 'equipe-secao', { 'secao--alt': i % 2 === 0 }]}>
-        <div class="container">
-          <h2>{grupo.rotulo}</h2>
-          <ul class="equipe-grid">
-            {grupo.membros.map((m) => (
-              <CardMembro
-                nome={m.data.nome}
-                cargo={m.data.cargo}
-                foto={m.data.foto}
-                lattes={m.data.lattes}
-                site={m.data.site}
-                email={m.data.email}
-              />
-            ))}
-          </ul>
-        </div>
-      </section>
-    ))
-  }
+  <section class="secao">
+    <div class="container">
+      <Titulo nivel="h2" titulo="Nossa Equipe" classe="titulo-secao" />
+      <ul class="equipe-grid">
+        {
+          membros.map((m) => (
+            <CardMembro
+              nome={m.nome}
+              cargo={m.cargo}
+              funcao={m.funcao}
+              foto={m.foto}
+              lattes={m.lattes}
+              site={m.site}
+              email={m.email}
+            />
+          ))
+        }
+      </ul>
+    </div>
+  </section>
 
-  <section class="secao contato">
+  <section class="secao secao--alt contato">
     <div class="container">
       <h2>Contato</h2>
       <dl class="contato__lista">
@@ -98,11 +104,20 @@ const grupos = GRUPOS.map((g) => ({
 
   .equipe-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* 240px dá 4 colunas a 1440px — 16 pessoas em 4 fileiras cheias. */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: var(--esp-3);
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+  /* Duas colunas no celular: com uma só, apresentar 16 pessoas custava 11 telas
+     de rolagem. É esta linha que corta a maior parte disso. */
+  @media (max-width: 700px) {
+    .equipe-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--esp-2);
+    }
   }
 
   .contato__lista {
