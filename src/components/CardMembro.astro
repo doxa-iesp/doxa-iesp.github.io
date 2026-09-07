@@ -156,15 +156,10 @@ function iniciais(texto: string): string {
     /* 22% em vez de `top`: alinha melhor os rostos, que vêm em enquadramentos
        muito diferentes (de 176×144 a 1600×903). */
     object-position: center 22%;
-    /* Preto e branco unifica 16 fotos com dominantes conflitantes — selfie ao ar
-       livre, retrato em estúdio, foto contra slide projetado. A cor volta no
-       hover. Mesmo recurso que a home já usa nos logos dos parceiros. */
-    filter: grayscale(1) contrast(1.04);
-    transition: filter var(--transicao);
-  }
-  .membro:hover .membro__retrato img,
-  .membro:focus-within .membro__retrato img {
-    filter: none;
+    /* Sem preto e branco. Chegou a ficar em grayscale para unificar 16 fotos com
+       dominantes muito diferentes, mas o efeito lê como retrato memorial — numa
+       página de equipe viva, dá a impressão errada. A variedade das fotos é um
+       problema menor que esse. */
   }
   .membro__iniciais {
     position: absolute;
