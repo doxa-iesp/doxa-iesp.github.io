@@ -1,0 +1,112 @@
+---
+/**
+ * Vídeo do YouTube com FACHADA: a página carrega só uma miniatura local, e o
+ * player entra no lugar quando a pessoa clica.
+ *
+ * O motivo é medido: com o iframe direto, `/acervo/` puxava 12 requisições de
+ * terceiros e 1 MB (só o base.js do player tem 517 KB) antes de qualquer
+ * interação — o dobro do peso de qualquer outra página do site. Com dois vídeos
+ * na mesma página, dobraria de novo.
+ *
+ * Sem JavaScript o botão é um link normal para o YouTube: ninguém fica sem o vídeo.
+ */
+import { url } from '../lib/url';
+
+interface Props {
+  id: string; // ID do vídeo no YouTube
+  titulo: string; // título acessível do player
+  miniatura: string; // caminho em public/, ex.: /img/video/<id>.jpg
+}
+
+const { id, titulo, miniatura } = Astro.props;
+---
+
+<div class="video-yt">
+  <a
+    class="video-yt__fachada"
+    href={`https://www.youtube.com/watch?v=${id}`}
+    data-video={id}
+    data-titulo={titulo}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={url(miniatura)} alt="" loading="lazy" width="480" height="270" />
+    <span class="video-yt__play" aria-hidden="true">
+      <svg viewBox="0 0 68 48" width="68" height="48" focusable="false">
+        <path
+          d="M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.5C4 2.3 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 2.5 5.4 5.4 6.2C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.5c2.9-.8 4.6-3.3 5.4-6.2C68 35 68 24 68 24s0-11-1.5-16.3z"
+          fill="#f00"></path>
+        <path d="M45 24 27 14v20" fill="#fff"></path>
+      </svg>
+    </span>
+    <span class="video-yt__rotulo">Assistir a “{titulo}”</span>
+  </a>
+</div>
+
+<style>
+  .video-yt {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--raio-g);
+    overflow: hidden;
+    background: var(--cor-primaria-escura);
+  }
+  .video-yt__fachada {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+  }
+  .video-yt__fachada img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .video-yt__play {
+    position: relative;
+    display: block;
+    filter: drop-shadow(0 2px 6px rgb(0 0 0 / 45%));
+    transition: transform var(--transicao);
+  }
+  .video-yt__fachada:hover .video-yt__play,
+  .video-yt__fachada:focus-visible .video-yt__play {
+    transform: scale(1.08);
+  }
+  /* O rótulo existe para leitor de tela e para quem navega por teclado; o botão
+     de play já comunica visualmente. */
+  .video-yt__rotulo {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .video-yt :global(iframe) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('.video-yt__fachada').forEach((fachada) => {
+    fachada.addEventListener('click', (evento) => {
+      const id = fachada.dataset.video;
+      if (!id) return; // sem id, deixa o link levar ao YouTube
+      evento.preventDefault();
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1`;
+      iframe.title = fachada.dataset.titulo ?? 'Vídeo';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      fachada.replaceWith(iframe);
+      iframe.focus();
+    });
+  });
+</script>

@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import FiltrosAcervo from '../components/FiltrosAcervo.astro';
 import CardAcervo from '../components/CardAcervo.astro';
+import VideoYoutube from '../components/VideoYoutube.astro';
 import { url } from '../lib/url';
 
 const pagina = (await getEntry('paginas', 'acervo'))!;
@@ -70,12 +71,36 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
         </p>
       </div>
       <div class="video__moldura">
-        <iframe
-          src={`https://www.youtube-nocookie.com/embed/${geral.video_destaque}`}
-          title="Melhores momentos do horário eleitoral, no canal do DOXA no YouTube"
-          loading="lazy"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <VideoYoutube
+          id={geral.video_destaque}
+          titulo="Melhores momentos do horário eleitoral"
+          miniatura={`/img/video/${geral.video_destaque}.jpg`}
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* O documentário do laboratório vivia escondido como a última linha de
+      /na-midia/, sem imagem nem player. É conteúdo do acervo — o lugar dele é aqui. */}
+  <section class="secao">
+    <div class="container video">
+      <div>
+        <h2>Documentário: Arquitetos do Poder</h2>
+        <p>
+          Panorama da relação entre mídia e política no Brasil, das campanhas de Getúlio Vargas e
+          JK à eleição de 1989, montado a partir de depoimentos e imagens de arquivo.
+        </p>
+        <p class="video__ficha">
+          Coordenação geral de Marcus Figueiredo · Direção e roteiro de Vicente Ferraz e Alessandra
+          Aldé · Produção Urca Filmes · 2010, 100 minutos
+        </p>
+      </div>
+      <div class="video__moldura">
+        <VideoYoutube
+          id={geral.video_documentario}
+          titulo="Documentário Arquitetos do Poder"
+          miniatura={`/img/video/${geral.video_documentario}.jpg`}
+        />
       </div>
     </div>
   </section>
@@ -210,12 +235,11 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
     overflow: hidden;
     box-shadow: var(--sombra);
   }
-  .video__moldura iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+  /* Ficha técnica do documentário: menor e mais leve que o texto de apoio. */
+  .video__ficha {
+    margin-top: var(--esp-2);
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
   }
   @media (max-width: 800px) {
     .video {

@@ -46,6 +46,7 @@ const LISTAS = {
 /** Pastas carregadas por glob(): um arquivo = uma entrada. */
 const PASTAS = [
   { dir: 'src/content/equipe', ext: '.yaml', minimo: 10 },
+  { dir: 'src/content/destaques', ext: '.md', minimo: 1 },
   { dir: 'src/content/eventos', ext: '.md', minimo: 3 },
   { dir: 'src/content/projetos', ext: '.md', minimo: 4 },
   { dir: 'src/content/paginas', ext: '.md', minimo: 8 },

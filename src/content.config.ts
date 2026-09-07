@@ -122,6 +122,30 @@ const projetos = defineCollection({
   }),
 });
 
+/**
+ * Destaques da home — a vitrine curada pela coordenação.
+ *
+ * Um arquivo por destaque, como em `projetos`. Esta coleção NÃO é gerada por
+ * `scripts/converter-conteudo.py` (ele só regenera equipe, paginas, projetos e
+ * eventos), então o que se escreve aqui à mão fica. Para tirar um destaque do ar
+ * sem perder o texto, basta `ativo: false`.
+ *
+ * Receita para estagiários: docs/GUIA_DE_MANUTENCAO.md, seção 4.12.
+ */
+const destaques = defineCollection({
+  loader: glob({ base: 'src/content/destaques', pattern: '**/*.md' }),
+  schema: z.object({
+    titulo: z.string(),
+    resumo: z.string(), // 1–2 frases: é o que aparece no card
+    etiqueta: z.string().optional(), // "Livro", "Evento", "Documentário"…
+    imagem: z.string().optional(),
+    url: linkOuVazio, // link externo OU um arquivo local em public/
+    rotulo_url: z.string().optional(), // texto do botão; sem isto o card não tem botão
+    ordem: z.number().optional(),
+    ativo: z.boolean().default(true),
+  }),
+});
+
 const eventos = defineCollection({
   loader: glob({ base: 'src/content/eventos', pattern: '**/*.md' }),
   schema: z.object({
@@ -285,6 +309,8 @@ const configuracao = defineCollection({
       twitter: urlOuVazio,
       // O vídeo dos "melhores momentos" é conteúdo do acervo, e é lá que ele aparece.
       video_destaque: z.string(),
+      // Documentário "Arquitetos do Poder" (coordenação de Marcus Figueiredo).
+      video_documentario: z.string(),
       catalogo_acervo: z.string().url(),
       formulario_acervo: z.string(),
       // Vota Aí e o dashboard das eleições viraram projetos (src/content/projetos/).
@@ -295,6 +321,7 @@ const configuracao = defineCollection({
 export const collections = {
   paginas,
   equipe,
+  destaques,
   projetos,
   eventos,
   publicacoes,

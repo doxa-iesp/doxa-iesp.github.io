@@ -365,6 +365,9 @@ def site():
         "youtube": "https://www.youtube.com/channel/UCkcuDdIEuQ9YqOjHsp4-EHQ",
         # O vídeo dos "melhores momentos" é conteúdo do acervo — é lá que ele aparece.
         "video_destaque": h["featured_video"]["youtube_id"],
+        # Documentário "Arquitetos do Poder": estava só como uma linha em na-midia.yaml,
+        # invisível. Ganhou bloco próprio em /acervo/, que é o território dele.
+        "video_documentario": "hHdV_BeIW0M",
         # Vota Aí e o dashboard das eleições viraram PROJETOS (extracao/dados/projetos/).
         # O schema de `configuracao` é .strict(): reintroduzir votaai_* / dashboard_* aqui
         # sem atualizar src/content.config.ts derruba o build.

@@ -10,10 +10,17 @@ const { Content } = await render(pagina);
 
 const pesquisas = await getCollection('pesquisas');
 
-// Lista única e plana, ordenada por ano (mais recente primeiro; sem ano vai ao fim).
-// As abas apenas escondem/mostram itens por status — cada item traz sua própria etiqueta.
+// Ordem pedida pela coordenação: primeiro as pesquisas do laboratório (em andamento
+// e concluídas), depois as teses e dissertações — que são a maior parte da lista.
+// Dentro de cada bloco, ano decrescente e desempate alfabético.
+// As abas apenas escondem/mostram itens por status, item a item, então a ordem da
+// lista não interfere no filtro. Sem subtítulo de grupo de propósito: ele ficaria
+// órfão quando o visitante filtrasse por uma aba só.
+const ORDEM_STATUS: Record<string, number> = { andamento: 0, concluida: 1, tese: 2 };
+
 const ordenadas = [...pesquisas].sort(
   (a, b) =>
+    (ORDEM_STATUS[a.data.status] ?? 9) - (ORDEM_STATUS[b.data.status] ?? 9) ||
     (b.data.ano ?? 0) - (a.data.ano ?? 0) ||
     a.data.titulo.localeCompare(b.data.titulo, 'pt-BR'),
 );

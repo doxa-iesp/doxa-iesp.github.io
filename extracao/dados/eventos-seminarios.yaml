@@ -4,13 +4,22 @@
 # Extraído em 2026-07-09
 
 eventos:
+  # Não veio do WordPress: acrescentado em 2026-09-06, a pedido da coordenação.
+  # Fonte: https://iesp.uerj.br/evento/workshop-geografia-eleitoral-e-areas-de-leitura-comparaveis/
+  - title: "Workshop: Geografia Eleitoral e Áreas de Leitura Comparáveis"
+    date: "2026-05-29"
+    description: "Workshop sobre o desenvolvimento de unidades geográficas intramunicipais longitudinalmente comparáveis, com apresentações de Lucas Gelape (Fafich-UFMG), Glauco Peres (FFLCH-USP), Thiago M. Q. Moreira (Louisiana State University) e Fernando Guarnieri (IESP-UERJ), e debate de Argelina Cheibub Figueiredo (IESP-UERJ), George Avelino (EAESP-FGV) e Lara Mesquita (EESP-FGV). Moderação de Bruno Marques Schaefer e Fernando Meireles. Sala Olavo Brasil, IESP-UERJ, das 14h às 17h. Organização do Departamento de Estudos Políticos do IESP-UERJ, do DOXA e do Cepesp-FGV."
+    image: "https://iesp.uerj.br/wp-content/uploads/2026/05/GeoEleitoral-redes-1.png"
+    url: "https://iesp.uerj.br/evento/workshop-geografia-eleitoral-e-areas-de-leitura-comparaveis/"
+
   - title: "Edição digital gratuita do livro “A Decisão do Voto” de Marcus Figueiredo"
     date: "2022-12-16"
     description: "O Doxa está publicando uma edição digital gratuita do livro “A Decisão do Voto” de Marcus Figueiredo. Escaneie o QR CODE na imagem, ou clique no link abaixo e garanta seu livro gratuitamente. Clique aqui para baixar o livro"
     image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/FIGUEIREDO_A-DECISAO-DO-VOTO_CARTAZ-scaled.jpg"
     url: "https://www.lab-doxa.org.br/edicao-digital-gratuita-do-livro-a-decisao-do-voto-de-marcus-figueiredo/"
+    # O PDF agora é servido pelo próprio site (era um Google Doc de terceiro).
     attachments:
-      - "https://docs.google.com/document/d/15D7Ccv0A4fiUiOCtammle_8xdUJ977kkTwx5tWTCSI8/edit?usp=drivesdk"
+      - "/pdfs/livros/a-decisao-do-voto-marcus-figueiredo.pdf"
 
   - title: "Seminário comemora 25 anos do Doxa"
     date: "2022-11-11"
