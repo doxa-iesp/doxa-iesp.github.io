@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import ItemPublicacao from '../../components/ItemPublicacao.astro';
+import Titulo from '../../components/Titulo.astro';
 import { url } from '../../lib/url';
 
 const analises = await getCollection('analises');
@@ -32,7 +33,7 @@ const grupos = ciclos.map((ciclo) => ({
       {
         grupos.map((grupo) => (
           <section class="grupo">
-            <h2 class="titulo-secao">Eleições {grupo.ciclo}</h2>
+            <Titulo nivel="h2" titulo={`Eleições ${grupo.ciclo}`} class="titulo-secao" />
             <ul class="grade-cards grade-cards--larga">
               {grupo.itens.map((a) => (
                 <ItemPublicacao
@@ -58,5 +59,13 @@ const grupos = ciclos.map((ciclo) => ({
   }
   .grupo:first-of-type {
     margin-top: 0;
+  }
+  /* Duas colunas, não três. Os ciclos têm 10, 8, 4, 4, 1 e 1 análises: em três
+     colunas os pares deixavam card órfão e os solitários ocupavam um terço da linha,
+     com dois terços vazios. Em duas, os grupos pares fecham as linhas e o solitário
+     ocupa meia. Não é `.grade-cards--preenche`: com um item só, ele viraria um card
+     de 1108px. Só ajusta o gancho que a grade global expõe. */
+  .grupo .grade-cards {
+    --card-min: 400px;
   }
 </style>
