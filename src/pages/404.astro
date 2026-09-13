@@ -29,6 +29,9 @@ const caminhos = [
 
   <section class="secao">
     <div class="container">
+      <p id="redirecionando" class="redirecionando" role="status" hidden>
+        Este endereço é do site antigo do DOXA. Levando você para onde o conteúdo está agora…
+      </p>
       <div class="prosa">
         <p>
           Se você chegou por um link antigo do site anterior, o conteúdo provavelmente continua
@@ -48,7 +51,50 @@ const caminhos = [
   </section>
 </Base>
 
+<script>
+  // Endereços antigos do WordPress que seguem um padrão (/acervo-doxa/<item>/,
+  // /partidos/<sigla>/, /wp-content/uploads/…/<arquivo>.pdf…) não existem como página:
+  // chegam aqui, e este script manda para o lugar novo. Os de destino exato já são
+  // páginas-stub e nem passam pela 404. Tabela e regras: src/lib/rotas-antigas.mjs.
+  import { destinoAntigo, nomeDeArquivoAntigo } from '../lib/rotas-antigas.mjs';
+  import { url } from '../lib/url';
+
+  const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
+  const caminho = location.pathname.slice(BASE.length) || '/';
+
+  function irPara(destino: string) {
+    const aviso = document.getElementById('redirecionando');
+    if (aviso) aviso.hidden = false;
+    location.replace(destino);
+  }
+
+  const arquivo = nomeDeArquivoAntigo(caminho);
+  if (arquivo) {
+    // A tabela de arquivos só é baixada quando o endereço é de fato um arquivo antigo.
+    fetch(url('/arquivos-antigos.json'))
+      .then((r) => (r.ok ? r.json() : {}))
+      .then((tabela: Record<string, string>) => {
+        if (tabela[arquivo]) irPara(tabela[arquivo]);
+      })
+      .catch(() => {});
+  } else {
+    const destino = destinoAntigo(caminho);
+    if (destino) irPara(url(destino));
+  }
+</script>
+
 <style>
+  .redirecionando {
+    margin: 0 0 var(--esp-3);
+    padding: var(--esp-2) var(--esp-3);
+    background: color-mix(in srgb, var(--cor-primaria) 6%, white);
+    border-left: 4px solid var(--cor-primaria);
+    border-radius: var(--raio);
+    font-weight: 600;
+  }
+  .redirecionando[hidden] {
+    display: none;
+  }
   .caminhos {
     display: flex;
     flex-wrap: wrap;

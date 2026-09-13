@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { REDIRECIONAMENTOS } from './src/lib/rotas-antigas.mjs';
 
 /**
  * O site é publicado em https://lab-doxa.org.br/ — o domínio próprio do DOXA,
@@ -17,18 +18,12 @@ import sitemap from '@astrojs/sitemap';
 const BASE = '';
 
 /**
- * Rotas antigas que hoje só existem como página-stub de redirecionamento
- * (ver src/components/Redirecionamento.astro). Ficam fora do sitemap: são
- * `noindex` e o destino é que deve ser indexado.
+ * Endereços antigos que só existem como página-stub de redirecionamento — os deste
+ * site e os do WordPress (tabela em src/lib/rotas-antigas.mjs, páginas geradas por
+ * src/pages/[...antiga].astro). Ficam fora do sitemap: são `noindex` e o destino é
+ * que deve ser indexado.
  */
-const ROTAS_ANTIGAS = [
-  '/pesquisas/',
-  '/publicacoes/',
-  '/publicacoes/academicas/',
-  '/publicacoes/analises-de-conjuntura/',
-  '/publicacoes/textos-para-discussao/',
-  '/pesquisa-covid/',
-].map((r) => `${BASE}${r}`);
+const ROTAS_ANTIGAS = Object.keys(REDIRECIONAMENTOS).map((r) => `${BASE}${r}`);
 
 // Para trocar de domínio um dia, os três lugares que precisam bater:
 //   1. `site` abaixo

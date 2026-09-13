@@ -1,0 +1,23 @@
+---
+/**
+ * Páginas-stub dos endereços antigos com destino exato (ver src/lib/rotas-antigas.mjs).
+ *
+ * Uma rota só gera todas: `getStaticPaths` devolve exatamente os caminhos da tabela,
+ * então esta rota não "pega" nenhum outro endereço — o que não está na tabela continua
+ * indo para a 404, que trata os padrões. Rotas estáticas do site têm prioridade sobre
+ * esta de qualquer forma.
+ */
+import Redirecionamento from '../components/Redirecionamento.astro';
+import { REDIRECIONAMENTOS } from '../lib/rotas-antigas.mjs';
+
+export function getStaticPaths() {
+  return Object.entries(REDIRECIONAMENTOS).map(([de, para]) => ({
+    params: { antiga: de.replace(/^\/+|\/+$/g, '') },
+    props: { para },
+  }));
+}
+
+const { para } = Astro.props;
+---
+
+<Redirecionamento para={para} />
