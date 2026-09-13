@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # O Astro gera `sitemap-index.xml` (o nome `sitemap.xml` era do Hugo).
-Sitemap: https://doxa-iesp.github.io/sitemap-index.xml
+Sitemap: https://lab-doxa.org.br/sitemap-index.xml

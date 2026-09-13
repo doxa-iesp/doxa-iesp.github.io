@@ -3,8 +3,12 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 /**
- * O site é publicado em https://doxa-iesp.github.io/ — um site de ORGANIZAÇÃO do
- * GitHub Pages, servido na RAIZ do domínio. Por isso `base` é vazio.
+ * O site é publicado em https://lab-doxa.org.br/ — o domínio próprio do DOXA,
+ * servido pelo GitHub Pages na RAIZ. Por isso `base` é vazio.
+ *
+ * O domínio é o APEX, sem `www`: é o que está configurado em Settings > Pages, e o
+ * `www` só redireciona para ele. `site` precisa bater com isso, porque é dele que
+ * saem o canonical, o og:url e os endereços do sitemap.
  *
  * (Na hospedagem anterior, em felipelamarca.com/DOXA/, o `base` era '/DOXA'. Se
  * um dia o site voltar a viver num subdiretório, é aqui que se muda — e o helper
@@ -26,12 +30,12 @@ const ROTAS_ANTIGAS = [
   '/pesquisa-covid/',
 ].map((r) => `${BASE}${r}`);
 
-// Para migrar ao domínio próprio (www.lab-doxa.org.br):
-//   1. trocar `site` por 'https://www.lab-doxa.org.br'
-//   2. criar public/CNAME com o domínio (o CNAME da raiz do repo NÃO é publicado)
-//   3. apontar o DNS e habilitar HTTPS em Settings > Pages
+// Para trocar de domínio um dia, os três lugares que precisam bater:
+//   1. `site` abaixo
+//   2. public/CNAME (o CNAME da raiz do repo NÃO é publicado — só public/ entra no build)
+//   3. o DNS e o domínio em Settings > Pages (com "Enforce HTTPS")
 export default defineConfig({
-  site: 'https://doxa-iesp.github.io',
+  site: 'https://lab-doxa.org.br',
   base: BASE,
   trailingSlash: 'always',
   integrations: [

@@ -270,8 +270,16 @@ def eventos():
             ext = os.path.splitext(e["image"])[1].split("?")[0] or ".jpg"
             destino_img = img_dir / f"{s}{ext}"
             if not destino_img.exists():
-                subprocess.run(["curl", "-sSL", "--max-time", "60", "-o", str(destino_img), e["image"]],
+                # O WordPress antigo saiu do ar e o domínio dele agora é este site: este
+                # download não tem mais de onde vir. `-f` é o que impede o curl de gravar a
+                # página 404 do site novo (>1000 bytes) com extensão .jpg, que passaria no
+                # teste de tamanho abaixo e iria ao ar como imagem quebrada.
+                subprocess.run(["curl", "-fsSL", "--max-time", "60", "-o", str(destino_img), e["image"]],
                                check=False)
+                if not (destino_img.exists() and destino_img.stat().st_size > 1000):
+                    destino_img.unlink(missing_ok=True)
+                    print(f"  ⚠ imagem do evento '{e['title']}' não baixou; ponha o arquivo à mão em "
+                          f"public/img/eventos/{destino_img.name}")
             if destino_img.exists() and destino_img.stat().st_size > 1000:
                 imagem = f"/img/eventos/{destino_img.name}"
 
