@@ -5,7 +5,9 @@ import PageHero from '../components/PageHero.astro';
 import FiltrosAcervo from '../components/FiltrosAcervo.astro';
 import CardAcervo from '../components/CardAcervo.astro';
 import VideoYoutube from '../components/VideoYoutube.astro';
+import Titulo from '../components/Titulo.astro';
 import { url } from '../lib/url';
+import { idItemAcervo } from '../lib/ancoras.mjs';
 
 const pagina = (await getEntry('paginas', 'acervo'))!;
 const { Content } = await render(pagina);
@@ -33,7 +35,7 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
       <div class="prosa prosa--medida"><Content /></div>
 
       <div class="acesso" role="note">
-        <h2 class="acesso__titulo">Como consultar o acervo</h2>
+        <Titulo nivel="h2" titulo="Como consultar o acervo" class="acesso__titulo" />
         <ul class="acesso__lista">
           <li>
             <span class="acesso__rotulo">Catálogo completo</span>
@@ -56,58 +58,23 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
           Para assistir aos vídeos é preciso enviar o formulário preenchido por e-mail. Os links
           abaixo levam aos arquivos hospedados no Google Drive do laboratório.
         </p>
+        {/* Os vídeos foram para o fim da página, depois da busca. Este atalho é o que
+            mantém o documentário — pedido da coordenação — à vista de quem chega. */}
+        <p class="acesso__videos">
+          <a href="#videos-do-acervo">
+            Assista aos vídeos do acervo: os melhores momentos do horário eleitoral e o
+            documentário{' '}<cite>Arquitetos do Poder</cite> <span aria-hidden="true">↓</span>
+          </a>
+        </p>
       </div>
     </div>
   </section>
 
-  {/* O vídeo dos melhores momentos é conteúdo DO ACERVO — antes ficava na home. */}
-  <section class="secao secao--alt">
-    <div class="container video">
-      <div>
-        <h2>Melhores momentos do horário eleitoral</h2>
-        <p>
-          Compilação do horário gratuito de propaganda eleitoral do segundo turno das eleições
-          presidenciais, montada a partir do acervo audiovisual do laboratório.
-        </p>
-      </div>
-      <div class="video__moldura">
-        <VideoYoutube
-          id={geral.video_destaque}
-          titulo="Melhores momentos do horário eleitoral"
-          miniatura={`/img/video/${geral.video_destaque}.jpg`}
-        />
-      </div>
-    </div>
-  </section>
-
-  {/* O documentário do laboratório vivia escondido como a última linha de
-      /na-midia/, sem imagem nem player. É conteúdo do acervo — o lugar dele é aqui. */}
-  <section class="secao">
-    <div class="container video">
-      <div>
-        <h2>Documentário: Arquitetos do Poder</h2>
-        <p>
-          Panorama da relação entre mídia e política no Brasil, das campanhas de Getúlio Vargas e
-          JK à eleição de 1989, montado a partir de depoimentos e imagens de arquivo.
-        </p>
-        <p class="video__ficha">
-          Coordenação geral de Marcus Figueiredo · Direção e roteiro de Vicente Ferraz e Alessandra
-          Aldé · Produção Urca Filmes · 2010, 100 minutos
-        </p>
-      </div>
-      <div class="video__moldura">
-        <VideoYoutube
-          id={geral.video_documentario}
-          titulo="Documentário Arquitetos do Poder"
-          miniatura={`/img/video/${geral.video_documentario}.jpg`}
-        />
-      </div>
-    </div>
-  </section>
-
-  <section class="secao secao--alt">
+  {/* A busca vem antes dos vídeos: com eles no meio, os filtros ficavam a 3,3 telas de
+      rolagem no celular. */}
+  <section class="secao secao--alt" id="buscar-no-acervo">
     <div class="container">
-      <h2>Buscar no acervo</h2>
+      <Titulo nivel="h2" titulo="Buscar no acervo" />
 
       <FiltrosAcervo anos={anos} cargos={cargos} regioes={regioes} partidos={partidos} />
 
@@ -120,10 +87,12 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
 
       <p id="contador-acervo" class="contador" aria-live="polite">{total} de {total} itens</p>
 
+      {/* O id de cada item é o que os endereços antigos /acervo-doxa/<slug>/ usam para
+          cair direto no card certo (ver src/lib/ancoras.mjs). */}
       <ul class="grade-acervo">
         {
           itens.map((item) => (
-            <li>
+            <li id={idItemAcervo(item.data.codigo)}>
               <CardAcervo item={item.data} />
             </li>
           ))
@@ -134,6 +103,51 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
         Nenhum item corresponde aos filtros selecionados. Tente ampliar a busca ou
         <button type="button" id="sem-resultados-limpar" class="link-inline">limpar os filtros</button>.
       </p>
+    </div>
+  </section>
+
+  {/* Os dois vídeos numa faixa só, lado a lado. Antes eram duas seções inteiras, cada
+      uma com texto de um lado e player do outro, empilhadas antes da busca. O de
+      melhores momentos veio da home; o documentário vivia escondido como a última
+      linha de /na-midia/. */}
+  <section class="secao" id="videos-do-acervo">
+    <div class="container">
+      <Titulo nivel="h2" titulo="Vídeos do acervo" class="titulo-secao" />
+      <div class="videos">
+        <article class="video">
+          <div class="video__moldura">
+            <VideoYoutube
+              id={geral.video_destaque}
+              titulo="Melhores momentos do horário eleitoral"
+              miniatura={`/img/video/${geral.video_destaque}.jpg`}
+            />
+          </div>
+          <h3 class="video__titulo">Melhores momentos do horário eleitoral</h3>
+          <p class="video__texto">
+            Compilação do horário gratuito de propaganda eleitoral do segundo turno das eleições
+            presidenciais, montada a partir do acervo audiovisual do laboratório.
+          </p>
+        </article>
+
+        <article class="video">
+          <div class="video__moldura">
+            <VideoYoutube
+              id={geral.video_documentario}
+              titulo="Documentário Arquitetos do Poder"
+              miniatura={`/img/video/${geral.video_documentario}.jpg`}
+            />
+          </div>
+          <h3 class="video__titulo">Documentário: Arquitetos do Poder</h3>
+          <p class="video__texto">
+            Panorama da relação entre mídia e política no Brasil, das campanhas de Getúlio Vargas e
+            JK à eleição de 1989, montado a partir de depoimentos e imagens de arquivo.
+          </p>
+          <p class="video__ficha">
+            Coordenação geral de Marcus Figueiredo · Direção e roteiro de Vicente Ferraz e Alessandra
+            Aldé · Produção Urca Filmes · 2010, 100 minutos
+          </p>
+        </article>
+      </div>
     </div>
   </section>
 </Base>
@@ -176,6 +190,16 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
     font-size: 0.88rem;
     color: var(--cor-texto-suave);
   }
+  .acesso__videos {
+    margin: var(--esp-2) 0 0;
+    padding-top: var(--esp-2);
+    border-top: 1px solid var(--cor-borda);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .acesso__videos cite {
+    font-style: italic;
+  }
 
   .noscript-aviso {
     margin-top: var(--esp-2);
@@ -200,6 +224,12 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
     grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
     gap: var(--esp-3);
   }
+  /* Chegou por um endereço antigo (/acervo-doxa/<item>/ → #item-…): o card certo
+     fica marcado, senão ele se perde entre os 95. */
+  .grade-acervo > li:target :global(.card-acervo) {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 3px;
+  }
 
   .sem-resultados {
     margin-top: var(--esp-3);
@@ -221,12 +251,17 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
   .link-inline:hover {
     color: var(--cor-destaque-texto);
   }
-  /* Vídeo dos melhores momentos — migrado da home. */
-  .video {
+
+  .videos {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--esp-4);
-    align-items: center;
+  }
+  @media (min-width: 800px) {
+    .videos {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--esp-4) var(--esp-3);
+    }
   }
   .video__moldura {
     position: relative;
@@ -235,23 +270,25 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
     overflow: hidden;
     box-shadow: var(--sombra);
   }
-  /* Ficha técnica do documentário: menor e mais leve que o texto de apoio. */
-  .video__ficha {
-    margin-top: var(--esp-2);
-    font-size: 0.85rem;
+  .video__titulo {
+    margin: var(--esp-2) 0 var(--esp-1);
+  }
+  .video__texto {
+    margin: 0;
     color: var(--cor-texto-suave);
   }
-  @media (max-width: 800px) {
-    .video {
-      grid-template-columns: 1fr;
-    }
+  /* Ficha técnica do documentário: menor e mais leve que o texto de apoio. */
+  .video__ficha {
+    margin: var(--esp-1) 0 0;
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
   }
 </style>
 
 <script>
   // Filtro multi-faceta 100% client-side. Todos os cards já estão no HTML (SSG); aqui apenas
   // escondemos os que não casam. Assim, sem JS, tudo aparece e nada se perde.
-  import { normalizar } from '../lib/texto';
+  import { normalizar, casaBusca } from '../lib/texto';
 
   const busca = document.getElementById('filtro-busca') as HTMLInputElement | null;
   const ano = document.getElementById('filtro-ano') as HTMLSelectElement | null;
@@ -265,9 +302,46 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
   const cards = Array.from(document.querySelectorAll<HTMLElement>('.card-acervo'));
   const total = cards.length;
 
+  /** Destaca, no card, os candidatos que casaram com a busca. */
+  function destacarCandidatos(card: HTMLElement, consulta: string) {
+    const nomes = Array.from(card.querySelectorAll<HTMLElement>('.card-acervo__candidato'));
+    const termos = normalizar(consulta).split(/\s+/).filter(Boolean);
+    // Primeiro, quem casa com a busca inteira ("paulo maluf" destaca só Paulo Maluf).
+    let algum = false;
+    for (const n of nomes) {
+      const casa = termos.length > 0 && casaBusca(n.dataset.nome ?? '', consulta);
+      n.classList.toggle('is-match', casa);
+      algum ||= casa;
+    }
+    // Se ninguém casa sozinho ("lula brizola" junta dois candidatos), destaca cada termo.
+    if (termos.length > 0 && !algum) {
+      for (const n of nomes) {
+        n.classList.toggle('is-match', termos.some((t) => casaBusca(n.dataset.nome ?? '', t)));
+      }
+    }
+  }
+
+  /** Com filtro de partido, abre a lista de partidos do card e marca a sigla. */
+  function destacarPartido(card: HTMLElement, fPartido: string, visivel: boolean) {
+    const bloco = card.querySelector<HTMLDetailsElement>('.card-acervo__partidos');
+    if (!bloco) return;
+    bloco.querySelectorAll<HTMLElement>('li').forEach((li) => {
+      li.classList.toggle('is-match', fPartido !== '' && li.dataset.partido === fPartido);
+    });
+    if (fPartido && visivel) {
+      if (!bloco.open) {
+        bloco.open = true;
+        bloco.dataset.abertoPeloFiltro = 'sim';
+      }
+    } else if (bloco.dataset.abertoPeloFiltro) {
+      // só fecha o que o filtro abriu; o que a pessoa abriu à mão fica aberto
+      bloco.open = false;
+      delete bloco.dataset.abertoPeloFiltro;
+    }
+  }
+
   if (busca && ano && cargo && regiao && partido && contador && semResultados) {
     const aplicar = () => {
-      const q = normalizar(busca.value);
       const fAno = ano.value;
       const fCargo = cargo.value;
       const fRegiao = regiao.value;
@@ -281,13 +355,15 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
         const okCargo = !fCargo || cargos.includes(fCargo);
         const okRegiao = !fRegiao || card.dataset.regiao === fRegiao;
         const okPartido = !fPartido || partidos.includes(fPartido);
-        const okBusca = !q || (card.dataset.candidatos ?? '').includes(q);
+        const okBusca = casaBusca(card.dataset.candidatos ?? '', busca.value);
         const mostrar = okAno && okCargo && okRegiao && okPartido && okBusca;
         // Esconder o <li>, não só o card: escondendo o card a célula da grade
         // continuava ocupando espaço, e com 0 resultados sobravam 744px (desktop)
         // ou 2.256px (celular) de branco antes da mensagem "nenhum item".
         (card.parentElement ?? card).hidden = !mostrar;
         if (mostrar) visiveis++;
+        destacarCandidatos(card, busca.value);
+        destacarPartido(card, fPartido, mostrar);
       }
 
       contador.textContent = `${visiveis} de ${total} itens`;
@@ -310,6 +386,38 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
     limpar?.addEventListener('click', reiniciar);
     limparVazio?.addEventListener('click', reiniciar);
 
+    // Filtros vindos da URL (?candidato=collor&ano=1989…). É assim que os endereços
+    // antigos do WordPress — /candidatos-presidente/…, /partidos/…, /ano/… — chegam
+    // já filtrados. Valores de select casam pela forma normalizada.
+    const params = new URLSearchParams(location.search);
+    let veioFiltrado = false;
+    const candidato = params.get('candidato');
+    if (candidato) {
+      busca.value = candidato;
+      veioFiltrado = true;
+    }
+    for (const [nome, campo] of [
+      ['ano', ano],
+      ['cargo', cargo],
+      ['regiao', regiao],
+      ['partido', partido],
+    ] as const) {
+      const valor = params.get(nome);
+      if (!valor) continue;
+      const alvo = normalizar(valor);
+      const opcao = Array.from(campo.options).find(
+        (o) => o.value !== '' && (o.value === alvo || normalizar(o.textContent ?? '') === alvo),
+      );
+      if (opcao) {
+        campo.value = opcao.value;
+        veioFiltrado = true;
+      }
+    }
+
     aplicar();
+
+    if (veioFiltrado && !location.hash) {
+      document.getElementById('buscar-no-acervo')?.scrollIntoView();
+    }
   }
 </script>

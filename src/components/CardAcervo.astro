@@ -7,10 +7,6 @@ interface Props {
 }
 const { item } = Astro.props;
 
-const LIMITE_CANDIDATOS = 4;
-const candidatosVisiveis = item.candidatos.slice(0, LIMITE_CANDIDATOS);
-const restantes = item.candidatos.length - candidatosVisiveis.length;
-
 // Tokens para o filtro client-side (ver <script> em acervo.astro).
 const dataCargo = item.cargo.map(normalizar).join('|');
 const dataPartidos = item.partidos.map(normalizar).join('|');
@@ -62,23 +58,41 @@ const dataRegiao = item.regiao ? normalizar(item.regiao) : '';
     }
   </dl>
 
+  {/* TODOS os candidatos, sem "e mais N": a busca da página é por candidato, e com
+      a lista truncada em 4 buscar "collor" devolvia 31 cards em que o nome só
+      aparecia em 7. Cada nome guarda a forma normalizada, para o script destacar
+      quem casou com a busca. */}
   {
     item.candidatos.length > 0 && (
       <p class="card-acervo__candidatos">
         <span class="card-acervo__rotulo">Candidatos:</span>{' '}
-        {candidatosVisiveis.join(', ')}
-        {restantes > 0 && <span class="card-acervo__mais"> e mais {restantes}</span>}
+        {item.candidatos.map((c, i) => (
+          <>
+            <span class="card-acervo__candidato" data-nome={normalizar(c)}>
+              {c}
+            </span>
+            {i < item.candidatos.length - 1 && ', '}
+          </>
+        ))}
       </p>
     )
   }
 
+  {/* Partidos recolhidos: eram até 29 siglas à mostra (média de 13), que dominavam o
+      card sem ser o que se procura. Com o filtro de partido ativo, o script abre este
+      bloco nos cards que casam e destaca a sigla. */}
   {
     item.partidos.length > 0 && (
-      <ul class="card-acervo__partidos" aria-label="Partidos">
-        {item.partidos.map((p) => (
-          <li>{p}</li>
-        ))}
-      </ul>
+      <details class="card-acervo__partidos">
+        <summary>
+          {item.partidos.length} {item.partidos.length === 1 ? 'partido' : 'partidos'}
+        </summary>
+        <ul aria-label="Partidos">
+          {item.partidos.map((p) => (
+            <li data-partido={normalizar(p)}>{p}</li>
+          ))}
+        </ul>
+      </details>
     )
   }
 
@@ -165,18 +179,37 @@ const dataRegiao = item.regiao ? normalizar(item.regiao) : '';
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
-  .card-acervo__mais {
-    color: var(--cor-texto-suave);
-    font-style: italic;
+  /* Candidato que casou com a busca. Fundo a 18% do terracota: o texto continua em
+     --cor-texto, então o contraste segue o do corpo do card. */
+  .card-acervo__candidato.is-match {
+    font-weight: 700;
+    background: color-mix(in srgb, var(--cor-destaque) 18%, white);
+    border-radius: 3px;
+    padding-inline: 0.15rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
 
-  .card-acervo__partidos {
+  .card-acervo__partidos summary {
+    cursor: pointer;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+    /* alvo de toque: a linha do resumo tinha só a altura do texto */
+    padding-block: 0.4rem;
+  }
+  .card-acervo__partidos summary:hover {
+    color: var(--cor-primaria);
+  }
+  .card-acervo__partidos ul {
     display: flex;
     flex-wrap: wrap;
     gap: 0.3rem;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0.2rem 0 0;
   }
   .card-acervo__partidos li {
     font-size: 0.7rem;
@@ -185,6 +218,11 @@ const dataRegiao = item.regiao ? normalizar(item.regiao) : '';
     background: var(--cor-fundo-alt);
     border-radius: var(--raio);
     padding: 0.1rem 0.4rem;
+  }
+  /* sigla do partido filtrado: navy cheio com texto branco (8,07:1) */
+  .card-acervo__partidos li.is-match {
+    color: var(--cor-branco);
+    background: var(--cor-primaria);
   }
 
   .card-acervo__link {
