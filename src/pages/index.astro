@@ -2,6 +2,7 @@
 import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import CardDestaque from '../components/CardDestaque.astro';
+import Titulo from '../components/Titulo.astro';
 import { url } from '../lib/url';
 
 const home = (await getEntry('paginas', 'home'))!;
@@ -78,7 +79,7 @@ const numeros = [
     emDestaque.length > 0 && (
       <section class="secao secao--destaques">
         <div class="container">
-          <h2 class="titulo-secao">Em destaque</h2>
+          <Titulo nivel="h2" titulo="Em destaque" class="titulo-secao" />
           <ul class="destaques">
             {emDestaque.map((d) => (
               <CardDestaque
@@ -98,7 +99,7 @@ const numeros = [
 
   <section class="secao secao--alt">
     <div class="container">
-      <h2>O que fazemos</h2>
+      <Titulo nivel="h2" titulo="O que fazemos" />
       <ul class="grade-cards">
         {
           atalhos.map((d) => (
@@ -133,7 +134,7 @@ const numeros = [
 
   <section class="secao">
     <div class="container">
-      <h2 class="parceiros__titulo">Apoio e parcerias</h2>
+      <Titulo nivel="h2" titulo="Apoio e parcerias" class="parceiros__titulo" />
       <ul class="parceiros">
         {
           parceiros.map((p) => (

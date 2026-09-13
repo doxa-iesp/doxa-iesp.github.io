@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import CardProjeto from '../../components/CardProjeto.astro';
+import Titulo from '../../components/Titulo.astro';
 
 const todos = (await getCollection('projetos')).sort(
   (a, b) => (a.data.ordem ?? 99) - (b.data.ordem ?? 99),
@@ -43,7 +44,7 @@ const grupos = [
     grupos.map((grupo, i) => (
       <section class:list={['secao', i % 2 === 1 && 'secao--alt']}>
         <div class="container">
-          <h2 class="titulo-secao">{grupo.titulo}</h2>
+          <Titulo nivel="h2" titulo={grupo.titulo} class="titulo-secao" />
           {grupo.descricao && <p class="grupo__descricao">{grupo.descricao}</p>}
 
           <ul

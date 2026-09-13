@@ -2,6 +2,7 @@
 import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
+import Titulo from '../components/Titulo.astro';
 
 const pagina = (await getEntry('paginas', 'seminarios'))!;
 const { Content } = await render(pagina);
@@ -43,7 +44,7 @@ function formatarData(iso?: string): string | null {
       {
         grupos.map((grupo) => (
           <section class="ano">
-            <h2 class="ano__titulo">{grupo.ano}</h2>
+            <Titulo nivel="h2" titulo={String(grupo.ano)} class="ano__titulo" />
             <ul class="seminarios">
               {grupo.itens.map((s) => {
                 const dataFmt = formatarData(s.data.data);

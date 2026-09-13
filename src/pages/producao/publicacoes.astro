@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import ItemPublicacao from '../../components/ItemPublicacao.astro';
+import Titulo from '../../components/Titulo.astro';
 import { url } from '../../lib/url';
 
 const publicacoes = await getCollection('publicacoes');
@@ -38,7 +39,7 @@ const grupos = GRUPOS.map((g) => ({
       {
         grupos.map((grupo) => (
           <section class="grupo">
-            <h2 class="titulo-secao">{grupo.titulo}</h2>
+            <Titulo nivel="h2" titulo={grupo.titulo} class="titulo-secao" />
             <ul class="grade-cards grade-cards--larga">
               {grupo.itens.map((p) => {
                 const fonte = p.data.editora ?? p.data.revista;
