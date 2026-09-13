@@ -9,6 +9,14 @@
  *
  * A cor da parte forte vem de `--titulo-cor-forte`, para que uma faixa em
  * gradiente possa sobrescrevê-la (o terracota escuro some sobre o verde).
+ *
+ * ESTILO DA PÁGINA QUE CHAMA: passe a classe em `class` (não em `classe`). O Astro
+ * escopa o CSS de cada componente com um atributo `data-astro-cid-*`, e o da página
+ * chamadora só chega a esta tag pelo `...rest` abaixo. Até 2026-09-13 a prop se
+ * chamava só `classe` e não havia `...rest`: a regra `.hero__titulo { margin: 0 }`
+ * do PageHero compilava para `.hero__titulo[data-astro-cid-<PageHero>]`, e o `h1`
+ * só tinha o cid do Titulo — a regra nunca valeu. Classes GLOBAIS (`.titulo-secao`)
+ * funcionavam, e por isso ninguém percebeu.
  */
 import { partirUltimaPalavra } from '../lib/texto';
 
@@ -16,10 +24,13 @@ interface Props {
   titulo: string;
   forte?: string;
   nivel?: 'h1' | 'h2' | 'h3';
+  class?: string;
+  /** Sinônimo antigo de `class`, mantido para não quebrar quem já usa. */
   classe?: string;
+  [atributo: string]: unknown;
 }
 
-const { titulo, forte, nivel = 'h2', classe } = Astro.props;
+const { titulo, forte, nivel = 'h2', class: classeExtra, classe, ...rest } = Astro.props;
 
 const [inicio, fim] = forte
   ? [titulo.replace(new RegExp(`\\s*${forte}\\s*$`), '').trim(), forte]
@@ -28,7 +39,7 @@ const [inicio, fim] = forte
 const Tag = nivel;
 ---
 
-<Tag class:list={['titulo', classe]}>
+<Tag class:list={['titulo', classeExtra, classe]} {...rest}>
   {inicio && <span class="titulo__leve">{inicio} </span>}<span class="titulo__forte">{fim}</span>
 </Tag>
 

@@ -251,13 +251,7 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
 <script>
   // Filtro multi-faceta 100% client-side. Todos os cards já estão no HTML (SSG); aqui apenas
   // escondemos os que não casam. Assim, sem JS, tudo aparece e nada se perde.
-  function normalizar(texto: string): string {
-    return texto
-      .normalize('NFD')
-      .replace(/[̀-ͯ]/g, '')
-      .toLowerCase()
-      .trim();
-  }
+  import { normalizar } from '../lib/texto';
 
   const busca = document.getElementById('filtro-busca') as HTMLInputElement | null;
   const ano = document.getElementById('filtro-ano') as HTMLSelectElement | null;

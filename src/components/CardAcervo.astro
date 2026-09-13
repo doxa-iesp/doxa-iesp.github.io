@@ -1,19 +1,11 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { normalizar } from '../lib/texto';
 
 interface Props {
   item: CollectionEntry<'acervo'>['data'];
 }
 const { item } = Astro.props;
-
-/** Remove acentos e caixa para gerar tokens de filtro comparáveis no cliente. */
-function normalizar(texto: string): string {
-  return texto
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .toLowerCase()
-    .trim();
-}
 
 const LIMITE_CANDIDATOS = 4;
 const candidatosVisiveis = item.candidatos.slice(0, LIMITE_CANDIDATOS);
