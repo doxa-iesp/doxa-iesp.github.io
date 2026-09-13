@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import AbasFiltro from '../../components/AbasFiltro.astro';
 import { linkPara } from '../../lib/url';
+import { normalizar } from '../../lib/texto';
 
 const pagina = (await getEntry('paginas', 'pesquisas'))!;
 const { Content } = await render(pagina);
@@ -46,7 +47,12 @@ const abas = [
     <div class="container">
       <div class="prosa prosa--intro"><Content /></div>
 
-      <AbasFiltro alvo="lista-pesquisas" abas={abas} rotuloGrupo="Filtrar pesquisas por tipo" />
+      <AbasFiltro
+        alvo="lista-pesquisas"
+        abas={abas}
+        rotuloGrupo="Filtrar pesquisas por tipo"
+        busca={{ rotulo: 'Buscar pesquisas', dica: 'Título, autor, orientador ou ano' }}
+      />
 
       <ul id="lista-pesquisas" class="pesquisas" aria-label="Pesquisas do DOXA">
         {
@@ -56,8 +62,13 @@ const abas = [
               p.data.orientador ? `Orientação: ${p.data.orientador}` : undefined,
               p.data.instituicao,
             ].filter(Boolean);
+            const busca = normalizar(
+              [p.data.titulo, p.data.autor, p.data.orientador, p.data.ano, p.data.instituicao]
+                .filter(Boolean)
+                .join(' '),
+            );
             return (
-              <li class="pesquisa" data-filtro-valor={p.data.status}>
+              <li class="pesquisa" data-filtro-valor={p.data.status} data-busca={busca}>
                 <span class="pesquisa__tag" data-status={p.data.status}>
                   {ROTULO_STATUS[p.data.status]}
                 </span>

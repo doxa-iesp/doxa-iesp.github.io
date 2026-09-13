@@ -1,4 +1,6 @@
 ---
+import { normalizar } from '../lib/texto';
+
 interface Props {
   anos: number[];
   cargos: string[];
@@ -6,15 +8,8 @@ interface Props {
   partidos: string[];
 }
 const { anos, cargos, regioes, partidos } = Astro.props;
-
-/** Mesmo normalizador do card e do <script> da página: gera valores de opção comparáveis. */
-function normalizar(texto: string): string {
-  return texto
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .toLowerCase()
-    .trim();
-}
+// Os valores das opções passam pelo mesmo normalizar() do card e do <script> da
+// página: é o que torna "Estados e Distrito Federal" comparável ao data-regiao.
 ---
 
 <form class="filtros" aria-label="Filtros do acervo" autocomplete="off">
