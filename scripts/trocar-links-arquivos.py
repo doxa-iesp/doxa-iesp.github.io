@@ -43,7 +43,11 @@ def main():
 
     usados = set()
     for caminho in alvos:
-        with open(caminho, encoding="utf-8") as f:
+        # `newline=""` na leitura E na escrita preserva as quebras de linha do arquivo como
+        # estão. Sem isso o Python lê CRLF como LF e grava LF: na troca dos mapas, em
+        # 2026-09-13, os dois CSVs (que são CRLF) mudavam em TODAS as linhas, cabeçalho
+        # incluído, e o diff escondia as 273 trocas de verdade.
+        with open(caminho, encoding="utf-8", newline="") as f:
             texto = f.read()
         antes = texto
         for origem, novo in mapa.items():
@@ -51,7 +55,7 @@ def main():
                 texto = texto.replace(origem, novo)
                 usados.add(origem)
         if texto != antes:
-            with open(caminho, "w", encoding="utf-8") as f:
+            with open(caminho, "w", encoding="utf-8", newline="") as f:
                 f.write(texto)
             print(f"{caminho}  atualizado")
         else:
