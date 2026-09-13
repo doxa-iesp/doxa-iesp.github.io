@@ -4,6 +4,10 @@
 # Extraído em 2026-07-09
 
 eventos:
+  # Sobre os `url` que apontavam para posts do WordPress: foram retirados em 2026-09-13.
+  # O WordPress saiu do ar e o domínio lab-doxa.org.br passou a servir o site novo, então
+  # esses "Saiba mais" davam 404. O texto de cada post já está na `description`.
+
   # Não veio do WordPress: acrescentado em 2026-09-06, a pedido da coordenação.
   # Fonte: https://iesp.uerj.br/evento/workshop-geografia-eleitoral-e-areas-de-leitura-comparaveis/
   - title: "Workshop: Geografia Eleitoral e Áreas de Leitura Comparáveis"
@@ -16,7 +20,6 @@ eventos:
     date: "2022-12-16"
     description: "O Doxa está publicando uma edição digital gratuita do livro “A Decisão do Voto” de Marcus Figueiredo. Escaneie o QR CODE na imagem, ou clique no link abaixo e garanta seu livro gratuitamente. Clique aqui para baixar o livro"
     image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/FIGUEIREDO_A-DECISAO-DO-VOTO_CARTAZ-scaled.jpg"
-    url: "https://www.lab-doxa.org.br/edicao-digital-gratuita-do-livro-a-decisao-do-voto-de-marcus-figueiredo/"
     # O PDF agora é servido pelo próprio site (era um Google Doc de terceiro).
     attachments:
       - "/pdfs/livros/a-decisao-do-voto-marcus-figueiredo.pdf"
@@ -25,21 +28,28 @@ eventos:
     date: "2022-11-11"
     description: "No dia 25 de novembro de 2021, o Doxa celebrou seus 25 anos com um seminário online sobre sua origem e legado, além de traçar um panorama sobre temas centrais para a democracia brasileira nos tempos atuais. Palestrantes: Fernando Limongi (USP/FGV), Patrícia Campos Mello (Folha de S. Paulo), Luciana Veiga (Unirio/ABCP) e Felipe Borba (Unirio)."
     image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/08/Seminario-25-anos-DOXA.jpg"
-    url: "https://www.lab-doxa.org.br/seminario-comemora-25-anos-do-doxa/"
 
   - title: "DOXA 20 anos, o legado de Marcus Figueiredo"
     date: "2017-11-11"
     description: "13 de novembro 14h – Abertura Palestrantes:Fernando Azevedo – UFSCarAfonso Albuquerque – UFF Lançamento do livro: Eleições, Opinião Pública e Comunicação Política no Brasil Contemporâneo Organizadores: Felipe Borba e Alessandra Aldé 17h – Coquetel Instituto de Estudos Sociais e Políticos da UERJ – IESP/UERJRua da Matriz, 82 – Botafogo"
     image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/11/Doxa_20_parae-mail_azul.jpg"
-    url: "https://www.lab-doxa.org.br/doxa-20-anos-o-legado-de-marcus-figueiredo/"
 
   - title: "Seminário Marcus Figueiredo: Eleições, Opinião Pública e Comunicação Política no Brasil Contemporâneo"
     date: "2014-11-26"
     description: ""
     image: "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/CARTAZ_Seminario-Marcus-Figueiredo.jpg"
-    url: "https://www.lab-doxa.org.br/seminario-marcus-figueiredo-eleicoes-opiniao-publica-e-comunicacao-politica-no-brasil-contemporaneo/"
+    # O PDF do cartaz não tinha cópia local; foi recuperado do Wayback Machine em 2026-09-13
+    # (captura 20250113231641 de .../wp-content/uploads/2022/12/CARTAZ_Seminario-Marcus-Figueiredo.jpg.pdf).
     attachments:
-      - "https://www.lab-doxa.org.br/wp-content/uploads/2022/12/CARTAZ_Seminario-Marcus-Figueiredo.jpg.pdf"
+      - "/pdfs/eventos/cartaz-seminario-marcus-figueiredo.pdf"
+
+  # Post do WordPress que a extração não pegou: estava fora da categoria 'Evento', que era a
+  # única lida pelo parser. Acrescentado em 2026-09-13 a partir de
+  # extracao/bruto/wp-rest/posts.json (post de 2022-09-01). Sem imagem: a destacada
+  # (Arge2.jpg) não foi baixada na extração e não tem captura no Wayback Machine.
+  - title: "Coordenadora do Doxa recebe prêmio de Excelência Acadêmica da Anpocs"
+    date: "2022-09-01"
+    description: "A professora Argelina Figueiredo, atual coordenadora do Doxa, recebeu o Prêmio Gildo Marçal Brandão, edição 2021, pelas suas contribuições à ciência política."
 
   # A nota editorial sobre o falecimento de Marcus Figueiredo (2014-08-08) foi removida
   # em 2026-09-06 a pedido da coordenação do DOXA, que decidiu não manter no site novo

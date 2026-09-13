@@ -8,7 +8,6 @@
     hospedados no TSE (divulgacandcontas.tse.jus.br).
   registros: 577
   download: /dados/programas-eleitorais-rj.csv
-  url: https://www.lab-doxa.org.br/programas-eleitorais-dos-candidatos-a-prefeito-do-estado-do-rio-de-janeiro/
   arquivo: programas-eleitorais-rj.csv
 - nome: Programas eleitorais dos Candidatos a prefeito das Capitais – 2020
   descricao: Tabela com até 5 propostas de cada candidato a prefeito das capitais do país.
@@ -16,7 +15,6 @@
     5 propostas transcritas por candidato.
   registros: 244
   download: /dados/programas-eleitorais-capitais.csv
-  url: https://www.lab-doxa.org.br/programas-eleitorais-dos-candidatos-a-prefeito-das-capitais/
   arquivo: programas-eleitorais-capitais.csv
   aviso: A coluna de município desta base está incorreta na fonte original (municípios rotacionados em
     relação aos candidatos). Em revisão.

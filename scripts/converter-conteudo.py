@@ -341,10 +341,16 @@ def listas():
 
     bds = []
     for b in ler("bancos-de-dados.yaml"):
+        # O `url` da fonte é a "página original" no WordPress, que saiu do ar — e o domínio
+        # lab-doxa.org.br agora serve este site, então o link daria 404. Fica registrado em
+        # extracao/ como proveniência, mas não vai para o site: as tabelas estão nos CSV.
+        url_banco = b.get("url", "")
+        if "lab-doxa.org.br" in url_banco:
+            url_banco = ""
         reg = limpo({"nome": b["nome"], "descricao": b["descricao"], "cobertura": b.get("cobertura", ""),
                      "registros": int(b["registros"]) if str(b.get("registros", "")).isdigit() else "",
                      "pagina": b.get("pagina", ""), "download": b.get("download", ""),
-                     "url": b.get("url", ""), "arquivo": b.get("arquivo", "")})
+                     "url": url_banco, "arquivo": b.get("arquivo", "")})
         if "Capitais" in b["nome"]:
             reg["aviso"] = ("A coluna de município desta base está incorreta na fonte original "
                             "(municípios rotacionados em relação aos candidatos). Em revisão.")
