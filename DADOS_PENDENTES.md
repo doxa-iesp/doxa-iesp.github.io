@@ -195,6 +195,10 @@ de obra conferindo na publicação (DOI, SciELO, página da editora):
       seguintes áreas" sem listá-las (hoje as descrições de pesquisa não aparecem no site)
 - [ ] O evento *Coordenadora do DOXA recebe prêmio de Excelência Acadêmica da Anpocs* está com a
       data do post (2022-09-01); o prêmio é a edição 2021. Qual foi a data da premiação?
+- [ ] `mapas-votacao.yaml`: os itens 90 e 91 (PV, 2002, Deputado Federal) são o **mesmo arquivo** —
+      `PV-DF2002.pdf` e `PV-DF2002-1.pdf` têm o mesmo SHA-256 em `extracao/dados/mapas-no-drive.csv`.
+      O site antigo já mostrava os dois. Por isso a página lista "PV" duas vezes em 2002 e o total é
+      273. Decidir se um deles sai (o contador da home passaria a 272).
 
 ---
 

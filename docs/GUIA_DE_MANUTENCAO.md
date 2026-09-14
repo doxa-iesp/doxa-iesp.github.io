@@ -296,6 +296,8 @@ troque os valores). Modelo real:
   a publicação aparece na página **Publicações Acadêmicas**.
 - `ano`: só o número, sem aspas. *(opcional — use para uma publicação "no prelo" que ainda não
   tem ano; sem `ano`, a página mostra "no prelo".)*
+- **Ordem na página:** dentro de cada bloco, do ano mais recente para o mais antigo; entre
+  publicações do **mesmo ano**, vale a posição no arquivo (a que está mais acima aparece antes).
 - Mantenha os **dois espaços** no começo das linhas `autores:`, `ano:`, etc. (o `- titulo:` é o
   único que começa com `- `).
 
@@ -334,6 +336,8 @@ Modelo real:
 ```
 
 - `ciclo`: escreva entre aspas (ex.: `'2024'`). É o que agrupa as análises na página.
+- **Ordem na página:** dentro de um ciclo, as análises aparecem na ordem do arquivo. Para uma
+  análise nova aparecer antes das outras do mesmo ciclo, ponha o bloco acima delas.
 - `arquivos`: pode ter um ou vários pares `rotulo` + `url`. Se não houver nenhum arquivo, escreva
   `arquivos: []` na mesma linha.
 
@@ -396,7 +400,8 @@ Arquivo: **`src/data/midia.yaml`**. Acrescente ao fim (modelo real):
   matéria e decide em qual aba de filtro ela aparece. É o **único campo obrigatório** além do
   `titulo`.
 - A página organiza tudo **por ano**, a partir da `data`: não precisa pôr a matéria em lugar
-  nenhum específico do arquivo. Sem `data`, ela vai para um grupo "Sem data" no fim.
+  nenhum específico do arquivo. Sem `data`, ela vai para um grupo "Sem data" no fim. Duas matérias
+  com a mesma data (ou só com o mesmo ano) aparecem na ordem do arquivo.
 
 ### 4.9. Mudar o texto de uma página
 
@@ -556,6 +561,8 @@ Arquivo: **`src/data/pesquisas.yaml`**. Acrescente ao fim (modelo real):
   **Pesquisas** onde a pesquisa aparece.
 - Uma tese costuma estar na BDTD da UERJ; o link de lá serve como `url`. Se o PDF for do próprio
   laboratório, envie para `public/pdfs/pesquisas/`.
+- **Ordem na página:** por tipo, depois do ano mais recente para o mais antigo, depois pelo título.
+  A posição no arquivo não importa.
 
 ### 4.15. Editar ou remover um evento ou um destaque
 
@@ -571,7 +578,8 @@ destaque, senão o PR fica vermelho (Erro 5).
 ### 4.16. Adicionar um parceiro (faixa "Apoio e parcerias" da página inicial)
 
 1. Envie o logo para `public/img/parceiros/` (PNG com fundo transparente fica melhor).
-2. Acrescente ao fim de **`src/data/parceiros.yaml`**:
+2. Acrescente ao fim de **`src/data/parceiros.yaml`** (a posição no arquivo não importa: os logos
+   aparecem em **ordem alfabética** do `nome`):
 
 ```yaml
 - nome: Nome da instituição

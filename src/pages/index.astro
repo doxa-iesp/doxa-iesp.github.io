@@ -21,7 +21,17 @@ const [parceiros, pesquisas, publicacoes, acervo, mapas, todosDestaques] = await
 // arquiva um destaque sem apagar o arquivo.
 const emDestaque = todosDestaques
   .filter((d) => d.data.ativo)
-  .sort((a, b) => (a.data.ordem ?? 99) - (b.data.ordem ?? 99));
+  .sort(
+    (a, b) =>
+      (a.data.ordem ?? 99) - (b.data.ordem ?? 99) ||
+      a.data.titulo.localeCompare(b.data.titulo, 'pt-BR'),
+  );
+
+// Logos em ordem alfabética — a mais próxima da que o site antigo mostrava. Explícita: a
+// coleção vem na ordem do arquivo (ver listaYaml em content.config.ts), que é outra.
+const parceirosOrdenados = [...parceiros].sort((a, b) =>
+  a.data.nome.localeCompare(b.data.nome, 'pt-BR'),
+);
 
 // Atalhos fixos para as quatro seções — não confundir com `emDestaque`, que é a
 // vitrine curada logo acima. A home é a APRESENTAÇÃO INSTITUCIONAL do grupo
@@ -137,7 +147,7 @@ const numeros = [
       <Titulo nivel="h2" titulo="Apoio e parcerias" class="parceiros__titulo" />
       <ul class="parceiros">
         {
-          parceiros.map((p) => (
+          parceirosOrdenados.map((p) => (
             <li>
               <img
                 src={url(p.data.arquivo)}

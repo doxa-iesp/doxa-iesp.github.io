@@ -15,7 +15,7 @@ const grupos = anos.map((ano) => ({
   ano,
   itens: seminarios
     .filter((s) => s.data.ano === ano)
-    .sort((a, b) => (b.data.data ?? '').localeCompare(a.data.data ?? '')),
+    .sort((a, b) => (b.data.data ?? '').localeCompare(a.data.data ?? '') || a.id.localeCompare(b.id)),
 }));
 
 const fmtData = new Intl.DateTimeFormat('pt-BR', {

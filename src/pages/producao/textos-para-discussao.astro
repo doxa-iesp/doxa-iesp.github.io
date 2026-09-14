@@ -8,8 +8,9 @@ import { url } from '../../lib/url';
 const pagina = (await getEntry('paginas', 'textos-para-discussao'))!;
 const { Content } = await render(pagina);
 
+// Mais recente primeiro; no mesmo ano, a ordem do arquivo (o id começa pela posição).
 const textos = (await getCollection('textos-discussao')).sort(
-  (a, b) => b.data.ano - a.data.ano,
+  (a, b) => b.data.ano - a.data.ano || a.id.localeCompare(b.id),
 );
 ---
 

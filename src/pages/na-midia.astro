@@ -38,8 +38,10 @@ const anos = [...porAno.entries()]
   .sort(([a], [b]) => (a === SEM_DATA ? 1 : b === SEM_DATA ? -1 : b.localeCompare(a)))
   .map(([ano, itens]) => ({
     ano,
-    // data completa desc; os que só têm o ano vão para o fim do grupo
-    itens: [...itens].sort((a, b) => (b.data.data ?? '').localeCompare(a.data.data ?? '')),
+    // data completa desc; os que só têm o ano vão para o fim do grupo; mesma data, ordem do arquivo
+    itens: [...itens].sort(
+      (a, b) => (b.data.data ?? '').localeCompare(a.data.data ?? '') || a.id.localeCompare(b.id),
+    ),
   }));
 
 const contagem = (tipo: keyof typeof TIPOS) => midia.filter((m) => m.data.tipo === tipo).length;

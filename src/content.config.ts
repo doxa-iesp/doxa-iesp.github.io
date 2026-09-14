@@ -40,12 +40,18 @@ function listaYaml(caminho: string, campoTitulo = 'titulo') {
       if (!Array.isArray(itens)) {
         throw new Error(`${caminho} deveria conter uma lista (itens começando com "- ").`);
       }
+      // O id começa pela POSIÇÃO do item no arquivo ("0007-hgpe-eleicoes-1989"). Duas razões:
+      //  1. O Astro guarda e devolve toda coleção ORDENADA PELO ID (data store), não na ordem
+      //     do arquivo. Com o título puro, as análises de um ciclo e as publicações do mesmo
+      //     ano saíam em ordem alfabética, diferente do site antigo. Com a posição na frente,
+      //     a ordem alfabética do id É a ordem do arquivo.
+      //  2. Fica único por construção (o mesmo seminário apresentado duas vezes não colide), e
+      //     a mensagem de erro do build diz o número do item.
+      // As páginas ainda desempatam por `id` explicitamente, para não depender só disto.
       const saida: Record<string, Record<string, unknown>> = {};
       itens.forEach((item: Record<string, unknown>, i: number) => {
-        const base = slug(String(item?.[campoTitulo] ?? `item-${i + 1}`));
-        // sufixo numérico evita colisão (ex.: o mesmo seminário apresentado 2x no ano)
-        const id = saida[base] ? `${base}-${i + 1}` : base;
-        saida[id] = item;
+        const nome = slug(String(item?.[campoTitulo] ?? 'item'));
+        saida[`${String(i + 1).padStart(4, '0')}-${nome}`] = item;
       });
       return saida;
     },
@@ -275,8 +281,7 @@ const bancosDeDados = defineCollection({
       rotulo_pagina: z.string().optional(), // texto do botão da `pagina`; sem isto, "Ver no site"
       arquivos: z.array(z.object({ rotulo: z.string(), url: z.string() })).default([]), // em public/dados/ ou public/pdfs/
       aviso: z.string().optional(),
-      // Posição na página (menor aparece antes). Sem isto a lista sai na ordem alfabética do id,
-      // não na do arquivo — e bancos do mesmo projeto acabavam separados.
+      // Posição na página (menor aparece antes). Sem isto, vale a ordem do arquivo.
       ordem: z.number().optional(),
     })
     .strict(),

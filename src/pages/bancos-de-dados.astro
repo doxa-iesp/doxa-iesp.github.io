@@ -7,11 +7,10 @@ import { url, linkPara, externo } from '../lib/url';
 const pagina = (await getEntry('paginas', 'bancos-de-dados'))!;
 const { Content } = await render(pagina);
 
-// A coleção vem em ordem alfabética do id, não na do arquivo: quem manda é o campo `ordem`.
+// Quem manda é o campo `ordem`; entre bancos sem `ordem` (ou com a mesma), vale a ordem do
+// arquivo — o id começa pela posição do item (ver listaYaml em content.config.ts).
 const bancos = (await getCollection('bancos-de-dados')).sort(
-  (a, b) =>
-    (a.data.ordem ?? 99) - (b.data.ordem ?? 99) ||
-    a.data.nome.localeCompare(b.data.nome, 'pt-BR'),
+  (a, b) => (a.data.ordem ?? 99) - (b.data.ordem ?? 99) || a.id.localeCompare(b.id),
 );
 
 const formatador = new Intl.NumberFormat('pt-BR');

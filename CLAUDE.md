@@ -271,6 +271,16 @@ ao `CardEvento` só `titulo`, `data`, `descricao`, `imagem`, `url` e `anexos`. T
 do `.md` não é renderizado em lugar nenhum. E `data` é a data **do evento** — a migração trouxe a
 data do post do WordPress, e dois eventos ficaram com a data errada até 2026-09-13.
 
+**6. A coleção vem ordenada pelo id, não pela ordem do arquivo.** O Astro guarda e devolve toda
+coleção em ordem alfabética do `id` (`mutable-data-store.js`). Com o id feito só do título, as
+análises dentro de um ciclo, as publicações do mesmo ano e matérias de mesma data saíam em ordem
+alfabética — diferente do site antigo — e ninguém percebeu por meses (corrigido em 2026-09-14).
+Hoje `listaYaml()` põe a **posição do item no id** (`0007-hgpe-eleicoes-1989`), então a ordem do id
+é a ordem do arquivo; e **toda página que lista precisa de sort explícito com desempate**
+(`|| a.id.localeCompare(b.id)` para as listas; `|| titulo` para as coleções `glob`, cujo id é o nome
+do arquivo). Parceiros ordena por `nome` de propósito. Ao criar uma lista nova, não confie na ordem
+em que `getCollection` devolve.
+
 ## Conteúdo: `src/` é a fonte
 
 **Desde 2026-09-13, a fonte de verdade do conteúdo é `src/`.** Corrija e acrescente direto em

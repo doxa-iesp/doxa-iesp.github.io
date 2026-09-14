@@ -35,7 +35,9 @@ const grupos = anosOrdenados.map((ano) => {
     .sort((a, b) => pesoCargo(a[0]) - pesoCargo(b[0]) || a[0].localeCompare(b[0]))
     .map(([cargo, lista]) => ({
       cargo,
-      lista: [...lista].sort((a, b) => a.data.titulo.localeCompare(b.data.titulo, 'pt-BR')),
+      lista: [...lista].sort(
+        (a, b) => a.data.titulo.localeCompare(b.data.titulo, 'pt-BR') || a.id.localeCompare(b.id),
+      ),
     }));
   const total = cargos.reduce((n, c) => n + c.lista.length, 0);
   return { ano, cargos, total };

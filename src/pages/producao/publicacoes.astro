@@ -19,7 +19,8 @@ const grupos = GRUPOS.map((g) => ({
   ...g,
   itens: publicacoes
     .filter((p) => p.data.tipo === g.tipo)
-    .sort((a, b) => (b.data.ano ?? 0) - (a.data.ano ?? 0)),
+    // Ano mais recente primeiro; no mesmo ano, a ordem do arquivo (o id começa pela posição).
+    .sort((a, b) => (b.data.ano ?? 0) - (a.data.ano ?? 0) || a.id.localeCompare(b.id)),
 })).filter((g) => g.itens.length > 0);
 ---
 

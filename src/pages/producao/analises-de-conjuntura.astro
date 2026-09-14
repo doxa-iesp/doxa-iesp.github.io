@@ -13,7 +13,8 @@ const ciclos = [...new Set(analises.map((a) => a.data.ciclo))].sort((a, b) => b.
 
 const grupos = ciclos.map((ciclo) => ({
   ciclo,
-  itens: analises.filter((a) => a.data.ciclo === ciclo),
+  // Dentro do ciclo, a ordem do arquivo — a do site antigo (o id começa pela posição).
+  itens: analises.filter((a) => a.data.ciclo === ciclo).sort((a, b) => a.id.localeCompare(b.id)),
 }));
 ---
 

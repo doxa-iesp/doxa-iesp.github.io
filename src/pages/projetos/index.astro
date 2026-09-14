@@ -6,7 +6,9 @@ import CardProjeto from '../../components/CardProjeto.astro';
 import Titulo from '../../components/Titulo.astro';
 
 const todos = (await getCollection('projetos')).sort(
-  (a, b) => (a.data.ordem ?? 99) - (b.data.ordem ?? 99),
+  (a, b) =>
+    (a.data.ordem ?? 99) - (b.data.ordem ?? 99) ||
+    a.data.titulo.localeCompare(b.data.titulo, 'pt-BR'),
 );
 
 // Em andamento primeiro, concluídos depois. Um projeto sem `status` (campo

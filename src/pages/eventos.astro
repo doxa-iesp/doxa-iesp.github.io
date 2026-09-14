@@ -7,9 +7,11 @@ import CardEvento from '../components/CardEvento.astro';
 const pagina = (await getEntry('paginas', 'eventos'))!;
 const { Content } = await render(pagina);
 
-// Mais recentes primeiro. `data` é Date (z.coerce.date no schema).
+// Mais recentes primeiro. `data` é Date (z.coerce.date no schema). Mesma data: por título.
 const eventos = (await getCollection('eventos')).sort(
-  (a, b) => b.data.data.getTime() - a.data.data.getTime(),
+  (a, b) =>
+    b.data.data.getTime() - a.data.data.getTime() ||
+    a.data.titulo.localeCompare(b.data.titulo, 'pt-BR'),
 );
 ---
 
