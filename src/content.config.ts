@@ -253,19 +253,33 @@ const acervo = defineCollection({
   }),
 });
 
+/**
+ * Bancos de dados abertos (`/bancos-de-dados/`). Cada banco pode ter vários arquivos para
+ * baixar — CSV, XLSX, PDF de documentação —, cada um com o próprio rótulo, no mesmo formato de
+ * `analises.arquivos`. Até 2026-09-13 havia um campo `download` único, com o botão fixo em
+ * "Baixar os dados (CSV)", que não servia para os bancos da Pesquisa COVID (XLSX, vários arquivos).
+ *
+ * O schema é `.strict()`: um `download:` antigo ou um nome de campo digitado errado quebra o build
+ * em vez de ser descartado em silêncio — o que faria o botão sumir com o build verde.
+ */
 const bancosDeDados = defineCollection({
   loader: listaYaml('src/data/bancos-de-dados.yaml', 'nome'),
-  schema: z.object({
-    nome: z.string(),
-    descricao: z.string(),
-    cobertura: z.string().optional(),
-    registros: z.number().int().optional(),
-    url: urlOuVazio, // página externa do banco, se houver (a do site antigo foi retirada: o WordPress saiu do ar)
-    pagina: z.string().optional(), // rota interna, ex.: "/mapas-de-votacao/"
-    download: z.string().optional(), // CSV em public/dados/
-    arquivo: z.string().optional(),
-    aviso: z.string().optional(),
-  }),
+  schema: z
+    .object({
+      nome: z.string(),
+      descricao: z.string(),
+      cobertura: z.string().optional(),
+      registros: z.number().int().optional(),
+      url: urlOuVazio, // página externa do banco, se houver (a do site antigo foi retirada: o WordPress saiu do ar)
+      pagina: z.string().optional(), // rota interna, ex.: "/mapas-de-votacao/"
+      rotulo_pagina: z.string().optional(), // texto do botão da `pagina`; sem isto, "Ver no site"
+      arquivos: z.array(z.object({ rotulo: z.string(), url: z.string() })).default([]), // em public/dados/ ou public/pdfs/
+      aviso: z.string().optional(),
+      // Posição na página (menor aparece antes). Sem isto a lista sai na ordem alfabética do id,
+      // não na do arquivo — e bancos do mesmo projeto acabavam separados.
+      ordem: z.number().optional(),
+    })
+    .strict(),
 });
 
 const mapas = defineCollection({

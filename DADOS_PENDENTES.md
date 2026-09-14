@@ -65,7 +65,8 @@ foram recuperados (tabela abaixo). Os cinco que faltam não existem em lugar nen
 
 A página foi reescrita sem prometer esses arquivos. O banco de decretos publicado
 (`DOWNLOAD-2`) traz o município e o tema de cada decreto, então a informação do `DOWNLOAD-3`
-pode ser refeita a partir dele.
+pode ser refeita a partir dele. Os bancos (decretos e surveys) também estão listados em
+`/bancos-de-dados/`, desde 2026-09-14.
 
 - [ ] Alguém da equipe do projeto (Argelina Figueiredo, Fernando Guarnieri) tem esses cinco
       arquivos? Se sim, enviar para `public/pdfs/projetos/pesquisa-covid/` com o nome original e

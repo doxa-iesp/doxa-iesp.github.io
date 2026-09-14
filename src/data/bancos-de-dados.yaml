@@ -7,17 +7,21 @@
     prefeito (539 com programa disponível, 38 sem programa). 627 arquivos de proposta (572 PDF + 55 imagens)
     hospedados no TSE (divulgacandcontas.tse.jus.br).
   registros: 577
-  download: /dados/programas-eleitorais-rj.csv
-  arquivo: programas-eleitorais-rj.csv
+  arquivos:
+  - rotulo: Baixar os dados (CSV)
+    url: /dados/programas-eleitorais-rj.csv
+  ordem: 1
 - nome: Programas eleitorais dos Candidatos a prefeito das Capitais – 2020
   descricao: Tabela com até 5 propostas de cada candidato a prefeito das capitais do país.
   cobertura: 20 capitais e grandes cidades; eleições municipais de 2020; 244 candidatos a prefeito; até
     5 propostas transcritas por candidato.
   registros: 244
-  download: /dados/programas-eleitorais-capitais.csv
-  arquivo: programas-eleitorais-capitais.csv
+  arquivos:
+  - rotulo: Baixar os dados (CSV)
+    url: /dados/programas-eleitorais-capitais.csv
   aviso: A coluna de município desta base está incorreta na fonte original (municípios rotacionados em
     relação aos candidatos). Em revisão.
+  ordem: 2
 - nome: Mapas Eleitorais
   descricao: 'Os mapas de votação disponibilizados fazem parte do projeto “Geografia do voto no Estado
     do Rio de Janeiro: estratégias partidárias e bases sociais do voto”, que visa identificar padrões
@@ -29,5 +33,47 @@
     Governador, Senador) e proporcionais (Deputado Federal e Estadual, por partido).
   registros: 273
   pagina: /mapas-de-votacao/
-  download: /dados/mapas-votacao.csv
-  arquivo: mapas-votacao.csv
+  arquivos:
+  - rotulo: Baixar os dados (CSV)
+    url: /dados/mapas-votacao.csv
+  ordem: 3
+- nome: Decretos municipais de enfrentamento da Covid-19 no Estado do Rio de Janeiro – 2020
+  descricao: Decretos do Poder Executivo dos municípios fluminenses sobre a Covid-19, classificados
+    por tema (restrição, flexibilização, administrativo, orçamentário, social, saúde e outros), com
+    variáveis políticas e de população de cada município. Parte do projeto Pesquisa COVID.
+  cobertura: 87 dos 92 municípios do Estado do Rio de Janeiro (os outros 5 não oferecem buscador
+    legislativo nem diário oficial on-line); decretos de março a novembro de 2020. Traz município,
+    região, faixa de população, prefeito, partido (com ideologia e tamanho), número, data, ementa,
+    tema e subtemas de cada decreto, além de tabelas descritivas e da legenda dos códigos. A lista de
+    buscadores traz, para cada um dos 92 municípios, os endereços de busca legislativa consultados
+    ou a indicação de que não havia informação.
+  registros: 2751
+  pagina: /projetos/pesquisa-covid/
+  rotulo_pagina: Ver o projeto
+  arquivos:
+  - rotulo: Banco de decretos (XLSX)
+    url: /dados/pesquisa-covid/DOWNLOAD-2_-BANCO-DE-DADOS_DECRETOS-COVID_RJ_3006.xlsx
+  - rotulo: Lista de buscadores legislativos (XLSX)
+    url: /dados/pesquisa-covid/DOWNLOAD-1_LISTA-DE-BUSCADORES_DECRETOS.xlsx
+  ordem: 4
+- nome: Surveys de opinião e comportamento da população fluminense na pandemia – 2020 e 2021
+  descricao: Duas ondas de survey on-line com amostras representativas da população do Estado do Rio
+    de Janeiro sobre opiniões e comportamento diante das medidas de enfrentamento da Covid-19 e seus
+    impactos. Amostra da Netquest, questionário elaborado pela equipe. Parte do projeto Pesquisa COVID.
+  cobertura: Estado do Rio de Janeiro. Primeira onda de 17/11 a 02/12/2020, com 964 entrevistas
+    completas e a região de moradia de cada pessoa (capital, Região Metropolitana sem a capital,
+    interior e litoral); o arquivo traz também 343 pessoas barradas na triagem porque a cota do seu
+    perfil já estava cheia (“Cuota Completa” na coluna Estado), só com região e dados de perfil.
+    Segunda onda de 24/11 a 07/12/2021, com 1.001 entrevistas completas, sem a variável de região.
+    As planilhas trazem as respostas codificadas e com rótulos; a de 2021 inclui o dicionário de
+    variáveis.
+  pagina: /projetos/pesquisa-covid/
+  rotulo_pagina: Ver o projeto
+  arquivos:
+  - rotulo: Survey de 2020 (XLSX)
+    url: /dados/pesquisa-covid/DADOS_SURVEY_IESPBR_208324-Wed-Dec-16-2020_total.xlsx
+  - rotulo: Survey de 2021 (XLSX)
+    url: /dados/pesquisa-covid/DADOS_SURVEY_IESPBR_227821_20211208.xlsx
+  - rotulo: Análise dos surveys (PDF)
+    url: /pdfs/projetos/pesquisa-covid/SURVEY_OPINIOES-COMPORTAMENTO-1.pdf
+  ordem: 5

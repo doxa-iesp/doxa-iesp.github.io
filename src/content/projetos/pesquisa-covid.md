@@ -4,6 +4,9 @@ resumo: "Monitoramento e análise das medidas de combate à Covid-19 no Estado d
 imagem: "/img/projetos/pesquisa-covid.jpg"
 periodo: "2020 a 2022"
 status: "concluido"
+links:
+  - rotulo: "Ver em Bancos de Dados"
+    url: "/bancos-de-dados/"
 ordem: 4
 ---
 

@@ -242,3 +242,10 @@ extração e do Wayback Machine; os que não foram achados saíram do texto.
 **`/eventos/`** → a data do card passou a ser a do evento, não a do post no WordPress (2026-09-13) →
 "Seminário comemora 25 anos do DOXA" aparecia em novembro de 2022 para um seminário de novembro de
 2021.
+
+**`/bancos-de-dados/`** → ganhou os dois bancos da Pesquisa COVID (decretos municipais de 2020 e os
+surveys de 2020 e 2021), e o botão único "Baixar os dados (CSV)" de cada card virou uma lista de
+arquivos, cada um com o próprio rótulo (2026-09-14) → essas bases têm mais de um arquivo e são em
+XLSX; antes só apareciam dentro da página do projeto, longe de quem procura dados abertos. A lista
+também passou a seguir o campo `ordem` — antes saía em ordem alfabética do id, o que punha "Mapas
+Eleitorais" antes dos programas eleitorais, ao contrário do site antigo.

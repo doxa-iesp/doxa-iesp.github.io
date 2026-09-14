@@ -2,12 +2,17 @@
 import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
-import { url } from '../lib/url';
+import { url, linkPara, externo } from '../lib/url';
 
 const pagina = (await getEntry('paginas', 'bancos-de-dados'))!;
 const { Content } = await render(pagina);
 
-const bancos = await getCollection('bancos-de-dados');
+// A coleção vem em ordem alfabética do id, não na do arquivo: quem manda é o campo `ordem`.
+const bancos = (await getCollection('bancos-de-dados')).sort(
+  (a, b) =>
+    (a.data.ordem ?? 99) - (b.data.ordem ?? 99) ||
+    a.data.nome.localeCompare(b.data.nome, 'pt-BR'),
+);
 
 const formatador = new Intl.NumberFormat('pt-BR');
 ---
@@ -50,16 +55,27 @@ const formatador = new Intl.NumberFormat('pt-BR');
               <div class="banco__acoes">
                 {banco.data.pagina && (
                   <a class="btn btn-primario" href={url(banco.data.pagina)}>
-                    Ver no site
+                    {banco.data.rotulo_pagina ?? 'Ver no site'}
                   </a>
                 )}
-                {banco.data.download && (
-                  <a class="btn btn-contorno" href={url(banco.data.download)} download>
-                    Baixar os dados (CSV)
-                  </a>
-                )}
-                {/* A página original vive no WordPress antigo e some quando ele for desligado.
-                    Por isso ela é um link secundário, não o botão principal. */}
+                {banco.data.arquivos.map((arquivo) => {
+                  const fora = externo(arquivo.url);
+                  // CSV e XLSX baixam; PDF abre no navegador, como no resto do site.
+                  const baixar = !fora && !/\.pdf$/i.test(arquivo.url);
+                  return (
+                    <a
+                      class="btn btn-contorno"
+                      href={linkPara(arquivo.url)}
+                      download={baixar}
+                      target={fora ? '_blank' : undefined}
+                      rel={fora ? 'noopener noreferrer' : undefined}
+                    >
+                      {arquivo.rotulo}
+                      {fora && <span aria-hidden="true"> ↗</span>}
+                    </a>
+                  );
+                })}
+                {/* Página externa do banco, se houver: link secundário, não o botão principal. */}
                 {banco.data.url && (
                   <a
                     class="banco__fonte"

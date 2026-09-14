@@ -130,7 +130,7 @@ Exemplo: adicionar uma publicação sem a linha `tipo:`. A mensagem é:
 (`publicacoes → publicacao-de-teste-sem-tipo`) diz **em qual item** está o problema — nesse caso, o
 item cujo título vira "publicacao de teste sem tipo". Adicione a linha que faltou.
 
-#### Erro 3 — Você escreveu um nome de campo errado no `site.yaml`
+#### Erro 3 — Você escreveu um nome de campo errado no `site.yaml` ou no `bancos-de-dados.yaml`
 
 Exemplo: escrever `emial:` no lugar de `email:` no arquivo de contato. A mensagem é:
 
@@ -144,6 +144,10 @@ Exemplo: escrever `emial:` no lugar de `email:` no arquivo de contato. A mensage
 **O que significa:** `email: Required` = o campo `email` é obrigatório e sumiu.
 `Unrecognized key: "emial"` = você criou uma linha com um nome (`emial`) que o site não reconhece.
 Quase sempre é um erro de digitação no começo da linha. Corrija o nome do campo.
+
+O `bancos-de-dados.yaml` confere os nomes de campo do mesmo jeito. Lá, além de erro de digitação,
+o aviso aparece se alguém usar um campo que não existe mais — por exemplo `download:`, que foi
+trocado pela lista `arquivos:` (receita 4.17): `Unrecognized key: "download"`.
 
 #### Erro 4 — A "arrumação" (indentação) do arquivo ficou torta
 
@@ -551,9 +555,32 @@ destaque, senão o PR fica vermelho (Erro 5).
 
 Esses arquivos mudam pouco e têm campos mais específicos:
 
-- **Um banco novo** entra em `src/data/bancos-de-dados.yaml`. Envie o CSV para `public/dados/` e
-  copie um bloco existente: `nome`, `descricao`, `cobertura`, `registros`, `download`
-  (`/dados/arquivo.csv`) e `arquivo` (só o nome do CSV).
+- **Um banco novo** entra ao fim de `src/data/bancos-de-dados.yaml`. Envie os arquivos (CSV ou
+  XLSX) para `public/dados/` — um PDF de documentação vai em `public/pdfs/` — e copie um bloco
+  existente. Modelo real (o banco de decretos da Pesquisa COVID, com a descrição encurtada):
+
+  ```yaml
+  - nome: Decretos municipais de enfrentamento da Covid-19 no Estado do Rio de Janeiro – 2020
+    descricao: Decretos do Poder Executivo dos municípios fluminenses sobre a Covid-19.
+    cobertura: 87 dos 92 municípios do Estado do Rio de Janeiro; decretos de março a novembro de 2020.
+    registros: 2751                        # (opcional) número, sem ponto de milhar
+    pagina: /projetos/pesquisa-covid/      # (opcional) página do site sobre a base
+    rotulo_pagina: Ver o projeto           # (opcional) texto desse botão; sem ele, "Ver no site"
+    arquivos:                              # um par rotulo + url por arquivo para baixar
+    - rotulo: Banco de decretos (XLSX)
+      url: /dados/pesquisa-covid/DOWNLOAD-2_-BANCO-DE-DADOS_DECRETOS-COVID_RJ_3006.xlsx
+    - rotulo: Lista de buscadores legislativos (XLSX)
+      url: /dados/pesquisa-covid/DOWNLOAD-1_LISTA-DE-BUSCADORES_DECRETOS.xlsx
+    ordem: 4                               # (opcional) posição na página; menor aparece antes
+  ```
+
+  - Diga o formato no `rotulo` ("(CSV)", "(XLSX)", "(PDF)"): é o texto do botão.
+  - Não escreva dois-pontos seguidos de espaço dentro de `descricao` ou `cobertura` sem pôr o texto
+    entre aspas simples — o YAML confunde com um campo novo e o PR fica vermelho (Erro 4).
+  - Nomes de campo que o site não conhece, inclusive o antigo `download:`, deixam o PR vermelho
+    (Erro 3).
+  - Para **tirar um banco do site**, apague o bloco inteiro. Como hoje há exatamente cinco bancos, o
+    PR fica vermelho com o Erro 5: peça a quem cuida do site para ajustar o mínimo.
 - **Um vídeo novo do acervo** entra em `src/data/acervo.yaml`, copiando um item que já existe: o
   `codigo` da fita, `ano`, `cargo`, `regiao`, `candidatos`, `partidos` e o `url` do vídeo no Google
   Drive (confira numa janela anônima que ele abre sem login). O `codigo` vira a âncora do card,

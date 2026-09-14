@@ -41,7 +41,7 @@ const LISTAS = {
   'seminarios.yaml': 30,
   'pesquisas.yaml': 50,
   'acervo.yaml': 90,
-  'bancos-de-dados.yaml': 3,
+  'bancos-de-dados.yaml': 5,
   'mapas-votacao.yaml': 200,
   'parceiros.yaml': 5,
 };
