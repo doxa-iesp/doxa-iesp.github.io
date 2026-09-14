@@ -5,6 +5,7 @@
  * quando existem nos dados.
  */
 import { url, linkPara, externo } from '../lib/url';
+import { dataPorExtenso } from '../lib/texto';
 
 interface Props {
   titulo: string;
@@ -17,13 +18,7 @@ interface Props {
 
 const { titulo, data, descricao, imagem, url: link, anexos } = Astro.props;
 
-const fmtData = new Intl.DateTimeFormat('pt-BR', {
-  day: '2-digit',
-  month: 'long',
-  year: 'numeric',
-  timeZone: 'UTC',
-});
-const dataFormatada = fmtData.format(data);
+const dataFormatada = dataPorExtenso(data);
 const dataISO = data.toISOString().slice(0, 10);
 
 /** Rótulo honesto para o anexo, deduzido da extensão ou do serviço. */
@@ -84,7 +79,8 @@ function rotuloAnexo(u: string): string {
               rel={externo(anexo) ? 'noopener noreferrer' : undefined}
             >
               {rotuloAnexo(anexo)}
-              <span aria-hidden="true"> ↓</span>
+              {/* ↓ para arquivo do site; link externo (Drive, Docs) abre em nova aba: ↗. */}
+              <span aria-hidden="true">{externo(anexo) ? ' ↗' : ' ↓'}</span>
             </a>
           ))}
         </div>

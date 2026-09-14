@@ -3,6 +3,7 @@ import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import Titulo from '../components/Titulo.astro';
+import { dataPorExtenso } from '../lib/texto';
 
 const pagina = (await getEntry('paginas', 'seminarios'))!;
 const { Content } = await render(pagina);
@@ -18,18 +19,8 @@ const grupos = anos.map((ano) => ({
     .sort((a, b) => (b.data.data ?? '').localeCompare(a.data.data ?? '') || a.id.localeCompare(b.id)),
 }));
 
-const fmtData = new Intl.DateTimeFormat('pt-BR', {
-  day: '2-digit',
-  month: 'long',
-  year: 'numeric',
-  timeZone: 'UTC',
-});
 /** Formata a data ISO do seminário; devolve null se ausente ou inválida. */
-function formatarData(iso?: string): string | null {
-  if (!iso) return null;
-  const d = new Date(iso);
-  return Number.isNaN(d.getTime()) ? null : fmtData.format(d);
-}
+const formatarData = (iso?: string): string | null => dataPorExtenso(iso);
 ---
 
 <Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>

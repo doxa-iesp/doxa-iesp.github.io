@@ -1,8 +1,10 @@
 # Dados globais do site. Editável.
 
 geral:
-  titulo: DOXA. Laboratório de Estudos Eleitorais
-  descricao: Laboratório de Estudos Eleitorais, de Comunicação Política e Opinião Pública do IESP-UERJ
+  # Título da página inicial na aba do navegador e nos buscadores.
+  titulo: DOXA | Laboratório de Estudos Eleitorais
+  # Descrição usada nas páginas que não têm uma própria.
+  descricao: Laboratório de Estudos Eleitorais, de Comunicação Política e Opinião Pública do IESP-UERJ.
   email: acervo-doxa@iesp.uerj.br
   endereco: Rua da Matriz, 82, Botafogo, Rio de Janeiro, RJ
   cep: 22260-100

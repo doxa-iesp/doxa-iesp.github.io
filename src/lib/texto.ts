@@ -59,3 +59,22 @@ export function casaBusca(textoNormalizado: string, consulta: string): boolean {
   const palavras = textoNormalizado.split(/[^a-z0-9]+/).filter(Boolean);
   return termos.every((termo) => palavras.some((palavra) => palavra.startsWith(termo)));
 }
+
+const MES_POR_EXTENSO = new Intl.DateTimeFormat('pt-BR', { month: 'long', timeZone: 'UTC' });
+
+/**
+ * Data por extenso, do jeito que se escreve em português:
+ *   dataPorExtenso('2022-09-01') -> '1º de setembro de 2022'
+ *   dataPorExtenso('2021-11-25') -> '25 de novembro de 2021'
+ *
+ * Em UTC de propósito: '2022-09-01' vira meia-noite UTC, e com o fuso de Brasília o dia
+ * sairia "31 de agosto". O Intl com `day: '2-digit'` escrevia "01 de setembro".
+ * Devolve null para data ausente ou inválida.
+ */
+export function dataPorExtenso(valor?: Date | string | null): string | null {
+  if (!valor) return null;
+  const d = typeof valor === 'string' ? new Date(valor) : valor;
+  if (Number.isNaN(d.getTime())) return null;
+  const dia = d.getUTCDate();
+  return `${dia === 1 ? '1º' : dia} de ${MES_POR_EXTENSO.format(d)} de ${d.getUTCFullYear()}`;
+}

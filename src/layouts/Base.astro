@@ -1,4 +1,5 @@
 ---
+import { getEntry } from 'astro:content';
 import '@fontsource-variable/montserrat';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
@@ -6,8 +7,11 @@ import Footer from '../components/Footer.astro';
 import { url } from '../lib/url';
 
 interface Props {
+  /** Nome da página; o <title> vira "Nome | DOXA". Ignorado com `inicio`. */
   titulo: string;
   descricao?: string;
+  /** Página inicial: o <title> é o `titulo` de src/data/site.yaml, inteiro. */
+  inicio?: boolean;
   /**
    * `false` na página 404: ela é servida em qualquer endereço inexistente, então não
    * tem endereço canônico — sem isto, anunciava `https://lab-doxa.org.br/404/`, que
@@ -16,12 +20,12 @@ interface Props {
   indexavel?: boolean;
 }
 
-const { titulo, descricao, indexavel = true } = Astro.props;
-const DESC_PADRAO =
-  'Laboratório de Estudos Eleitorais, de Comunicação Política e Opinião Pública do IESP-UERJ.';
-const desc = descricao ?? DESC_PADRAO;
-const tituloCompleto =
-  titulo === 'DOXA' ? 'DOXA | Laboratório de Estudos Eleitorais' : `${titulo} | DOXA`;
+const { titulo, descricao, inicio = false, indexavel = true } = Astro.props;
+// Título da home e descrição padrão vêm de site.yaml (antes estavam escritos aqui e lá, com
+// textos diferentes, e o de lá não era lido por ninguém).
+const geral = (await getEntry('configuracao', 'geral'))!.data;
+const desc = descricao ?? geral.descricao;
+const tituloCompleto = inicio ? geral.titulo : `${titulo} | DOXA`;
 const canonica = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -37,6 +41,7 @@ const canonica = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:title" content={tituloCompleto} />
     <meta property="og:description" content={desc} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DOXA" />
     <meta property="og:locale" content="pt_BR" />
     {/* Sem og:image, todo link compartilhado no WhatsApp ou no LinkedIn saía como
         um retângulo cinza. A URL precisa ser absoluta para os validadores. */}

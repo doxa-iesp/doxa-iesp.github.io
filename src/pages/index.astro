@@ -67,17 +67,20 @@ const atalhos = [
 // Contagens vindas das coleções — nenhum número escrito à mão para envelhecer.
 const numeros = [
   { valor: new Date().getFullYear() - 1996, rotulo: 'anos de pesquisa' },
-  { valor: acervo.length, rotulo: 'itens no acervo' },
+  // São os vídeos da busca on-line; o acervo completo (catálogo) tem muito mais fitas.
+  { valor: acervo.length, rotulo: 'vídeos no acervo on-line' },
   { valor: pesquisas.length, rotulo: 'pesquisas' },
   { valor: publicacoes.length, rotulo: 'publicações' },
   { valor: mapas.length, rotulo: 'mapas eleitorais' },
 ];
 ---
 
-<Base titulo="DOXA" descricao={home.data.descricao}>
+<Base titulo={home.data.titulo} descricao={home.data.descricao} inicio>
   <section class="apresentacao">
     <div class="container">
-      <p class="olho">IESP-UERJ · desde 1996</p>
+      {/* Não "IESP-UERJ · desde 1996": o DOXA é de 1996, mas nasceu no Iuperj e só está no
+          IESP-UERJ desde 2010 (paginas/home.md). */}
+      <p class="olho">Laboratório de pesquisa · desde 1996</p>
       <h1>{home.data.subtitulo}</h1>
       {/* Texto de ponta a ponta, em duas colunas: preenche a página sem produzir
           linhas longas demais para ler. */}
@@ -147,16 +150,28 @@ const numeros = [
       <Titulo nivel="h2" titulo="Apoio e parcerias" class="parceiros__titulo" />
       <ul class="parceiros">
         {
-          parceirosOrdenados.map((p) => (
-            <li>
+          parceirosOrdenados.map((p) => {
+            const logo = (
               <img
                 src={url(p.data.arquivo)}
                 alt={`Logotipo ${p.data.nome}`}
                 loading="lazy"
                 height="56"
               />
-            </li>
-          ))
+            );
+            // Com `url` em parceiros.yaml (receita 4.16 do guia), o logo leva ao site do parceiro.
+            return (
+              <li>
+                {p.data.url ? (
+                  <a href={p.data.url} target="_blank" rel="noopener noreferrer">
+                    {logo}
+                  </a>
+                ) : (
+                  logo
+                )}
+              </li>
+            );
+          })
         }
       </ul>
     </div>

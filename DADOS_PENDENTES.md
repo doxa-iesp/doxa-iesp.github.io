@@ -234,7 +234,14 @@ genérica, então não foram migradas. `src/data/acervo.yaml`
 
 - [ ] Nada a fazer, a menos que queiram capas reais por vídeo
 
-### 13. Links externos que não dá para conferir daqui
+### 13. A imagem de compartilhamento ainda diz "IESP-UERJ · desde 1996"
+`public/img/og-doxa.png` (a imagem que aparece quando alguém compartilha um link do site no WhatsApp
+ou nas redes) traz o selo antigo da home, "IESP-UERJ · desde 1996". O texto da home mudou em
+2026-09-14 para "Laboratório de pesquisa · desde 1996", porque o DOXA só está no IESP-UERJ desde 2010.
+
+- [ ] Refazer a arte (1200×630) com o selo novo
+
+### 14. Links externos que não dá para conferir daqui
 
 Em 2026-09-13 todos os links externos do site foram testados. Estes não responderam ao teste
 automático, mas provavelmente funcionam num navegador — vale abrir um a um de vez em quando:

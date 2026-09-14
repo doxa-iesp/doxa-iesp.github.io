@@ -68,7 +68,9 @@ function iniciais(texto: string): string {
   <div class="membro__retrato">
     {
       foto ? (
-        <img src={url(foto)} alt={`Foto de ${nome}`} width="320" height="320" loading="lazy" />
+        // alt vazio: o nome da pessoa vem escrito logo abaixo da foto; "Foto de Fulana" seguido de
+        // "Fulana" fazia o leitor de tela dizer o nome duas vezes, card a card.
+        <img src={url(foto)} alt="" width="320" height="320" loading="lazy" />
       ) : (
         <span class="membro__iniciais" aria-hidden="true">
           {iniciais(nome)}

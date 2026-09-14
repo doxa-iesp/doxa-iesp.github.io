@@ -249,3 +249,25 @@ arquivos, cada um com o próprio rótulo (2026-09-14) → essas bases têm mais 
 XLSX; antes só apareciam dentro da página do projeto, longe de quem procura dados abertos. A lista
 também passou a seguir o campo `ordem` — antes saía em ordem alfabética do id, o que punha "Mapas
 Eleitorais" antes dos programas eleitorais, ao contrário do site antigo.
+
+**`/institucional/`, `/producao/pesquisas/`, `/producao/analises-de-conjuntura/`** → os nomes das
+páginas passaram a ser os do menu: "Equipe" (era "Institucional", com um h2 "Nossa Equipe" logo
+abaixo), "Pesquisas" (a aba do navegador dizia "Pesquisas do DOXA | DOXA") e "Análises de Conjuntura"
+(era "Análises de Conjuntura Eleitoral") (2026-09-14) → quem clicava em "Equipe" no menu chegava numa
+página chamada outra coisa. As rotas não mudaram.
+
+**Rótulos e datas** → itens de submenu "Visão Geral" (em Title Case, como os outros nomes de seção);
+blocos de publicações em caixa de frase ("Capítulos de livro", "Artigos em revistas científicas");
+etiqueta "Tese ou dissertação"; datas por extenso com "1º" em vez de "01" (eventos e seminários); CEP
+num formato só; no acervo, o card deixou de repetir o ano quando a data completa já está lá
+(2026-09-14) → consistência. Setas: ↗ para o que abre em nova aba, ↓ só para arquivo baixável; o
+ícone de download dos itens de análise sai de links que não são arquivo ("Podcasts YouTube").
+
+**`/` (home)** → o selo sobre o título diz "Laboratório de pesquisa · desde 1996" (era "IESP-UERJ ·
+desde 1996": o DOXA nasceu em 1996 no Iuperj e só está no IESP-UERJ desde 2010), e o número do acervo
+diz "vídeos no acervo on-line" (eram "itens no acervo", mas são os vídeos da busca, não o acervo
+inteiro) (2026-09-14).
+
+**`/acervo/`** → o texto do vídeo "Melhores momentos do horário eleitoral" voltou a dizer o que o
+site antigo dizia: o período (1989 a 2014) e o histórico de Marcus Figueiredo que abre o vídeo
+(2026-09-14).

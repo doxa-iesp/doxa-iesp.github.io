@@ -39,10 +39,15 @@ const idCodigo = `${idItemAcervo(item.codigo)}-codigo`;
         </div>
       )
     }
-    <div>
-      <dt>Ano</dt>
-      <dd>{item.ano}</dd>
-    </div>
+    {/* A data completa já traz o ano; "Ano" só aparece quando não há data. */}
+    {
+      !item.data && (
+        <div>
+          <dt>Ano</dt>
+          <dd>{item.ano}</dd>
+        </div>
+      )
+    }
     {
       item.regiao && (
         <div>

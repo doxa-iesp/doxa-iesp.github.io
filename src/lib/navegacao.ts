@@ -35,7 +35,7 @@ export const MENU: ItemMenu[] = [
     nome: 'Produção',
     href: '/producao/',
     filhos: [
-      { nome: 'Visão geral', href: '/producao/', capa: true },
+      { nome: 'Visão Geral', href: '/producao/', capa: true },
       { nome: 'Pesquisas', href: '/producao/pesquisas/' },
       { nome: 'Publicações Acadêmicas', href: '/producao/publicacoes/' },
       { nome: 'Análises de Conjuntura', href: '/producao/analises-de-conjuntura/' },
@@ -48,7 +48,7 @@ export const MENU: ItemMenu[] = [
     nome: 'Bancos de Dados',
     href: '/bancos-de-dados/',
     filhos: [
-      { nome: 'Visão geral', href: '/bancos-de-dados/', capa: true },
+      { nome: 'Visão Geral', href: '/bancos-de-dados/', capa: true },
       { nome: 'Mapas de Votação', href: '/mapas-de-votacao/' },
     ],
   },
@@ -58,7 +58,7 @@ export const MENU: ItemMenu[] = [
     filhos: [
       // "Todos os Eventos" era rótulo falso: /eventos/ tem só os eventos e NÃO inclui
       // os 36 seminários — as duas listas são disjuntas.
-      { nome: 'Visão geral', href: '/eventos/', capa: true },
+      { nome: 'Visão Geral', href: '/eventos/', capa: true },
       { nome: 'Seminários', href: '/seminarios/' },
     ],
   },

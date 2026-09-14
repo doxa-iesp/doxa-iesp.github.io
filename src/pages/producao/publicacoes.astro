@@ -8,11 +8,12 @@ import { url } from '../../lib/url';
 
 const publicacoes = await getCollection('publicacoes');
 
+// Títulos de bloco em caixa de frase; Title Case fica só para nomes de seção do menu.
 const GRUPOS = [
   { tipo: 'livro', titulo: 'Livros' },
-  { tipo: 'capitulo', titulo: 'Capítulos de Livro' },
-  { tipo: 'artigo', titulo: 'Artigos em Revista Científica' },
-  { tipo: 'outros', titulo: 'Outras Produções' },
+  { tipo: 'capitulo', titulo: 'Capítulos de livro' },
+  { tipo: 'artigo', titulo: 'Artigos em revistas científicas' },
+  { tipo: 'outros', titulo: 'Outras produções' },
 ] as const;
 
 const grupos = GRUPOS.map((g) => ({

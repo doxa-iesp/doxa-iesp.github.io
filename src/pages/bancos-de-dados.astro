@@ -16,7 +16,7 @@ const bancos = (await getCollection('bancos-de-dados')).sort(
 const formatador = new Intl.NumberFormat('pt-BR');
 ---
 
-<Base titulo="Bancos de Dados" descricao={pagina.data.descricao}>
+<Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>
   <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.descricao} />
 
   <section class="secao">

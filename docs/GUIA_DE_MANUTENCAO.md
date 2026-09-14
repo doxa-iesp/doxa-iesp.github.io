@@ -653,9 +653,9 @@ acento, ou no plural), o PR fica vermelho. Use **exatamente** o que está na col
 | Escreva assim | Bloco na página |
 |---|---|
 | `livro` | Livros |
-| `capitulo` | Capítulos de Livro |
-| `artigo` | Artigos em Revista Científica |
-| `outros` | Outras Produções |
+| `capitulo` | Capítulos de livro |
+| `artigo` | Artigos em revistas científicas |
+| `outros` | Outras produções |
 
 ### `tipo` — na mídia (`src/data/midia.yaml`)
 

@@ -1,5 +1,5 @@
 ---
-titulo: "Institucional"
+titulo: "Equipe"
 descricao: "Pesquisadores, pós-doutorandos, pós-graduandos e assistentes que fazem o DOXA."
 ---
 

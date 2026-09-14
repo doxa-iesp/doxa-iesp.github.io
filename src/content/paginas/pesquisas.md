@@ -1,5 +1,5 @@
 ---
-titulo: "Pesquisas do DOXA"
+titulo: "Pesquisas"
 descricao: "Teses, dissertações e projetos do laboratório."
 ---
 

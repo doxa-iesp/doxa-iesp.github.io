@@ -54,10 +54,10 @@ const membros = [...equipe]
     </div>
   </section>
 
+  {/* Sem h2 "Nossa Equipe": a página já se chama Equipe, no h1 logo acima. */}
   <section class="secao">
     <div class="container">
-      <Titulo nivel="h2" titulo="Nossa Equipe" classe="titulo-secao" />
-      <ul class="equipe-grid">
+      <ul class="equipe-grid" aria-label="Membros da equipe">
         {
           membros.map((m) => (
             <CardMembro

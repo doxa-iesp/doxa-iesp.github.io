@@ -27,7 +27,7 @@ const regioes = [...new Set(itens.map((i) => i.data.regiao).filter(Boolean) as s
 const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b) => a.localeCompare(b));
 ---
 
-<Base titulo="Acervo Audiovisual" descricao={pagina.data.descricao}>
+<Base titulo={pagina.data.titulo} descricao={pagina.data.descricao}>
   <PageHero titulo={pagina.data.titulo} subtitulo={pagina.data.descricao} variante="gradiente" />
 
   <section class="secao">
@@ -123,9 +123,13 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
             />
           </div>
           <h3 class="video__titulo">Melhores momentos do horário eleitoral</h3>
+          {/* O período e o histórico vêm do texto do site antigo (extracao/dados/paginas/inicio.md);
+              "20 anos do DOXA" é o título do próprio vídeo no YouTube. */}
           <p class="video__texto">
             Compilação do horário gratuito de propaganda eleitoral do segundo turno das eleições
-            presidenciais, montada a partir do acervo audiovisual do laboratório.
+            presidenciais de 1989 a 2014, montada a partir do acervo audiovisual do laboratório e
+            precedida de um breve histórico das campanhas na TV no Brasil, por Marcus Figueiredo.
+            Especial dos 20 anos do DOXA.
           </p>
         </article>
 
