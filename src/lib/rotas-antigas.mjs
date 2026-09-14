@@ -17,7 +17,8 @@
  *      gerada em /arquivos-antigos.json (src/pages/arquivos-antigos.json.ts).
  *
  * A lista do que existia no site antigo está em extracao/dados/enderecos-antigos.txt.
- * Ao mexer aqui, rode a conferência descrita no CLAUDE.md.
+ * Ao mexer aqui, confira contra ela: cada endereço da lista precisa cair numa página que
+ * existe (CLAUDE.md, "Estrutura do site").
  *
  * `.mjs`, não `.ts`: o astro.config.mjs importa este arquivo.
  */
@@ -121,7 +122,6 @@ export function destinoAntigo(caminho) {
       return termo ? `/acervo/?candidato=${encodeURIComponent(termo)}` : '/acervo/';
     }
     case 'partidos':
-    case 'partido':
       return slug ? `/acervo/?partido=${encodeURIComponent(slug)}` : '/acervo/';
     case 'ano':
       return slug && /^\d{4}$/.test(slug) ? `/acervo/?ano=${slug}` : '/acervo/';
@@ -129,7 +129,10 @@ export function destinoAntigo(caminho) {
       return slug && REGIOES[slug]
         ? `/acervo/?regiao=${encodeURIComponent(REGIOES[slug])}`
         : '/acervo/';
+    // Apesar do nome, /partido/<slug>/ era o endereço da taxonomia de CARGO no WordPress
+    // (/partido/governador/, /partido/presidente/); os partidos viviam em /partidos/.
     case 'cargo-eletivo':
+    case 'partido':
       return slug ? `/acervo/?cargo=${encodeURIComponent(espacos(slug))}` : '/acervo/';
     case 'estado':
     case 'tipo-de-video':

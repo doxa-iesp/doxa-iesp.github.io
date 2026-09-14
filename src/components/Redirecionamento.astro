@@ -22,6 +22,8 @@ interface Props {
 }
 
 const destino = url(Astro.props.para);
+/** O canonical vai absoluto (é o que os buscadores esperam); o redirecionamento continua relativo. */
+const canonica = new URL(destino, Astro.site);
 ---
 
 <!doctype html>
@@ -30,7 +32,7 @@ const destino = url(Astro.props.para);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="refresh" content={`0; url=${destino}`} />
-    <link rel="canonical" href={destino} />
+    <link rel="canonical" href={canonica} />
     <meta name="robots" content="noindex" />
     <title>Esta página mudou de endereço</title>
   </head>

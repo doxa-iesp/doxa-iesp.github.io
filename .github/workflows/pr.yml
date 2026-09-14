@@ -27,7 +27,21 @@ jobs:
         run: npm ci
 
       - name: Build do Astro (valida os schemas — YAML inválido reprova o PR aqui)
-        run: npm run build
+        shell: bash
+        # `pipefail` é obrigatório: sem ele o `tee` devolveria 0 e um build quebrado passaria.
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee build.log
+
+      # A mesma trava do deploy.yml: o loader `file()` do Astro pode sair com código 0 depois
+      # de falhar ao ler um YAML, publicando a coleção vazia. Sem isto, o PR ficaria verde.
+      - name: Nenhuma coleção pode ter falhado em silêncio
+        shell: bash
+        run: |
+          if grep -q "\[file-loader\] Error" build.log; then
+            echo "::error::Uma coleção de dados falhou ao carregar. O site sairia sem esse conteúdo."
+            exit 1
+          fi
 
       - name: Publicar dist/ como artefato para o revisor baixar
         uses: actions/upload-artifact@v4

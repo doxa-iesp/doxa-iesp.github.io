@@ -56,7 +56,7 @@ export const MENU: ItemMenu[] = [
     nome: 'Eventos',
     href: '/eventos/',
     filhos: [
-      // "Todos os Eventos" era rótulo falso: /eventos/ tem 5 itens e NÃO inclui
+      // "Todos os Eventos" era rótulo falso: /eventos/ tem só os eventos e NÃO inclui
       // os 36 seminários — as duas listas são disjuntas.
       { nome: 'Visão geral', href: '/eventos/', capa: true },
       { nome: 'Seminários', href: '/seminarios/' },

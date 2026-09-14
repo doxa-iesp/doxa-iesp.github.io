@@ -43,7 +43,7 @@ const grupos = GRUPOS.map((g) => ({
             <ul class="grade-cards grade-cards--larga">
               {grupo.itens.map((p) => {
                 const fonte = p.data.editora ?? p.data.revista;
-                // Um item não tem ano ("no prelo"); a fonte já costuma trazer essa nota.
+                // Item sem ano é tratado como "no prelo"; se a fonte já traz essa nota, não repete.
                 const anoExibicao = p.data.ano
                   ? p.data.ano
                   : fonte && /\bno prelo\b/i.test(fonte)

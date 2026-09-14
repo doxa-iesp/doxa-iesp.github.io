@@ -7,7 +7,8 @@
  *
  * Regra ao editar schemas: campo que pode faltar de verdade nos dados do DOXA deve ser
  * `.optional()`. Ver checkpoints/00-auditoria-conteudo.md para a lista de lacunas reais
- * (seminários sem descrição/link, equipe sem Lattes/e-mail, 17 pesquisas sem URL).
+ * (seminários sem descrição/link, equipe sem Lattes/e-mail, pesquisas sem URL). O retrato atual
+ * das lacunas está em DADOS_PENDENTES.md.
  */
 import { defineCollection } from 'astro:content';
 import { z } from 'astro:schema';
@@ -29,7 +30,7 @@ function slug(texto: string): string {
  * Carrega um YAML que contém uma LISTA de itens.
  *
  * O loader `file()` do Astro exige que cada item tenha um campo `id`. Escrever `id:` à mão em
- * 34 publicações seria fricção pura para quem edita, então geramos o id a partir do título.
+ * cada publicação seria fricção pura para quem edita, então geramos o id a partir do título.
  * O id só aparece em mensagens de erro do build — não vira URL.
  */
 function listaYaml(caminho: string, campoTitulo = 'titulo') {
@@ -139,7 +140,7 @@ const destaques = defineCollection({
     etiqueta: z.string().optional(), // "Livro", "Evento", "Documentário"…
     imagem: z.string().optional(),
     url: linkOuVazio, // link externo OU um arquivo local em public/
-    rotulo_url: z.string().optional(), // texto do botão; sem isto o card não tem botão
+    rotulo_url: z.string().optional(), // texto do botão; sem isto, o botão diz "Acessar" (sem `url`, não há botão)
     ordem: z.number().optional(),
     ativo: z.boolean().default(true),
   }),
@@ -164,7 +165,7 @@ const publicacoes = defineCollection({
   schema: z.object({
     titulo: z.string(),
     autores: z.string(),
-    ano: z.number().int().min(1990).max(2100).optional(), // há 1 item "no prelo", sem ano
+    ano: z.number().int().min(1990).max(2100).optional(), // opcional para um item "no prelo" ainda sem ano
     tipo: z.enum(['livro', 'capitulo', 'artigo', 'outros']),
     editora: z.string().optional(),
     revista: z.string().optional(),
@@ -230,7 +231,7 @@ const pesquisas = defineCollection({
     orientador: z.string().optional(),
     instituicao: z.string().optional(),
     status: z.enum(['tese', 'andamento', 'concluida']),
-    url: linkOuVazio, // pode ser externo ou um PDF local em public/pdfs/; 17 de 61 não têm link
+    url: linkOuVazio, // pode ser externo ou um PDF local em public/pdfs/; metade das pesquisas não tem link
     descricao: z.string().optional(),
   }),
 });
@@ -259,7 +260,7 @@ const bancosDeDados = defineCollection({
     descricao: z.string(),
     cobertura: z.string().optional(),
     registros: z.number().int().optional(),
-    url: urlOuVazio, // página do banco no site antigo (some quando o WordPress for desligado)
+    url: urlOuVazio, // página externa do banco, se houver (a do site antigo foi retirada: o WordPress saiu do ar)
     pagina: z.string().optional(), // rota interna, ex.: "/mapas-de-votacao/"
     download: z.string().optional(), // CSV em public/dados/
     arquivo: z.string().optional(),

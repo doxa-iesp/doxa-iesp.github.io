@@ -35,7 +35,7 @@ jobs:
       - name: Instalar dependências (determinístico)
         run: npm ci
 
-      # `npm run build` = `node scripts/validar-dados.mjs && astro build`.
+      # `npm run build` = `npm run validar && astro build` (validar = node scripts/validar-dados.mjs).
       # O validador existe porque o loader `file()` do Astro engole erros de YAML e sai com
       # código 0, publicando a coleção vazia. Ver scripts/validar-dados.mjs.
       - name: Build do Astro (valida o conteúdo antes)
