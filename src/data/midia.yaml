@@ -67,7 +67,6 @@
   veiculo: Folha de São Paulo
   data: '2020-03-02'
   tipo: impressa
-  url: https://weseek.com.br/viewnews/ViewMateria.html?materiaId=47632554&canalId=486707&clienteId=P9ybjMtObrI=
 - titulo: Por seu intervencionismo imoderado, STF não terá como evitar confronto com Bolsonaro
   autores: Figueiredo, Argelina; Limongi, Fernando
   veiculo: Folha de São Paulo
@@ -84,7 +83,7 @@
   veiculo: O Globo impresso
   data: '2020-08-30'
   tipo: impressa
-  url: https://oglobo.globo.com/brasil/roteiro-de-viagens-de-bolsonaro-mira-obras-auxilio-24614240?versao=amp
+  url: https://oglobo.globo.com/politica/roteiro-de-viagens-de-bolsonaro-mira-obras-auxilio-24614240
 - titulo: Um em cada três candidatos a prefeito no país não tem coligação com outro partido
   autores: Botelho, Carolina
   veiculo: O Globo impresso
@@ -96,7 +95,7 @@
   veiculo: Nexo
   data: '2019-06-06'
   tipo: impressa
-  url: https://www.nexojornal.com.br/ensaio/2019/Reforma-da-Previd%C3%AAncia-e-a-articula%C3%A7%C3%A3o-pol%C3%ADtica-terceirizada?utm_campaign=anexo&utm_source=anexo
+  url: https://www.nexojornal.com.br/ensaio/2019/Reforma-da-Previd%C3%AAncia-e-a-articula%C3%A7%C3%A3o-pol%C3%ADtica-terceirizada
 - titulo: Desconstruindo Mitos
   autores: Figueiredo, Argelina
   veiculo: Pesquisa Fapesp
@@ -119,7 +118,7 @@
   veiculo: Folha de São Paulo
   data: '2016-05-13'
   tipo: impressa
-  url: http://www1.folha.uol.com.br/poder/2016/05/1770900-o-que-deu-errado-nao-culpemos-as-instituicoes.shtml
+  url: https://www1.folha.uol.com.br/poder/2016/05/1770900-o-que-deu-errado-nao-culpemos-as-instituicoes.shtml
 - titulo: A anatomia do PMDB
   autores: Natália Maciel
   veiculo: Valor Econômico
@@ -131,37 +130,37 @@
   veiculo: The Economist
   data: '2015-07-25'
   tipo: impressa
-  url: http://www.economist.com/news/americas/21659731-junior-partner-government-running-country-power-behind-throne
+  url: https://www.economist.com/news/americas/21659731-junior-partner-government-running-country-power-behind-throne
 - titulo: Avaliação de Cabral e voto
   autores: Borba, Felipe
   veiculo: O Dia
   data: '2014-03-21'
   tipo: impressa
-  url: http://odia.ig.com.br/noticia/opiniao/2014-03-21/felipe-borba-avaliacao-de-cabral-e-voto.html
+  url: https://odia.ig.com.br/noticia/opiniao/2014-03-21/felipe-borba-avaliacao-de-cabral-e-voto.html
 - titulo: Os limites do voto no Rio
   autores: Borba, Felipe
   veiculo: O Dia
   data: '2014-05-16'
   tipo: impressa
-  url: http://odia.ig.com.br/noticia/opiniao/2014-05-16/felipe-borba-os-limites-do-voto-no-rio.html
+  url: https://odia.ig.com.br/noticia/opiniao/2014-05-16/felipe-borba-os-limites-do-voto-no-rio.html
 - titulo: Pela propaganda negativa
   autores: Borba, Felipe
   veiculo: O Dia
   data: '2014-09-27'
   tipo: impressa
-  url: http://odia.ig.com.br/noticia/opiniao/2014-09-27/felipe-borba-pela-propaganda-negativa.html
+  url: https://odia.ig.com.br/noticia/opiniao/2014-09-27/felipe-borba-pela-propaganda-negativa.html
 - titulo: Fora da briga para presidência, estratégia do PMDB é focar em prefeituras
   autores: Maakaroun, Bertha
   veiculo: Estado de Minas
   data: '2012-02-26'
   tipo: impressa
-  url: http://www.em.com.br/app/noticia/politica/2012/02/26/interna_politica,280010/fora-da-briga-para-presidencia-estrategia-do-pmdb-e-focar-em-prefeituras.shtml
+  url: https://www.em.com.br/app/noticia/politica/2012/02/26/interna_politica,280010/fora-da-briga-para-presidencia-estrategia-do-pmdb-e-focar-em-prefeituras.shtml
 - titulo: O povo e as elites nas eleições brasileiras
   autores: Figueiredo, Argelina
   veiculo: Valor Econômico
   data: '2010-10-08'
   tipo: impressa
-  url: http://www.valor.com.br/arquivo/851291/o-povo-e-elites-nas-eleicoes-brasileiras#ixzz2mKPU5ibY
+  url: https://web.archive.org/web/20210225111704/http://www.valor.com.br/arquivo/851291/o-povo-e-elites-nas-eleicoes-brasileiras
 - titulo: Fraud is not usual, but conspiracy theories are
   autores: Martins, Flávia Bozza
   veiculo: Latinoamérica21
@@ -173,7 +172,7 @@
   veiculo: DW Made for minds
   data: '2022-11-04'
   tipo: virtual
-  url: https://www.dw.com/pt-br/lula-e-o-desafio-de-reconstruir-o-brasil/a-63636420?maca=pt-br-Twitter-sharing
+  url: https://www.dw.com/pt-br/lula-e-o-desafio-de-reconstruir-o-brasil/a-63636420
 - titulo: Distante do povo, Câmara dos Deputados vive dilema entre representação e governabilidade
   autores: Figueiredo, Argelina
   veiculo: InfoMoney
@@ -221,7 +220,6 @@
   veiculo: meio político
   data: '2022-10-05'
   tipo: virtual
-  url: https://mail.google.com/mail/u/3/?ui=2&view=btop&ver=1vtowiue3ckng#attid%253Datt_183c2ee189826634_0.2_f_l931n5bt1
 - titulo: Petrobras é a nova fake news de um ano eleitoral desvantajoso para Bolsonaro
   autores: Botelho, Carolina
   veiculo: JOTA
@@ -257,13 +255,13 @@
   veiculo: BR Político/Estadão
   data: '2020-09-21'
   tipo: virtual
-  url: https://brpolitico.com.br/brp-fique-de-olho/relatorio-21-09/
+  url: https://web.archive.org/web/20201101142744/https://brpolitico.com.br/brp-fique-de-olho/relatorio-21-09/
 - titulo: Maia procura candidato que segure governo e fale com a oposição
   autores: Botelho, Carolina
   veiculo: BR Político
   data: '2020-08-03'
   tipo: virtual
-  url: https://brpolitico.com.br/brp-fique-de-olho/relatorio-semanal-3-de-agosto/
+  url: https://web.archive.org/web/20200919052822/https://brpolitico.com.br/brp-fique-de-olho/relatorio-semanal-3-de-agosto/
 - titulo: Por que Bolsonaro recuou e não demitiu Mandetta
   autores: Botelho, Carolina
   veiculo: Nexo
@@ -287,7 +285,7 @@
   veiculo: BR Político/Estadão
   data: '2020-08-05'
   tipo: virtual
-  url: https://brpolitico.com.br/noticias/aproximacao-do-governo-com-o-centrao-atinge-bolsonaristas-raiz/
+  url: https://web.archive.org/web/20200930145445/https://brpolitico.com.br/noticias/aproximacao-do-governo-com-o-centrao-atinge-bolsonaristas-raiz/
 - titulo: A politização da pandemia
   autores: Botelho, Carolina
   veiculo: Coronavírus em Xeque
@@ -305,7 +303,7 @@
   veiculo: Le Monde Diplomatique Brasil
   data: '2020-05-04'
   tipo: virtual
-  url: https://diplomatique.org.br/siga-o-lider/?fbclid=IwAR37J8zABKGKNGC-k8Ewvo3BGXU7UczzEF-I105K3ZQ2SMuYV_IoSZ1qf0w
+  url: https://diplomatique.org.br/siga-o-lider/
 - titulo: Como bolsonaristas radicais são atingidos pela adesão do centrão
   autores: Botelho, Carolina
   veiculo: Nexo
@@ -336,25 +334,25 @@
   veiculo: VOTAAÍ!
   data: '2020'
   tipo: virtual
-  url: http://votaai.com.br/eles-sao-todos-iguais/
+  url: https://web.archive.org/web/20220706135649/https://www.votaai.com.br/eles-sao-todos-iguais/
 - titulo: PROGRAMAS DE GOVERNO ENTRE A POLÍTICA E A CIÊNCIA POLÍTICA – UM DESABAFO
   autores: Salles, Nara
   veiculo: Horizontes ao sul
   data: '2020-11-13'
   tipo: virtual
-  url: https://www.horizontesaosul.com/single-post/2020/11/13/PROGRAMAS-DE-GOVERNO-ENTRE-A-POLITICA-E-A-CIENCIA-POLITICA-UM-DESABAFO
+  url: https://web.archive.org/web/20201113145449/https://www.horizontesaosul.com/single-post/2020/11/13/PROGRAMAS-DE-GOVERNO-ENTRE-A-POLITICA-E-A-CIENCIA-POLITICA-UM-DESABAFO
 - titulo: As propostas para a saúde e a pandemia como um fator contextual
   autores: Silva, Carolini
   veiculo: VOTAAÍ!
   data: '2020'
   tipo: virtual
-  url: http://votaai.com.br/as-propostas-para-a-saude-e-a-pandemia-como-um-fator-contextual/
+  url: https://web.archive.org/web/20220706130001/https://www.votaai.com.br/as-propostas-para-a-saude-e-a-pandemia-como-um-fator-contextual/
 - titulo: 'Filiações partidárias no Brasil: mais do mesmo?'
   autores: Botelho, Carolina
   veiculo: Exame
   data: '2018-04-19'
   tipo: virtual
-  url: https://exame.abril.com.br/blog/opiniao/filiacoes-partidarias-no-brasil-mais-do-mesmo/
+  url: https://exame.com/colunistas/opiniao/filiacoes-partidarias-no-brasil-mais-do-mesmo/
 - titulo: 'Reforma da Previdência: as lições de FHC e Lula'
   autores: Botelho, Carolina
   veiculo: Exame
@@ -366,19 +364,19 @@
   veiculo: Na base dos dados
   data: '2017-05-26'
   tipo: virtual
-  url: http://blogs.oglobo.globo.com/na-base-dos-dados/post/como-percepcao-da-corrupcao-dificulta-adesao-reforma-da-previdencia.html
+  url: https://blogs.oglobo.globo.com/na-base-dos-dados/post/como-percepcao-da-corrupcao-dificulta-adesao-reforma-da-previdencia.html
 - titulo: Dilma está vivendo o mesmo que FHC antes
-  autores: Argelina, Antonio
-  veiculo: Avol
+  autores: Figueiredo, Argelina
+  veiculo: Folha de S.Paulo (reproduzida pelo AVOL)
   data: '2015-03-15'
   tipo: virtual
-  url: http://www.antonioviana.com.br/2009/site/ver_noticia.php?id=110318
+  url: https://web.archive.org/web/20150402080333/http://www.antonioviana.com.br/2009/site/ver_noticia.php?id=110318
 - titulo: Quem avança primeiro, Dilma ou os apoiadores do impeachment?
   autores: Figueiredo, Argelina
-  veiculo: Central Gazeta de Notícias
+  veiculo: Jornal GGN
   data: '2015-02-09'
   tipo: virtual
-  url: http://jornalggn.com.br/tag/blogs/argelina-figueiredo
+  url: https://jornalggn.com.br/politica/quem-avanca-primeiro-dilma-ou-os-apoiadores-do-impeachment/
 - titulo: A Ditadura interna do PMDB ou a Era Temer?
   autores: Maciel, Natalia
   veiculo: Escuta

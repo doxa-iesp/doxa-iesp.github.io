@@ -168,13 +168,13 @@
   arquivos:
   - rotulo: PDF
     url: /pdfs/analises/Curvelo-D.-Resumo-do-Horario-Eleitoral-Gratuito-–-4a-Semana-259-a-2992018.pdf
-- titulo: Horário Eleitoral Gratuito — Governador do Estado do Rio de Janeiro (2018)
+- titulo: Resumo do HGPE — Governador do Estado do Rio de Janeiro (1–3/10/2018)
   ciclo: '2018'
   periodo: Eleições Gerais 2018
-  descricao: 'Autor: Curvelo, D. (mesmo PDF do resumo da 4ª Semana, reutilizado no site de origem).'
+  descricao: 'Autor: Curvelo, D.'
   arquivos:
   - rotulo: PDF
-    url: /pdfs/analises/Curvelo-D.-Resumo-do-Horario-Eleitoral-Gratuito-–-4a-Semana-259-a-2992018.pdf
+    url: /pdfs/analises/006-Analise-Critica-2018-Resumo-Horario-Eleitoral-de-Propaganda-para-Governador-do-Estado-do-Rio-de-Janeiro.pdf
 - titulo: Análise Crítica 2018 — Os partidos nas eleições proporcionais no Estado do Rio
   ciclo: '2018'
   periodo: Eleições Gerais 2018
@@ -182,14 +182,6 @@
   arquivos:
   - rotulo: Partido nas Eleições
     url: /pdfs/analises/006-Analise-Critica-2018-Os-partidos-nas-eleicoes-proporcionais-no-Estado-do-Rio.pdf
-- titulo: Análise Crítica 2018 — Resumo do Horário Eleitoral de Propaganda para Governador do Estado do
-    Rio de Janeiro
-  ciclo: '2018'
-  periodo: Eleições Gerais 2018
-  descricao: Item da seção "Análise Crítica" da página /analise/ (versão alternativa da página de análises).
-  arquivos:
-  - rotulo: Propaganda Eleitoral
-    url: /pdfs/analises/006-Analise-Critica-2018-Resumo-Horario-Eleitoral-de-Propaganda-para-Governador-do-Estado-do-Rio-de-Janeiro.pdf
 - titulo: Análise Crítica 2018 — O que esperam os eleitores indecisos progressistas para o pleito presidencial
   ciclo: '2018'
   periodo: Eleições Gerais 2018
