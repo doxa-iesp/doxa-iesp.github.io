@@ -120,8 +120,13 @@ só `public/` entra no build.
 - **Buscas e filtros** normalizam texto com `normalizar()` e casam com `casaBusca()`, ambos em
   [src/lib/texto.ts](src/lib/texto.ts): todos os termos, cada um como início de palavra. As listas com
   abas usam [AbasFiltro.astro](src/components/AbasFiltro.astro), que aceita busca (`busca`, com
-  `?busca=` na URL) e esconde grupos vazios (`[data-filtro-grupo]`). O acervo aceita
-  `?candidato=`, `?ano=`, `?cargo=`, `?regiao=`, `?partido=` e âncora `#item-<código>`.
+  `?busca=` na URL) e esconde grupos vazios (`[data-filtro-grupo]`). As "abas" são botões de
+  alternância (`aria-pressed`), não `role="tab"`: não há painel de aba, é um filtro sobre a mesma
+  lista. O acervo aceita `?candidato=`, `?ano=`, `?cargo=`, `?regiao=`, `?partido=` e âncora
+  `#item-<código>`; o formulário de filtros não é enviado (Enter só filtra).
+- **Links com o mesmo texto** ("Ver mapa", "Baixar os dados (CSV)", "Assistir no Google Drive")
+  ganham contexto para leitor de tela: `aria-describedby` apontando para o título do item, ou texto
+  na classe global `.visualmente-oculto`. Ao criar lista com botões repetidos, faça o mesmo.
 
 ## Sistema visual
 

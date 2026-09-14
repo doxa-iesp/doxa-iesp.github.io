@@ -42,9 +42,15 @@ function rotuloAnexo(u: string): string {
   {
     imagem && (
       <div class="evento__foto">
-        {/* alt vazio de propósito: a capa é decorativa e o título vem logo abaixo,
-            no <h2>. Com alt descritivo o leitor de tela anunciaria o título duas vezes. */}
-        <img src={url(imagem)} alt="" loading="lazy" width="640" height="360" />
+        {/* Com descrição, a capa é decorativa: o título vem logo abaixo, no <h2>, e a descrição
+            repete o que o cartaz diz — alt descritivo faria o leitor de tela anunciar o título
+            duas vezes. SEM descrição, a informação do evento só existe no cartaz, e a imagem
+            deixa de ser decorativa. */}
+        {descricao ? (
+          <img src={url(imagem)} alt="" loading="lazy" width="640" height="360" />
+        ) : (
+          <img src={url(imagem)} alt={`Cartaz: ${titulo}`} loading="lazy" width="640" height="360" />
+        )}
       </div>
     )
   }

@@ -3,7 +3,7 @@ import { getCollection, getEntry, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import AbasFiltro from '../../components/AbasFiltro.astro';
-import { linkPara } from '../../lib/url';
+import { linkPara, url } from '../../lib/url';
 import { normalizar } from '../../lib/texto';
 
 const pagina = (await getEntry('paginas', 'pesquisas'))!;
@@ -45,6 +45,7 @@ const abas = [
 
   <section class="secao">
     <div class="container">
+      <p class="voltar"><a href={url('/producao/')}>← Toda a produção</a></p>
       <div class="prosa prosa--intro"><Content /></div>
 
       <AbasFiltro

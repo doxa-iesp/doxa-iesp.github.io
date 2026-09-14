@@ -82,6 +82,11 @@ const { id, titulo, miniatura } = Astro.props;
   .video-yt__fachada:focus-visible .video-yt__play {
     transform: scale(1.08);
   }
+  /* A fachada ocupa a caixa inteira, que tem overflow: hidden — o anel de foco global, desenhado
+     por fora (outline-offset: 2px), era cortado. Por dentro ele aparece. */
+  .video-yt__fachada:focus-visible {
+    outline-offset: -4px;
+  }
   /* O rótulo existe para leitor de tela e para quem navega por teclado; o botão
      de play já comunica visualmente. */
   .video-yt__rotulo {

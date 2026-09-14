@@ -74,7 +74,12 @@ const grupos = anosOrdenados.map((ano) => {
                         <li>
                           <a href={mapa.data.url} target="_blank" rel="noopener noreferrer">
                             {rotulo}
-                            <span aria-hidden="true"> (PDF ↗)</span>
+                            {/* O contexto (cargo e ano) só para leitor de tela: sem ele, a lista
+                                de links da página tinha 15 "Ver mapa" e 9 "PT" indistintos. */}
+                            <span class="visualmente-oculto">
+                              {rotulo === 'Ver mapa' ? ` de ${cargo}` : `, ${cargo}`}, {grupo.ano}
+                            </span>
+                            {' '}(PDF<span aria-hidden="true"> ↗</span>)
                           </a>
                         </li>
                       );
@@ -121,6 +126,11 @@ const grupos = anosOrdenados.map((ano) => {
   }
   .mapas-ano__cabecalho::-webkit-details-marker {
     display: none;
+  }
+  /* O <details> tem overflow: hidden, que cortava o anel de foco global (desenhado por fora):
+     navegando por teclado, não dava para ver qual ano estava selecionado. Por dentro ele aparece. */
+  .mapas-ano__cabecalho:focus-visible {
+    outline-offset: -4px;
   }
   .mapas-ano__cabecalho::before {
     content: '▸';

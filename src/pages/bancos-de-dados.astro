@@ -25,9 +25,12 @@ const formatador = new Intl.NumberFormat('pt-BR');
 
       <ul class="bancos">
         {
-          bancos.map((banco) => (
+          bancos.map((banco, i) => (
             <li class="banco">
-              <h2 class="banco__nome">{banco.data.nome}</h2>
+              {/* id por posição, não por slug: os dois bancos de programas eleitorais geram o
+                  mesmo slug. Os botões apontam para este título (aria-describedby), senão o
+                  leitor de tela ouve três "Baixar os dados (CSV)" sem saber de qual banco. */}
+              <h2 class="banco__nome" id={`banco-${i + 1}`}>{banco.data.nome}</h2>
               <p class="banco__descricao">{banco.data.descricao}</p>
 
               {banco.data.aviso && (
@@ -53,7 +56,11 @@ const formatador = new Intl.NumberFormat('pt-BR');
 
               <div class="banco__acoes">
                 {banco.data.pagina && (
-                  <a class="btn btn-primario" href={url(banco.data.pagina)}>
+                  <a
+                    class="btn btn-primario"
+                    href={url(banco.data.pagina)}
+                    aria-describedby={`banco-${i + 1}`}
+                  >
                     {banco.data.rotulo_pagina ?? 'Ver no site'}
                   </a>
                 )}
@@ -65,6 +72,7 @@ const formatador = new Intl.NumberFormat('pt-BR');
                     <a
                       class="btn btn-contorno"
                       href={linkPara(arquivo.url)}
+                      aria-describedby={`banco-${i + 1}`}
                       download={baixar}
                       target={fora ? '_blank' : undefined}
                       rel={fora ? 'noopener noreferrer' : undefined}

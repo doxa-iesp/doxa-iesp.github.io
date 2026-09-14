@@ -19,7 +19,9 @@
  *   do WordPress chegam já filtrados (ver src/lib/rotas-antigas.mjs).
  * - Elementos `[data-filtro-grupo]` dentro do alvo (um ano, por exemplo) somem quando
  *   nenhum item deles está visível — sem isso, filtrar deixaria títulos órfãos.
- * Botões seguem o padrão ARIA: role="tab" + aria-selected, navegáveis por setas do teclado.
+ * Os botões são botões de alternância (`aria-pressed`) num grupo, navegáveis por Tab. Até
+ * 2026-09-14 usavam `role="tab"`, mas não existe painel de aba (`role="tabpanel"`): é um filtro
+ * sobre a mesma lista, e o padrão de abas prometia ao leitor de tela algo que a página não tem.
  */
 interface Aba {
   id: string;
@@ -51,18 +53,16 @@ const { alvo, abas, rotuloGrupo = 'Filtrar itens', busca } = Astro.props;
       </div>
     )
   }
-  <div class="abas__lista" role="tablist" aria-label={rotuloGrupo}>
+  <div class="abas__lista" role="group" aria-label={rotuloGrupo}>
     {
       abas.map((aba, i) => (
         <button
           type="button"
-          role="tab"
           id={`aba-${alvo}-${aba.id}`}
           class="aba"
           data-filtro={aba.id}
-          aria-selected={i === 0 ? 'true' : 'false'}
+          aria-pressed={i === 0 ? 'true' : 'false'}
           aria-controls={alvo}
-          tabindex={i === 0 ? 0 : -1}
         >
           {aba.rotulo}
         </button>
@@ -83,7 +83,7 @@ const { alvo, abas, rotuloGrupo = 'Filtrar itens', busca } = Astro.props;
     const alvo = alvoId ? document.getElementById(alvoId) : null;
     if (!alvo) return;
 
-    const abas = Array.from(raiz.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    const abas = Array.from(raiz.querySelectorAll<HTMLButtonElement>('[data-filtro]'));
     const itens = Array.from(alvo.querySelectorAll<HTMLElement>('[data-filtro-valor]'));
     const grupos = Array.from(alvo.querySelectorAll<HTMLElement>('[data-filtro-grupo]'));
     const campo = raiz.querySelector<HTMLInputElement>('[data-busca-campo]');
@@ -123,9 +123,7 @@ const { alvo, abas, rotuloGrupo = 'Filtrar itens', busca } = Astro.props;
 
     function selecionar(aba: HTMLButtonElement) {
       abas.forEach((t) => {
-        const ativa = t === aba;
-        t.setAttribute('aria-selected', ativa ? 'true' : 'false');
-        t.tabIndex = ativa ? 0 : -1;
+        t.setAttribute('aria-pressed', t === aba ? 'true' : 'false');
       });
       filtro = aba.getAttribute('data-filtro') ?? 'todas';
       aplicar();
@@ -151,22 +149,6 @@ const { alvo, abas, rotuloGrupo = 'Filtrar itens', busca } = Astro.props;
     // Estado inicial: sem isto o contador só aparecia depois do primeiro clique,
     // então quem chegava na página não via quantos itens a lista tem.
     aplicar();
-
-    // Navegação por teclado dentro do tablist (setas, Home, End).
-    raiz.querySelector('[role="tablist"]')?.addEventListener('keydown', (evento) => {
-      const e = evento as KeyboardEvent;
-      const i = abas.indexOf(document.activeElement as HTMLButtonElement);
-      if (i < 0) return;
-      let j = i;
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') j = (i + 1) % abas.length;
-      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') j = (i - 1 + abas.length) % abas.length;
-      else if (e.key === 'Home') j = 0;
-      else if (e.key === 'End') j = abas.length - 1;
-      else return;
-      e.preventDefault();
-      abas[j].focus();
-      selecionar(abas[j]);
-    });
   });
 </script>
 
@@ -227,7 +209,7 @@ const { alvo, abas, rotuloGrupo = 'Filtrar itens', busca } = Astro.props;
   .aba:hover {
     border-color: var(--cor-primaria);
   }
-  .aba[aria-selected='true'] {
+  .aba[aria-pressed='true'] {
     background: var(--cor-primaria);
     border-color: var(--cor-primaria);
     color: var(--cor-branco);

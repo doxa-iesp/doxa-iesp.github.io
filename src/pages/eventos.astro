@@ -20,9 +20,14 @@ const eventos = (await getCollection('eventos')).sort(
 
   <section class="secao">
     <div class="container">
-      <div class="prosa prosa--medida">
-        <Content />
-      </div>
+      {/* A página de eventos não tem texto de introdução hoje; sem o teste, sobrava uma caixa vazia. */}
+      {
+        pagina.body?.trim() && (
+          <div class="prosa prosa--medida">
+            <Content />
+          </div>
+        )
+      }
 
       {
         eventos.length > 0 ? (

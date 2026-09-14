@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { normalizar } from '../lib/texto';
+import { idItemAcervo } from '../lib/ancoras.mjs';
 
 interface Props {
   item: CollectionEntry<'acervo'>['data'];
@@ -12,6 +13,8 @@ const dataCargo = item.cargo.map(normalizar).join('|');
 const dataPartidos = item.partidos.map(normalizar).join('|');
 const dataCandidatos = item.candidatos.map(normalizar).join('|');
 const dataRegiao = item.regiao ? normalizar(item.regiao) : '';
+// O <li> em volta do card já usa idItemAcervo(codigo) como âncora; o código leva um sufixo.
+const idCodigo = `${idItemAcervo(item.codigo)}-codigo`;
 ---
 
 <article
@@ -23,7 +26,7 @@ const dataRegiao = item.regiao ? normalizar(item.regiao) : '';
   data-candidatos={dataCandidatos}
 >
   <header class="card-acervo__topo">
-    <span class="card-acervo__codigo">{item.codigo}</span>
+    <span class="card-acervo__codigo" id={idCodigo}>{item.codigo}</span>
     {item.tipo_video && <span class="card-acervo__tipo">{item.tipo_video}</span>}
   </header>
 
@@ -96,11 +99,13 @@ const dataRegiao = item.regiao ? normalizar(item.regiao) : '';
     )
   }
 
+  {/* São 95 "Assistir no Google Drive" na página; o código da fita diz ao leitor de tela qual. */}
   <a
     class="card-acervo__link"
     href={item.url}
     target="_blank"
     rel="noopener noreferrer"
+    aria-describedby={idCodigo}
   >
     Assistir no Google Drive
     <span aria-hidden="true">↗</span>

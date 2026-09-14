@@ -375,9 +375,18 @@ const idResumo = `resumo-${titulo
       .querySelector('.pub__dialogo-fechar')
       ?.addEventListener('click', () => dialogo.close());
 
-    // clicar fora da caixa fecha
+    // Clicar fora da caixa fecha. `evento.target === dialogo` sozinho não basta: o clique no
+    // espaço interno (padding) da própria caixa também tem o diálogo como alvo, e fechava o resumo
+    // no meio da leitura. O que separa "fora" de "dentro" é a posição do clique.
     dialogo.addEventListener('click', (evento) => {
-      if (evento.target === dialogo) dialogo.close();
+      if (evento.target !== dialogo) return;
+      const r = dialogo.getBoundingClientRect();
+      const fora =
+        evento.clientX < r.left ||
+        evento.clientX > r.right ||
+        evento.clientY < r.top ||
+        evento.clientY > r.bottom;
+      if (fora) dialogo.close();
     });
   });
 </script>

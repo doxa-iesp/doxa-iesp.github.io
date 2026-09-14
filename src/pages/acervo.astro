@@ -100,7 +100,7 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
       </ul>
 
       <p id="sem-resultados" class="sem-resultados" role="status" hidden>
-        Nenhum item corresponde aos filtros selecionados. Tente ampliar a busca ou
+        Nenhum item corresponde aos filtros selecionados. Tente ampliar a busca ou{' '}
         <button type="button" id="sem-resultados-limpar" class="link-inline">limpar os filtros</button>.
       </p>
     </div>
@@ -341,6 +341,11 @@ const partidos = [...new Set(itens.flatMap((i) => i.data.partidos))].sort((a, b)
   }
 
   if (busca && ano && cargo && regiao && partido && contador && semResultados) {
+    // Os filtros estão num <form> com um campo de texto: apertar Enter o enviaria, recarregando
+    // a página e perdendo a busca (o teclado do celular mostra justamente a tecla "Buscar").
+    // A filtragem já acontece enquanto se digita; o envio não tem o que fazer.
+    busca.form?.addEventListener('submit', (evento) => evento.preventDefault());
+
     const aplicar = () => {
       const fAno = ano.value;
       const fCargo = cargo.value;
