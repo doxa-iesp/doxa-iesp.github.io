@@ -25,6 +25,9 @@ exclude = [
   '^https?://(dx\.)?doi\.org/10\.7476/', # DOIs do SciELO Livros: redirecionam para o de cima
   '^https?://(www\.)?kas\.de/',
   '^https?://divulgacandcontas\.tse\.jus\.br/',
+  # Responde 403 aos servidores do GitHub (proteção da Cloudflare) e 200 a quem acessa do Brasil.
+  # Conferido em 2026-09-14: os dois artigos abrem, com o título do item de mídia.
+  '^https?://(www\.)?diplomatique\.org\.br/',
 
   # Abrem no navegador, mas a conexão segura falha em ferramentas: o Lattes usa uma configuração
   # que o lychee não aceita ("HandshakeFailure"); o sites.ufpe.br não envia a cadeia completa
