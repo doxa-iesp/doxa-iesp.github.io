@@ -88,7 +88,19 @@ para quem tem a senha.
 
 No dia 1 de cada mês, o GitHub confere sozinho todos os links de fora do site. Se algum não abrir,
 ele abre uma issue chamada **"Links quebrados"** (aba **Issues** do repositório), com a lista dos
-links e o arquivo onde cada um está. Se a issue já estiver aberta, ele comenta nela. Para cada link:
+links e o arquivo onde cada um está. Se a issue já estiver aberta, ele comenta nela.
+
+**Link do Google Drive** (seção "Google Drive e Docs" do relatório): não troque o link.
+
+- "Deixou de ser público": peça a quem administra o Drive do DOXA para voltar o compartilhamento
+  do arquivo a "Qualquer pessoa com o link".
+- "Não existe mais": tente restaurar o arquivo da lixeira do Drive, e o link volta a valer.
+  Reenviar o arquivo cria um link novo, que precisa ser trocado nos dados; nesse caso, peça ajuda
+  a quem cuida do código.
+- "Não deu para conferir" não é problema: o Google recusou os pedidos naquele dia, e a checagem do
+  mês seguinte confere de novo.
+
+**Qualquer outro link:**
 
 1. Abra numa **janela anônima**.
 2. **Abriu e mostra a matéria certa?** É alarme falso: alguns sites recusam robôs. Comente na issue

@@ -262,16 +262,19 @@ fica sem botão. Nunca link de Gmail ou Drive pessoal. Para baixar um arquivo do
 `https://web.archive.org/web/<timestamp>id_/<url>` e confira que não veio cortado: capturas antigas
 podem parar em exatamente 1 MiB (1.048.576 bytes), e PDF inteiro termina em `%%EOF`.
 
-Desde 2026-09-14, [links-externos.yml](.github/workflows/links-externos.yml) roda o lychee no dia 1
-de cada mês sobre `src/data/*.yaml` e `src/content/**/*` e abre (ou comenta) a issue com o rótulo
-`links-quebrados`. São dois passos: um geral ([lychee.toml](.github/lychee.toml)) e um só para
-Drive e Docs ([lychee-drive.toml](.github/lychee-drive.toml)), um pedido por segundo e **sem seguir
-redirecionamento**, porque arquivo que deixou de ser público redireciona para o login em vez de dar
-404. Três limites: não pega **domínio tomado** (a página de spam responde 200 — o caso do APK acima
-passaria); cada exclusão em `lychee.toml` é um alarme falso conferido no navegador (sites que
-recusam robôs, TLS que o lychee não aceita), e link excluído nunca mais é conferido; e o GitHub
-**desliga agendamentos** depois de 60 dias sem commit no repositório — reative em Actions. Falso
-positivo se resolve no `lychee.toml`, nunca mexendo no dado.
+Desde 2026-09-14, [links-externos.yml](.github/workflows/links-externos.yml) confere no dia 1 de
+cada mês os links de `src/data/*.yaml` e `src/content/**/*` e abre (ou comenta) a issue com o rótulo
+`links-quebrados`. Dois passos: o lychee para os links em geral ([lychee.toml](.github/lychee.toml))
+e [scripts/checar-links-drive.mjs](scripts/checar-links-drive.mjs) para Drive e Docs. O Drive tem
+script próprio porque o Google **redireciona nos dois casos que importam** — arquivo que deixou de
+ser público (vai para o login) e pedidos demais (vai para a página "sorry", ou dá 429) — e o lychee
+não distingue um do outro: na segunda rodada, 18 mapas "quebraram" e abriam minutos depois. O script
+separa pelo destino do redirecionamento e só dá como quebrado o que falha em três tentativas
+(agora, +2 min, +10 min). Limites: não pega **domínio tomado** (a página de spam responde 200 — o
+caso do APK acima passaria); cada exclusão em `lychee.toml` é um alarme falso conferido à mão (site
+que recusa os servidores do GitHub, TLS que o lychee não aceita), e link excluído nunca mais é
+conferido; e o GitHub **desliga agendamentos** depois de 60 dias sem commit no repositório —
+reative em Actions. Falso positivo se resolve no `lychee.toml`, nunca mexendo no dado.
 
 **3. Defeito na fonte: `programas-eleitorais-capitais.csv`.** A coluna `municipio` está
 rotacionada em relação aos candidatos (Eduardo Paes aparece como Florianópolis). Documentado em

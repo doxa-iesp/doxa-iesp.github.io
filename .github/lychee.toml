@@ -16,12 +16,13 @@ retry_wait_time = 5
 accept = ["200..=299", "429"]
 
 exclude = [
-  # Google Drive e Docs têm passo próprio, mais lento (.github/lychee-drive.toml).
+  # Google Drive e Docs têm verificador próprio, mais lento (scripts/checar-links-drive.mjs).
   '^https?://(drive|docs)\.google\.com/',
 
   # Recusam robôs (403, desafio anti-bot) e abrem normalmente no navegador.
   '^https?://(www\.)?economist\.com/',
   '^https?://books\.scielo\.org/',
+  '^https?://(www\.)?scielo\.br/', # 403 numa das duas primeiras rodadas no GitHub; daqui, 200
   '^https?://(dx\.)?doi\.org/10\.7476/', # DOIs do SciELO Livros: redirecionam para o de cima
   '^https?://(www\.)?kas\.de/',
   '^https?://divulgacandcontas\.tse\.jus\.br/',

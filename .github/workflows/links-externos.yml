@@ -5,7 +5,7 @@ name: Links externos
 # Não bloqueia nada: o deploy não depende disto.
 #
 # Links internos não passam por aqui; o build já confere todos (scripts/checar-links-internos.mjs).
-# O que fica de fora, e por quê, está em .github/lychee.toml e .github/lychee-drive.toml.
+# Os sites deixados de fora da conferência, e o motivo de cada um, estão em .github/lychee.toml.
 #
 # O GitHub desliga workflows agendados em repositório sem nenhum commit por 60 dias. Se a
 # checagem parar de rodar, reative em Actions > Links externos > "Enable workflow".
@@ -28,9 +28,15 @@ concurrency:
 jobs:
   checar:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # Normalmente leva uns 8 minutos; com o Google limitando pedidos, o Drive tenta de novo depois
+    # de 2 e de 10 minutos.
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
 
       # Arquivos por padrão, não por pasta: dentro de uma pasta o lychee só lê .md e .html, e pularia
       # os .yaml. As aspas deixam o `**` com o lychee, que desce em qualquer nível de subpasta.
@@ -39,20 +45,21 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           args: --config .github/lychee.toml --no-progress 'src/data/*.yaml' 'src/content/**/*'
-          output: lychee/geral.md
+          output: relatorios/geral.md
           fail: false
 
-      # Passo separado e mais lento: o Google bloqueia quem pede muitos arquivos seguidos.
+      # O Drive tem verificador próprio, que separa "o arquivo deixou de ser público" de "o Google
+      # limitou os pedidos" e confere de novo o que falhou (o motivo está no cabeçalho do script).
       - name: Links do Google Drive
         id: drive
-        uses: lycheeverse/lychee-action@v2
-        with:
-          args: --config .github/lychee-drive.toml --no-progress 'src/data/*.yaml' 'src/content/**/*'
-          output: lychee/drive.md
-          fail: false
+        if: ${{ !cancelled() }}
+        run: node scripts/checar-links-drive.mjs --saida relatorios/drive.md
 
       - name: Abrir ou atualizar a issue
-        if: steps.geral.outputs.exit_code != '0' || steps.drive.outputs.exit_code != '0'
+        if: >-
+          ${{ !cancelled() &&
+          ((steps.geral.outputs.exit_code != '' && steps.geral.outputs.exit_code != '0') ||
+          (steps.drive.outputs.quebrados != '' && steps.drive.outputs.quebrados != '0')) }}
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
@@ -62,12 +69,12 @@ jobs:
           {
             echo "A checagem mensal encontrou links para fora do site que não abriram."
             echo
-            echo "**O que fazer:** abra cada link numa janela anônima do navegador."
-            echo "- Se abrir e mostrar o conteúdo certo, é alarme falso (alguns sites recusam robôs). Comente aqui; quem cuida do código acrescenta o endereço às exceções de \`.github/lychee.toml\`."
-            echo "- Se não abrir, siga \"Antes de pôr um link de fora do site\" no guia de manutenção (\`docs/GUIA_DE_MANUTENCAO.md\`): endereço novo, cópia no Wayback Machine ou item sem \`url\`."
+            echo "**O que fazer** (com mais detalhe em \"Quando aparece a issue Links quebrados\", no guia de manutenção, \`docs/GUIA_DE_MANUTENCAO.md\`):"
+            echo "- **Link do Google Drive:** não troque o link. Se \"deixou de ser público\", peça a quem administra o Drive do DOXA para voltar o compartilhamento a \"Qualquer pessoa com o link\". Se \"não existe mais\", tente restaurar o arquivo da lixeira do Drive, e o link volta a valer."
+            echo "- **Qualquer outro link:** abra numa janela anônima. Abriu e mostra o conteúdo certo? É alarme falso (alguns sites recusam robôs): comente aqui, e quem cuida do código tira o site da conferência. Não abriu? Endereço novo, cópia no Wayback Machine ou item sem \`url\`."
             echo
             echo "Feche a issue quando terminar. Execução: $EXECUCAO"
-            for relatorio in lychee/geral.md lychee/drive.md; do
+            for relatorio in relatorios/geral.md relatorios/drive.md; do
               if [ -f "$relatorio" ]; then
                 printf '\n---\n\n'
                 cat "$relatorio"
