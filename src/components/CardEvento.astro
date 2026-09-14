@@ -53,34 +53,37 @@ function rotuloAnexo(u: string): string {
     <h2 class="evento__titulo">{titulo}</h2>
     {descricao && <p class="evento__descricao">{descricao}</p>}
 
-    <div class="evento__acoes">
-      {
-        link && (
-          <a
-            class="btn btn-contorno btn--sm"
-            href={linkPara(link)}
-            target={externo(link) ? '_blank' : undefined}
-            rel={externo(link) ? 'noopener noreferrer' : undefined}
-          >
-            Saiba mais
-            <span aria-hidden="true"> ↗</span>
-          </a>
-        )
-      }
-      {
-        anexos?.map((anexo) => (
-          <a
-            class="evento__anexo"
-            href={linkPara(anexo)}
-            target={externo(anexo) ? '_blank' : undefined}
-            rel={externo(anexo) ? 'noopener noreferrer' : undefined}
-          >
-            {rotuloAnexo(anexo)}
-            <span aria-hidden="true"> ↓</span>
-          </a>
-        ))
-      }
-    </div>
+    {/* Só existe quando há o que mostrar: vazio, o bloco ainda carregava o próprio
+        espaçamento e deixava ~100px de branco no pé dos cards sem link nem anexo —
+        caso de três eventos desde que os "Saiba mais" para o WordPress saíram. */}
+    {
+      (link || (anexos && anexos.length > 0)) && (
+        <div class="evento__acoes">
+          {link && (
+            <a
+              class="btn btn-contorno btn--sm"
+              href={linkPara(link)}
+              target={externo(link) ? '_blank' : undefined}
+              rel={externo(link) ? 'noopener noreferrer' : undefined}
+            >
+              Saiba mais
+              <span aria-hidden="true"> ↗</span>
+            </a>
+          )}
+          {anexos?.map((anexo) => (
+            <a
+              class="evento__anexo"
+              href={linkPara(anexo)}
+              target={externo(anexo) ? '_blank' : undefined}
+              rel={externo(anexo) ? 'noopener noreferrer' : undefined}
+            >
+              {rotuloAnexo(anexo)}
+              <span aria-hidden="true"> ↓</span>
+            </a>
+          ))}
+        </div>
+      )
+    }
   </div>
 </li>
 
