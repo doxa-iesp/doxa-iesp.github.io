@@ -1,7 +1,13 @@
 # Mudanças de layout
 
-Registro de todo desvio em relação ao site antigo (https://www.lab-doxa.org.br).
+Registro de todo desvio em relação ao site antigo (o WordPress em https://www.lab-doxa.org.br, que
+saiu do ar em 2026-09 — hoje esse domínio serve este site; o original só existe no Wayback Machine).
 Formato: **página** → o que mudou → por quê.
+
+Várias entradas antigas citam rotas que mudaram depois: `/pesquisas/` e `/publicacoes/*` hoje são
+`/producao/pesquisas/`, `/producao/publicacoes/`, `/producao/analises-de-conjuntura/` e
+`/producao/textos-para-discussao/`; `/pesquisa-covid/` é `/projetos/pesquisa-covid/`. Os endereços
+antigos redirecionam para os novos.
 
 A regra é fidelidade por padrão. Cada linha abaixo existe porque havia um problema concreto,
 não uma preferência estética.
@@ -55,8 +61,8 @@ bloco de acesso em destaque, porque no original essa informação vinha diluída
 
 **`/mapas-de-votacao/`** → os 273 mapas foram agrupados em `<details>` por ano (o mais recente
 aberto) e, dentro de cada ano, por cargo → uma lista plana de 273 links de PDF seria uma página
-gigante e sem hierarquia. Nada foi inventado: cada mapa continua sendo um link direto para o PDF
-hospedado no domínio antigo.
+gigante e sem hierarquia. Nada foi inventado: cada mapa continua sendo um link direto para o PDF —
+hoje hospedado no Google Drive do DOXA (desde 2026-09-13; antes, no domínio antigo).
 
 **`/bancos-de-dados/`** → o aviso de defeito do banco das Capitais (coluna de município rotacionada
 na fonte) é renderizado como alerta visível (`role="note"`, fundo terracota) dentro do respectivo
@@ -64,7 +70,7 @@ cartão → o dado errado precisa ser sinalizado a quem consulta, não silenciad
 
 **`/pesquisas/` `/na-midia/` `/publicacoes/textos-para-discussao/`** → o primeiro `##` das prosas dessas páginas repetia o título da página; ele é ocultado (`.prosa--intro`, `display:none`, sai também da árvore de acessibilidade) porque o `PageHero` já mostra o mesmo texto como `<h1>` → evitar título duplicado sem editar o conteúdo do Agente A.
 **`/pesquisas/`** → em vez de seções fixas por status, as 61 pesquisas ficam em uma lista única ordenada por ano (desc) com etiqueta de status em cada item; as abas de filtro (Todas/Teses e Dissertações/Em Andamento/Concluídas) escondem/mostram no cliente → o filtro pedido no escopo exige um conjunto único de itens, e sem JS a lista aparece inteira.
-**`/publicacoes/academicas/` `/publicacoes/analises-de-conjuntura/` `/publicacoes/textos-para-discussao/`** → adicionado link "← Todas as publicações" no topo → navegação de volta ao índice de Publicações, ausente no site antigo.
+**`/publicacoes/academicas/` `/publicacoes/analises-de-conjuntura/` `/publicacoes/textos-para-discussao/`** → adicionado link de volta no topo (hoje "← Toda a produção", nas páginas de `/producao/`) → navegação de volta ao índice, ausente no site antigo.
 **`/publicacoes/analises-de-conjuntura/`** → cabeçalho de cada grupo rotulado como "Eleições {ciclo}", ordenados do ciclo mais recente ao mais antigo → o campo `ciclo` é só o ano; o rótulo dá contexto.
 **`/na-midia/`** → datas completas exibidas como dd/mm/aaaa (datas de só ano mantidas como estão); itens mais recentes primeiro dentro de cada tipo → legibilidade em pt-BR.
 
@@ -142,7 +148,8 @@ sentida. O autor usa `--cor-destaque-texto` (#b3512c, 5,08:1), não o terracota 
 
 **`/institucional/`** → os cards de equipe trocaram o avatar circular genérico por **foto + plaqueta
 em gradiente com o sobrenome em terracota** → desenho do site antigo. Sem foto, o card vira só o
-gradiente e continua elegante — resolve o placeholder dos 12 membros sem foto.
+gradiente e continua elegante — o que resolvia o placeholder dos membros que ainda não tinham foto
+(hoje os 16 têm).
 
 **`/producao/textos-para-discussao/`** → o texto da página foi reescrito → ele era **cópia literal**
 do texto de Publicações e falava dos "dois tipos de publicação", não de working papers. O erro vem do
@@ -215,3 +222,23 @@ o segundo sozinho numa linha de 1108px.
 
 **Títulos de seção** → passaram ao título bi-peso ("Em **destaque**", "Apoio e **parcerias**") →
 a assinatura tipográfica do site antigo, que várias seções novas não usavam.
+
+**`/` (home)** → ganhou a faixa **"Em destaque"**, logo abaixo da apresentação, alimentada pela
+coleção `destaques` (um arquivo por destaque, com `ativo` e `ordem`) → a coordenação queria uma
+vitrine curada para livro novo, evento recente ou plataforma lançada, sem voltar ao feed de
+destaques do site antigo, que a home tinha abandonado de propósito.
+
+**`/institucional/`** → as etiquetas de função dos cards trocaram "Pesquisador" e "Associado" por
+**"Pesquisa"** e **"Pesquisa associada"** (2026-09-13) → a etiqueta ia no masculino em card de
+pesquisadora ("Associado" ao lado de "Pesquisadora Associada") e repetia o cargo. Nomeando a função,
+e não a pessoa, a etiqueta serve para todos, e o `CardMembro` reconhece o cargo repetido e o esconde.
+
+**`/projetos/pesquisa-covid/`** → a página voltou a ter a estrutura do site antigo — financiamento,
+coordenação, método, a tabela de decretos por tema (como lista, porque a `.prosa` não estiliza
+tabela), os downloads e a equipe (2026-09-13) → a migração tinha trazido só parte do texto, que
+prometia "no link abaixo" e "como mostra a Tabela 1" sem link nem tabela. Os arquivos vieram da
+extração e do Wayback Machine; os que não foram achados saíram do texto.
+
+**`/eventos/`** → a data do card passou a ser a do evento, não a do post no WordPress (2026-09-13) →
+"Seminário comemora 25 anos do DOXA" aparecia em novembro de 2022 para um seminário de novembro de
+2021.

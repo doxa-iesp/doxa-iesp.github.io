@@ -1,7 +1,14 @@
 # Extração completa do site WordPress lab-doxa.org.br
 
-Extração integral dos dados do site antigo do DOXA (`https://www.lab-doxa.org.br`), feita em
-**2026-07-09**, para servir de base à reconstrução do site em Hugo.
+> **Registro histórico, congelado em 2026-09-13.** Esta pasta não alimenta mais o site: o conteúdo
+> vive em `src/` e é corrigido lá (ver "Conteúdo: `src/` é a fonte" no `CLAUDE.md`). Duas
+> exceções continuam vivas: `dados/mapas-no-drive.csv` é lido pelo build (para levar os endereços
+> antigos dos mapas aos novos) e `dados/enderecos-antigos.txt` é a lista de referência dos endereços
+> do site antigo. As contagens e os defeitos abaixo descrevem a extração **como ela era**; o estado
+> atual dos dados está em `DADOS_PENDENTES.md`.
+
+Extração integral dos dados do site antigo do DOXA (`https://www.lab-doxa.org.br`, fora do ar desde
+2026-09), feita em **2026-07-09**, para servir de base à reconstrução do site (feita em Astro).
 
 **Cobertura:** 999 de 999 links de dados presentes no site foram capturados (0 órfãos).
 Nenhum PDF publicado ficou sem registro.
@@ -42,6 +49,14 @@ Nenhum PDF publicado ficou sem registro.
 | `fontes-externas.yaml` | — | Google Sheets/Drive, TSE, Power BI, YouTube |
 | `paginas/*.md` | 12 | prosa editorial de cada página (títulos + parágrafos) |
 | `parceiros.yaml` | 8 | logos de parceiros/financiadores (imagens em `assets/parceiros/`) |
+| `projetos/*.md` | 4 | textos dos projetos, escritos na reconstrução (não vêm do WordPress) |
+| `mapas-no-drive.csv` | 273 | acrescentado em 2026-09-13: endereço antigo, endereço no Google Drive e SHA-256 de cada mapa — **lido pelo build** |
+| `enderecos-antigos.txt` | 649 | acrescentado em 2026-09-13: os endereços do site antigo, para conferir os redirecionamentos |
+
+> Na extração, `publicacoes-academicas.yaml` saiu com a chave `url:` repetida num item ("Democratic
+> Principles and Performance", por volta da linha 166; as duas vazias). O PyYAML aceita (fica a
+> última); o pacote `yaml` do Node recusa. Como a pasta está congelada, fica registrado aqui em vez
+> de corrigido.
 
 ### `bruto/`
 
@@ -51,8 +66,10 @@ Nenhum PDF publicado ficou sem registro.
 - `datasets/` — microdados hospedados no WordPress: os dois surveys IESP-BR (2020 e 2021),
   o banco de decretos COVID do RJ e o formulário de solicitação de material do acervo.
 
-**Os 348 PDFs do site não foram baixados** (≈ 0,94 GB). Todos os seus URLs estão registrados em
-`dados/biblioteca-midia.csv` e nos YAML correspondentes.
+**Os 348 PDFs do site não foram baixados nesta extração** (≈ 0,94 GB). Todos os seus URLs estão
+registrados em `dados/biblioteca-midia.csv` e nos YAML correspondentes. *(Depois, em 2026-07-13,
+332 arquivos foram baixados para `arquivos-preservados/`, fora do git; em 2026-09 os PDFs menores
+foram para `public/pdfs/` e os 273 mapas para o Google Drive do DOXA.)*
 
 ---
 
@@ -112,7 +129,8 @@ página que os referenciava. Listados em `dados/fontes-externas.yaml` → `pdfs_
 
 **5. Link quebrado na origem.** Três teses apontam para
 `https://iesp.uerj.br/publicacoes/teses-e-dissertacoes/teses-ciencia-politica/`, que hoje dá 404.
-O link foi preservado como está na fonte.
+O link foi preservado como está na fonte *(no site, esses links foram retirados: o projeto não
+cria botões mortos)*.
 
 ---
 
@@ -128,8 +146,10 @@ O link foi preservado como está na fonte.
 
 ---
 
-## Relação com `data/` (o site Hugo)
+## Relação com `src/` (o site em Astro)
 
-Esta pasta **não altera** nada em `data/`. É a matéria-prima; a migração é um passo separado.
-Ver `RELATORIO.md` para a comparação item a item e para os três placeholders que já podem ser
-substituídos por valores reais.
+Esta pasta foi a matéria-prima da migração: `scripts/converter-conteudo.py` converteu `dados/` nas
+coleções de `src/content/` e `src/data/`. Desde 2026-09-13 o conversor está aposentado (só roda com
+`--forcar-regeneracao`, e desfaria as correções feitas em `src/` desde então) e `src/` é a fonte do
+conteúdo. Ver `RELATORIO.md` para a comparação item a item feita na época (quando o site ainda era
+em Hugo, com `data/`).

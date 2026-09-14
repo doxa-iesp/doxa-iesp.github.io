@@ -35,7 +35,9 @@ Se um estagiário escrever `category: pesquisadorS` em `data/team.yaml`, o Hugo 
 normalmente** e o membro simplesmente desaparece da página. Sem erro, sem aviso, em produção.
 O mesmo vale para `type` em `publications.yaml`.
 
-Rodei o teste equivalente em Astro antes de decidir. Com o mesmo erro de digitação, o build falha:
+Rodei o teste equivalente em Astro antes de decidir. Com o mesmo erro de digitação, o build falha
+(saída do protótipo de 2026-07, quando a equipe ainda era um `src/data/equipe.yaml` só; hoje é um
+arquivo por pessoa em `src/content/equipe/`):
 
 ```
 [InvalidContentEntryDataError] equipe → bruno data does not match collection schema.
@@ -141,19 +143,26 @@ src/
     pesquisas.yaml
     acervo.yaml
     bancos-de-dados.yaml
+    mapas-votacao.yaml    ← links dos 273 mapas (os PDFs ficam no Google Drive)
     parceiros.yaml
-    site.yaml             ← contato, redes, menu
+    site.yaml             ← contato, redes, vídeos do acervo
   content/                ← CONTEÚDO EDITÁVEL (textos e fichas)
     equipe/*.yaml         ← um arquivo por pessoa
     eventos/*.md          ← um arquivo por evento
+    projetos/*.md         ← um arquivo por projeto (o nome vira a URL)
+    destaques/*.md        ← a vitrine "Em destaque" da home
     paginas/*.md          ← prosa de cada página
   components/             ← código. Estagiário não mexe.
   layouts/
+  lib/                    ← utilitários: url(), menu (navegacao.ts), endereços antigos
   pages/                  ← rotas
   styles/tokens.css       ← paleta e tipografia
-public/                   ← imagens, PDFs, CNAME
-  img/equipe/, img/parceiros/
+public/                   ← imagens, PDFs, CSV/XLSX, CNAME
+  img/, pdfs/, dados/, docs/
+extracao/                 ← extração do WordPress: registro histórico, não alimenta o site
 ```
+
+O menu **não** fica em `site.yaml`: é código, em `src/lib/navegacao.ts`.
 
 **Uma pessoa = um arquivo** (`src/content/equipe/nome-sobrenome.yaml`). Adicionar um membro é criar
 um arquivo; remover é apagá-lo. Não há indentação de lista para errar, e dois estagiários editando
@@ -170,15 +179,16 @@ ganho. O schema Zod valida cada entrada individualmente e a mensagem de erro nom
 ```
 push / merge na branch main
         ↓
-GitHub Actions: npm ci → astro build (valida schemas) → dist/
+GitHub Actions: npm ci → npm run build (validador de conteúdo → astro build) → dist/
         ↓
-falhou? → PR fica vermelho, nada é publicado
+falhou? (ou "[file-loader] Error" no log) → nada é publicado
         ↓
 passou? → deploy para GitHub Pages
 ```
 
-Em **pull requests**, roda um job separado que só faz `astro build` e publica o `dist/` como
-artefato de download. O revisor vê se o build passou antes de aprovar. (Preview com URL pública
+Em **pull requests**, roda um job separado com o mesmo build (e a mesma trava do
+`[file-loader] Error`), mais `npm run check` (`astro check`), e publica o `dist/` como artefato de
+download. O revisor vê se o build passou antes de aprovar. (Preview com URL pública
 exigiria um serviço externo — Netlify/Cloudflare —, deliberadamente evitado para não introduzir
 outra conta a manter.)
 
@@ -202,16 +212,20 @@ Extraída do site antigo e consolidada em `src/styles/tokens.css`:
 | Token | Valor | Uso |
 |---|---|---|
 | `--cor-primaria` | `#305371` | azul institucional (header, títulos) |
-| `--cor-primaria-clara` | `#3d6b8c` | gradiente do header |
+| `--cor-primaria-clara` | `#3d6b8c` | variação clara do azul (definida, hoje sem uso) |
 | `--cor-primaria-escura` | `#1e3a50` | hover, rodapé |
-| `--cor-destaque` | `#CE673E` | terracota — borda do header, links de ação |
-| `--cor-acento` | `#086D60` | verde — usos pontuais |
-| `--cor-texto` | `#26231E` | corpo |
-| `--cor-fundo-alt` | `#EDEDED` | faixas alternadas |
+| `--cor-acento` | `#086d60` | verde — a outra ponta do gradiente |
+| `--gradiente-marca` | azul → verde | nav, rodapé, capas de seção e **uma** faixa por página |
+| `--cor-destaque` | `#ce673e` | terracota — **só superfície** (aba, borda, plaqueta): como texto dá 3,73:1 |
+| `--cor-destaque-texto` | `#b3512c` | terracota para texto sobre fundo claro (5,08:1) |
+| `--cor-destaque-claro` | `#ffd3be` | terracota para texto sobre o gradiente escuro |
+| `--cor-texto` | `#26231e` | corpo |
+| `--cor-fundo-alt` | `#f4f4f2` | faixas alternadas |
 | `--fonte` | Montserrat | títulos e corpo |
 
-A fonte Montserrat é **auto-hospedada** (`public/fonts/`), não carregada do Google Fonts: o site
-antigo dependia de uma requisição externa que falha em redes restritas e vaza dados de visitantes.
+A fonte Montserrat é **auto-hospedada**, pelo pacote `@fontsource-variable/montserrat` (importado em
+`src/layouts/Base.astro`), e não carregada do Google Fonts: o site antigo dependia de uma
+requisição externa que falha em redes restritas e vaza dados de visitantes.
 
 Logo: `public/img/logo-doxa.svg` (extraído do site antigo).
 
@@ -220,8 +234,9 @@ Logo: `public/img/logo-doxa.svg` (extraído do site antigo).
 ## 6. Decisão de conteúdo já fechada (Seção 4.1 do prompt)
 
 A **home deixa de ser um feed de destaques** e passa a ser a apresentação institucional do grupo:
-quem é o DOXA, missão, linha de pesquisa, vínculo com o IESP-UERJ, parceiros. Destaques de projetos
-aparecem como seção secundária, com link para `/pesquisas/`.
+quem é o DOXA, missão, linha de pesquisa, vínculo com o IESP-UERJ, parceiros. *(Atualização
+2026-09: a home ganhou a faixa curada "Em destaque" — coleção `destaques` — e os atalhos levam a
+`/producao/` e `/projetos/`, que substituíram `/pesquisas/`.)*
 
 `/institucional/` continua existindo, **focada na equipe**. O texto institucional integral não é
 duplicado nas duas páginas: a home apresenta o grupo, `/institucional/` mostra quem o compõe.

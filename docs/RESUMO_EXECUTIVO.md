@@ -2,6 +2,12 @@
 
 **Data:** 2026-07-10
 
+> **Retrato de 2026-07-10, desatualizado.** Desde então as rotas mudaram (`/producao/` e
+> `/projetos/` substituíram `/pesquisas/`, `/publicacoes/` e `/pesquisa-covid/`), o site passou a
+> responder em `lab-doxa.org.br`, os mapas foram para o Google Drive, e as contagens e pendências
+> abaixo mudaram. O estado atual está em [README.md](../README.md), [CLAUDE.md](../CLAUDE.md) e
+> [DADOS_PENDENTES.md](../DADOS_PENDENTES.md). Este documento fica como referência de escopo.
+
 O site do DOXA foi reconstruído do zero, saindo do WordPress/Elementor para um site **estático em
 Astro 7**, versionado no GitHub e publicado automaticamente pelo GitHub Actions. Nenhuma linha de
 PHP, nenhum banco de dados, nenhum plugin.

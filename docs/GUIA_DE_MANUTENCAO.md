@@ -24,6 +24,10 @@ O repositório fica em **https://github.com/doxa-iesp/doxa-iesp.github.io**.
 > copie para o site um link que comece com `www.lab-doxa.org.br/...` achado num e-mail ou documento
 > antigo: ele não leva ao arquivo, leva a uma página de erro deste site.
 
+**Regra única: todo o conteúdo se edita em `src/`** (`src/content/` e `src/data/`), e as imagens e
+PDFs vão em `public/`. A pasta `extracao/` guarda a cópia do site antigo como registro histórico —
+não precisa (nem deve) ser tocada para corrigir ou acrescentar nada.
+
 ---
 
 ## 2. Editar direto pelo site do GitHub (o jeito recomendado)
@@ -48,21 +52,37 @@ Este é o caminho mais seguro e simples. O passo a passo é sempre o mesmo:
 
 Depois de criar o PR, **espere 1 a 2 minutos** e olhe se ele ficou verde ou vermelho (Seção 3).
 
-### Criar um arquivo novo (para membro da equipe ou evento)
+### Criar um arquivo novo (membro da equipe, evento, projeto ou destaque)
 
-Alguns conteúdos são **um arquivo por item** (cada pessoa da equipe é um arquivo; cada evento é um
-arquivo). Para criar um:
+Alguns conteúdos são **um arquivo por item** (cada pessoa da equipe, cada evento, cada projeto e
+cada destaque da página inicial é um arquivo). Para criar um:
 
 1. No repositório, entre na pasta certa (ex.: `src/content/equipe/`).
 2. Clique em **"Add file" → "Create new file"** (Adicionar arquivo → Criar novo arquivo).
 3. No campo do nome, digite o nome do arquivo (ex.: `maria-souza.yaml`).
 4. Cole o conteúdo (veja as Receitas), e siga do passo 5 acima ("Commit changes").
 
-### Enviar uma imagem (foto de membro, imagem de evento)
+### Enviar uma imagem ou um PDF
 
-1. Entre na pasta de imagens certa (ex.: `public/img/equipe/`).
+1. Entre na pasta certa: `public/img/equipe/` para fotos, `public/img/eventos/` para imagens de
+   evento, `public/pdfs/<assunto>/` para PDFs (`analises`, `pesquisas`, `textos-discussao`,
+   `livros`, `eventos`, `midia`).
 2. Clique em **"Add file" → "Upload files"** (Enviar arquivos).
-3. Arraste a imagem, e siga para "Commit changes" (marcando "Create a new branch...").
+3. Arraste o arquivo, e siga para "Commit changes" (marcando "Create a new branch...").
+
+Use nomes **sem espaços e sem acentos** (ex.: `relatorio-eleicoes-2026.pdf`). Para linkar o arquivo
+num campo `url:`, escreva o caminho **a partir de `public/`, começando com `/`**: o arquivo
+`public/pdfs/analises/relatorio-eleicoes-2026.pdf` vira `url: /pdfs/analises/relatorio-eleicoes-2026.pdf`.
+
+### Antes de pôr um link de fora do site
+
+Abra o link numa **janela anônima** do navegador e confira que ele mostra a matéria certa. Links
+de jornal e de blog morrem: um domínio abandonado pode ser comprado por outra pessoa e passar a
+mostrar propaganda ou golpe. Se a matéria sumiu, procure uma cópia no
+[Wayback Machine](https://web.archive.org/) (cole o endereço antigo na busca e escolha uma data
+próxima à da publicação). Se nem lá existir, **deixe o item sem `url`** — é melhor do que um link
+que leva a outro lugar. E nunca use link de e-mail (Gmail) ou de pasta pessoal do Drive: só abre
+para quem tem a senha.
 
 ---
 
@@ -78,8 +98,8 @@ na própria página do PR e na aba **"Checks"** (Verificações):
 ### Onde ver o que deu errado
 
 Na página do PR, clique em **"Details"** ao lado da verificação vermelha (ou na aba **"Checks"**).
-Role até a parte vermelha da tela: a mensagem de erro aparece ali. Abaixo estão as mensagens mais
-comuns e o que cada uma quer dizer.
+Abra o passo **"Build do Astro"** e role até a parte vermelha da tela: a mensagem de erro aparece
+ali. Abaixo estão as mensagens mais comuns e o que cada uma quer dizer.
 
 #### Erro 1 — Você escreveu uma "categoria" (ou "tipo") que não existe
 
@@ -127,24 +147,9 @@ Quase sempre é um erro de digitação no começo da linha. Corrija o nome do ca
 
 #### Erro 4 — A "arrumação" (indentação) do arquivo ficou torta
 
-Os espaços no começo de cada linha importam. Se você mexer neles sem querer, num arquivo de
-**membro, evento, página ou no `site.yaml`**, o PR fica vermelho com uma mensagem como:
-
-```
-[DataCollectionEntryParseError] equipe/maria-souza.yaml failed to parse: bad indentation of a mapping entry
-  Location:
-    src/content/equipe/maria-souza.yaml:2:7
-```
-
-**O que significa:** `bad indentation` = espaço a mais ou a menos no começo de alguma linha. A parte
-`:2:7` indica a **linha 2, coluna 7** do arquivo. Volte lá e alinhe as linhas como no exemplo da
-receita (cada campo começa colado na margem, sem espaços à esquerda; dentro de listas, os espaços
-seguem o padrão do exemplo).
-
-Nos arquivos de **lista** (`publicacoes.yaml`, `midia.yaml`, `analises.yaml`, `seminarios.yaml`,
-`pesquisas.yaml`, `textos-discussao.yaml`, `acervo.yaml`, `bancos-de-dados.yaml`,
-`mapas-votacao.yaml`, `parceiros.yaml`), a mensagem é um pouco diferente, mas o efeito é o mesmo —
-o PR fica **vermelho** e nada é publicado:
+Os espaços no começo de cada linha importam. Se você mexer neles sem querer — em qualquer arquivo
+de conteúdo: membro, evento, projeto, destaque, página, `site.yaml` ou uma lista como
+`publicacoes.yaml` —, o PR fica vermelho com uma mensagem como:
 
 ```
 ✖ Erro no conteúdo do site. O build foi interrompido.
@@ -155,6 +160,37 @@ o PR fica **vermelho** e nada é publicado:
 
 Nada foi publicado. O site continua no ar com a versão anterior.
 ```
+
+**O que significa:** espaço a mais ou a menos no começo de alguma linha. A parte `(linha 4,
+coluna 11)` diz onde olhar. Volte lá e alinhe as linhas como no exemplo da receita (num arquivo de
+membro, cada campo começa colado na margem; dentro de listas, os espaços seguem o padrão do
+exemplo). A frase em inglês muda conforme o erro, mas o arquivo e a linha sempre aparecem.
+
+#### Erro 5 — Um item ou arquivo sumiu
+
+```
+  • src/content/projetos
+    Só 3 arquivos, esperados pelo menos 4. Algum arquivo foi apagado por engano?
+    Se a remoção foi de propósito, ajuste o mínimo em scripts/validar-dados.mjs.
+```
+
+**O que significa:** a conferência sabe quantos itens cada lista tem, mais ou menos, e desconfia
+quando muitos somem de uma vez — o sinal típico de um trecho apagado sem querer. Se você apagou
+**de propósito** (um projeto que saiu do site, por exemplo), peça a quem cuida do site para ajustar
+o mínimo; não é algo para o estagiário mexer.
+
+#### Erro 6 — Cópias de sincronização
+
+```
+  • src/content/equipe
+    2 cópia(s) de sincronização, que virariam itens repetidos no site:
+      felipe-lamarca 2.yaml
+```
+
+**O que significa:** o iCloud (ou outro programa de sincronização) criou cópias de arquivos, com um
+número no fim do nome. Cada cópia viraria uma pessoa, evento ou projeto repetido na página. Apague
+as cópias (as que têm ` 2`, ` 3`… no nome); o original fica. Isso só acontece para quem edita no
+computador — pelo site do GitHub, não.
 
 > **Dica que evita 90% dos erros:** para acrescentar um item numa lista, **copie e cole um item
 > que já existe** e troque só os valores. Assim a arrumação continua certa.
@@ -178,23 +214,28 @@ Seção 2). Use um nome sem espaços nem acentos, tudo minúsculo, ex.: `maria-s
 
 **Passo 2 — o arquivo da pessoa.** Crie um arquivo novo em `src/content/equipe/`, com o nome da
 pessoa (minúsculo, sem acento, com hífen), ex.: `maria-souza.yaml`. Conteúdo (modelo real, baseado
-na Bruno Schaefer):
+no do Bruno Schaefer):
 
 ```yaml
 nome: Maria Souza
 cargo: Professora/Pesquisadora
 categoria: pesquisadores
 foto: /img/equipe/maria-souza.jpg
-lattes: http://lattes.cnpq.br/0000000000000000   # (opcional) apague a linha se não tiver
+lattes: https://lattes.cnpq.br/0000000000000000   # (opcional) apague a linha se não tiver
+site: https://mariasouza.com                      # (opcional) página pessoal
 ordem: 100
 ```
 
-- `categoria`: use **exatamente** um dos valores da Tabela (Seção 5). É o que decide em qual bloco
-  da página a pessoa aparece.
+- `categoria`: use **exatamente** um dos valores da Tabela (Seção 5). Ela vira a etiqueta do card
+  ("Pesquisa", "Pós-graduação"…) e, com a `ordem`, define a posição da pessoa na página.
+- `cargo`: o cargo como a pessoa quer que apareça. Se ele só repetir a etiqueta (ex.: "Pesquisadora
+  Associada" com a categoria `associado`), o card esconde o cargo sozinho.
 - `foto`: escreva o caminho começando com `/img/equipe/` e o **mesmo nome** do arquivo que você
   enviou no Passo 1. Se não houver foto, apague a linha — o site mostra as iniciais no lugar.
-- `ordem`: número que define a posição dentro do bloco (menor aparece antes). *(opcional)*
-- `email`: se tiver, adicione uma linha `email: pessoa@exemplo.com`. *(opcional)*
+- `ordem`: número que define a posição (menor aparece antes; coordenação usa `0`,
+  pesquisadores `100`, pós-doutorado `200`, pós-graduação `300`, assistentes `400`, associados
+  `500`). *(opcional)*
+- `lattes`, `site` e `email` viram links no card. *(todos opcionais)*
 
 ### 4.2. Remover um membro da equipe
 
@@ -221,7 +262,8 @@ troque os valores). Modelo real:
 
 - `tipo`: um dos valores da Tabela (`livro`, `capitulo`, `artigo`, `outros`) — decide o bloco onde
   a publicação aparece na página **Publicações Acadêmicas**.
-- `ano`: só o número, sem aspas. *(opcional — há uma publicação "no prelo" sem ano.)*
+- `ano`: só o número, sem aspas. *(opcional — use para uma publicação "no prelo" que ainda não
+  tem ano; sem `ano`, a página mostra "no prelo".)*
 - Mantenha os **dois espaços** no começo das linhas `autores:`, `ano:`, etc. (o `- titulo:` é o
   único que começa com `- `).
 
@@ -272,17 +314,22 @@ minúsculo e com hífens, ex.: `seminario-eleicoes-2026.md`. Modelo real:
 ---
 titulo: Nome do evento
 data: '2026-03-15'
-descricao: Um resumo do evento.       # (opcional)
+descricao: Quando, onde, quem fala. É o texto que aparece no card.   # (opcional)
 imagem: /img/eventos/nome-da-imagem.jpg   # (opcional) envie a imagem para public/img/eventos/
-url: https://exemplo.com/evento       # (opcional)
+url: https://exemplo.com/evento       # (opcional) vira o botão "Saiba mais"
+anexos:                               # (opcional) arquivos para baixar
+- /pdfs/eventos/cartaz-do-evento.pdf
 ---
-
-Texto completo do evento aqui embaixo (pode ter vários parágrafos).
 ```
 
-- A parte entre as duas linhas de `---` são os dados; o texto que vem **depois** é o corpo.
-- `data`: sempre no formato **`'ano-mês-dia'`** entre aspas (ex.: `'2026-03-15'`). Os eventos
-  aparecem do mais novo para o mais antigo.
+- A parte entre as duas linhas de `---` são os dados. **O que aparece no site é a `descricao`**:
+  não há página própria para cada evento, então um texto escrito abaixo do segundo `---` não é
+  mostrado em lugar nenhum. Escreva tudo o que importa na `descricao`.
+- `data`: a data **em que o evento acontece** (não a de quando você o publicou), sempre no formato
+  **`'ano-mês-dia'`** entre aspas (ex.: `'2026-03-15'`). Os eventos aparecem do mais novo para o
+  mais antigo.
+- `anexos`: cada linha é um arquivo enviado para `public/` (veja "Enviar uma imagem ou um PDF").
+  O botão diz "Baixar PDF", "Baixar imagem" etc., conforme o tipo do arquivo.
 - `titulo` e `data` são obrigatórios; o resto é opcional.
 - Sem `url` e sem anexo, o card aparece só com o texto — sem botão, e está tudo bem.
 
@@ -327,6 +374,13 @@ e edite o texto normalmente. A parte de cima, entre as linhas `---`, é o títul
 abaixo é o conteúdo da página. Você pode editar os parágrafos à vontade — só **não apague** as
 linhas `---` do topo nem o `titulo:`.
 
+A `descricao` aparece logo abaixo do título da página e é também o resumo que o Google e o WhatsApp
+mostram quando alguém compartilha o link: escreva uma frase que diga o que a página tem.
+
+Três páginas têm a introdução escrita **no código**, e não num arquivo de `src/content/paginas/`:
+Publicações Acadêmicas, Análises de Conjuntura e Projetos. Se precisar mudar o texto delas, peça a
+quem cuida do site.
+
 ### 4.10. Trocar o e-mail ou o endereço de contato
 
 Arquivo: **`src/data/site.yaml`**. Abra, clique no lápis e troque só o valor à **direita dos
@@ -334,13 +388,23 @@ dois-pontos**. Nunca mude o nome do campo (a palavra à esquerda dos dois-pontos
 
 ```yaml
   email: acervo-doxa@iesp.uerj.br
-  endereco: Rua da Matriz, 82, Botafogo — Rio de Janeiro, RJ
+  endereco: Rua da Matriz, 82, Botafogo, Rio de Janeiro, RJ
   cep: 22260-100
 ```
 
 Por exemplo, para trocar o e-mail, mude apenas `acervo-doxa@iesp.uerj.br`. Cuidado para **não**
 digitar errado o nome do campo (`email`, `endereco`, `cep`): se escrever `emial`, o PR fica vermelho
 (veja o Erro 3). O e-mail de contato aparece no rodapé de todas as páginas e na página do Acervo.
+
+No mesmo arquivo ficam:
+
+- `youtube`, `instagram` e `twitter`: os perfis do DOXA, que aparecem no rodapé. Um campo vazio
+  (ou sem a linha) simplesmente não aparece. Hoje só o YouTube está preenchido.
+- `video_destaque` e `video_documentario`: os dois vídeos da página do Acervo. O valor é só o
+  **código** do vídeo no YouTube — o que vem depois de `watch?v=` no endereço (em
+  `https://www.youtube.com/watch?v=Ns3jYjf7hx4`, o código é `Ns3jYjf7hx4`).
+- `catalogo_acervo` e `formulario_acervo`: o link da planilha do catálogo e o formulário de
+  pedido de material, os dois usados na página do Acervo.
 
 ### 4.11. Adicionar um projeto
 
@@ -361,17 +425,23 @@ status: "ativo"                      # opcional: ativo | concluido
 imagem: "/img/projetos/nome.jpg"     # opcional (envie a imagem para public/img/projetos/)
 url: "https://site-do-projeto.br"    # opcional: o site externo do projeto
 rotulo_url: "Acessar a plataforma"   # opcional: o texto do botão
+embed: "https://app.powerbi.com/…"   # opcional: painel (Power BI) ou vídeo mostrado dentro da página
 links:                               # opcional: outros links (internos ou externos)
   - rotulo: "Baixar os dados (CSV)"
     url: "/dados/arquivo.csv"
-destaque: false                      # true = o projeto ganha um cartão grande na lista
+ordem: 5                             # opcional: posição na lista (menor aparece antes)
 ---
 
 Aqui vai a descrição longa, em parágrafos normais. Pode usar **negrito** e *itálico*.
 ```
 
 Só o `titulo` e o `resumo` são obrigatórios. **Não invente `status`**: se você não souber se o
-projeto está em andamento ou concluído, apague a linha — a etiqueta simplesmente não aparece.
+projeto está em andamento ou concluído, apague a linha — o projeto vai para o grupo "Outros
+projetos" da lista, e está tudo bem.
+
+Para **tirar um projeto do site**, apague o arquivo dele (lixeira, como na receita 4.2). Como hoje
+há exatamente quatro projetos, o PR fica vermelho com o Erro 5: peça a quem cuida do site para
+ajustar o mínimo.
 
 ### 4.12. Trocar os destaques da página inicial
 
@@ -436,6 +506,66 @@ Dois cuidados com o Drive:
   trocar um mapa por uma versão corrigida, use no Drive "Gerenciar versões" › "Enviar nova versão",
   que mantém o mesmo link.
 
+### 4.14. Adicionar uma pesquisa (tese, dissertação ou projeto)
+
+Arquivo: **`src/data/pesquisas.yaml`**. Acrescente ao fim (modelo real):
+
+```yaml
+- titulo: Título da tese ou do projeto
+  autor: Nome de quem fez              # (opcional)
+  ano: 2026                            # (opcional) número, sem aspas
+  orientador: Nome do orientador       # (opcional)
+  instituicao: IESP-UERJ               # (opcional)
+  status: tese
+  url: /pdfs/pesquisas/nome-do-arquivo.pdf   # (opcional) link externo ou PDF do site
+```
+
+- `status`: um dos valores da Tabela (`tese`, `andamento`, `concluida`) — decide a aba da página
+  **Pesquisas** onde a pesquisa aparece.
+- Uma tese costuma estar na BDTD da UERJ; o link de lá serve como `url`. Se o PDF for do próprio
+  laboratório, envie para `public/pdfs/pesquisas/`.
+
+### 4.15. Editar ou remover um evento ou um destaque
+
+**Editar:** abra o arquivo em `src/content/eventos/` ou `src/content/destaques/`, clique no lápis e
+troque os valores, como em qualquer outro arquivo.
+
+**Remover um evento:** apague o arquivo (lixeira, como na receita 4.2).
+
+**Tirar um destaque do ar:** troque `ativo: true` por `ativo: false` (receita 4.12). Apague o
+arquivo só se tiver certeza de que não vai precisar dele de novo — e mantenha pelo menos um
+destaque, senão o PR fica vermelho (Erro 5).
+
+### 4.16. Adicionar um parceiro (faixa "Apoio e parcerias" da página inicial)
+
+1. Envie o logo para `public/img/parceiros/` (PNG com fundo transparente fica melhor).
+2. Acrescente ao fim de **`src/data/parceiros.yaml`**:
+
+```yaml
+- nome: Nome da instituição
+  arquivo: /img/parceiros/nome-do-logo.png
+  url: https://site-da-instituicao.br   # (opcional)
+```
+
+### 4.17. Bancos de dados e itens do acervo
+
+Esses arquivos mudam pouco e têm campos mais específicos:
+
+- **Um banco novo** entra em `src/data/bancos-de-dados.yaml`. Envie o CSV para `public/dados/` e
+  copie um bloco existente: `nome`, `descricao`, `cobertura`, `registros`, `download`
+  (`/dados/arquivo.csv`) e `arquivo` (só o nome do CSV).
+- **Um vídeo novo do acervo** entra em `src/data/acervo.yaml`, copiando um item que já existe: o
+  `codigo` da fita, `ano`, `cargo`, `regiao`, `candidatos`, `partidos` e o `url` do vídeo no Google
+  Drive (confira numa janela anônima que ele abre sem login). O `codigo` vira a âncora do card,
+  então não o troque depois de publicado.
+
+Na dúvida sobre algum campo, peça a quem cuida do site.
+
+### 4.18. O menu do site
+
+O menu (Início, Equipe, Produção, Projetos…) é **código**, em `src/lib/navegacao.ts`. Para
+acrescentar, tirar ou renomear um item, peça a quem cuida do site.
+
 ---
 
 ## 5. Tabela de valores permitidos
@@ -446,14 +576,14 @@ acento, ou no plural), o PR fica vermelho. Use **exatamente** o que está na col
 
 ### `categoria` — arquivos de membro (`src/content/equipe/*.yaml`)
 
-| Escreva assim | Onde a pessoa aparece na página |
+| Escreva assim | Etiqueta no card da pessoa |
 |---|---|
 | `coordenacao` | Coordenação |
-| `pesquisadores` | Pesquisadores |
-| `pos-doutorando` | Pós-doutorandos |
-| `aluno` | Alunos de Pós-graduação |
-| `assistente` | Assistentes de Pesquisa |
-| `associado` | Pesquisadores Associados |
+| `pesquisadores` | Pesquisa |
+| `pos-doutorando` | Pós-doutorado |
+| `aluno` | Pós-graduação |
+| `assistente` | Assistente |
+| `associado` | Pesquisa associada |
 
 ### `tipo` — publicações (`src/data/publicacoes.yaml`)
 
@@ -474,11 +604,19 @@ acento, ou no plural), o PR fica vermelho. Use **exatamente** o que está na col
 
 ### `status` — pesquisas (`src/data/pesquisas.yaml`)
 
-| Escreva assim | Etiqueta na página |
+| Escreva assim | Aba na página |
 |---|---|
-| `tese` | Teses e Dissertações |
-| `andamento` | Em Andamento |
+| `tese` | Teses e dissertações |
+| `andamento` | Em andamento |
 | `concluida` | Concluídas |
+
+### `status` — projetos (`src/content/projetos/*.md`)
+
+| Escreva assim | Grupo na lista de projetos |
+|---|---|
+| `ativo` | Em andamento |
+| `concluido` | Concluídos |
+| *(sem a linha)* | Outros projetos |
 
 > Existem outras listas fechadas em arquivos que raramente mudam (ex.: `eleicao` em
 > `mapas-votacao.yaml` aceita só `Majoritaria` ou `Proporcional`). Se for mexer nesses, confira a
@@ -491,13 +629,13 @@ acento, ou no plural), o PR fica vermelho. Use **exatamente** o que está na col
 Estas pastas e arquivos são o "motor" do site. Mexer neles pode quebrar tudo, e não é tarefa de
 quem cuida do conteúdo:
 
-- `src/components/`
-- `src/layouts/`
-- `src/pages/`
+- `src/components/`, `src/layouts/`, `src/pages/`, `src/lib/` (onde fica o menu) e `src/styles/`
 - `src/content.config.ts`
 - `astro.config.mjs`
 - `package.json` e `package-lock.json`
-- as pastas `legacy-hugo/`, `extracao/`, `scripts/` e `node_modules/`
+- as pastas `scripts/`, `.github/` e `node_modules/`
+- a pasta `extracao/`: é a cópia do site antigo, guardada como registro histórico. Nada do que
+  está lá aparece no site; corrigir algo ali não muda nada (corrija em `src/`).
 
 Se você achar que precisa mudar algo aí dentro, **não mude** — fale com a pessoa responsável pelo
 site (o desenvolvedor/orientador do time). O mesmo vale se um PR ficar vermelho com uma mensagem que
@@ -516,7 +654,7 @@ quiser ver as mudanças na sua máquina antes de propor, é assim:
 
 ```bash
 git clone https://github.com/doxa-iesp/doxa-iesp.github.io.git
-cd DOXA
+cd doxa-iesp.github.io
 npm ci        # baixa as dependências (só na primeira vez)
 npm run dev   # abre o site em http://localhost:4321/ com recarga automática
 ```
@@ -525,8 +663,10 @@ Enquanto o `npm run dev` estiver rodando, cada arquivo que você salvar aparece 
 Para parar, aperte `Ctrl + C` no terminal.
 
 > **Não existe** um endereço público de "prévia" para cada PR. O que existe é o arquivo `site-dist`
-> (o site já montado) que você pode **baixar** na aba "Checks" do PR — útil para conferir uma
-> alteração num arquivo de lista antes de aprovar (veja o aviso da Seção 3).
+> (o site já montado), que você pode **baixar** na aba "Checks" do PR. Ele não abre com dois
+> cliques: os endereços do site começam com `/`, e o navegador não os encontra num arquivo
+> solto. Descompacte e sirva a pasta com `npx serve site-dist` (precisa do Node.js, passo 1),
+> e abra o endereço que aparecer no terminal.
 
 ---
 
@@ -534,8 +674,8 @@ Para parar, aperte `Ctrl + C` no terminal.
 
 - O PR ficou **vermelho** e a mensagem não está na Seção 3 → mande o link do PR para quem cuida do
   site.
-- Você editou um arquivo de **lista** e os itens sumiram da página (mesmo com o PR verde) → veja o
-  aviso da Seção 3 e, na dúvida, peça conferência.
+- O PR ficou verde, mas algo não aparece como você esperava no site → mande o link do PR e o
+  endereço da página para quem cuida do site.
 - Deu vontade de mexer em algo da Seção 6 → não mexa; pergunte antes.
 
 Na dúvida, **não aprove/merge o PR**. Um PR parado não faz mal nenhum; só entra no ar quando for

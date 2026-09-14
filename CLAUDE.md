@@ -34,7 +34,8 @@ mudança funciona, rode `npm run build` (que já inclui o validador) e, se mexeu
 componente, `npm run check`.
 
 Deploy: push em `main` → `.github/workflows/deploy.yml` → GitHub Pages.
-PRs rodam `.github/workflows/pr.yml` (build + `astro check` + artefato `site-dist`).
+PRs rodam `.github/workflows/pr.yml` (build + trava do `[file-loader] Error` + `astro check` +
+artefato `site-dist`).
 
 ## Arquitetura
 
@@ -47,10 +48,12 @@ src/
   content/
     equipe/*.yaml     ← EDITÁVEL: um arquivo por pessoa
     projetos/*.md     ← EDITÁVEL: um arquivo por projeto (o nome do arquivo vira a URL)
-    eventos/*.md      ← EDITÁVEL: um arquivo por evento
+    eventos/*.md      ← EDITÁVEL: um arquivo por evento (só o frontmatter aparece no site)
+    destaques/*.md    ← EDITÁVEL: a vitrine "Em destaque" da home
     paginas/*.md      ← EDITÁVEL: a prosa de cada página
   components/ layouts/ pages/ styles/ lib/   ← código
-public/               ← imagens, fontes, PDFs (PRECISA estar versionado)
+public/               ← imagens, PDFs (pdfs/), CSV e XLSX (dados/), formulários (docs/). PRECISA
+                        estar versionado. A fonte Montserrat vem do pacote @fontsource, não daqui.
 extracao/             ← extração do WordPress antigo. Registro histórico, congelado (ver "Conteúdo").
 scripts/              ← validador de dados, troca de links e o conversor da migração (aposentado)
 ```
@@ -80,6 +83,10 @@ Para um campo de dado que pode ser link externo **ou** caminho interno, use `lin
 arquivo), que só aplica `url()` quando o destino não é externo. O config tem
 `trailingSlash: 'always'`: links internos terminam em `/`.
 
+No **corpo em Markdown** de uma coleção não há como chamar `url()`: link para arquivo do site ali é
+**relativo** (em `src/content/projetos/pesquisa-covid.md`, `../../pdfs/projetos/…`), que resolve
+certo com qualquer `base`. Um `](/pdfs/…)` cru seria o mesmo 404 adormecido.
+
 Domínio: três lugares precisam bater — o DNS (registro.br), o domínio em *Settings > Pages* e, no
 código, `site` em `astro.config.mjs` + `public/CNAME`. `site` errado não quebra nada visível, mas
 manda canonical, `og:url` e sitemap para outro host. O `CNAME` da raiz do repo **não** é publicado —
@@ -97,9 +104,13 @@ só `public/` entra no build.
   página-stub via [src/pages/[...antiga].astro](src/pages/[...antiga].astro) e
   [Redirecionamento.astro](src/components/Redirecionamento.astro); `destinoAntigo()` resolve os
   padrões (`/acervo-doxa/<item>/` → card do acervo, `/lista-pesquisas/<slug>/` → busca preenchida…)
-  dentro da [404](src/pages/404.astro); PDFs antigos de `/wp-content/uploads/` são achados pelo nome
-  em `/arquivos-antigos.json` ([endpoint](src/pages/arquivos-antigos.json.ts)). A lista do que
-  existia está em `extracao/dados/enderecos-antigos.txt` — use-a para conferir qualquer mudança.
+  dentro da [404](src/pages/404.astro); arquivos antigos de `/wp-content/uploads/` são achados pelo
+  nome em `/arquivos-antigos.json` ([endpoint](src/pages/arquivos-antigos.json.ts)), que varre
+  `public/pdfs/` e `public/dados/` (PDF, XLSX, DOCX), lê `mapas-no-drive.csv` e aplica
+  `RENOMEADOS` — cujas **chaves precisam estar em minúsculas** (a 404 procura assim) e cujo destino
+  pode ser externo. Arquivo trazido do WordPress mantém o nome original justamente para casar sem
+  entrada na tabela. A lista do que existia está em `extracao/dados/enderecos-antigos.txt`: toda
+  mudança aqui se confere contra ela (cada endereço precisa cair numa página que existe).
   O `id` do card do acervo sai de `idItemAcervo()` em [src/lib/ancoras.mjs](src/lib/ancoras.mjs),
   que imita o slug do WordPress: é por isso que 93 dos 95 endereços `/acervo-doxa/` casam sem
   tabela. **Mudar essa função quebra os redirecionamentos.** Ela e `rotas-antigas.mjs` são `.mjs`,
@@ -193,7 +204,7 @@ precisam bater: `src/data/mapas-votacao.yaml` (o que a página mostra), `public/
 (os CSVs são CRLF). Não presuma que um PDF referenciado existe sem conferir — `DADOS_PENDENTES.md` é
 também a lista do que falta preencher (e que está faltando **de propósito**, não por bug).
 
-**2e. `arquivos-preservados/` só existe no Mac de quem fez a migração.** Ignorada pelo git de
+**2e. `arquivos-preservados/` existe fora do git: no Mac de quem fez a migração e no Drive.** Ignorada pelo git de
 propósito (835 MB). Tem a cópia original dos 273 mapas, 6 PDFs órfãos (nenhuma página os linka) e o
 PDF original do livro *A Decisão do Voto* (com o trecho que a coordenação pediu para tirar da versão
 publicada). Desde 2026-09-13 há segunda cópia de tudo no Drive do DOXA: os mapas na pasta pública
@@ -224,15 +235,32 @@ margem e a cor do título do herói nunca valeram**, e ninguém viu porque class
 (`.titulo-secao`) funcionavam. Agora ele aceita `class` e faz `{...rest}`. Ao criar componente que
 recebe classe de fora, faça o mesmo — e confira no `dist/` que o elemento tem os dois cids.
 
+**2h. Link externo apodrece, e às vezes vira armadilha.** Nenhum build acusa link externo quebrado.
+Em 2026-09-13, 13 dos ~450 links de terceiros estavam mortos — e um deles, o do texto de Nara
+Salles no Horizontes ao Sul, **redirecionava para um site de APK pirata**; o domínio do blog antigo
+do Vota Aí tinha sido tomado por outro site; um item de mídia apontava para um **anexo do Gmail**.
+Ao consertar: preferir o endereço novo do próprio veículo; senão, uma captura do Wayback Machine
+**anterior à perda do domínio**, conferindo que o título da página bate com o `titulo` do item
+(capturas de páginas montadas por JavaScript costumam vir vazias); senão, tirar o `url` — o item
+fica sem botão. Nunca link de Gmail ou Drive pessoal. Para baixar um arquivo do Wayback, use
+`https://web.archive.org/web/<timestamp>id_/<url>` e confira que não veio cortado: capturas antigas
+podem parar em exatamente 1 MiB (1.048.576 bytes), e PDF inteiro termina em `%%EOF`.
+
 **3. Defeito na fonte: `programas-eleitorais-capitais.csv`.** A coluna `municipio` está
 rotacionada em relação aos candidatos (Eduardo Paes aparece como Florianópolis). Documentado em
 [extracao/README.md](extracao/README.md); a página `/bancos-de-dados/` renderiza um aviso.
 Não "conserte" por adivinhação.
 
-**4. Campos opcionais são opcionais de verdade.** 30 das 61 pesquisas não têm link; 7 dos 70 itens
+**4. Campos opcionais são opcionais de verdade.** 30 das 60 pesquisas não têm link; 9 dos 70 itens
 de mídia não têm URL; 9 dos 16 membros não têm Lattes e **nenhum** tem e-mail; seminários não têm
 descrição nem link. Nada disso existe no site antigo. Não invente, e não crie botões mortos — o
 `CardMembro` reserva a linha vazia justamente para o card não desalinhar quando falta o link.
+O que falta e o que está "a conferir" fica em [DADOS_PENDENTES.md](DADOS_PENDENTES.md).
+
+**5. Em evento, só o frontmatter aparece.** Não há página de detalhe de evento: `/eventos/` passa
+ao `CardEvento` só `titulo`, `data`, `descricao`, `imagem`, `url` e `anexos`. Texto escrito no corpo
+do `.md` não é renderizado em lugar nenhum. E `data` é a data **do evento** — a migração trouxe a
+data do post do WordPress, e dois eventos ficaram com a data errada até 2026-09-13.
 
 ## Conteúdo: `src/` é a fonte
 
@@ -258,9 +286,15 @@ como cada dado foi convertido (`CARGOS`, `OVERRIDES`, filtros).
 
 - [docs/DECISAO_ARQUITETURA.md](docs/DECISAO_ARQUITETURA.md) — por que Astro e não Hugo, com a
   ressalva do `file()` e como foi fechada.
-- [docs/GUIA_DE_MANUTENCAO.md](docs/GUIA_DE_MANUTENCAO.md) — guia para estagiários, sem jargão.
+- [docs/GUIA_DE_MANUTENCAO.md](docs/GUIA_DE_MANUTENCAO.md) — guia para estagiários, sem jargão, com
+  uma receita por tarefa. **Mudou um campo, uma regra do validador ou um rótulo da página? Atualize a
+  receita e a Seção 5 (valores permitidos) no mesmo commit.**
+- [DADOS_PENDENTES.md](DADOS_PENDENTES.md) — o que falta preencher ou conferir, e o que já foi
+  resolvido (com a origem dos arquivos recuperados).
 - [docs/MUDANCAS_DE_LAYOUT.md](docs/MUDANCAS_DE_LAYOUT.md) — todo desvio do site antigo, com motivo.
 - [docs/RESUMO_EXECUTIVO.md](docs/RESUMO_EXECUTIVO.md) — retrato da reconstrução em 2026-07-10
   (contagens de conteúdo migrado, estado técnico); desatualizado quanto às rotas (é anterior a
   `/producao/` e `/projetos/`), mas útil como referência de escopo.
+- [extracao/README.md](extracao/README.md) — o que foi extraído do WordPress e os defeitos da fonte
+  (retrato congelado da extração).
 - [checkpoints/](checkpoints/) — o histórico de decisões de cada etapa da reconstrução.
