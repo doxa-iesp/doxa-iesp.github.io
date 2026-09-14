@@ -5,14 +5,14 @@
  * POR QUE NÃO USAR `redirects` do astro.config.mjs
  * ------------------------------------------------
  * O Astro monta o destino do redirect só a partir dos segmentos da rota, SEM o
- * `base` (ver `dist/core/routing/generator.js`). Como o site é publicado em
- * `/DOXA/`, um `redirects: { '/pesquisas': '/producao/pesquisas' }` mandaria o
- * visitante para `felipelamarca.com/producao/pesquisas/` — sem o `/DOXA` — o que
- * dá 404 em produção (e só em produção).
+ * `base` (ver `dist/core/routing/generator.js`). Quando o site vivia em
+ * `felipelamarca.com/DOXA/`, um `redirects: { '/pesquisas': '/producao/pesquisas' }`
+ * mandava o visitante para `felipelamarca.com/producao/pesquisas/` — sem o `/DOXA`
+ * — o que dava 404 em produção (e só em produção). Hoje o `base` é vazio e o
+ * problema dorme, mas volta no dia em que o site for para um subdiretório.
  *
- * Este componente monta o destino com `url()`, que respeita o base path. De
- * quebra, continua correto quando o site migrar para lab-doxa.org.br e o `base`
- * for removido.
+ * Este componente monta o destino com `url()`, que respeita o base path. Quem o usa
+ * é src/pages/[...antiga].astro, a partir da tabela de src/lib/rotas-antigas.mjs.
  */
 import { url } from '../lib/url';
 

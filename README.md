@@ -3,7 +3,10 @@
 Site estático do **DOXA — Laboratório de Estudos Eleitorais, de Comunicação Política e Opinião
 Pública** (IESP-UERJ), construído com [Astro](https://astro.build/) e publicado via GitHub Pages.
 
-**URL:** https://doxa-iesp.github.io/ (temporária — a definitiva será www.lab-doxa.org.br)
+**URL:** https://lab-doxa.org.br/
+
+O domínio `lab-doxa.org.br` era do site antigo, em WordPress, que **saiu do ar em 2026-09**. Nada
+neste site depende mais dele — ver [Domínio e endereços antigos](#domínio-e-endereços-antigos).
 
 O site foi migrado de Hugo para Astro. O motivo está em
 [`docs/DECISAO_ARQUITETURA.md`](docs/DECISAO_ARQUITETURA.md): em resumo, o conteúdo é validado por
@@ -24,7 +27,7 @@ vez de publicar silenciosamente uma página quebrada.
 
 ```bash
 git clone https://github.com/doxa-iesp/doxa-iesp.github.io.git
-cd DOXA
+cd doxa-iesp.github.io
 npm ci        # instala as dependências a partir do package-lock.json
 npm run dev   # servidor local com recarga automática
 ```
@@ -61,7 +64,7 @@ preciso mexer nele para atualizar o site.**
 | Pesquisas | `src/data/pesquisas.yaml` | lista |
 | Acervo | `src/data/acervo.yaml` | lista |
 | Bancos de dados | `src/data/bancos-de-dados.yaml` | lista |
-| Mapas de votação | `src/data/mapas-votacao.yaml` | lista |
+| Mapas de votação (os PDFs ficam no Google Drive do DOXA) | `src/data/mapas-votacao.yaml` | lista |
 | Parceiros | `src/data/parceiros.yaml` | lista |
 | Contato, redes e configurações gerais | `src/data/site.yaml` | objeto |
 
@@ -110,11 +113,13 @@ Os workflows ficam em `.github/workflows/` (`deploy.yml` e `pr.yml`).
 │   ├── components/         # componentes (código)
 │   ├── layouts/            # layouts (código)
 │   ├── pages/              # rotas do site (código)
-│   ├── lib/                # utilitários (ex.: url.ts, navegacao.ts)
+│   ├── lib/                # utilitários (ex.: url.ts, navegacao.ts, rotas-antigas.mjs)
 │   └── styles/             # tokens de cor/tipografia e CSS global
-├── public/                 # imagens, fontes, PDFs, robots.txt (versionados)
+├── public/                 # imagens, fontes, PDFs, robots.txt, CNAME (versionados)
+├── extracao/               # extração completa do WordPress antigo — fonte de verdade dos dados
+├── scripts/                # conversor de conteúdo, validador e troca de links
 ├── docs/                   # documentação do projeto
-├── astro.config.mjs        # configuração do Astro (base path, sitemap)
+├── astro.config.mjs        # configuração do Astro (domínio, base path, sitemap)
 ├── package.json
 └── .github/workflows/      # CI/CD (deploy.yml, pr.yml)
 ```
@@ -123,12 +128,36 @@ Os workflows ficam em `.github/workflows/` (`deploy.yml` e `pr.yml`).
 
 ## Documentação
 
+- [`docs/GUIA_DE_MANUTENCAO.md`](docs/GUIA_DE_MANUTENCAO.md) — guia para estagiários, com uma
+  receita para cada tarefa.
 - [`docs/DECISAO_ARQUITETURA.md`](docs/DECISAO_ARQUITETURA.md) — por que Astro, tokens de cor,
   estrutura de pastas e fluxo de publicação.
+- [`DADOS_PENDENTES.md`](DADOS_PENDENTES.md) — o que ainda falta preencher, e por quê.
+- [`CLAUDE.md`](CLAUDE.md) — arquitetura e armadilhas conhecidas, para quem mexe no código.
 
-## Domínio próprio (futuro)
+## Domínio e endereços antigos
 
-Para migrar de `doxa-iesp.github.io` para `www.lab-doxa.org.br`, siga o comentário no topo de
-`astro.config.mjs`: trocar `site`, remover `base`, criar `public/CNAME` com o domínio e apontar o
-DNS. O `CNAME` na raiz do repositório **não** é publicado — só o conteúdo de `public/` entra no
-build.
+**O domínio.** O site responde em `https://lab-doxa.org.br/` (o apex, sem `www`; o `www` só
+redireciona). Três lugares precisam bater, e hoje batem:
+
+1. o DNS, no registro.br — quatro registros A do apex para os IPs do GitHub Pages
+   (`185.199.108.153` a `185.199.111.153`) e `www` em CNAME para `doxa-iesp.github.io`;
+2. o domínio em *Settings > Pages* do repositório, com **Enforce HTTPS** ligado;
+3. `site` em `astro.config.mjs` e o arquivo `public/CNAME`. O `CNAME` na raiz do repositório
+   **não** seria publicado — só o conteúdo de `public/` entra no build.
+
+**O site antigo não existe mais.** O WordPress saiu do ar e o domínio passou a servir este site.
+Não há como baixar nada dele de novo: o que foi preservado está em `extracao/` (versionado) e, fora
+do git, em `arquivos-preservados/`. A única fonte externa é o Wayback Machine.
+
+**Endereços antigos continuam funcionando.** Links de fora para páginas do WordPress (no Google, em
+artigos, em currículos) são levados para onde o conteúdo está agora — um item do acervo cai no card
+certo, uma pesquisa chega com a busca preenchida, um PDF antigo abre a cópia nova. A tabela e as
+regras ficam em `src/lib/rotas-antigas.mjs`; a lista do que existia no site antigo, em
+`extracao/dados/enderecos-antigos.txt`.
+
+**Os mapas de votação ficam no Google Drive do DOXA** (conta do acervo, pasta
+*Acervo Doxa (NEW) / Site DOXA — Mapas de votação*, compartilhada por link). São 273 PDFs, grandes
+demais para o GitHub Pages. `extracao/dados/mapas-no-drive.csv` registra onde cada um foi parar, com o
+SHA-256. Mover ou renomear a pasta no Drive não quebra os links; **apagar e reenviar um arquivo
+quebra**, porque ele ganha outro endereço.

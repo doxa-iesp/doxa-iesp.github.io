@@ -10,15 +10,28 @@ Ordenado por impacto. Marque `[x]` conforme resolver.
 
 ## 🔴 Alto impacto — o visitante percebe
 
-### 0. O site novo depende do site antigo para servir 328 PDFs
+### 0. ✅ O site novo dependia do site antigo para servir 328 PDFs — resolvido
 
-**Descoberto em 2026-07-12.** Os arquivos que o site novo oferece para download não estão no site
-novo: eles continuam sendo servidos pelo WordPress antigo (`lab-doxa.org.br`). **Se o WordPress for
-desligado, todos esses downloads quebram de uma vez.**
+> ✅ **2026-09-13 — resolvido por completo.** O WordPress saiu do ar e o domínio `lab-doxa.org.br`
+> passou a servir o site novo. Nada mais depende do site antigo:
+>
+> - os **273 mapas** estão no Google Drive do DOXA (conta do acervo, pasta *Acervo Doxa (NEW) / Site
+>   DOXA — Mapas de votação*, compartilhada por link). Conferido: os 273 links abrem sem login com o
+>   arquivo certo, e 29 arquivos baixados anonimamente têm o SHA-256 do manifesto. O registro de
+>   cada um está em `extracao/dados/mapas-no-drive.csv`;
+> - os **7 links internos** que apontavam para páginas do WordPress (4 "Saiba mais" de eventos, 2
+>   "Página original" de bancos de dados, o anexo do seminário Marcus Figueiredo) foram retirados ou
+>   trocados — o PDF do cartaz foi recuperado do Wayback Machine;
+> - os **endereços antigos** que circulam lá fora são levados ao conteúdo novo
+>   (`src/lib/rotas-antigas.mjs`);
+> - os 6 PDFs órfãos e o original do livro ganharam cópia **privada** no mesmo Drive.
+>
+> Um cuidado permanente: no Drive, mover ou renomear não quebra link; **apagar e reenviar quebra**
+> (o arquivo ganha outro ID). O histórico abaixo fica como registro.
 
 | Coleção | Arquivos | Peso | Situação |
 |---|---:|---:|---|
-| Mapas de votação | 273 | 797 MB | **pendente** — falta a decisão de endereço |
+| Mapas de votação | 273 | 835 MB | ✅ no Google Drive do DOXA desde 2026-09-13 |
 | Teses e pesquisas | 20 | 43 MB | ✅ resolvido em 2026-09-03 |
 | Análises de conjuntura | 33 | 30 MB | ✅ resolvido em 2026-09-03 |
 | Textos para discussão | 2 | 2 MB | ✅ resolvido em 2026-09-03 |
@@ -36,15 +49,34 @@ discussão (76 MB) já foram trazidos para o repositório (`public/pdfs/`) e os 
 > migração para o Drive é a tarefa mais urgente da lista. O caminho está pronto e testado
 > (`arquivos-preservados/LEIA-ME.md`), e só depende de alguém rodar `rclone config` uma vez.
 
-**Decisão que ainda falta: os 273 mapas de votação (797 MB).**
+**Decisão sobre os 273 mapas de votação (histórico).**
 
-- [ ] **Opção A (recomendada):** dar aos mapas um endereço próprio — Zenodo (dá DOI, feito para
-      dados de pesquisa), o Google Drive que o laboratório já usa para o acervo, ou o repositório
-      institucional do IESP. `arquivos-preservados/LEIA-ME.md` já tem o runbook (e o script) prontos
-      para quando a escolha for feita — é questão de minutos, não de um novo projeto.
-- [ ] **Opção B:** manter o WordPress antigo no ar apenas como servidor de arquivos. Funciona, mas o
-      site novo fica refém de um sistema que ninguém quer mais manter.
-- [ ] **Opção C:** trazer tudo e aceitar o risco de estourar o limite do GitHub Pages. Não recomendo.
+- [x] **Opção A:** dar aos mapas um endereço próprio. **Escolhido o Google Drive do DOXA**, que o
+      laboratório já usa para o acervo — feito em 2026-09-13. (Zenodo, com DOI, continua sendo uma
+      possibilidade futura; o registro em `extracao/dados/mapas-no-drive.csv` tem o SHA-256 de cada
+      arquivo para uma segunda migração.)
+- [ ] ~~Opção B: manter o WordPress antigo no ar apenas como servidor de arquivos.~~ Deixou de
+      existir: o WordPress saiu do ar.
+- [ ] ~~Opção C: trazer tudo para o GitHub Pages.~~ Descartada.
+
+### 0c. Links externos que morreram na origem — 13 de 455
+
+**Verificado em 2026-09-13**, com todos os links externos do site. Não é efeito da migração: são
+páginas de terceiros que saíram do ar ou mudaram de endereço, e os links vieram assim do WordPress.
+Todos em `src/data/midia.yaml`, salvo o da EdUERJ (`publicacoes.yaml`).
+
+- **404:** dois posts do blog antigo do Vota Aí (`votaai.com.br/as-propostas-para-a-saude…` e
+  `…/eles-sao-todos-iguais/` — a plataforma hoje vive em `votaai.cesop.unicamp.br`); uma tag do
+  Jornal GGN; uma notícia em `antonioviana.com.br`; a versão AMP de uma matéria d'O Globo
+  (`…roteiro-de-viagens-de-bolsonaro…?versao=amp`); a página do ebook de homenagem a Marcus
+  Figueiredo na EdUERJ.
+- **Sem resposta:** Exame (`filiacoes-partidarias-no-brasil-mais-do-mesmo`), UFPE
+  (`a-politizacao-da-pandemia`), Fundación Giménez Abad (PDF de atas) e WeSeek.
+- **403 — funcionam num navegador**, só barram robôs: The Economist, SciELO Books, KAS.
+
+- [ ] Para cada 404, procurar a matéria no endereço novo do veículo ou uma captura no Wayback
+      Machine e trocar o `url` (nos dois lugares: `src/data/` e `extracao/dados/`). Na dúvida entre
+      duas matérias parecidas, deixar sem link — a regra é não inventar.
 
 ### 0b. As teses da BDTD não abrem (e não é culpa da migração)
 
@@ -237,6 +269,9 @@ em `extracao/dados/fontes-externas.yaml` → `pdfs_publicados_sem_pagina`.
 
 - [x] **Preservados em 2026-09-03**, em `arquivos-preservados/orfaos-sem-pagina/` (verificados,
       todos abrem). Continuam **fora do site** — decidir se algum volta é call editorial do DOXA.
+- [x] **Cópia privada no Google Drive do DOXA desde 2026-09-13**, na pasta *Acervo Doxa (NEW) / Site
+      DOXA — Arquivos preservados (não compartilhar)* — conferido que não abrem sem login. Se algum
+      voltar ao site, o caminho é `public/pdfs/`, não compartilhar essa pasta.
 
 ---
 

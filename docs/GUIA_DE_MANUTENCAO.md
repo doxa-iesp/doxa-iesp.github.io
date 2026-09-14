@@ -17,8 +17,12 @@ mais fácil tirar uma dúvida do que consertar depois.
    a mudança já está no ar.
 3. Você **não instala nenhum programa**: tudo é feito pelo navegador, no site do GitHub.
 
-O endereço do site hoje é **https://doxa-iesp.github.io/** (no futuro será www.lab-doxa.org.br).
+O endereço do site é **https://lab-doxa.org.br/**.
 O repositório fica em **https://github.com/doxa-iesp/doxa-iesp.github.io**.
+
+> O site antigo, em WordPress, usava esse mesmo endereço e **não existe mais**. Por isso, nunca
+> copie para o site um link que comece com `www.lab-doxa.org.br/...` achado num e-mail ou documento
+> antigo: ele não leva ao arquivo, leva a uma página de erro deste site.
 
 ---
 
@@ -280,6 +284,7 @@ Texto completo do evento aqui embaixo (pode ter vários parágrafos).
 - `data`: sempre no formato **`'ano-mês-dia'`** entre aspas (ex.: `'2026-03-15'`). Os eventos
   aparecem do mais novo para o mais antigo.
 - `titulo` e `data` são obrigatórios; o resto é opcional.
+- Sem `url` e sem anexo, o card aparece só com o texto — sem botão, e está tudo bem.
 
 ### 4.7. Adicionar um seminário
 
@@ -308,8 +313,11 @@ Arquivo: **`src/data/midia.yaml`**. Acrescente ao fim (modelo real):
   url: https://exemplo.com/materia      # (opcional)
 ```
 
-- `tipo`: um dos valores da Tabela (`impressa`, `virtual`, `audiovisual`) — decide o bloco onde a
-  matéria aparece. É o **único campo obrigatório** além do `titulo`.
+- `tipo`: um dos valores da Tabela (`impressa`, `virtual`, `audiovisual`) — vira a etiqueta da
+  matéria e decide em qual aba de filtro ela aparece. É o **único campo obrigatório** além do
+  `titulo`.
+- A página organiza tudo **por ano**, a partir da `data`: não precisa pôr a matéria em lugar
+  nenhum específico do arquivo. Sem `data`, ela vai para um grupo "Sem data" no fim.
 
 ### 4.9. Mudar o texto de uma página
 
@@ -403,6 +411,43 @@ Três coisas que ajudam:
 > Esta pasta **não** é regenerada pelo `scripts/converter-conteudo.py`. Diferente de projetos e
 > eventos, aqui você **não** precisa criar nada em `extracao/`.
 
+### 4.13. Acrescentar um mapa de votação
+
+Os PDFs dos mapas **não ficam no GitHub** — são grandes demais. Ficam no **Google Drive do DOXA**,
+na conta do acervo (`acervo-doxa@iesp.uerj.br`), na pasta **Acervo Doxa (NEW) › Site DOXA — Mapas de
+votação**. O site só guarda o link de cada um.
+
+1. **Suba o PDF para essa pasta** do Drive. A pasta já está compartilhada como "qualquer pessoa com
+   o link", e o arquivo herda isso — não precisa compartilhar de novo.
+2. **Copie o link**: clique com o botão direito no arquivo › Compartilhar › Copiar link. Ele tem a
+   cara `https://drive.google.com/file/d/…/view?usp=sharing`.
+3. **Confira numa janela anônima** do navegador que o link abre sem pedir login.
+4. **Acrescente o mapa em `src/data/mapas-votacao.yaml`** (modelo real):
+
+   ```yaml
+   - titulo: PT
+     ano: 2022
+     cargo: Deputado Federal
+     eleicao: Proporcional
+     url: https://drive.google.com/file/d/…/view?usp=sharing
+   ```
+
+   Nos mapas de eleição majoritária (governador, senador…), o `titulo` é o próprio cargo.
+5. **Acrescente a mesma linha no catálogo para download**, `public/dados/mapas-votacao.csv`, na
+   ordem das colunas `ano,eleicao,cargo,turno,titulo,url`:
+   `2022,Proporcional,Deputado Federal,,PT,https://drive.google.com/file/d/…/view?usp=sharing`
+
+> ⚠️ **Importante:** acrescente essa mesma linha **também** em `extracao/dados/mapas-votacao.csv`.
+> O `mapas-votacao.yaml` é regenerado a partir dele — um mapa que só exista em `src/` some na
+> próxima regeneração.
+
+Dois cuidados com o Drive:
+
+- **Mover ou renomear** o arquivo ou a pasta **não quebra** o link.
+- **Apagar e subir de novo quebra**: o arquivo ganha outro link, e o antigo passa a dar erro. Para
+  trocar um mapa por uma versão corrigida, use no Drive "Gerenciar versões" › "Enviar nova versão",
+  que mantém o mesmo link.
+
 ---
 
 ## 5. Tabela de valores permitidos
@@ -433,11 +478,11 @@ acento, ou no plural), o PR fica vermelho. Use **exatamente** o que está na col
 
 ### `tipo` — na mídia (`src/data/midia.yaml`)
 
-| Escreva assim | Bloco na página |
+| Escreva assim | Etiqueta e aba na página |
 |---|---|
-| `impressa` | Mídia Impressa |
-| `virtual` | Mídia Virtual |
-| `audiovisual` | Mídia Audiovisual |
+| `impressa` | Impressa |
+| `virtual` | Virtual |
+| `audiovisual` | Audiovisual |
 
 ### `status` — pesquisas (`src/data/pesquisas.yaml`)
 

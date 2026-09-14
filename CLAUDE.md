@@ -65,15 +65,18 @@ Duas formas de carregar, escolhidas por ergonomia de edição:
 
 ### Base path
 
-O site é publicado em `https://doxa-iesp.github.io/` (site de organização do GitHub Pages, servido
-na **raiz**). Por isso `base: ''` em [astro.config.mjs](astro.config.mjs).
+O site é publicado em `https://lab-doxa.org.br/` — domínio próprio, **apex sem `www`** (o `www` só
+redireciona), servido pelo GitHub Pages na **raiz**. Por isso `base: ''` em
+[astro.config.mjs](astro.config.mjs). `doxa-iesp.github.io` redireciona para o domínio.
 
 Mesmo assim, **todo link interno passa por `url()`** de [src/lib/url.ts](src/lib/url.ts). Não é
 zelo inútil: o site já viveu em `felipelamarca.com/DOXA/`, e foi só trocar o `base` para migrar.
 Um `href="/acervo/"` cru voltaria a dar 404 no dia em que o site for para um subdiretório.
 
-Para migrar a `www.lab-doxa.org.br`: trocar `site` e criar `public/CNAME`. O `CNAME` da raiz do
-repo **não** é publicado — só `public/` entra no build.
+Domínio: três lugares precisam bater — o DNS (registro.br), o domínio em *Settings > Pages* e, no
+código, `site` em `astro.config.mjs` + `public/CNAME`. `site` errado não quebra nada visível, mas
+manda canonical, `og:url` e sitemap para outro host. O `CNAME` da raiz do repo **não** é publicado —
+só `public/` entra no build.
 
 ## Estrutura do site
 
@@ -81,8 +84,20 @@ repo **não** é publicado — só `public/` entra no build.
   conjuntura e textos para discussão. Antes eram dois itens de menu separados.
 - **`/projetos/`** reúne as iniciativas com entrega pública (Vota Aí, dashboards, Pesquisa COVID,
   Geografia do Voto). Antes viviam espalhadas pela home e dentro de `site.yaml`.
-- As rotas antigas (`/pesquisas/`, `/publicacoes/*`, `/pesquisa-covid/`) continuam vivas como
-  **páginas de redirecionamento** ([src/components/Redirecionamento.astro](src/components/Redirecionamento.astro)).
+- **Endereços antigos continuam funcionando** — as rotas antigas deste site (`/pesquisas/`,
+  `/publicacoes/*`) e as ~650 do WordPress que citam o domínio lá fora. Tudo sai de
+  [src/lib/rotas-antigas.mjs](src/lib/rotas-antigas.mjs): `REDIRECIONAMENTOS` (destino exato) vira
+  página-stub via [src/pages/[...antiga].astro](src/pages/[...antiga].astro) e
+  [Redirecionamento.astro](src/components/Redirecionamento.astro); `destinoAntigo()` resolve os
+  padrões (`/acervo-doxa/<item>/` → card do acervo, `/lista-pesquisas/<slug>/` → busca preenchida…)
+  dentro da [404](src/pages/404.astro); PDFs antigos de `/wp-content/uploads/` são achados pelo nome
+  em `/arquivos-antigos.json` ([endpoint](src/pages/arquivos-antigos.json.ts)). A lista do que
+  existia está em `extracao/dados/enderecos-antigos.txt` — use-a para conferir qualquer mudança.
+- **Buscas e filtros** normalizam texto com `normalizar()` e casam com `casaBusca()`, ambos em
+  [src/lib/texto.ts](src/lib/texto.ts): todos os termos, cada um como início de palavra. As listas com
+  abas usam [AbasFiltro.astro](src/components/AbasFiltro.astro), que aceita busca (`busca`, com
+  `?busca=` na URL) e esconde grupos vazios (`[data-filtro-grupo]`). O acervo aceita
+  `?candidato=`, `?ano=`, `?cargo=`, `?regiao=`, `?partido=` e âncora `#item-<código>`.
 
 ## Sistema visual
 
@@ -107,7 +122,8 @@ de seção e **uma** faixa de destaque por página — se toda seção ganhar gr
 Quem faz isso é [src/components/Titulo.astro](src/components/Titulo.astro), sobre
 `partirUltimaPalavra()` de [src/lib/texto.ts](src/lib/texto.ts) (usado também por `PageHero` e
 `CardMembro`). Não escreva `<h2>` cru numa página nova: use `<Titulo>`, e passe `forte` quando a
-quebra natural não for a última palavra.
+quebra natural não for a última palavra. Exceções: rótulos pequenos em caixa alta ("O DOXA em
+números", "O projeto") e títulos de card/item ficam crus — o bi-peso não se lê neles.
 
 ## Armadilhas conhecidas
 
@@ -140,30 +156,40 @@ segmentos da rota (`dist/core/routing/generator.js`), sem o `base`. Hoje isso é
 '/producao/pesquisas'}` mandava o visitante para `felipelamarca.com/producao/pesquisas/` — 404, **e
 só em produção**. É uma armadilha adormecida, não morta: ela volta no dia em que o site for para um
 subdiretório. Por isso os redirecionamentos continuam sendo páginas-stub que montam o destino com
-`url()` ([src/components/Redirecionamento.astro](src/components/Redirecionamento.astro)) — e as
-rotas antigas ficam fora do sitemap, via `ROTAS_ANTIGAS` no [astro.config.mjs](astro.config.mjs).
+`url()` ([src/components/Redirecionamento.astro](src/components/Redirecionamento.astro)), geradas da
+tabela em [src/lib/rotas-antigas.mjs](src/lib/rotas-antigas.mjs) — e ficam fora do sitemap, via
+`ROTAS_ANTIGAS` no [astro.config.mjs](astro.config.mjs), que lê a mesma tabela.
 
-**2d. Os mapas de votação não estão no site — e o servidor deles está caindo.** 273 arquivos
-(797 MB) ainda são servidos pelo WordPress antigo (`lab-doxa.org.br`) — o `url:` desses itens em
-`src/data/mapas-votacao.yaml` aponta para fora. **Em 2026-09-06 o host começou a oscilar**: pela
-manhã respondia 200, à noite dava timeout em todas as tentativas. Enquanto isso, os 273 downloads
-estão quebrados no site publicado, e nenhum build acusa — para o Astro são links externos. Migrar
-para o Drive do DOXA é a tarefa mais urgente em aberto (ver `DADOS_PENDENTES.md`, item 0); a cópia
-local em `arquivos-preservados/mapas-de-votacao/` é hoje a única garantia. (As teses, análises e textos para discussão que dependiam do mesmo jeito do WordPress já
-foram migrados para `public/pdfs/` — ver item 0 de [DADOS_PENDENTES.md](DADOS_PENDENTES.md). Os
-mapas são o que sobrou: sozinhos, não cabem no teto de 1 GB do GitHub Pages, então a decisão de
-onde hospedá-los está pendente do time.) Não presuma que um PDF referenciado existe em `public/`
-sem conferir — `DADOS_PENDENTES.md` é também a lista de tudo o que falta preencher (e que está
-faltando **de propósito**, não por bug).
+**2d. O site antigo não existe mais — nada pode depender dele.** O WordPress saiu do ar em 2026-09
+e o domínio `lab-doxa.org.br` passou a servir este site. Consequência que não é óbvia: **um link
+para `www.lab-doxa.org.br/...` não dá erro de conexão, dá 404 deste próprio site**, e nenhum build
+acusa (para o Astro é link externo). Foi assim que 273 mapas, 4 "Saiba mais" de eventos, 2 links de
+bancos de dados e um anexo quebraram de uma vez. Todos foram resolvidos; um dado novo não pode voltar
+a apontar para lá. Não há como baixar nada do site antigo de novo: o que foi preservado está em
+`extracao/` e `arquivos-preservados/`, e a **única fonte externa é o Wayback Machine** (de onde veio o
+cartaz do seminário Marcus Figueiredo). O conversor tentava baixar imagens de evento de lá; agora usa
+`curl -f` e avisa para pôr a imagem à mão.
 
-**2e. `arquivos-preservados/` não tem backup em lugar nenhum.** É uma cópia local dos 273 mapas
-(797 MB) do item acima, mais 6 PDFs órfãos preservados por precaução (nenhuma página os linka
-hoje), ignorada pelo git de propósito (ver `.gitignore`) — o seguro contra o dia em que o
-WordPress antigo sair do ar, enquanto a decisão de hospedagem dos mapas (ver
-[arquivos-preservados/LEIA-ME.md](arquivos-preservados/LEIA-ME.md), que também traz o runbook para
-quando o destino for escolhido) não sai do papel. `git clean -fdx` apaga a pasta inteira sem forma
-de recuperação (a não ser rebaixar tudo do WordPress, se ainda estiver no ar). Rode sempre
-`git clean -fdx -e arquivos-preservados`, nunca o comando cru.
+Os PDFs moram em dois lugares: `public/pdfs/` (teses, análises, textos para discussão, livro, cartaz)
+e o **Google Drive do DOXA** — conta do acervo, pasta *Acervo Doxa (NEW) / Site DOXA — Mapas de
+votação*, compartilhada por link — para os **273 mapas** (835 MB, que não cabem no teto de 1 GB do
+GitHub Pages). [extracao/dados/mapas-no-drive.csv](extracao/dados/mapas-no-drive.csv) registra o
+endereço antigo, o novo e o SHA-256 de cada mapa. **Mover ou renomear no Drive não quebra link;
+apagar e reenviar quebra** (o arquivo ganha outro ID). Links de mapa vivem em três arquivos que
+precisam bater: `extracao/dados/mapas-votacao.csv` (fonte do conversor), `src/data/mapas-votacao.yaml`
+e `public/dados/mapas-votacao.csv` (catálogo publicado) — troque com
+[scripts/trocar-links-arquivos.py](scripts/trocar-links-arquivos.py), que preserva as quebras de linha
+(os CSVs são CRLF). Não presuma que um PDF referenciado existe sem conferir — `DADOS_PENDENTES.md` é
+também a lista do que falta preencher (e que está faltando **de propósito**, não por bug).
+
+**2e. `arquivos-preservados/` só existe no Mac de quem fez a migração.** Ignorada pelo git de
+propósito (835 MB). Tem a cópia original dos 273 mapas, 6 PDFs órfãos (nenhuma página os linka) e o
+PDF original do livro *A Decisão do Voto* (com o trecho que a coordenação pediu para tirar da versão
+publicada). Desde 2026-09-13 há segunda cópia de tudo no Drive do DOXA: os mapas na pasta pública
+acima; órfãos, original do livro e `manifesto.csv` em *Acervo Doxa (NEW) / Site DOXA — Arquivos
+preservados (não compartilhar)*, **privada** — não compartilhe, o original do livro não deve ir ao
+ar. `git clean -fdx` apaga a pasta local sem aviso: rode sempre `git clean -fdx -e
+arquivos-preservados`, nunca o comando cru.
 
 **2f. O repositório vive no Desktop, e o iCloud fabrica cópias.** Em 2026-09-07 havia **142**
 arquivos como `felipe-lamarca 3.yaml` e `pesquisa-covid 4.md` em `src/content/` — cópias de
@@ -177,6 +203,15 @@ era invisível no `git status`. A regra agora cobre qualquer número, e `scripts
 falha com código 1 quando encontra uma (o `.gitignore` protege o commit; só o validador protege o
 build local). Antes de apagar, `diff` contra o original — nunca houve conteúdo único, mas é barato
 conferir. **O conserto de raiz é tirar o repositório de `~/Desktop`.**
+
+**2g. Classe de página passada a um componente precisa chegar pelo `...rest`.** O Astro escopa o CSS
+de cada arquivo com um atributo `data-astro-cid-*`. Uma regra da página como `.hero__titulo
+{ margin: 0 }` compila para `.hero__titulo[data-astro-cid-<página>]` — e só casa se o elemento do
+componente filho carregar o cid da página, que o Astro entrega junto com as props. Até 2026-09-13 o
+[Titulo](src/components/Titulo.astro) recebia a classe em `classe` e não espalhava o resto: **a
+margem e a cor do título do herói nunca valeram**, e ninguém viu porque classes globais
+(`.titulo-secao`) funcionavam. Agora ele aceita `class` e faz `{...rest}`. Ao criar componente que
+recebe classe de fora, faça o mesmo — e confira no `dist/` que o elemento tem os dois cids.
 
 **3. Defeito na fonte: `programas-eleitorais-capitais.csv`.** A coluna `municipio` está
 rotacionada em relação aos candidatos (Eduardo Paes aparece como Florianópolis). Documentado em
@@ -193,6 +228,12 @@ descrição nem link. Nada disso existe no site antigo. Não invente, e não cri
 [scripts/converter-conteudo.py](scripts/converter-conteudo.py) reconstrói `src/content/` e
 `src/data/` a partir de `extracao/dados/`. É idempotente e **sobrescreve edições manuais** —
 se alguém corrigir um dado à mão, corrija também em `extracao/`, que é a fonte de verdade.
+
+Duas formas de corrigir, escolha pela natureza do campo: se o valor em `extracao/` estava **errado ou
+mudou** (um anexo que agora é local, um evento novo), edite `extracao/`; se o valor é **proveniência
+fiel** que só não deve ir ao ar (o `url` "página original" dos bancos, que apontava para o
+WordPress), filtre no conversor e deixe `extracao/` como registro. Depois de qualquer mudança, rode o
+conversor e confira com `git diff` que só mudou o que você esperava.
 
 ## Documentos
 

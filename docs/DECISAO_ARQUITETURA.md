@@ -182,10 +182,16 @@ artefato de download. O revisor vê se o build passou antes de aprovar. (Preview
 exigiria um serviço externo — Netlify/Cloudflare —, deliberadamente evitado para não introduzir
 outra conta a manter.)
 
-**URL de deploy.** Hoje o site é publicado em `https://doxa-iesp.github.io/`, portanto
-`base: '/DOXA'`. Para migrar a `www.lab-doxa.org.br`: remover o `base`, criar `public/CNAME` com o
-domínio e apontar o DNS. Atenção: o `CNAME` na raiz do repositório **não** é publicado — só o
+**URL de deploy.** O site é publicado em `https://lab-doxa.org.br/` (apex, sem `www`), na raiz,
+portanto `base: ''`. O caminho até aqui passou por `felipelamarca.com/DOXA/` (com
+`base: '/DOXA'`) e por `https://doxa-iesp.github.io/`, que hoje redireciona para o domínio. O
+domínio depende de três lugares baterem: o DNS (registro.br), o domínio em *Settings > Pages* e, no
+código, `site` + `public/CNAME`. O `CNAME` na raiz do repositório **não** é publicado — só o
 conteúdo de `public/` entra no build.
+
+O domínio era do WordPress antigo, que saiu do ar na troca. Os endereços antigos que circulam lá
+fora são levados ao conteúdo novo por páginas-stub e pela página 404 (`src/lib/rotas-antigas.mjs`),
+já que o GitHub Pages não faz redirecionamento no servidor.
 
 ---
 

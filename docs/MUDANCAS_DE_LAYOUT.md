@@ -173,3 +173,45 @@ resumo continua legível, num `<details>` de reserva.
 **Textos do site** → travessões (—) foram substituídos por vírgulas, dois-pontos ou parênteses. Os
 travessões que restam estão nos **títulos das análises de conjuntura**, que são registros
 bibliográficos copiados literalmente do site antigo: alterá-los falsificaria a fonte.
+
+---
+
+## Setembro de 2026 — domínio próprio e melhorias adiadas
+
+**Endereços do site antigo** → quem chega por um link antigo do WordPress é levado para onde o
+conteúdo está agora (um item do acervo cai no card, uma pesquisa chega com a busca preenchida, um PDF
+abre a cópia nova) → o domínio `lab-doxa.org.br`, que era do WordPress, passou a servir este site, e
+os links que circulam lá fora davam 404. Detalhes em `src/lib/rotas-antigas.mjs`.
+
+**`/eventos/`** → os botões "Saiba mais" que levavam aos posts do WordPress saíram → os posts não
+existem mais, e o texto de cada um já estava na descrição do card. Entrou o post "Coordenadora do
+Doxa recebe prêmio de Excelência Acadêmica da Anpocs" (2022), que a extração não tinha pegado por
+estar fora da categoria de eventos. O anexo do seminário Marcus Figueiredo voltou a funcionar, com o
+cartaz recuperado do Wayback Machine.
+
+**`/bancos-de-dados/`** → saiu o link "Página original" dos dois bancos de programas eleitorais →
+apontava para o WordPress; as tabelas estão nos CSV para download.
+
+**`/na-midia/`** → as três seções por tipo (impressa, virtual, audiovisual) viraram **uma lista por
+ano**, com o tipo como etiqueta e abas de filtro no topo → quem procurava o que saiu num ano tinha de
+olhar três lugares. O acordeão por ano foi considerado e descartado: seriam 22 blocos, 10 com um item
+só.
+
+**`/acervo/`** → a busca veio para antes dos vídeos, e os dois vídeos viraram uma faixa só, lado a
+lado, no fim da página, com um atalho no alto → com os vídeos no meio, a busca ficava a 3,3 telas de
+rolagem no celular. Os cards passaram a mostrar **todos os candidatos**, destacando o que casa com a
+busca, e a recolher os partidos → com os candidatos truncados em 4, buscar "collor" devolvia 31 cards
+e o nome só aparecia em 7.
+
+**`/producao/pesquisas/`** → ganhou um campo de busca, que soma com as abas de tipo → são 61
+pesquisas, e só havia filtro por tipo.
+
+**`/producao/analises-de-conjuntura/`** → cards em duas colunas, não três → os ciclos têm 10, 8, 4,
+4, 1 e 1 análises; em três colunas sobravam cards órfãos e linhas dois terços vazias.
+
+**`/projetos/`** → os cards de largura total ("destaque") saíram e todos ficaram iguais, dois por
+linha; o projeto sem capa ganhou a faixa da marca → cada grupo tem dois projetos, e o banner deixava
+o segundo sozinho numa linha de 1108px.
+
+**Títulos de seção** → passaram ao título bi-peso ("Em **destaque**", "Apoio e **parcerias**") →
+a assinatura tipográfica do site antigo, que várias seções novas não usavam.
