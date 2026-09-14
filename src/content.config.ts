@@ -124,10 +124,10 @@ const projetos = defineCollection({
 /**
  * Destaques da home — a vitrine curada pela coordenação.
  *
- * Um arquivo por destaque, como em `projetos`. Esta coleção NÃO é gerada por
- * `scripts/converter-conteudo.py` (ele só regenera equipe, paginas, projetos e
- * eventos), então o que se escreve aqui à mão fica. Para tirar um destaque do ar
- * sem perder o texto, basta `ativo: false`.
+ * Um arquivo por destaque, como em `projetos`. É a única coleção que nasceu depois
+ * da migração, sem equivalente em `extracao/` (que hoje é só registro histórico:
+ * todo o conteúdo se edita em `src/`). Para tirar um destaque do ar sem perder o
+ * texto, basta `ativo: false`.
  *
  * Receita para estagiários: docs/GUIA_DE_MANUTENCAO.md, seção 4.12.
  */

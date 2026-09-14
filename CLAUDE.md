@@ -19,10 +19,14 @@ npm run validar   # valida os YAML de conteúdo (roda sozinho antes do build)
 npm run build     # validar + astro build -> dist/
 npm run check     # validar + astro check (tipos)
 npm run preview   # serve dist/
+
+# Scripts Python
+python3 scripts/trocar-links-arquivos.py MAPA.csv ARQ...   # troca links origem -> destino por string literal
+python3 scripts/converter-conteudo.py --forcar-regeneracao # APOSENTADO: sobrescreve src/; não use (ver "Conteúdo")
 ```
 
-`npm run build` = `node scripts/validar-dados.mjs && astro build`. **Não remova o validador**
-(veja "Armadilhas" abaixo).
+`npm run build` = `npm run validar && astro build`. **Não remova o validador**
+(veja "Armadilhas" abaixo). Node ≥ 20 (o CI usa 22).
 
 **Não há suíte de testes** — e não é esquecimento: o site não tem lógica de runtime para testar.
 O que substitui o teste é o par `validar` + `check`, e é isso que o CI roda. Antes de dizer que uma
@@ -47,8 +51,8 @@ src/
     paginas/*.md      ← EDITÁVEL: a prosa de cada página
   components/ layouts/ pages/ styles/ lib/   ← código
 public/               ← imagens, fontes, PDFs (PRECISA estar versionado)
-extracao/             ← extração completa do WordPress antigo. Fonte de verdade dos dados.
-scripts/              ← conversor de conteúdo e validador de dados
+extracao/             ← extração do WordPress antigo. Registro histórico, congelado (ver "Conteúdo").
+scripts/              ← validador de dados, troca de links e o conversor da migração (aposentado)
 ```
 
 ### Coleções
@@ -57,8 +61,8 @@ Duas formas de carregar, escolhidas por ergonomia de edição:
 
 - `glob()` — **um arquivo por entrada** (`equipe`, `eventos`, `paginas`, `projetos`, `destaques`).
   Adicionar = criar arquivo. Sem indentação de lista para errar, sem conflito de merge.
-  `destaques` é a vitrine curada da home e é a **única** coleção que o
-  `converter-conteudo.py` não regenera — o que se escreve nela à mão fica (receita 4.12 do guia).
+  `destaques` é a vitrine curada da home (receita 4.12 do guia) e a única coleção que nasceu
+  depois da migração, sem equivalente em `extracao/`.
 - `file()` + `listaYaml()` — **um YAML com uma lista** (publicações, mídia, …). O helper
   `listaYaml` em `content.config.ts` gera o `id` de cada item a partir do título, para que ninguém
   precise escrever `id:` à mão. O `id` só aparece em mensagens de erro; não vira URL.
@@ -72,6 +76,9 @@ redireciona), servido pelo GitHub Pages na **raiz**. Por isso `base: ''` em
 Mesmo assim, **todo link interno passa por `url()`** de [src/lib/url.ts](src/lib/url.ts). Não é
 zelo inútil: o site já viveu em `felipelamarca.com/DOXA/`, e foi só trocar o `base` para migrar.
 Um `href="/acervo/"` cru voltaria a dar 404 no dia em que o site for para um subdiretório.
+Para um campo de dado que pode ser link externo **ou** caminho interno, use `linkPara()` (mesmo
+arquivo), que só aplica `url()` quando o destino não é externo. O config tem
+`trailingSlash: 'always'`: links internos terminam em `/`.
 
 Domínio: três lugares precisam bater — o DNS (registro.br), o domínio em *Settings > Pages* e, no
 código, `site` em `astro.config.mjs` + `public/CNAME`. `site` errado não quebra nada visível, mas
@@ -93,6 +100,10 @@ só `public/` entra no build.
   dentro da [404](src/pages/404.astro); PDFs antigos de `/wp-content/uploads/` são achados pelo nome
   em `/arquivos-antigos.json` ([endpoint](src/pages/arquivos-antigos.json.ts)). A lista do que
   existia está em `extracao/dados/enderecos-antigos.txt` — use-a para conferir qualquer mudança.
+  O `id` do card do acervo sai de `idItemAcervo()` em [src/lib/ancoras.mjs](src/lib/ancoras.mjs),
+  que imita o slug do WordPress: é por isso que 93 dos 95 endereços `/acervo-doxa/` casam sem
+  tabela. **Mudar essa função quebra os redirecionamentos.** Ela e `rotas-antigas.mjs` são `.mjs`,
+  não `.ts`, porque o `astro.config.mjs` as importa.
 - **Buscas e filtros** normalizam texto com `normalizar()` e casam com `casaBusca()`, ambos em
   [src/lib/texto.ts](src/lib/texto.ts): todos os termos, cada um como início de palavra. As listas com
   abas usam [AbasFiltro.astro](src/components/AbasFiltro.astro), que aceita busca (`busca`, com
@@ -166,9 +177,8 @@ para `www.lab-doxa.org.br/...` não dá erro de conexão, dá 404 deste próprio
 acusa (para o Astro é link externo). Foi assim que 273 mapas, 4 "Saiba mais" de eventos, 2 links de
 bancos de dados e um anexo quebraram de uma vez. Todos foram resolvidos; um dado novo não pode voltar
 a apontar para lá. Não há como baixar nada do site antigo de novo: o que foi preservado está em
-`extracao/` e `arquivos-preservados/`, e a **única fonte externa é o Wayback Machine** (de onde veio o
-cartaz do seminário Marcus Figueiredo). O conversor tentava baixar imagens de evento de lá; agora usa
-`curl -f` e avisa para pôr a imagem à mão.
+`extracao/` e `arquivos-preservados/`, e a **única fonte externa é o Wayback Machine** (de onde vieram
+o cartaz do seminário Marcus Figueiredo e os downloads da Pesquisa COVID).
 
 Os PDFs moram em dois lugares: `public/pdfs/` (teses, análises, textos para discussão, livro, cartaz)
 e o **Google Drive do DOXA** — conta do acervo, pasta *Acervo Doxa (NEW) / Site DOXA — Mapas de
@@ -176,8 +186,9 @@ votação*, compartilhada por link — para os **273 mapas** (835 MB, que não c
 GitHub Pages). [extracao/dados/mapas-no-drive.csv](extracao/dados/mapas-no-drive.csv) registra o
 endereço antigo, o novo e o SHA-256 de cada mapa. **Mover ou renomear no Drive não quebra link;
 apagar e reenviar quebra** (o arquivo ganha outro ID). Links de mapa vivem em três arquivos que
-precisam bater: `extracao/dados/mapas-votacao.csv` (fonte do conversor), `src/data/mapas-votacao.yaml`
-e `public/dados/mapas-votacao.csv` (catálogo publicado) — troque com
+precisam bater: `src/data/mapas-votacao.yaml` (o que a página mostra), `public/dados/mapas-votacao.csv`
+(catálogo publicado) e `extracao/dados/mapas-no-drive.csv` (lido pelo build para montar
+`/arquivos-antigos.json`, que leva o endereço antigo de cada mapa ao novo) — troque com
 [scripts/trocar-links-arquivos.py](scripts/trocar-links-arquivos.py), que preserva as quebras de linha
 (os CSVs são CRLF). Não presuma que um PDF referenciado existe sem conferir — `DADOS_PENDENTES.md` é
 também a lista do que falta preencher (e que está faltando **de propósito**, não por bug).
@@ -223,17 +234,25 @@ de mídia não têm URL; 9 dos 16 membros não têm Lattes e **nenhum** tem e-ma
 descrição nem link. Nada disso existe no site antigo. Não invente, e não crie botões mortos — o
 `CardMembro` reserva a linha vazia justamente para o card não desalinhar quando falta o link.
 
-## Regenerar o conteúdo
+## Conteúdo: `src/` é a fonte
 
-[scripts/converter-conteudo.py](scripts/converter-conteudo.py) reconstrói `src/content/` e
-`src/data/` a partir de `extracao/dados/`. É idempotente e **sobrescreve edições manuais** —
-se alguém corrigir um dado à mão, corrija também em `extracao/`, que é a fonte de verdade.
+**Desde 2026-09-13, a fonte de verdade do conteúdo é `src/`.** Corrija e acrescente direto em
+`src/content/` e `src/data/` — é o que o guia manda o estagiário fazer, e é a única regra.
 
-Duas formas de corrigir, escolha pela natureza do campo: se o valor em `extracao/` estava **errado ou
-mudou** (um anexo que agora é local, um evento novo), edite `extracao/`; se o valor é **proveniência
-fiel** que só não deve ir ao ar (o `url` "página original" dos bancos, que apontava para o
-WordPress), filtre no conversor e deixe `extracao/` como registro. Depois de qualquer mudança, rode o
-conversor e confira com `git diff` que só mudou o que você esperava.
+[scripts/converter-conteudo.py](scripts/converter-conteudo.py) foi o que converteu `extracao/dados/`
+nas coleções durante a migração. Está **aposentado**: sem `--forcar-regeneracao`, sai com código 1
+sem tocar em nada. Rodado com a flag, ele apaga e regenera `src/content/` (menos `destaques/`) e os
+YAML de `src/data/` — inclusive `site.yaml`, cujos valores estão fixos no próprio script — e
+**desfaz toda correção feita em `src/` depois da migração**. Fica no repositório como documentação de
+como cada dado foi convertido (`CARGOS`, `OVERRIDES`, filtros).
+
+`extracao/` é **registro histórico congelado**: não edite para corrigir o site. Duas exceções vivas:
+
+- `extracao/dados/mapas-no-drive.csv` é **entrada do build** (lido por
+  [src/pages/arquivos-antigos.json.ts](src/pages/arquivos-antigos.json.ts)); se os mapas mudarem
+  de lugar, ele muda junto.
+- `extracao/dados/enderecos-antigos.txt` é a lista de endereços do site antigo, referência para
+  conferir qualquer mudança em [src/lib/rotas-antigas.mjs](src/lib/rotas-antigas.mjs).
 
 ## Documentos
 

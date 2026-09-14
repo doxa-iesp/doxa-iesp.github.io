@@ -1,5 +1,5 @@
-# Gerado por scripts/converter-conteudo.py a partir de extracao/dados/.
-# Pode ser editado à mão: o build valida o schema (src/content.config.ts).
+# Migrado do site antigo em 2026; esta é a fonte do conteúdo — edite aqui.
+# O build valida o schema (src/content.config.ts).
 
 - nome: CAPES
   arquivo: /img/parceiros/capes.png

@@ -1,10 +1,29 @@
 #!/usr/bin/env python3
-"""Agente A — converte extracao/dados/ nas content collections do Astro.
+"""APOSENTADO — converteu extracao/dados/ nas content collections do Astro, na migração.
 
-Idempotente e reproduzível: apaga e regenera src/content/ e src/data/.
+Desde 2026-09-13, `src/` é a fonte de verdade do conteúdo e `extracao/` é registro histórico
+congelado. Este script fica como documentação de como a migração foi feita, travado atrás de
+`--forcar-regeneracao`: rodado, ele APAGA e regenera `src/content/` (tudo menos `destaques/`) e os
+YAML de `src/data/`, incluindo `site.yaml` (cujos valores estão fixos aqui, em `site()`) e os
+cargos e ajustes de `CARGOS` e `OVERRIDES`. Toda correção feita em `src/` depois da migração —
+e foram muitas — se perderia.
+
 Nada é inventado; campos ausentes na fonte são omitidos.
 """
-import csv, json, os, re, shutil, subprocess, sys, unicodedata
+import sys
+
+# A trava vem antes de qualquer outro import e de qualquer código de módulo (`FOTOS = …` abaixo
+# roda na importação): sem a flag, o script sai sem tocar em nada, mesmo sem PyYAML instalado.
+if __name__ == "__main__" and "--forcar-regeneracao" not in sys.argv[1:]:
+    sys.stderr.write(
+        "converter-conteudo.py está APOSENTADO: a migração acabou e src/ é a fonte de verdade.\n"
+        "Rodar isto apaga toda correção feita em src/content/ e src/data/ depois de 2026-09-13.\n"
+        "Para editar conteúdo, edite os arquivos em src/. Se precisar mesmo regenerar, rode com\n"
+        "--forcar-regeneracao e confira o `git diff` antes de commitar.\n"
+    )
+    sys.exit(1)
+
+import csv, json, os, re, shutil, subprocess, unicodedata
 from pathlib import Path
 
 import yaml
@@ -37,7 +56,7 @@ def limpo(d: dict) -> dict:
     return {k: v for k, v in d.items() if v not in ("", None, [], {})}
 
 
-CAB = "# Gerado por scripts/converter-conteudo.py a partir de extracao/dados/.\n# Pode ser editado à mão: o build valida o schema (src/content.config.ts).\n"
+CAB = "# Migrado do site antigo em 2026; esta é a fonte do conteúdo — edite aqui.\n# O build valida o schema (src/content.config.ts).\n"
 
 # ---------------------------------------------------------------- equipe
 

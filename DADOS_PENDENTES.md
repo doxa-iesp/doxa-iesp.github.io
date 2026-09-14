@@ -75,7 +75,7 @@ Todos em `src/data/midia.yaml`, salvo o da EdUERJ (`publicacoes.yaml`).
 - **403 — funcionam num navegador**, só barram robôs: The Economist, SciELO Books, KAS.
 
 - [ ] Para cada 404, procurar a matéria no endereço novo do veículo ou uma captura no Wayback
-      Machine e trocar o `url` (nos dois lugares: `src/data/` e `extracao/dados/`). Na dúvida entre
+      Machine e trocar o `url` em `src/data/`. Na dúvida entre
       duas matérias parecidas, deixar sem link — a regra é não inventar.
 
 ### 0b. As teses da BDTD não abrem (e não é culpa da migração)
@@ -96,10 +96,7 @@ projeto não cria botões mortos.)*
 
 
 ### 1. Lattes de 9 dos 16 membros da equipe
-**Onde:** a lista `lattes:` no topo de `extracao/dados/publicacoes-academicas.yaml` (⚠️ não é o
-campo `lattes:` de cada `src/content/equipe/<nome>.yaml` — `scripts/converter-conteudo.py` ignora
-esse campo e casa o Lattes de cada pessoa por **sobrenome**, usando só essa lista; editar o YAML da
-pessoa diretamente não tem efeito depois da próxima regeneração).
+**Onde:** o campo `lattes:` de cada `src/content/equipe/<nome>.yaml`.
 **Por que falta:** a página `/institucional/` do site antigo não publicava Lattes. Os 4 que temos
 (Argelina Cheibub Figueiredo, Fernando Meireles, Fernando Guarnieri, Bruno Schaefer) vieram da
 página de publicações acadêmicas.
@@ -125,17 +122,12 @@ acadêmicas como Escavador/ResearchGate/Google Acadêmico), mas essas páginas b
 automatizado e a busca geral não trouxe o número do Lattes com confiança suficiente para publicar
 sem risco de atribuir o currículo errado a alguém. Mais rápido: cada pessoa cola o próprio link.
 
-Para adicionar, entre em `extracao/dados/publicacoes-academicas.yaml` e acrescente à lista
-`lattes:` do topo (o nome só precisa bater o **sobrenome** com o `nome:` da pessoa em
-`extracao/dados/equipe.yaml`):
+Para adicionar, abra o arquivo da pessoa em `src/content/equipe/` e acrescente a linha (receita
+4.1 do guia):
 
 ```yaml
-lattes:
-  - name: "Sobrenome, X."
-    url: "http://lattes.cnpq.br/0000000000000000"
+lattes: https://lattes.cnpq.br/0000000000000000
 ```
-
-Depois rode `python3 scripts/converter-conteudo.py` para propagar para `src/`.
 
 ### 2. E-mail dos membros (nenhum publicado)
 **Onde:** mesmo arquivo, campo `email`
@@ -184,7 +176,7 @@ deslocamento parece ser de 7 blocos, mas os blocos têm tamanhos diferentes.
 
 - [ ] Recuperar o município correto de cada candidato (fonte: TSE) e regravar o CSV — deixado de
       fora do ciclo de 2026-09-03 a pedido explícito (fora de escopo por ora)
-- [ ] Depois, apagar o campo `aviso` em `extracao/dados/bancos-de-dados.yaml`
+- [ ] Depois, apagar o campo `aviso` em `src/data/bancos-de-dados.yaml`
 
 ### 6. Pesquisas sem link para o texto completo — 30 de 61
 **Onde:** `src/data/pesquisas.yaml`, campo `url`
@@ -295,6 +287,5 @@ Passo a passo, sem jargão, em [`docs/GUIA_DE_MANUTENCAO.md`](docs/GUIA_DE_MANUT
 Regra de ouro: se você digitar algo errado, **o build falha e o site não é atualizado**. Nada
 quebrado vai ao ar. Pode editar sem medo.
 
-> ⚠️ Se você corrigir um dado à mão em `src/`, corrija **também** em `extracao/dados/`.
-> O script `scripts/converter-conteudo.py` regenera `src/` a partir de `extracao/` e sobrescreve
-> edições manuais. (Ou simplesmente não rode o script.)
+> Corrija sempre em `src/`: é a fonte do conteúdo. `extracao/` é registro histórico da migração e
+> não precisa ser tocada (o script que convertia `extracao/` em `src/` está aposentado).

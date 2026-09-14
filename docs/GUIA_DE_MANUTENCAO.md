@@ -373,11 +373,6 @@ Aqui vai a descrição longa, em parágrafos normais. Pode usar **negrito** e *i
 Só o `titulo` e o `resumo` são obrigatórios. **Não invente `status`**: se você não souber se o
 projeto está em andamento ou concluído, apague a linha — a etiqueta simplesmente não aparece.
 
-> ⚠️ **Importante:** crie o arquivo **também** em `extracao/dados/projetos/`, com o mesmo conteúdo.
-> Existe um script (`scripts/converter-conteudo.py`) que regenera a pasta `src/content/projetos/` a
-> partir de `extracao/` — se alguém rodar esse script, um projeto que só exista em `src/` é apagado.
-> Na dúvida, peça ajuda a quem cuida do site.
-
 ### 4.12. Trocar os destaques da página inicial
 
 A faixa **"Em destaque"**, logo abaixo da apresentação na página inicial, é a vitrine do
@@ -408,9 +403,6 @@ Três coisas que ajudam:
   vertical (capa de livro, cartaz de evento).
 - Sem `url`, o card aparece sem botão — o que é útil para um aviso curto.
 
-> Esta pasta **não** é regenerada pelo `scripts/converter-conteudo.py`. Diferente de projetos e
-> eventos, aqui você **não** precisa criar nada em `extracao/`.
-
 ### 4.13. Acrescentar um mapa de votação
 
 Os PDFs dos mapas **não ficam no GitHub** — são grandes demais. Ficam no **Google Drive do DOXA**,
@@ -436,10 +428,6 @@ votação**. O site só guarda o link de cada um.
 5. **Acrescente a mesma linha no catálogo para download**, `public/dados/mapas-votacao.csv`, na
    ordem das colunas `ano,eleicao,cargo,turno,titulo,url`:
    `2022,Proporcional,Deputado Federal,,PT,https://drive.google.com/file/d/…/view?usp=sharing`
-
-> ⚠️ **Importante:** acrescente essa mesma linha **também** em `extracao/dados/mapas-votacao.csv`.
-> O `mapas-votacao.yaml` é regenerado a partir dele — um mapa que só exista em `src/` some na
-> próxima regeneração.
 
 Dois cuidados com o Drive:
 

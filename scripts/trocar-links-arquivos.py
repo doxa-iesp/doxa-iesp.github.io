@@ -4,8 +4,8 @@ Troca links `origem -> novo endereço` em arquivos de conteúdo, por substituiç
 (preserva formatação, comentários e indentação — não usa um parser de YAML).
 
 Usado para a migração dos PDFs que o site buscava no WordPress antigo (ver DADOS_PENDENTES.md e
-arquivos-preservados/LEIA-ME.md) e pensado para ser reaproveitado no dia em que os 273 mapas de
-votação ganharem um endereço definitivo (Zenodo, Drive, repositório do IESP...).
+arquivos-preservados/LEIA-ME.md) e, em 2026-09-13, para levar os 273 mapas de votação ao Google Drive
+do DOXA. Serve de novo se os mapas mudarem de endereço outra vez (Zenodo, repositório do IESP...).
 
 Uso:
     python3 scripts/trocar-links-arquivos.py MAPA.csv ARQUIVO.yaml [ARQUIVO2.yaml ...]
@@ -14,9 +14,10 @@ Uso:
 `arquivos-preservados/manifesto.csv` também serve, desde que se acrescente uma coluna `novo` com o
 endereço final de cada arquivo).
 
-Sempre rode nos dois lugares que precisam bater (regra do CLAUDE.md, seção "Regenerar o
-conteúdo"): o(s) arquivo(s) em `src/data/` E o(s) equivalente(s) em `extracao/dados/` — senão o
-próximo `scripts/converter-conteudo.py` desfaz a troca.
+Rode em todos os arquivos que guardam o mesmo link. Para os mapas são três (CLAUDE.md, armadilha
+2d): `src/data/mapas-votacao.yaml`, `public/dados/mapas-votacao.csv` e
+`extracao/dados/mapas-no-drive.csv` — este último é lido pelo build para montar
+`/arquivos-antigos.json`. O resto de `extracao/` é registro histórico e não precisa ser tocado.
 """
 import csv
 import sys

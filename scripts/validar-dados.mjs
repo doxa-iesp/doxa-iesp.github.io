@@ -15,8 +15,11 @@
  * Este script fecha esse buraco: ele lê cada arquivo de conteúdo, falha com código 1 e
  * aponta arquivo e linha. Roda antes do `astro build` (ver package.json).
  *
- * Os arquivos carregados via `glob()` (equipe, eventos, páginas) JÁ quebram o build sozinhos,
- * mas são validados aqui também para dar a mensagem melhor.
+ * Os arquivos carregados via `glob()` (equipe, eventos, páginas, projetos e destaques) JÁ quebram
+ * o build sozinhos, mas são validados aqui também para dar a mensagem melhor.
+ *
+ * Os mínimos abaixo pegam o item apagado por engano. Quando a remoção é de propósito (um projeto
+ * encerrado que sai do site, por exemplo), o número se ajusta aqui mesmo.
  */
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
@@ -86,7 +89,8 @@ for (const [arquivo, minimo] of Object.entries(LISTAS)) {
   if (dados.length < minimo) {
     erros.push(
       `src/data/${arquivo}\n    Só ${dados.length} itens, esperados pelo menos ${minimo}. ` +
-        `Algum item foi apagado por engano?`
+        `Algum item foi apagado por engano?\n    ` +
+        amarelo(`Se a remoção foi de propósito, ajuste o mínimo em scripts/validar-dados.mjs.`)
     );
     continue;
   }
@@ -129,7 +133,11 @@ for (const { dir, ext, minimo } of PASTAS) {
     );
   }
   if (arquivos.length < minimo) {
-    erros.push(`${dir}\n    Só ${arquivos.length} arquivos, esperados pelo menos ${minimo}.`);
+    erros.push(
+      `${dir}\n    Só ${arquivos.length} arquivos, esperados pelo menos ${minimo}. ` +
+        `Algum arquivo foi apagado por engano?\n    ` +
+        amarelo(`Se a remoção foi de propósito, ajuste o mínimo em scripts/validar-dados.mjs.`)
+    );
   }
   for (const f of arquivos) {
     const texto = readFileSync(join(caminho, f), 'utf8');
@@ -158,4 +166,6 @@ if (erros.length) {
   process.exit(1);
 }
 
-console.log(verde('✔ Conteúdo validado:') + ' listas, páginas, equipe e eventos estão íntegros.');
+console.log(
+  verde('✔ Conteúdo validado:') + ' listas, páginas, equipe, eventos, projetos e destaques estão íntegros.'
+);
