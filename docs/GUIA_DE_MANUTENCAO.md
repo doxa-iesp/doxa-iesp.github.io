@@ -183,25 +183,53 @@ quando muitos somem de uma vez — o sinal típico de um trecho apagado sem quer
 **de propósito** (um projeto que saiu do site, por exemplo), peça a quem cuida do site para ajustar
 o mínimo; não é algo para o estagiário mexer.
 
-#### Erro 6 — Cópias de sincronização
+#### Erro 6 — Cópias de arquivo (nome 2, nome 3…)
 
 ```
-  • src/content/equipe
-    2 cópia(s) de sincronização, que virariam itens repetidos no site:
-      felipe-lamarca 2.yaml
+  • 1 cópia(s) de arquivo com número no fim do nome, que virariam itens repetidos no site:
+      src/content/equipe/felipe-lamarca 2.yaml
+    Apague as cópias; o original, sem o número no fim, fica.
 ```
 
-**O que significa:** o iCloud (ou outro programa de sincronização) criou cópias de arquivos, com um
-número no fim do nome. Cada cópia viraria uma pessoa, evento ou projeto repetido na página. Apague
-as cópias (as que têm ` 2`, ` 3`… no nome); o original fica. Isso só acontece para quem edita no
-computador — pelo site do GitHub, não.
+**O que significa:** existe um arquivo (ou uma pasta) igual a outro, com um número no fim do nome
+— `felipe-lamarca 2.yaml` ao lado de `felipe-lamarca.yaml`. Cada cópia viraria uma pessoa, evento
+ou projeto repetido na página. Confira que é mesmo uma cópia e apague; o original, sem o número,
+fica. Um arquivo com número no nome e **sem** original ao lado (ex.: `TD 2.pdf`) não é acusado.
+
+#### Erro 7 — Link para o site antigo ou para o Gmail
+
+```
+  • src/data/midia.yaml (linha 199)
+    Este link aponta para o site antigo, que não existe mais.
+    Procure o endereço atual do conteúdo; se não existir, apague o link.
+```
+
+**O que significa:** o endereço começa com `www.lab-doxa.org.br` (o WordPress antigo, que saiu do
+ar — hoje esse endereço mostra uma página de erro deste site) ou com `mail.google.com` (um e-mail,
+que só abre para quem tem a senha). Veja "Antes de pôr um link de fora do site", na Seção 2.
+
+#### Erro 8 — Link interno quebrado
+
+No passo **"Links internos"** do PR:
+
+```
+✖ 1 link(s) interno(s) quebrado(s) no site montado:
+
+  • producao/analises-de-conjuntura/index.html
+      /pdfs/analises/relatorio-eleicoes-2026.pdf
+```
+
+**O que significa:** uma página do site aponta para um arquivo ou endereço do próprio site que não
+existe. Quase sempre é um PDF que não foi enviado para `public/`, ou um nome digitado diferente do
+arquivo (maiúsculas, acentos e espaços contam). Envie o arquivo ou corrija o endereço.
 
 > **Dica que evita 90% dos erros:** para acrescentar um item numa lista, **copie e cole um item
 > que já existe** e troque só os valores. Assim a arrumação continua certa.
 
 **Todos os erros deixam o PR vermelho.** Não existe caso em que um erro seu passe despercebido e o
 site vá ao ar sem o conteúdo: antes de montar o site, o GitHub roda uma conferência
-(`scripts/validar-dados.mjs`) que interrompe tudo se algum arquivo estiver quebrado.
+(`scripts/validar-dados.mjs`) que interrompe tudo se algum arquivo estiver quebrado, e depois de
+montar confere que todo link interno leva a algo que existe.
 
 ---
 
@@ -675,7 +703,8 @@ não está neste guia: mande o link do PR para quem cuida do site.
 Você **não precisa** disso para editar o conteúdo — tudo funciona pelo navegador (Seção 2). Mas se
 quiser ver as mudanças na sua máquina antes de propor, é assim:
 
-1. Instale o [Node.js](https://nodejs.org/) (versão 20 ou mais nova) e o
+1. Instale o [Node.js](https://nodejs.org/) (versão 22.12 ou mais nova — com versão mais velha o
+   site não roda) e o
    [Git](https://git-scm.com/).
 2. No terminal:
 

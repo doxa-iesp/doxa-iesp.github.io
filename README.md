@@ -20,7 +20,8 @@ vez de publicar silenciosamente uma página quebrada.
 
 ## Pré-requisitos
 
-- [Node.js](https://nodejs.org/) 20 ou superior (o CI usa a 22)
+- [Node.js](https://nodejs.org/) 22.12 ou superior (o Astro 7 não roda em versão mais velha; o CI
+  usa a versão de `.nvmrc`)
 - Git
 
 ## Rodar localmente
@@ -42,6 +43,7 @@ npm run validar   # confere só os arquivos de conteúdo (rápido; roda sozinho 
 npm run build     # gera o site final em dist/ (valida o conteúdo e todos os schemas)
 npm run preview   # serve o que foi gerado em dist/, como ficará em produção
 npm run check     # validar + checagem de tipos (astro check)
+npm run verificar-links  # depois do build: confere que todo link e arquivo interno existe
 ```
 
 ---

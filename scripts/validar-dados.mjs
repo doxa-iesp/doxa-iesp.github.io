@@ -22,7 +22,7 @@
  * encerrado que sai do site, por exemplo), o número se ajusta aqui mesmo.
  */
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, relative } from 'node:path';
 import YAML from 'yaml';
 
 const RAIZ = new URL('..', import.meta.url).pathname;
@@ -116,22 +116,6 @@ for (const { dir, ext, minimo } of PASTAS) {
     continue;
   }
   const arquivos = readdirSync(caminho).filter((f) => f.endsWith(ext));
-
-  // Cópias que o iCloud cria ao sincronizar ("nome 2.yaml", "nome 3.md"). As coleções
-  // usam glob('**/*'), que não distingue cópia de original: cada uma vira uma ENTRADA A
-  // MAIS. Em 2026-09-07 havia 142 delas e /institucional/ renderizava 80 cards de equipe
-  // em vez de 16 — build verde, página errada. O .gitignore impede que sejam commitadas,
-  // mas não impede o build LOCAL de lê-las; só uma checagem aqui pega isso.
-  const copias = arquivos.filter((f) => / \d+\.[A-Za-z0-9]+$/.test(f));
-  if (copias.length) {
-    const amostra = copias.slice(0, 5).join('\n      ');
-    const resto = copias.length > 5 ? `\n      ...e mais ${copias.length - 5}.` : '';
-    erros.push(
-      `${dir}\n    ${copias.length} cópia(s) de sincronização, que virariam itens repetidos ` +
-        `no site:\n      ${amostra}${resto}\n    ` +
-        amarelo('Apague esses arquivos. São cópias que o iCloud criou; o original, sem o número no fim, fica.')
-    );
-  }
   if (arquivos.length < minimo) {
     erros.push(
       `${dir}\n    Só ${arquivos.length} arquivos, esperados pelo menos ${minimo}. ` +
@@ -152,6 +136,75 @@ for (const { dir, ext, minimo } of PASTAS) {
       }
     }
   }
+}
+
+// ---------------------------------------------------------------- cópias "nome N"
+// Cópias de arquivo com um número no fim do nome ("felipe-lamarca 2.yaml", "pesquisa-covid 3.md",
+// pastas "equipe 2"). Em 2026-09-07 havia 142 delas em src/content/, vindas de arquivos trazidos
+// para a main: as coleções usam glob('**/*'), que não distingue cópia de original, e cada uma
+// virava um item a mais — /institucional/ renderizava 80 cards em vez de 16, com o build verde.
+//
+// Só é cópia quando o ORIGINAL existe ao lado: "TD 2.pdf" sozinho é um nome legítimo e passa.
+// A busca é recursiva e cobre public/ também, onde uma cópia iria ao ar e seria indexada.
+const PADRAO_COPIA = /^(.*) \d+(\.[^.]+)?$/;
+
+function copiasEm(pasta) {
+  if (!existsSync(pasta)) return [];
+  const nomes = readdirSync(pasta, { withFileTypes: true });
+  const existentes = new Set(nomes.map((e) => e.name));
+  return nomes.flatMap((e) => {
+    const caminho = join(pasta, e.name);
+    const m = e.name.match(PADRAO_COPIA);
+    const original = m && `${m[1]}${e.isDirectory() ? '' : m[2] ?? ''}`;
+    if (m && existentes.has(original)) return [relative(RAIZ, caminho)];
+    return e.isDirectory() ? copiasEm(caminho) : [];
+  });
+}
+
+const copias = ['src/content', 'src/data', 'public'].flatMap((p) => copiasEm(join(RAIZ, p)));
+if (copias.length) {
+  const amostra = copias.slice(0, 8).join('\n      ');
+  const resto = copias.length > 8 ? `\n      ...e mais ${copias.length - 8}.` : '';
+  erros.push(
+    `${copias.length} cópia(s) de arquivo com número no fim do nome, que virariam itens repetidos ` +
+      `no site:\n      ${amostra}${resto}\n    ` +
+      amarelo('Apague as cópias; o original, sem o número no fim, fica.')
+  );
+}
+
+// ---------------------------------------------------------------- links proibidos
+// O domínio lab-doxa.org.br era do WordPress, que saiu do ar: hoje ele serve este site, então um
+// link para www.lab-doxa.org.br/... não dá erro de conexão, dá 404 daqui mesmo (CLAUDE.md, 2d).
+// E um link de Gmail só abre para quem tem a senha (CLAUDE.md, 2h). Capturas do Wayback Machine
+// (https://web.archive.org/web/.../https://www.lab-doxa.org.br/...) não casam: o domínio vem
+// depois de uma barra, não no começo do link.
+const LINKS_PROIBIDOS = [
+  { padrao: /(^|[\s'"(<])https?:\/\/(www\.)?lab-doxa\.org\.br/i, motivo: 'aponta para o site antigo, que não existe mais' },
+  { padrao: /(^|[\s'"(<])https?:\/\/mail\.google\.com/i, motivo: 'é um link de Gmail, que só abre para quem tem a senha' },
+];
+
+function arquivosDeConteudo(pasta) {
+  if (!existsSync(pasta)) return [];
+  return readdirSync(pasta, { withFileTypes: true }).flatMap((e) => {
+    const caminho = join(pasta, e.name);
+    if (e.isDirectory()) return arquivosDeConteudo(caminho);
+    return /\.(ya?ml|md)$/.test(e.name) ? [caminho] : [];
+  });
+}
+
+for (const arquivo of ['src/data', 'src/content'].flatMap((p) => arquivosDeConteudo(join(RAIZ, p)))) {
+  readFileSync(arquivo, 'utf8')
+    .split('\n')
+    .forEach((linha, i) => {
+      for (const { padrao, motivo } of LINKS_PROIBIDOS) {
+        if (padrao.test(linha)) {
+          erros.push(
+            `${relative(RAIZ, arquivo)} (linha ${i + 1})\n    Este link ${motivo}.\n    ` +
+              amarelo('Procure o endereço atual do conteúdo; se não existir, apague o link.')
+          );
+        }
+      }
+    });
 }
 
 // ---------------------------------------------------------------- resultado

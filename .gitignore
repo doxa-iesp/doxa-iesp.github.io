@@ -17,16 +17,12 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Cópias que o iCloud cria ao sincronizar ("nome 2.yaml", "nome 3.md"...).
-# A regra antiga cobria só o sufixo 2, então 106 cópias com sufixo 3/4/5 passaram
-# batido e o build local renderizava 80 cards de equipe em vez de 16 — as coleções
-# usam glob('**/*.yaml'), que não distingue cópia de original.
-# Ignorar só esconde: quando aparecerem, apague (nunca têm conteúdo único, mas
-# confira com `diff` antes). O conserto de raiz é tirar o repositório do Desktop.
-* [0-9].*
-* [0-9][0-9].*
-* [0-9] *
-* [0-9][0-9] *
+# Cópias com número no fim do nome ("nome 2.yaml", pasta "equipe 2") NÃO são ignoradas aqui.
+# Até 2026-09-14 havia regras como `* [0-9].*`, mas elas escondiam arquivos legítimos (um
+# `TD 2.pdf` nunca seria commitado e daria 404 no site com o build verde) e deixavam passar
+# pastas copiadas. Quem pega cópia agora é scripts/validar-dados.mjs: acusa "nome 2.ext" só
+# quando o original "nome.ext" existe ao lado, em src/ e public/. Se aparecer uma no
+# `git status`, confira com `diff` e apague.
 
 # Segredos e logs locais
 .env

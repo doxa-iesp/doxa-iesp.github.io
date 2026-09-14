@@ -18,6 +18,7 @@ npm run dev       # http://localhost:4321/
 npm run validar   # valida os YAML de conteúdo (roda sozinho antes do build)
 npm run build     # validar + astro build -> dist/
 npm run check     # validar + astro check (tipos)
+npm run verificar-links  # depois do build: todo link/arquivo interno do dist/ existe
 npm run preview   # serve dist/
 
 # Scripts Python
@@ -26,7 +27,8 @@ python3 scripts/converter-conteudo.py --forcar-regeneracao # APOSENTADO: sobresc
 ```
 
 `npm run build` = `npm run validar && astro build`. **Não remova o validador**
-(veja "Armadilhas" abaixo). Node ≥ 20 (o CI usa 22).
+(veja "Armadilhas" abaixo). **Node ≥ 22.12** — o Astro 7 se recusa a rodar em versão mais velha;
+o CI lê a versão de `.nvmrc`.
 
 **Não há suíte de testes** — e não é esquecimento: o site não tem lógica de runtime para testar.
 O que substitui o teste é o par `validar` + `check`, e é isso que o CI roda. Antes de dizer que uma
@@ -34,8 +36,8 @@ mudança funciona, rode `npm run build` (que já inclui o validador) e, se mexeu
 componente, `npm run check`.
 
 Deploy: push em `main` → `.github/workflows/deploy.yml` → GitHub Pages.
-PRs rodam `.github/workflows/pr.yml` (build + trava do `[file-loader] Error` + `astro check` +
-artefato `site-dist`).
+PRs rodam `.github/workflows/pr.yml`. Os dois fazem build, a trava do loader (armadilha 1) e
+`npm run verificar-links`; o de PR também roda `astro check` e publica o artefato `site-dist`.
 
 ## Arquitetura
 
@@ -155,9 +157,15 @@ publica a coleção **vazia**. Localmente isso se esconde atrás de `node_module
 num build frio (o do CI) a página vai ao ar sem nenhum item.
 
 É por isso que existe [scripts/validar-dados.mjs](scripts/validar-dados.mjs), que roda antes do
-build e falha com código 1. E por isso o `deploy.yml` tem uma trava que reprova se
-`[file-loader] Error` aparecer no log — com `set -o pipefail`, sem o qual o `tee` devolveria 0.
-Para reproduzir o bug original: `rm -rf dist .astro node_modules/.astro && npx astro build`.
+build e falha com código 1. E por isso `deploy.yml` e `pr.yml` têm uma trava que reprova se um
+rótulo `[file-loader]` ou `[glob-loader]` aparecer no log — com `set -o pipefail`, sem o qual o
+`tee` devolveria 0. Para reproduzir o bug original: `rm -rf dist .astro node_modules/.astro && npx astro build`.
+
+**A trava original nunca funcionou no CI.** Ela procurava `[file-loader] Error`, mas no GitHub
+Actions a variável `CI` liga as cores do log, e o código de cor cai entre o rótulo e a mensagem:
+`[ERROR] [file-loader]^[[39m Error reading data`. O grep não casava nunca (reproduzido em
+2026-09-14 com `CI=true npx astro build`). Por isso a busca é só pelo rótulo. Ao mexer nessa trava,
+teste com `CI=true` e com `/usr/bin/grep` — o `grep` do terminal pode ser outro programa.
 
 **2. `public/` não é saída de build.** No Hugo era; no Astro é a pasta de assets de origem e
 **precisa estar versionada**. O `.gitignore` tem um comentário avisando.
@@ -213,18 +221,19 @@ preservados (não compartilhar)*, **privada** — não compartilhe, o original d
 ar. `git clean -fdx` apaga a pasta local sem aviso: rode sempre `git clean -fdx -e
 arquivos-preservados`, nunca o comando cru.
 
-**2f. O repositório vive no Desktop, e o iCloud fabrica cópias.** Em 2026-09-07 havia **142**
-arquivos como `felipe-lamarca 3.yaml` e `pesquisa-covid 4.md` em `src/content/` — cópias de
-conflito de sincronização do macOS. Nenhuma tinha conteúdo único (133 idênticas ao original, 9
-versões antigas), mas as coleções usam `glob('**/*')`, que **não distingue cópia de original**:
-a página da equipe renderizava **80 cards em vez de 16** e o build produzia 41 páginas em vez de
-25, com rotas fantasmas como `/projetos/pesquisa-covid-3/`. Build verde, site errado.
+**2f. Cópias "nome N" viram itens repetidos.** Em 2026-09-07, ao trazer arquivos para a `main`,
+apareceram **142** cópias como `felipe-lamarca 3.yaml` e `pesquisa-covid 4.md` em `src/content/`.
+Nenhuma tinha conteúdo único (133 idênticas ao original, 9 versões antigas), mas as coleções usam
+`glob('**/*')`, que **não distingue cópia de original**: a página da equipe renderizava **80 cards
+em vez de 16** e o build produzia 41 páginas em vez de 25, com rotas fantasmas como
+`/projetos/pesquisa-covid-3/`. Build verde, site errado.
 
-O `.gitignore` tinha uma regra para isso, mas só para o sufixo ` 2` — por isso metade das cópias
-era invisível no `git status`. A regra agora cobre qualquer número, e `scripts/validar-dados.mjs`
-falha com código 1 quando encontra uma (o `.gitignore` protege o commit; só o validador protege o
-build local). Antes de apagar, `diff` contra o original — nunca houve conteúdo único, mas é barato
-conferir. **O conserto de raiz é tirar o repositório de `~/Desktop`.**
+`scripts/validar-dados.mjs` falha com código 1 quando encontra uma, em qualquer nível de
+`src/content`, `src/data` e `public` — mas só quando o original existe ao lado (`nome 2.yaml` com
+`nome.yaml`, pasta `equipe 2` com `equipe`), porque `TD 2.pdf` sozinho é nome legítimo. O
+`.gitignore` **não** esconde mais nomes com número: as regras antigas (`* [0-9].*`) faziam um
+arquivo legítimo nunca ser commitado — 404 no site com o build verde — e deixavam passar pastas.
+Antes de apagar uma cópia, `diff` contra o original.
 
 **2g. Classe de página passada a um componente precisa chegar pelo `...rest`.** O Astro escopa o CSS
 de cada arquivo com um atributo `data-astro-cid-*`. Uma regra da página como `.hero__titulo

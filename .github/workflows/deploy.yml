@@ -7,11 +7,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Permissões mínimas para o deploy no Pages via OIDC.
+# Mínimo no topo; cada job pede só o que usa (o de build roda `npm ci`, que executa
+# scripts de instalação de dependências — ele não precisa poder publicar).
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Um deploy por vez; não cancela um deploy já em andamento.
 concurrency:
@@ -22,14 +21,17 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read # o configure-pages consulta a API do Pages
     steps:
       - name: Checkout do repositório
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Configurar Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version-file: .nvmrc
           cache: npm
 
       - name: Instalar dependências (determinístico)
@@ -47,19 +49,29 @@ jobs:
 
       # Cinto e suspensório: qualquer erro de leitura de dados reprova o deploy, mesmo que o
       # Astro insista em sair com código 0.
+      #
+      # No CI o log sai COLORIDO (a variável CI liga as cores), e o código de cor fica entre
+      # o rótulo e a mensagem: `[ERROR] [file-loader]^[[39m Error reading data`. Um grep por
+      # "[file-loader] Error" nunca casava. Procurar só o rótulo casa com ou sem cor; num
+      # build bom os loaders não escrevem nada no log.
       - name: Nenhuma coleção pode ter falhado em silêncio
         shell: bash
         run: |
-          if grep -q "\[file-loader\] Error" build.log; then
+          if grep -nE '\[(file|glob)-loader\]' build.log; then
             echo "::error::Uma coleção de dados falhou ao carregar. O site sairia sem esse conteúdo."
             exit 1
           fi
 
+      # Todo link e arquivo interno do site montado precisa existir. Um PDF que não chegou ao
+      # commit, ou um link digitado errado, dá 404 com o build verde — é isto que pega.
+      - name: Links internos
+        run: npm run verificar-links
+
       - name: Configurar o GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Enviar artefato do Pages
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
 
@@ -67,10 +79,14 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
+    # Publicar no Pages via OIDC.
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Publicar no GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

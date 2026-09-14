@@ -10,10 +10,11 @@
     "validar": "node scripts/validar-dados.mjs",
     "build": "npm run validar && astro build",
     "preview": "astro preview",
-    "check": "npm run validar && astro check"
+    "check": "npm run validar && astro check",
+    "verificar-links": "node scripts/checar-links-internos.mjs"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22.12.0"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",

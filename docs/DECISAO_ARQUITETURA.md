@@ -71,9 +71,11 @@ mais gente vai editar. Foram acrescentadas duas travas:
 1. **`scripts/validar-dados.mjs`**, executado por `npm run build` *antes* do `astro build`. Ele
    parseia cada arquivo de conteúdo e falha com código 1, apontando arquivo, linha e coluna, em
    português. Também recusa uma lista que ficou pequena demais (item apagado sem querer).
-2. **Uma trava no `deploy.yml`** que reprova o deploy se a palavra `[file-loader] Error` aparecer no
-   log, mesmo que o Astro insista em sair com 0. (O passo usa `set -o pipefail`; sem isso o `tee`
-   devolveria 0 e a trava seria inútil.)
+2. **Uma trava no `deploy.yml` e no `pr.yml`** que reprova o build se o rótulo `[file-loader]` ou
+   `[glob-loader]` aparecer no log, mesmo que o Astro insista em sair com 0. (O passo usa
+   `set -o pipefail`; sem isso o `tee` devolveria 0 e a trava seria inútil.) *Até 2026-09-14 a
+   trava procurava `[file-loader] Error` e nunca casou no CI: lá o log sai colorido e o código de
+   cor fica entre o rótulo e a mensagem.*
 
 Com as duas, a promessa da seção anterior se sustenta para **todos** os formatos de conteúdo.
 
@@ -120,7 +122,7 @@ considerar no futuro para publicar *análises*, não para o site institucional.
 Astro traz ~300 pacotes npm. Mitigações adotadas:
 
 - `package-lock.json` versionado; CI usa `npm ci` (instalação determinística).
-- Versão do Node fixada no workflow (`node-version: 22`).
+- Versão do Node fixada em `.nvmrc` (22; o Astro 7 exige ≥ 22.12), lida pelo workflow.
 - **Nenhum framework de UI** (sem React/Vue/Svelte) e nenhuma biblioteca de CSS. Astro puro,
   CSS com custom properties, JavaScript mínimo no cliente. Isso mantém a árvore de dependências
   pequena e o HTML final leve.
@@ -181,14 +183,14 @@ push / merge na branch main
         ↓
 GitHub Actions: npm ci → npm run build (validador de conteúdo → astro build) → dist/
         ↓
-falhou? (ou "[file-loader] Error" no log) → nada é publicado
+falhou? (ou rótulo de loader no log, ou link interno quebrado) → nada é publicado
         ↓
 passou? → deploy para GitHub Pages
 ```
 
-Em **pull requests**, roda um job separado com o mesmo build (e a mesma trava do
-`[file-loader] Error`), mais `npm run check` (`astro check`), e publica o `dist/` como artefato de
-download. O revisor vê se o build passou antes de aprovar. (Preview com URL pública
+Em **pull requests**, roda um job separado com o mesmo build (e as mesmas travas: rótulo de loader
+no log e `npm run verificar-links`), mais `npm run check` (`astro check`), e publica o `dist/` como
+artefato de download. O revisor vê se o build passou antes de aprovar. (Preview com URL pública
 exigiria um serviço externo — Netlify/Cloudflare —, deliberadamente evitado para não introduzir
 outra conta a manter.)
 

@@ -9,18 +9,23 @@ on:
 permissions:
   contents: read
 
+# Um push novo no mesmo PR cancela a verificação anterior, que já ficou velha.
+concurrency:
+  group: pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
   verificar:
     name: Build e checagem
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do repositório
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Configurar Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version-file: .nvmrc
           cache: npm
 
       - name: Instalar dependências (determinístico)
@@ -34,21 +39,26 @@ jobs:
           npm run build 2>&1 | tee build.log
 
       # A mesma trava do deploy.yml: o loader `file()` do Astro pode sair com código 0 depois
-      # de falhar ao ler um YAML, publicando a coleção vazia. Sem isto, o PR ficaria verde.
+      # de falhar ao ler um YAML, publicando a coleção vazia. No CI o log sai colorido, então a
+      # busca é só pelo rótulo do loader (ver o comentário no deploy.yml).
       - name: Nenhuma coleção pode ter falhado em silêncio
         shell: bash
         run: |
-          if grep -q "\[file-loader\] Error" build.log; then
+          if grep -nE '\[(file|glob)-loader\]' build.log; then
             echo "::error::Uma coleção de dados falhou ao carregar. O site sairia sem esse conteúdo."
             exit 1
           fi
 
+      - name: Links internos (todo link e arquivo do site precisa existir)
+        run: npm run verificar-links
+
       - name: Publicar dist/ como artefato para o revisor baixar
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: site-dist
           path: ./dist
           if-no-files-found: error
+          retention-days: 14
 
       - name: Checagem de tipos (astro check)
         # @astrojs/check e typescript estão em devDependencies, então `npm ci` já os
