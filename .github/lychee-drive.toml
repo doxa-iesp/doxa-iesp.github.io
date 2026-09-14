@@ -1,0 +1,23 @@
+# Checagem mensal de links externos: passo "drive" de .github/workflows/links-externos.yml.
+# Só os links do Google Drive e do Docs (os 273 mapas de votação e outros arquivos). Passo separado
+# porque precisa de outro ritmo: o Google bloqueia quem pede muitos arquivos seguidos.
+
+scheme = ["https", "http"]
+include = ['^https?://(drive|docs)\.google\.com/']
+
+# Arquivo que deixou de ser público não dá 404: redireciona para a tela de login do Google.
+# Sem seguir redirecionamentos, esse caso aparece como erro em vez de passar por link bom.
+max_redirects = 0
+
+timeout = 30
+max_retries = 2
+accept = ["200..=299", "429"]
+
+# Um pedido por vez, com 1 segundo entre eles (são ~370 links: uns 6 minutos).
+[hosts."drive.google.com"]
+concurrency = 1
+request_interval = "1s"
+
+[hosts."docs.google.com"]
+concurrency = 1
+request_interval = "1s"

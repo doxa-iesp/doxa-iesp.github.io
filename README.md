@@ -96,19 +96,28 @@ O deploy é automático. Qualquer push (ou merge de PR) na branch `main` dispara
 
 1. instala as dependências (`npm ci`);
 2. roda `npm run build` — que **valida todos os schemas de conteúdo**;
-3. publica o resultado no GitHub Pages.
+3. roda `npm run verificar-links` — todo link e arquivo interno do site montado precisa existir;
+4. publica o resultado no GitHub Pages.
 
 Se o build falhar (por exemplo, um valor inválido num YAML), **nada é publicado** e a ação aparece
 vermelha no GitHub.
 
 ### Pull requests
 
-Ao abrir um pull request, um workflow separado roda `npm ci`, `npm run build` e `npm run check`
-(validador + `astro check`), e publica o `dist/` como artefato (`site-dist`) para o revisor baixar e
-conferir — servido com `npx serve`, porque os caminhos do site são absolutos. Assim, um erro é pego
-**antes** do merge.
+Ao abrir um pull request, um workflow separado roda `npm ci`, `npm run build`,
+`npm run verificar-links` e `npm run check` (validador + `astro check`), e publica o `dist/` como
+artefato (`site-dist`) para o revisor baixar e conferir — servido com `npx serve`, porque os caminhos
+do site são absolutos. Assim, um erro é pego **antes** do merge.
 
-Os workflows ficam em `.github/workflows/` (`deploy.yml` e `pr.yml`).
+### Links externos
+
+No dia 1 de cada mês, `links-externos.yml` confere os links para fora do site (jornais, revistas,
+Google Drive) e abre uma issue **"Links quebrados"** quando algum não abre. Não bloqueia o deploy. O
+que fazer com a issue está no [guia de manutenção](docs/GUIA_DE_MANUTENCAO.md); os sites deixados
+de fora da conferência, com o motivo, em `.github/lychee.toml`. Para rodar agora: aba **Actions** >
+**Links externos** > **Run workflow**.
+
+Os workflows ficam em `.github/workflows/` (`deploy.yml`, `pr.yml` e `links-externos.yml`).
 
 ---
 
@@ -130,7 +139,7 @@ Os workflows ficam em `.github/workflows/` (`deploy.yml` e `pr.yml`).
 ├── docs/                   # documentação do projeto
 ├── astro.config.mjs        # configuração do Astro (domínio, base path, sitemap)
 ├── package.json
-└── .github/workflows/      # CI/CD (deploy.yml, pr.yml)
+└── .github/                # CI/CD (workflows/deploy.yml, pr.yml, links-externos.yml) e config do lychee
 ```
 
 ---

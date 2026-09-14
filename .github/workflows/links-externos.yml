@@ -1,0 +1,96 @@
+name: Links externos
+
+# Uma vez por mês, confere se os links para fora do site (jornais, revistas, Drive…) ainda abrem.
+# Se algum não abrir, abre uma issue "Links quebrados", ou comenta na que já estiver aberta.
+# Não bloqueia nada: o deploy não depende disto.
+#
+# Links internos não passam por aqui; o build já confere todos (scripts/checar-links-internos.mjs).
+# O que fica de fora, e por quê, está em .github/lychee.toml e .github/lychee-drive.toml.
+#
+# O GitHub desliga workflows agendados em repositório sem nenhum commit por 60 dias. Se a
+# checagem parar de rodar, reative em Actions > Links externos > "Enable workflow".
+
+on:
+  schedule:
+    # Dia 1 de cada mês, 9h17 UTC (6h17 em Brasília). Minuto "quebrado" de propósito: na hora
+    # cheia a fila de agendamentos do GitHub lota, e a execução atrasa ou é descartada.
+    - cron: '17 9 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: links-externos
+  cancel-in-progress: false
+
+jobs:
+  checar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+
+      # Arquivos por padrão, não por pasta: dentro de uma pasta o lychee só lê .md e .html, e pularia
+      # os .yaml. As aspas deixam o `**` com o lychee, que desce em qualquer nível de subpasta.
+      - name: Links em geral
+        id: geral
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config .github/lychee.toml --no-progress 'src/data/*.yaml' 'src/content/**/*'
+          output: lychee/geral.md
+          fail: false
+
+      # Passo separado e mais lento: o Google bloqueia quem pede muitos arquivos seguidos.
+      - name: Links do Google Drive
+        id: drive
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config .github/lychee-drive.toml --no-progress 'src/data/*.yaml' 'src/content/**/*'
+          output: lychee/drive.md
+          fail: false
+
+      - name: Abrir ou atualizar a issue
+        if: steps.geral.outputs.exit_code != '0' || steps.drive.outputs.exit_code != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          EXECUCAO: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          {
+            echo "A checagem mensal encontrou links para fora do site que não abriram."
+            echo
+            echo "**O que fazer:** abra cada link numa janela anônima do navegador."
+            echo "- Se abrir e mostrar o conteúdo certo, é alarme falso (alguns sites recusam robôs). Comente aqui; quem cuida do código acrescenta o endereço às exceções de \`.github/lychee.toml\`."
+            echo "- Se não abrir, siga \"Antes de pôr um link de fora do site\" no guia de manutenção (\`docs/GUIA_DE_MANUTENCAO.md\`): endereço novo, cópia no Wayback Machine ou item sem \`url\`."
+            echo
+            echo "Feche a issue quando terminar. Execução: $EXECUCAO"
+            for relatorio in lychee/geral.md lychee/drive.md; do
+              if [ -f "$relatorio" ]; then
+                printf '\n---\n\n'
+                cat "$relatorio"
+              fi
+            done
+          } > corpo.md
+
+          # Issue e comentário aceitam até 65.536 caracteres. Corta em 60.000 bytes sem partir
+          # um caractere acentuado ao meio.
+          python3 - <<'PY'
+          dados = open('corpo.md', 'rb').read()
+          texto = dados[:60000].decode('utf-8', 'ignore')
+          if len(dados) > 60000:
+              texto += '\n\n_(Relatório cortado. O completo está no link da execução, acima.)_\n'
+          open('corpo.md', 'w', encoding='utf-8').write(texto)
+          PY
+
+          gh label create links-quebrados --color d73a4a \
+            --description "Aberta pela checagem mensal de links externos" --force
+          numero=$(gh issue list --label links-quebrados --state open --limit 1 \
+            --json number --jq '.[0].number // empty')
+          if [ -n "$numero" ]; then
+            gh issue comment "$numero" --body-file corpo.md
+          else
+            gh issue create --title "Links quebrados" --label links-quebrados --body-file corpo.md
+          fi

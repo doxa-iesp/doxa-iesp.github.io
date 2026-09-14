@@ -84,6 +84,20 @@ próxima à da publicação). Se nem lá existir, **deixe o item sem `url`** —
 que leva a outro lugar. E nunca use link de e-mail (Gmail) ou de pasta pessoal do Drive: só abre
 para quem tem a senha.
 
+### Quando aparece a issue "Links quebrados"
+
+No dia 1 de cada mês, o GitHub confere sozinho todos os links de fora do site. Se algum não abrir,
+ele abre uma issue chamada **"Links quebrados"** (aba **Issues** do repositório), com a lista dos
+links e o arquivo onde cada um está. Se a issue já estiver aberta, ele comenta nela. Para cada link:
+
+1. Abra numa **janela anônima**.
+2. **Abriu e mostra a matéria certa?** É alarme falso: alguns sites recusam robôs. Comente na issue
+   dizendo qual link é, para quem cuida do código tirar esse site da conferência. Não mexa no dado.
+3. **Não abriu, ou abriu outra coisa?** Siga o parágrafo acima: endereço novo, cópia no Wayback
+   Machine ou item sem `url`. A troca vai num PR, como qualquer edição.
+
+Feche a issue quando todos os links estiverem resolvidos.
+
 ---
 
 ## 3. A rede de segurança: o PR fica verde ou vermelho

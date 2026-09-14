@@ -1,0 +1,40 @@
+# Checagem mensal de links externos: passo "geral" de .github/workflows/links-externos.yml.
+# Os links internos não passam por aqui; o build já confere todos (scripts/checar-links-internos.mjs).
+
+# Só endereços web. Os caminhos do próprio site (/pdfs/…, ../../pdfs/…) ficam de fora.
+scheme = ["https", "http"]
+
+# Sem pressa: no máximo 2 pedidos ao mesmo tempo por servidor, com meio segundo entre eles.
+host_concurrency = 2
+host_request_interval = "500ms"
+timeout = 30
+# Erro passageiro (504, queda de conexão) é comum; só conta como quebrado se falhar de novo depois.
+max_retries = 3
+retry_wait_time = 5
+
+# 429 é "pedidos demais, espere": o servidor existe e respondeu, o link não está quebrado.
+accept = ["200..=299", "429"]
+
+exclude = [
+  # Google Drive e Docs têm passo próprio, mais lento (.github/lychee-drive.toml).
+  '^https?://(drive|docs)\.google\.com/',
+
+  # Recusam robôs (403, desafio anti-bot) e abrem normalmente no navegador.
+  '^https?://(www\.)?economist\.com/',
+  '^https?://books\.scielo\.org/',
+  '^https?://(dx\.)?doi\.org/10\.7476/', # DOIs do SciELO Livros: redirecionam para o de cima
+  '^https?://(www\.)?kas\.de/',
+  '^https?://divulgacandcontas\.tse\.jus\.br/',
+
+  # Abrem no navegador, mas a conexão segura falha em ferramentas: o Lattes usa uma configuração
+  # que o lychee não aceita ("HandshakeFailure"); o sites.ufpe.br não envia a cadeia completa
+  # do certificado.
+  '^https?://lattes\.cnpq\.br/',
+  '^https?://sites\.ufpe\.br/',
+
+  # Lento e com limite de pedidos; uma captura não some.
+  '^https?://web\.archive\.org/',
+
+  # O próprio domínio. Link para o site antigo nos dados já é barrado pelo validador.
+  '^https?://(www\.)?lab-doxa\.org\.br/',
+]

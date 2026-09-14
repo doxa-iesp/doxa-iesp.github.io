@@ -38,6 +38,8 @@ componente, `npm run check`.
 Deploy: push em `main` → `.github/workflows/deploy.yml` → GitHub Pages.
 PRs rodam `.github/workflows/pr.yml`. Os dois fazem build, a trava do loader (armadilha 1) e
 `npm run verificar-links`; o de PR também roda `astro check` e publica o artefato `site-dist`.
+Links externos são conferidos à parte, uma vez por mês, por `.github/workflows/links-externos.yml`
+(armadilha 2h).
 
 ## Arquitetura
 
@@ -259,6 +261,17 @@ Ao consertar: preferir o endereço novo do próprio veículo; senão, uma captur
 fica sem botão. Nunca link de Gmail ou Drive pessoal. Para baixar um arquivo do Wayback, use
 `https://web.archive.org/web/<timestamp>id_/<url>` e confira que não veio cortado: capturas antigas
 podem parar em exatamente 1 MiB (1.048.576 bytes), e PDF inteiro termina em `%%EOF`.
+
+Desde 2026-09-14, [links-externos.yml](.github/workflows/links-externos.yml) roda o lychee no dia 1
+de cada mês sobre `src/data/*.yaml` e `src/content/**/*` e abre (ou comenta) a issue com o rótulo
+`links-quebrados`. São dois passos: um geral ([lychee.toml](.github/lychee.toml)) e um só para
+Drive e Docs ([lychee-drive.toml](.github/lychee-drive.toml)), um pedido por segundo e **sem seguir
+redirecionamento**, porque arquivo que deixou de ser público redireciona para o login em vez de dar
+404. Três limites: não pega **domínio tomado** (a página de spam responde 200 — o caso do APK acima
+passaria); cada exclusão em `lychee.toml` é um alarme falso conferido no navegador (sites que
+recusam robôs, TLS que o lychee não aceita), e link excluído nunca mais é conferido; e o GitHub
+**desliga agendamentos** depois de 60 dias sem commit no repositório — reative em Actions. Falso
+positivo se resolve no `lychee.toml`, nunca mexendo no dado.
 
 **3. Defeito na fonte: `programas-eleitorais-capitais.csv`.** A coluna `municipio` está
 rotacionada em relação aos candidatos (Eduardo Paes aparece como Florianópolis). Documentado em
