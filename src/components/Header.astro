@@ -211,8 +211,7 @@ const atual = Astro.url.pathname;
      ficava grudado com a seta já girada. */
   @media (min-width: 901px) {
     .nav__item--dropdown:hover > .nav__submenu,
-    .nav__item--dropdown:focus-within > .nav__submenu,
-    .nav__item--dropdown.aberto > .nav__submenu {
+    .nav__item--dropdown:focus-within > .nav__submenu {
       display: block;
     }
   }
@@ -339,8 +338,8 @@ const atual = Astro.url.pathname;
 </style>
 
 <script>
-  // Menu mobile. Em telas pequenas os dropdowns já ficam abertos (CSS), então o único
-  // comportamento necessário é abrir/fechar a navegação inteira.
+  // Menu mobile: o botão abre e fecha a navegação inteira. As seções com subitens são uma
+  // sanfona (logo abaixo); no desktop o submenu abre só por CSS, no hover e no foco.
   const toggle = document.querySelector<HTMLButtonElement>('.cabecalho__toggle');
   const nav = document.querySelector<HTMLElement>('#menu-principal');
 

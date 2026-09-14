@@ -214,7 +214,6 @@ Extraída do site antigo e consolidada em `src/styles/tokens.css`:
 | Token | Valor | Uso |
 |---|---|---|
 | `--cor-primaria` | `#305371` | azul institucional (header, títulos) |
-| `--cor-primaria-clara` | `#3d6b8c` | variação clara do azul (definida, hoje sem uso) |
 | `--cor-primaria-escura` | `#1e3a50` | hover, rodapé |
 | `--cor-acento` | `#086d60` | verde — a outra ponta do gradiente |
 | `--gradiente-marca` | azul → verde | nav, rodapé, capas de seção e **uma** faixa por página |

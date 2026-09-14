@@ -211,9 +211,6 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(min(var(--card-min, 280px), 100%), 1fr));
 }
 
-.grade-cards--estreita {
-  --card-min: 220px;
-}
 .grade-cards--larga {
   --card-min: 340px;
 }
@@ -316,12 +313,6 @@ p {
   background: color-mix(in srgb, var(--cor-acento) 14%, white);
   color: var(--cor-acento);
 }
-.etiqueta--destaque {
-  /* 8%, não 16%: a 16% o texto em --cor-destaque-texto dá 4,23:1 e reprova em AA.
-     A 8% o fundo fica #fbf3f0 e a razão sobe para 4,64:1. */
-  background: color-mix(in srgb, var(--cor-destaque) 8%, white);
-  color: var(--cor-destaque-texto);
-}
 
 /* olho / kicker acima de um título */
 .olho {
@@ -401,11 +392,6 @@ p {
 .btn-contorno:hover {
   background: var(--cor-primaria);
   color: var(--cor-branco);
-}
-
-/* tabelas e blocos largos nunca fazem a página rolar na horizontal */
-.rolagem-x {
-  overflow-x: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

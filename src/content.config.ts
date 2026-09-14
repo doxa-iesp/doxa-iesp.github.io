@@ -11,7 +11,8 @@
  * das lacunas está em DADOS_PENDENTES.md.
  */
 import { defineCollection } from 'astro:content';
-import { z } from 'astro:schema';
+// `astro/zod`, não `astro:schema`: o alias `astro:schema` é obsoleto e sai numa próxima versão.
+import { z } from 'astro/zod';
 import { file, glob } from 'astro/loaders';
 import YAML from 'yaml';
 
@@ -58,16 +59,18 @@ function listaYaml(caminho: string, campoTitulo = 'titulo') {
   });
 }
 
-const urlOuVazio = z.union([z.string().url(), z.literal('')]).optional();
+/**
+ * Endereço web (http ou https) ou vazio. `z.httpUrl()`, e não o antigo `z.string().url()` (obsoleto
+ * no zod 4), que aceitava qualquer esquema — `javascript:alert(1)` passava num campo de link.
+ */
+const urlOuVazio = z.union([z.httpUrl(), z.literal('')]).optional();
 
 /**
  * Como `urlOuVazio`, mas também aceita um caminho interno do site (começa com "/") — para campos
  * de `url` que podem apontar tanto para fora quanto para um PDF local em `public/pdfs/` (ver
- * DADOS_PENDENTES.md, item 0). `z.string().url()` sozinho rejeita caminhos relativos.
+ * DADOS_PENDENTES.md, item 0). `z.httpUrl()` sozinho rejeita caminhos relativos.
  */
-const linkOuVazio = z
-  .union([z.string().url(), z.string().startsWith('/'), z.literal('')])
-  .optional();
+const linkOuVazio = z.union([z.httpUrl(), z.string().startsWith('/'), z.literal('')]).optional();
 
 // ---------------------------------------------------------------- páginas e equipe
 
@@ -98,7 +101,7 @@ const equipe = defineCollection({
     foto: z.string().optional(),
     lattes: urlOuVazio, // o site antigo não publica Lattes; coleta manual pendente
     site: urlOuVazio, // página pessoal, quando a pessoa tiver
-    email: z.string().email().optional().or(z.literal('')),
+    email: z.email().optional().or(z.literal('')),
     ordem: z.number().optional(),
   }),
 });
@@ -254,7 +257,7 @@ const acervo = defineCollection({
     estado: z.string().optional(),
     candidatos: z.array(z.string()).default([]),
     partidos: z.array(z.string()).default([]),
-    url: z.string().url(),
+    url: z.httpUrl(),
     thumb: z.string().optional(),
   }),
 });
@@ -296,7 +299,7 @@ const mapas = defineCollection({
     cargo: z.string().optional(),
     eleicao: z.enum(['Majoritaria', 'Proporcional']).optional(),
     turno: z.string().optional(),
-    url: z.string().url(),
+    url: z.httpUrl(),
   }),
 });
 
@@ -320,7 +323,7 @@ const configuracao = defineCollection({
     .object({
       titulo: z.string(),
       descricao: z.string(),
-      email: z.string().email(),
+      email: z.email(),
       endereco: z.string(),
       cep: z.string(),
       youtube: urlOuVazio,
@@ -330,7 +333,7 @@ const configuracao = defineCollection({
       video_destaque: z.string(),
       // Documentário "Arquitetos do Poder" (coordenação de Marcus Figueiredo).
       video_documentario: z.string(),
-      catalogo_acervo: z.string().url(),
+      catalogo_acervo: z.httpUrl(),
       formulario_acervo: z.string(),
       // Vota Aí e o dashboard das eleições viraram projetos (src/content/projetos/).
     })

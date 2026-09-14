@@ -109,7 +109,7 @@ export function destinoAntigo(caminho) {
 
   switch (secao) {
     case 'acervo-doxa':
-      return slug ? `/acervo/#${ACERVO_EXCECOES[slug] ?? `item-${slug}`}` : '/acervo/';
+      return slug ? `/acervo/#${ACERVO_EXCECOES[slug] ?? idItemAcervo(slug)}` : '/acervo/';
     case 'lista-pesquisas':
       return slug
         ? `/producao/pesquisas/?busca=${encodeURIComponent(espacos(slug))}`
