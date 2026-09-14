@@ -37,7 +37,10 @@ const canonica = new URL(Astro.url.pathname, Astro.site);
     <title>{tituloCompleto}</title>
     <meta name="description" content={desc} />
     {indexavel ? <link rel="canonical" href={canonica} /> : <meta name="robots" content="noindex" />}
-    <link rel="icon" type="image/svg+xml" href={url('/img/logo-doxa.svg')} />
+    {/* Ícone quadrado (o "X" da marca sobre navy): o logo inteiro, 4 vezes mais largo que alto,
+        virava um risco de 16×4 px na aba. O PNG sem transparência é o do iPhone/iPad. */}
+    <link rel="icon" type="image/svg+xml" href={url('/favicon.svg')} />
+    <link rel="apple-touch-icon" href={url('/apple-touch-icon.png')} />
     <meta property="og:title" content={tituloCompleto} />
     <meta property="og:description" content={desc} />
     <meta property="og:type" content="website" />

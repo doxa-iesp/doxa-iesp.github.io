@@ -147,6 +147,46 @@ p {
   padding-left: 1.25rem;
 }
 
+/* Elementos de Markdown que nenhuma página usava até 2026-09 e saíam com o estilo cru do
+   navegador. A tabela rola na horizontal dentro do próprio bloco: numa tela estreita, uma tabela
+   larga não pode empurrar a página inteira para o lado. */
+.prosa table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: var(--esp-3) 0;
+  font-size: 0.92rem;
+}
+.prosa th,
+.prosa td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--cor-borda);
+  text-align: left;
+  vertical-align: top;
+}
+.prosa th {
+  color: var(--cor-primaria-escura);
+  border-bottom-width: 2px;
+}
+.prosa blockquote {
+  margin: var(--esp-3) 0;
+  padding: var(--esp-1) var(--esp-3);
+  border-left: 3px solid var(--cor-destaque);
+  color: var(--cor-texto-suave);
+}
+.prosa hr {
+  border: 0;
+  border-top: 1px solid var(--cor-borda);
+  margin: var(--esp-4) 0;
+}
+.prosa code {
+  font-size: 0.9em;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  background: var(--cor-fundo-alt);
+}
+
 /* ---------------------------------------------------------------- grades */
 
 .grade-cards {
