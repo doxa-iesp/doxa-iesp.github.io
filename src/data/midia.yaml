@@ -9,13 +9,13 @@
   url: https://valor.globo.com/politica/coluna/estimativas-de-margem-de-erro-no-brasil.ghtml
 - titulo: Prisão não previne ameaças à democracia
   autores: Figueiredo, Argelina
-  veiculo: Valor Econômico . 20
+  veiculo: Valor Econômico
   data: '2021-02-22'
   tipo: impressa
   url: https://valor.globo.com/politica/noticia/2021/02/22/prisao-nao-previne-ameacas-a-democracia.ghtml
-- titulo: Respostas das instituições é problemática
+- titulo: Resposta das instituições é problemática
   autores: Figueiredo, Argelina
-  veiculo: Valor Econômico . 20
+  veiculo: Valor Econômico
   data: '2021-02-22'
   tipo: impressa
   url: https://valor.globo.com/politica/noticia/2021/02/22/resposta-das-instituicoes-e-problematica.ghtml
@@ -28,13 +28,13 @@
 - titulo: Entenda como a CPI da Covid pode contribuir para responsabilizar Bolsonaro por falas e postura
     na pandemia
   autores: Figueiredo, Argelina
-  veiculo: Folha de São Paulo
+  veiculo: Folha de S.Paulo
   data: '2021-04-25'
   tipo: impressa
   url: https://www1.folha.uol.com.br/poder/2021/04/entenda-como-a-cpi-da-covid-pode-contribuir-para-responsabilizar-bolsonaro-por-falas-e-postura-na-pandemia.shtml
 - titulo: Chegou o tempo da política
   autores: Botelho, Carolina
-  veiculo: O Globo impresso
+  veiculo: O Globo
   data: '2021-05-23'
   tipo: impressa
   url: https://blogs.oglobo.globo.com/opiniao/post/chegou-o-tempo-da-politica.html
@@ -52,7 +52,7 @@
   url: https://brasil.elpais.com/opiniao/2021-02-16/brasil-afunda-nas-mortes-pela-covid-19-enquanto-o-comandante-fala-e-dai.html
 - titulo: Bússola moral para sair da crise
   autores: Botelho, Carolina; Boggio, Paulo
-  veiculo: O Globo impresso
+  veiculo: O Globo
   data: '2021-03-15'
   tipo: impressa
   url: https://blogs.oglobo.globo.com/opiniao/post/bussola-moral-para-sair-da-crise.html
@@ -64,12 +64,12 @@
   url: https://brasil.elpais.com/brasil/2021-05-22/carolina-botelho-bolsonaro-uniu-todos-contra-ele-politicos-antes-vistos-como-antagonicos-hoje-conversam.html
 - titulo: Apoio nas ruas definirá futuro do confronto de Bolsonaro com Congresso
   autores: Figueiredo, Argelina
-  veiculo: Folha de São Paulo
+  veiculo: Folha de S.Paulo
   data: '2020-03-02'
   tipo: impressa
 - titulo: Por seu intervencionismo imoderado, STF não terá como evitar confronto com Bolsonaro
   autores: Figueiredo, Argelina; Limongi, Fernando
-  veiculo: Folha de São Paulo
+  veiculo: Folha de S.Paulo
   data: '2020-04-30'
   tipo: impressa
   url: /pdfs/midia/Artigo-Folha-Limongi-Figueiredo.pdf
@@ -80,13 +80,13 @@
   tipo: impressa
 - titulo: Roteiro de viagens de Bolsonaro mira obras e auxílio
   autores: Botelho, Carolina
-  veiculo: O Globo impresso
+  veiculo: O Globo
   data: '2020-08-30'
   tipo: impressa
   url: https://oglobo.globo.com/politica/roteiro-de-viagens-de-bolsonaro-mira-obras-auxilio-24614240
 - titulo: Um em cada três candidatos a prefeito no país não tem coligação com outro partido
   autores: Botelho, Carolina
-  veiculo: O Globo impresso
+  veiculo: O Globo
   data: '2020-10-04'
   tipo: impressa
   url: https://oglobo.globo.com/brasil/eleicoes-2020/um-em-cada-tres-candidatos-prefeito-no-pais-nao-tem-coligacao-com-outro-partido-1-24675913
@@ -115,7 +115,7 @@
   url: /pdfs/midia/Argelina_artigo-Valor_Conflito-na-elite-e-escândalos-de-corrupção.pdf
 - titulo: O que deu errado? Não culpemos as instituições
   autores: Figueiredo, Argelina
-  veiculo: Folha de São Paulo
+  veiculo: Folha de S.Paulo
   data: '2016-05-13'
   tipo: impressa
   url: https://www1.folha.uol.com.br/poder/2016/05/1770900-o-que-deu-errado-nao-culpemos-as-instituicoes.shtml
@@ -169,7 +169,7 @@
   url: https://latinoamerica21.com/en/fraud-is-not-usual-but-conspiracy-theories-are/
 - titulo: Lula e o desafio de reconstruir o Brasil
   autores: Figueiredo, Argelina
-  veiculo: DW Made for minds
+  veiculo: DW Brasil
   data: '2022-11-04'
   tipo: virtual
   url: https://www.dw.com/pt-br/lula-e-o-desafio-de-reconstruir-o-brasil/a-63636420
@@ -203,9 +203,9 @@
   data: '2022-06-23'
   tipo: virtual
   url: https://www.jota.info/opiniao-e-analise/colunas/carolina-botelho/politica-brasileira-camara-merece-mais-atencao-que-corrupcao-no-mec-23062022
-- titulo: 'Eleições 2022: Qual discurso está mais afinado? | WW – 12/06/2022'
+- titulo: 'Eleições 2022: Qual discurso está mais afinado?'
   autores: Botelho, Carolina
-  veiculo: CNN
+  veiculo: CNN Brasil (WW)
   data: '2022-06-12'
   tipo: virtual
   url: https://www.youtube.com/watch?v=zkyTYOMeD3g
@@ -244,9 +244,9 @@
   data: '2022-01-18'
   tipo: virtual
   url: https://www.jota.info/opiniao-e-analise/colunas/carolina-botelho/eleicao-de-2022-sera-sobre-as-consequencias-da-pandemia-18012022
-- titulo: Senado Instala CPI da Pandemia e inicia investigação sobre governo Bolsonaro
+- titulo: Senado instala CPI da Pandemia e inicia investigação sobre governo Bolsonaro
   autores: Figueiredo, Argelina
-  veiculo: DW- Brasil
+  veiculo: DW Brasil
   data: '2021-04-27'
   tipo: virtual
   url: https://www.dw.com/pt-br/senado-instala-cpi-da-pandemia-e-inicia-investiga%C3%A7%C3%A3o-sobre-governo-bolsonaro/a-57351689
@@ -274,13 +274,13 @@
   data: '2020-05-29'
   tipo: virtual
   url: https://diplomatique.org.br/por-uma-comunidade-civica-no-brasil/
-- titulo: Why Bolosonaro backtracked on firing Mandetta
+- titulo: Why Bolsonaro backtracked on firing Mandetta
   autores: Botelho, Carolina
-  veiculo: Clas Berkeley
+  veiculo: CLAS Berkeley
   data: '2020-04-21'
   tipo: virtual
   url: https://clasberkeley.wordpress.com/2020/04/21/why-bolosonaro-backtracked-on-firing-mandetta/
-- titulo: Aproximação do governo com o Centrão atinge bolsonaristas ‘raiz
+- titulo: Aproximação do governo com o Centrão atinge bolsonaristas ‘raiz’
   autores: Botelho, Carolina
   veiculo: BR Político/Estadão
   data: '2020-08-05'
@@ -319,7 +319,7 @@
 - titulo: Descrença nos políticos e pandemia devem aumentar abstenção nas eleições brasileiras, afirma
     especialista
   autores: Figueiredo, Argelina
-  veiculo: FRI/FRI convida
+  veiculo: RFI / RFI Convida
   data: '2020-11-10'
   tipo: virtual
   url: https://www.rfi.fr/br/podcasts/rfi-convida/20201110-descren%C3%A7a-nos-pol%C3%ADticos-e-pandemia-devem-aumentar-absten%C3%A7%C3%A3o-nas-elei%C3%A7%C3%B5es-brasileiras-afirma-especialista
@@ -331,7 +331,7 @@
   url: https://cultura.uol.com.br/programas/opiniao/videos/4997_opiniao-democracia-e-independencia-dos-poderes-11-03-2020.html
 - titulo: Eles são todos iguais?
   autores: Coutinho, Cynthia
-  veiculo: VOTAAÍ!
+  veiculo: Vota Aí
   data: '2020'
   tipo: virtual
   url: https://web.archive.org/web/20220706135649/https://www.votaai.com.br/eles-sao-todos-iguais/
@@ -343,7 +343,7 @@
   url: https://web.archive.org/web/20201113145449/https://www.horizontesaosul.com/single-post/2020/11/13/PROGRAMAS-DE-GOVERNO-ENTRE-A-POLITICA-E-A-CIENCIA-POLITICA-UM-DESABAFO
 - titulo: As propostas para a saúde e a pandemia como um fator contextual
   autores: Silva, Carolini
-  veiculo: VOTAAÍ!
+  veiculo: Vota Aí
   data: '2020'
   tipo: virtual
   url: https://web.archive.org/web/20220706130001/https://www.votaai.com.br/as-propostas-para-a-saude-e-a-pandemia-como-um-fator-contextual/
@@ -380,15 +380,15 @@
 - titulo: A Ditadura interna do PMDB ou a Era Temer?
   autores: Maciel, Natalia
   veiculo: Escuta
-  data: '2015-05-04'
+  data: '2016-05-04'
   tipo: virtual
   url: https://revistaescuta.wordpress.com/2016/05/04/escuta-especial-conjuntura-a-ditadura-interna-do-pmdb-ou-a-era-temer/
 - titulo: 'Documentário: Arquitetos do Poder'
   autores: Coordenação geral Marcus Figueiredo
   veiculo: Direção e roteiro Vicente Ferraz e Alessandra Aldé | Apoios Universidade Cândido Mendes, Universidade
     Estadual do Rio de Janeiro (UERJ), Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro (FAPERJ),
-    Financiadora de Estudos e Projetos (FINEP) e Caesar Business | Produção Urca Filmes | Co-produção
-    Propeg soluções criativas, Vox populi, Instituto Universitário de Pesquisas do Rio de Janeiro (IUPERJ),
+    Financiadora de Estudos e Projetos (FINEP) e Caesar Business | Produção Urca Filmes | Coprodução
+    Propeg Soluções Criativas, Vox Populi, Instituto Universitário de Pesquisas do Rio de Janeiro (IUPERJ),
     Estúdios Mega
   data: '2010'
   tipo: audiovisual
@@ -400,22 +400,22 @@
   tipo: audiovisual
 - titulo: O Brasil votou, primeiro turno
   autores: Argelina Figueiredo
-  veiculo: KAS – Brasil
+  veiculo: KAS Brasil
   data: '2022'
   tipo: audiovisual
 - titulo: 'Caminhamos rumo ao impasse? #98'
   autores: Argelina Figueiredo
-  veiculo: Fora da Política Não há Salvação, Entrevista a Cláudio Couto.
+  veiculo: Fora da Política Não Há Salvação, entrevista a Cláudio Couto
   data: '2021'
   tipo: audiovisual
 - titulo: 'A Ciência Política e as Crises Brasileiras: Instituições e Políticas'
   autores: Argelina Figueiredo
   veiculo: Conferência no 44º Congresso da Associação Nacional de Pós-graduação e Pesquisa em Ciências
-    Sociais (ANPOCS) .
+    Sociais (ANPOCS)
   data: '2020'
   tipo: audiovisual
 - titulo: 'Bate-papo: 50 anos do golpe militar'
   autores: Argelina Figueiredo
-  veiculo: Entrevista a João Vicente Goulart, Rede EBC.
+  veiculo: Entrevista a João Vicente Goulart, Rede EBC
   data: '2014'
   tipo: audiovisual

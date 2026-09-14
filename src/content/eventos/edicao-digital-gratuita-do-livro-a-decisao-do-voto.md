@@ -1,12 +1,11 @@
 ---
-titulo: Edição digital gratuita do livro “A Decisão do Voto” de Marcus Figueiredo
+titulo: Edição digital gratuita do livro “A Decisão do Voto”, de Marcus Figueiredo
 data: '2022-12-16'
-descricao: O Doxa está publicando uma edição digital gratuita do livro “A Decisão
-  do Voto” de Marcus Figueiredo. Escaneie o QR CODE na imagem, ou clique no link abaixo
-  e garanta seu livro gratuitamente. Clique aqui para baixar o livro
+descricao: O DOXA publicou uma edição digital gratuita do livro “A Decisão do Voto”,
+  de Marcus Figueiredo. O PDF pode ser baixado livremente no botão abaixo.
 imagem: /img/eventos/edicao-digital-gratuita-do-livro-a-decisao-do-voto.jpg
 anexos:
 - /pdfs/livros/a-decisao-do-voto-marcus-figueiredo.pdf
 ---
 
-O Doxa está publicando uma edição digital gratuita do livro “A Decisão do Voto” de Marcus Figueiredo. Escaneie o QR CODE na imagem, ou clique no link abaixo e garanta seu livro gratuitamente. Clique aqui para baixar o livro
+O DOXA publicou uma edição digital gratuita do livro “A Decisão do Voto”, de Marcus Figueiredo. O PDF pode ser baixado livremente no botão abaixo.

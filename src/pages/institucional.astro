@@ -20,14 +20,18 @@ const equipe = await getCollection('equipe');
  * ordem que o campo `ordem` já codifica (coordenação primeiro), e a função vai
  * numa etiqueta dentro do card: 16 pessoas em 4 fileiras cheias, e o layout não
  * quebra quando a equipe muda de tamanho.
+ *
+ * Os rótulos nomeiam a função, não a pessoa, para não pôr etiqueta no masculino em
+ * card de pesquisadora ("Associado" ao lado de "Pesquisadora Associada"). E, com
+ * "Pesquisa associada", o CardMembro reconhece o cargo como repetido e o esconde.
  */
 const FUNCOES: Record<string, string> = {
   coordenacao: 'Coordenação',
-  pesquisadores: 'Pesquisador',
+  pesquisadores: 'Pesquisa',
   'pos-doutorando': 'Pós-doutorado',
   aluno: 'Pós-graduação',
   assistente: 'Assistente',
-  associado: 'Associado',
+  associado: 'Pesquisa associada',
 };
 
 const membros = [...equipe]

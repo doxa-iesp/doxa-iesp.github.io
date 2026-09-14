@@ -1,6 +1,6 @@
 ---
 titulo: "Eleições Rio e São Paulo 2024"
-resumo: "Painel interativo com o compilamento das pesquisas de intenção de voto das eleições municipais de 2024 no Rio de Janeiro e em São Paulo."
+resumo: "Painel interativo com a compilação das pesquisas de intenção de voto das eleições municipais de 2024 no Rio de Janeiro e em São Paulo."
 imagem: "/img/projetos/eleicoes-rio-sp-2024.jpg"
 periodo: "2024"
 status: "concluido"
