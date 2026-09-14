@@ -7,53 +7,94 @@ status: "concluido"
 ordem: 4
 ---
 
-O projeto tem como objetivo geral monitorar e analisar as medidas de combate à Covid no Estado do Rio de Janeiro e avaliar as respostas da população e seus efeitos socioeconômico e políticos. Para tanto, analisa a atuação dos prefeitos no enfrentamento da Covid no Estado, principalmente as medidas de restrição e flexibilização da quarentena tomadas, seus efeitos em grupos mais vulneráveis. O projeto inclui uma ampla pesquisa da bibliografia publicada no exterior e no Brasil segundo temas selecionados.
+<!--
+  Os links para arquivos do site nesta página são RELATIVOS (../../pdfs/…, ../../dados/…),
+  e não começam com "/". Assim continuam certos se o site um dia for para um subdiretório
+  (a mesma regra do url() nos componentes). Para acrescentar um arquivo, copie um link daqui.
+-->
 
-## Ação Legislativa dos Prefeitos do estado do Rio de Janeiro
+**Projeto:** Monitoramento e previsão de impacto das medidas de enfrentamento da epidemia no Estado do Rio de Janeiro<br>
+**Coordenação:** Argelina Cheibub Figueiredo e Fernando Guarnieri<br>
+**Financiamento:** FAPERJ (Ação Emergencial Covid-19/SARS-CoV-2 FAPERJ/SES)
 
-No estado como um todo, como mostra a Tabela 1, os temas mais frequentes dos decretos referentes à regulamentação de medidas de enfrentamento à Covid se referem aos foram as relativas à “Restrição” e “Flexibilização” da quarentena. Os decretos “Administrativos”, ocupando o terceiro lugar, tratam da gestão municipal incluindo, por exemplo, a declaração de ponto facultativo na administração pública, criação de gabinetes de crise, comitês de contenção do vírus suspenção de contratos etc.
+O projeto tem como objetivo geral monitorar e analisar as medidas de combate à Covid-19 no Estado do Rio de Janeiro e avaliar as respostas da população e seus efeitos socioeconômicos e políticos. Para tanto, analisa a atuação dos prefeitos no enfrentamento da Covid-19 no estado, principalmente as medidas de restrição e flexibilização da quarentena, e seus efeitos nos grupos mais vulneráveis. O projeto inclui também uma ampla pesquisa da bibliografia publicada no Brasil e no exterior, segundo temas selecionados.
 
-O quarto conjunto compreende os decretos de cunho “Orçamentário” sendo o principal a alocação de recursos extraordinários, suplementares e especiais para a implementação das ações de combate ao vírus. Os decretos de cunho “Social” incluem a concessão de subsídios, isenções fiscais, a instituições sociais, adiamento de tributos e auxílios e benefícios social visando amenizar os impactos da pandemia.
+## Ação legislativa dos prefeitos do Estado do Rio de Janeiro
 
-Os decretos especificamente na área de “Saúde” referem-se, majoritariamente, a medidas preventivas de contenção da Covid 19. A categoria residual “Outros” compreende declaração de luto oficial pelo falecimento em razão da Covid, redução de impacto da pandemia em setores específicos, como turismo etc.
+Os dados legislativos foram levantados para observar as ações tomadas pelos prefeitos dos 92 municípios do Estado do Rio de Janeiro para enfrentar a epidemia de Covid-19 durante 2020, período em que as medidas de restrição foram mais severas, assim como as tensões políticas em torno delas. Foram levantados os decretos do Poder Executivo municipal que tratassem do tema, a partir dos buscadores legislativos ou do diário oficial on-line de cada município. Não foram encontrados dados de apenas cinco municípios, que não oferecem nenhuma das duas formas de busca: Cambuci, Cardoso Moreira, Engenheiro Paulo de Frontin, Mendes e Vassouras.
 
-**Tabela 1. Decretos Municipais por Tema — Estado do Rio de Janeiro, março a dezembro de 2020.**
+Os dados foram organizados em dois tipos de divisão geopolítica: o nível municipal e uma regionalização do estado em três partes. O município do Rio de Janeiro é uma unidade à parte; a Região Metropolitana reúne os demais municípios da região; e o “Interior” reúne os municípios das outras regiões de governo. A capital é separada do resto da Região Metropolitana pela concentração de eleitores e pelas diferenças político-eleitorais entre a cidade e as demais. A mesma divisão foi usada nos surveys de opinião e comportamento da população fluminense. Os decretos também foram agrupados pelo tamanho da população do município e por variáveis políticas, como o partido no poder e o tamanho e a ideologia desse partido. Além dessas variáveis, o banco de dados registra o tema de cada decreto.
 
-Na Tabela 2 encontramos a distribuição dos decretos de enfrentamento à Covid-19 nas regiões geopolíticas do Estado. Em todas as regiões os decretos de Restrição e de Flexibilização apresentam os maiores percentuais de decretos perfazendo mais de 50% do total. Na cidade do Rio de Janeiro, porém, os decretos Administrativos e de natureza Social têm, considerados isoladamente, percentuais maiores do que os decretos de Flexibilização.
+No estado como um todo, os temas mais frequentes dos decretos são a “Restrição” e a “Flexibilização” da quarentena. Os decretos “Administrativos”, em terceiro lugar, tratam da gestão municipal: declaração de ponto facultativo na administração pública, criação de gabinetes de crise e de comitês de contenção do vírus, suspensão de contratos etc. O quarto conjunto reúne os decretos de cunho “Orçamentário”, principalmente a alocação de recursos extraordinários, suplementares e especiais para as ações de combate ao vírus. Os decretos de cunho “Social” incluem a concessão de subsídios e de isenções fiscais a instituições sociais, o adiamento de tributos e a concessão de auxílios e benefícios sociais para amenizar os impactos da pandemia. Os decretos da área de “Saúde” referem-se, majoritariamente, a medidas preventivas de contenção da Covid-19. A categoria residual “Outros” reúne declarações de luto oficial por mortes causadas pela Covid-19 e medidas de redução do impacto da pandemia em setores específicos, como o turismo.
 
-**Tabela 2. Distribuição de Decretos-Covid por Tema e Região — Estado do Rio de Janeiro, março a dezembro de 2020.**
+**Decretos municipais por tema — Estado do Rio de Janeiro, março a dezembro de 2020** (total: 2.751 decretos)
 
-A variação por município nos temas tratados é maior. No entanto, acompanhando a tendência geral a maioria deles apresentam percentuais mais altos nas categorias restritivas e de flexibilização das normas de quarentena e mobilidade. A listagem dos temas por município está disponível para download.
+- Restrição: 1.296 (47,1%)
+- Flexibilização: 762 (27,7%)
+- Administrativo: 292 (10,6%)
+- Orçamentário: 195 (7,1%)
+- Social: 161 (5,9%)
+- Saúde: 27 (1%)
+- Outros: 18 (0,6%)
 
-A listagem a seguir considera apenas a soma dos dois decretos mais frequentes e a média mensal dos decretos de restrição e flexibilização. Os percentuais da soma dos dois tipos de medidas nos municípios em relação ao total de decretos emitidos variam de 39,5, em Itaboraí, a 100% em Carapebus, Duque de Caxias, Itaperuna e Rio Bonito. Em geral esses municípios emitiram um total baixo de decretos.
+Em todas as regiões do estado, os decretos de restrição e de flexibilização somam mais de 50% do total. Na cidade do Rio de Janeiro, porém, os decretos administrativos e os de natureza social têm, isoladamente, percentuais maiores do que os de flexibilização.
 
-A média mensal apresenta significativa variação, de apenas um decreto – em Cantagalo, Natividade e Carapebus – a 7,8 em Campos dos Goytacazes. A tabela completa também pode ser consultada abaixo.
+A variação entre municípios é maior. Ainda assim, acompanhando a tendência geral, a maioria deles tem percentuais mais altos nas categorias de restrição e de flexibilização das normas de quarentena e mobilidade. Considerando só a soma desses dois tipos de decreto, o percentual em relação ao total emitido vai de 39,5%, em Itaboraí, a 100% em Carapebus, Duque de Caxias, Itaperuna e Rio Bonito — em geral, municípios que emitiram poucos decretos. A média mensal de decretos de restrição e flexibilização também varia bastante: de um decreto por mês, em Cantagalo, Natividade e Carapebus, a 7,8 em Campos dos Goytacazes.
 
-Dentre os partidos que ocupam as prefeituras predominam também as medidas de restrição e flexibilização, com percentuais mais altos nas primeiras e mais baixos nas de flexibilização. Os percentuais de decretos de restrição variam entre 58%, considerando as três prefeituras controladas pelo PSDB, e 34,6% na média das 13 prefeituras lideradas pelo PP.
+Entre os partidos que ocupam as prefeituras, também predominam as medidas de restrição e flexibilização, com percentuais mais altos nas primeiras. O percentual de decretos de restrição varia entre 58%, nas três prefeituras controladas pelo PSDB, e 34,6%, na média das 13 prefeituras lideradas pelo PP. A maioria das prefeituras fica na faixa de 40% a 50% desse tipo de decreto. O PP é também o partido com o menor percentual de medidas de flexibilização, 18,4% — a atuação mais baixa vem do partido que controla o maior número de prefeituras.
 
-A maioria das prefeituras ficam na faixa de 40 a 50% desse tipo de decreto. OPP é também o partido que apresenta o menor percentual de medidas de flexibilização, 18,4%, o que indica a atuação mais baixa pelo partido que controla o maior número de prefeituras. O detalhamento das informações de acordo com os partidos pode também ser encontrado no link abaixo.
+**Downloads:**
 
-## Opiniões e comportamento da população às medidas de enfrentamento da Covid e seus impactos nos grupos mais vulneráveis
+- [Lista de buscadores legislativos](../../dados/pesquisa-covid/DOWNLOAD-1_LISTA-DE-BUSCADORES_DECRETOS.xlsx) (XLSX)
+- [Banco de dados dos decretos Covid-19 no Estado do Rio de Janeiro](../../dados/pesquisa-covid/DOWNLOAD-2_-BANCO-DE-DADOS_DECRETOS-COVID_RJ_3006.xlsx) (XLSX)
+- [Distribuição e média mensal dos decretos de restrição e flexibilização, por município](../../pdfs/projetos/pesquisa-covid/DOWNLOAD-4_DISTRIBUICAO-E-MEDIA-MENSAL-DE-DECRETOS-DE-RESTRICAO-E-FLEXIBIZACAO-POR-MUNICIPIO.pdf) (PDF)
+- [Distribuição dos decretos por tema e partido no governo](../../pdfs/projetos/pesquisa-covid/DOWNLOAD-5_-DISTRIBUICAO-DOS-DECRETOS-POR-TEMA-E-PARTIDO-NO-GOVERNO.pdf) (PDF)
 
-- Realização de dois surveys com a população do estado, considerando três regiões: Cidade do Rio de Janeiro, Região Metropolitana sem a capital e o Interior.
-- Análise do impacto da pandemia no mercado de trabalho do Estado do Rio de Janeiro, comparando-o com o do Brasil. O Estado do Rio de Janeiro está dividido em três regiões: a capital, a região metropolitana sem a capital e o restante do Estado.
-- Análise do impacto da epidemia nos resultados das eleições municipais de 2020.
+## Opiniões e comportamento da população diante das medidas de enfrentamento da Covid-19 e seus impactos nos grupos mais vulneráveis
 
-## Levantamento bibliográfico de publicações brasileiras e do exterior – 2020 início de 2022
+### Dois surveys com a população do estado
 
-- Introdução
-- Listagem dos textos organizada de acordo com os seguintes temas:
-- Listagem dos textos de acordo com a citação ao Brasil
-- Listagem dos títulos contendo links para os Abstracts das publicações selecionadas
+Para verificar o impacto da doença, foram entrevistadas amostras representativas da população fluminense em dois momentos da pandemia: dezembro de 2020 e dezembro de 2021. Cada onda contou com amostra de cerca de 1.000 pessoas, o que garante margem de erro de 3%. As amostras consideram as três regiões do estado — a cidade do Rio de Janeiro, a Região Metropolitana sem a capital e o Interior. Foram selecionadas pela empresa de pesquisas Netquest, e as entrevistas foram feitas on-line, com questionário elaborado pela equipe e aplicado pela empresa em ambiente próprio. A análise e os bancos de dados estão abaixo.
 
-Trabalho e Pandemia no Estado do Rio de Janeiro: entre a Vulnerabilidade e a Flexibilidade.
+- [Análise dos surveys](../../pdfs/projetos/pesquisa-covid/SURVEY_OPINIOES-COMPORTAMENTO-1.pdf) (PDF)
+- [Banco de dados — survey de dezembro de 2020](../../dados/pesquisa-covid/DADOS_SURVEY_IESPBR_208324-Wed-Dec-16-2020_total.xlsx) (XLSX)
+- [Banco de dados — survey de dezembro de 2021](../../dados/pesquisa-covid/DADOS_SURVEY_IESPBR_227821_20211208.xlsx) (XLSX)
 
-O impacto da Covid-19 no comportamento eleitoral do fluminense nas eleições de 2020 Guarnieri, F.; Figueiredo, A. 2022. In Felipe Borba e Argelina Figueiredo (orgs), As eleições municipais de 2020 no Estado do Rio de Janeiro, Editora da UERJ, 2022.
+### O impacto da pandemia no mercado de trabalho
 
-Vulnerabilidades sociais, modelos de provisão de saúde e suas relações com a mortalidade decorrente da pandemia de Covid-19 no Brasil e nos Estados Unidos Figueiredo, A.; Guichney, H.; Lazzari, L. 2022. In Fernando Fontainha e Carlos Milani (orgs), COVID-19 e agendas de pesquisa nas ciências sociais. Editora da UERJ – no prelo.
+Análise do impacto da pandemia no mercado de trabalho do Estado do Rio de Janeiro, em comparação com o do Brasil, com o estado dividido em três regiões: a capital, a Região Metropolitana sem a capital e o restante do estado.
 
-## Projeto de Pesquisa:
+- [Trabalho e pandemia no Estado do Rio de Janeiro: entre a vulnerabilidade e a flexibilidade](../../pdfs/projetos/pesquisa-covid/Pandemia-e-mercado-de-trabalho-no-Rio-de-Janeiro.pdf) (relatório de Adalberto Cardoso, PDF)
 
-Monitoramento e previsão de impacto das medidas de enfrentamento da epidemia no Estado do Rio de Janeiro
+### O impacto da epidemia nas eleições municipais de 2020
 
-## Equipe:
+O resultado está no capítulo de Guarnieri e Figueiredo listado em “Publicações relacionadas”, abaixo.
+
+## Levantamento bibliográfico de publicações brasileiras e do exterior (2020 a início de 2022)
+
+Grandes contingentes de pesquisadores, instituições, redes, tecnologias e recursos foram mobilizados para enfrentar a pandemia de Covid-19, deflagrada em 12 de março de 2020. Esse contexto mobilizou, no mundo inteiro, cientistas das mais diversas áreas para compreender as características do vírus Sars-CoV-2 e desenvolver vacinas, terapias e melhores formas de controlar a sua disseminação.
+
+O levantamento organizou os textos em seis temas: Desigualdades e Pobreza; Welfare State e Políticas Sociais; Federalismo e Governos Subnacionais; Opinião Pública e Mídia; Comportamento Político, Voto e Eleições; e Respostas Governamentais. Dos textos selecionados, 99 citam o Brasil no título ou no resumo.
+
+- [Introdução ao levantamento bibliográfico](../../pdfs/projetos/pesquisa-covid/3.1.-BIBLIO_-Introducao_v2.pdf) (PDF)
+
+## Trabalho e pandemia no Estado do Rio de Janeiro: entre a vulnerabilidade e a flexibilidade
+
+A pandemia da Covid-19 afetou múltiplas dimensões da vida no planeta: relações familiares e de amizade, educação dos mais jovens, possibilidades de lazer, saúde física e mental, sociabilidade. Criou desafios para a gestão das cidades, dos estados e dos países, gerou tensões nas relações internacionais e deu origem a uma geopolítica das vacinas e das estratégias de enfrentamento da doença. Testou a resiliência dos governantes, em toda parte pressionados pelos dogmas neoliberais da austeridade e do Estado mínimo, numa situação que exige sistemas de saúde pública eficazes e dispendiosos. Interpelou lideranças e organizações da sociedade civil e testou a solidez das instituições democráticas.
+
+O relatório completo, de Adalberto Cardoso, está acima, em “O impacto da pandemia no mercado de trabalho”.
+
+## Publicações relacionadas
+
+- Guarnieri, F.; Figueiredo, A. “O impacto da Covid-19 no comportamento eleitoral do fluminense nas eleições de 2020”. In: Borba, F.; Figueiredo, A. (orgs.). *Política local no estado do Rio de Janeiro: disputa partidária e comportamento político nas eleições municipais de 2020*. Rio de Janeiro: EdUERJ.
+- Figueiredo, A.; Guicheney, H.; Lazzari, E. “Vulnerabilidades sociais, modelos de provisão de saúde e mortalidade decorrente da pandemia de Covid-19 no Brasil e nos Estados Unidos”. In: Fontainha, F.; Milani, C. (orgs.). *COVID-19 e agendas de pesquisa nas ciências sociais*. Rio de Janeiro: EdUERJ, 2023. [Acesso aberto no SciELO Books](https://books.scielo.org/id/vpjzm).
+
+## Equipe
+
+- Argelina Maria Cheibub Figueiredo (IESP-UERJ) — coordenadora
+- Fernando Guarnieri (IESP-UERJ) — co-coordenador
+- Adalberto Cardoso (IESP-UERJ)
+- Fabiano Santos (IESP-UERJ)
+- João Feres Junior (IESP-UERJ)
+- Hellen Guicheney (DOXA/IESP-UERJ)
+- Rodolfo Scotelaro Porto Darrieux (DOXA/IESP-UERJ)
