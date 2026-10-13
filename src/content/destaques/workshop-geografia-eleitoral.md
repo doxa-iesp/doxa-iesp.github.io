@@ -6,5 +6,5 @@ imagem: "/img/destaques/workshop-geografia-eleitoral.jpg"
 url: "https://iesp.uerj.br/evento/workshop-geografia-eleitoral-e-areas-de-leitura-comparaveis/"
 rotulo_url: "Ver a programação"
 ordem: 2
-ativo: true
+ativo: false
 ---

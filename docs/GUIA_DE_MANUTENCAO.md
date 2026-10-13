@@ -532,8 +532,10 @@ Três coisas que ajudam:
 
 - **Para tirar um destaque do ar, troque `ativo: true` por `ativo: false`.** Não precisa apagar o
   arquivo: no ano que vem, se o assunto voltar, é só religar.
-- **Capas e cartazes funcionam melhor.** A imagem aparece inteira, sem corte, então pode ser
-  vertical (capa de livro, cartaz de evento).
+- **Capas e cartazes funcionam melhor.** No computador a imagem aparece inteira, sem corte, então
+  pode ser vertical (capa de livro, cartaz de evento). No celular ela vira uma faixa horizontal
+  recortada pelo alto: deixe o essencial (título, nome) na metade de cima da imagem, sem encostar
+  na borda de cima.
 - Sem `url`, o card aparece sem botão — o que é útil para um aviso curto.
 
 ### 4.13. Acrescentar um mapa de votação

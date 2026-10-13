@@ -254,6 +254,17 @@ automático, mas provavelmente funcionam num navegador — vale abrir um a um de
 
 - [ ] Abrir cada um num navegador e anotar aqui o que estiver quebrado
 
+### 15. Vota Aí! 2026 num subdomínio da Vercel
+
+A edição de 2026 do Vota Aí! (em 2026-10-13) está em `https://votaai-2026.vercel.app/`, um
+subdomínio da Vercel, e não num domínio do Cesop ou do DOXA. O link aparece em dois lugares:
+`src/content/projetos/vota-ai.md` (`url`) e `src/content/destaques/vota-ai-2026.md` (`url`). Se o
+projeto na Vercel for apagado ou renomeado, qualquer pessoa pode registrar esse mesmo endereço — e a
+checagem mensal de links continuaria vendo a página abrir normalmente (CLAUDE.md, armadilha 2h).
+
+- [ ] Quando a plataforma ganhar endereço definitivo, trocar o `url` nos dois arquivos
+- [ ] Depois do 2º turno (25/10/2026), decidir se o destaque continua na home (`ativo: false` o tira)
+
 ---
 
 ## O que **não** está pendente
@@ -304,7 +315,8 @@ site de spam**. Em `src/data/midia.yaml`, salvo o da EdUERJ:
 
 - **Cópia no Wayback Machine** (captura anterior à perda do domínio, título conferido): Horizontes ao
   Sul; os 2 textos do blog antigo do Vota Aí (o domínio `votaai.com.br` foi tomado por outro site;
-  a plataforma hoje vive em `votaai.cesop.unicamp.br`); os 3 do BR Político; a coluna do Valor de
+  a edição de 2024 vive em `votaai.cesop.unicamp.br`; a de 2026, em `votaai-2026.vercel.app`); os 3
+  do BR Político; a coluna do Valor de
   2010; e a entrevista à Folha reproduzida pelo AVOL (que também corrigiu autor e veículo do item).
 - **Endereço novo do próprio veículo:** Exame, O Globo (sem `?versao=amp`) e Jornal GGN (o link
   era uma página de tag, e o veículo estava como "Central Gazeta de Notícias").
