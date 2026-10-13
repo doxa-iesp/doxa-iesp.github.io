@@ -22,8 +22,12 @@ npm run verificar-links  # depois do build: todo link/arquivo interno do dist/ e
 npm run preview   # serve dist/
 
 # Scripts Python
-python3 scripts/trocar-links-arquivos.py MAPA.csv ARQ...   # troca links origem -> destino por string literal
+python3 scripts/trocar-links-arquivos.py MAPA.csv ARQ...   # troca links por string literal; o CSV precisa das colunas `origem` e `novo`
 python3 scripts/converter-conteudo.py --forcar-regeneracao # APOSENTADO: sobrescreve src/; não use (ver "Conteúdo")
+
+# Links externos, localmente (o CI roda no dia 1 de cada mês; armadilha 2h)
+node scripts/checar-links-drive.mjs [--saida rel.md]  # Drive/Docs; 6+ min. DRIVE_PAUSAS_S= (vazio) desliga as retentativas
+lychee --config .github/lychee.toml 'src/data/*.yaml' 'src/content/**/*'   # o resto (lychee não vem no npm)
 ```
 
 `npm run build` = `npm run validar && astro build`. **Não remova o validador**
@@ -31,15 +35,28 @@ python3 scripts/converter-conteudo.py --forcar-regeneracao # APOSENTADO: sobresc
 o CI lê a versão de `.nvmrc`.
 
 **Não há suíte de testes** — e não é esquecimento: o site não tem lógica de runtime para testar.
-O que substitui o teste é o par `validar` + `check`, e é isso que o CI roda. Antes de dizer que uma
-mudança funciona, rode `npm run build` (que já inclui o validador) e, se mexeu em tipos ou props de
+O que substitui o teste é o trio `validar` + `check` + `verificar-links`. Antes de dizer que uma
+mudança funciona, rode `npm run build && npm run verificar-links` e, se mexeu em tipos ou props de
 componente, `npm run check`.
+
+O `validar` ([scripts/validar-dados.mjs](scripts/validar-dados.mjs)) faz mais do que conferir YAML:
+exige um **mínimo de itens** por arquivo (`LISTAS` e `PASTAS` no topo do script — apagar muitos itens
+de propósito reprova o build até se baixar o mínimo ali), barra links para `lab-doxa.org.br` e
+`mail.google.com` (armadilha 2d) e acusa cópias "nome N" (2f). A checagem de sintaxe e de mínimos
+lê só o **primeiro nível** de cada pasta de `src/content/`, embora o `glob` seja recursivo: um arquivo
+numa subpasta escapa dela (só as buscas de cópias e de links proibidos descem nas subpastas).
+
+O `verificar-links` confere todo `href`/`src` interno dos `.html` do `dist/` (não confere âncora
+`#…` nem link externo) e descobre o base path lendo `const BASE = '…'` do `astro.config.mjs` por
+regex — mude o base **nessa constante**, nunca direto em `base:`, senão o checador confere com `''`
+sem avisar.
 
 Deploy: push em `main` → `.github/workflows/deploy.yml` → GitHub Pages.
 PRs rodam `.github/workflows/pr.yml`. Os dois fazem build, a trava do loader (armadilha 1) e
-`npm run verificar-links`; o de PR também roda `astro check` e publica o artefato `site-dist`.
-Links externos são conferidos à parte, uma vez por mês, por `.github/workflows/links-externos.yml`
-(armadilha 2h).
+`npm run verificar-links`; só o de PR roda `astro check` (push direto na `main` pula os tipos) e
+publica o artefato `site-dist`. Links externos são conferidos à parte, uma vez por mês, por
+`.github/workflows/links-externos.yml` (armadilha 2h). `deploy.yml` e `links-externos.yml` também
+rodam à mão (`workflow_dispatch`).
 
 ## Arquitetura
 
@@ -72,13 +89,29 @@ Duas formas de carregar, escolhidas por ergonomia de edição:
   depois da migração, sem equivalente em `extracao/`.
 - `file()` + `listaYaml()` — **um YAML com uma lista** (publicações, mídia, …). O helper
   `listaYaml` em `content.config.ts` gera o `id` de cada item a partir do título, para que ninguém
-  precise escrever `id:` à mão. O `id` só aparece em mensagens de erro; não vira URL.
+  precise escrever `id:` à mão — ou de outro campo, passado como 2º argumento: `codigo` no acervo,
+  `nome` em bancos de dados e parceiros. O `id` só aparece em mensagens de erro; não vira URL.
+- Exceção: `site.yaml` não é lista. É a coleção `configuracao`, `file()` puro sobre um objeto
+  (`.strict()`), lida como `getEntry('configuracao', 'geral')`. Controla contato e redes (rodapé e
+  `/institucional/`), o `<title>` da home e a meta description padrão, e os vídeos, catálogo e formulário do `/acervo/`.
+  Trocar `video_destaque`/`video_documentario` exige a miniatura em `public/img/video/<id>.jpg`
+  ([VideoYoutube](src/components/VideoYoutube.astro) é uma fachada que só carrega a imagem local).
+
+Cada página lê a sua prosa com `getEntry('paginas', '<nome>')!`, com o nome fixo no `.astro`:
+**renomear um `paginas/*.md` quebra o build**. O `titulo` vira o `<title>` e o título do herói; a
+`descricao` vira o subtítulo do herói **e** a meta description. Publicações, análises de conjuntura,
+o índice de projetos e `projetos/[slug]` não têm `.md`: o título deles está escrito no `.astro`.
+
+O menu é `MENU` em [src/lib/navegacao.ts](src/lib/navegacao.ts), lido só pelo `Header`. Item com
+submenu precisa de um primeiro filho `capa: true` que repete o destino do pai: clicar no pai abre o
+menu, então sem esse item a página de capa da seção fica inalcançável no toque.
 
 ### Base path
 
 O site é publicado em `https://lab-doxa.org.br/` — domínio próprio, **apex sem `www`** (o `www` só
-redireciona), servido pelo GitHub Pages na **raiz**. Por isso `base: ''` em
-[astro.config.mjs](astro.config.mjs). `doxa-iesp.github.io` redireciona para o domínio.
+redireciona), servido pelo GitHub Pages na **raiz**. Por isso `const BASE = ''` em
+[astro.config.mjs](astro.config.mjs), de onde saem o `base` e o `ROTAS_ANTIGAS` (e que o
+`verificar-links` lê). `doxa-iesp.github.io` redireciona para o domínio.
 
 Mesmo assim, **todo link interno passa por `url()`** de [src/lib/url.ts](src/lib/url.ts). Não é
 zelo inútil: o site já viveu em `felipelamarca.com/DOXA/`, e foi só trocar o `base` para migrar.
@@ -87,55 +120,85 @@ Para um campo de dado que pode ser link externo **ou** caminho interno, use `lin
 arquivo), que só aplica `url()` quando o destino não é externo. O config tem
 `trailingSlash: 'always'`: links internos terminam em `/`.
 
-No **corpo em Markdown** de uma coleção não há como chamar `url()`: link para arquivo do site ali é
-**relativo** (em `src/content/projetos/pesquisa-covid.md`, `../../pdfs/projetos/…`), que resolve
-certo com qualquer `base`. Um `](/pdfs/…)` cru seria o mesmo 404 adormecido.
+Em **campo de dado** (`imagem`, `foto`, `arquivo`, `anexos`, `links[].url`…), caminho interno se
+escreve absoluto e **sem** base (`/img/projetos/vota-ai.jpg`): o componente aplica `url()` ou
+`linkPara()`. Já no **corpo em Markdown** de uma coleção não há como chamar `url()`: link para arquivo
+do site ali é **relativo**, e o número de `../` depende da profundidade da rota (em
+`src/content/projetos/pesquisa-covid.md`, servido em `/projetos/pesquisa-covid/`, é
+`../../pdfs/projetos/…`). Um `](/pdfs/…)` cru seria o mesmo 404 adormecido. Pela mesma razão, imagem
+citada em CSS (`url()` do CSS não passa pelo helper) mora em `src/assets/`, não em `public/`. Não há
+`astro:assets`: as imagens saem cruas de `public/img/<seção>/`, com `width`/`height` escritos à mão.
 
 Domínio: três lugares precisam bater — o DNS (registro.br), o domínio em *Settings > Pages* e, no
 código, `site` em `astro.config.mjs` + `public/CNAME`. `site` errado não quebra nada visível, mas
-manda canonical, `og:url` e sitemap para outro host. O `CNAME` da raiz do repo **não** é publicado —
-só `public/` entra no build.
+manda canonical, `og:url` e sitemap para outro host. O `CNAME` tem de ficar em `public/`: só essa
+pasta entra no build (um `CNAME` na raiz do repo não seria publicado).
 
 ## Estrutura do site
 
 - **`/producao/`** reúne o que o laboratório produz: pesquisas, publicações acadêmicas, análises de
   conjuntura e textos para discussão. Antes eram dois itens de menu separados.
-- **`/projetos/`** reúne as iniciativas com entrega pública (Vota Aí, dashboards, Pesquisa COVID,
-  Geografia do Voto). Antes viviam espalhadas pela home e dentro de `site.yaml`.
+- **`/projetos/`** reúne as iniciativas com entrega pública (Vota Aí, o painel das eleições Rio/SP
+  2024, Pesquisa COVID, Geografia do Voto). Antes viviam espalhadas pela home e dentro de `site.yaml`.
 - **Endereços antigos continuam funcionando** — as rotas antigas deste site (`/pesquisas/`,
-  `/publicacoes/*`) e as ~650 do WordPress que citam o domínio lá fora. Tudo sai de
-  [src/lib/rotas-antigas.mjs](src/lib/rotas-antigas.mjs): `REDIRECIONAMENTOS` (destino exato) vira
-  página-stub via [src/pages/[...antiga].astro](src/pages/[...antiga].astro) e
-  [Redirecionamento.astro](src/components/Redirecionamento.astro); `destinoAntigo()` resolve os
-  padrões (`/acervo-doxa/<item>/` → card do acervo, `/lista-pesquisas/<slug>/` → busca preenchida…)
-  dentro da [404](src/pages/404.astro); arquivos antigos de `/wp-content/uploads/` são achados pelo
-  nome em `/arquivos-antigos.json` ([endpoint](src/pages/arquivos-antigos.json.ts)), que varre
-  `public/pdfs/` e `public/dados/` (PDF, XLSX, DOCX), lê `mapas-no-drive.csv` e aplica
-  `RENOMEADOS` — cujas **chaves precisam estar em minúsculas** (a 404 procura assim) e cujo destino
-  pode ser externo. Arquivo trazido do WordPress mantém o nome original justamente para casar sem
-  entrada na tabela. A lista do que existia está em `extracao/dados/enderecos-antigos.txt`: toda
-  mudança aqui se confere contra ela (cada endereço precisa cair numa página que existe).
+  `/publicacoes/*`) e as ~650 do WordPress que citam o domínio lá fora. Três mecanismos:
+  - `REDIRECIONAMENTOS` (destino exato), em [src/lib/rotas-antigas.mjs](src/lib/rotas-antigas.mjs),
+    vira página-stub via [src/pages/[...antiga].astro](src/pages/[...antiga].astro) e
+    [Redirecionamento.astro](src/components/Redirecionamento.astro). Chave em minúsculas, com `/` no
+    começo e no fim; destino **interno** (o stub usa `url()`, não `linkPara()`).
+  - `destinoAntigo()`, no mesmo arquivo, resolve os padrões (`/acervo-doxa/<item>/` → card do acervo,
+    `/lista-pesquisas/<slug>/` → busca preenchida…) dentro da [404](src/pages/404.astro). Padrão
+    novo = um `case` novo ali.
+  - Arquivos antigos de `/wp-content/uploads/` são achados pelo nome em `/arquivos-antigos.json`
+    ([endpoint](src/pages/arquivos-antigos.json.ts)), que varre `public/pdfs/` e `public/dados/`
+    (PDF, XLSX, DOCX; `public/docs/` não), lê `mapas-no-drive.csv` e aplica `RENOMEADOS` — tabela
+    que mora **no próprio endpoint**, cujas **chaves precisam estar em minúsculas** (a 404 procura
+    assim) e cujo destino pode ser externo. Arquivo trazido do WordPress mantém o nome original
+    justamente para casar sem entrada na tabela.
+
+  Ordem na 404: página real ou stub sempre vence; caminho de `/wp-content/uploads/` só consulta o
+  JSON (pelo nome do arquivo, ignorando ano e mês) e nunca chega a `destinoAntigo()`; o resto passa
+  por `destinoAntigo()`, que põe em minúsculas, tira `/page/N/` e consulta `REDIRECIONAMENTOS` antes
+  dos padrões. O CI só confere o destino dos stubs; o de `destinoAntigo()` e o do JSON, nada confere.
+
+  A lista do que existia está em `extracao/dados/enderecos-antigos.txt`: toda mudança aqui se confere
+  contra ela, **à mão** (não há script). Cada endereço precisa cair numa página que existe, salvo 8
+  que hoje dão 404: os 4 listados no fim de `REDIRECIONAMENTOS` (de propósito), os 3 PDFs órfãos de
+  `arquivos-preservados/orfaos-sem-pagina/` (fora do site) e `/_loadinfo-…/`, artefato do WordPress.
   O `id` do card do acervo sai de `idItemAcervo()` em [src/lib/ancoras.mjs](src/lib/ancoras.mjs),
   que imita o slug do WordPress: é por isso que 93 dos 95 endereços `/acervo-doxa/` casam sem
   tabela. **Mudar essa função quebra os redirecionamentos.** Ela e `rotas-antigas.mjs` são `.mjs`,
-  não `.ts`, porque o `astro.config.mjs` as importa.
+  não `.ts`, porque o `astro.config.mjs` as importa — e rodam também **no navegador**, no script da
+  404: nada de `node:*`, `import.meta.env` ou import de `.ts` nelas.
+
+  Acoplamentos que nada acusa: os campos do `data-busca` de
+  [producao/pesquisas.astro](src/pages/producao/pesquisas.astro) sustentam `/lista-pesquisas/`, e os
+  valores das opções de filtro do acervo sustentam `/candidatos-*/`. Mudou um, confira os endereços.
 - **Buscas e filtros** normalizam texto com `normalizar()` e casam com `casaBusca()`, ambos em
   [src/lib/texto.ts](src/lib/texto.ts): todos os termos, cada um como início de palavra. As listas com
   abas usam [AbasFiltro.astro](src/components/AbasFiltro.astro), que aceita busca (`busca`, com
-  `?busca=` na URL) e esconde grupos vazios (`[data-filtro-grupo]`). As "abas" são botões de
-  alternância (`aria-pressed`), não `role="tab"`: não há painel de aba, é um filtro sobre a mesma
-  lista. O acervo aceita `?candidato=`, `?ano=`, `?cargo=`, `?regiao=`, `?partido=` e âncora
-  `#item-<código>`; o formulário de filtros não é enviado (Enter só filtra).
+  `?busca=` na URL — hoje só em `/producao/pesquisas/`) e esconde grupos vazios
+  (`[data-filtro-grupo]`). As "abas" são botões de alternância (`aria-pressed`), não `role="tab"`:
+  não há painel de aba, é um filtro sobre a mesma lista. O acervo tem filtro próprio e aceita
+  `?candidato=` (não `?busca=`), `?ano=`, `?cargo=`, `?regiao=`, `?partido=` e a âncora do card
+  (`#` + `idItemAcervo(código)`, ex.: `#item-020-98b`); o formulário de filtros não é enviado (Enter só filtra).
 - **Links com o mesmo texto** ("Ver mapa", "Baixar os dados (CSV)", "Assistir no Google Drive")
-  ganham contexto para leitor de tela: `aria-describedby` apontando para o título do item, ou texto
-  na classe global `.visualmente-oculto`. Ao criar lista com botões repetidos, faça o mesmo.
+  ganham contexto para leitor de tela: `aria-describedby` apontando para o título (no acervo, o
+  código) do item, ou texto na classe global `.visualmente-oculto`. Ao criar lista com botões
+  repetidos, faça o mesmo.
 
 ## Sistema visual
 
 Tudo em [src/styles/tokens.css](src/styles/tokens.css) e [src/styles/global.css](src/styles/global.css).
 Não redefina `.prosa`, `.cartao`, `.grade-cards` numa página: elas são globais **de propósito** —
 a `.prosa` já esteve copiada em 12 arquivos, sempre sem `margin-inline: auto`, e por isso o texto
-ficava preso à esquerda.
+ficava preso à esquerda. A global não centraliza numa coluna: ocupa a largura do container, alinhada
+ao resto da página. Para variar, use os modificadores (`.prosa--medida` limita a 68ch,
+`.prosa--colunas` divide texto longo, `.prosa--intro` dá folga antes das abas). A `.grade-cards` se
+ajusta pela variável `--card-min`, não redefinindo a classe. Antes de escrever CSS novo, veja os
+utilitários globais (`.container`, `.secao`, `.titulo-secao`, `.faixa-marca`, `.etiqueta`,
+`.btn-primario`/`.btn-contorno`…); as classes seguem BEM em pt-BR. Classe global perde para regra
+escopada de componente (`.hero[data-astro-cid-…]`) — par natural da armadilha 2g.
 
 **O terracota tem três tokens, e a distinção importa:**
 
@@ -149,10 +212,12 @@ O `--gradiente-marca` (navy→verde) é a assinatura da marca. Use com parcimôn
 de seção e **uma** faixa de destaque por página — se toda seção ganhar gradiente, vira um bloco só.
 
 **Títulos são bi-peso, e isso é código, não CSS.** O site antigo escrevia "Textos para
-**Discussão**", "Nossa **Equipe**", "Argelina **Cheibub Figueiredo**" — última palavra em destaque.
-Quem faz isso é [src/components/Titulo.astro](src/components/Titulo.astro), sobre
-`partirUltimaPalavra()` de [src/lib/texto.ts](src/lib/texto.ts) (usado também por `PageHero` e
-`CardMembro`). Não escreva `<h2>` cru numa página nova: use `<Titulo>`, e passe `forte` quando a
+**Discussão**", "Nossa **Equipe**" — última palavra em destaque. Quem faz isso é
+[src/components/Titulo.astro](src/components/Titulo.astro), sobre `partirUltimaPalavra()` de
+[src/lib/texto.ts](src/lib/texto.ts); o `PageHero` usa o `Titulo`, e o `CardMembro` usa `partirNome()`,
+que é só um apelido dela (nome de pessoa também destaca só a última palavra: "Argelina Cheibub
+**Figueiredo**"). A cor da parte forte vem de `--titulo-cor-forte` (fora do herói, herda: só o peso
+muda). Não escreva `<h2>` cru numa página nova: use `<Titulo>`, e passe `forte` quando a
 quebra natural não for a última palavra. Exceções: rótulos pequenos em caixa alta ("O DOXA em
 números", "O projeto") e títulos de card/item ficam crus — o bi-peso não se lê neles.
 
@@ -166,7 +231,8 @@ num build frio (o do CI) a página vai ao ar sem nenhum item.
 É por isso que existe [scripts/validar-dados.mjs](scripts/validar-dados.mjs), que roda antes do
 build e falha com código 1. E por isso `deploy.yml` e `pr.yml` têm uma trava que reprova se um
 rótulo `[file-loader]` ou `[glob-loader]` aparecer no log — com `set -o pipefail`, sem o qual o
-`tee` devolveria 0. Para reproduzir o bug original: `rm -rf dist .astro node_modules/.astro && npx astro build`.
+`tee` devolveria 0. A trava reprova com qualquer linha que leve o rótulo, até um WARN (um `.md`
+vazio dá `[glob-loader] No contents found`). Para reproduzir o bug original: `rm -rf dist .astro node_modules/.astro && npx astro build`.
 
 **A trava original nunca funcionou no CI.** Ela procurava `[file-loader] Error`, mas no GitHub
 Actions a variável `CI` liga as cores do log, e o código de cor cai entre o rótulo e a mensagem:
@@ -184,7 +250,7 @@ são ancoradas na raiz (`/node_modules/`, `/dist/`). Antes de confiar num build,
 no commit**, não o que está no disco:
 
 ```bash
-git archive --format=tar HEAD | tar -x -C /tmp/t && cd /tmp/t && npm ci && npm run build
+mkdir -p /tmp/t && git archive --format=tar HEAD | tar -x -C /tmp/t && cd /tmp/t && npm ci && npm run build
 ```
 
 **2c. `redirects` do `astro.config.mjs` ignora o `base`.** O Astro monta o destino só a partir dos
@@ -199,24 +265,29 @@ tabela em [src/lib/rotas-antigas.mjs](src/lib/rotas-antigas.mjs) — e ficam for
 
 **2d. O site antigo não existe mais — nada pode depender dele.** O WordPress saiu do ar em 2026-09
 e o domínio `lab-doxa.org.br` passou a servir este site. Consequência que não é óbvia: **um link
-para `www.lab-doxa.org.br/...` não dá erro de conexão, dá 404 deste próprio site**, e nenhum build
-acusa (para o Astro é link externo). Foi assim que 273 mapas, 4 "Saiba mais" de eventos, 2 links de
-bancos de dados e um anexo quebraram de uma vez. Todos foram resolvidos; um dado novo não pode voltar
-a apontar para lá. Não há como baixar nada do site antigo de novo: o que foi preservado está em
+para `www.lab-doxa.org.br/...` não dá erro de conexão, dá 404 deste próprio site**, e o Astro não
+acusa (para ele é link externo). Foi assim que 273 mapas, 4 "Saiba mais" de eventos, 2 links de
+bancos de dados e um anexo quebraram de uma vez. Todos foram resolvidos, e desde 2026-09-14 o
+validador (`LINKS_PROIBIDOS`) reprova o build se um `src/data/` ou `src/content/` voltar a apontar
+para `lab-doxa.org.br` — **com ou sem `www`**, então nem link absoluto para o próprio site passa:
+link interno em dado é caminho (`/acervo/`). Captura do Wayback passa. Não há como baixar nada do site antigo de novo: o que foi preservado está em
 `extracao/` e `arquivos-preservados/`, e a **única fonte externa é o Wayback Machine** (de onde vieram
 o cartaz do seminário Marcus Figueiredo e os downloads da Pesquisa COVID).
 
-Os PDFs moram em dois lugares: `public/pdfs/` (teses, análises, textos para discussão, livro, cartaz)
-e o **Google Drive do DOXA** — conta do acervo, pasta *Acervo Doxa (NEW) / Site DOXA — Mapas de
+Os PDFs moram em dois lugares: `public/pdfs/` (teses, análises, textos para discussão, livro, cartaz,
+matérias de mídia e os downloads da Pesquisa COVID) e o **Google Drive do DOXA** — conta do acervo, pasta *Acervo Doxa (NEW) / Site DOXA — Mapas de
 votação*, compartilhada por link — para os **273 mapas** (835 MB, que não cabem no teto de 1 GB do
 GitHub Pages). [extracao/dados/mapas-no-drive.csv](extracao/dados/mapas-no-drive.csv) registra o
 endereço antigo, o novo e o SHA-256 de cada mapa. **Mover ou renomear no Drive não quebra link;
-apagar e reenviar quebra** (o arquivo ganha outro ID). Links de mapa vivem em três arquivos que
+apagar e reenviar quebra** (o arquivo ganha outro ID); para trocar o PDF mantendo o link, use
+*Gerenciar versões › Enviar nova versão*. Ao **trocar** links de mapa existentes, três arquivos
 precisam bater: `src/data/mapas-votacao.yaml` (o que a página mostra), `public/dados/mapas-votacao.csv`
 (catálogo publicado) e `extracao/dados/mapas-no-drive.csv` (lido pelo build para montar
 `/arquivos-antigos.json`, que leva o endereço antigo de cada mapa ao novo) — troque com
 [scripts/trocar-links-arquivos.py](scripts/trocar-links-arquivos.py), que preserva as quebras de linha
-(os CSVs são CRLF). Não presuma que um PDF referenciado existe sem conferir — `DADOS_PENDENTES.md` é
+(os CSVs são CRLF). Mapa **novo** vai só no YAML e no CSV público (receita 4.13 do guia): o
+`mapas-no-drive.csv` é o de-para dos 273 do WordPress e não ganha linha. Há ainda uma quarta cópia dos
+links em `extracao/dados/mapas-votacao.csv`, congelada de propósito. Não presuma que um PDF referenciado existe sem conferir — `DADOS_PENDENTES.md` é
 também a lista do que falta preencher (e que está faltando **de propósito**, não por bug).
 
 **2e. `arquivos-preservados/` existe fora do git: no Mac de quem fez a migração e no Drive.** Ignorada pelo git de
@@ -225,13 +296,14 @@ PDF original do livro *A Decisão do Voto* (com o trecho que a coordenação ped
 publicada). Desde 2026-09-13 há segunda cópia de tudo no Drive do DOXA: os mapas na pasta pública
 acima; órfãos, original do livro e `manifesto.csv` em *Acervo Doxa (NEW) / Site DOXA — Arquivos
 preservados (não compartilhar)*, **privada** — não compartilhe, o original do livro não deve ir ao
-ar. `git clean -fdx` apaga a pasta local sem aviso: rode sempre `git clean -fdx -e
-arquivos-preservados`, nunca o comando cru.
+ar. O roteiro para levar os mapas a outro lugar (Zenodo etc.) está em
+`arquivos-preservados/LEIA-ME.md` — que, como a pasta, não está no git. `git clean -fdx` apaga a
+pasta local sem aviso: rode sempre `git clean -fdx -e arquivos-preservados`, nunca o comando cru.
 
 **2f. Cópias "nome N" viram itens repetidos.** Em 2026-09-07, ao trazer arquivos para a `main`,
 apareceram **142** cópias como `felipe-lamarca 3.yaml` e `pesquisa-covid 4.md` em `src/content/`.
 Nenhuma tinha conteúdo único (133 idênticas ao original, 9 versões antigas), mas as coleções usam
-`glob('**/*')`, que **não distingue cópia de original**: a página da equipe renderizava **80 cards
+`glob('**/*.md')` / `glob('**/*.yaml')`, que **não distinguem cópia de original**: a página da equipe renderizava **80 cards
 em vez de 16** e o build produzia 41 páginas em vez de 25, com rotas fantasmas como
 `/projetos/pesquisa-covid-3/`. Build verde, site errado.
 
@@ -269,11 +341,14 @@ e [scripts/checar-links-drive.mjs](scripts/checar-links-drive.mjs) para Drive e 
 script próprio porque o Google **redireciona nos dois casos que importam** — arquivo que deixou de
 ser público (vai para o login) e pedidos demais (vai para a página "sorry", ou dá 429) — e o lychee
 não distingue um do outro: na segunda rodada, 18 mapas "quebraram" e abriam minutos depois. O script
-separa pelo destino do redirecionamento e só dá como quebrado o que falha em três tentativas
-(agora, +2 min, +10 min). Limites: não pega **domínio tomado** (a página de spam responde 200 — o
-caso do APK acima passaria); cada exclusão em `lychee.toml` é um alarme falso conferido à mão (site
-que recusa os servidores do GitHub, TLS que o lychee não aceita), e link excluído nunca mais é
-conferido; e o GitHub **desliga agendamentos** depois de 60 dias sem commit no repositório —
+separa pelo destino do redirecionamento e só dá como quebrado o que falha em três rodadas, com
+pausas de 2 e 10 min entre elas (a primeira rodada sozinha leva ~6 min; o todo passa de 20). Link
+"limitado" nas três (429, 5xx, página "sorry") nunca conta como quebrado: vai para "Não deu para
+conferir" e não abre issue; se mais da metade ficar assim, o job falha. Limites: não pega **domínio
+tomado** (a página de spam responde 200 — o caso do APK acima passaria); fora três exclusões
+estruturais (Drive/Docs, conferidos pelo script; `web.archive.org`, lento; `lab-doxa.org.br`, já
+barrado pelo validador), cada exclusão em `lychee.toml` é um alarme falso conferido à mão (site que
+recusa os servidores do GitHub, TLS que o lychee não aceita), e link excluído nunca mais é conferido; e o GitHub **desliga agendamentos** depois de 60 dias sem commit no repositório —
 reative em Actions. Falso positivo se resolve no `lychee.toml`, nunca mexendo no dado.
 
 **3. Defeito na fonte: `programas-eleitorais-capitais.csv`.** A coluna `municipio` está
@@ -297,10 +372,13 @@ coleção em ordem alfabética do `id` (`mutable-data-store.js`). Com o id feito
 análises dentro de um ciclo, as publicações do mesmo ano e matérias de mesma data saíam em ordem
 alfabética — diferente do site antigo — e ninguém percebeu por meses (corrigido em 2026-09-14).
 Hoje `listaYaml()` põe a **posição do item no id** (`0007-hgpe-eleicoes-1989`), então a ordem do id
-é a ordem do arquivo; e **toda página que lista precisa de sort explícito com desempate**
-(`|| a.id.localeCompare(b.id)` para as listas; `|| titulo` para as coleções `glob`, cujo id é o nome
-do arquivo). Parceiros ordena por `nome` de propósito. Ao criar uma lista nova, não confie na ordem
-em que `getCollection` devolve.
+é a ordem do arquivo; e **toda página que lista precisa de sort explícito com desempate total**. O
+desempate decide se a ordem do arquivo conta: `|| a.id.localeCompare(b.id)` a preserva (publicações
+por ano, análises por ciclo, mídia, seminários, textos para discussão); pesquisas e mapas desempatam
+por `titulo`, o acervo por `codigo`, a equipe por `nome`, e parceiros ordena por `nome` — nesses a
+ordem do arquivo não conta. Onde há campo `ordem` (equipe, projetos, destaques, bancos de dados), ele
+vem primeiro, e vazio conta como 99 (999 na equipe). Ao criar uma lista nova, não confie na ordem em
+que `getCollection` devolve.
 
 ## Conteúdo: `src/` é a fonte
 
