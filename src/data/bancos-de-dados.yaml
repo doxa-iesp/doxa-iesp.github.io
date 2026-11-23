@@ -78,18 +78,12 @@
     url: /pdfs/projetos/pesquisa-covid/SURVEY_OPINIOES-COMPORTAMENTO-1.pdf
   ordem: 5
 - nome: Survey DOXA/Quaest no Estado do Rio de Janeiro – 2023 (informação política)
-  descricao: Bloco do survey sobre como a população fluminense se informa sobre política
-    (frequência com que se informa, fonte principal e rede social mais usada), com o perfil das
-    pessoas entrevistadas. Survey contratado pelo DOXA e realizado pela Quaest; é a base do Texto
-    para Discussão nº 3.
-  cobertura: Estado do Rio de Janeiro, julho de 2023; 1.266 entrevistas com pessoas de 16 anos ou
-    mais, em 35 municípios, com amostra por cotas. Traz município, setor censitário, sexo, faixa
-    etária, escolaridade, cor ou raça e as perguntas 47 a 49 do questionário, com o texto das respostas
-    abertas de "outra rede", tudo com os valores do banco entregue pela Quaest, sem peso nem
-    recodificação. O dicionário traz o enunciado de cada pergunta e as categorias de resposta.
+  descricao: Bloco de informação política do survey contratado pelo DOXA, com campo realizado pela
+    Quaest. Traz a frequência com que a pessoa se informa sobre política, a fonte principal de
+    informação e a rede social mais usada para isso, além de município, setor censitário, sexo,
+    faixa etária, escolaridade e cor ou raça.
+  cobertura: Estado do Rio de Janeiro, julho de 2023; 1.266 entrevistas em 35 municípios.
   registros: 1266
-  aviso: Este arquivo traz só o bloco de informação política do survey. As demais perguntas ainda não
-    foram divulgadas.
   pagina: /producao/textos-para-discussao/
   rotulo_pagina: Ver o texto para discussão
   arquivos:

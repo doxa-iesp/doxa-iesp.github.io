@@ -276,7 +276,7 @@ divulgá-los. Os valores são os do banco da Quaest, sem as escolhas de análise
 exclusões, recodificações): os CSVs saem de `data/raw/` do repositório do TD
 (`felipelmc/td-doxa-informacao-politica`), que já publica as 22 colunas usadas no TD.
 
-- [ ] Quando o resto do survey for divulgado, trocar os arquivos e tirar o `aviso` do banco
+- [ ] Quando o resto do survey for divulgado, trocar os arquivos e a descrição do banco
 
 ---
 
