@@ -336,13 +336,21 @@ Manes):
 - titulo: Título do texto para discussão
   autores: Nome do Autor
   ano: 2025
-  url: https://exemplo.com/texto.pdf   # (opcional)
+  url: https://exemplo.com/texto.pdf   # (opcional) vira o botão "Baixar PDF"
+  links:                               # (opcional) outros botões, na ordem em que aparecem
+  - rotulo: DOI (Zenodo)
+    url: https://doi.org/10.5281/zenodo.24485143
+  - rotulo: Dados e código (GitHub)
+    url: https://github.com/felipelmc/td-doxa-informacao-politica
   resumo: >
     Resumo do texto, um parágrafo. Pode ser longo — mantenha o recuo
     das linhas seguintes alinhado a este, como neste exemplo.
 ```
 
 - `ano` aqui é **obrigatório** (número, sem aspas).
+- O PDF vai em `public/pdfs/textos-discussao/`, e o `url` fica `/pdfs/textos-discussao/<nome>.pdf`.
+- Em `links`, cada `url` é um endereço completo (`https://…`) ou um caminho do site começando com
+  `/`. O `rotulo` é o texto do botão.
 
 ### 4.5. Adicionar uma análise de conjuntura eleitoral
 
@@ -643,8 +651,9 @@ Esses arquivos mudam pouco e têm campos mais específicos:
     entre aspas simples — o YAML confunde com um campo novo e o PR fica vermelho (Erro 4).
   - Nomes de campo que o site não conhece, inclusive o antigo `download:`, deixam o PR vermelho
     (Erro 3).
-  - Para **tirar um banco do site**, apague o bloco inteiro. Como hoje há exatamente cinco bancos, o
-    PR fica vermelho com o Erro 5: peça a quem cuida do site para ajustar o mínimo.
+  - Para **tirar um banco do site**, apague o bloco inteiro. O site exige pelo menos cinco bancos: se
+    a remoção baixar disso, o PR fica vermelho com o Erro 5 — peça a quem cuida do site para ajustar
+    o mínimo.
 - **Um vídeo novo do acervo** entra em `src/data/acervo.yaml`, copiando um item que já existe: o
   `codigo` da fita, `ano`, `cargo`, `regiao`, `candidatos`, `partidos` e o `url` do vídeo no Google
   Drive (confira numa janela anônima que ele abre sem login). O `codigo` vira a âncora do card,

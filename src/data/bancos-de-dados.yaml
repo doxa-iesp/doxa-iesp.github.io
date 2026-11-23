@@ -77,3 +77,30 @@
   - rotulo: Análise dos surveys (PDF)
     url: /pdfs/projetos/pesquisa-covid/SURVEY_OPINIOES-COMPORTAMENTO-1.pdf
   ordem: 5
+- nome: Survey DOXA/Quaest no Estado do Rio de Janeiro – 2023 (informação política)
+  descricao: Bloco do survey sobre como a população fluminense se informa sobre política
+    (frequência com que se informa, fonte principal e rede social mais usada), com o perfil das
+    pessoas entrevistadas e o peso amostral. Survey contratado pelo DOXA e realizado pela Quaest;
+    é a base do Texto para Discussão nº 3.
+  cobertura: Estado do Rio de Janeiro, julho de 2023; 1.229 entrevistas com pessoas de 18 anos ou
+    mais, em 35 municípios, com amostra por cotas e pesos calibrados às margens do Censo 2022 (área ×
+    sexo, área × faixa etária, área × escolaridade e cor ou raça). Traz município, setor censitário,
+    região (capital, demais municípios da Região Metropolitana e demais municípios), sexo, faixa
+    etária, escolaridade, cor ou raça e as perguntas 47 a 49 do questionário, com o texto das respostas
+    abertas de "outra rede" e sua recodificação. Os dicionários trazem o enunciado de cada pergunta e
+    as categorias de resposta.
+  registros: 1229
+  aviso: Este arquivo traz só o bloco de informação política do survey. As demais perguntas ainda não
+    foram divulgadas.
+  pagina: /producao/textos-para-discussao/
+  rotulo_pagina: Ver o texto para discussão
+  arquivos:
+  - rotulo: Baixar os dados (CSV)
+    url: /dados/informacao-politica-rj-2023/informacao-politica-rj-2023.csv
+  - rotulo: Dicionário de variáveis (CSV)
+    url: /dados/informacao-politica-rj-2023/dicionario-variaveis.csv
+  - rotulo: Dicionário de categorias (CSV)
+    url: /dados/informacao-politica-rj-2023/dicionario-categorias.csv
+  - rotulo: Código de replicação (GitHub)
+    url: https://github.com/felipelmc/td-doxa-informacao-politica
+  ordem: 6

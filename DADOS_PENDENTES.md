@@ -265,6 +265,18 @@ checagem mensal de links continuaria vendo a página abrir normalmente (CLAUDE.m
 - [ ] Quando a plataforma ganhar endereço definitivo, trocar o `url` nos dois arquivos
 - [ ] Depois do 2º turno (25/10/2026), decidir se o destaque continua na home (`ativo: false` o tira)
 
+### 16. Survey DOXA/Quaest de 2023: só o bloco de informação política está publicado
+
+Em 2026-11-23, o banco de `/bancos-de-dados/` (pasta `public/dados/informacao-politica-rj-2023/`)
+passou a trazer, **de propósito**, só 15 das colunas do survey: `id`, `peso`, setor censitário,
+município, o perfil da calibração e as perguntas 47 a 49 (informação política), nas 1.229 entrevistas
+de 18 anos ou mais. Voto, avaliação de governo, ideologia, partido, renda, Covid, o experimento
+*conjoint* e o resto do questionário ficam de fora até a coordenação decidir divulgá-los. Os três CSVs
+saem de `data/analysis/` do repositório do TD 3 (`felipelmc/td-doxa-informacao-politica`), que já
+publica as 22 colunas usadas no TD.
+
+- [ ] Quando o resto do survey for divulgado, trocar os arquivos e tirar o `aviso` do banco
+
 ---
 
 ## O que **não** está pendente

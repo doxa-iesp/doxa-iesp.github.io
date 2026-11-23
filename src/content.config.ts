@@ -202,6 +202,10 @@ const textosDiscussao = defineCollection({
     ano: z.number().int(),
     url: linkOuVazio, // pode ser externo ou um PDF local em public/pdfs/
     resumo: z.string().optional(),
+    // Botões além do "Baixar PDF" (DOI, repositório de dados e código…), na ordem do arquivo.
+    links: z
+      .array(z.object({ rotulo: z.string(), url: z.union([z.httpUrl(), z.string().startsWith('/')]) }))
+      .default([]),
   }),
 });
 

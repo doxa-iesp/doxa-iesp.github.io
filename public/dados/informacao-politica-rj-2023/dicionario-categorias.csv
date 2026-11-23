@@ -1,0 +1,93 @@
+variavel,ordem,categoria,rotulo_publicacao,n,pct_ponderado
+mun,1,ARARUAMA,ARARUAMA,24,2.1
+mun,2,BARRA DO PIRAÍ,BARRA DO PIRAÍ,22,1.61
+mun,3,BARRA MANSA,BARRA MANSA,21,1.65
+mun,4,BELFORD ROXO,BELFORD ROXO,29,2.39
+mun,5,BOM JARDIM,BOM JARDIM,12,1.08
+mun,6,CABO FRIO,CABO FRIO,12,1.01
+mun,7,CACHOEIRAS DE MACACU,CACHOEIRAS DE MACACU,12,0.88
+mun,8,CAMBUCI,CAMBUCI,6,0.54
+mun,9,CAMPOS DOS GOYTACAZES,CAMPOS DOS GOYTACAZES,23,1.85
+mun,10,CASIMIRO DE ABREU,CASIMIRO DE ABREU,11,1.01
+mun,11,CONCEIÇÃO DE MACABU,CONCEIÇÃO DE MACABU,12,0.95
+mun,12,DUQUE DE CAXIAS,DUQUE DE CAXIAS,63,5.17
+mun,13,ENGENHEIRO PAULO DE FRONTIN,ENGENHEIRO PAULO DE FRONTIN,12,0.89
+mun,14,GUAPIMIRIM,GUAPIMIRIM,10,0.79
+mun,15,ITABORAÍ,ITABORAÍ,23,1.72
+mun,16,ITAPERUNA,ITAPERUNA,12,0.96
+mun,17,JAPERI,JAPERI,13,1
+mun,18,MACAÉ,MACAÉ,24,1.5
+mun,19,MAGÉ,MAGÉ,17,1.35
+mun,20,MESQUITA,MESQUITA,25,2.14
+mun,21,NILÓPOLIS,NILÓPOLIS,24,2.23
+mun,22,NITERÓI,NITERÓI,35,3.06
+mun,23,NOVA IGUAÇU,NOVA IGUAÇU,47,4.09
+mun,24,PARAÍBA DO SUL,PARAÍBA DO SUL,12,0.92
+mun,25,PETRÓPOLIS,PETRÓPOLIS,36,4.14
+mun,26,RIO CLARO,RIO CLARO,12,0.84
+mun,27,RIO DE JANEIRO,RIO DE JANEIRO,499,39.37
+mun,28,SANTO ANTÔNIO DE PÁDUA,SANTO ANTÔNIO DE PÁDUA,6,0.28
+mun,29,SÃO FRANCISCO DE ITABAPOANA,SÃO FRANCISCO DE ITABAPOANA,12,1.15
+mun,30,SÃO GONÇALO,SÃO GONÇALO,57,5.13
+mun,31,SÃO JOÃO DE MERITI,SÃO JOÃO DE MERITI,24,1.69
+mun,32,SILVA JARDIM,SILVA JARDIM,12,1.12
+mun,33,TERESÓPOLIS,TERESÓPOLIS,34,2.61
+mun,34,TRÊS RIOS,TRÊS RIOS,12,0.88
+mun,35,VOLTA REDONDA,VOLTA REDONDA,24,1.89
+sexo,1,FEMININO,Mulheres,666,53.83
+sexo,2,MASCULINO,Homens,563,46.17
+idadef,1,18 - 24 ANOS,18 a 24 anos,144,12.37
+idadef,2,25 - 34 ANOS,25 a 34 anos,236,18.43
+idadef,3,35 - 44 ANOS,35 a 44 anos,250,19.83
+idadef,4,45 - 59 ANOS,45 a 59 anos,305,25.2
+idadef,5,60 ANOS OU MAIS,60 anos ou mais,294,24.18
+esc_faixa,1,Sem instrução e fundamental incompleto,Sem instrução ou fundamental incompleto,269,25.61
+esc_faixa,2,Fundamental completo e médio incompleto,Fundamental completo ou médio incompleto,201,16.56
+esc_faixa,3,Médio completo e superior incompleto,Médio completo ou superior incompleto,541,40
+esc_faixa,4,Superior completo,Superior completo,218,17.83
+cor,1,BRANCA,Branca,340,42.51
+cor,2,PRETA,Preta,323,16.94
+cor,3,PARDA,Parda,528,40.3
+cor,4,OUTRA,Amarela ou indígena,38,0.25
+area3,1,RIO CAPITAL,Capital,499,39.37
+area3,2,RM (EXCETO CAPITAL),Região Metropolitana (exceto capital),415,35.79
+area3,3,DEMAIS MUNICÍPIOS,Demais municípios,315,24.84
+freq_inf_pol,1,TODOS OS DIAS,Todos os dias,250,20.53
+freq_inf_pol,2,ALGUMAS VEZES POR SEMANA,Algumas vezes por semana,159,12.04
+freq_inf_pol,3,UMA VEZ POR SEMANA,Uma vez por semana,73,6.08
+freq_inf_pol,4,ALGUMAS VEZES POR MÊS,Algumas vezes por mês,79,6.36
+freq_inf_pol,5,RARAMENTE,Raramente,338,27.37
+freq_inf_pol,6,NUNCA,Nunca,320,26.8
+freq_inf_pol,7,NÃO SABE RESPONDER (NÃO LER),Não sabe,10,0.81
+inf1,1,NOTICIÁRIO DA TV,Noticiário da TV,472,39.41
+inf1,2,JORNAIS IMPRESSOS E REVISTAS,Jornais impressos e revistas,30,2.33
+inf1,3,RÁDIO,Rádio,30,2.75
+inf1,4,"SITES, BLOGS E PORTAIS DE NOTÍCIAS","Sites, blogs e portais de notícias",97,8.16
+inf1,5,"REDES SOCIAIS COMO FACEBOOK, INSTAGRAM OU TWITTER","Redes sociais (Facebook, Instagram ou Twitter)",251,19.67
+inf1,6,WHATSAPP OU TELEGRAM,WhatsApp ou Telegram,38,2.98
+inf1,7,"CONVERSAS COM AMIGOS, FAMILIARES",Conversas com amigos e familiares,86,7.2
+inf1,8,CONVERSAS COM COLEGAS DE TRABALHOS,Conversas com colegas de trabalho,36,2.85
+inf1,9,BUSCA NO GOOGLE,Busca no Google,43,2.77
+inf1,10,NENHUM DESTES,Nenhum destes,89,7.44
+inf1,11,NÃO ME INFORMO SOBRE POLÍTICA (NÃO LER),Não me informo sobre política,52,4.14
+inf1,12,NÃO SABE RESPONDER (NÃO LER),Não sabe,5,0.3
+redes_pol,1,FACEBOOK,FACEBOOK,253,20.15
+redes_pol,2,TWITTER,TWITTER,83,6.31
+redes_pol,3,YOUTUBE,YOUTUBE,116,9.53
+redes_pol,4,WHATSAPP,WHATSAPP,132,10.88
+redes_pol,5,INSTAGRAM,INSTAGRAM,186,14.75
+redes_pol,6,TIKTOK,TIKTOK,33,2.69
+redes_pol,7,NÃO USO REDES SOCIAIS (NÃO LER),NÃO USO REDES SOCIAIS (NÃO LER),316,26.52
+redes_pol,8,OUTRA. QUAL? ABERTA,OUTRA. QUAL? ABERTA,65,5.32
+redes_pol,9,NÃO SABE RESPONDER (NÃO LER),NÃO SABE RESPONDER (NÃO LER),38,3.12
+redes_pol,10,NÃO QUIS RESPONDER (NÃO LER),NÃO QUIS RESPONDER (NÃO LER),7,0.74
+redes_rec,1,Não usa redes sociais,Não usa redes sociais,346,28.94
+redes_rec,2,Facebook,Facebook,253,20.15
+redes_rec,3,Instagram,Instagram,186,14.75
+redes_rec,4,WhatsApp ou Telegram,WhatsApp ou Telegram,136,11.16
+redes_rec,5,YouTube,YouTube,116,9.53
+redes_rec,6,Twitter (X),Twitter (X),83,6.31
+redes_rec,7,TikTok ou Kwai,TikTok ou Kwai,36,3
+redes_rec,8,Outra rede,Outra rede,1,0.1
+redes_rec,9,"Não é rede social (Google, sites ou TV)","Não é rede social (Google, sites ou TV)",27,2.2
+redes_rec,10,Não sabe ou não respondeu,Não sabe ou não respondeu,45,3.86

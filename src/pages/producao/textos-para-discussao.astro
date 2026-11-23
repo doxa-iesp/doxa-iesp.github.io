@@ -31,7 +31,7 @@ const textos = (await getCollection('textos-discussao')).sort(
               autores={t.data.autores}
               ano={t.data.ano}
               resumo={t.data.resumo}
-              downloads={t.data.url ? [{ rotulo: 'Baixar PDF', url: t.data.url }] : []}
+              downloads={[...(t.data.url ? [{ rotulo: 'Baixar PDF', url: t.data.url }] : []), ...t.data.links]}
             />
           ))
         }

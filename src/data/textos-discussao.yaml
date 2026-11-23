@@ -1,6 +1,25 @@
 # Migrado do site antigo em 2026; esta é a fonte do conteúdo — edite aqui.
 # O build valida o schema (src/content.config.ts).
 
+- titulo: 'Como a população do estado do Rio de Janeiro se informa sobre política? Uma análise de survey'
+  autores: Felipe Lamarca
+  ano: 2026
+  url: /pdfs/textos-discussao/Lamarca-2026-TD-DOXA-3-informacao-politica-RJ.pdf
+  links:
+  - rotulo: DOI (Zenodo)
+    url: https://doi.org/10.5281/zenodo.24485143
+  - rotulo: Dados e código (GitHub)
+    url: https://github.com/felipelmc/td-doxa-informacao-politica
+  resumo: 'Este texto analisa como a população do estado do Rio de Janeiro se informa sobre política,
+    a partir de um survey realizado pelo DOXA em parceria com a Quaest em julho de 2023. Cerca de 21%
+    dos fluminenses dizem se informar sobre política todos os dias, enquanto 54% o fazem raramente ou
+    nunca. O noticiário da TV segue como a principal fonte de informação política, mas as redes sociais
+    têm um espaço de destaque, sobretudo entre os eleitores de Bolsonaro. A capital tem uma proporção
+    menor de pessoas que nunca se informam sobre política do que o restante do estado. Quem se informa
+    principalmente pela TV e quem se informa principalmente pela internet formam públicos distintos,
+    sobretudo em idade e escolaridade. A aprovação do governo Lula era maior entre quem se informa pela
+    TV, e quem nunca se informa sobre política declara com mais frequência não saber avaliar o governo
+    estadual e não se identificar com ideologias ou partidos.'
 - titulo: As políticas de controle de armas de fogo e munições no Brasil
   autores: Matteo de Barros Manes
   ano: 2024
