@@ -91,6 +91,4 @@
     url: /dados/informacao-politica-rj-2023/informacao-politica-rj-2023.csv
   - rotulo: Dicionário (CSV)
     url: /dados/informacao-politica-rj-2023/dicionario.csv
-  - rotulo: Código de replicação (GitHub)
-    url: https://github.com/felipelmc/td-doxa-informacao-politica
   ordem: 6
