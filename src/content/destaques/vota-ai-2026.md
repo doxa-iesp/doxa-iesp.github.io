@@ -5,6 +5,6 @@ resumo: "Leia, compare e descubra afinidades nos programas de governo das candid
 imagem: "/img/destaques/vota-ai-2026.jpg"
 url: "https://votaai-2026.vercel.app/"
 rotulo_url: "Acessar o Vota Aí!"
-ordem: 1
+ordem: 2
 ativo: true
 ---

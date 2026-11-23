@@ -5,6 +5,6 @@ resumo: "O clássico da ciência política brasileira, publicado em edição dig
 imagem: "/img/destaques/a-decisao-do-voto.jpg"
 url: "/pdfs/livros/a-decisao-do-voto-marcus-figueiredo.pdf"
 rotulo_url: "Baixar o livro (PDF)"
-ordem: 2
+ordem: 3
 ativo: true
 ---
